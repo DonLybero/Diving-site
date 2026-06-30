@@ -59,7 +59,8 @@
   .species{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
   .empty{color:var(--muted);text-align:center;padding:30px}
   a{color:var(--accent)}
-  #map{height:560px;border-radius:14px;border:1px solid #1d5778}
+  #map{height:560px;border-radius:14px;border:1px solid #1d5778;background:#0a2438}
+  .leaflet-container{background:#0a2438}
   .legend{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:10px 0;font-size:.78rem;color:var(--muted)}
   .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:middle}
   .leaflet-popup-content{font-size:.85rem}
@@ -123,6 +124,8 @@
     </div>
     <div id="map"></div>
     <p id="mapNote" class="meta" style="text-align:center"></p>
+    <p class="meta" style="text-align:center">Offline vector basemap (no tile server needed). Prefer a street-level
+      tile map? <a href="map-A-osm-tiles.html">Open the OpenStreetMap-tiles version →</a></p>
   </section>
 
   <!-- SEARCH / PROFILE -->
@@ -143,7 +146,7 @@
 <script src="vendor/leaflet.js"></script>
 <script src="diving-calendar.js"></script>
 <script>
-var DATA=null, DESTS=[], MAP=null, MARKERS=null;
+var DATA=null, DESTS=[], MAP=null, MARKERS=null, LAND=null;
 var RCOLOR={Peak:'#16a34a',Good:'#0ea5e9',Shoulder:'#eab308',Low:'#f97316',Closed:'#64748b'};
 
 function badge(r){return '<span class="badge b-'+r+'">'+r+'</span>';}
@@ -233,11 +236,11 @@ function renderPlan(){
 }
 
 function initMap(){
-  if(typeof L==='undefined'){document.getElementById('mapNote').textContent='Map library could not load (needs internet). Coordinates are still in the data.';return;}
+  if(typeof L==='undefined'){document.getElementById('mapNote').textContent='Map library could not load. Coordinates are still in the data.';return;}
   if(MAP) {MAP.invalidateSize();return;}
-  MAP=L.map('map',{worldCopyJump:true}).setView([10,20],2);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {maxZoom:8,attribution:'© OpenStreetMap'}).addTo(MAP);
+  MAP=L.map('map',{worldCopyJump:true,minZoom:1,maxZoom:6}).setView([12,15],2);
+  // Default basemap: embedded vector land outline (no external tile server).
+  if(LAND) L.geoJSON(LAND,{style:{fillColor:'#16455f',fillOpacity:1,color:'#2a6a8c',weight:0.6}}).addTo(MAP);
   MARKERS=L.layerGroup().addTo(MAP);
   drawMarkers();
 }
@@ -311,7 +314,11 @@ function val(id){return document.getElementById(id).value;}
 function num(id){var v=document.getElementById(id).value;return v?Number(v):null;}
 function esc(s){return s.replace(/'/g,"\\'");}
 
-fetch('diving-destinations.json').then(function(r){return r.json();}).then(function(j){
+Promise.all([
+  fetch('diving-destinations.json').then(function(r){return r.json();}),
+  fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+]).then(function(res){
+  var j=res[0]; LAND=res[1];
   DATA=j; DESTS=j.destinations;
   document.getElementById('foot').innerHTML=
     j.destination_count+' destinations · score = conditions rating + sea-life bonus + visibility · '+
