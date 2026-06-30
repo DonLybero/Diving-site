@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Diving Calendar</title>
+<style>
+  :root{
+    --bg:#06283d; --panel:#0f3a57; --card:#13496c; --ink:#eaf6ff; --muted:#9cc4dd;
+    --peak:#16a34a; --good:#0ea5e9; --shoulder:#eab308; --low:#f97316; --closed:#64748b;
+    --accent:#39c0ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       background:linear-gradient(180deg,#06283d,#041a2a);color:var(--ink);min-height:100vh}
+  header{padding:22px 18px 6px;text-align:center}
+  header h1{margin:0;font-size:1.7rem;letter-spacing:.5px}
+  header p{margin:6px 0 0;color:var(--muted);font-size:.9rem}
+  .wrap{max-width:1040px;margin:0 auto;padding:14px 16px 60px}
+  .tabs{display:flex;gap:8px;justify-content:center;margin:16px 0}
+  .tabs button{background:var(--panel);color:var(--ink);border:1px solid #1d5778;border-radius:999px;
+       padding:9px 18px;font-size:.95rem;cursor:pointer}
+  .tabs button.active{background:var(--accent);color:#03212f;font-weight:700;border-color:var(--accent)}
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;
+       background:var(--panel);padding:14px;border-radius:14px;margin-bottom:18px}
+  select,input{background:#03212f;color:var(--ink);border:1px solid #1d5778;border-radius:8px;
+       padding:9px 11px;font-size:.92rem}
+  input[type=search]{min-width:260px}
+  label{font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px}
+  .field{display:flex;flex-direction:column}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+  .card{background:var(--card);border:1px solid #1d5778;border-radius:14px;padding:14px;position:relative}
+  .rank{position:absolute;top:-10px;left:-10px;width:34px;height:34px;border-radius:50%;
+       background:var(--accent);color:#03212f;font-weight:800;display:flex;align-items:center;justify-content:center;
+       box-shadow:0 2px 8px rgba(0,0,0,.4)}
+  .card h3{margin:2px 0 2px;font-size:1.08rem}
+  .meta{color:var(--muted);font-size:.78rem;margin-bottom:8px}
+  .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}
+  .badge{font-size:.72rem;padding:3px 8px;border-radius:999px;font-weight:700;color:#03212f}
+  .b-Peak{background:var(--peak);color:#fff}.b-Good{background:var(--good);color:#03212f}
+  .b-Shoulder{background:var(--shoulder)}.b-Low{background:var(--low);color:#fff}.b-Closed{background:var(--closed);color:#fff}
+  .chip{font-size:.72rem;background:#03303f;border:1px solid #1d5778;border-radius:999px;padding:3px 8px;color:var(--muted)}
+  .score{font-size:.78rem;color:var(--accent);font-weight:700}
+  .hl{font-size:.86rem;margin-top:6px}
+  .temp{font-weight:700}
+  .hidden{display:none}
+  /* profile */
+  .profile h2{margin:0 0 2px}
+  .profile .lead{color:var(--muted);margin:0 0 12px}
+  .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin:12px 0}
+  .kv div{background:var(--panel);border-radius:10px;padding:8px 10px}
+  .kv span{display:block;color:var(--muted);font-size:.72rem}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.85rem}
+  th,td{padding:7px 8px;border-bottom:1px solid #16455f;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;position:sticky;top:0;background:#0c3550}
+  .species{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+  .empty{color:var(--muted);text-align:center;padding:30px}
+  a{color:var(--accent)}
+  footer{color:var(--muted);font-size:.75rem;text-align:center;margin-top:30px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🤿 World Diving Calendar</h1>
+  <p>Find the best dive destinations for any time of year — or look up everything about a destination.</p>
+</header>
+
+<div class="wrap">
+  <div class="tabs">
+    <button id="tab-period" class="active" onclick="showTab('period')">📅 Best for a period</button>
+    <button id="tab-search" onclick="showTab('search')">🔎 Destination lookup</button>
+  </div>
+
+  <!-- PERIOD RANKING VIEW -->
+  <section id="view-period">
+    <div class="controls">
+      <div class="field"><label>Period (24 per year)</label>
+        <select id="periodSel"></select></div>
+      <div class="field"><label>Region</label><select id="fRegion"><option value="">Any</option></select></div>
+      <div class="field"><label>Difficulty</label><select id="fDiff">
+        <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
+      <div class="field"><label>Water</label><select id="fWater">
+        <option value="">Any</option><option>tropical</option><option>subtropical</option><option>temperate</option>
+        <option>saltwater</option><option>freshwater</option></select></div>
+      <div class="field"><label>Min water °C</label><input id="fTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
+      <div class="field"><label>Show</label><select id="fLimit">
+        <option value="10">Top 10</option><option value="20">Top 20</option><option value="999">All open</option></select></div>
+    </div>
+    <div id="rankGrid" class="grid"></div>
+  </section>
+
+  <!-- SEARCH / PROFILE VIEW -->
+  <section id="view-search" class="hidden">
+    <div class="controls">
+      <div class="field" style="flex:1">
+        <label>Search a destination, country, region or species (e.g. "Maldives", "hammerhead", "Mexico")</label>
+        <input id="searchBox" type="search" placeholder="Type to search…" autocomplete="off">
+      </div>
+    </div>
+    <div id="searchResults" class="grid"></div>
+    <div id="profile" class="profile"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script src="diving-calendar.js"></script>
+<script>
+var DATA=null, DESTS=[];
+
+function badge(r){return '<span class="badge b-'+r+'">'+r+'</span>';}
+function tempStr(t){return t==null?'—':t+'°C';}
+
+function showTab(t){
+  document.getElementById('view-period').classList.toggle('hidden', t!=='period');
+  document.getElementById('view-search').classList.toggle('hidden', t!=='search');
+  document.getElementById('tab-period').classList.toggle('active', t==='period');
+  document.getElementById('tab-search').classList.toggle('active', t==='search');
+}
+
+function initControls(){
+  var ps=document.getElementById('periodSel');
+  DivingCalendar.PERIODS.forEach(function(p){
+    var o=document.createElement('option'); o.value=p.period_no; o.textContent='#'+p.period_no+' — '+p.label; ps.appendChild(o);
+  });
+  // default to current month (early)
+  var now=new Date().getMonth(); ps.value=(now*2+1);
+  var regions=Array.from(new Set(DESTS.map(function(d){return d.region;}))).sort();
+  var fr=document.getElementById('fRegion');
+  regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;fr.appendChild(o);});
+  ['periodSel','fRegion','fDiff','fWater','fTemp','fLimit'].forEach(function(id){
+    document.getElementById(id).addEventListener('change', renderRanking);
+    document.getElementById(id).addEventListener('input', renderRanking);
+  });
+}
+
+function renderRanking(){
+  var f={
+    region:document.getElementById('fRegion').value,
+    difficulty:document.getElementById('fDiff').value,
+    water_type:document.getElementById('fWater').value,
+    minTemp:document.getElementById('fTemp').value?Number(document.getElementById('fTemp').value):null,
+    limit:Number(document.getElementById('fLimit').value)
+  };
+  var pno=Number(document.getElementById('periodSel').value);
+  var ranked=DivingCalendar.rankPeriod(DESTS, pno, f);
+  var g=document.getElementById('rankGrid');
+  if(!ranked.length){g.innerHTML='<div class="empty">No open destinations match these filters for this period.</div>';return;}
+  g.innerHTML=ranked.map(function(r){
+    return '<div class="card"><div class="rank">'+r.rank+'</div>'+
+      '<h3>'+r.name+'</h3>'+
+      '<div class="meta">'+r.country+' · '+r.region+'</div>'+
+      '<div class="row">'+badge(r.rating)+'<span class="chip">'+r.difficulty+'</span>'+
+        '<span class="chip">'+r.access+'</span><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
+        '<span class="score">score '+r.score+'</span></div>'+
+      '<div class="hl">🐟 '+r.highlight+'</div>'+
+      '<div class="meta" style="margin-top:6px">🌊 '+r.conditions+'</div>'+
+      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+r.name.replace(/'/g,"\\'")+'\');return false;">Full profile →</a></div>'+
+    '</div>';
+  }).join('');
+}
+
+function renderSearch(){
+  var q=document.getElementById('searchBox').value;
+  var res=DivingCalendar.searchDestinations(DESTS,q);
+  var sr=document.getElementById('searchResults');
+  document.getElementById('profile').innerHTML='';
+  if(!q){sr.innerHTML='';return;}
+  if(!res.length){sr.innerHTML='<div class="empty">No matches.</div>';return;}
+  sr.innerHTML=res.slice(0,12).map(function(d){
+    var s=DivingCalendar.destinationSeasonSummary(d);
+    return '<div class="card"><h3>'+d.name+'</h3>'+
+      '<div class="meta">'+d.country+' · '+d.region+'</div>'+
+      '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+
+        '<span class="chip">'+d.access+'</span></div>'+
+      '<div class="hl">'+d.highlights+'</div>'+
+      '<div class="meta" style="margin-top:6px">Best: '+d.best_months+' · Peak months: '+(s.byRating.Peak.join(', ')||'—')+'</div>'+
+      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+d.name.replace(/'/g,"\\'")+'\');return false;">Open full profile →</a></div>'+
+    '</div>';
+  }).join('');
+}
+
+function openProfile(name){
+  showTab('search');
+  var d=DivingCalendar.getDestination(DESTS,name); if(!d)return;
+  document.getElementById('searchResults').innerHTML='';
+  document.getElementById('searchBox').value=d.name;
+  var rows=DivingCalendar.MONTHS.map(function(m){
+    var mm=d.monthly[m], t=d.monthly_temp_c[m];
+    return '<tr><td><b>'+m+'</b></td><td>'+badge(mm.rating)+'</td><td>'+tempStr(t)+'</td>'+
+      '<td>'+mm.marine_life+'</td><td>'+mm.conditions+'</td></tr>';
+  }).join('');
+  var species=(d.signature_species||[]).map(function(s){return '<span class="chip">'+s+'</span>';}).join('');
+  document.getElementById('profile').innerHTML=
+    '<h2>'+d.name+'</h2><p class="lead">'+d.country+' · '+d.region+' — '+d.highlights+'</p>'+
+    '<div class="kv">'+
+      '<div><span>Water type</span>'+d.water_type+'</div>'+
+      '<div><span>Difficulty</span>'+d.difficulty+'</div>'+
+      '<div><span>Access</span>'+d.access+'</div>'+
+      '<div><span>Wetsuit</span>'+d.wetsuit+'</div>'+
+      '<div><span>Best months</span>'+d.best_months+'</div>'+
+      '<div><span>Currents</span>'+d.currents+'</div>'+
+    '</div>'+
+    '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
+    '<table><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
+    '<tbody>'+rows+'</tbody></table>';
+  document.getElementById('profile').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+fetch('diving-destinations.json').then(function(r){return r.json();}).then(function(j){
+  DATA=j; DESTS=j.destinations;
+  document.getElementById('foot').textContent=
+    j.destination_count+' destinations · ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed · data cross-checked from dive operators & sea-temperature sources';
+  initControls(); renderRanking();
+  document.getElementById('searchBox').addEventListener('input', renderSearch);
+}).catch(function(e){
+  document.querySelector('.wrap').innerHTML='<div class="empty">Could not load <code>diving-destinations.json</code>.<br>Serve this folder over HTTP (e.g. <code>python3 -m http.server</code>) and reload.</div>';
+});
+</script>
+</body>
+</html>
