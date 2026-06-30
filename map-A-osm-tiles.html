@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map Option A — OpenStreetMap tiles</title>
+<link rel="stylesheet" href="vendor/leaflet.css">
+<style>
+  :root{--ink:#eaf6ff;--muted:#9cc4dd;--accent:#39c0ed}
+  body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#041a2a;color:var(--ink)}
+  .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:12px 16px;background:#0f3a57;border-bottom:1px solid #1d5778}
+  .bar b{font-size:1.05rem}
+  .pill{padding:6px 12px;border-radius:999px;border:1px solid #1d5778;color:var(--ink);text-decoration:none;font-size:.85rem}
+  .pill.active{background:var(--accent);color:#03212f;font-weight:700;border-color:var(--accent)}
+  .note{max-width:1100px;margin:12px auto 0;padding:0 16px;color:var(--muted);font-size:.9rem}
+  .note .tag{display:inline-block;background:#0c5132;border:1px solid #1d7a4d;border-radius:6px;padding:1px 7px;color:#d7ffe9;font-size:.78rem;margin-right:6px}
+  .wrap{max-width:1100px;margin:10px auto;padding:0 16px 30px}
+  select{background:#03212f;color:var(--ink);border:1px solid #1d5778;border-radius:8px;padding:8px 10px}
+  label{color:var(--muted);font-size:.8rem;margin-right:6px}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0;font-size:.8rem;color:var(--muted)}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  #map{height:600px;border-radius:14px;border:1px solid #1d5778}
+  .leaflet-popup-content{font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="bar">
+  <b>🗺️ Diving Map</b>
+  <span style="color:var(--muted)">base layer:</span>
+  <a class="pill active" href="map-A-osm-tiles.html">A · OpenStreetMap tiles</a>
+  <a class="pill" href="map-B-vector-offline.html">B · Vector (offline)</a>
+</div>
+<p class="note"><span class="tag">OPTION A</span>
+  Real geographic basemap (streets, place names, terrain shading). The base imagery is fetched
+  as <b>map tiles from an external server</b> as you pan/zoom — so it needs internet, and it is
+  blocked in this sandbox (you'll see a grey background here, but it renders normally on a live host).</p>
+<div class="wrap">
+  <div style="margin:10px 0">
+    <label>Colour markers by month</label>
+    <select id="mapMonth"></select>
+  </div>
+  <div class="legend">
+    <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
+    <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
+    <span><i style="background:#64748b"></i>Closed</span>
+  </div>
+  <div id="map"></div>
+</div>
+
+<script src="vendor/leaflet.js"></script>
+<script src="diving-calendar.js"></script>
+<script>
+var RCOLOR={Peak:'#16a34a',Good:'#0ea5e9',Shoulder:'#eab308',Low:'#f97316',Closed:'#64748b'};
+var DESTS=[], MAP=null, MARKERS=null;
+function tempStr(t){return t==null?'—':t+'°C';}
+function vizStr(v){return v==null?'—':'👁 '+v+'m';}
+
+fetch('diving-destinations.json').then(function(r){return r.json();}).then(function(j){
+  DESTS=j.destinations;
+  var sel=document.getElementById('mapMonth');
+  DivingCalendar.MONTHS.forEach(function(m){var o=document.createElement('option');o.value=m;o.textContent=m;sel.appendChild(o);});
+  sel.value=DivingCalendar.MONTHS[new Date().getMonth()];
+  sel.addEventListener('change',drawMarkers);
+  MAP=L.map('map',{worldCopyJump:true}).setView([15,15],2);
+  // OPTION A: external tile basemap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {maxZoom:8,attribution:'© OpenStreetMap'}).addTo(MAP);
+  MARKERS=L.layerGroup().addTo(MAP);
+  drawMarkers();
+});
+
+function drawMarkers(){
+  MARKERS.clearLayers();
+  var month=document.getElementById('mapMonth').value;
+  DESTS.forEach(function(d){
+    var c=d.coordinates; if(!c||c.lat==null) return;
+    var mm=d.monthly[month];
+    L.circleMarker([c.lat,c.lng],{radius:7,color:'#021824',weight:1,fillColor:RCOLOR[mm.rating],fillOpacity:.92})
+      .bindPopup('<b>'+d.name+'</b><br>'+d.country+' · '+d.region+'<br>'+month+': <b style="color:'+RCOLOR[mm.rating]+'">'+mm.rating+
+        '</b> · '+tempStr(d.monthly_temp_c[month])+' · '+vizStr(mm.visibility_m)+'<br>🐟 '+mm.marine_life)
+      .addTo(MARKERS);
+  });
+}
+</script>
+</body>
+</html>
