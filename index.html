@@ -59,6 +59,15 @@
   .species{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
   .empty{color:var(--muted);text-align:center;padding:30px}
   a{color:var(--accent)}
+  .cal{border-collapse:separate;border-spacing:2px;font-size:.72rem;margin:0 auto}
+  .cal th{position:sticky;top:0;background:#0c3550;color:var(--muted);font-weight:600;padding:5px 6px;z-index:2}
+  .cal th.corner{left:0;z-index:3;text-align:left}
+  .cal td.name{position:sticky;left:0;background:#0f3a57;text-align:left;white-space:nowrap;cursor:pointer;
+       z-index:1;max-width:190px;overflow:hidden;text-overflow:ellipsis;padding:4px 8px;border-radius:4px}
+  .cal td.name:hover{background:#15506f}
+  .cal td.name small{color:var(--muted);display:block;font-size:.62rem}
+  .cal td.cell{width:38px;height:30px;text-align:center;color:#03212f;font-weight:700;border-radius:4px;cursor:pointer}
+  .cal td.cell:hover{outline:2px solid #fff}
   #map{height:560px;border-radius:14px;border:1px solid #1d5778;background:#0a2438}
   .leaflet-container{background:#0a2438}
   .legend{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:10px 0;font-size:.78rem;color:var(--muted)}
@@ -75,14 +84,33 @@
 
 <div class="wrap">
   <div class="tabs">
-    <button id="tab-period" class="active" onclick="showTab('period')">📅 Best for a period</button>
+    <button id="tab-calendar" class="active" onclick="showTab('calendar')">📅 Calendar</button>
+    <button id="tab-period" onclick="showTab('period')">🏆 Best for a period</button>
     <button id="tab-plan" onclick="showTab('plan')">🗓️ Plan a trip</button>
     <button id="tab-map" onclick="showTab('map')">🗺️ Map</button>
     <button id="tab-search" onclick="showTab('search')">🔎 Destination lookup</button>
   </div>
 
+  <!-- CALENDAR GRID -->
+  <section id="view-calendar">
+    <div class="controls">
+      <div class="field"><label>Region</label><select id="calRegion"><option value="">All regions</option></select></div>
+      <div class="field"><label>Sort by</label><select id="calSort">
+        <option value="region">Region</option><option value="name">Name</option><option value="best">Best season first</option></select></div>
+      <div class="field"><label>Cell shows</label><select id="calShow">
+        <option value="temp">Water °C</option><option value="viz">Visibility m</option><option value="rating">Rating</option></select></div>
+    </div>
+    <div class="legend" style="justify-content:center">
+      <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
+      <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
+      <span><i style="background:#64748b"></i>Closed</span>
+      <span style="margin-left:8px">· colour = season rating · click a destination or cell for the full profile</span>
+    </div>
+    <div style="overflow:auto"><table class="cal" id="calTable"></table></div>
+  </section>
+
   <!-- PERIOD RANKING -->
-  <section id="view-period">
+  <section id="view-period" class="hidden">
     <div class="controls">
       <div class="field"><label>Period (24 per year)</label><select id="periodSel"></select></div>
       <div class="field"><label>Region</label><select id="fRegion"><option value="">Any</option></select></div>
@@ -154,7 +182,7 @@ function tempStr(t){return t==null?'—':t+'°C';}
 function vizStr(v){return v==null?'—':'👁 '+v+'m';}
 
 function showTab(t){
-  ['period','plan','map','search'].forEach(function(x){
+  ['calendar','period','plan','map','search'].forEach(function(x){
     document.getElementById('view-'+x).classList.toggle('hidden', x!==t);
     document.getElementById('tab-'+x).classList.toggle('active', x===t);
   });
@@ -172,9 +200,12 @@ function initControls(){
   });
   ps.value=(new Date().getMonth()*2+1);
   var regions=Array.from(new Set(DESTS.map(function(d){return d.region;}))).sort();
-  [['fRegion'],['planRegion']].forEach(function(id){
+  [['fRegion'],['planRegion'],['calRegion']].forEach(function(id){
     var el=document.getElementById(id[0]);
     regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
+  });
+  ['calRegion','calSort','calShow'].forEach(function(id){
+    document.getElementById(id).addEventListener('change',renderCalendar);
   });
   fillMonths(document.getElementById('planFrom'));
   fillMonths(document.getElementById('planTo'));
@@ -189,6 +220,32 @@ function initControls(){
     var e=document.getElementById(id); e.addEventListener('change',renderPlan); e.addEventListener('input',renderPlan);
   });
   document.getElementById('mapMonth').addEventListener('change',drawMarkers);
+}
+
+function renderCalendar(){
+  var region=val('calRegion'), sort=val('calSort'), show=val('calShow');
+  var list=DESTS.filter(function(d){return !region||d.region===region;});
+  if(sort==='name') list.sort(function(a,b){return a.name<b.name?-1:1;});
+  else if(sort==='region') list.sort(function(a,b){return a.region<b.region?-1:(a.region>b.region?1:(a.name<b.name?-1:1));});
+  else if(sort==='best'){ list.sort(function(a,b){
+    var pa=DivingCalendar.MONTHS.filter(function(m){return a.monthly[m].rating==='Peak';}).length;
+    var pb=DivingCalendar.MONTHS.filter(function(m){return b.monthly[m].rating==='Peak';}).length;
+    return pb-pa||(a.name<b.name?-1:1);}); }
+  var head='<thead><tr><th class="corner">Destination ('+list.length+')</th>'+
+    DivingCalendar.MONTHS.map(function(m){return '<th>'+m+'</th>';}).join('')+'</tr></thead>';
+  var body=list.map(function(d){
+    var cells=DivingCalendar.MONTHS.map(function(m){
+      var mm=d.monthly[m], t=d.monthly_temp_c[m];
+      var txt = show==='temp'?(t==null?'':t) : show==='viz'?(mm.visibility_m==null?'':mm.visibility_m) : mm.rating[0];
+      if(mm.rating==='Closed') txt='✕';
+      var title=d.name+' — '+m+': '+mm.rating+' · '+tempStr(t)+' · '+vizStr(mm.visibility_m)+' · '+mm.marine_life;
+      return '<td class="cell" style="background:'+RCOLOR[mm.rating]+'" title="'+title.replace(/"/g,'&quot;')+
+        '" onclick="openProfile(\''+esc(d.name)+'\')">'+txt+'</td>';
+    }).join('');
+    return '<tr><td class="name" onclick="openProfile(\''+esc(d.name)+'\')">'+d.name+
+      '<small>'+d.country+'</small></td>'+cells+'</tr>';
+  }).join('');
+  document.getElementById('calTable').innerHTML=head+'<tbody>'+body+'</tbody>';
 }
 
 function renderRanking(){
@@ -314,19 +371,24 @@ function val(id){return document.getElementById(id).value;}
 function num(id){var v=document.getElementById(id).value;return v?Number(v):null;}
 function esc(s){return s.replace(/'/g,"\\'");}
 
-Promise.all([
-  fetch('diving-destinations.json').then(function(r){return r.json();}),
-  fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
-]).then(function(res){
+// Prefer data embedded by the single-file build; otherwise fetch from disk.
+function loadData(){
+  if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null]);
+  return Promise.all([
+    fetch('diving-destinations.json').then(function(r){return r.json();}),
+    fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+  ]);
+}
+loadData().then(function(res){
   var j=res[0]; LAND=res[1];
   DATA=j; DESTS=j.destinations;
   document.getElementById('foot').innerHTML=
     j.destination_count+' destinations · score = conditions rating + sea-life bonus + visibility · '+
     'ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed';
-  initControls(); renderRanking(); renderPlan();
+  initControls(); renderCalendar(); renderRanking(); renderPlan();
   document.getElementById('searchBox').addEventListener('input', renderSearch);
 }).catch(function(){
-  document.querySelector('.wrap').innerHTML='<div class="empty">Could not load <code>diving-destinations.json</code>.<br>Serve this folder over HTTP (e.g. <code>python3 -m http.server</code>) and reload.</div>';
+  document.querySelector('.wrap').innerHTML='<div class="empty">Could not load <code>diving-destinations.json</code>.<br>If you opened the file directly, use the single-file build <code>diving-site.html</code>, or serve this folder over HTTP (<code>python3 -m http.server</code>).</div>';
 });
 </script>
 </body>
