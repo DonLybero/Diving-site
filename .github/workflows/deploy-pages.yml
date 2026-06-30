@@ -1,4 +1,4 @@
-name: Deploy DiveWhen to GitHub Pages
+name: Deploy Scubanaut to GitHub Pages
 
 on:
   push:

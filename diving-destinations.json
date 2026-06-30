@@ -134,7 +134,8 @@
       "coordinates": {
         "lat": -3.85,
         "lng": -32.42
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Bahamas",
@@ -244,7 +245,8 @@
       "coordinates": {
         "lat": 24.7,
         "lng": -77.8
-      }
+      },
+      "current_strength": "Medium"
     },
     {
       "name": "Bay Islands",
@@ -354,7 +356,8 @@
       "coordinates": {
         "lat": 16.4,
         "lng": -86.4
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Bonaire",
@@ -464,7 +467,8 @@
       "coordinates": {
         "lat": 12.18,
         "lng": -68.31
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Cayman Islands",
@@ -574,7 +578,8 @@
       "coordinates": {
         "lat": 19.34,
         "lng": -81.24
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Cozumel",
@@ -684,7 +689,8 @@
       "coordinates": {
         "lat": 20.42,
         "lng": -86.92
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Great Blue Hole",
@@ -794,7 +800,8 @@
       "coordinates": {
         "lat": 17.32,
         "lng": -87.53
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Roatán",
@@ -904,7 +911,8 @@
       "coordinates": {
         "lat": 16.33,
         "lng": -86.53
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Utila",
@@ -1014,7 +1022,8 @@
       "coordinates": {
         "lat": 16.1,
         "lng": -86.93
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Sipadan Island",
@@ -1125,7 +1134,8 @@
       "coordinates": {
         "lat": 4.11,
         "lng": 118.63
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Great Barrier Reef",
@@ -1236,7 +1246,8 @@
       "coordinates": {
         "lat": -16.9,
         "lng": 146.1
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Whitsunday Islands",
@@ -1348,7 +1359,8 @@
       "coordinates": {
         "lat": -19.9,
         "lng": 149.1
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Heron Island",
@@ -1460,7 +1472,8 @@
       "coordinates": {
         "lat": -23.44,
         "lng": 151.91
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Komodo National Park",
@@ -1570,7 +1583,8 @@
       "coordinates": {
         "lat": -8.55,
         "lng": 119.49
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Raja Ampat",
@@ -1680,7 +1694,8 @@
       "coordinates": {
         "lat": -0.23,
         "lng": 130.52
-      }
+      },
+      "current_strength": "Medium"
     },
     {
       "name": "Okinawa Islands",
@@ -1792,7 +1807,8 @@
       "coordinates": {
         "lat": 24.4,
         "lng": 123.8
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Cocos Island",
@@ -1903,7 +1919,8 @@
       "coordinates": {
         "lat": 5.52,
         "lng": -87.06
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Galapagos Islands",
@@ -2015,7 +2032,8 @@
       "coordinates": {
         "lat": -0.74,
         "lng": -90.31
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Socorro Island",
@@ -2127,7 +2145,8 @@
       "coordinates": {
         "lat": 18.79,
         "lng": -110.97
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Sea of Cortez",
@@ -2239,7 +2258,8 @@
       "coordinates": {
         "lat": 24.4,
         "lng": -110.35
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Maui & Kona",
@@ -2351,7 +2371,8 @@
       "coordinates": {
         "lat": 20.0,
         "lng": -156.3
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Chagos Archipelago / BIOT",
@@ -2462,7 +2483,8 @@
       "coordinates": {
         "lat": -6.0,
         "lng": 71.5
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Maldives",
@@ -2573,7 +2595,8 @@
       "coordinates": {
         "lat": 3.2,
         "lng": 73.0
-      }
+      },
+      "current_strength": "Medium"
     },
     {
       "name": "Seychelles",
@@ -2684,7 +2707,8 @@
       "coordinates": {
         "lat": -4.68,
         "lng": 55.49
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Aliwal Shoal",
@@ -2796,7 +2820,8 @@
       "coordinates": {
         "lat": -30.27,
         "lng": 30.83
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Ningaloo Reef",
@@ -2908,7 +2933,8 @@
       "coordinates": {
         "lat": -22.0,
         "lng": 113.9
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Gozo & Malta",
@@ -3019,7 +3045,8 @@
       "coordinates": {
         "lat": 36.05,
         "lng": 14.3
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Medes Islands",
@@ -3130,7 +3157,8 @@
       "coordinates": {
         "lat": 42.05,
         "lng": 3.22
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Palau",
@@ -3241,7 +3269,8 @@
       "coordinates": {
         "lat": 7.34,
         "lng": 134.48
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Truk (Chuuk) Lagoon",
@@ -3351,7 +3380,8 @@
       "coordinates": {
         "lat": 7.42,
         "lng": 151.78
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Cenotes of Yucatán Peninsula",
@@ -3462,7 +3492,8 @@
       "coordinates": {
         "lat": 20.3,
         "lng": -87.4
-      }
+      },
+      "current_strength": "Medium"
     },
     {
       "name": "Azores",
@@ -3573,7 +3604,8 @@
       "coordinates": {
         "lat": 38.4,
         "lng": -28.2
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Lundy Island",
@@ -3683,7 +3715,8 @@
       "coordinates": {
         "lat": 51.18,
         "lng": -4.67
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Scapa Flow",
@@ -3793,7 +3826,8 @@
       "coordinates": {
         "lat": 58.9,
         "lng": -3.18
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Silfra Fissure",
@@ -3901,7 +3935,8 @@
       "coordinates": {
         "lat": 64.26,
         "lng": -21.12
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Vancouver Island",
@@ -4012,7 +4047,8 @@
       "coordinates": {
         "lat": 50.3,
         "lng": -126.0
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Red Sea (Egypt)",
@@ -4123,7 +4159,8 @@
       "coordinates": {
         "lat": 27.9,
         "lng": 34.3
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Fiji",
@@ -4235,7 +4272,8 @@
       "coordinates": {
         "lat": -17.8,
         "lng": 178.1
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "French Polynesia",
@@ -4347,7 +4385,8 @@
       "coordinates": {
         "lat": -16.0,
         "lng": -146.0
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Guadalcanal & Western Province",
@@ -4459,7 +4498,8 @@
       "coordinates": {
         "lat": -8.8,
         "lng": 158.5
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Moorea",
@@ -4571,7 +4611,8 @@
       "coordinates": {
         "lat": -17.54,
         "lng": -149.83
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Poor Knights Islands",
@@ -4682,7 +4723,8 @@
       "coordinates": {
         "lat": -35.46,
         "lng": 174.74
-      }
+      },
+      "current_strength": "Medium"
     },
     {
       "name": "Apo Island & Dumaguete",
@@ -4793,7 +4835,8 @@
       "coordinates": {
         "lat": 9.1,
         "lng": 123.27
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Bunaken National Marine Park",
@@ -4904,7 +4947,8 @@
       "coordinates": {
         "lat": 1.62,
         "lng": 124.76
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Gili Islands & Lombok",
@@ -5015,7 +5059,8 @@
       "coordinates": {
         "lat": -8.35,
         "lng": 116.04
-      }
+      },
+      "current_strength": "Low"
     },
     {
       "name": "Malapascua Island",
@@ -5126,7 +5171,8 @@
       "coordinates": {
         "lat": 11.32,
         "lng": 124.12
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Similan Islands",
@@ -5237,7 +5283,8 @@
       "coordinates": {
         "lat": 8.65,
         "lng": 97.65
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Tubbataha Reefs Natural Park",
@@ -5348,7 +5395,8 @@
       "coordinates": {
         "lat": 8.85,
         "lng": 119.92
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "Lord Howe Island",
@@ -5460,7 +5508,8 @@
       "coordinates": {
         "lat": -31.55,
         "lng": 159.08
-      }
+      },
+      "current_strength": "Strong"
     },
     {
       "name": "South West Rocks",
@@ -5572,7 +5621,8 @@
       "coordinates": {
         "lat": -30.93,
         "lng": 153.07
-      }
+      },
+      "current_strength": "Strong"
     }
   ]
 }

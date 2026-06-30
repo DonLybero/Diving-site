@@ -3,111 +3,119 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DiveWhen — World Diving Calendar</title>
-<meta name="description" content="When and where to scuba dive — 50 world destinations scored month by month on conditions, marine life and visibility.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b3a57'/><path d='M5 41 q8 -11 16 0 t16 0 t16 0' fill='none' stroke='%2334d6e6' stroke-width='5' stroke-linecap='round'/><path d='M5 50 q8 -11 16 0 t16 0 t16 0' fill='none' stroke='%237fdcea' stroke-width='4' stroke-linecap='round' opacity='.6'/><circle cx='32' cy='24' r='6' fill='%23ff7a59'/></svg>">
+<title>Scubanaut — Dive Trip Planner &amp; Seasonal Calendar</title>
+<meta name="description" content="Scubanaut: when and where to scuba dive. 50 world destinations scored month by month on conditions, marine life, currents and visibility.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 96'><rect width='120' height='96' rx='18' fill='%23062a36'/><path d='M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z' fill='%232fe0d6'/></svg>">
 <link rel="stylesheet" href="vendor/leaflet.css">
 <style>
   :root{
-    --bg:#06283d; --panel:#0f3a57; --card:#13496c; --ink:#eaf6ff; --muted:#9cc4dd;
+    --bg:#04202b; --panel:#0a3340; --card:#0c3a47; --ink:#e9f7f6; --muted:#86c2c6;
     --peak:#16a34a; --good:#0ea5e9; --shoulder:#eab308; --low:#f97316; --closed:#64748b;
-    --accent:#34d6e6; --coral:#ff7a59;
+    --accent:#2fe0d6; --aqua2:#179e98; --coral:#ff7a59; --line:#155060;
+    --serif:Georgia,'Iowan Old Style','Times New Roman',serif;
+    --mono:ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;
   }
   *{box-sizing:border-box}
   body{margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-       background:linear-gradient(180deg,#06283d,#041a2a);color:var(--ink);min-height:100vh}
+       background:linear-gradient(180deg,#062a36 0%,#03171f 100%);color:var(--ink);min-height:100vh}
+  h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.2px}
   /* brand hero */
-  .hero{position:relative;overflow:hidden;text-align:center;padding:30px 18px 18px;
-        background:radial-gradient(1200px 320px at 50% -120px,#15597a 0%,#0a3147 55%,transparent 100%);
-        border-bottom:1px solid #1d5778}
-  .brand{display:inline-flex;align-items:center;gap:14px}
-  .brand svg{width:52px;height:52px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.45))}
-  .brand .name{font-size:2rem;font-weight:800;letter-spacing:.5px;line-height:1}
-  .brand .name b{color:var(--accent)}
-  .brand .name span{color:var(--coral)}
-  .tagline{color:#cfeaf6;margin:12px 0 2px;font-size:1rem}
-  .subtag{color:var(--muted);font-size:.85rem;margin:0}
-  .pillrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-  .pillrow span{background:rgba(52,214,230,.12);border:1px solid #1d6c84;color:#bfeef6;
+  .hero{position:relative;overflow:hidden;text-align:center;padding:34px 18px 20px;
+        background:radial-gradient(1100px 340px at 50% -140px,#0e5b5e 0%,#073640 52%,transparent 100%);
+        border-bottom:1px solid var(--line)}
+  .brand{display:inline-flex;align-items:center;gap:13px}
+  .brand .fluke{width:66px;height:auto;filter:drop-shadow(0 4px 14px rgba(47,224,214,.28))}
+  .brand .name{font-family:var(--serif);font-size:2.3rem;font-weight:600;letter-spacing:1px;line-height:1;color:var(--ink)}
+  .brand .name b{color:var(--accent);font-weight:600}
+  .tagline{color:#d6f3f0;margin:14px 0 2px;font-size:1.02rem}
+  .subtag{color:var(--muted);font-size:.84rem;margin:0;font-family:var(--mono);letter-spacing:.2px}
+  .pillrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .pillrow span{background:rgba(47,224,214,.10);border:1px solid #176b72;color:#bff0ec;
         border-radius:999px;padding:4px 11px;font-size:.74rem}
-  header{padding:22px 18px 6px;text-align:center}
-  header h1{margin:0;font-size:1.7rem;letter-spacing:.5px}
-  header p{margin:6px 0 0;color:var(--muted);font-size:.9rem}
   .wrap{max-width:1060px;margin:0 auto;padding:14px 16px 60px}
-  .tabs{display:flex;gap:8px;justify-content:center;margin:16px 0;flex-wrap:wrap}
-  .tabs button{background:var(--panel);color:var(--ink);border:1px solid #1d5778;border-radius:999px;
-       padding:9px 16px;font-size:.92rem;cursor:pointer}
-  .tabs button.active{background:var(--accent);color:#03212f;font-weight:700;border-color:var(--accent)}
+  .tabs{display:flex;gap:8px;justify-content:center;margin:18px 0;flex-wrap:wrap}
+  .tabs button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:999px;
+       padding:9px 16px;font-size:.92rem;cursor:pointer;transition:all .15s}
+  .tabs button:hover{border-color:var(--accent)}
+  .tabs button.active{background:var(--accent);color:#04202b;font-weight:700;border-color:var(--accent)}
   .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:center;
-       background:var(--panel);padding:14px;border-radius:14px;margin-bottom:18px}
-  select,input{background:#03212f;color:var(--ink);border:1px solid #1d5778;border-radius:8px;
+       background:var(--panel);padding:14px;border-radius:14px;margin-bottom:18px;border:1px solid var(--line)}
+  select,input{background:#04222c;color:var(--ink);border:1px solid var(--line);border-radius:8px;
        padding:9px 11px;font-size:.92rem}
   input[type=search]{min-width:260px}
-  label{font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px}
+  label{font-size:.74rem;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.6px}
   .field{display:flex;flex-direction:column}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-  .card{background:var(--card);border:1px solid #1d5778;border-radius:14px;padding:14px;position:relative}
-  .rank{position:absolute;top:-10px;left:-10px;width:34px;height:34px;border-radius:50%;
-       background:var(--accent);color:#03212f;font-weight:800;display:flex;align-items:center;justify-content:center;
-       box-shadow:0 2px 8px rgba(0,0,0,.4)}
-  .card h3{margin:2px 0 2px;font-size:1.08rem}
+  .card{background:linear-gradient(180deg,#0d3d4a,#0a313c);border:1px solid var(--line);border-radius:14px;
+       padding:14px;position:relative}
+  .rank{position:absolute;top:-11px;left:-11px;width:34px;height:34px;border-radius:50%;font-family:var(--mono);
+       background:var(--accent);color:#04202b;font-weight:800;display:flex;align-items:center;justify-content:center;
+       box-shadow:0 2px 10px rgba(47,224,214,.4)}
+  .card h3{margin:2px 0 2px;font-size:1.12rem;font-family:var(--serif)}
   .meta{color:var(--muted);font-size:.78rem;margin-bottom:8px}
   .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}
-  .badge{font-size:.72rem;padding:3px 8px;border-radius:999px;font-weight:700}
+  .badge{font-size:.72rem;padding:3px 9px;border-radius:6px;font-weight:700;font-family:var(--mono)}
   .b-Peak{background:var(--peak);color:#fff}.b-Good{background:var(--good);color:#03212f}
   .b-Shoulder{background:var(--shoulder);color:#03212f}.b-Low{background:var(--low);color:#fff}.b-Closed{background:var(--closed);color:#fff}
-  .chip{font-size:.72rem;background:#03303f;border:1px solid #1d5778;border-radius:999px;padding:3px 8px;color:var(--muted)}
-  .score{font-size:.78rem;color:var(--accent);font-weight:700}
+  /* dive-computer readout chips */
+  .chip{font-size:.72rem;background:#06262f;border:1px solid var(--line);border-radius:6px;padding:3px 8px;
+       color:#bfe7e3;font-family:var(--mono);letter-spacing:.2px}
+  .cur-Low{color:#79e6d6;border-color:#1f6f68}
+  .cur-Medium{color:#ffd27a;border-color:#7a5e26}
+  .cur-Strong{color:#ff9d83;border-color:#8a4030}
+  .score{font-size:.82rem;color:var(--coral);font-weight:800;font-family:var(--mono)}
   .hl{font-size:.86rem;margin-top:6px}
-  .temp{font-weight:700}
+  .temp{color:#bdeee8}
   .hidden{display:none}
   .strip{display:flex;gap:2px;margin:8px 0}
-  .strip span{flex:1;text-align:center;font-size:.6rem;padding:3px 0;border-radius:3px;color:#03212f;font-weight:700}
-  .profile h2{margin:0 0 2px}.profile .lead{color:var(--muted);margin:0 0 12px}
-  .best{background:linear-gradient(90deg,#0c5132,#0f3a57);border:1px solid #1d7a4d;border-radius:10px;
+  .strip span{flex:1;text-align:center;font-size:.6rem;padding:3px 0;border-radius:3px;color:#04202b;font-weight:700;font-family:var(--mono)}
+  .profile h2{margin:0 0 2px;font-size:1.7rem}.profile .lead{color:var(--muted);margin:0 0 12px}
+  .best{background:linear-gradient(90deg,#0c4d3d,#0a3340);border:1px solid #1c7a63;border-radius:10px;
        padding:10px 12px;margin:10px 0;font-size:.9rem}
   .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin:12px 0}
-  .kv div{background:var(--panel);border-radius:10px;padding:8px 10px}
-  .kv span{display:block;color:var(--muted);font-size:.72rem}
+  .kv div{background:var(--panel);border-radius:10px;padding:8px 10px;border:1px solid var(--line)}
+  .kv span{display:block;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.5px}
+  .kv b{font-family:var(--mono);font-weight:700}
   table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.84rem}
-  th,td{padding:7px 8px;border-bottom:1px solid #16455f;text-align:left;vertical-align:top}
-  th{color:var(--muted);font-weight:600}
+  th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;text-transform:uppercase;font-size:.68rem;letter-spacing:.5px}
+  td.num{font-family:var(--mono);color:#bdeee8}
   .species{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
   .empty{color:var(--muted);text-align:center;padding:30px}
   a{color:var(--accent)}
   .cal{border-collapse:separate;border-spacing:2px;font-size:.72rem;margin:0 auto}
-  .cal th{position:sticky;top:0;background:#0c3550;color:var(--muted);font-weight:600;padding:5px 6px;z-index:2}
+  .cal th{position:sticky;top:0;background:#073039;color:var(--muted);font-weight:600;padding:5px 6px;z-index:2;
+       font-family:var(--mono);text-transform:uppercase;font-size:.66rem}
   .cal th.corner{left:0;z-index:3;text-align:left}
-  .cal td.name{position:sticky;left:0;background:#0f3a57;text-align:left;white-space:nowrap;cursor:pointer;
-       z-index:1;max-width:190px;overflow:hidden;text-overflow:ellipsis;padding:4px 8px;border-radius:4px}
-  .cal td.name:hover{background:#15506f}
+  .cal td.name{position:sticky;left:0;background:#0a3340;text-align:left;white-space:nowrap;cursor:pointer;
+       z-index:1;max-width:200px;overflow:hidden;text-overflow:ellipsis;padding:4px 8px;border-radius:4px}
+  .cal td.name:hover{background:#0f4654}
   .cal td.name small{color:var(--muted);display:block;font-size:.62rem}
-  .cal td.cell{width:38px;height:30px;text-align:center;color:#03212f;font-weight:700;border-radius:4px;cursor:pointer}
-  .cal td.cell:hover{outline:2px solid #fff}
-  #map{height:560px;border-radius:14px;border:1px solid #1d5778;background:#0a2438}
-  .leaflet-container{background:#0a2438}
+  .cal td.cell{width:38px;height:30px;text-align:center;color:#04202b;font-weight:700;border-radius:4px;cursor:pointer;font-family:var(--mono)}
+  .cal td.cell:hover{outline:2px solid var(--accent)}
+  #map{height:560px;border-radius:14px;border:1px solid var(--line);background:#072733}
+  .leaflet-container{background:#072733}
   .legend{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:10px 0;font-size:.78rem;color:var(--muted)}
   .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:middle}
   .leaflet-popup-content{font-size:.85rem}
-  footer{color:var(--muted);font-size:.75rem;text-align:center;margin-top:30px}
+  footer{color:var(--muted);font-size:.75rem;text-align:center;margin-top:30px;line-height:1.7}
+  .disclosure{max-width:760px;margin:14px auto 0;color:#6fa6ab;font-size:.72rem}
 </style>
 </head>
 <body>
 <header class="hero">
   <div class="brand">
-    <svg viewBox="0 0 64 64" role="img" aria-label="DiveWhen logo">
-      <defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#1aa8cc"/><stop offset="1" stop-color="#0b3a57"/></linearGradient></defs>
-      <rect x="3" y="5" width="58" height="54" rx="14" fill="url(#lg)" stroke="#34d6e6" stroke-width="2"/>
-      <circle cx="20" cy="5" r="3" fill="#34d6e6"/><circle cx="44" cy="5" r="3" fill="#34d6e6"/>
-      <circle cx="32" cy="25" r="6" fill="#ff7a59"/>
-      <path d="M9 41 q8 -11 16 0 t16 0 t15 0" fill="none" stroke="#eaf6ff" stroke-width="3.4" stroke-linecap="round"/>
-      <path d="M9 49 q8 -11 16 0 t16 0 t15 0" fill="none" stroke="#9fe3ef" stroke-width="3.2" stroke-linecap="round" opacity=".7"/>
+    <svg class="fluke" viewBox="0 0 120 70" role="img" aria-label="Scubanaut fluke logo">
+      <defs><linearGradient id="fl" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#5cf0e6"/><stop offset="1" stop-color="#179e98"/></linearGradient></defs>
+      <path d="M60 62 C56 51 53 46 46 41 C35 32 18 24 6 22 C16 28 33 37 48 41 C53 42 56 43 60 47
+               C64 43 67 42 72 41 C87 37 104 28 114 22 C102 24 85 32 74 41 C67 46 64 51 60 62 Z"
+            fill="url(#fl)"/>
     </svg>
-    <div class="name">Dive<b>When</b></div>
+    <div class="name">Scuba<b>naut</b></div>
   </div>
-  <p class="tagline">When &amp; where to dive — 50 world destinations, scored month by month.</p>
-  <p class="subtag">Conditions rating · marine life · water temperature · visibility</p>
+  <p class="tagline">The dive trip planner &amp; seasonal calendar — when &amp; where to dive, worldwide.</p>
+  <p class="subtag">water temp · marine life · currents · visibility — 50 destinations, every month</p>
   <div class="pillrow"><span>📅 Calendar</span><span>🏆 Best by period</span><span>🗓️ Trip planner</span><span>🗺️ Map</span><span>🔎 50 dive profiles</span></div>
 </header>
 
@@ -209,6 +217,7 @@ var RCOLOR={Peak:'#16a34a',Good:'#0ea5e9',Shoulder:'#eab308',Low:'#f97316',Close
 function badge(r){return '<span class="badge b-'+r+'">'+r+'</span>';}
 function tempStr(t){return t==null?'—':t+'°C';}
 function vizStr(v){return v==null?'—':'👁 '+v+'m';}
+function curChip(s){return s?'<span class="chip cur-'+s+'">⤳ '+s+' current</span>':'';}
 
 function showTab(t){
   ['calendar','period','plan','map','search'].forEach(function(x){
@@ -272,7 +281,7 @@ function renderCalendar(){
         '" onclick="openProfile(\''+esc(d.name)+'\')">'+txt+'</td>';
     }).join('');
     return '<tr><td class="name" onclick="openProfile(\''+esc(d.name)+'\')">'+d.name+
-      '<small>'+d.country+'</small></td>'+cells+'</tr>';
+      '<small>'+d.country+' · <span class="cur-'+d.current_strength+'">'+d.current_strength+' current</span></small></td>'+cells+'</tr>';
   }).join('');
   document.getElementById('calTable').innerHTML=head+'<tbody>'+body+'</tbody>';
 }
@@ -286,10 +295,10 @@ function renderRanking(){
   g.innerHTML=ranked.map(function(r){
     return '<div class="card"><div class="rank">'+r.rank+'</div>'+
       '<h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
-      '<div class="row">'+badge(r.rating)+'<span class="chip">'+r.difficulty+'</span>'+
-        '<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
-        '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+
+      '<div class="row">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
+        '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+
         '<span class="score">score '+r.score+'</span></div>'+
+      '<div class="row"><span class="chip">'+r.difficulty+'</span></div>'+
       '<div class="hl">🐟 '+r.highlight+'</div>'+
       '<div class="meta" style="margin-top:6px">🌊 '+r.conditions+'</div>'+
       '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div>';
@@ -326,7 +335,7 @@ function initMap(){
   if(MAP) {MAP.invalidateSize();return;}
   MAP=L.map('map',{worldCopyJump:true,minZoom:1,maxZoom:6}).setView([12,15],2);
   // Default basemap: embedded vector land outline (no external tile server).
-  if(LAND) L.geoJSON(LAND,{style:{fillColor:'#16455f',fillOpacity:1,color:'#2a6a8c',weight:0.6}}).addTo(MAP);
+  if(LAND) L.geoJSON(LAND,{style:{fillColor:'#0f4350',fillOpacity:1,color:'#1f6f78',weight:0.6}}).addTo(MAP);
   MARKERS=L.layerGroup().addTo(MAP);
   drawMarkers();
 }
@@ -341,7 +350,7 @@ function drawMarkers(){
       fillColor:RCOLOR[mm.rating],fillOpacity:.92});
     m.bindPopup('<b>'+d.name+'</b><br>'+d.country+' · '+d.region+'<br>'+
       month+': <b style="color:'+RCOLOR[mm.rating]+'">'+mm.rating+'</b> · '+tempStr(d.monthly_temp_c[month])+
-      ' · '+vizStr(mm.visibility_m)+'<br>🐟 '+mm.marine_life+
+      ' · '+vizStr(mm.visibility_m)+' · '+d.current_strength+' current<br>🐟 '+mm.marine_life+
       '<br><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">full profile →</a>');
     MARKERS.addLayer(m);
   });
@@ -358,7 +367,7 @@ function renderSearch(){
   sr.innerHTML=res.slice(0,12).map(function(d){
     var s=DivingCalendar.destinationSeasonSummary(d);
     return '<div class="card"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
-      '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span><span class="chip">'+d.access+'</span></div>'+
+      '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+curChip(d.current_strength)+'</div>'+
       '<div class="hl">'+d.highlights+'</div>'+
       '<div class="meta" style="margin-top:6px">Best: '+d.best_months+' · Peak months: '+(s.byRating.Peak.join(', ')||'—')+'</div>'+
       '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Open full profile →</a></div></div>';
@@ -373,8 +382,8 @@ function openProfile(name){
   var s=DivingCalendar.destinationSeasonSummary(d);
   var rows=DivingCalendar.MONTHS.map(function(m){
     var mm=d.monthly[m];
-    return '<tr><td><b>'+m+'</b></td><td>'+badge(mm.rating)+'</td><td>'+tempStr(d.monthly_temp_c[m])+'</td>'+
-      '<td>'+(mm.visibility_m==null?'—':mm.visibility_m+'m')+'</td><td>'+mm.marine_life+'</td><td>'+mm.conditions+'</td></tr>';
+    return '<tr><td><b>'+m+'</b></td><td>'+badge(mm.rating)+'</td><td class="num">'+tempStr(d.monthly_temp_c[m])+'</td>'+
+      '<td class="num">'+(mm.visibility_m==null?'—':mm.visibility_m+'m')+'</td><td>'+mm.marine_life+'</td><td>'+mm.conditions+'</td></tr>';
   }).join('');
   var species=(d.signature_species||[]).map(function(x){return '<span class="chip">'+x+'</span>';}).join('');
   var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';
@@ -387,8 +396,9 @@ function openProfile(name){
       '<div><span>Water type</span>'+d.water_type+'</div>'+
       '<div><span>Difficulty</span>'+d.difficulty+'</div>'+
       '<div><span>Access</span>'+d.access+'</div>'+
-      '<div><span>Wetsuit</span>'+d.wetsuit+'</div>'+
-      '<div><span>Currents</span>'+d.currents+'</div>'+
+      '<div><span>Wetsuit</span><b>'+d.wetsuit+'</b></div>'+
+      '<div><span>Current strength</span><b class="cur-'+d.current_strength+'">'+d.current_strength+'</b></div>'+
+      '<div style="grid-column:1/-1"><span>Currents detail</span>'+d.currents+'</div>'+
     '</div>'+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
     '<table><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
@@ -412,8 +422,11 @@ loadData().then(function(res){
   var j=res[0]; LAND=res[1];
   DATA=j; DESTS=j.destinations;
   document.getElementById('foot').innerHTML=
-    j.destination_count+' destinations · score = conditions rating + sea-life bonus + visibility · '+
-    'ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed';
+    '<b style="font-family:var(--serif);color:var(--ink)">Scubanaut</b> · '+j.destination_count+' dive destinations · '+
+    'score = conditions rating + sea-life bonus + visibility · ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed'+
+    '<div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources; '+
+    'water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles. '+
+    'Always confirm current conditions with a local dive centre before travelling.</div>';
   initControls(); renderCalendar(); renderRanking(); renderPlan();
   document.getElementById('searchBox').addEventListener('input', renderSearch);
 }).catch(function(){

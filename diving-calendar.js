@@ -107,6 +107,7 @@
         difficulty: d.difficulty, access: d.access, wetsuit: d.wetsuit,
         water_temp_c: d.monthly_temp_c[month],
         visibility_m: d.monthly[month].visibility_m,
+        current_strength: d.current_strength,
         rating: d.monthly[month].rating,
         highlight: d.monthly[month].marine_life,
         conditions: d.monthly[month].conditions,
