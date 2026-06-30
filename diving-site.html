@@ -763,6 +763,44 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .leaflet-popup-content{font-size:.85rem}
   footer{color:var(--muted);font-size:.75rem;text-align:center;margin-top:30px;line-height:1.7}
   .disclosure{max-width:760px;margin:14px auto 0;color:#6fa6ab;font-size:.72rem}
+  /* marketplace + home */
+  .btn{background:var(--coral);color:#2a0f06;border:none;border-radius:8px;padding:8px 13px;font-weight:700;
+       font-size:.82rem;cursor:pointer;font-family:var(--mono);text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  .btn:hover{filter:brightness(1.08)}
+  .sec-head{font-family:var(--serif);font-size:1.5rem;margin:6px 0 2px}
+  .sec-sub{color:var(--muted);margin:0 0 14px;font-size:.9rem}
+  .home-hero{background:linear-gradient(180deg,#0d3d4a,#0a313c);border:1px solid var(--line);border-radius:16px;
+       padding:22px;margin-bottom:16px}
+  .home-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .feature{background:#0a3340;border:1px solid var(--line);border-radius:14px;padding:16px;cursor:pointer}
+  .feature h4{margin:8px 0 4px;font-family:var(--serif);font-size:1.1rem}
+  .feature .big{font-size:1.7rem}
+  .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+  .trust div{background:#072b34;border:1px solid var(--line);border-radius:12px;padding:14px}
+  .trust b{color:var(--accent);font-family:var(--serif)}
+  .pips{display:inline-flex;gap:3px;vertical-align:middle}
+  .pips i{width:8px;height:8px;border-radius:50%;background:#1f5a64;display:inline-block}
+  .pips i.on{background:var(--accent)}
+  .readout{font-family:var(--mono);font-size:.74rem;color:#bdeee8;background:#06262f;border:1px solid var(--line);
+       border-radius:6px;padding:6px 8px;margin:6px 0;display:flex;flex-wrap:wrap;gap:10px}
+  .ptable{width:100%;margin-top:8px;border-collapse:collapse;font-size:.84rem}
+  .ptable td{padding:7px 6px;border-bottom:1px solid var(--line)}
+  .ptable .deal{font-family:var(--mono)}
+  .ptable .price{font-family:var(--mono);text-align:right;color:#bdeee8}
+  .ptable tr.low .price{color:var(--coral);font-weight:800}
+  .ptable tr.low .deal::after{content:" ◀ cheapest";color:var(--peak);font-size:.66rem;font-family:var(--mono)}
+  .article{max-width:780px;margin:0 auto;font-size:1rem;line-height:1.7}
+  .article h3{font-size:1.5rem;margin:18px 0 6px}
+  .article p{color:#d6ecec}
+  .pick{background:#0a3340;border:1px solid var(--line);border-left:3px solid var(--coral);border-radius:10px;
+       padding:12px 14px;margin:12px 0}
+  .pick h4{margin:0 0 4px;font-family:var(--serif)}
+  .stars{color:#ffce5a;font-family:var(--mono);letter-spacing:1px}
+  .crow{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#0a3340;border:1px solid var(--line);
+       border-radius:12px;padding:12px 14px;margin:8px 0;flex-wrap:wrap}
+  .tag-claimed{background:#0c4d3d;color:#7fe6c8;border:1px solid #1c7a63}
+  .tag-unclaimed{background:#3a2a10;color:#ffce5a;border:1px solid #7a5e26}
 </style>
 </head>
 <body>
@@ -784,15 +822,54 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 <div class="wrap">
   <div class="tabs">
-    <button id="tab-calendar" class="active" onclick="showTab('calendar')">📅 Calendar</button>
-    <button id="tab-period" onclick="showTab('period')">🏆 Best for a period</button>
-    <button id="tab-plan" onclick="showTab('plan')">🗓️ Plan a trip</button>
+    <button id="tab-home" class="active" onclick="showTab('home')">🏠 Home</button>
+    <button id="tab-sites" onclick="showTab('sites')">🐠 Dive Sites</button>
+    <button id="tab-calendar" onclick="showTab('calendar')">📅 Calendar</button>
+    <button id="tab-period" onclick="showTab('period')">🏆 Best Period</button>
+    <button id="tab-plan" onclick="showTab('plan')">🗓️ Plan a Trip</button>
     <button id="tab-map" onclick="showTab('map')">🗺️ Map</button>
-    <button id="tab-search" onclick="showTab('search')">🔎 Destination lookup</button>
+    <button id="tab-gear" onclick="showTab('gear')">🛒 Gear</button>
+    <button id="tab-reviews" onclick="showTab('reviews')">📝 Reviews</button>
+    <button id="tab-centres" onclick="showTab('centres')">🏤 Dive Centres</button>
+    <button id="tab-safaris" onclick="showTab('safaris')">🚤 Safaris</button>
+    <button id="tab-search" onclick="showTab('search')">🔎 Search</button>
   </div>
 
+  <!-- HOME -->
+  <section id="view-home"></section>
+
+  <!-- DIVE SITES -->
+  <section id="view-sites" class="hidden">
+    <div class="controls">
+      <div class="field"><label>Region</label><select id="siteRegion"><option value="">All regions</option></select></div>
+      <div class="field"><label>Difficulty</label><select id="siteDiff">
+        <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
+      <div class="field"><label>Current</label><select id="siteCur">
+        <option value="">Any</option><option>Low</option><option>Medium</option><option>Strong</option></select></div>
+    </div>
+    <div id="sitesGrid" class="grid"></div>
+  </section>
+
+  <!-- GEAR -->
+  <section id="view-gear" class="hidden">
+    <div class="controls">
+      <div class="field"><label>Category</label><select id="gearCat"><option value="">All gear</option></select></div>
+    </div>
+    <p class="meta" style="text-align:center">Cheapest verified online price first · prices are sample data structured like real merchant feeds.</p>
+    <div id="gearGrid" class="grid"></div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="view-reviews" class="hidden"><div id="reviewsBody"></div></section>
+
+  <!-- DIVE CENTRES -->
+  <section id="view-centres" class="hidden"><div id="centresBody"></div></section>
+
+  <!-- SAFARIS -->
+  <section id="view-safaris" class="hidden"><div id="safarisBody"></div></section>
+
   <!-- CALENDAR GRID -->
-  <section id="view-calendar">
+  <section id="view-calendar" class="hidden">
     <div class="controls">
       <div class="field"><label>Region</label><select id="calRegion"><option value="">All regions</option></select></div>
       <div class="field"><label>Sort by</label><select id="calSort">
@@ -1140,11 +1217,12 @@ function vizStr(v){return v==null?'—':'👁 '+v+'m';}
 function curChip(s){return s?'<span class="chip cur-'+s+'">⤳ '+s+' current</span>':'';}
 
 function showTab(t){
-  ['calendar','period','plan','map','search'].forEach(function(x){
+  ['home','sites','calendar','period','plan','map','gear','reviews','centres','safaris','search'].forEach(function(x){
     document.getElementById('view-'+x).classList.toggle('hidden', x!==t);
     document.getElementById('tab-'+x).classList.toggle('active', x===t);
   });
   if(t==='map') setTimeout(initMap,50);
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function fillMonths(sel){
@@ -1158,13 +1236,17 @@ function initControls(){
   });
   ps.value=(new Date().getMonth()*2+1);
   var regions=Array.from(new Set(DESTS.map(function(d){return d.region;}))).sort();
-  [['fRegion'],['planRegion'],['calRegion']].forEach(function(id){
+  [['fRegion'],['planRegion'],['calRegion'],['siteRegion']].forEach(function(id){
     var el=document.getElementById(id[0]);
     regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
   });
   ['calRegion','calSort','calShow'].forEach(function(id){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
+  ['siteRegion','siteDiff','siteCur'].forEach(function(id){
+    document.getElementById(id).addEventListener('change',renderSites);
+  });
+  document.getElementById('gearCat').addEventListener('change',renderGear);
   fillMonths(document.getElementById('planFrom'));
   fillMonths(document.getElementById('planTo'));
   fillMonths(document.getElementById('mapMonth'));
@@ -1330,6 +1412,151 @@ function val(id){return document.getElementById(id).value;}
 function num(id){var v=document.getElementById(id).value;return v?Number(v):null;}
 function esc(s){return s.replace(/'/g,"\\'");}
 
+/* ---------------- Dive Hub sections (sample/affiliate-ready content) ---------------- */
+function demo(what){alert('Demo hand-off — on the live site this opens '+what+' via an affiliate link. No reselling: Scubanaut sends you to the authorised retailer / operator.');}
+
+// nearest hyperbaric chamber per region (curated; generic fallback)
+var CHAMBERS={
+ 'Red Sea / Middle East':'Hyperbaric Medical Center, Sharm el-Sheikh',
+ 'Caribbean':'varies by island — confirm locally (DAN)',
+ 'Eastern Pacific':'remote — onboard O2 + DAN evacuation',
+ 'Coral Triangle / SE Asia':'regional hub chamber — confirm with operator',
+ 'Mediterranean':'regional hospital chambers',
+ 'North Atlantic / Europe':'regional NHS / hospital chambers',
+ 'Indian Ocean':'limited — confirm with operator (DAN)'
+};
+function chamberFor(region){
+  for(var k in CHAMBERS){ if(region.indexOf(k)!==-1) return CHAMBERS[k]; }
+  return 'Confirm nearest chamber locally · DAN emergency hotline';
+}
+function diffPips(d){
+  var n = d.indexOf('advanced')!==-1?3 : d.indexOf('intermediate')!==-1?2 : 1;
+  var s=''; for(var i=0;i<3;i++) s+='<i class="'+(i<n?'on':'')+'"></i>'; return '<span class="pips">'+s+'</span>';
+}
+
+function renderHome(){
+  var topAug=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:3});
+  var bestGear=GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
+    return '<div class="feature" onclick="showTab(\'gear\')"><div class="big">'+g.img+'</div><h4>'+g.name+'</h4>'+
+      '<div class="score">from $'+lo[1]+'</div><div class="meta">cheapest at '+lo[0]+'</div></div>';}).join('');
+  var sitePrev=topAug.map(function(r){return '<div class="feature" onclick="openProfile(\''+esc(r.name)+'\')">'+
+      '<h4>'+r.name+'</h4><div class="meta">'+r.country+'</div>'+
+      '<div class="row">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+'</div></div>';}).join('');
+  document.getElementById('view-home').innerHTML=
+    '<div class="home-hero"><div class="sec-head">Plan the right dive, at the right time of year.</div>'+
+    '<p class="sec-sub">Scubanaut scores 50 world dive destinations every month on conditions, marine life, currents and visibility — '+
+    'then points you to gear at the best price and trips with trusted operators.</p>'+
+    '<div class="row"><a class="btn" href="#" onclick="showTab(\'calendar\');return false;">Open the calendar →</a>'+
+    '<a class="btn ghost" href="#" onclick="showTab(\'period\');return false;">Best places to dive now</a></div></div>'+
+    '<div class="sec-head">🐠 Top picks for this month</div><div class="home-grid">'+sitePrev+'</div>'+
+    '<div class="sec-head" style="margin-top:18px">🛒 Best-price gear</div><div class="home-grid">'+bestGear+'</div>'+
+    '<div class="trust">'+
+      '<div><b>Independent by design</b><br><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
+      '<div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
+      '<div><b>Safety first</b><br><span class="meta">Every dive-site page lists difficulty, currents and the nearest recompression chamber.</span></div>'+
+    '</div>';
+}
+
+function renderSites(){
+  var region=val('siteRegion'), diff=val('siteDiff'), cur=val('siteCur');
+  var list=DESTS.filter(function(d){return (!region||d.region===region)&&(!diff||d.difficulty.indexOf(diff)!==-1)&&(!cur||d.current_strength===cur);});
+  document.getElementById('sitesGrid').innerHTML=list.map(function(d){
+    var s=DivingCalendar.destinationSeasonSummary(d); var bm=s.bestMonth?s.bestMonth.month:'—';
+    var mm=s.bestMonth?d.monthly[s.bestMonth.month]:d.monthly.Jan;
+    return '<div class="card"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
+      '<div class="row">'+diffPips(d.difficulty)+'<span class="chip">'+d.difficulty+'</span>'+curChip(d.current_strength)+'</div>'+
+      '<div class="readout"><span>BEST '+bm+'</span><span>TEMP '+tempStr(d.monthly_temp_c[bm])+'</span>'+
+        '<span>VIZ '+(mm.visibility_m||'—')+'m</span><span>'+d.access+'</span></div>'+
+      '<div class="hl">🐟 '+mm.marine_life+'</div>'+
+      '<div class="meta" style="margin-top:6px">⛑ Nearest chamber: '+chamberFor(d.region)+'</div>'+
+      '<div style="margin-top:8px"><a class="btn ghost" href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Seasonal calendar →</a></div></div>';
+  }).join('');
+}
+
+var GEAR=[
+ {name:"Scubapro Hydros Pro BCD",cat:"BCD",img:"🦺",offers:[["Amazon",499],["House of Scuba",469],["Dive Right In",479]]},
+ {name:"Aqua Lung Core Regulator Set",cat:"Regulator",img:"🌬️",offers:[["Amazon",339],["Scuba.com",319],["Dive Right In",349]]},
+ {name:"Shearwater Peregrine TX Computer",cat:"Computer",img:"⌚",offers:[["Amazon",569],["House of Scuba",549],["Dive Right In",559]]},
+ {name:"Suunto Zoop Novo Computer",cat:"Computer",img:"⌚",offers:[["Amazon",229],["House of Scuba",219],["Dive Right In",239]]},
+ {name:"Cressi Big Eyes Evo Mask",cat:"Mask",img:"🥽",offers:[["Amazon",49],["House of Scuba",45],["Dive Right In",47]]},
+ {name:"Mares Avanti Quattro+ Fins",cat:"Fins",img:"🦶",offers:[["Amazon",129],["House of Scuba",119],["Dive Right In",125]]},
+ {name:"Fourth Element Proteus II 5mm Wetsuit",cat:"Wetsuit",img:"🧥",offers:[["Amazon",259],["House of Scuba",249],["Dive Right In",269]]},
+ {name:"OrcaTorch D710 Dive Light",cat:"Torch",img:"🔦",offers:[["Amazon",99],["House of Scuba",95],["Dive Right In",109]]}
+];
+function renderGear(){
+  var cats=Array.from(new Set(GEAR.map(function(g){return g.cat;})));
+  var sel=document.getElementById('gearCat');
+  if(sel.options.length<=1) cats.forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);});
+  var cat=sel.value;
+  var list=GEAR.filter(function(g){return !cat||g.cat===cat;});
+  document.getElementById('gearGrid').innerHTML=list.map(function(g){
+    var offers=g.offers.slice().sort(function(a,b){return a[1]-b[1];});
+    var rows=offers.map(function(o,i){return '<tr class="'+(i===0?'low':'')+'"><td class="deal">'+o[0]+'</td>'+
+      '<td class="price">$'+o[1]+'</td><td style="text-align:right"><a class="btn" href="#" onclick="demo(\''+o[0]+'\');return false;">Buy at '+o[0]+'</a></td></tr>';}).join('');
+    var save=offers[offers.length-1][1]-offers[0][1];
+    return '<div class="card"><h3>'+g.img+' '+g.name+'</h3><div class="meta">'+g.cat+' · save up to $'+save+' by comparing</div>'+
+      '<table class="ptable">'+rows+'</table></div>';
+  }).join('');
+}
+
+var REVIEW_PICKS=[
+ ["Scubapro Hydros Pro","Best overall — modular, travel-friendly, near-indestructible Monprene."],
+ ["Aqua Lung Outlaw","Best for travel — ultralight back-inflate that packs tiny."],
+ ["Mares Dragon SLS","Best comfort — load-distributing harness for long dive days."],
+ ["Cressi Travelight","Best value — featherweight wing at a fair price."],
+ ["Zeagle Ranger","Best for tech-curious — rugged, hugely adjustable workhorse."]
+];
+function renderReviews(){
+  var picks=REVIEW_PICKS.map(function(p,i){return '<div class="pick"><h4>'+(i+1)+'. '+p[0]+'</h4><p class="meta">'+p[1]+'</p>'+
+    '<a class="btn ghost" href="#" onclick="showTab(\'gear\');return false;">Check price at authorised dealers →</a></div>';}).join('');
+  document.getElementById('reviewsBody').innerHTML=
+    '<div class="article"><div class="sec-head">📝 Reviews &amp; buying guides</div>'+
+    '<p class="sec-sub">Independent, hands-on guides. We earn from affiliate links, never from rankings.</p>'+
+    '<h3>The Top 5 BCDs of 2026</h3>'+
+    '<p>A buoyancy compensator is the one piece of kit you wear on every dive, so it pays to choose well. '+
+    'We weighted lift, travel weight, durability, comfort and value — and tested each in the water. Here are our five picks.</p>'+
+    picks+
+    '<p class="meta" style="margin-top:14px">More guides coming: best dive computers, best travel regulators, wetsuit thickness by water temperature.</p></div>';
+}
+
+var CENTRES=[
+ {name:"Emperor Divers",loc:"Sharm el-Sheikh, Egypt",rating:4.8,reviews:1240,claimed:true},
+ {name:"Blue Magic Dive Center",loc:"Raja Ampat, Indonesia",rating:4.9,reviews:560,claimed:false},
+ {name:"Scuba Junkie",loc:"Mabul / Sipadan, Malaysia",rating:4.7,reviews:2100,claimed:true},
+ {name:"Manta Dive Gili T",loc:"Gili Trawangan, Indonesia",rating:4.6,reviews:1830,claimed:false},
+ {name:"Galapagos Sky",loc:"Galápagos, Ecuador",rating:4.9,reviews:410,claimed:true},
+ {name:"Dive Friends Bonaire",loc:"Kralendijk, Bonaire",rating:4.8,reviews:980,claimed:false}
+];
+function stars(r){var f=Math.round(r);var s='';for(var i=0;i<5;i++)s+=(i<f?'★':'☆');return '<span class="stars">'+s+'</span>';}
+function renderCentres(){
+  document.getElementById('centresBody').innerHTML=
+    '<div class="sec-head">🏤 Dive centres</div><p class="sec-sub">Verified-diver ratings. Own a centre? Claim your listing to reply to reviews and add photos.</p>'+
+    CENTRES.map(function(c){return '<div class="crow"><div><b>'+c.name+'</b> '+
+      '<span class="badge '+(c.claimed?'tag-claimed':'tag-unclaimed')+'">'+(c.claimed?'Claimed':'Unclaimed')+'</span>'+
+      '<div class="meta">'+c.loc+'</div></div>'+
+      '<div style="text-align:right">'+stars(c.rating)+' <span class="mono">'+c.rating.toFixed(1)+'</span>'+
+      '<div class="meta">'+c.reviews+' reviews</div></div>'+
+      '<div>'+(c.claimed?'<a class="btn ghost" href="#" onclick="demo(\'the centre profile\');return false;">View</a>':
+        '<a class="btn" href="#" onclick="demo(\'the claim form\');return false;">Claim this listing</a>')+'</div></div>';}).join('');
+}
+
+var SAFARIS=[
+ {name:"Red Sea — Brothers, Daedalus & Elphinstone",boat:"M/Y Emperor Superior",nights:7,from:1290,region:"Red Sea, Egypt"},
+ {name:"Raja Ampat Explorer",boat:"M/V Samambaia",nights:10,from:4600,region:"Raja Ampat, Indonesia"},
+ {name:"Galápagos — Darwin & Wolf",boat:"M/V Galapagos Master",nights:7,from:5950,region:"Galápagos, Ecuador"},
+ {name:"Maldives Central Atolls",boat:"M/V Emperor Explorer",nights:7,from:1650,region:"Maldives"},
+ {name:"Komodo National Park",boat:"M/V Mermaid II",nights:8,from:2900,region:"Komodo, Indonesia"}
+];
+function renderSafaris(){
+  document.getElementById('safarisBody').innerHTML=
+    '<div class="sec-head">🚤 Liveaboard safaris</div><p class="sec-sub">Book through trusted operators — Scubanaut hands you off, it doesn\'t resell trips.</p>'+
+    '<div class="grid">'+SAFARIS.map(function(s){return '<div class="card"><h3>'+s.name+'</h3>'+
+      '<div class="meta">'+s.region+'</div>'+
+      '<div class="readout"><span>'+s.boat+'</span><span>'+s.nights+' nights</span><span class="score">from $'+s.from+'</span></div>'+
+      '<div class="row"><a class="btn" href="#" onclick="demo(\'Divebooker\');return false;">Book via Divebooker</a>'+
+      '<a class="btn ghost" href="#" onclick="demo(\'Liveaboard.com\');return false;">Liveaboard.com</a></div></div>';}).join('')+'</div>';
+}
+
 // Prefer data embedded by the single-file build; otherwise fetch from disk.
 function loadData(){
   if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null]);
@@ -1346,8 +1573,13 @@ loadData().then(function(res){
     'score = conditions rating + sea-life bonus + visibility · ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed'+
     '<div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources; '+
     'water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles. '+
-    'Always confirm current conditions with a local dive centre before travelling.</div>';
-  initControls(); renderCalendar(); renderRanking(); renderPlan();
+    'Always confirm current conditions with a local dive centre before travelling.</div>'+
+    '<div class="disclosure"><b>Affiliate disclosure:</b> Scubanaut may earn a commission when you buy gear or book a trip through our links, '+
+    'at no extra cost to you. Gear and trip prices shown are sample data for demonstration. We link only to authorised retailers and trusted '+
+    'operators, and commissions never influence our ratings.</div>';
+  initControls();
+  renderHome(); renderSites(); renderGear(); renderReviews(); renderCentres(); renderSafaris();
+  renderCalendar(); renderRanking(); renderPlan();
   document.getElementById('searchBox').addEventListener('input', renderSearch);
 }).catch(function(){
   document.querySelector('.wrap').innerHTML='<div class="empty">Could not load <code>diving-destinations.json</code>.<br>If you opened the file directly, use the single-file build <code>diving-site.html</code>, or serve this folder over HTTP (<code>python3 -m http.server</code>).</div>';
