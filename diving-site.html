@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scubanaut — Dive Trip Planner &amp; Seasonal Calendar</title>
-<meta name="description" content="Scubanaut: when and where to scuba dive. 50 world destinations scored month by month on conditions, marine life, currents and visibility.">
+<title>Scubanaut — The Seasonal Dive Almanac | When &amp; Where to Dive Worldwide</title>
+<meta name="description" content="Know before you go. Scubanaut is the seasonal dive almanac — the world's dive calendar that scores 50 destinations month by month on conditions, marine life, currents and visibility.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 96'><rect width='120' height='96' rx='18' fill='%23062a36'/><path d='M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z' fill='%232fe0d6'/></svg>">
 <style>
 /* required styles */
@@ -919,9 +919,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 </div>
 
 <header class="hero" id="hero">
-  <span class="eyebrow">50 destinations · 12 months · scored</span>
-  <h1>Dive the right place, at the right time.</h1>
-  <p class="tagline">The seasonal dive-trip planner — water temperature, marine life, currents and visibility for 50 world destinations, every month of the year.</p>
+  <span class="eyebrow">The seasonal dive almanac · 50 destinations</span>
+  <h1>Know before you go.</h1>
+  <p class="tagline">Dive the right place, at the right time — Scubanaut scores 50 world destinations month by month on conditions, marine life, currents and visibility.</p>
   <div class="hero-cta">
     <a class="btn" href="#" onclick="showTab('calendar');return false;">📅 Open the calendar</a>
     <a class="btn ghost" href="#" onclick="showTab('plan');return false;">Plan a trip →</a>
@@ -1575,6 +1575,31 @@ function renderHome(){
     '<p class="sec-sub">Highest-scoring destinations for '+nowMonth+', based on live conditions.</p><div class="home-grid">'+sitePrev+'</div>'+
     '<div class="sec-head" style="margin-top:28px">🛒 Best-price gear</div>'+
     '<p class="sec-sub">Sample price comparison across authorised dealers.</p><div class="home-grid">'+bestGear+'</div>'+
+    // --- Methodology / "show your receipts" — the credibility core of a reference brand ---
+    '<div class="sec-head" style="margin-top:28px">📐 How we score</div>'+
+    '<p class="sec-sub">No opinions, no sponsorships — every destination gets the same transparent score each month, '+
+      'so you can compare like for like. Higher is better.</p>'+
+    '<div class="readout" style="font-size:.84rem;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap">'+
+      '<span class="badge b-Peak">Season rating</span><span>+</span>'+
+      '<span class="badge b-Shoulder">Marine-life bonus</span><span>+</span>'+
+      '<span class="badge b-Good">Visibility</span><span>=</span>'+
+      '<span class="score" style="font-size:1rem">Monthly score</span>'+
+    '</div>'+
+    '<div class="home-grid" style="margin-top:14px">'+
+      '<div class="feature" style="cursor:default"><div class="big">🗓️</div><h4>Season rating</h4>'+
+        '<p class="meta">Peak, Good, Shoulder, Low or Closed — the base of the score, from dive-operator and liveaboard calendars. '+
+        '<b style="color:var(--ink)">Peak 100 · Good 72 · Shoulder 48 · Low 22.</b></p></div>'+
+      '<div class="feature" style="cursor:default"><div class="big">🐋</div><h4>Marine-life bonus</h4>'+
+        '<p class="meta">Up to <b style="color:var(--ink)">+25</b> for the megafauna and aggregations in season that month — '+
+        'mantas, whale sharks, hammerheads, spawning events and more.</p></div>'+
+      '<div class="feature" style="cursor:default"><div class="big">👁️</div><h4>Visibility</h4>'+
+        '<p class="meta">Up to <b style="color:var(--ink)">+18</b>, scaled from typical visibility in metres '+
+        '(≤5m adds nothing, ≥35m adds the full bonus).</p></div>'+
+    '</div>'+
+    '<p class="sec-sub" style="margin-top:14px;font-size:.82rem">Seasonal data is compiled from dive operators, liveaboard '+
+      'calendars and ocean sea-temperature datasets; water temperatures are typical monthly ranges (±1°C) and marine-life timing '+
+      'shifts year to year. <b style="color:var(--ink)">Data reviewed June 2026.</b> Always confirm current conditions with a local '+
+      'dive centre before travelling.</p>'+
     '<div class="trust">'+
       '<div><b>Independent by design</b><br><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
       '<div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
