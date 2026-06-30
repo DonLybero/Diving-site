@@ -6,7 +6,7 @@
  * from diving-destinations.json.
  *
  * Scoring (keep in sync with build_rankings.py):
- *   score = ratingBase + min(sum(matched marine weights), BONUS_CAP)
+ *   score = ratingBase + min(sum(matched marine weights), BONUS_CAP) + visibilityBonus
  *   'Closed' months are excluded from rankings.
  */
 (function (root) {
@@ -24,6 +24,14 @@
   var RATING_BASE = { Peak: 100, Good: 72, Shoulder: 48, Low: 22, Closed: null };
   var BONUS_CAP = 25;
   var COMFORT_TARGET = 27; // deg C, tie-breaker only
+  // Visibility scoring: scale visibility_m (metres) into 0..VIZ_MAX points.
+  var VIZ_MIN = 5, VIZ_REF = 35, VIZ_MAX = 18; // <=5m -> 0pts, >=35m -> 18pts
+
+  function visibilityBonus(vizM) {
+    if (vizM == null) return 0;
+    var v = Math.max(VIZ_MIN, Math.min(vizM, VIZ_REF));
+    return Math.round((v - VIZ_MIN) / (VIZ_REF - VIZ_MIN) * VIZ_MAX);
+  }
 
   // Headline marine-life keywords -> bonus weight (presence-based, once each).
   var MARINE_WEIGHTS = [
@@ -67,7 +75,7 @@
     if (!mm) return null;
     var base = RATING_BASE[mm.rating];
     if (base === null || base === undefined) return null; // Closed
-    return base + marineBonus(mm.marine_life);
+    return base + marineBonus(mm.marine_life) + visibilityBonus(mm.visibility_m);
   }
 
   function matchFilters(dest, month, f) {
@@ -98,6 +106,7 @@
         name: d.name, country: d.country, region: d.region,
         difficulty: d.difficulty, access: d.access, wetsuit: d.wetsuit,
         water_temp_c: d.monthly_temp_c[month],
+        visibility_m: d.monthly[month].visibility_m,
         rating: d.monthly[month].rating,
         highlight: d.monthly[month].marine_life,
         conditions: d.monthly[month].conditions,
@@ -109,6 +118,60 @@
       var ca = Math.abs((a.water_temp_c == null ? 99 : a.water_temp_c) - COMFORT_TARGET);
       var cb = Math.abs((b.water_temp_c == null ? 99 : b.water_temp_c) - COMFORT_TARGET);
       if (ca !== cb) return ca - cb;
+      return a.name < b.name ? -1 : 1;
+    });
+    for (var r = 0; r < out.length; r++) out[r].rank = r + 1;
+    if (filters && filters.limit) return out.slice(0, filters.limit);
+    return out;
+  }
+
+  /* Inclusive list of month names between two months (wraps across year-end).
+     monthsBetween("Jun","Sep") -> ["Jun","Jul","Aug","Sep"];
+     monthsBetween("Nov","Feb") -> ["Nov","Dec","Jan","Feb"]. */
+  function monthsBetween(from, to) {
+    var i = MONTHS.indexOf(from), j = MONTHS.indexOf(to);
+    if (i < 0 || j < 0) return [];
+    var out = [], k = i;
+    while (true) { out.push(MONTHS[k]); if (k === j) break; k = (k + 1) % 12; if (out.length > 12) break; }
+    return out;
+  }
+
+  /* Multi-period trip planner. Given a travel window (array of month names, or
+     use monthsBetween), rank destinations by how good they are ACROSS the window.
+     windowScore = average monthly score (Closed months count as 0 and are flagged).
+     Returns rich objects with per-month ratings, peak/closed counts and averages. */
+  function rankWindow(destinations, months, filters) {
+    if (!months || !months.length) return [];
+    var out = [];
+    for (var i = 0; i < destinations.length; i++) {
+      var d = destinations[i];
+      // static filters (region/difficulty/water/access) use the first month only
+      if (filters && !matchFilters(d, months[0], Object.assign({}, filters, { minTemp: null, maxTemp: null }))) continue;
+      var sum = 0, peak = 0, closed = 0, tsum = 0, tn = 0, vsum = 0, vn = 0, ratings = [];
+      for (var k = 0; k < months.length; k++) {
+        var m = months[k], mm = d.monthly[m];
+        ratings.push(mm.rating);
+        if (mm.rating === "Peak") peak++;
+        var s = scoreMonth(d, m);
+        if (s === null) { closed++; sum += 0; }
+        else { sum += s; }
+        var t = d.monthly_temp_c[m]; if (t != null) { tsum += t; tn++; }
+        if (mm.visibility_m != null) { vsum += mm.visibility_m; vn++; }
+      }
+      var avg = sum / months.length;
+      var avgTemp = tn ? Math.round(tsum / tn) : null;
+      if (filters && filters.minTemp != null && avgTemp != null && avgTemp < filters.minTemp) continue;
+      out.push({
+        name: d.name, country: d.country, region: d.region,
+        difficulty: d.difficulty, access: d.access,
+        avg_score: Math.round(avg), peak_months: peak, closed_months: closed,
+        avg_temp_c: avgTemp, avg_visibility_m: vn ? Math.round(vsum / vn) : null,
+        ratings: ratings, highlights: d.highlights, best_months: d.best_months
+      });
+    }
+    out.sort(function (a, b) {
+      if (b.avg_score !== a.avg_score) return b.avg_score - a.avg_score;
+      if (b.peak_months !== a.peak_months) return b.peak_months - a.peak_months;
       return a.name < b.name ? -1 : 1;
     });
     for (var r = 0; r < out.length; r++) out[r].rank = r + 1;
@@ -169,8 +232,11 @@
   var api = {
     MONTHS: MONTHS, PERIODS: PERIODS,
     RATING_BASE: RATING_BASE, MARINE_WEIGHTS: MARINE_WEIGHTS, BONUS_CAP: BONUS_CAP,
-    marineBonus: marineBonus, scoreMonth: scoreMonth, resolvePeriod: resolvePeriod,
-    rankPeriod: rankPeriod, getDestination: getDestination,
+    VIZ_MIN: VIZ_MIN, VIZ_REF: VIZ_REF, VIZ_MAX: VIZ_MAX,
+    marineBonus: marineBonus, visibilityBonus: visibilityBonus,
+    scoreMonth: scoreMonth, resolvePeriod: resolvePeriod,
+    rankPeriod: rankPeriod, rankWindow: rankWindow, monthsBetween: monthsBetween,
+    getDestination: getDestination,
     searchDestinations: searchDestinations, destinationSeasonSummary: destinationSeasonSummary
   };
 

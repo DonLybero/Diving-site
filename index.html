@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>World Diving Calendar</title>
+<link rel="stylesheet" href="vendor/leaflet.css">
 <style>
   :root{
     --bg:#06283d; --panel:#0f3a57; --card:#13496c; --ink:#eaf6ff; --muted:#9cc4dd;
@@ -16,12 +17,12 @@
   header{padding:22px 18px 6px;text-align:center}
   header h1{margin:0;font-size:1.7rem;letter-spacing:.5px}
   header p{margin:6px 0 0;color:var(--muted);font-size:.9rem}
-  .wrap{max-width:1040px;margin:0 auto;padding:14px 16px 60px}
-  .tabs{display:flex;gap:8px;justify-content:center;margin:16px 0}
+  .wrap{max-width:1060px;margin:0 auto;padding:14px 16px 60px}
+  .tabs{display:flex;gap:8px;justify-content:center;margin:16px 0;flex-wrap:wrap}
   .tabs button{background:var(--panel);color:var(--ink);border:1px solid #1d5778;border-radius:999px;
-       padding:9px 18px;font-size:.95rem;cursor:pointer}
+       padding:9px 16px;font-size:.92rem;cursor:pointer}
   .tabs button.active{background:var(--accent);color:#03212f;font-weight:700;border-color:var(--accent)}
-  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:center;
        background:var(--panel);padding:14px;border-radius:14px;margin-bottom:18px}
   select,input{background:#03212f;color:var(--ink);border:1px solid #1d5778;border-radius:8px;
        padding:9px 11px;font-size:.92rem}
@@ -36,46 +37,53 @@
   .card h3{margin:2px 0 2px;font-size:1.08rem}
   .meta{color:var(--muted);font-size:.78rem;margin-bottom:8px}
   .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}
-  .badge{font-size:.72rem;padding:3px 8px;border-radius:999px;font-weight:700;color:#03212f}
+  .badge{font-size:.72rem;padding:3px 8px;border-radius:999px;font-weight:700}
   .b-Peak{background:var(--peak);color:#fff}.b-Good{background:var(--good);color:#03212f}
-  .b-Shoulder{background:var(--shoulder)}.b-Low{background:var(--low);color:#fff}.b-Closed{background:var(--closed);color:#fff}
+  .b-Shoulder{background:var(--shoulder);color:#03212f}.b-Low{background:var(--low);color:#fff}.b-Closed{background:var(--closed);color:#fff}
   .chip{font-size:.72rem;background:#03303f;border:1px solid #1d5778;border-radius:999px;padding:3px 8px;color:var(--muted)}
   .score{font-size:.78rem;color:var(--accent);font-weight:700}
   .hl{font-size:.86rem;margin-top:6px}
   .temp{font-weight:700}
   .hidden{display:none}
-  /* profile */
-  .profile h2{margin:0 0 2px}
-  .profile .lead{color:var(--muted);margin:0 0 12px}
+  .strip{display:flex;gap:2px;margin:8px 0}
+  .strip span{flex:1;text-align:center;font-size:.6rem;padding:3px 0;border-radius:3px;color:#03212f;font-weight:700}
+  .profile h2{margin:0 0 2px}.profile .lead{color:var(--muted);margin:0 0 12px}
+  .best{background:linear-gradient(90deg,#0c5132,#0f3a57);border:1px solid #1d7a4d;border-radius:10px;
+       padding:10px 12px;margin:10px 0;font-size:.9rem}
   .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin:12px 0}
   .kv div{background:var(--panel);border-radius:10px;padding:8px 10px}
   .kv span{display:block;color:var(--muted);font-size:.72rem}
-  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.85rem}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.84rem}
   th,td{padding:7px 8px;border-bottom:1px solid #16455f;text-align:left;vertical-align:top}
-  th{color:var(--muted);font-weight:600;position:sticky;top:0;background:#0c3550}
+  th{color:var(--muted);font-weight:600}
   .species{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
   .empty{color:var(--muted);text-align:center;padding:30px}
   a{color:var(--accent)}
+  #map{height:560px;border-radius:14px;border:1px solid #1d5778}
+  .legend{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:10px 0;font-size:.78rem;color:var(--muted)}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  .leaflet-popup-content{font-size:.85rem}
   footer{color:var(--muted);font-size:.75rem;text-align:center;margin-top:30px}
 </style>
 </head>
 <body>
 <header>
   <h1>🤿 World Diving Calendar</h1>
-  <p>Find the best dive destinations for any time of year — or look up everything about a destination.</p>
+  <p>Top destinations for any period · full dive profiles · trip planner · map — scored on conditions, sea life &amp; visibility.</p>
 </header>
 
 <div class="wrap">
   <div class="tabs">
     <button id="tab-period" class="active" onclick="showTab('period')">📅 Best for a period</button>
+    <button id="tab-plan" onclick="showTab('plan')">🗓️ Plan a trip</button>
+    <button id="tab-map" onclick="showTab('map')">🗺️ Map</button>
     <button id="tab-search" onclick="showTab('search')">🔎 Destination lookup</button>
   </div>
 
-  <!-- PERIOD RANKING VIEW -->
+  <!-- PERIOD RANKING -->
   <section id="view-period">
     <div class="controls">
-      <div class="field"><label>Period (24 per year)</label>
-        <select id="periodSel"></select></div>
+      <div class="field"><label>Period (24 per year)</label><select id="periodSel"></select></div>
       <div class="field"><label>Region</label><select id="fRegion"><option value="">Any</option></select></div>
       <div class="field"><label>Difficulty</label><select id="fDiff">
         <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
@@ -89,7 +97,35 @@
     <div id="rankGrid" class="grid"></div>
   </section>
 
-  <!-- SEARCH / PROFILE VIEW -->
+  <!-- TRIP PLANNER -->
+  <section id="view-plan" class="hidden">
+    <div class="controls">
+      <div class="field"><label>Travel from</label><select id="planFrom"></select></div>
+      <div class="field"><label>to</label><select id="planTo"></select></div>
+      <div class="field"><label>Region</label><select id="planRegion"><option value="">Any</option></select></div>
+      <div class="field"><label>Difficulty</label><select id="planDiff">
+        <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
+      <div class="field"><label>Min avg °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
+    </div>
+    <p id="planInfo" class="meta" style="text-align:center"></p>
+    <div id="planGrid" class="grid"></div>
+  </section>
+
+  <!-- MAP -->
+  <section id="view-map" class="hidden">
+    <div class="controls">
+      <div class="field"><label>Colour markers by month</label><select id="mapMonth"></select></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
+      <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
+      <span><i style="background:#64748b"></i>Closed</span>
+    </div>
+    <div id="map"></div>
+    <p id="mapNote" class="meta" style="text-align:center"></p>
+  </section>
+
+  <!-- SEARCH / PROFILE -->
   <section id="view-search" class="hidden">
     <div class="controls">
       <div class="field" style="flex:1">
@@ -104,18 +140,26 @@
   <footer id="foot"></footer>
 </div>
 
+<script src="vendor/leaflet.js"></script>
 <script src="diving-calendar.js"></script>
 <script>
-var DATA=null, DESTS=[];
+var DATA=null, DESTS=[], MAP=null, MARKERS=null;
+var RCOLOR={Peak:'#16a34a',Good:'#0ea5e9',Shoulder:'#eab308',Low:'#f97316',Closed:'#64748b'};
 
 function badge(r){return '<span class="badge b-'+r+'">'+r+'</span>';}
 function tempStr(t){return t==null?'—':t+'°C';}
+function vizStr(v){return v==null?'—':'👁 '+v+'m';}
 
 function showTab(t){
-  document.getElementById('view-period').classList.toggle('hidden', t!=='period');
-  document.getElementById('view-search').classList.toggle('hidden', t!=='search');
-  document.getElementById('tab-period').classList.toggle('active', t==='period');
-  document.getElementById('tab-search').classList.toggle('active', t==='search');
+  ['period','plan','map','search'].forEach(function(x){
+    document.getElementById('view-'+x).classList.toggle('hidden', x!==t);
+    document.getElementById('tab-'+x).classList.toggle('active', x===t);
+  });
+  if(t==='map') setTimeout(initMap,50);
+}
+
+function fillMonths(sel){
+  DivingCalendar.MONTHS.forEach(function(m){var o=document.createElement('option');o.value=m;o.textContent=m;sel.appendChild(o);});
 }
 
 function initControls(){
@@ -123,45 +167,100 @@ function initControls(){
   DivingCalendar.PERIODS.forEach(function(p){
     var o=document.createElement('option'); o.value=p.period_no; o.textContent='#'+p.period_no+' — '+p.label; ps.appendChild(o);
   });
-  // default to current month (early)
-  var now=new Date().getMonth(); ps.value=(now*2+1);
+  ps.value=(new Date().getMonth()*2+1);
   var regions=Array.from(new Set(DESTS.map(function(d){return d.region;}))).sort();
-  var fr=document.getElementById('fRegion');
-  regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;fr.appendChild(o);});
-  ['periodSel','fRegion','fDiff','fWater','fTemp','fLimit'].forEach(function(id){
-    document.getElementById(id).addEventListener('change', renderRanking);
-    document.getElementById(id).addEventListener('input', renderRanking);
+  [['fRegion'],['planRegion']].forEach(function(id){
+    var el=document.getElementById(id[0]);
+    regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
   });
+  fillMonths(document.getElementById('planFrom'));
+  fillMonths(document.getElementById('planTo'));
+  fillMonths(document.getElementById('mapMonth'));
+  document.getElementById('planFrom').value='Jun';
+  document.getElementById('planTo').value='Sep';
+  document.getElementById('mapMonth').value=DivingCalendar.MONTHS[new Date().getMonth()];
+  ['periodSel','fRegion','fDiff','fWater','fTemp','fLimit'].forEach(function(id){
+    var e=document.getElementById(id); e.addEventListener('change',renderRanking); e.addEventListener('input',renderRanking);
+  });
+  ['planFrom','planTo','planRegion','planDiff','planTemp'].forEach(function(id){
+    var e=document.getElementById(id); e.addEventListener('change',renderPlan); e.addEventListener('input',renderPlan);
+  });
+  document.getElementById('mapMonth').addEventListener('change',drawMarkers);
 }
 
 function renderRanking(){
-  var f={
-    region:document.getElementById('fRegion').value,
-    difficulty:document.getElementById('fDiff').value,
-    water_type:document.getElementById('fWater').value,
-    minTemp:document.getElementById('fTemp').value?Number(document.getElementById('fTemp').value):null,
-    limit:Number(document.getElementById('fLimit').value)
-  };
-  var pno=Number(document.getElementById('periodSel').value);
-  var ranked=DivingCalendar.rankPeriod(DESTS, pno, f);
+  var f={region:val('fRegion'),difficulty:val('fDiff'),water_type:val('fWater'),
+         minTemp:num('fTemp'),limit:Number(val('fLimit'))};
+  var ranked=DivingCalendar.rankPeriod(DESTS, Number(val('periodSel')), f);
   var g=document.getElementById('rankGrid');
   if(!ranked.length){g.innerHTML='<div class="empty">No open destinations match these filters for this period.</div>';return;}
   g.innerHTML=ranked.map(function(r){
     return '<div class="card"><div class="rank">'+r.rank+'</div>'+
-      '<h3>'+r.name+'</h3>'+
-      '<div class="meta">'+r.country+' · '+r.region+'</div>'+
+      '<h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
       '<div class="row">'+badge(r.rating)+'<span class="chip">'+r.difficulty+'</span>'+
-        '<span class="chip">'+r.access+'</span><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
+        '<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
+        '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+
         '<span class="score">score '+r.score+'</span></div>'+
       '<div class="hl">🐟 '+r.highlight+'</div>'+
       '<div class="meta" style="margin-top:6px">🌊 '+r.conditions+'</div>'+
-      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+r.name.replace(/'/g,"\\'")+'\');return false;">Full profile →</a></div>'+
-    '</div>';
+      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div>';
   }).join('');
 }
 
+function renderPlan(){
+  var months=DivingCalendar.monthsBetween(val('planFrom'),val('planTo'));
+  var f={region:val('planRegion'),difficulty:val('planDiff'),minTemp:num('planTemp'),limit:15};
+  var ranked=DivingCalendar.rankWindow(DESTS, months, f);
+  document.getElementById('planInfo').textContent=
+    'Ranking '+ranked.length+' destinations across '+months.length+' month(s): '+months.join(' · ')+
+    ' — sorted by average score over the window.';
+  var g=document.getElementById('planGrid');
+  if(!ranked.length){g.innerHTML='<div class="empty">No destinations match.</div>';return;}
+  g.innerHTML=ranked.map(function(r){
+    var strip=months.map(function(m,i){var rt=r.ratings[i];
+      return '<span style="background:'+RCOLOR[rt]+'" title="'+m+': '+rt+'">'+m[0]+'</span>';}).join('');
+    return '<div class="card"><div class="rank">'+r.rank+'</div>'+
+      '<h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
+      '<div class="strip">'+strip+'</div>'+
+      '<div class="row"><span class="chip">'+r.peak_months+'/'+months.length+' Peak</span>'+
+        '<span class="chip temp">avg '+tempStr(r.avg_temp_c)+'</span>'+
+        '<span class="chip">avg '+vizStr(r.avg_visibility_m)+'</span>'+
+        (r.closed_months?'<span class="chip" style="color:#f97316">'+r.closed_months+' closed</span>':'')+
+        '<span class="score">avg '+r.avg_score+'</span></div>'+
+      '<div class="hl">'+r.highlights+'</div>'+
+      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div>';
+  }).join('');
+}
+
+function initMap(){
+  if(typeof L==='undefined'){document.getElementById('mapNote').textContent='Map library could not load (needs internet). Coordinates are still in the data.';return;}
+  if(MAP) {MAP.invalidateSize();return;}
+  MAP=L.map('map',{worldCopyJump:true}).setView([10,20],2);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {maxZoom:8,attribution:'© OpenStreetMap'}).addTo(MAP);
+  MARKERS=L.layerGroup().addTo(MAP);
+  drawMarkers();
+}
+function drawMarkers(){
+  if(!MAP||!MARKERS) return;
+  MARKERS.clearLayers();
+  var month=val('mapMonth');
+  DESTS.forEach(function(d){
+    var c=d.coordinates; if(!c||c.lat==null) return;
+    var mm=d.monthly[month];
+    var m=L.circleMarker([c.lat,c.lng],{radius:7,color:'#021824',weight:1,
+      fillColor:RCOLOR[mm.rating],fillOpacity:.92});
+    m.bindPopup('<b>'+d.name+'</b><br>'+d.country+' · '+d.region+'<br>'+
+      month+': <b style="color:'+RCOLOR[mm.rating]+'">'+mm.rating+'</b> · '+tempStr(d.monthly_temp_c[month])+
+      ' · '+vizStr(mm.visibility_m)+'<br>🐟 '+mm.marine_life+
+      '<br><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">full profile →</a>');
+    MARKERS.addLayer(m);
+  });
+  document.getElementById('mapNote').textContent='Markers coloured by '+month+' season rating · click a point for details.';
+}
+
 function renderSearch(){
-  var q=document.getElementById('searchBox').value;
+  var q=val('searchBox');
   var res=DivingCalendar.searchDestinations(DESTS,q);
   var sr=document.getElementById('searchResults');
   document.getElementById('profile').innerHTML='';
@@ -169,14 +268,11 @@ function renderSearch(){
   if(!res.length){sr.innerHTML='<div class="empty">No matches.</div>';return;}
   sr.innerHTML=res.slice(0,12).map(function(d){
     var s=DivingCalendar.destinationSeasonSummary(d);
-    return '<div class="card"><h3>'+d.name+'</h3>'+
-      '<div class="meta">'+d.country+' · '+d.region+'</div>'+
-      '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+
-        '<span class="chip">'+d.access+'</span></div>'+
+    return '<div class="card"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
+      '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span><span class="chip">'+d.access+'</span></div>'+
       '<div class="hl">'+d.highlights+'</div>'+
       '<div class="meta" style="margin-top:6px">Best: '+d.best_months+' · Peak months: '+(s.byRating.Peak.join(', ')||'—')+'</div>'+
-      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+d.name.replace(/'/g,"\\'")+'\');return false;">Open full profile →</a></div>'+
-    '</div>';
+      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Open full profile →</a></div></div>';
   }).join('');
 }
 
@@ -185,35 +281,44 @@ function openProfile(name){
   var d=DivingCalendar.getDestination(DESTS,name); if(!d)return;
   document.getElementById('searchResults').innerHTML='';
   document.getElementById('searchBox').value=d.name;
+  var s=DivingCalendar.destinationSeasonSummary(d);
   var rows=DivingCalendar.MONTHS.map(function(m){
-    var mm=d.monthly[m], t=d.monthly_temp_c[m];
-    return '<tr><td><b>'+m+'</b></td><td>'+badge(mm.rating)+'</td><td>'+tempStr(t)+'</td>'+
-      '<td>'+mm.marine_life+'</td><td>'+mm.conditions+'</td></tr>';
+    var mm=d.monthly[m];
+    return '<tr><td><b>'+m+'</b></td><td>'+badge(mm.rating)+'</td><td>'+tempStr(d.monthly_temp_c[m])+'</td>'+
+      '<td>'+(mm.visibility_m==null?'—':mm.visibility_m+'m')+'</td><td>'+mm.marine_life+'</td><td>'+mm.conditions+'</td></tr>';
   }).join('');
-  var species=(d.signature_species||[]).map(function(s){return '<span class="chip">'+s+'</span>';}).join('');
+  var species=(d.signature_species||[]).map(function(x){return '<span class="chip">'+x+'</span>';}).join('');
+  var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';
   document.getElementById('profile').innerHTML=
     '<h2>'+d.name+'</h2><p class="lead">'+d.country+' · '+d.region+' — '+d.highlights+'</p>'+
+    '<div class="best">🏆 <b>Best months:</b> '+(s.byRating.Peak.join(', ')||'—')+
+      ' &nbsp;·&nbsp; <b>Top month:</b> '+best+
+      ' &nbsp;·&nbsp; <b>Recommended window:</b> '+d.best_months+'</div>'+
     '<div class="kv">'+
       '<div><span>Water type</span>'+d.water_type+'</div>'+
       '<div><span>Difficulty</span>'+d.difficulty+'</div>'+
       '<div><span>Access</span>'+d.access+'</div>'+
       '<div><span>Wetsuit</span>'+d.wetsuit+'</div>'+
-      '<div><span>Best months</span>'+d.best_months+'</div>'+
       '<div><span>Currents</span>'+d.currents+'</div>'+
     '</div>'+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
-    '<table><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
+    '<table><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
     '<tbody>'+rows+'</tbody></table>';
   document.getElementById('profile').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+function val(id){return document.getElementById(id).value;}
+function num(id){var v=document.getElementById(id).value;return v?Number(v):null;}
+function esc(s){return s.replace(/'/g,"\\'");}
+
 fetch('diving-destinations.json').then(function(r){return r.json();}).then(function(j){
   DATA=j; DESTS=j.destinations;
-  document.getElementById('foot').textContent=
-    j.destination_count+' destinations · ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed · data cross-checked from dive operators & sea-temperature sources';
-  initControls(); renderRanking();
+  document.getElementById('foot').innerHTML=
+    j.destination_count+' destinations · score = conditions rating + sea-life bonus + visibility · '+
+    'ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed';
+  initControls(); renderRanking(); renderPlan();
   document.getElementById('searchBox').addEventListener('input', renderSearch);
-}).catch(function(e){
+}).catch(function(){
   document.querySelector('.wrap').innerHTML='<div class="empty">Could not load <code>diving-destinations.json</code>.<br>Serve this folder over HTTP (e.g. <code>python3 -m http.server</code>) and reload.</div>';
 });
 </script>
