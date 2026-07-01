@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scubanaut — The Seasonal Dive Almanac | When &amp; Where to Dive Worldwide</title>
-<meta name="description" content="Know before you go. Scubanaut is the seasonal dive almanac — the world's dive calendar that scores 50 destinations month by month on conditions, marine life, currents and visibility.">
+<meta name="description" content="Know before you go. Scubanaut is the seasonal dive almanac — the world's dive calendar that scores dive destinations worldwide month by month on conditions, marine life, currents and visibility.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 96'><rect width='120' height='96' rx='18' fill='%23062a36'/><path d='M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z' fill='%232fe0d6'/></svg>">
 <style>
 /* required styles */
@@ -730,9 +730,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .tagline{color:var(--ink-soft);margin:18px auto 4px;font-size:1.12rem;max-width:54ch}
   .subtag{color:var(--muted);font-size:.82rem;margin:0;font-family:var(--mono);letter-spacing:.04em}
   .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
-  .pillrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
-  .pillrow span{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--ink-soft);
-        border-radius:999px;padding:6px 14px;font-size:.78rem;font-weight:500;backdrop-filter:blur(6px)}
 
   /* ---------- nav tabs ---------- */
   .navwrap{position:sticky;top:64px;z-index:40;background:rgba(4,24,32,.78);
@@ -867,6 +864,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .feature{background:linear-gradient(165deg,rgba(13,58,72,.7),rgba(9,38,50,.8));border:1px solid var(--line);
        border-radius:var(--r);padding:20px;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}
   .feature:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:var(--shadow-glow)}
+  .feature.photo-card{padding:0;overflow:hidden}
+  .feature.photo-card h4{margin:14px 18px 5px}
+  .feature.photo-card .meta{margin:0 18px 8px}
+  .feature.photo-card .row{margin:0 18px 18px}
+  .feature .cover{height:150px;display:flex;align-items:flex-start;justify-content:flex-end;padding:12px;
+       background:linear-gradient(135deg,#0e5460,#0a3340 70%);background-size:cover;background-position:center;
+       border-bottom:1px solid var(--line);position:relative;transition:transform .3s ease}
+  .feature .cover::after{content:"";position:absolute;inset:0;background:
+       radial-gradient(120% 90% at 20% -10%,rgba(47,224,214,.16),transparent 60%);pointer-events:none}
+  .feature.photo-card:hover .cover{transform:scale(1.05)}
+  .feature .cover .badge{position:relative;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.35)}
   .feature h4{margin:10px 0 5px;font-family:var(--serif);font-size:1.18rem;color:var(--ink)}
   .feature .big{font-size:2rem;line-height:1}
   .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
@@ -926,12 +934,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <header class="hero" id="hero">
   <span class="eyebrow">Your diving buddy</span>
   <h1>Never dive alone.</h1>
-  <p class="tagline">Dive the right place, at the right time — Scubanaut scores 50 world destinations month by month on conditions, marine life, currents and visibility.</p>
+  <p class="tagline">Plan your dive ahead — Scubanaut shows you the water conditions, marine life and visibility to expect at your diving destination, month by month.</p>
   <div class="hero-cta">
     <a class="btn" href="#" onclick="showTab('calendar');return false;">📅 Open the calendar</a>
     <a class="btn ghost" href="#" onclick="showTab('plan');return false;">Plan a trip →</a>
   </div>
-  <div class="pillrow"><span>📅 Calendar</span><span>🏆 Best by period</span><span>🗓️ Trip planner</span><span>🗺️ Map</span><span>🔎 50 dive profiles</span></div>
 </header>
 
 <div class="navwrap">
@@ -1558,20 +1565,21 @@ function renderHome(){
   var bestGear=GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
     return '<div class="feature" onclick="showTab(\'gear\')"><div class="big">'+g.img+'</div><h4>'+g.name+'</h4>'+
       '<div class="score">from $'+lo[1]+'</div><div class="meta">cheapest at '+lo[0]+'</div></div>';}).join('');
-  var sitePrev=topAug.map(function(r){return '<div class="feature" onclick="openProfile(\''+esc(r.name)+'\')">'+
+  var sitePrev=topAug.map(function(r){return '<div class="feature photo-card" onclick="openProfile(\''+esc(r.name)+'\')">'+
+      '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'">'+badge(r.rating)+'</div>'+
       '<h4>'+r.name+'</h4><div class="meta">'+r.country+'</div>'+
-      '<div class="row">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+'</div></div>';}).join('');
+      '<div class="row"><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+'</div></div>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   document.getElementById('view-home').innerHTML=
     '<div class="home-hero"><div class="sec-head">Your ocean, planned month by month.</div>'+
-    '<p class="sec-sub">Scubanaut scores 50 world dive destinations every month on conditions, marine life, currents and visibility — '+
+    '<p class="sec-sub">Scubanaut scores dive destinations worldwide every month on conditions, marine life, currents and visibility — '+
     'then points you to gear at the best price and trips with trusted operators.</p>'+
     '<div class="row" style="margin-top:18px"><a class="btn" href="#" onclick="showTab(\'calendar\');return false;">Open the calendar →</a>'+
     '<a class="btn ghost" href="#" onclick="showTab(\'period\');return false;">Best places to dive now</a></div>'+
     '<div class="home-grid" style="margin-top:24px">'+
       '<div class="trust" style="margin:0;grid-column:1/-1;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">'+
-        '<div><b style="font-size:1.7rem;display:block">50</b><span class="meta">dive destinations</span></div>'+
-        '<div><b style="font-size:1.7rem;display:block">600</b><span class="meta">month-by-month profiles</span></div>'+
+        '<div><b style="font-size:1.7rem;display:block">12</b><span class="meta">months scored, every destination</span></div>'+
+        '<div><b style="font-size:1.7rem;display:block">4</b><span class="meta">conditions tracked each month</span></div>'+
         '<div><b style="font-size:1.7rem;display:block">24</b><span class="meta">travel periods ranked</span></div>'+
         '<div><b style="font-size:1.7rem;display:block">'+nowMonth+'</b><span class="meta">scoring live right now</span></div>'+
       '</div>'+
@@ -1610,6 +1618,45 @@ function renderHome(){
       '<div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
       '<div><b>Safety first</b><br><span class="meta">Every dive-site page lists difficulty, currents and the nearest recompression chamber.</span></div>'+
     '</div>';
+  fillDestCovers();
+}
+
+// Pull a real destination photo from Wikipedia (no key, CORS-enabled) and set it as the
+// card cover. Falls back silently to the branded gradient if offline or no image is found.
+var PHOTO_CACHE={};
+function wikiThumb(title){
+  var key=title.toLowerCase();
+  if(PHOTO_CACHE[key]!==undefined) return Promise.resolve(PHOTO_CACHE[key]);
+  var url='https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages&piprop=thumbnail'+
+    '&pithumbsize=800&redirects=1&origin=*&titles='+encodeURIComponent(title);
+  return fetch(url).then(function(r){return r.ok?r.json():null;}).then(function(j){
+    var src=null;
+    try{ var pages=j.query.pages; for(var k in pages){ if(pages[k].thumbnail){src=pages[k].thumbnail.source;break;} } }catch(e){}
+    PHOTO_CACHE[key]=src; return src;
+  }).catch(function(){PHOTO_CACHE[key]=null;return null;});
+}
+function setCover(el,src){
+  var img=new Image();
+  img.onload=function(){
+    el.style.backgroundImage="linear-gradient(180deg,rgba(4,24,32,.05) 40%,rgba(5,32,42,.82) 100%),url('"+src+"')";
+    el.classList.add('has-photo');
+  };
+  img.src=src;
+}
+function fillDestCovers(){
+  var covers=document.querySelectorAll('#view-home .cover[data-name]');
+  Array.prototype.forEach.call(covers,function(el){
+    var name=decodeURIComponent(el.getAttribute('data-name'));
+    var country=decodeURIComponent(el.getAttribute('data-country')||'');
+    // Prefer a photo already baked into the data (scripts/fetch_images.py).
+    var d=DivingCalendar.getDestination(DESTS,name);
+    if(d&&d.image){ setCover(el,d.image); if(d.image_credit) el.title=d.image_credit; return; }
+    // Otherwise pull one live from Wikipedia (name → country), gradient if none.
+    wikiThumb(name).then(function(src){
+      if(src){setCover(el,src);return;}
+      if(country) return wikiThumb(country).then(function(s2){if(s2)setCover(el,s2);});
+    });
+  });
 }
 
 function renderSites(){
@@ -1725,8 +1772,8 @@ loadData().then(function(res){
   DATA=j; DESTS=j.destinations;
   document.getElementById('foot').innerHTML=
     '<div style="font-family:var(--serif);font-size:1.5rem;color:var(--ink)">Scuba<b style="color:var(--accent)">naut</b></div>'+
-    '<div style="font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:6px 0 16px">Know before you go</div>'+
-    '<b style="font-family:var(--serif);color:var(--ink)">Scubanaut</b> · '+j.destination_count+' dive destinations · '+
+    '<div style="height:14px"></div>'+
+    'Seasonal scores for dive destinations worldwide · '+
     'score = conditions rating + sea-life bonus + visibility · ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed'+
     '<div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources; '+
     'water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles. '+

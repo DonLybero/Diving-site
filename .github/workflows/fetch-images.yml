@@ -1,0 +1,55 @@
+name: Fetch destination images
+
+# Bakes one photo per destination into diving-destinations.json.
+# Runs on GitHub's runners (which have internet — the dev sandbox does not).
+# Add a free Pexels key as repo secret PEXELS_API_KEY for best quality;
+# without it, images come from Wikimedia Commons geosearch (no key needed).
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Refetch all destinations (overwrite existing images)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-images
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout deploy branch
+        uses: actions/checkout@v4
+        with:
+          ref: claude/diving-destinations-research-73uc5i
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch images
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python3 scripts/fetch_images.py ${{ inputs.force && '--force' || '' }}
+
+      - name: Rebuild standalone single-file build
+        run: python3 scripts/build_standalone.py
+
+      - name: Commit baked images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add diving-destinations.json diving-site.html
+          if git diff --cached --quiet; then
+            echo "No image changes to commit."
+          else
+            git commit -m "Bake destination images into data (automated)"
+            git push
+          fi
