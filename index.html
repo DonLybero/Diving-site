@@ -201,6 +201,17 @@
   .feature{background:linear-gradient(165deg,rgba(13,58,72,.7),rgba(9,38,50,.8));border:1px solid var(--line);
        border-radius:var(--r);padding:20px;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}
   .feature:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:var(--shadow-glow)}
+  .feature.photo-card{padding:0;overflow:hidden}
+  .feature.photo-card h4{margin:14px 18px 5px}
+  .feature.photo-card .meta{margin:0 18px 8px}
+  .feature.photo-card .row{margin:0 18px 18px}
+  .feature .cover{height:150px;display:flex;align-items:flex-start;justify-content:flex-end;padding:12px;
+       background:linear-gradient(135deg,#0e5460,#0a3340 70%);background-size:cover;background-position:center;
+       border-bottom:1px solid var(--line);position:relative;transition:transform .3s ease}
+  .feature .cover::after{content:"";position:absolute;inset:0;background:
+       radial-gradient(120% 90% at 20% -10%,rgba(47,224,214,.16),transparent 60%);pointer-events:none}
+  .feature.photo-card:hover .cover{transform:scale(1.05)}
+  .feature .cover .badge{position:relative;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.35)}
   .feature h4{margin:10px 0 5px;font-family:var(--serif);font-size:1.18rem;color:var(--ink)}
   .feature .big{font-size:2rem;line-height:1}
   .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
@@ -634,9 +645,10 @@ function renderHome(){
   var bestGear=GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
     return '<div class="feature" onclick="showTab(\'gear\')"><div class="big">'+g.img+'</div><h4>'+g.name+'</h4>'+
       '<div class="score">from $'+lo[1]+'</div><div class="meta">cheapest at '+lo[0]+'</div></div>';}).join('');
-  var sitePrev=topAug.map(function(r){return '<div class="feature" onclick="openProfile(\''+esc(r.name)+'\')">'+
+  var sitePrev=topAug.map(function(r){return '<div class="feature photo-card" onclick="openProfile(\''+esc(r.name)+'\')">'+
+      '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'">'+badge(r.rating)+'</div>'+
       '<h4>'+r.name+'</h4><div class="meta">'+r.country+'</div>'+
-      '<div class="row">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+'</div></div>';}).join('');
+      '<div class="row"><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+'</div></div>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   document.getElementById('view-home').innerHTML=
     '<div class="home-hero"><div class="sec-head">Your ocean, planned month by month.</div>'+
@@ -686,6 +698,41 @@ function renderHome(){
       '<div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
       '<div><b>Safety first</b><br><span class="meta">Every dive-site page lists difficulty, currents and the nearest recompression chamber.</span></div>'+
     '</div>';
+  fillDestCovers();
+}
+
+// Pull a real destination photo from Wikipedia (no key, CORS-enabled) and set it as the
+// card cover. Falls back silently to the branded gradient if offline or no image is found.
+var PHOTO_CACHE={};
+function wikiThumb(title){
+  var key=title.toLowerCase();
+  if(PHOTO_CACHE[key]!==undefined) return Promise.resolve(PHOTO_CACHE[key]);
+  var url='https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages&piprop=thumbnail'+
+    '&pithumbsize=800&redirects=1&origin=*&titles='+encodeURIComponent(title);
+  return fetch(url).then(function(r){return r.ok?r.json():null;}).then(function(j){
+    var src=null;
+    try{ var pages=j.query.pages; for(var k in pages){ if(pages[k].thumbnail){src=pages[k].thumbnail.source;break;} } }catch(e){}
+    PHOTO_CACHE[key]=src; return src;
+  }).catch(function(){PHOTO_CACHE[key]=null;return null;});
+}
+function setCover(el,src){
+  var img=new Image();
+  img.onload=function(){
+    el.style.backgroundImage="linear-gradient(180deg,rgba(4,24,32,.05) 40%,rgba(5,32,42,.82) 100%),url('"+src+"')";
+    el.classList.add('has-photo');
+  };
+  img.src=src;
+}
+function fillDestCovers(){
+  var covers=document.querySelectorAll('#view-home .cover[data-name]');
+  Array.prototype.forEach.call(covers,function(el){
+    var name=decodeURIComponent(el.getAttribute('data-name'));
+    var country=decodeURIComponent(el.getAttribute('data-country')||'');
+    wikiThumb(name).then(function(src){
+      if(src){setCover(el,src);return;}
+      if(country) return wikiThumb(country).then(function(s2){if(s2)setCover(el,s2);});
+    });
+  });
 }
 
 function renderSites(){
