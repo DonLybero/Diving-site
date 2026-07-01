@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scubanaut — The Seasonal Dive Almanac | When &amp; Where to Dive Worldwide</title>
-<meta name="description" content="Know before you go. Scubanaut is the seasonal dive almanac — the world's dive calendar that scores 50 destinations month by month on conditions, marine life, currents and visibility.">
+<meta name="description" content="Know before you go. Scubanaut is the seasonal dive almanac — the world's dive calendar that scores dive destinations worldwide month by month on conditions, marine life, currents and visibility.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 96'><rect width='120' height='96' rx='18' fill='%23062a36'/><path d='M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z' fill='%232fe0d6'/></svg>">
 <style>
 /* required styles */
@@ -730,9 +730,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .tagline{color:var(--ink-soft);margin:18px auto 4px;font-size:1.12rem;max-width:54ch}
   .subtag{color:var(--muted);font-size:.82rem;margin:0;font-family:var(--mono);letter-spacing:.04em}
   .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
-  .pillrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
-  .pillrow span{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--ink-soft);
-        border-radius:999px;padding:6px 14px;font-size:.78rem;font-weight:500;backdrop-filter:blur(6px)}
 
   /* ---------- nav tabs ---------- */
   .navwrap{position:sticky;top:64px;z-index:40;background:rgba(4,24,32,.78);
@@ -931,7 +928,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <a class="btn" href="#" onclick="showTab('calendar');return false;">📅 Open the calendar</a>
     <a class="btn ghost" href="#" onclick="showTab('plan');return false;">Plan a trip →</a>
   </div>
-  <div class="pillrow"><span>📅 Calendar</span><span>🏆 Best by period</span><span>🗓️ Trip planner</span><span>🗺️ Map</span><span>🔎 50 dive profiles</span></div>
 </header>
 
 <div class="navwrap">
@@ -1564,14 +1560,14 @@ function renderHome(){
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   document.getElementById('view-home').innerHTML=
     '<div class="home-hero"><div class="sec-head">Your ocean, planned month by month.</div>'+
-    '<p class="sec-sub">Scubanaut scores 50 world dive destinations every month on conditions, marine life, currents and visibility — '+
+    '<p class="sec-sub">Scubanaut scores dive destinations worldwide every month on conditions, marine life, currents and visibility — '+
     'then points you to gear at the best price and trips with trusted operators.</p>'+
     '<div class="row" style="margin-top:18px"><a class="btn" href="#" onclick="showTab(\'calendar\');return false;">Open the calendar →</a>'+
     '<a class="btn ghost" href="#" onclick="showTab(\'period\');return false;">Best places to dive now</a></div>'+
     '<div class="home-grid" style="margin-top:24px">'+
       '<div class="trust" style="margin:0;grid-column:1/-1;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">'+
-        '<div><b style="font-size:1.7rem;display:block">50</b><span class="meta">dive destinations</span></div>'+
-        '<div><b style="font-size:1.7rem;display:block">600</b><span class="meta">month-by-month profiles</span></div>'+
+        '<div><b style="font-size:1.7rem;display:block">12</b><span class="meta">months scored, every destination</span></div>'+
+        '<div><b style="font-size:1.7rem;display:block">4</b><span class="meta">conditions tracked each month</span></div>'+
         '<div><b style="font-size:1.7rem;display:block">24</b><span class="meta">travel periods ranked</span></div>'+
         '<div><b style="font-size:1.7rem;display:block">'+nowMonth+'</b><span class="meta">scoring live right now</span></div>'+
       '</div>'+
