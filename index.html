@@ -747,7 +747,8 @@ function openProfile(name){
     '<table><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
     '<tbody>'+rows+'</tbody></table>'+
     (d.last_verified?'<p class="meta" style="margin-top:10px">✓ Data verified '.replace('✓','&#10003;')+d.last_verified+
-      (d.data_confidence?' · source confidence: '+d.data_confidence:'')+'</p>':'');
+      (d.data_confidence?' · source confidence: '+d.data_confidence:'')+'</p>':'')+
+    (d.slug?'<p class="meta"><a href="destinations/'+d.slug+'.html">Permanent season-guide page for '+d.name+' →</a></p>':'');
   document.getElementById('profile').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
@@ -976,7 +977,8 @@ loadData().then(function(res){
     'Always confirm current conditions with a local dive centre before travelling.</div>'+
     '<div class="disclosure"><b>Affiliate disclosure:</b> Scubanaut may earn a commission when you buy gear or book a trip through our links, '+
     'at no extra cost to you. Gear and trip prices shown are sample data for demonstration. We link only to authorised retailers and trusted '+
-    'operators, and commissions never influence our ratings.</div>';
+    'operators, and commissions never influence our ratings.</div>'+
+    '<p style="margin-top:10px"><a href="destinations/index.html">Browse all 50 destination season guides →</a></p>';
   initControls();
   applyIcons(); setHeroPhoto();
   renderHome(); renderGear(); renderReviews(); renderCentres();

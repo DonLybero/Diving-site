@@ -39,14 +39,16 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python3 scripts/fetch_images.py ${{ inputs.force && '--force' || '' }}
 
-      - name: Rebuild standalone single-file build
-        run: python3 scripts/build_standalone.py
+      - name: Rebuild standalone single-file build and static pages
+        run: |
+          python3 scripts/build_standalone.py
+          python3 scripts/build_pages.py
 
       - name: Commit baked images
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add diving-destinations.json diving-site.html
+          git add diving-destinations.json diving-site.html destinations sitemap.xml robots.txt
           if git diff --cached --quiet; then
             echo "No image changes to commit."
           else

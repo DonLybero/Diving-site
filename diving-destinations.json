@@ -136,6 +136,7 @@
         "lng": -32.42
       },
       "current_strength": "Medium",
+      "slug": "fernando-de-noronha",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Baia_do_Sancho_Fernando_de_Noronha.JPG/960px-Baia_do_Sancho_Fernando_de_Noronha.JPG",
       "image_credit": "Photo: Roberta monte (CC BY-SA 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -253,6 +254,7 @@
         "lng": -77.8
       },
       "current_strength": "Medium",
+      "slug": "bahamas",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/ISS018-E-13222_-_View_of_Earth.jpg/960px-ISS018-E-13222_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -370,6 +372,7 @@
         "lng": -86.4
       },
       "current_strength": "Low",
+      "slug": "bay-islands",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Chaetodon_capistratus_404160971.jpg",
       "image_credit": "Photo: Pauline Walsh Jacobson (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -487,6 +490,7 @@
         "lng": -68.31
       },
       "current_strength": "Low",
+      "slug": "bonaire",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Acropora_cervicornis_415034251.jpg/960px-Acropora_cervicornis_415034251.jpg",
       "image_credit": "Photo: Jay Brasher (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -604,6 +608,7 @@
         "lng": -81.24
       },
       "current_strength": "Low",
+      "slug": "cayman-islands",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Acropora_palmata_459814539.jpg/960px-Acropora_palmata_459814539.jpg",
       "image_credit": "Photo: Scott Loarie (CC0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -721,6 +726,7 @@
         "lng": -86.92
       },
       "current_strength": "Strong",
+      "slug": "cozumel",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cancer_%28229437593%29.jpeg/960px-Cancer_%28229437593%29.jpeg",
       "image_credit": "Photo: Tobias Spitaler (CC BY 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -838,6 +844,7 @@
         "lng": -87.53
       },
       "current_strength": "Low",
+      "slug": "great-blue-hole",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Acropora_cervicornis_283195200.jpg/960px-Acropora_cervicornis_283195200.jpg",
       "image_credit": "Photo: Loopy30 (CC BY-SA 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -955,6 +962,7 @@
         "lng": -86.53
       },
       "current_strength": "Low",
+      "slug": "roatan",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Aeropuerto_Internacional_Juan_Manuel_G%C3%A1lvez.jpg/960px-Aeropuerto_Internacional_Juan_Manuel_G%C3%A1lvez.jpg",
       "image_credit": "Photo: TomasVial (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -1072,6 +1080,7 @@
         "lng": -86.93
       },
       "current_strength": "Low",
+      "slug": "utila",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Clavelina_puertosecensis_71640242.jpg/960px-Clavelina_puertosecensis_71640242.jpg",
       "image_credit": "Photo: henrya (CC0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -1190,6 +1199,7 @@
         "lng": 118.63
       },
       "current_strength": "Strong",
+      "slug": "sipadan-island",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Blue_Green_Damselfishes_%28Chromis_viridis%29_%288500886718%29.jpg/960px-Blue_Green_Damselfishes_%28Chromis_viridis%29_%288500886718%29.jpg",
       "image_credit": "Photo: Bernard DUPONT from FRANCE (CC BY-SA 2.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -1308,6 +1318,7 @@
         "lng": 146.1
       },
       "current_strength": "Medium",
+      "slug": "great-barrier-reef",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Acropora_muricata_177560622.jpg",
       "image_credit": "Photo: Pauline Walsh Jacobson (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -1426,6 +1437,7 @@
         "lng": 149.1
       },
       "current_strength": "Medium",
+      "slug": "whitsunday-islands",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/ISS030-E-245036_-_View_of_Earth.jpg/960px-ISS030-E-245036_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -1545,6 +1557,7 @@
         "lng": 151.91
       },
       "current_strength": "Low",
+      "slug": "heron-island",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Abudefduf_whitleyi_135459349.jpg/960px-Abudefduf_whitleyi_135459349.jpg",
       "image_credit": "Photo: Bruce Deagle (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -1662,6 +1675,7 @@
         "lng": 119.49
       },
       "current_strength": "Strong",
+      "slug": "komodo-national-park",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gallus_varius_31689246.jpg/960px-Gallus_varius_31689246.jpg",
       "image_credit": "Photo: Ellen Rykers (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -1779,6 +1793,7 @@
         "lng": 130.52
       },
       "current_strength": "Strong",
+      "slug": "raja-ampat",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/ISS029-E-33302_-_View_of_Earth.jpg/960px-ISS029-E-33302_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -1898,6 +1913,7 @@
         "lng": 123.8
       },
       "current_strength": "Strong",
+      "slug": "okinawa-islands",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ISS045-E-15329_-_View_of_Earth.jpg/960px-ISS045-E-15329_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -2016,6 +2032,7 @@
         "lng": -87.06
       },
       "current_strength": "Strong",
+      "slug": "cocos-island",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Acanthaster_planci_62223724.jpg/960px-Acanthaster_planci_62223724.jpg",
       "image_credit": "Photo: Robert Webster (CC BY-SA 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -2135,6 +2152,7 @@
         "lng": -90.31
       },
       "current_strength": "Strong",
+      "slug": "galapagos-islands",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Brachymyrmex_heeri_casent0173227_profile_2.jpg/960px-Brachymyrmex_heeri_casent0173227_profile_2.jpg",
       "image_credit": "Photo: April Nobile (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -2254,6 +2272,7 @@
         "lng": -110.97
       },
       "current_strength": "Strong",
+      "slug": "socorro-island",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mimus_graysoni%2C_Socorro%2C_Colima%2C_Mexico_5.jpg/960px-Mimus_graysoni%2C_Socorro%2C_Colima%2C_Mexico_5.jpg",
       "image_credit": "Photo: sulavanderplank (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -2373,6 +2392,7 @@
         "lng": -110.35
       },
       "current_strength": "Medium",
+      "slug": "sea-of-cortez",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Cephalopholis_panamensis_53801358.jpg/960px-Cephalopholis_panamensis_53801358.jpg",
       "image_credit": "Photo: Marty Purdy (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -2492,6 +2512,7 @@
         "lng": -156.3
       },
       "current_strength": "Low",
+      "slug": "maui-kona",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Haleakal%C4%81_%28a0004416%29_-_panoramio.jpg/960px-Haleakal%C4%81_%28a0004416%29_-_panoramio.jpg",
       "image_credit": "Photo: Thomas Tunsch (CC BY-SA 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -2610,6 +2631,7 @@
         "lng": 71.5
       },
       "current_strength": "Strong",
+      "slug": "chagos-archipelago-biot",
       "current_note": "Oceanic atoll channels and exposed walls",
       "data_confidence": "medium",
       "last_verified": "2026-07"
@@ -2725,6 +2747,7 @@
         "lng": 73.0
       },
       "current_strength": "Medium",
+      "slug": "maldives",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Filitheyo.jpg/960px-Filitheyo.jpg",
       "image_credit": "Photo: Tiennegolf (CC BY-SA 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -2843,6 +2866,7 @@
         "lng": 55.49
       },
       "current_strength": "Medium",
+      "slug": "seychelles",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/10_20141024_091056-Plaque_d%27Inauguration_Cascade_waterworks_12_Dec_1975.jpg/960px-10_20141024_091056-Plaque_d%27Inauguration_Cascade_waterworks_12_Dec_1975.jpg",
       "image_credit": "Photo: Lmulud (CC BY-SA 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -2962,6 +2986,7 @@
         "lng": 30.83
       },
       "current_strength": "Medium",
+      "slug": "aliwal-shoal",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Balistoides_conspicillum_387907584.jpg/960px-Balistoides_conspicillum_387907584.jpg",
       "image_credit": "Photo: Andra Waagmeester (CC0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -3081,6 +3106,7 @@
         "lng": 113.9
       },
       "current_strength": "Low",
+      "slug": "ningaloo-reef",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/00_0856_Cape_Range_National_Park_in_Westaustralien_-_Mangrove_Bay.jpg/960px-00_0856_Cape_Range_National_Park_in_Westaustralien_-_Mangrove_Bay.jpg",
       "image_credit": "Photo: W. Bulach (CC BY-SA 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -3199,6 +3225,7 @@
         "lng": 14.3
       },
       "current_strength": "Low",
+      "slug": "gozo-malta",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Luftaufnahmen_Flug_Hamburg_Malta_2019_by-RaBoe_149.jpg/960px-Luftaufnahmen_Flug_Hamburg_Malta_2019_by-RaBoe_149.jpg",
       "image_credit": "Photo: © Ra Boe / Wikipedia (CC BY-SA 3.0 de) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -3317,6 +3344,7 @@
         "lng": 3.22
       },
       "current_strength": "Low",
+      "slug": "medes-islands",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Cerianthus_membranaceus_3017387.jpg/960px-Cerianthus_membranaceus_3017387.jpg",
       "image_credit": "Photo: Julien Renoult (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -3435,6 +3463,7 @@
         "lng": 134.48
       },
       "current_strength": "Strong",
+      "slug": "palau",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Bai_er_a_Ngesechel_a_Cherechar_in_Belau_National_Museum%2C_Koror%2C_Palau_%289720085543%29.jpg/960px-Bai_er_a_Ngesechel_a_Cherechar_in_Belau_National_Museum%2C_Koror%2C_Palau_%289720085543%29.jpg",
       "image_credit": "Photo: Matt Kieffer from London, United Kingdom (CC BY-SA 2.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -3552,6 +3581,7 @@
         "lng": 151.78
       },
       "current_strength": "Low",
+      "slug": "truk-chuuk-lagoon",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/ISS044-E-56226_-_View_of_Earth.jpg/960px-ISS044-E-56226_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -3670,6 +3700,7 @@
         "lng": -87.4
       },
       "current_strength": "Low",
+      "slug": "cenotes-of-yucatan-peninsula",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Cenote_Nohoch_Nah_Chich.jpg/960px-Cenote_Nohoch_Nah_Chich.jpg",
       "image_credit": "Photo: Offthebeatonpath (CC BY-SA 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -3788,6 +3819,7 @@
         "lng": -28.2
       },
       "current_strength": "Strong",
+      "slug": "azores",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Dolphines%2C_Pico_island_-_panoramio.jpg/960px-Dolphines%2C_Pico_island_-_panoramio.jpg",
       "image_credit": "Photo: Eduardo Manchon (CC BY-SA 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -3905,6 +3937,7 @@
         "lng": -4.67
       },
       "current_strength": "Medium",
+      "slug": "lundy-island",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Coincya_%28was_Rhynchosinapis%29%2C_Lundy_cabbage%2C_2005_%2833624929531%29.jpg/960px-Coincya_%28was_Rhynchosinapis%29%2C_Lundy_cabbage%2C_2005_%2833624929531%29.jpg",
       "image_credit": "Photo: Dr Mary Gillham Archive Project (CC BY 2.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -4022,6 +4055,7 @@
         "lng": -3.18
       },
       "current_strength": "Medium",
+      "slug": "scapa-flow",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Echinus_esculentus_27006456.jpg/960px-Echinus_esculentus_27006456.jpg",
       "image_credit": "Photo: Bernard Picton (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -4137,6 +4171,7 @@
         "lng": -21.12
       },
       "current_strength": "Low",
+      "slug": "silfra-fissure",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Iceland_%2819857303599%29.jpg/960px-Iceland_%2819857303599%29.jpg",
       "image_credit": "Photo: Sergei Gussev (CC BY 2.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -4255,6 +4290,7 @@
         "lng": -126.0
       },
       "current_strength": "Strong",
+      "slug": "vancouver-island",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/ISS047-E-118177_-_View_of_Earth.jpg/960px-ISS047-E-118177_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -4373,6 +4409,7 @@
         "lng": 34.3
       },
       "current_strength": "Medium",
+      "slug": "red-sea-egypt",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Al-Mustafa_Mosque_in_Sharm_El-Sheikh3.jpg/960px-Al-Mustafa_Mosque_in_Sharm_El-Sheikh3.jpg",
       "image_credit": "Photo: patano (CC BY-SA 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -4492,6 +4529,7 @@
         "lng": 178.1
       },
       "current_strength": "Strong",
+      "slug": "fiji",
       "current_note": "Current-driven drift dives feed the soft corals",
       "data_confidence": "high",
       "last_verified": "2026-07"
@@ -4608,6 +4646,7 @@
         "lng": -146.0
       },
       "current_strength": "Strong",
+      "slug": "french-polynesia",
       "current_note": "Tiputa/Fakarava pass currents can be mask-ripping",
       "data_confidence": "high",
       "last_verified": "2026-07"
@@ -4724,6 +4763,7 @@
         "lng": 158.5
       },
       "current_strength": "Low",
+      "slug": "guadalcanal-western-province",
       "current_note": "Fairly easy diving, not much current",
       "data_confidence": "high",
       "last_verified": "2026-07"
@@ -4840,6 +4880,7 @@
         "lng": -149.83
       },
       "current_strength": "Low",
+      "slug": "moorea",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/20221026_142420_Belv%C3%A9d%C3%A8re_de_Opunohu.jpg/960px-20221026_142420_Belv%C3%A9d%C3%A8re_de_Opunohu.jpg",
       "image_credit": "Photo: tbo47 (CC0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -4958,6 +4999,7 @@
         "lng": 174.74
       },
       "current_strength": "Medium",
+      "slug": "poor-knights-islands",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Anagotus_turbotti_123119928.jpg/960px-Anagotus_turbotti_123119928.jpg",
       "image_credit": "Photo: Shaun Lee (CC BY 4.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -5076,6 +5118,7 @@
         "lng": 123.27
       },
       "current_strength": "Medium",
+      "slug": "apo-island-dumaguete",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Apo_Island_-_Negros_-_panoramio.jpg/960px-Apo_Island_-_Negros_-_panoramio.jpg",
       "image_credit": "Photo: jackylim (CC BY-SA 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -5194,6 +5237,7 @@
         "lng": 124.76
       },
       "current_strength": "Medium",
+      "slug": "bunaken-national-marine-park",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Bahia_Bunaken_-_panoramio.jpg/960px-Bahia_Bunaken_-_panoramio.jpg",
       "image_credit": "Photo: kikofjl (CC BY 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -5312,6 +5356,7 @@
         "lng": 116.04
       },
       "current_strength": "Medium",
+      "slug": "gili-islands-lombok",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Attractive_Growth_%28220846841%29.jpeg/960px-Attractive_Growth_%28220846841%29.jpeg",
       "image_credit": "Photo: Tilonaut (CC BY 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -5430,6 +5475,7 @@
         "lng": 124.12
       },
       "current_strength": "Low",
+      "slug": "malapascua-island",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Bangka_from_Bantayan_-_panoramio.jpg/960px-Bangka_from_Bantayan_-_panoramio.jpg",
       "image_credit": "Photo: Robert Breivik (CC BY-SA 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -5548,6 +5594,7 @@
         "lng": 97.65
       },
       "current_strength": "Medium",
+      "slug": "similan-islands",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bluefin_trevally_trio.jpg/960px-Bluefin_trevally_trio.jpg",
       "image_credit": "Photo: TANAKA Juuyoh (田中十洋) (CC BY 2.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -5666,6 +5713,7 @@
         "lng": 119.92
       },
       "current_strength": "Strong",
+      "slug": "tubbataha-reefs-natural-park",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Anous_minutus_by_Gregg_Yan_01.jpg/960px-Anous_minutus_by_Gregg_Yan_01.jpg",
       "image_credit": "Photo: Gregg Yan (CC BY-SA 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -5785,6 +5833,7 @@
         "lng": 159.08
       },
       "current_strength": "Medium",
+      "slug": "lord-howe-island",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bicycle_Rentals_%2832787183841%29.jpg/960px-Bicycle_Rentals_%2832787183841%29.jpg",
       "image_credit": "Photo: David Stanley from Nanaimo, Canada (CC BY 2.0) via Wikimedia Commons",
       "image_source": "wikimedia",
@@ -5904,6 +5953,7 @@
         "lng": 153.07
       },
       "current_strength": "Medium",
+      "slug": "south-west-rocks",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Caladenia_catenata_petals_%2836073397306%29.jpg/960px-Caladenia_catenata_petals_%2836073397306%29.jpg",
       "image_credit": "Photo: John Tann from Mullumbimby, Australia (CC BY 2.0) via Wikimedia Commons",
       "image_source": "wikimedia",

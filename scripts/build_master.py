@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-import csv, json, sys, os, re
+import csv, json, sys, os, re, unicodedata
+
+def slugify(name):
+    s = unicodedata.normalize("NFD", name)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")   # strip accents
+    s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
+    return s
 
 HERE = os.path.dirname(os.path.abspath(__file__))   # repo/scripts
 SCRATCH = os.path.join(HERE, "data")                # region JSON fragments live here
@@ -160,6 +166,8 @@ def normalize(rec):
                           "lng": COORDS.get(rec["name"], [None, None])[1]}
     # overall current strength (Low / Medium / Strong)
     rec["current_strength"] = classify_current(rec.get("currents",""))
+    # stable slug for the static per-destination pages
+    rec["slug"] = slugify(rec["name"])
     return rec
 
 all_dest = [normalize(r) for r in (orig11 + new)]

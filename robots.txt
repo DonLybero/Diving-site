@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://donlybero.github.io/Diving-site/sitemap.xml
