@@ -82,16 +82,9 @@
   .tabs button:hover{background:rgba(47,224,214,.08);color:var(--ink);border-color:var(--line)}
   .tabs button.active{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;
        font-weight:700;box-shadow:0 6px 18px -6px rgba(47,224,214,.6)}
-  /* Dive Planner sub-navigation */
-  .subtabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 22px;
-       padding:6px;background:var(--glass);border:1px solid var(--line);border-radius:999px;
-       width:fit-content;margin-left:auto;margin-right:auto;box-shadow:var(--shadow)}
-  .subtabs button{background:transparent;color:var(--ink-soft);border:none;border-radius:999px;
-       padding:9px 18px;font-size:.9rem;font-weight:600;font-family:var(--sans);cursor:pointer;
-       white-space:nowrap;transition:all .18s ease}
-  .subtabs button:hover{background:rgba(47,224,214,.08);color:var(--ink)}
-  .subtabs button.active{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;
-       font-weight:700;box-shadow:0 6px 16px -6px rgba(47,224,214,.55)}
+  /* Dive Planner — the two-part page shares a centered section intro */
+  #view-planner>.sec-head{justify-content:center;text-align:center}
+  #view-planner>.sec-sub{text-align:center;margin-left:auto;margin-right:auto}
 
   .wrap{max-width:1180px;margin:0 auto;padding:30px 18px 70px}
   section{animation:fade .35s ease}
@@ -163,10 +156,14 @@
        border:1px dashed var(--line-strong);border-radius:var(--r)}
 
   /* ---------- calendar ---------- */
+  .cal-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);
+       background:#041c26;box-shadow:var(--shadow);padding:2px}
   .cal{border-collapse:separate;border-spacing:3px;font-size:.72rem;margin:0 auto}
-  .cal th{position:sticky;top:128px;background:#06242d;color:var(--muted);font-weight:600;padding:6px 7px;z-index:2;
+  /* Month labels are the first row and flow with the page; the destination column stays
+     pinned when scrolling the grid sideways. */
+  .cal th{position:sticky;background:#06242d;color:var(--muted);font-weight:600;padding:6px 7px;z-index:2;
        font-family:var(--mono);text-transform:uppercase;font-size:.66rem;border-radius:6px}
-  .cal th.corner{left:0;z-index:3;text-align:left}
+  .cal th.corner{left:0;z-index:4;text-align:left}
   .cal td.name{position:sticky;left:0;background:#0a3340;text-align:left;white-space:nowrap;cursor:pointer;
        z-index:1;max-width:210px;overflow:hidden;text-overflow:ellipsis;padding:6px 10px;border-radius:8px;
        font-weight:600;transition:background .12s}
@@ -293,10 +290,9 @@
     <button id="tab-sites" onclick="showTab('sites')">🐠 Dive Sites</button>
     <button id="tab-planner" onclick="showTab('planner')">🧭 Dive Planner</button>
     <button id="tab-map" onclick="showTab('map')">🗺️ Map</button>
-    <button id="tab-gear" onclick="showTab('gear')">🛒 Gear</button>
+    <button id="tab-gear" onclick="showTab('gear')">🛒 Diving Gear</button>
     <button id="tab-reviews" onclick="showTab('reviews')">📝 Reviews</button>
     <button id="tab-centres" onclick="showTab('centres')">🏤 Dive Centres</button>
-    <button id="tab-safaris" onclick="showTab('safaris')">🚤 Safaris</button>
     <button id="tab-search" onclick="showTab('search')">🔎 Search</button>
   </div>
 </div>
@@ -333,19 +329,30 @@
   <!-- DIVE CENTRES -->
   <section id="view-centres" class="hidden"><div id="centresBody"></div></section>
 
-  <!-- SAFARIS -->
-  <section id="view-safaris" class="hidden"><div id="safarisBody"></div></section>
 
-  <!-- DIVE PLANNER (Calendar + Best Period + Plan a Trip) -->
+  <!-- DIVE PLANNER — one page: best destinations for your dates + the full-year calendar -->
   <section id="view-planner" class="hidden">
-    <div class="subtabs">
-      <button id="ptab-calendar" onclick="showPlannerTool('calendar')">📅 Calendar</button>
-      <button id="ptab-period" onclick="showPlannerTool('period')">🏆 Best Period</button>
-      <button id="ptab-plan" onclick="showPlannerTool('plan')">🗓️ Plan a Trip</button>
-    </div>
+    <div class="sec-head">🧭 Plan your dive</div>
+    <p class="sec-sub">Tell us when you can travel — Scubanaut ranks the best dive destinations for those dates, then lays out the whole seasonal year so you can explore.</p>
 
-  <!-- CALENDAR GRID -->
-  <section id="view-calendar" class="hidden">
+    <div class="controls">
+      <div class="field"><label>Travelling from</label><select id="planFrom"></select></div>
+      <div class="field"><label>to</label><select id="planTo"></select></div>
+      <div class="field"><label>Region</label><select id="planRegion"><option value="">Any</option></select></div>
+      <div class="field"><label>Difficulty</label><select id="planDiff">
+        <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
+      <div class="field"><label>Water</label><select id="planWater">
+        <option value="">Any</option><option>tropical</option><option>subtropical</option><option>temperate</option>
+        <option>saltwater</option><option>freshwater</option></select></div>
+      <div class="field"><label>Min avg °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
+      <div class="field"><label>Show</label><select id="planLimit">
+        <option value="9">Top 9</option><option value="18">Top 18</option><option value="999">All matches</option></select></div>
+    </div>
+    <p id="planInfo" class="meta" style="text-align:center"></p>
+    <div id="planGrid" class="grid"></div>
+
+    <div class="sec-head" style="margin-top:44px">📅 Browse the whole year</div>
+    <p class="sec-sub">Every destination, month by month — colour shows the season rating. Click any destination or cell to open its full profile.</p>
     <div class="controls">
       <div class="field"><label>Region</label><select id="calRegion"><option value="">All regions</option></select></div>
       <div class="field"><label>Sort by</label><select id="calSort">
@@ -357,43 +364,10 @@
       <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
       <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
       <span><i style="background:#64748b"></i>Closed</span>
-      <span style="margin-left:8px">· colour = season rating · click a destination or cell for the full profile</span>
+      <span style="margin-left:8px">· colour = season rating</span>
     </div>
-    <div style="overflow:auto"><table class="cal" id="calTable"></table></div>
+    <div class="cal-wrap"><table class="cal" id="calTable"></table></div>
   </section>
-
-  <!-- PERIOD RANKING -->
-  <section id="view-period" class="hidden">
-    <div class="controls">
-      <div class="field"><label>Period (24 per year)</label><select id="periodSel"></select></div>
-      <div class="field"><label>Region</label><select id="fRegion"><option value="">Any</option></select></div>
-      <div class="field"><label>Difficulty</label><select id="fDiff">
-        <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
-      <div class="field"><label>Water</label><select id="fWater">
-        <option value="">Any</option><option>tropical</option><option>subtropical</option><option>temperate</option>
-        <option>saltwater</option><option>freshwater</option></select></div>
-      <div class="field"><label>Min water °C</label><input id="fTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
-      <div class="field"><label>Show</label><select id="fLimit">
-        <option value="10">Top 10</option><option value="20">Top 20</option><option value="999">All open</option></select></div>
-    </div>
-    <div id="rankGrid" class="grid"></div>
-  </section>
-
-  <!-- TRIP PLANNER -->
-  <section id="view-plan" class="hidden">
-    <div class="controls">
-      <div class="field"><label>Travel from</label><select id="planFrom"></select></div>
-      <div class="field"><label>to</label><select id="planTo"></select></div>
-      <div class="field"><label>Region</label><select id="planRegion"><option value="">Any</option></select></div>
-      <div class="field"><label>Difficulty</label><select id="planDiff">
-        <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
-      <div class="field"><label>Min avg °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
-    </div>
-    <p id="planInfo" class="meta" style="text-align:center"></p>
-    <div id="planGrid" class="grid"></div>
-  </section>
-  </section>
-  <!-- /DIVE PLANNER -->
 
   <!-- MAP -->
   <section id="view-map" class="hidden">
@@ -437,31 +411,22 @@ function tempStr(t){return t==null?'—':t+'°C';}
 function vizStr(v){return v==null?'—':'👁 '+v+'m';}
 function curChip(s){return s?'<span class="chip cur-'+s+'">⤳ '+s+' current</span>':'';}
 
-var TABS=['home','sites','planner','map','gear','reviews','centres','safaris','search'];
+var TABS=['home','sites','planner','map','gear','reviews','centres','search'];
+// Calendar / Best Period / Plan a Trip are now one integrated page — legacy links route here.
 var PLANNER_TOOLS={calendar:1,period:1,plan:1};
-var plannerTool='calendar';
 
 function showTab(t){
-  // Calendar / Best Period / Plan a Trip live inside the unified Dive Planner tab.
-  if(PLANNER_TOOLS[t]){ plannerTool=t; t='planner'; }
+  var toCal=(t==='calendar');
+  if(PLANNER_TOOLS[t]) t='planner';
   TABS.forEach(function(x){
     document.getElementById('view-'+x).classList.toggle('hidden', x!==t);
     document.getElementById('tab-'+x).classList.toggle('active', x===t);
   });
   // The full-height hero anchors the landing/home view only; collapse it on working tabs.
   document.getElementById('hero').classList.toggle('hidden', t!=='home');
-  if(t==='planner') showPlannerTool(plannerTool);
   if(t==='map') setTimeout(initMap,50);
+  if(toCal){ var c=document.getElementById('calTable'); if(c){c.scrollIntoView({behavior:'smooth',block:'start'});return;} }
   window.scrollTo({top:0,behavior:'smooth'});
-}
-
-// Switch between the three tools inside the Dive Planner tab.
-function showPlannerTool(tool){
-  plannerTool=tool;
-  ['calendar','period','plan'].forEach(function(x){
-    document.getElementById('view-'+x).classList.toggle('hidden', x!==tool);
-    document.getElementById('ptab-'+x).classList.toggle('active', x===tool);
-  });
 }
 
 function fillMonths(sel){
@@ -469,13 +434,8 @@ function fillMonths(sel){
 }
 
 function initControls(){
-  var ps=document.getElementById('periodSel');
-  DivingCalendar.PERIODS.forEach(function(p){
-    var o=document.createElement('option'); o.value=p.period_no; o.textContent='#'+p.period_no+' — '+p.label; ps.appendChild(o);
-  });
-  ps.value=(new Date().getMonth()*2+1);
   var regions=Array.from(new Set(DESTS.map(function(d){return d.region;}))).sort();
-  [['fRegion'],['planRegion'],['calRegion'],['siteRegion']].forEach(function(id){
+  [['planRegion'],['calRegion'],['siteRegion']].forEach(function(id){
     var el=document.getElementById(id[0]);
     regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
   });
@@ -489,14 +449,12 @@ function initControls(){
   fillMonths(document.getElementById('planFrom'));
   fillMonths(document.getElementById('planTo'));
   fillMonths(document.getElementById('mapMonth'));
-  document.getElementById('planFrom').value='Jun';
-  document.getElementById('planTo').value='Sep';
-  document.getElementById('mapMonth').value=DivingCalendar.MONTHS[new Date().getMonth()];
-  ['periodSel','fRegion','fDiff','fWater','fTemp','fLimit'].forEach(function(id){
-    var e=document.getElementById(id); e.addEventListener('change',renderRanking); e.addEventListener('input',renderRanking);
-  });
-  ['planFrom','planTo','planRegion','planDiff','planTemp'].forEach(function(id){
-    var e=document.getElementById(id); e.addEventListener('change',renderPlan); e.addEventListener('input',renderPlan);
+  var nm=new Date().getMonth();
+  document.getElementById('planFrom').value=DivingCalendar.MONTHS[nm];
+  document.getElementById('planTo').value=DivingCalendar.MONTHS[(nm+2)%12];
+  document.getElementById('mapMonth').value=DivingCalendar.MONTHS[nm];
+  ['planFrom','planTo','planRegion','planDiff','planWater','planTemp','planLimit'].forEach(function(id){
+    var e=document.getElementById(id); e.addEventListener('change',renderPlanner); e.addEventListener('input',renderPlanner);
   });
   document.getElementById('mapMonth').addEventListener('change',drawMarkers);
 }
@@ -527,32 +485,13 @@ function renderCalendar(){
   document.getElementById('calTable').innerHTML=head+'<tbody>'+body+'</tbody>';
 }
 
-function renderRanking(){
-  var f={region:val('fRegion'),difficulty:val('fDiff'),water_type:val('fWater'),
-         minTemp:num('fTemp'),limit:Number(val('fLimit'))};
-  var ranked=DivingCalendar.rankPeriod(DESTS, Number(val('periodSel')), f);
-  var g=document.getElementById('rankGrid');
-  if(!ranked.length){g.innerHTML='<div class="empty">No open destinations match these filters for this period.</div>';return;}
-  g.innerHTML=ranked.map(function(r){
-    return '<div class="card"><div class="rank">'+r.rank+'</div>'+
-      '<h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
-      '<div class="row">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
-        '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+
-        '<span class="score">score '+r.score+'</span></div>'+
-      '<div class="row"><span class="chip">'+r.difficulty+'</span></div>'+
-      '<div class="hl">🐟 '+r.highlight+'</div>'+
-      '<div class="meta" style="margin-top:6px">🌊 '+r.conditions+'</div>'+
-      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div>';
-  }).join('');
-}
-
-function renderPlan(){
+function renderPlanner(){
   var months=DivingCalendar.monthsBetween(val('planFrom'),val('planTo'));
-  var f={region:val('planRegion'),difficulty:val('planDiff'),minTemp:num('planTemp'),limit:15};
+  var f={region:val('planRegion'),difficulty:val('planDiff'),water_type:val('planWater'),
+         minTemp:num('planTemp'),limit:Number(val('planLimit'))};
   var ranked=DivingCalendar.rankWindow(DESTS, months, f);
   document.getElementById('planInfo').textContent=
-    'Ranking '+ranked.length+' destinations across '+months.length+' month(s): '+months.join(' · ')+
-    ' — sorted by average score over the window.';
+    'Best destinations for '+months.join(' · ')+' — ranked by average score across '+months.length+' month(s).';
   var g=document.getElementById('planGrid');
   if(!ranked.length){g.innerHTML='<div class="empty">No destinations match.</div>';return;}
   g.innerHTML=ranked.map(function(r){
@@ -855,23 +794,6 @@ function renderCentres(){
         '<a class="btn" href="#" onclick="demo(\'the claim form\');return false;">Claim this listing</a>')+'</div></div>';}).join('');
 }
 
-var SAFARIS=[
- {name:"Red Sea — Brothers, Daedalus & Elphinstone",boat:"M/Y Emperor Superior",nights:7,from:1290,region:"Red Sea, Egypt"},
- {name:"Raja Ampat Explorer",boat:"M/V Samambaia",nights:10,from:4600,region:"Raja Ampat, Indonesia"},
- {name:"Galápagos — Darwin & Wolf",boat:"M/V Galapagos Master",nights:7,from:5950,region:"Galápagos, Ecuador"},
- {name:"Maldives Central Atolls",boat:"M/V Emperor Explorer",nights:7,from:1650,region:"Maldives"},
- {name:"Komodo National Park",boat:"M/V Mermaid II",nights:8,from:2900,region:"Komodo, Indonesia"}
-];
-function renderSafaris(){
-  document.getElementById('safarisBody').innerHTML=
-    '<div class="sec-head">🚤 Liveaboard safaris</div><p class="sec-sub">Book through trusted operators — Scubanaut hands you off, it doesn\'t resell trips.</p>'+
-    '<div class="grid">'+SAFARIS.map(function(s){return '<div class="card"><h3>'+s.name+'</h3>'+
-      '<div class="meta">'+s.region+'</div>'+
-      '<div class="readout"><span>'+s.boat+'</span><span>'+s.nights+' nights</span><span class="score">from $'+s.from+'</span></div>'+
-      '<div class="row"><a class="btn" href="#" onclick="demo(\'Divebooker\');return false;">Book via Divebooker</a>'+
-      '<a class="btn ghost" href="#" onclick="demo(\'Liveaboard.com\');return false;">Liveaboard.com</a></div></div>';}).join('')+'</div>';
-}
-
 // Prefer data embedded by the single-file build; otherwise fetch from disk.
 function loadData(){
   if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null]);
@@ -895,8 +817,8 @@ loadData().then(function(res){
     'at no extra cost to you. Gear and trip prices shown are sample data for demonstration. We link only to authorised retailers and trusted '+
     'operators, and commissions never influence our ratings.</div>';
   initControls();
-  renderHome(); renderSites(); renderGear(); renderReviews(); renderCentres(); renderSafaris();
-  renderCalendar(); renderRanking(); renderPlan();
+  renderHome(); renderSites(); renderGear(); renderReviews(); renderCentres();
+  renderCalendar(); renderPlanner();
   document.getElementById('searchBox').addEventListener('input', renderSearch);
 }).catch(function(){
   document.querySelector('.wrap').innerHTML='<div class="empty">Could not load <code>diving-destinations.json</code>.<br>If you opened the file directly, use the single-file build <code>diving-site.html</code>, or serve this folder over HTTP (<code>python3 -m http.server</code>).</div>';
