@@ -82,6 +82,16 @@
   .tabs button:hover{background:rgba(47,224,214,.08);color:var(--ink);border-color:var(--line)}
   .tabs button.active{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;
        font-weight:700;box-shadow:0 6px 18px -6px rgba(47,224,214,.6)}
+  /* Dive Planner sub-navigation */
+  .subtabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 22px;
+       padding:6px;background:var(--glass);border:1px solid var(--line);border-radius:999px;
+       width:fit-content;margin-left:auto;margin-right:auto;box-shadow:var(--shadow)}
+  .subtabs button{background:transparent;color:var(--ink-soft);border:none;border-radius:999px;
+       padding:9px 18px;font-size:.9rem;font-weight:600;font-family:var(--sans);cursor:pointer;
+       white-space:nowrap;transition:all .18s ease}
+  .subtabs button:hover{background:rgba(47,224,214,.08);color:var(--ink)}
+  .subtabs button.active{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;
+       font-weight:700;box-shadow:0 6px 16px -6px rgba(47,224,214,.55)}
 
   .wrap{max-width:1180px;margin:0 auto;padding:30px 18px 70px}
   section{animation:fade .35s ease}
@@ -265,7 +275,6 @@
     </div>
   </div>
   <div class="spacer"></div>
-  <a class="btn cta" href="#" onclick="showTab('period');return false;">Best dives now →</a>
 </div>
 
 <header class="hero" id="hero">
@@ -282,9 +291,7 @@
   <div class="tabs">
     <button id="tab-home" class="active" onclick="showTab('home')">🏠 Home</button>
     <button id="tab-sites" onclick="showTab('sites')">🐠 Dive Sites</button>
-    <button id="tab-calendar" onclick="showTab('calendar')">📅 Calendar</button>
-    <button id="tab-period" onclick="showTab('period')">🏆 Best Period</button>
-    <button id="tab-plan" onclick="showTab('plan')">🗓️ Plan a Trip</button>
+    <button id="tab-planner" onclick="showTab('planner')">🧭 Dive Planner</button>
     <button id="tab-map" onclick="showTab('map')">🗺️ Map</button>
     <button id="tab-gear" onclick="showTab('gear')">🛒 Gear</button>
     <button id="tab-reviews" onclick="showTab('reviews')">📝 Reviews</button>
@@ -328,6 +335,14 @@
 
   <!-- SAFARIS -->
   <section id="view-safaris" class="hidden"><div id="safarisBody"></div></section>
+
+  <!-- DIVE PLANNER (Calendar + Best Period + Plan a Trip) -->
+  <section id="view-planner" class="hidden">
+    <div class="subtabs">
+      <button id="ptab-calendar" onclick="showPlannerTool('calendar')">📅 Calendar</button>
+      <button id="ptab-period" onclick="showPlannerTool('period')">🏆 Best Period</button>
+      <button id="ptab-plan" onclick="showPlannerTool('plan')">🗓️ Plan a Trip</button>
+    </div>
 
   <!-- CALENDAR GRID -->
   <section id="view-calendar" class="hidden">
@@ -377,6 +392,8 @@
     <p id="planInfo" class="meta" style="text-align:center"></p>
     <div id="planGrid" class="grid"></div>
   </section>
+  </section>
+  <!-- /DIVE PLANNER -->
 
   <!-- MAP -->
   <section id="view-map" class="hidden">
@@ -420,15 +437,31 @@ function tempStr(t){return t==null?'—':t+'°C';}
 function vizStr(v){return v==null?'—':'👁 '+v+'m';}
 function curChip(s){return s?'<span class="chip cur-'+s+'">⤳ '+s+' current</span>':'';}
 
+var TABS=['home','sites','planner','map','gear','reviews','centres','safaris','search'];
+var PLANNER_TOOLS={calendar:1,period:1,plan:1};
+var plannerTool='calendar';
+
 function showTab(t){
-  ['home','sites','calendar','period','plan','map','gear','reviews','centres','safaris','search'].forEach(function(x){
+  // Calendar / Best Period / Plan a Trip live inside the unified Dive Planner tab.
+  if(PLANNER_TOOLS[t]){ plannerTool=t; t='planner'; }
+  TABS.forEach(function(x){
     document.getElementById('view-'+x).classList.toggle('hidden', x!==t);
     document.getElementById('tab-'+x).classList.toggle('active', x===t);
   });
   // The full-height hero anchors the landing/home view only; collapse it on working tabs.
   document.getElementById('hero').classList.toggle('hidden', t!=='home');
+  if(t==='planner') showPlannerTool(plannerTool);
   if(t==='map') setTimeout(initMap,50);
   window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Switch between the three tools inside the Dive Planner tab.
+function showPlannerTool(tool){
+  plannerTool=tool;
+  ['calendar','period','plan'].forEach(function(x){
+    document.getElementById('view-'+x).classList.toggle('hidden', x!==tool);
+    document.getElementById('ptab-'+x).classList.toggle('active', x===tool);
+  });
 }
 
 function fillMonths(sel){
