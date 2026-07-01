@@ -945,6 +945,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
     .home-grid .featured{grid-column:span 2}
     .home-grid .featured .cover{height:220px}
   }
+  /* ---------- planner progressive disclosure ---------- */
+  .plan-intro{text-align:center;padding:44px 18px;border:1px dashed rgba(47,224,214,.3);border-radius:16px;
+       background:rgba(10,51,64,.35);margin-top:6px}
+  .plan-intro b{font-family:var(--serif);font-size:1.25rem;color:var(--ink)}
+  .subtabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0 16px}
+  .subtabs.hidden{display:none}
+  .subtabs button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;
+       padding:8px 16px;font-size:.88rem;cursor:pointer;display:inline-flex;align-items:center;transition:all .15s}
+  .subtabs button .ico{font-size:15px;margin-right:6px}
+  .subtabs button:hover{border-color:var(--accent);color:var(--ink)}
+  .subtabs button.active{background:rgba(47,224,214,.14);color:var(--accent);border-color:var(--accent);font-weight:700}
 </style>
 </head>
 <body>
@@ -979,9 +990,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <div class="navwrap">
   <div class="tabs">
     <button id="tab-home" class="active" onclick="showTab('home')"><i class="ico" data-ico="home"></i>Home</button>
-    <button id="tab-sites" onclick="showTab('sites')"><i class="ico" data-ico="fish"></i>Dive Sites</button>
     <button id="tab-planner" onclick="showTab('planner')"><i class="ico" data-ico="compass"></i>Dive Planner</button>
-    <button id="tab-map" onclick="showTab('map')"><i class="ico" data-ico="map"></i>Map</button>
     <button id="tab-gear" onclick="showTab('gear')"><i class="ico" data-ico="tank"></i>Diving Gear</button>
     <button id="tab-reviews" onclick="showTab('reviews')"><i class="ico" data-ico="pen"></i>Reviews</button>
     <button id="tab-centres" onclick="showTab('centres')"><i class="ico" data-ico="store"></i>Dive Centres</button>
@@ -995,17 +1004,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <section id="view-home"></section>
 
   <!-- DIVE SITES -->
-  <section id="view-sites" class="hidden">
-    <div class="controls">
-      <div class="field"><label>Region</label><select id="siteRegion"><option value="">All regions</option></select></div>
-      <div class="field"><label>Difficulty</label><select id="siteDiff">
-        <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
-      <div class="field"><label>Current</label><select id="siteCur">
-        <option value="">Any</option><option>Low</option><option>Medium</option><option>Strong</option></select></div>
-    </div>
-    <div id="sitesGrid" class="grid"></div>
-  </section>
-
   <!-- GEAR -->
   <section id="view-gear" class="hidden">
     <div class="controls">
@@ -1022,57 +1020,74 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <section id="view-centres" class="hidden"><div id="centresBody"></div></section>
 
 
-  <!-- DIVE PLANNER — one page: best destinations for your dates + the full-year calendar -->
+  <!-- DIVE PLANNER — one progressive page: filters first, then results as cards / map / year calendar -->
   <section id="view-planner" class="hidden">
     <div class="sec-head"><i class="ico" data-ico="compass"></i>Plan your dive</div>
-    <p class="sec-sub">Pick your travel period — Scubanaut suggests the top destinations for it and highlights it on the seasonal calendar below.</p>
+    <p class="sec-sub">Tell Scubanaut when (and how) you want to dive — the best matches appear as you select,
+      as ranked cards, on the world map, or across the whole year.</p>
 
     <div class="controls">
-      <div class="field"><label>Period of travel</label><select id="planPeriod"></select></div>
+      <div class="field"><label>Period of travel</label><select id="planPeriod">
+        <option value="">— any time —</option></select></div>
       <div class="field"><label>Region</label><select id="planRegion"><option value="">Any</option></select></div>
       <div class="field"><label>Difficulty</label><select id="planDiff">
         <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
       <div class="field"><label>Water</label><select id="planWater">
         <option value="">Any</option><option>tropical</option><option>subtropical</option><option>temperate</option>
         <option>saltwater</option><option>freshwater</option></select></div>
+      <div class="field"><label>Current</label><select id="planCur">
+        <option value="">Any</option><option>Low</option><option>Medium</option><option>Strong</option></select></div>
       <div class="field"><label>Min water °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
     </div>
-    <p id="planInfo" class="meta" style="text-align:center"></p>
-    <div id="planGrid" class="grid"></div>
-    <div id="planMore" style="text-align:center;margin-top:20px"></div>
 
-    <div class="sec-head" style="margin-top:44px"><i class="ico" data-ico="calendar"></i>Browse the whole year</div>
-    <p class="sec-sub">Every destination, month by month — colour shows the season rating, and your travel period is highlighted. Click any destination or cell to open its full profile.</p>
-    <div class="controls">
-      <div class="field"><label>Region</label><select id="calRegion"><option value="">All regions</option></select></div>
-      <div class="field"><label>Sort by</label><select id="calSort">
-        <option value="region">Region</option><option value="name">Name</option><option value="best">Best season first</option></select></div>
-      <div class="field"><label>Cell shows</label><select id="calShow">
-        <option value="temp">Water °C</option><option value="viz">Visibility m</option><option value="rating">Rating</option></select></div>
+    <!-- empty state: nothing else is shown until the diver starts selecting -->
+    <div id="planIntro" class="plan-intro">
+      <div class="gear-ico" style="margin:0 auto 12px"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="15.2 8.8 13.2 13.2 8.8 15.2 10.8 10.8" fill="currentColor" stroke="none"/></svg></div>
+      <b>Where the ocean is best, when you can go.</b>
+      <p class="meta" style="max-width:52ch;margin:8px auto 0">Pick your travel period — or any filter — and your matches
+        appear right here: ranked destination cards, a world map coloured by season, and the full-year calendar.</p>
     </div>
-    <div class="legend" style="justify-content:center">
-      <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
-      <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
-      <span><i style="background:#64748b"></i>Closed</span>
-      <span style="margin-left:8px">· colour = season rating</span>
-    </div>
-    <div class="cal-wrap"><table class="cal" id="calTable"></table></div>
-  </section>
 
-  <!-- MAP -->
-  <section id="view-map" class="hidden">
-    <div class="controls">
-      <div class="field"><label>Colour markers by month</label><select id="mapMonth"></select></div>
+    <!-- result views: revealed on first selection, one at a time -->
+    <div id="planViews" class="subtabs hidden">
+      <button id="sub-cards" class="active" onclick="showSub('cards')"><i class="ico" data-ico="fish"></i>Best matches</button>
+      <button id="sub-map" onclick="showSub('map')"><i class="ico" data-ico="map"></i>Map</button>
+      <button id="sub-calendar" onclick="showSub('calendar')"><i class="ico" data-ico="calendar"></i>Year calendar</button>
     </div>
-    <div class="legend">
-      <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
-      <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
-      <span><i style="background:#64748b"></i>Closed</span>
+
+    <div id="sv-cards" class="subview hidden">
+      <p id="planInfo" class="meta" style="text-align:center"></p>
+      <div id="planGrid" class="grid"></div>
+      <div id="planMore" style="text-align:center;margin-top:20px"></div>
     </div>
-    <div id="map"></div>
-    <p id="mapNote" class="meta" style="text-align:center"></p>
-    <p class="meta" style="text-align:center">Offline vector basemap (no tile server needed). Prefer a street-level
-      tile map? <span style="opacity:.6">(street-tile map available in the full hosted site)</span></p>
+
+    <div id="sv-map" class="subview hidden">
+      <div class="legend">
+        <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
+        <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
+        <span><i style="background:#64748b"></i>Closed</span>
+      </div>
+      <div id="map"></div>
+      <p id="mapNote" class="meta" style="text-align:center"></p>
+    </div>
+
+    <div id="sv-calendar" class="subview hidden">
+      <p class="sec-sub" style="text-align:center">Every matching destination, month by month — your travel period is highlighted.
+        Click any destination or cell to open its full profile.</p>
+      <div class="controls">
+        <div class="field"><label>Sort by</label><select id="calSort">
+          <option value="region">Region</option><option value="name">Name</option><option value="best">Best season first</option></select></div>
+        <div class="field"><label>Cell shows</label><select id="calShow">
+          <option value="temp">Water °C</option><option value="viz">Visibility m</option><option value="rating">Rating</option></select></div>
+      </div>
+      <div class="legend" style="justify-content:center">
+        <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
+        <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
+        <span><i style="background:#64748b"></i>Closed</span>
+        <span style="margin-left:8px">· colour = season rating</span>
+      </div>
+      <div class="cal-wrap"><table class="cal" id="calTable"></table></div>
+    </div>
   </section>
 
   <!-- SEARCH / PROFILE -->
@@ -1417,22 +1432,67 @@ function setHeroPhoto(){
   }
 }
 
-var TABS=['home','sites','planner','map','gear','reviews','centres','search'];
-// Calendar / Best Period / Plan a Trip are now one integrated page — legacy links route here.
-var PLANNER_TOOLS={calendar:1,period:1,plan:1};
+var TABS=['home','planner','gear','reviews','centres','search'];
+// Legacy destinations now living inside the Dive Planner — each routes to a planner sub-view.
+var PLANNER_TOOLS={calendar:'calendar',period:'cards',plan:null,sites:'cards',map:'map'};
 
 function showTab(t){
-  var toCal=(t==='calendar');
-  if(PLANNER_TOOLS[t]) t='planner';
+  var sub;
+  if(t in PLANNER_TOOLS){
+    sub=PLANNER_TOOLS[t];
+    // "best places now" links: preselect the current half-month period
+    if(t==='period' && !val('planPeriod'))
+      document.getElementById('planPeriod').value=new Date().getMonth()*2+1;
+    t='planner';
+  }
   TABS.forEach(function(x){
     document.getElementById('view-'+x).classList.toggle('hidden', x!==t);
     document.getElementById('tab-'+x).classList.toggle('active', x===t);
   });
   // The full-height hero anchors the landing/home view only; collapse it on working tabs.
   document.getElementById('hero').classList.toggle('hidden', t!=='home');
-  if(t==='map') setTimeout(initMap,50);
-  if(toCal){ var c=document.getElementById('calTable'); if(c){c.scrollIntoView({behavior:'smooth',block:'start'});return;} }
+  if(t==='planner' && sub){ planEngage(sub); }   // arriving with intent counts as a selection
   window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ---------- planner progressive disclosure ---------- */
+var PLAN_ENGAGED=false, PLAN_SUB='cards';
+function planEngage(sub){
+  PLAN_ENGAGED=true;
+  document.getElementById('planIntro').classList.add('hidden');
+  document.getElementById('planViews').classList.remove('hidden');
+  showSub(sub||PLAN_SUB);
+}
+function showSub(v){
+  PLAN_SUB=v;
+  ['cards','map','calendar'].forEach(function(x){
+    document.getElementById('sv-'+x).classList.toggle('hidden', x!==v);
+    document.getElementById('sub-'+x).classList.toggle('active', x===v);
+  });
+  if(v==='cards') renderPlanner();
+  if(v==='calendar') renderCalendar();
+  if(v==='map') setTimeout(function(){ initMap(); if(MAP)MAP.invalidateSize(); drawMarkers(); },60);
+}
+function refreshPlanViews(){
+  if(!PLAN_ENGAGED) planEngage('cards');
+  else if(PLAN_SUB==='cards') renderPlanner();
+  else if(PLAN_SUB==='calendar') renderCalendar();
+  else if(PLAN_SUB==='map') drawMarkers();
+}
+// current planner month: the chosen travel period's month, else the present month
+function planMonth(){
+  var v=val('planPeriod');
+  if(v) return DivingCalendar.PERIODS[(Number(v)-1+24)%24].month;
+  return DivingCalendar.MONTHS[new Date().getMonth()];
+}
+// static (non-period) planner filters, shared by cards, map and calendar
+function planStaticMatch(d){
+  var region=val('planRegion'), diff=val('planDiff'), water=val('planWater'), cur=val('planCur');
+  if(region && d.region!==region) return false;
+  if(diff && d.difficulty.indexOf(diff)===-1) return false;
+  if(water && d.water_type.indexOf(water)===-1) return false;
+  if(cur && d.current_strength!==cur) return false;
+  return true;
 }
 
 function fillMonths(sel){
@@ -1441,37 +1501,26 @@ function fillMonths(sel){
 
 function initControls(){
   var regions=Array.from(new Set(DESTS.map(function(d){return d.region;}))).sort();
-  [['planRegion'],['calRegion'],['siteRegion']].forEach(function(id){
-    var el=document.getElementById(id[0]);
-    regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
-  });
-  // Period of travel — the 24 half-month periods, no numbering.
+  var el=document.getElementById('planRegion');
+  regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
+  // Period of travel — the 24 half-month periods; starts unselected ("any time").
   var pp=document.getElementById('planPeriod');
   DivingCalendar.PERIODS.forEach(function(p){var o=document.createElement('option');o.value=p.period_no;o.textContent=p.label;pp.appendChild(o);});
-  var nm=new Date().getMonth();
-  pp.value=nm*2+1;
-  ['calRegion','calSort','calShow'].forEach(function(id){
+  ['calSort','calShow'].forEach(function(id){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
-  ['siteRegion','siteDiff','siteCur'].forEach(function(id){
-    document.getElementById(id).addEventListener('change',renderSites);
-  });
   document.getElementById('gearCat').addEventListener('change',renderGear);
-  fillMonths(document.getElementById('mapMonth'));
-  document.getElementById('mapMonth').value=DivingCalendar.MONTHS[nm];
-  // Period drives both the suggestions and the calendar highlight; filters affect suggestions only.
-  document.getElementById('planPeriod').addEventListener('change',function(){planExpanded=false;renderPlanner();renderCalendar();});
-  ['planRegion','planDiff','planWater','planTemp'].forEach(function(id){
+  // Any planner selection reveals the result views and refreshes the active one.
+  ['planPeriod','planRegion','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
-    e.addEventListener('change',function(){planExpanded=false;renderPlanner();});
-    e.addEventListener('input',function(){planExpanded=false;renderPlanner();});
+    var h=function(){planExpanded=false;refreshPlanViews();};
+    e.addEventListener('change',h); e.addEventListener('input',h);
   });
-  document.getElementById('mapMonth').addEventListener('change',drawMarkers);
 }
 
 function renderCalendar(){
-  var region=val('calRegion'), sort=val('calSort'), show=val('calShow');
-  var list=DESTS.filter(function(d){return !region||d.region===region;});
+  var sort=val('calSort'), show=val('calShow');
+  var list=DESTS.filter(planStaticMatch);   // the planner's filters drive the calendar too
   if(sort==='name') list.sort(function(a,b){return a.name<b.name?-1:1;});
   else if(sort==='region') list.sort(function(a,b){return a.region<b.region?-1:(a.region>b.region?1:(a.name<b.name?-1:1));});
   else if(sort==='best'){ list.sort(function(a,b){
@@ -1498,36 +1547,60 @@ function renderCalendar(){
 }
 
 var planExpanded=false;
+/* One unified result card: ranked planner entry + the dive-site details
+   (difficulty pips, access, nearest chamber) that used to live on the Dive Sites tab. */
+function plannerCard(r,monthLabel){
+  return '<div class="card photo-card"><div class="rank">'+r.rank+'</div>'+
+    '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'"></div>'+
+    '<div class="card-body"><h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
+    '<div class="row">'+badge(r.rating)+'<span class="chip">'+monthLabel+'</span>'+
+      '<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
+      '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+
+      '<span class="score">score '+r.score+'</span></div>'+
+    '<div class="row">'+diffPips(r.difficulty)+'<span class="chip">'+r.difficulty+'</span><span class="chip">'+r.access+'</span></div>'+
+    '<div class="hl">'+ico('fish',13)+' '+r.highlight+'</div>'+
+    '<div class="meta" style="margin-top:6px">'+ico('medic',12)+' Nearest chamber: '+chamberFor(r.region)+'</div>'+
+    '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div></div>';
+}
 function renderPlanner(){
-  var per=Number(val('planPeriod'));
-  var pinfo=DivingCalendar.PERIODS[(per-1+24)%24];
-  var f={region:val('planRegion'),difficulty:val('planDiff'),water_type:val('planWater'),minTemp:num('planTemp')};
-  var full=DivingCalendar.rankPeriod(DESTS, per, f);
+  var perVal=val('planPeriod');
   var g=document.getElementById('planGrid'), more=document.getElementById('planMore');
+  var full, label;
+  if(perVal){
+    // A travel period is chosen: rank destinations for that period.
+    var per=Number(perVal), pinfo=DivingCalendar.PERIODS[(per-1+24)%24];
+    var f={region:val('planRegion'),difficulty:val('planDiff'),water_type:val('planWater'),minTemp:num('planTemp')};
+    full=DivingCalendar.rankPeriod(DESTS, per, f).filter(function(r){
+      var cur=val('planCur'); return !cur||r.current_strength===cur;
+    }).map(function(r){ r.monthLabel=pinfo.month; return r; });
+    label='open for '+pinfo.label;
+  }else{
+    // "Any time": browse mode — every matching destination at its own best month.
+    var minT=num('planTemp');
+    full=DESTS.filter(planStaticMatch).map(function(d){
+      var s=DivingCalendar.destinationSeasonSummary(d);
+      var bm=s.bestMonth?s.bestMonth.month:'Jan', mm=d.monthly[bm];
+      return {name:d.name,country:d.country,region:d.region,difficulty:d.difficulty,access:d.access,
+        current_strength:d.current_strength,water_temp_c:d.monthly_temp_c[bm],visibility_m:mm.visibility_m,
+        rating:mm.rating,highlight:mm.marine_life,score:s.bestMonth?s.bestMonth.score:0,monthLabel:'best: '+bm};
+    }).filter(function(r){return minT==null||r.water_temp_c==null||r.water_temp_c>=minT;});
+    full.sort(function(a,b){return b.score-a.score||(a.name<b.name?-1:1);});
+    full.forEach(function(r,i){r.rank=i+1;});
+    label='matches — each shown at its best month (pick a period to rank for your dates)';
+  }
   if(!full.length){
     document.getElementById('planInfo').textContent='';
-    g.innerHTML='<div class="empty">No open destinations match these filters for '+pinfo.label+'.</div>';
+    g.innerHTML='<div class="empty">No destinations match these filters.</div>';
     more.innerHTML=''; return;
   }
-  var shown=full.slice(0, planExpanded?10:3);
-  document.getElementById('planInfo').textContent=
-    'Top '+shown.length+' of '+full.length+' destinations open for '+pinfo.label+'.';
-  g.innerHTML=shown.map(function(r){
-    return '<div class="card photo-card"><div class="rank">'+r.rank+'</div>'+
-      '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'"></div>'+
-      '<div class="card-body"><h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
-      '<div class="row">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
-        '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+
-        '<span class="score">score '+r.score+'</span></div>'+
-      '<div class="row"><span class="chip">'+r.difficulty+'</span></div>'+
-      '<div class="hl">'+ico('fish',13)+' '+r.highlight+'</div>'+
-      '<div class="meta" style="margin-top:6px">'+ico('current',12)+' '+r.conditions+'</div>'+
-      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div></div>';
-  }).join('');
-  if(full.length>3){
+  var cap=perVal?(planExpanded?10:3):(planExpanded?full.length:6);
+  var shown=full.slice(0,cap);
+  document.getElementById('planInfo').textContent='Top '+shown.length+' of '+full.length+' '+label+'.';
+  g.innerHTML=shown.map(function(r){return plannerCard(r,r.monthLabel);}).join('');
+  if(full.length>shown.length||planExpanded){
     more.innerHTML = planExpanded
-      ? '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">Show top 3 ▲</a>'
-      : '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">See more — top '+Math.min(10,full.length)+' →</a>';
+      ? '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">Show fewer ▲</a>'
+      : '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">See more — all '+full.length+' →</a>';
   } else more.innerHTML='';
   fillDestCovers();
 }
@@ -1545,10 +1618,10 @@ function initMap(){
 function drawMarkers(){
   if(!MAP||!MARKERS) return;
   MARKERS.clearLayers();
-  var month=val('mapMonth');
-  DESTS.forEach(function(d){
+  var month=planMonth(), shownCount=0;
+  DESTS.filter(planStaticMatch).forEach(function(d){
     var c=d.coordinates; if(!c||c.lat==null) return;
-    var mm=d.monthly[month];
+    var mm=d.monthly[month]; shownCount++;
     var m=L.circleMarker([c.lat,c.lng],{radius:7,color:'#021824',weight:1,
       fillColor:RCOLOR[mm.rating],fillOpacity:.92});
     m.bindPopup('<b>'+d.name+'</b><br>'+d.country+' · '+d.region+'<br>'+
@@ -1557,7 +1630,8 @@ function drawMarkers(){
       '<br><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">full profile →</a>');
     MARKERS.addLayer(m);
   });
-  document.getElementById('mapNote').textContent='Markers coloured by '+month+' season rating · click a point for details.';
+  document.getElementById('mapNote').textContent=
+    shownCount+' matching destinations · markers coloured by their '+month+' season rating · click a point for details.';
 }
 
 function renderSearch(){
@@ -1747,24 +1821,6 @@ function fillDestCovers(){
   });
 }
 
-function renderSites(){
-  var region=val('siteRegion'), diff=val('siteDiff'), cur=val('siteCur');
-  var list=DESTS.filter(function(d){return (!region||d.region===region)&&(!diff||d.difficulty.indexOf(diff)!==-1)&&(!cur||d.current_strength===cur);});
-  document.getElementById('sitesGrid').innerHTML=list.map(function(d){
-    var s=DivingCalendar.destinationSeasonSummary(d); var bm=s.bestMonth?s.bestMonth.month:'—';
-    var mm=s.bestMonth?d.monthly[s.bestMonth.month]:d.monthly.Jan;
-    return '<div class="card photo-card"><div class="cover" data-name="'+encodeURIComponent(d.name)+'" data-country="'+encodeURIComponent(d.country)+'"></div>'+
-      '<div class="card-body"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
-      '<div class="row">'+diffPips(d.difficulty)+'<span class="chip">'+d.difficulty+'</span>'+curChip(d.current_strength)+'</div>'+
-      '<div class="readout"><span>BEST '+bm+'</span><span>TEMP '+tempStr(d.monthly_temp_c[bm])+'</span>'+
-        '<span>VIZ '+(mm.visibility_m||'—')+'m</span><span>'+d.access+'</span></div>'+
-      '<div class="hl">'+ico('fish',13)+' '+mm.marine_life+'</div>'+
-      '<div class="meta" style="margin-top:6px">'+ico('medic',12)+' Nearest chamber: '+chamberFor(d.region)+'</div>'+
-      '<div style="margin-top:8px"><a class="btn ghost" href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Seasonal calendar →</a></div></div></div>';
-  }).join('');
-  fillDestCovers();
-}
-
 var GEAR=[
  {name:"Scubapro Hydros Pro BCD",cat:"BCD",icon:"bcd",offers:[["Amazon",499],["House of Scuba",469],["Dive Right In",479]]},
  {name:"Aqua Lung Core Regulator Set",cat:"Regulator",icon:"regulator",offers:[["Amazon",339],["Scuba.com",319],["Dive Right In",349]]},
@@ -1857,8 +1913,8 @@ loadData().then(function(res){
     'operators, and commissions never influence our ratings.</div>';
   initControls();
   applyIcons(); setHeroPhoto();
-  renderHome(); renderSites(); renderGear(); renderReviews(); renderCentres();
-  renderCalendar(); renderPlanner();
+  renderHome(); renderGear(); renderReviews(); renderCentres();
+  // planner result views render on the diver's first selection (progressive disclosure)
   document.getElementById('searchBox').addEventListener('input', renderSearch);
 }).catch(function(){
   document.querySelector('.wrap').innerHTML='<div class="empty">Could not load <code>diving-destinations.json</code>.<br>If you opened the file directly, use the single-file build <code>diving-site.html</code>, or serve this folder over HTTP (<code>python3 -m http.server</code>).</div>';
