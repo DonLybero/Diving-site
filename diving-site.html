@@ -771,9 +771,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .card{background:linear-gradient(165deg,rgba(16,64,79,.85),rgba(9,40,52,.9));border:1px solid var(--line);
        border-radius:var(--r);padding:20px;position:relative;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
   .card:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:var(--shadow-glow)}
-  .rank{position:absolute;top:-12px;left:-12px;width:38px;height:38px;border-radius:14px;font-family:var(--mono);
+  .rank{position:absolute;top:-12px;left:-12px;width:38px;height:38px;border-radius:14px;font-family:var(--mono);z-index:3;
        background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;font-weight:700;font-size:.95rem;
        display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -6px rgba(47,224,214,.7)}
+  /* on a photo card the rank sits on the image, not poking outside the clipped corner */
+  .card.photo-card .rank{top:10px;left:10px}
   .card h3{margin:0 0 4px;font-size:1.2rem;font-family:var(--serif);color:var(--ink)}
   .meta{color:var(--muted);font-size:.8rem;margin-bottom:10px}
   .row{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:8px 0}
@@ -878,13 +880,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .feature.photo-card h4{margin:14px 18px 5px}
   .feature.photo-card .meta{margin:0 18px 8px}
   .feature.photo-card .row{margin:0 18px 18px}
-  .feature .cover{height:150px;display:flex;align-items:flex-start;justify-content:flex-end;padding:12px;
+  .card.photo-card{padding:0;overflow:hidden}
+  .card.photo-card .card-body{padding:20px}
+  .feature .cover,.card .cover{height:150px;display:flex;align-items:flex-start;justify-content:flex-end;padding:12px;
        background:linear-gradient(135deg,#0e5460,#0a3340 70%);background-size:cover;background-position:center;
        border-bottom:1px solid var(--line);position:relative;transition:transform .3s ease}
-  .feature .cover::after{content:"";position:absolute;inset:0;background:
+  .feature .cover::after,.card .cover::after{content:"";position:absolute;inset:0;background:
        radial-gradient(120% 90% at 20% -10%,rgba(47,224,214,.16),transparent 60%);pointer-events:none}
-  .feature.photo-card:hover .cover{transform:scale(1.05)}
-  .feature .cover .badge{position:relative;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+  .feature.photo-card:hover .cover,.card.photo-card:hover .cover{transform:scale(1.05)}
+  .feature .cover .badge,.card .cover .badge{position:relative;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.35)}
   .feature h4{margin:10px 0 5px;font-family:var(--serif);font-size:1.18rem;color:var(--ink)}
   .feature .big{font-size:2rem;line-height:1}
   .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
@@ -1428,21 +1432,23 @@ function renderPlanner(){
   document.getElementById('planInfo').textContent=
     'Top '+shown.length+' of '+full.length+' destinations open for '+pinfo.label+'.';
   g.innerHTML=shown.map(function(r){
-    return '<div class="card"><div class="rank">'+r.rank+'</div>'+
-      '<h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
+    return '<div class="card photo-card"><div class="rank">'+r.rank+'</div>'+
+      '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'"></div>'+
+      '<div class="card-body"><h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
       '<div class="row">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
         '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+
         '<span class="score">score '+r.score+'</span></div>'+
       '<div class="row"><span class="chip">'+r.difficulty+'</span></div>'+
       '<div class="hl">🐟 '+r.highlight+'</div>'+
       '<div class="meta" style="margin-top:6px">🌊 '+r.conditions+'</div>'+
-      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div>';
+      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div></div>';
   }).join('');
   if(full.length>3){
     more.innerHTML = planExpanded
       ? '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">Show top 3 ▲</a>'
       : '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">See more — top '+Math.min(10,full.length)+' →</a>';
   } else more.innerHTML='';
+  fillDestCovers();
 }
 function togglePlanMore(){ planExpanded=!planExpanded; renderPlanner(); }
 
@@ -1482,12 +1488,14 @@ function renderSearch(){
   if(!res.length){sr.innerHTML='<div class="empty">No matches.</div>';return;}
   sr.innerHTML=res.slice(0,12).map(function(d){
     var s=DivingCalendar.destinationSeasonSummary(d);
-    return '<div class="card"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
+    return '<div class="card photo-card"><div class="cover" data-name="'+encodeURIComponent(d.name)+'" data-country="'+encodeURIComponent(d.country)+'"></div>'+
+      '<div class="card-body"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
       '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+curChip(d.current_strength)+'</div>'+
       '<div class="hl">'+d.highlights+'</div>'+
       '<div class="meta" style="margin-top:6px">Best: '+d.best_months+' · Peak months: '+(s.byRating.Peak.join(', ')||'—')+'</div>'+
-      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Open full profile →</a></div></div>';
+      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Open full profile →</a></div></div></div>';
   }).join('');
+  fillDestCovers();
 }
 
 function openProfile(name){
@@ -1631,19 +1639,30 @@ function setCover(el,src){
   };
   img.src=src;
 }
+function loadCover(el){
+  var name=decodeURIComponent(el.getAttribute('data-name'));
+  var country=decodeURIComponent(el.getAttribute('data-country')||'');
+  // Prefer a photo already baked into the data (scripts/fetch_images.py).
+  var d=DivingCalendar.getDestination(DESTS,name);
+  if(d&&d.image){ setCover(el,d.image); if(d.image_credit) el.title=d.image_credit; return; }
+  // Otherwise pull one live from Wikipedia (name → country); gradient stays if none found.
+  wikiThumb(name).then(function(src){
+    if(src){setCover(el,src);return;}
+    if(country) return wikiThumb(country).then(function(s2){if(s2)setCover(el,s2);});
+  });
+}
+// Fill every destination cover on the page, lazily as each scrolls into view
+// (so a 50-card grid doesn't fire 50 requests at once).
+var COVER_OBS=null;
 function fillDestCovers(){
-  var covers=document.querySelectorAll('#view-home .cover[data-name]');
-  Array.prototype.forEach.call(covers,function(el){
-    var name=decodeURIComponent(el.getAttribute('data-name'));
-    var country=decodeURIComponent(el.getAttribute('data-country')||'');
-    // Prefer a photo already baked into the data (scripts/fetch_images.py).
-    var d=DivingCalendar.getDestination(DESTS,name);
-    if(d&&d.image){ setCover(el,d.image); if(d.image_credit) el.title=d.image_credit; return; }
-    // Otherwise pull one live from Wikipedia (name → country), gradient if none.
-    wikiThumb(name).then(function(src){
-      if(src){setCover(el,src);return;}
-      if(country) return wikiThumb(country).then(function(s2){if(s2)setCover(el,s2);});
-    });
+  if(!COVER_OBS && 'IntersectionObserver' in window){
+    COVER_OBS=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ loadCover(e.target); COVER_OBS.unobserve(e.target); } });
+    },{rootMargin:'250px'});
+  }
+  document.querySelectorAll('.cover[data-name]').forEach(function(el){
+    if(el.dataset.obs) return; el.dataset.obs='1';
+    if(COVER_OBS) COVER_OBS.observe(el); else loadCover(el);
   });
 }
 
@@ -1653,14 +1672,16 @@ function renderSites(){
   document.getElementById('sitesGrid').innerHTML=list.map(function(d){
     var s=DivingCalendar.destinationSeasonSummary(d); var bm=s.bestMonth?s.bestMonth.month:'—';
     var mm=s.bestMonth?d.monthly[s.bestMonth.month]:d.monthly.Jan;
-    return '<div class="card"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
+    return '<div class="card photo-card"><div class="cover" data-name="'+encodeURIComponent(d.name)+'" data-country="'+encodeURIComponent(d.country)+'"></div>'+
+      '<div class="card-body"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
       '<div class="row">'+diffPips(d.difficulty)+'<span class="chip">'+d.difficulty+'</span>'+curChip(d.current_strength)+'</div>'+
       '<div class="readout"><span>BEST '+bm+'</span><span>TEMP '+tempStr(d.monthly_temp_c[bm])+'</span>'+
         '<span>VIZ '+(mm.visibility_m||'—')+'m</span><span>'+d.access+'</span></div>'+
       '<div class="hl">🐟 '+mm.marine_life+'</div>'+
       '<div class="meta" style="margin-top:6px">⛑ Nearest chamber: '+chamberFor(d.region)+'</div>'+
-      '<div style="margin-top:8px"><a class="btn ghost" href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Seasonal calendar →</a></div></div>';
+      '<div style="margin-top:8px"><a class="btn ghost" href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Seasonal calendar →</a></div></div></div>';
   }).join('');
+  fillDestCovers();
 }
 
 var GEAR=[
