@@ -1648,6 +1648,10 @@ function fillDestCovers(){
   Array.prototype.forEach.call(covers,function(el){
     var name=decodeURIComponent(el.getAttribute('data-name'));
     var country=decodeURIComponent(el.getAttribute('data-country')||'');
+    // Prefer a photo already baked into the data (scripts/fetch_images.py).
+    var d=DivingCalendar.getDestination(DESTS,name);
+    if(d&&d.image){ setCover(el,d.image); if(d.image_credit) el.title=d.image_credit; return; }
+    // Otherwise pull one live from Wikipedia (name → country), gradient if none.
     wikiThumb(name).then(function(src){
       if(src){setCover(el,src);return;}
       if(country) return wikiThumb(country).then(function(s2){if(s2)setCover(el,s2);});
