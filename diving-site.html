@@ -819,10 +819,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
        border:1px dashed var(--line-strong);border-radius:var(--r)}
 
   /* ---------- calendar ---------- */
+  .cal-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);
+       background:#041c26;box-shadow:var(--shadow);padding:2px}
   .cal{border-collapse:separate;border-spacing:3px;font-size:.72rem;margin:0 auto}
-  .cal th{position:sticky;top:128px;background:#06242d;color:var(--muted);font-weight:600;padding:6px 7px;z-index:2;
+  /* Month labels are the first row and flow with the page; the destination column stays
+     pinned when scrolling the grid sideways. */
+  .cal th{position:sticky;background:#06242d;color:var(--muted);font-weight:600;padding:6px 7px;z-index:2;
        font-family:var(--mono);text-transform:uppercase;font-size:.66rem;border-radius:6px}
-  .cal th.corner{left:0;z-index:3;text-align:left}
+  .cal th.corner{left:0;z-index:4;text-align:left}
   .cal td.name{position:sticky;left:0;background:#0a3340;text-align:left;white-space:nowrap;cursor:pointer;
        z-index:1;max-width:210px;overflow:hidden;text-overflow:ellipsis;padding:6px 10px;border-radius:8px;
        font-weight:600;transition:background .12s}
@@ -1025,7 +1029,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <span><i style="background:#64748b"></i>Closed</span>
       <span style="margin-left:8px">· colour = season rating</span>
     </div>
-    <div style="overflow:auto"><table class="cal" id="calTable"></table></div>
+    <div class="cal-wrap"><table class="cal" id="calTable"></table></div>
   </section>
 
   <!-- MAP -->
