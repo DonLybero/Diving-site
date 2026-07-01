@@ -1393,7 +1393,8 @@ var ICONS={
  mask:'<path d="M3 9 C3 6.8 5.5 6 12 6 C18.5 6 21 6.8 21 9 V12.5 C21 14.7 19 15.6 16.8 15.6 C14.6 15.6 14.2 13.4 12 13.4 C9.8 13.4 9.4 15.6 7.2 15.6 C5 15.6 3 14.7 3 12.5 Z"/>',
  fins:'<path d="M9.5 3 C9.5 3 8.5 8.6 8.5 10.8 C4.8 12.8 3.5 16 3.5 20.5 H20.5 C20.5 16 19.2 12.8 15.5 10.8 C15.5 8.6 14.5 3 14.5 3 Z"/><path d="M12 6.5 V11"/>',
  wetsuit:'<path d="M12 3.2 V5 M6.5 21 V12 C4.3 11 3.4 8.9 4.4 6.9 L9 5 C10 6.7 14 6.7 15 5 L19.6 6.9 C20.6 8.9 19.7 11 17.5 12 V21 Z"/>',
- torch:'<path d="M9 3 H15 L14.3 7.5 C16.2 8.4 16.5 9.4 16.5 10.8 V21 H7.5 V10.8 C7.5 9.4 7.8 8.4 9.7 7.5 Z"/><path d="M10 11 H14"/>'
+ torch:'<path d="M9 3 H15 L14.3 7.5 C16.2 8.4 16.5 9.4 16.5 10.8 V21 H7.5 V10.8 C7.5 9.4 7.8 8.4 9.7 7.5 Z"/><path d="M10 11 H14"/>',
+ chevron:'<path d="M6 9 L12 15.5 L18 9"/>'
 };
 function ico(name,size){
   var p=ICONS[name]||'';
@@ -1439,11 +1440,7 @@ var PLANNER_TOOLS={calendar:'calendar',period:'cards',plan:null,sites:'cards',ma
 function showTab(t){
   var sub;
   if(t in PLANNER_TOOLS){
-    sub=PLANNER_TOOLS[t];
-    // "best places now" links: preselect the current half-month period
-    if(t==='period' && !val('planPeriod'))
-      document.getElementById('planPeriod').value=new Date().getMonth()*2+1;
-    t='planner';
+    sub=PLANNER_TOOLS[t]; t='planner';
   }
   TABS.forEach(function(x){
     document.getElementById('view-'+x).classList.toggle('hidden', x!==t);
@@ -1503,8 +1500,10 @@ function initControls(){
   var regions=Array.from(new Set(DESTS.map(function(d){return d.region;}))).sort();
   var el=document.getElementById('planRegion');
   regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
-  // Period of travel — the 24 half-month periods; starts unselected ("any time").
+  // Period of travel — the 24 half-month periods; the default is the present period.
   var pp=document.getElementById('planPeriod');
+  var nowPeriod=DivingCalendar.PERIODS[new Date().getMonth()*2];
+  pp.options[0].textContent='Now · '+nowPeriod.label;
   DivingCalendar.PERIODS.forEach(function(p){var o=document.createElement('option');o.value=p.period_no;o.textContent=p.label;pp.appendChild(o);});
   ['calSort','calShow'].forEach(function(id){
     document.getElementById(id).addEventListener('change',renderCalendar);
@@ -1513,7 +1512,7 @@ function initControls(){
   // Any planner selection reveals the result views and refreshes the active one.
   ['planPeriod','planRegion','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
-    var h=function(){planExpanded=false;refreshPlanViews();};
+    var h=function(){planShown=3;refreshPlanViews();};
     e.addEventListener('change',h); e.addEventListener('input',h);
   });
 }
@@ -1546,7 +1545,6 @@ function renderCalendar(){
   document.getElementById('calTable').innerHTML=head+'<tbody>'+body+'</tbody>';
 }
 
-var planExpanded=false;
 /* One unified result card: ranked planner entry + the dive-site details
    (difficulty pips, access, nearest chamber) that used to live on the Dive Sites tab. */
 function plannerCard(r,monthLabel){
@@ -1562,49 +1560,34 @@ function plannerCard(r,monthLabel){
     '<div class="meta" style="margin-top:6px">'+ico('medic',12)+' Nearest chamber: '+chamberFor(r.region)+'</div>'+
     '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div></div>';
 }
+var planShown=3;   // 3 → 10 → +5 → +5 …
 function renderPlanner(){
   var perVal=val('planPeriod');
   var g=document.getElementById('planGrid'), more=document.getElementById('planMore');
-  var full, label;
-  if(perVal){
-    // A travel period is chosen: rank destinations for that period.
-    var per=Number(perVal), pinfo=DivingCalendar.PERIODS[(per-1+24)%24];
-    var f={region:val('planRegion'),difficulty:val('planDiff'),water_type:val('planWater'),minTemp:num('planTemp')};
-    full=DivingCalendar.rankPeriod(DESTS, per, f).filter(function(r){
-      var cur=val('planCur'); return !cur||r.current_strength===cur;
-    }).map(function(r){ r.monthLabel=pinfo.month; return r; });
-    label='open for '+pinfo.label;
-  }else{
-    // "Any time": browse mode — every matching destination at its own best month.
-    var minT=num('planTemp');
-    full=DESTS.filter(planStaticMatch).map(function(d){
-      var s=DivingCalendar.destinationSeasonSummary(d);
-      var bm=s.bestMonth?s.bestMonth.month:'Jan', mm=d.monthly[bm];
-      return {name:d.name,country:d.country,region:d.region,difficulty:d.difficulty,access:d.access,
-        current_strength:d.current_strength,water_temp_c:d.monthly_temp_c[bm],visibility_m:mm.visibility_m,
-        rating:mm.rating,highlight:mm.marine_life,score:s.bestMonth?s.bestMonth.score:0,monthLabel:'best: '+bm};
-    }).filter(function(r){return minT==null||r.water_temp_c==null||r.water_temp_c>=minT;});
-    full.sort(function(a,b){return b.score-a.score||(a.name<b.name?-1:1);});
-    full.forEach(function(r,i){r.rank=i+1;});
-    label='matches — each shown at its best month (pick a period to rank for your dates)';
-  }
+  // No period chosen = the present period ("Now").
+  var per=perVal?Number(perVal):(new Date().getMonth()*2+1);
+  var pinfo=DivingCalendar.PERIODS[(per-1+24)%24];
+  var f={region:val('planRegion'),difficulty:val('planDiff'),water_type:val('planWater'),minTemp:num('planTemp')};
+  var full=DivingCalendar.rankPeriod(DESTS, per, f).filter(function(r){
+    var cur=val('planCur'); return !cur||r.current_strength===cur;
+  });
   if(!full.length){
     document.getElementById('planInfo').textContent='';
-    g.innerHTML='<div class="empty">No destinations match these filters.</div>';
+    g.innerHTML='<div class="empty">No destinations match these filters for '+pinfo.label+'.</div>';
     more.innerHTML=''; return;
   }
-  var cap=perVal?(planExpanded?10:3):(planExpanded?full.length:6);
+  var cap=Math.min(planShown, full.length);
   var shown=full.slice(0,cap);
-  document.getElementById('planInfo').textContent='Top '+shown.length+' of '+full.length+' '+label+'.';
-  g.innerHTML=shown.map(function(r){return plannerCard(r,r.monthLabel);}).join('');
-  if(full.length>shown.length||planExpanded){
-    more.innerHTML = planExpanded
-      ? '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">Show fewer ▲</a>'
-      : '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">See more — all '+full.length+' →</a>';
+  document.getElementById('planInfo').textContent=
+    'Top '+shown.length+' of '+full.length+' open for '+(perVal?'':'now · ')+pinfo.label+'.';
+  g.innerHTML=shown.map(function(r){return plannerCard(r,pinfo.month);}).join('');
+  if(cap<full.length){
+    var nextLabel = planShown<10 ? 'See more — top 10' : 'See more — next '+Math.min(5,full.length-cap);
+    more.innerHTML='<a class="btn ghost" href="#" onclick="planMoreClick();return false;">'+nextLabel+' '+ico('chevron',14)+'</a>';
   } else more.innerHTML='';
   fillDestCovers();
 }
-function togglePlanMore(){ planExpanded=!planExpanded; renderPlanner(); }
+function planMoreClick(){ planShown = planShown<10 ? 10 : planShown+5; renderPlanner(); }
 
 function initMap(){
   if(typeof L==='undefined'){document.getElementById('mapNote').textContent='Map library could not load. Coordinates are still in the data.';return;}
