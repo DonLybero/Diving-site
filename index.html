@@ -346,7 +346,7 @@
     <div class="controls">
       <div class="field"><label>Category</label><select id="gearCat"><option value="">All gear</option></select></div>
     </div>
-    <p class="meta" style="text-align:center">Cheapest verified online price first · prices are sample data structured like real merchant feeds.</p>
+    <p class="meta" style="text-align:center">Cheapest price first, always. <b style="color:#ffce5a">Prices shown are illustrative samples</b> — live retailer feeds are connected at launch; product names are real, prices are not yet.</p>
     <div id="gearGrid" class="grid"></div>
   </section>
 
@@ -782,7 +782,7 @@ function renderHome(){
   var topAug=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:3});
   var bestGear=GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
     return '<div class="feature" onclick="showTab(\'gear\')">'+gearIco(g)+'<h4>'+g.name+'</h4>'+
-      '<div class="score">from $'+lo[1]+'</div><div class="meta">cheapest at '+lo[0]+'</div></div>';}).join('');
+      '<div class="score">from $'+lo[1]+'</div><div class="meta">sample price · cheapest at '+lo[0]+'</div></div>';}).join('');
   var sitePrev=topAug.map(function(r,i){return '<div class="feature photo-card'+(i===0?' featured':'')+'" onclick="openProfile(\''+esc(r.name)+'\')">'+
       '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'">'+badge(r.rating)+'</div>'+
       '<h4>'+r.name+'</h4><div class="meta">'+r.country+'</div>'+
@@ -910,7 +910,7 @@ function renderGear(){
     var rows=offers.map(function(o,i){return '<tr class="'+(i===0?'low':'')+'"><td class="deal">'+o[0]+'</td>'+
       '<td class="price">$'+o[1]+'</td><td style="text-align:right"><a class="btn'+(i===0?'':' ghost')+'" href="#" onclick="demo(\''+o[0]+'\');return false;">Buy at '+o[0]+'</a></td></tr>';}).join('');
     var save=offers[offers.length-1][1]-offers[0][1];
-    return '<div class="card">'+gearIco(g)+'<h3>'+g.name+'</h3><div class="meta">'+g.cat+' · save up to $'+save+' by comparing</div>'+
+    return '<div class="card">'+gearIco(g)+'<h3>'+g.name+'</h3><div class="meta">'+g.cat+' · save up to $'+save+' by comparing · <span style="color:#ffce5a">sample prices</span></div>'+
       '<table class="ptable">'+rows+'</table></div>';
   }).join('');
 }
@@ -935,25 +935,27 @@ function renderReviews(){
     '<p class="meta" style="margin-top:14px">More guides coming: best dive computers, best travel regulators, wetsuit thickness by water temperature.</p></div>';
 }
 
+/* Dive Centres: a factual directory (name + location + destination link).
+   No ratings, review counts or claimed badges are shown — verified-diver
+   reviews launch later; we never publish invented ratings for real businesses. */
 var CENTRES=[
- {name:"Emperor Divers",loc:"Sharm el-Sheikh, Egypt",rating:4.8,reviews:1240,claimed:true},
- {name:"Blue Magic Dive Center",loc:"Raja Ampat, Indonesia",rating:4.9,reviews:560,claimed:false},
- {name:"Scuba Junkie",loc:"Mabul / Sipadan, Malaysia",rating:4.7,reviews:2100,claimed:true},
- {name:"Manta Dive Gili T",loc:"Gili Trawangan, Indonesia",rating:4.6,reviews:1830,claimed:false},
- {name:"Galapagos Sky",loc:"Galápagos, Ecuador",rating:4.9,reviews:410,claimed:true},
- {name:"Dive Friends Bonaire",loc:"Kralendijk, Bonaire",rating:4.8,reviews:980,claimed:false}
+ {name:"Emperor Divers",loc:"Sharm el-Sheikh, Egypt",dest:"Red Sea (Egypt)"},
+ {name:"Blue Magic Dive Center",loc:"Raja Ampat, Indonesia",dest:"Raja Ampat"},
+ {name:"Scuba Junkie",loc:"Mabul / Sipadan, Malaysia",dest:"Sipadan Island"},
+ {name:"Manta Dive Gili T",loc:"Gili Trawangan, Indonesia",dest:"Gili Islands & Lombok"},
+ {name:"Galapagos Sky",loc:"Galápagos, Ecuador",dest:"Galapagos Islands"},
+ {name:"Dive Friends Bonaire",loc:"Kralendijk, Bonaire",dest:"Bonaire"}
 ];
-function stars(r){var f=Math.round(r);var s='';for(var i=0;i<5;i++)s+=(i<f?'★':'☆');return '<span class="stars">'+s+'</span>';}
 function renderCentres(){
   document.getElementById('centresBody').innerHTML=
-    '<div class="sec-head">'+ico('store')+'Dive centres</div><p class="sec-sub">Verified-diver ratings. Own a centre? Claim your listing to reply to reviews and add photos.</p>'+
-    CENTRES.map(function(c){return '<div class="crow"><div><b>'+c.name+'</b> '+
-      '<span class="badge '+(c.claimed?'tag-claimed':'tag-unclaimed')+'">'+(c.claimed?'Claimed':'Unclaimed')+'</span>'+
+    '<div class="sec-head">'+ico('store')+'Dive centres</div>'+
+    '<p class="sec-sub">A directory of operators at our destinations — starting small and growing. '+
+    '<b style="color:var(--ink)">Verified-diver reviews are coming</b>; we will never publish ratings we haven\'t collected ourselves.</p>'+
+    CENTRES.map(function(c){return '<div class="crow"><div><b>'+c.name+'</b>'+
       '<div class="meta">'+c.loc+'</div></div>'+
-      '<div style="text-align:right">'+stars(c.rating)+' <span class="mono">'+c.rating.toFixed(1)+'</span>'+
-      '<div class="meta">'+c.reviews+' reviews</div></div>'+
-      '<div>'+(c.claimed?'<a class="btn ghost" href="#" onclick="demo(\'the centre profile\');return false;">View</a>':
-        '<a class="btn" href="#" onclick="demo(\'the claim form\');return false;">Claim this listing</a>')+'</div></div>';}).join('');
+      '<div><a class="btn ghost" href="#" onclick="openProfile(\''+esc(c.dest)+'\');return false;">Destination guide →</a></div></div>';}).join('')+
+    '<p class="meta" style="margin-top:14px">Run a dive centre at one of our destinations? '+
+    '<a href="#" onclick="demo(\'the listing request form\');return false;">Ask to be listed</a> — listing is free and factual.</p>';
 }
 
 // Prefer data embedded by the single-file build; otherwise fetch from disk.
