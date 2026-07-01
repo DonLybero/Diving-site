@@ -1,1 +1,762 @@
-[{"name":"Apo Island & Dumaguete","country":"Philippines","region":"Southeast Asia","water_type":"tropical","difficulty":"beginner","access":"day-boat","monthly_temp_c":{"Jan":27,"Feb":27,"Mar":28,"Apr":29,"May":29,"Jun":29,"Jul":29,"Aug":29,"Sep":29,"Oct":29,"Nov":28,"Dec":28},"currents":"Mild to moderate at Apo walls; calm sandy muck sites near Dumaguete","best_months":"Mar-Jun","wetsuit":"3mm","signature_species":["green turtle","frogfish","mandarinfish","ghost pipefish","nudibranch"],"highlights":"Sea turtles on Apo's reefs plus world-class muck diving at Dauin","monthly":{"Jan":{"rating":"Good","marine_life":"Turtles, macro critters","conditions":"Slight NE wind, good viz"},"Feb":{"rating":"Good","marine_life":"Turtles, frogfish, nudibranchs","conditions":"Calming seas, clear water"},"Mar":{"rating":"Peak","marine_life":"Turtles, mandarinfish, muck critters","conditions":"Calm, excellent visibility"},"Apr":{"rating":"Peak","marine_life":"Turtles, ghost pipefish, macro","conditions":"Flat seas, best viz"},"May":{"rating":"Peak","marine_life":"Turtles, abundant macro life","conditions":"Calm, warm, very clear"},"Jun":{"rating":"Good","marine_life":"Turtles, muck critters","conditions":"Early rains, still good viz"},"Jul":{"rating":"Shoulder","marine_life":"Turtles, macro life","conditions":"SW monsoon, occasional rain"},"Aug":{"rating":"Shoulder","marine_life":"Turtles, frogfish, nudibranchs","conditions":"Wet season, variable viz"},"Sep":{"rating":"Shoulder","marine_life":"Turtles, muck critters","conditions":"Rainy, plankton can lower viz"},"Oct":{"rating":"Good","marine_life":"Octopus mating season, peak macro","conditions":"Improving conditions, good viz"},"Nov":{"rating":"Good","marine_life":"Turtles, mandarinfish","conditions":"Transitional, generally calm"},"Dec":{"rating":"Good","marine_life":"Turtles, macro critters","conditions":"NE breeze, decent visibility"}}},{"name":"Tubbataha Reefs Natural Park","country":"Philippines","region":"Southeast Asia","water_type":"tropical","difficulty":"advanced","access":"liveaboard","monthly_temp_c":{"Jan":28,"Feb":28,"Mar":28,"Apr":29,"May":30,"Jun":30,"Jul":29,"Aug":29,"Sep":29,"Oct":29,"Nov":29,"Dec":28},"currents":"Strong oceanic currents; drift diving common on the walls","best_months":"Apr-Jun","wetsuit":"3mm","signature_species":["grey reef shark","manta ray","whitetip shark","whale shark","schooling jacks"],"highlights":"UNESCO atoll with sharks, mantas and pristine walls, liveaboard-only short season","monthly":{"Jan":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, rough NE monsoon seas"},"Feb":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed outside dive season"},"Mar":{"rating":"Good","marine_life":"Sharks, mantas, schooling fish","conditions":"Season opens mid-March, calming"},"Apr":{"rating":"Peak","marine_life":"Grey reef sharks, mantas, jacks","conditions":"Calm seas, superb visibility"},"May":{"rating":"Peak","marine_life":"Sharks, mantas, whale sharks","conditions":"Flat seas, 30m+ visibility"},"Jun":{"rating":"Good","marine_life":"Sharks, mantas, schooling fish","conditions":"Season ends mid-June, calm"},"Jul":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, SW monsoon"},"Aug":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, rough seas"},"Sep":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed outside dive season"},"Oct":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed outside dive season"},"Nov":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, NE monsoon begins"},"Dec":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, rough seas"}}},{"name":"Malapascua Island","country":"Philippines","region":"Southeast Asia","water_type":"tropical","difficulty":"intermediate","access":"day-boat","monthly_temp_c":{"Jan":27,"Feb":27,"Mar":28,"Apr":29,"May":29,"Jun":29,"Jul":29,"Aug":29,"Sep":29,"Oct":29,"Nov":28,"Dec":28},"currents":"Moderate currents at Monad Shoal; some sites can be strong","best_months":"Oct-May","wetsuit":"3mm","signature_species":["thresher shark","manta ray","devil ray","seahorse","mandarinfish"],"highlights":"Year-round dawn thresher sharks at Monad Shoal plus rich macro life","monthly":{"Jan":{"rating":"Good","marine_life":"Thresher sharks at dawn, macro","conditions":"NE wind, decent visibility"},"Feb":{"rating":"Good","marine_life":"Threshers, seahorses, mandarinfish","conditions":"Calming seas, good viz"},"Mar":{"rating":"Peak","marine_life":"Threshers, mantas, macro life","conditions":"Calm, clear water"},"Apr":{"rating":"Peak","marine_life":"Threshers, mantas, devil rays","conditions":"Flat seas, excellent visibility"},"May":{"rating":"Peak","marine_life":"Threshers, mantas at dawn","conditions":"Calm, warm, very clear"},"Jun":{"rating":"Good","marine_life":"Threshers, macro critters","conditions":"Early rains, still good viz"},"Jul":{"rating":"Shoulder","marine_life":"Threshers year-round, macro","conditions":"SW monsoon, variable seas"},"Aug":{"rating":"Shoulder","marine_life":"Threshers at dawn, seahorses","conditions":"Wet season, occasional swell"},"Sep":{"rating":"Shoulder","marine_life":"Threshers, mandarinfish","conditions":"Rainy, viz can drop"},"Oct":{"rating":"Good","marine_life":"Threshers, improving macro","conditions":"Conditions improving, good viz"},"Nov":{"rating":"Good","marine_life":"Threshers at dawn, macro","conditions":"Transitional, generally calm"},"Dec":{"rating":"Good","marine_life":"Threshers, seahorses","conditions":"NE breeze, decent visibility"}}},{"name":"Bunaken National Marine Park","country":"Indonesia","region":"Southeast Asia","water_type":"tropical","difficulty":"intermediate","access":"day-boat","monthly_temp_c":{"Jan":28,"Feb":28,"Mar":29,"Apr":29,"May":29,"Jun":29,"Jul":28,"Aug":28,"Sep":28,"Oct":29,"Nov":29,"Dec":28},"currents":"Mild to moderate wall currents; occasional drift along drop-offs","best_months":"Mar-Oct","wetsuit":"3mm","signature_species":["green turtle","hawksbill turtle","reef fish","pygmy seahorse","barracuda"],"highlights":"Sheer Sulawesi walls teeming with turtles and reef fish, superb visibility","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Turtles, reef fish","conditions":"Rainy season, variable viz"},"Feb":{"rating":"Shoulder","marine_life":"Turtles, wall life","conditions":"Wet season, occasional rain"},"Mar":{"rating":"Good","marine_life":"Turtles, reef fish, macro","conditions":"Improving, good visibility"},"Apr":{"rating":"Peak","marine_life":"Turtles, barracuda, wall life","conditions":"Calm seas, 30m+ visibility"},"May":{"rating":"Peak","marine_life":"Turtles, reef fish, pygmy seahorse","conditions":"Dry season, excellent viz"},"Jun":{"rating":"Peak","marine_life":"Turtles, sharks, wall life","conditions":"Calm, very clear water"},"Jul":{"rating":"Peak","marine_life":"Turtles, barracuda, reef fish","conditions":"Dry season, top visibility"},"Aug":{"rating":"Peak","marine_life":"Turtles, wall life, macro","conditions":"Calm, excellent visibility"},"Sep":{"rating":"Peak","marine_life":"Turtles, reef fish, sharks","conditions":"Dry, clear, calm seas"},"Oct":{"rating":"Good","marine_life":"Turtles, wall life","conditions":"Good viz, transitional"},"Nov":{"rating":"Shoulder","marine_life":"Turtles, reef fish","conditions":"Rains begin, variable viz"},"Dec":{"rating":"Shoulder","marine_life":"Turtles, wall life","conditions":"Wet season, occasional rain"}}},{"name":"Gili Islands & Lombok","country":"Indonesia","region":"Southeast Asia","water_type":"tropical","difficulty":"beginner","access":"day-boat","monthly_temp_c":{"Jan":29,"Feb":29,"Mar":29,"Apr":29,"May":28,"Jun":28,"Jul":27,"Aug":27,"Sep":27,"Oct":28,"Nov":29,"Dec":29},"currents":"Mild on most sites; can be moderate to strong on channel and drift sites","best_months":"May-Sep","wetsuit":"3mm","signature_species":["green turtle","hawksbill turtle","whitetip reef shark","cuttlefish","seahorse"],"highlights":"Reliable year-round turtles over easy reefs, ideal for beginners","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Turtles, reef sharks","conditions":"Wet season, variable viz"},"Feb":{"rating":"Shoulder","marine_life":"Turtles, reef fish","conditions":"Rainy, occasional plankton"},"Mar":{"rating":"Good","marine_life":"Turtles, cuttlefish","conditions":"Improving, good visibility"},"Apr":{"rating":"Good","marine_life":"Turtles, reef sharks","conditions":"Calming seas, clear water"},"May":{"rating":"Peak","marine_life":"Turtles, reef sharks, macro","conditions":"Dry season, excellent viz"},"Jun":{"rating":"Peak","marine_life":"Turtles, whitetips, reef fish","conditions":"Calm, clear, 25m+ visibility"},"Jul":{"rating":"Peak","marine_life":"Turtles, reef sharks","conditions":"Dry, cooler, top visibility"},"Aug":{"rating":"Peak","marine_life":"Turtles, cuttlefish, reef fish","conditions":"Calm, excellent visibility"},"Sep":{"rating":"Peak","marine_life":"Turtles, reef sharks","conditions":"Dry season, very clear"},"Oct":{"rating":"Good","marine_life":"Turtles, reef fish","conditions":"Good viz, warming water"},"Nov":{"rating":"Shoulder","marine_life":"Turtles, reef sharks","conditions":"Rains begin, variable viz"},"Dec":{"rating":"Shoulder","marine_life":"Turtles, reef fish","conditions":"Wet season, occasional rain"}}},{"name":"Similan Islands","country":"Thailand","region":"Southeast Asia","water_type":"tropical","difficulty":"intermediate","access":"liveaboard","monthly_temp_c":{"Jan":28,"Feb":28,"Mar":29,"Apr":30,"May":29,"Jun":29,"Jul":29,"Aug":29,"Sep":29,"Oct":29,"Nov":28,"Dec":28},"currents":"Mild to moderate; can be strong on exposed pinnacles and channels","best_months":"Feb-Apr","wetsuit":"3mm","signature_species":["manta ray","whale shark","leopard shark","reef fish","octopus"],"highlights":"Granite boulders, mantas and whale sharks in the Andaman Sea, liveaboard season only","monthly":{"Jan":{"rating":"Good","marine_life":"Leopard sharks, reef fish","conditions":"Open season, good visibility"},"Feb":{"rating":"Peak","marine_life":"Mantas, whale sharks, leopard sharks","conditions":"Calm, excellent visibility"},"Mar":{"rating":"Peak","marine_life":"Mantas, whale sharks, reef fish","conditions":"Flat seas, 30m+ visibility"},"Apr":{"rating":"Peak","marine_life":"Mantas, whale sharks, leopard sharks","conditions":"Warm, calm, top visibility"},"May":{"rating":"Shoulder","marine_life":"Mantas, reef fish","conditions":"Season closing mid-May"},"Jun":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, SW monsoon"},"Jul":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, rough seas"},"Aug":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, monsoon swell"},"Sep":{"rating":"Closed","marine_life":"Park closed to diving","conditions":"Closed, rough seas"},"Oct":{"rating":"Shoulder","marine_life":"Leopard sharks, reef fish","conditions":"Reopens mid-October, improving"},"Nov":{"rating":"Good","marine_life":"Reef fish, leopard sharks","conditions":"Settling seas, good viz"},"Dec":{"rating":"Good","marine_life":"Mantas, reef fish","conditions":"Calm, good visibility"}}},{"name":"Cenotes of Yucatán Peninsula","country":"Mexico","region":"North America","water_type":"freshwater","difficulty":"advanced","access":"shore","monthly_temp_c":{"Jan":25,"Feb":25,"Mar":25,"Apr":25,"May":25,"Jun":25,"Jul":25,"Aug":25,"Sep":25,"Oct":25,"Nov":25,"Dec":25},"currents":"Virtually none; still freshwater with haloclines in caverns and caves","best_months":"Nov-Mar","wetsuit":"5mm","signature_species":["stalactites","halocline","light beams","catfish","blind cave fish"],"highlights":"Crystal-clear freshwater caverns with stalactites, haloclines and dramatic light beams","monthly":{"Jan":{"rating":"Peak","marine_life":"Limited fish; geology, halocline","conditions":"Crystal clear, dry season"},"Feb":{"rating":"Peak","marine_life":"Geological; light beams, halocline","conditions":"Excellent clarity, dry weather"},"Mar":{"rating":"Peak","marine_life":"Light beams, stalactites","conditions":"Clear water, peak light beams"},"Apr":{"rating":"Good","marine_life":"Halocline, geology","conditions":"Clear, warming surface air"},"May":{"rating":"Good","marine_life":"Light beams, formations","conditions":"Clear water, hotter, busier"},"Jun":{"rating":"Shoulder","marine_life":"Geological; halocline","conditions":"Rains begin, still clear water"},"Jul":{"rating":"Shoulder","marine_life":"Light beams, stalactites","conditions":"Rainy season, water stays clear"},"Aug":{"rating":"Shoulder","marine_life":"Halocline, formations","conditions":"Wet season, occasional sediment"},"Sep":{"rating":"Low","marine_life":"Geological; light beams","conditions":"Peak rains, possible tannins"},"Oct":{"rating":"Shoulder","marine_life":"Halocline, stalactites","conditions":"Rains easing, clarity returning"},"Nov":{"rating":"Peak","marine_life":"Light beams, formations","conditions":"Dry season, crystal clear"},"Dec":{"rating":"Peak","marine_life":"Geological; halocline, beams","conditions":"Clear water, ideal conditions"}}},{"name":"Chagos Archipelago / BIOT","country":"British Indian Ocean Territory","region":"Indian Ocean","water_type":"tropical","difficulty":"advanced","access":"liveaboard","monthly_temp_c":{"Jan":29,"Feb":29,"Mar":30,"Apr":30,"May":30,"Jun":29,"Jul":28,"Aug":28,"Sep":28,"Oct":29,"Nov":29,"Dec":29},"currents":"Strong oceanic currents on exposed atolls; drift diving common","best_months":"Mar-May","wetsuit":"3mm","signature_species":["grey reef shark","silvertip shark","manta ray","green turtle","tuna"],"highlights":"Ultra-remote pristine MPA atolls, permit/expedition-only, abundant sharks and untouched coral","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Sharks, turtles, reef fish","conditions":"NW monsoon, variable seas"},"Feb":{"rating":"Good","marine_life":"Sharks, mantas, pristine coral","conditions":"Calming seas, good visibility"},"Mar":{"rating":"Peak","marine_life":"Grey reef sharks, mantas, turtles","conditions":"Calm seas, superb visibility"},"Apr":{"rating":"Peak","marine_life":"Sharks, mantas, tuna, turtles","conditions":"Flat seas, 30m+ visibility"},"May":{"rating":"Peak","marine_life":"Silvertips, mantas, pristine reef","conditions":"Calm, very clear water"},"Jun":{"rating":"Good","marine_life":"Sharks, turtles, reef fish","conditions":"SE trades pick up"},"Jul":{"rating":"Shoulder","marine_life":"Sharks, reef fish","conditions":"SE monsoon, windier seas"},"Aug":{"rating":"Shoulder","marine_life":"Sharks, turtles","conditions":"Windy, choppier conditions"},"Sep":{"rating":"Shoulder","marine_life":"Sharks, reef fish","conditions":"SE trades, variable seas"},"Oct":{"rating":"Good","marine_life":"Sharks, mantas, turtles","conditions":"Settling seas, good visibility"},"Nov":{"rating":"Good","marine_life":"Sharks, pristine coral","conditions":"Calm transition, clear water"},"Dec":{"rating":"Shoulder","marine_life":"Sharks, turtles, reef fish","conditions":"NW monsoon begins, variable"}}}]
+[
+ {
+  "name": "Apo Island & Dumaguete",
+  "country": "Philippines",
+  "region": "Southeast Asia",
+  "water_type": "tropical",
+  "difficulty": "beginner",
+  "access": "day-boat",
+  "monthly_temp_c": {
+   "Jan": 27,
+   "Feb": 27,
+   "Mar": 28,
+   "Apr": 29,
+   "May": 29,
+   "Jun": 29,
+   "Jul": 29,
+   "Aug": 29,
+   "Sep": 29,
+   "Oct": 29,
+   "Nov": 28,
+   "Dec": 28
+  },
+  "currents": "Mild to moderate at Apo walls; calm sandy muck sites near Dumaguete",
+  "best_months": "Mar-Jun",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "green turtle",
+   "frogfish",
+   "mandarinfish",
+   "ghost pipefish",
+   "nudibranch"
+  ],
+  "highlights": "Sea turtles on Apo's reefs plus world-class muck diving at Dauin",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Turtles, macro critters",
+    "conditions": "Slight NE wind, good viz"
+   },
+   "Feb": {
+    "rating": "Good",
+    "marine_life": "Turtles, frogfish, nudibranchs",
+    "conditions": "Calming seas, clear water"
+   },
+   "Mar": {
+    "rating": "Peak",
+    "marine_life": "Turtles, mandarinfish, muck critters",
+    "conditions": "Calm, excellent visibility"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Turtles, ghost pipefish, macro",
+    "conditions": "Flat seas, best viz"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Turtles, abundant macro life",
+    "conditions": "Calm, warm, very clear"
+   },
+   "Jun": {
+    "rating": "Good",
+    "marine_life": "Turtles, muck critters",
+    "conditions": "Early rains, still good viz"
+   },
+   "Jul": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, macro life",
+    "conditions": "SW monsoon, occasional rain"
+   },
+   "Aug": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, frogfish, nudibranchs",
+    "conditions": "Wet season, variable viz"
+   },
+   "Sep": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, muck critters",
+    "conditions": "Rainy, plankton can lower viz"
+   },
+   "Oct": {
+    "rating": "Good",
+    "marine_life": "Octopus mating season, peak macro",
+    "conditions": "Improving conditions, good viz"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Turtles, mandarinfish",
+    "conditions": "Transitional, generally calm"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Turtles, macro critters",
+    "conditions": "NE breeze, decent visibility"
+   }
+  }
+ },
+ {
+  "name": "Tubbataha Reefs Natural Park",
+  "country": "Philippines",
+  "region": "Southeast Asia",
+  "water_type": "tropical",
+  "difficulty": "advanced",
+  "access": "liveaboard",
+  "monthly_temp_c": {
+   "Jan": 28,
+   "Feb": 28,
+   "Mar": 28,
+   "Apr": 29,
+   "May": 30,
+   "Jun": 30,
+   "Jul": 29,
+   "Aug": 29,
+   "Sep": 29,
+   "Oct": 29,
+   "Nov": 29,
+   "Dec": 28
+  },
+  "currents": "Strong oceanic currents; drift diving common on the walls",
+  "best_months": "Apr-Jun",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "grey reef shark",
+   "manta ray",
+   "whitetip shark",
+   "whale shark",
+   "schooling jacks"
+  ],
+  "highlights": "UNESCO atoll with sharks, mantas and pristine walls, liveaboard-only short season",
+  "monthly": {
+   "Jan": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, rough NE monsoon seas"
+   },
+   "Feb": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed outside dive season"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Sharks, mantas, schooling fish",
+    "conditions": "Season opens mid-March, calming"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Grey reef sharks, mantas, jacks",
+    "conditions": "Calm seas, superb visibility"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Sharks, mantas, whale sharks",
+    "conditions": "Flat seas, 30m+ visibility"
+   },
+   "Jun": {
+    "rating": "Good",
+    "marine_life": "Sharks, mantas, schooling fish",
+    "conditions": "Season ends mid-June, calm"
+   },
+   "Jul": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, SW monsoon"
+   },
+   "Aug": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, rough seas"
+   },
+   "Sep": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed outside dive season"
+   },
+   "Oct": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed outside dive season"
+   },
+   "Nov": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, NE monsoon begins"
+   },
+   "Dec": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, rough seas"
+   }
+  }
+ },
+ {
+  "name": "Malapascua Island",
+  "country": "Philippines",
+  "region": "Southeast Asia",
+  "water_type": "tropical",
+  "difficulty": "intermediate",
+  "access": "day-boat",
+  "monthly_temp_c": {
+   "Jan": 27,
+   "Feb": 27,
+   "Mar": 28,
+   "Apr": 29,
+   "May": 29,
+   "Jun": 29,
+   "Jul": 29,
+   "Aug": 29,
+   "Sep": 29,
+   "Oct": 29,
+   "Nov": 28,
+   "Dec": 28
+  },
+  "currents": "Gentle at the dawn shoal dives; currents pick up around full moon",
+  "best_months": "Oct-May",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "thresher shark",
+   "manta ray",
+   "devil ray",
+   "seahorse",
+   "mandarinfish"
+  ],
+  "highlights": "Year-round dawn thresher sharks at Kimud Shoal (formerly Monad, now visited by tiger sharks), plus rich macro",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Threshers at dawn (Kimud Shoal), macro",
+    "conditions": "NE wind, decent visibility"
+   },
+   "Feb": {
+    "rating": "Good",
+    "marine_life": "Threshers, seahorses, mandarinfish",
+    "conditions": "Calming seas, good viz"
+   },
+   "Mar": {
+    "rating": "Peak",
+    "marine_life": "Threshers, mantas, macro life",
+    "conditions": "Calm, clear water"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Threshers, mantas, devil rays",
+    "conditions": "Flat seas, excellent visibility"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Threshers, mantas at dawn",
+    "conditions": "Calm, warm, very clear"
+   },
+   "Jun": {
+    "rating": "Good",
+    "marine_life": "Threshers, macro critters",
+    "conditions": "Early rains, still good viz"
+   },
+   "Jul": {
+    "rating": "Shoulder",
+    "marine_life": "Threshers year-round, macro",
+    "conditions": "SW monsoon, variable seas"
+   },
+   "Aug": {
+    "rating": "Shoulder",
+    "marine_life": "Threshers at dawn, seahorses",
+    "conditions": "Wet season, occasional swell"
+   },
+   "Sep": {
+    "rating": "Shoulder",
+    "marine_life": "Threshers, mandarinfish",
+    "conditions": "Rainy, viz can drop"
+   },
+   "Oct": {
+    "rating": "Good",
+    "marine_life": "Threshers, improving macro",
+    "conditions": "Conditions improving, good viz"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Threshers at dawn, macro",
+    "conditions": "Transitional, generally calm"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Threshers, seahorses",
+    "conditions": "NE breeze, decent visibility"
+   }
+  }
+ },
+ {
+  "name": "Bunaken National Marine Park",
+  "country": "Indonesia",
+  "region": "Southeast Asia",
+  "water_type": "tropical",
+  "difficulty": "intermediate",
+  "access": "day-boat",
+  "monthly_temp_c": {
+   "Jan": 28,
+   "Feb": 28,
+   "Mar": 29,
+   "Apr": 29,
+   "May": 29,
+   "Jun": 29,
+   "Jul": 28,
+   "Aug": 28,
+   "Sep": 28,
+   "Oct": 29,
+   "Nov": 29,
+   "Dec": 28
+  },
+  "currents": "Mild to moderate wall currents; occasional drift along drop-offs",
+  "best_months": "Mar-Oct",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "green turtle",
+   "hawksbill turtle",
+   "reef fish",
+   "pygmy seahorse",
+   "barracuda"
+  ],
+  "highlights": "Sheer Sulawesi walls teeming with turtles and reef fish, superb visibility",
+  "monthly": {
+   "Jan": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, reef fish",
+    "conditions": "Rainy season, variable viz"
+   },
+   "Feb": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, wall life",
+    "conditions": "Wet season, occasional rain"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Turtles, reef fish, macro",
+    "conditions": "Improving, good visibility"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Turtles, barracuda, wall life",
+    "conditions": "Calm seas, 30m+ visibility"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Turtles, reef fish, pygmy seahorse",
+    "conditions": "Dry season, excellent viz"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Turtles, sharks, wall life",
+    "conditions": "Calm, very clear water"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Turtles, barracuda, reef fish",
+    "conditions": "Dry season, top visibility"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Turtles, wall life, macro",
+    "conditions": "Calm, excellent visibility"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Turtles, reef fish, sharks",
+    "conditions": "Dry, clear, calm seas"
+   },
+   "Oct": {
+    "rating": "Good",
+    "marine_life": "Turtles, wall life",
+    "conditions": "Good viz, transitional"
+   },
+   "Nov": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, reef fish",
+    "conditions": "Rains begin, variable viz"
+   },
+   "Dec": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, wall life",
+    "conditions": "Wet season, occasional rain"
+   }
+  }
+ },
+ {
+  "name": "Gili Islands & Lombok",
+  "country": "Indonesia",
+  "region": "Southeast Asia",
+  "water_type": "tropical",
+  "difficulty": "beginner",
+  "access": "day-boat",
+  "monthly_temp_c": {
+   "Jan": 29,
+   "Feb": 29,
+   "Mar": 29,
+   "Apr": 29,
+   "May": 28,
+   "Jun": 28,
+   "Jul": 27,
+   "Aug": 27,
+   "Sep": 27,
+   "Oct": 28,
+   "Nov": 29,
+   "Dec": 29
+  },
+  "currents": "Mild on most sites; can be moderate to strong on channel and drift sites",
+  "best_months": "May-Sep",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "green turtle",
+   "hawksbill turtle",
+   "whitetip reef shark",
+   "cuttlefish",
+   "seahorse"
+  ],
+  "highlights": "Reliable year-round turtles over easy reefs, ideal for beginners",
+  "monthly": {
+   "Jan": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, reef sharks",
+    "conditions": "Wet season, variable viz"
+   },
+   "Feb": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, reef fish",
+    "conditions": "Rainy, occasional plankton"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Turtles, cuttlefish",
+    "conditions": "Improving, good visibility"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Turtles, reef sharks",
+    "conditions": "Calming seas, clear water"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Turtles, reef sharks, macro",
+    "conditions": "Dry season, excellent viz"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Turtles, whitetips, reef fish",
+    "conditions": "Calm, clear, 25m+ visibility"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Turtles, reef sharks",
+    "conditions": "Dry, cooler, top visibility"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Turtles, cuttlefish, reef fish",
+    "conditions": "Calm, excellent visibility"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Turtles, reef sharks",
+    "conditions": "Dry season, very clear"
+   },
+   "Oct": {
+    "rating": "Good",
+    "marine_life": "Turtles, reef fish",
+    "conditions": "Good viz, warming water"
+   },
+   "Nov": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, reef sharks",
+    "conditions": "Rains begin, variable viz"
+   },
+   "Dec": {
+    "rating": "Shoulder",
+    "marine_life": "Turtles, reef fish",
+    "conditions": "Wet season, occasional rain"
+   }
+  }
+ },
+ {
+  "name": "Similan Islands",
+  "country": "Thailand",
+  "region": "Southeast Asia",
+  "water_type": "tropical",
+  "difficulty": "intermediate",
+  "access": "liveaboard",
+  "monthly_temp_c": {
+   "Jan": 28,
+   "Feb": 28,
+   "Mar": 29,
+   "Apr": 30,
+   "May": 29,
+   "Jun": 29,
+   "Jul": 29,
+   "Aug": 29,
+   "Sep": 29,
+   "Oct": 29,
+   "Nov": 28,
+   "Dec": 28
+  },
+  "currents": "Mild to moderate; can be strong on exposed pinnacles and channels",
+  "best_months": "Feb-Apr",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "manta ray",
+   "whale shark",
+   "leopard shark",
+   "reef fish",
+   "octopus"
+  ],
+  "highlights": "Granite boulders, mantas and whale sharks in the Andaman Sea, liveaboard season only",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Leopard sharks, reef fish",
+    "conditions": "Open season, good visibility"
+   },
+   "Feb": {
+    "rating": "Peak",
+    "marine_life": "Mantas, whale sharks, leopard sharks",
+    "conditions": "Calm, excellent visibility"
+   },
+   "Mar": {
+    "rating": "Peak",
+    "marine_life": "Mantas, whale sharks, reef fish",
+    "conditions": "Flat seas, 30m+ visibility"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Mantas, whale sharks, leopard sharks",
+    "conditions": "Warm, calm, top visibility"
+   },
+   "May": {
+    "rating": "Shoulder",
+    "marine_life": "Mantas, reef fish",
+    "conditions": "Season closing mid-May"
+   },
+   "Jun": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, SW monsoon"
+   },
+   "Jul": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, rough seas"
+   },
+   "Aug": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, monsoon swell"
+   },
+   "Sep": {
+    "rating": "Closed",
+    "marine_life": "Park closed to diving",
+    "conditions": "Closed, rough seas"
+   },
+   "Oct": {
+    "rating": "Shoulder",
+    "marine_life": "Leopard sharks, reef fish",
+    "conditions": "Reopens mid-October, improving"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Reef fish, leopard sharks",
+    "conditions": "Settling seas, good viz"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Mantas, reef fish",
+    "conditions": "Calm, good visibility"
+   }
+  }
+ },
+ {
+  "name": "Cenotes of Yucatán Peninsula",
+  "country": "Mexico",
+  "region": "North America",
+  "water_type": "freshwater",
+  "difficulty": "advanced",
+  "access": "shore",
+  "monthly_temp_c": {
+   "Jan": 25,
+   "Feb": 25,
+   "Mar": 25,
+   "Apr": 25,
+   "May": 25,
+   "Jun": 25,
+   "Jul": 25,
+   "Aug": 25,
+   "Sep": 25,
+   "Oct": 25,
+   "Nov": 25,
+   "Dec": 25
+  },
+  "currents": "Virtually none; still freshwater with haloclines in caverns and caves",
+  "best_months": "Nov-Mar",
+  "wetsuit": "5mm",
+  "signature_species": [
+   "stalactites",
+   "halocline",
+   "light beams",
+   "catfish",
+   "blind cave fish"
+  ],
+  "highlights": "Crystal-clear freshwater caverns with stalactites, haloclines and dramatic light beams",
+  "monthly": {
+   "Jan": {
+    "rating": "Peak",
+    "marine_life": "Limited fish; geology, halocline",
+    "conditions": "Crystal clear, dry season"
+   },
+   "Feb": {
+    "rating": "Peak",
+    "marine_life": "Geological; light beams, halocline",
+    "conditions": "Excellent clarity, dry weather"
+   },
+   "Mar": {
+    "rating": "Peak",
+    "marine_life": "Light beams, stalactites",
+    "conditions": "Clear water, peak light beams"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Halocline, geology",
+    "conditions": "Clear, warming surface air"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Light beams, formations",
+    "conditions": "Clear water, hotter, busier"
+   },
+   "Jun": {
+    "rating": "Shoulder",
+    "marine_life": "Geological; halocline",
+    "conditions": "Rains begin, still clear water"
+   },
+   "Jul": {
+    "rating": "Shoulder",
+    "marine_life": "Light beams, stalactites",
+    "conditions": "Rainy season, water stays clear"
+   },
+   "Aug": {
+    "rating": "Shoulder",
+    "marine_life": "Halocline, formations",
+    "conditions": "Wet season, occasional sediment"
+   },
+   "Sep": {
+    "rating": "Low",
+    "marine_life": "Geological; light beams",
+    "conditions": "Peak rains, possible tannins"
+   },
+   "Oct": {
+    "rating": "Shoulder",
+    "marine_life": "Halocline, stalactites",
+    "conditions": "Rains easing, clarity returning"
+   },
+   "Nov": {
+    "rating": "Peak",
+    "marine_life": "Light beams, formations",
+    "conditions": "Dry season, crystal clear"
+   },
+   "Dec": {
+    "rating": "Peak",
+    "marine_life": "Geological; halocline, beams",
+    "conditions": "Clear water, ideal conditions"
+   }
+  }
+ },
+ {
+  "name": "Chagos Archipelago / BIOT",
+  "country": "British Indian Ocean Territory",
+  "region": "Indian Ocean",
+  "water_type": "tropical",
+  "difficulty": "advanced",
+  "access": "suspended (no permits issued)",
+  "monthly_temp_c": {
+   "Jan": 29,
+   "Feb": 29,
+   "Mar": 30,
+   "Apr": 30,
+   "May": 30,
+   "Jun": 29,
+   "Jul": 28,
+   "Aug": 28,
+   "Sep": 28,
+   "Oct": 29,
+   "Nov": 29,
+   "Dec": 29
+  },
+  "currents": "Strong oceanic currents on exposed atolls; drift diving common",
+  "best_months": "Mar-May",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "grey reef shark",
+   "silvertip shark",
+   "manta ray",
+   "green turtle",
+   "tuna"
+  ],
+  "highlights": "Ultra-remote pristine MPA atolls - access currently SUSPENDED (no new permits since April 2026 during the Mauritius sovereignty transition)",
+  "monthly": {
+   "Jan": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Feb": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Mar": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Apr": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "May": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Jun": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Jul": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Aug": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Sep": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Oct": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Nov": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   },
+   "Dec": {
+    "rating": "Closed",
+    "marine_life": "Pristine sharks/reefs - but no visitor access",
+    "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)"
+   }
+  }
+ }
+]

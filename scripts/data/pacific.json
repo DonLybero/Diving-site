@@ -1,1 +1,770 @@
-[{"name":"French Polynesia","country":"French Polynesia","region":"South Pacific","water_type":"tropical","difficulty":"advanced","access":"resort + liveaboard","monthly_temp_c":{"Jan":29,"Feb":29,"Mar":29,"Apr":29,"May":28,"Jun":27,"Jul":27,"Aug":26,"Sep":26,"Oct":27,"Nov":28,"Dec":28},"currents":"Strong drift in Tiputa (Rangiroa) and Fakarava passes, tide-dependent","best_months":"Jun-Oct","wetsuit":"3mm","signature_species":["grey reef shark","hammerhead shark","manta ray","humpback whale","dolphin","schooling barracuda"],"highlights":"Atoll passes with grey-reef shark walls and big-fish drifts","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Reef sharks, manta rays","conditions":"Wet season, viz variable"},"Feb":{"rating":"Shoulder","marine_life":"Reef sharks, mantas","conditions":"Wet/cyclone season, 20-30m viz"},"Mar":{"rating":"Shoulder","marine_life":"Reef sharks, mantas","conditions":"End wet season, viz improving"},"Apr":{"rating":"Good","marine_life":"Grey reef sharks, mantas","conditions":"Transition, viz good"},"May":{"rating":"Good","marine_life":"Grey reef sharks build","conditions":"Dry season begins, clear water"},"Jun":{"rating":"Peak","marine_life":"Grouper spawn, shark wall builds","conditions":"Dry, excellent 30-40m viz"},"Jul":{"rating":"Peak","marine_life":"Wall of sharks, humpbacks arrive","conditions":"Dry, peak viz"},"Aug":{"rating":"Peak","marine_life":"Shark wall, humpback whales","conditions":"Dry, cool, clear"},"Sep":{"rating":"Peak","marine_life":"Sharks, humpback whales","conditions":"Dry, 30-40m viz"},"Oct":{"rating":"Peak","marine_life":"Sharks, late humpbacks","conditions":"Dry, excellent viz"},"Nov":{"rating":"Good","marine_life":"Reef sharks, mantas","conditions":"Warming, viz good"},"Dec":{"rating":"Shoulder","marine_life":"Reef sharks, mantas","conditions":"Wet season onset"}}},{"name":"Moorea","country":"French Polynesia","region":"South Pacific","water_type":"tropical","difficulty":"intermediate","access":"resort + day boat","monthly_temp_c":{"Jan":29,"Feb":29,"Mar":29,"Apr":29,"May":28,"Jun":27,"Jul":27,"Aug":26,"Sep":26,"Oct":27,"Nov":28,"Dec":28},"currents":"Generally mild lagoon and outer-reef currents, some channel flow","best_months":"Jul-Oct","wetsuit":"3mm","signature_species":["lemon shark","blacktip reef shark","grey reef shark","humpback whale","eagle ray","sea turtle"],"highlights":"Lemon-shark dives and seasonal humpback whale encounters","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Lemon, blacktip sharks","conditions":"Wet season, viz variable"},"Feb":{"rating":"Shoulder","marine_life":"Lemon sharks, rays","conditions":"Wet/cyclone season"},"Mar":{"rating":"Shoulder","marine_life":"Lemon sharks, turtles","conditions":"End wet season"},"Apr":{"rating":"Good","marine_life":"Lemon sharks, eagle rays","conditions":"Transition, viz good"},"May":{"rating":"Good","marine_life":"Reef sharks, rays","conditions":"Dry begins, clearer water"},"Jun":{"rating":"Good","marine_life":"Reef sharks, turtles","conditions":"Dry, good viz"},"Jul":{"rating":"Peak","marine_life":"Humpback whales arrive","conditions":"Dry, clear, calm"},"Aug":{"rating":"Peak","marine_life":"Humpback whales, sharks","conditions":"Dry, peak viz"},"Sep":{"rating":"Peak","marine_life":"Humpback whales peak","conditions":"Dry, excellent viz"},"Oct":{"rating":"Peak","marine_life":"Late humpbacks, sharks","conditions":"Dry, clear water"},"Nov":{"rating":"Good","marine_life":"Lemon sharks, rays","conditions":"Warming, viz good"},"Dec":{"rating":"Shoulder","marine_life":"Lemon sharks, blacktips","conditions":"Wet season onset"}}},{"name":"Fiji","country":"Fiji","region":"South Pacific","water_type":"tropical","difficulty":"intermediate","access":"resort + liveaboard","monthly_temp_c":{"Jan":29,"Feb":29,"Mar":29,"Apr":28,"May":27,"Jun":26,"Jul":25,"Aug":25,"Sep":26,"Oct":27,"Nov":28,"Dec":29},"currents":"Strong tidal currents in Somosomo Strait feed soft corals","best_months":"Jul-Oct","wetsuit":"3mm","signature_species":["soft corals","bull shark","grey reef shark","tiger shark","manta ray","reef fish schools"],"highlights":"Soft-coral capital with Beqa Lagoon bull-shark dives","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Bull sharks, soft corals","conditions":"Wet/cyclone season, viz lower"},"Feb":{"rating":"Shoulder","marine_life":"Bull sharks, reef life","conditions":"Wet/cyclone season"},"Mar":{"rating":"Shoulder","marine_life":"Bull sharks, corals","conditions":"End wet season"},"Apr":{"rating":"Good","marine_life":"Sharks, soft corals","conditions":"Transition, viz improving"},"May":{"rating":"Good","marine_life":"Mantas arrive (Yasawa)","conditions":"Dry begins, clear"},"Jun":{"rating":"Good","marine_life":"Manta rays, sharks","conditions":"Dry, good viz"},"Jul":{"rating":"Peak","marine_life":"Manta rays, bull sharks","conditions":"Dry, 30m+ viz"},"Aug":{"rating":"Peak","marine_life":"Mantas, sharks, corals","conditions":"Dry, peak viz"},"Sep":{"rating":"Peak","marine_life":"Mantas, sharks","conditions":"Dry, excellent viz"},"Oct":{"rating":"Peak","marine_life":"Late mantas, sharks","conditions":"Dry, clear water"},"Nov":{"rating":"Good","marine_life":"Bull sharks, corals","conditions":"Warming, viz good"},"Dec":{"rating":"Shoulder","marine_life":"Bull sharks, reef life","conditions":"Wet season onset"}}},{"name":"Maui & Kona","country":"USA","region":"Hawaii","water_type":"tropical","difficulty":"beginner","access":"resort + day boat","monthly_temp_c":{"Jan":24,"Feb":24,"Mar":24,"Apr":25,"May":25,"Jun":26,"Jul":27,"Aug":27,"Sep":27,"Oct":27,"Nov":26,"Dec":25},"currents":"Mostly calm leeward Kona; Maui Molokini mild to moderate","best_months":"Apr-Oct","wetsuit":"3mm","signature_species":["manta ray","green sea turtle","humpback whale","reef fish","whitetip reef shark","spinner dolphin"],"highlights":"Kona manta-ray night dives year-round plus Molokini crater","monthly":{"Jan":{"rating":"Good","marine_life":"Mantas, humpback whales","conditions":"Winter swell, viz good"},"Feb":{"rating":"Good","marine_life":"Mantas, humpbacks peak","conditions":"Winter swell, clear"},"Mar":{"rating":"Good","marine_life":"Mantas, late humpbacks","conditions":"Calming, good viz"},"Apr":{"rating":"Peak","marine_life":"Manta night dives, turtles","conditions":"Calm, clear water"},"May":{"rating":"Peak","marine_life":"Mantas, turtles, dolphins","conditions":"Calm, 30m viz"},"Jun":{"rating":"Peak","marine_life":"Mantas, pelagics","conditions":"Calm, excellent viz"},"Jul":{"rating":"Peak","marine_life":"Mantas, turtles","conditions":"Calm, peak viz"},"Aug":{"rating":"Peak","marine_life":"Mantas, dolphins","conditions":"Calm, warm, clear"},"Sep":{"rating":"Peak","marine_life":"Mantas, turtles","conditions":"Calm, excellent viz"},"Oct":{"rating":"Peak","marine_life":"Manta night dives","conditions":"Calm, clear water"},"Nov":{"rating":"Good","marine_life":"Mantas, early whales","conditions":"Swells return"},"Dec":{"rating":"Good","marine_life":"Mantas, humpbacks arrive","conditions":"Winter swell, viz good"}}},{"name":"Guadalcanal & Western Province","country":"Solomon Islands","region":"South Pacific","water_type":"tropical","difficulty":"intermediate","access":"resort + liveaboard","monthly_temp_c":{"Jan":29,"Feb":29,"Mar":29,"Apr":29,"May":29,"Jun":28,"Jul":28,"Aug":28,"Sep":28,"Oct":29,"Nov":29,"Dec":29},"currents":"Generally mild reef currents; some channels and passages drift","best_months":"Apr-Nov","wetsuit":"3mm","signature_species":["WWII wrecks","grey reef shark","barracuda","mandarinfish","sea turtle","reef fish schools"],"highlights":"WWII wrecks and pristine reefs with rich macro life","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Reef sharks, macro","conditions":"Wet season, viz variable"},"Feb":{"rating":"Shoulder","marine_life":"Reef life, mandarinfish","conditions":"Wet/cyclone season"},"Mar":{"rating":"Shoulder","marine_life":"Reef sharks, macro","conditions":"Wet season, viz lower"},"Apr":{"rating":"Good","marine_life":"Reef sharks, wrecks","conditions":"Drier, viz improving"},"May":{"rating":"Good","marine_life":"Sharks, barracuda","conditions":"Drier, good viz"},"Jun":{"rating":"Peak","marine_life":"Reef sharks, macro","conditions":"Dry, 30m+ viz"},"Jul":{"rating":"Peak","marine_life":"Sharks, wrecks, macro","conditions":"Dry, peak viz"},"Aug":{"rating":"Peak","marine_life":"Reef sharks, barracuda","conditions":"Dry, clear water"},"Sep":{"rating":"Peak","marine_life":"Sharks, mandarinfish","conditions":"Dry, excellent viz"},"Oct":{"rating":"Peak","marine_life":"Reef sharks, macro","conditions":"Dry, clear water"},"Nov":{"rating":"Good","marine_life":"Reef life, wrecks","conditions":"Warming, viz good"},"Dec":{"rating":"Shoulder","marine_life":"Reef sharks, macro","conditions":"Wet season onset"}}},{"name":"Okinawa Islands","country":"Japan","region":"East China Sea","water_type":"subtropical","difficulty":"advanced","access":"resort + day boat","monthly_temp_c":{"Jan":22,"Feb":21,"Mar":22,"Apr":23,"May":25,"Jun":27,"Jul":29,"Aug":29,"Sep":28,"Oct":27,"Nov":25,"Dec":23},"currents":"Strong drift at Yonaguni (hammerheads); Ishigaki Manta Scramble moderate","best_months":"Apr-Nov mantas; Dec-Feb hammerheads","wetsuit":"5mm winter / 3mm summer","signature_species":["scalloped hammerhead","manta ray","sea turtle","whale shark","reef fish","schooling jacks"],"highlights":"Winter hammerhead schools at Yonaguni, summer mantas at Ishigaki","monthly":{"Jan":{"rating":"Good","marine_life":"Hammerhead schools (Yonaguni)","conditions":"Cool, winter drift, clear"},"Feb":{"rating":"Peak","marine_life":"Hammerhead schools peak","conditions":"Coolest, clear, strong current"},"Mar":{"rating":"Good","marine_life":"Late hammerheads","conditions":"Cool, viz good"},"Apr":{"rating":"Good","marine_life":"Mantas appear, turtles","conditions":"Warming, viz improving"},"May":{"rating":"Good","marine_life":"Manta rays, reef fish","conditions":"Warming, good viz"},"Jun":{"rating":"Good","marine_life":"Manta Scramble, turtles","conditions":"Warm, viz good"},"Jul":{"rating":"Peak","marine_life":"Manta rays, clear reefs","conditions":"Warm, 30m viz (typhoon risk)"},"Aug":{"rating":"Good","marine_life":"Mantas, reef fish","conditions":"Warm, peak typhoon risk"},"Sep":{"rating":"Peak","marine_life":"Manta mating trains (Ishigaki)","conditions":"Warm, clear, some typhoons"},"Oct":{"rating":"Peak","marine_life":"Mantas, turtles","conditions":"Warm, excellent viz"},"Nov":{"rating":"Good","marine_life":"Late mantas, reef fish","conditions":"Cooling, good viz"},"Dec":{"rating":"Good","marine_life":"Hammerheads begin (Yonaguni)","conditions":"Cooling, winter drift"}}},{"name":"Lord Howe Island","country":"Australia","region":"Tasman Sea","water_type":"subtropical","difficulty":"intermediate","access":"resort + day boat","monthly_temp_c":{"Jan":24,"Feb":25,"Mar":25,"Apr":24,"May":22,"Jun":21,"Jul":19,"Aug":18,"Sep":18,"Oct":19,"Nov":21,"Dec":23},"currents":"Protected lagoon plus exposed sites with moderate current/surge","best_months":"Dec-May","wetsuit":"5mm","signature_species":["Galapagos whaler shark","kingfish","sea turtle","subtropical reef fish","Spanish dancer","double-header wrasse"],"highlights":"World's southernmost coral reef blending tropical and temperate species","monthly":{"Jan":{"rating":"Peak","marine_life":"Galapagos sharks, kingfish","conditions":"Warm, calm, clear"},"Feb":{"rating":"Peak","marine_life":"Sharks, turtles, reef fish","conditions":"Warmest, 30m viz"},"Mar":{"rating":"Peak","marine_life":"Galapagos sharks, turtles","conditions":"Warm, excellent viz"},"Apr":{"rating":"Peak","marine_life":"Sharks, kingfish","conditions":"Mild, clear water"},"May":{"rating":"Good","marine_life":"Reef fish, sharks","conditions":"Cooling, good viz"},"Jun":{"rating":"Shoulder","marine_life":"Subtropical reef fish","conditions":"Cool, viz variable"},"Jul":{"rating":"Low","marine_life":"Reef fish, wrasse","conditions":"Coolest, fewer operators"},"Aug":{"rating":"Low","marine_life":"Temperate species","conditions":"Cold, limited diving"},"Sep":{"rating":"Low","marine_life":"Reef fish","conditions":"Cold, viz variable"},"Oct":{"rating":"Shoulder","marine_life":"Reef fish, early sharks","conditions":"Warming, viz improving"},"Nov":{"rating":"Good","marine_life":"Galapagos sharks return","conditions":"Warming, good viz"},"Dec":{"rating":"Peak","marine_life":"Sharks, kingfish, turtles","conditions":"Warm, clear water"}}},{"name":"Socorro Island","country":"Mexico","region":"Eastern Pacific","water_type":"subtropical","difficulty":"advanced","access":"liveaboard","monthly_temp_c":{"Jan":25,"Feb":24,"Mar":23,"Apr":24,"May":25,"Jun":26,"Jul":27,"Aug":28,"Sep":28,"Oct":28,"Nov":27,"Dec":26},"currents":"Open-ocean surge and currents around seamounts; advanced conditions","best_months":"Nov-May","wetsuit":"5mm","signature_species":["giant oceanic manta","humpback whale","scalloped hammerhead","silvertip shark","bottlenose dolphin","whale shark"],"highlights":"Liveaboard-only Revillagigedo with friendly giant oceanic mantas","monthly":{"Jan":{"rating":"Peak","marine_life":"Giant mantas, humpback whales","conditions":"Cool, sharky, viz good"},"Feb":{"rating":"Peak","marine_life":"Mantas, humpbacks, dolphins","conditions":"Coolest, hammerheads, clear"},"Mar":{"rating":"Peak","marine_life":"Mantas, humpbacks, sharks","conditions":"Cool, thermoclines, sharky"},"Apr":{"rating":"Peak","marine_life":"Giant mantas, dolphins","conditions":"Warming, excellent viz"},"May":{"rating":"Peak","marine_life":"Mantas, hammerheads","conditions":"Warming, 30m+ viz"},"Jun":{"rating":"Good","marine_life":"Mantas, whale sharks possible","conditions":"Warm, season ending"},"Jul":{"rating":"Closed","marine_life":"Season closed","conditions":"Liveaboards not operating"},"Aug":{"rating":"Closed","marine_life":"Season closed","conditions":"Liveaboards not operating"},"Sep":{"rating":"Closed","marine_life":"Season closed","conditions":"Hurricane season, closed"},"Oct":{"rating":"Closed","marine_life":"Season closed","conditions":"Liveaboards not operating"},"Nov":{"rating":"Good","marine_life":"Mantas, whale sharks","conditions":"Season opens, warm, clear"},"Dec":{"rating":"Peak","marine_life":"Giant mantas, dolphins","conditions":"Cooling, sharky, good viz"}}}]
+[
+ {
+  "name": "French Polynesia",
+  "country": "French Polynesia",
+  "region": "South Pacific",
+  "water_type": "tropical",
+  "difficulty": "advanced",
+  "access": "resort + liveaboard",
+  "monthly_temp_c": {
+   "Jan": 29,
+   "Feb": 29,
+   "Mar": 29,
+   "Apr": 29,
+   "May": 28,
+   "Jun": 27,
+   "Jul": 27,
+   "Aug": 26,
+   "Sep": 26,
+   "Oct": 27,
+   "Nov": 28,
+   "Dec": 28
+  },
+  "currents": "Strong drift in Tiputa (Rangiroa) and Fakarava passes, tide-dependent",
+  "best_months": "Jun-Oct",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "grey reef shark",
+   "hammerhead shark",
+   "manta ray",
+   "humpback whale",
+   "dolphin",
+   "schooling barracuda"
+  ],
+  "highlights": "Atoll passes with grey-reef shark walls and big-fish drifts",
+  "monthly": {
+   "Jan": {
+    "rating": "Shoulder",
+    "marine_life": "Reef sharks, manta rays",
+    "conditions": "Wet season, viz variable"
+   },
+   "Feb": {
+    "rating": "Shoulder",
+    "marine_life": "Reef sharks, mantas",
+    "conditions": "Wet/cyclone season, 20-30m viz"
+   },
+   "Mar": {
+    "rating": "Shoulder",
+    "marine_life": "Reef sharks, mantas",
+    "conditions": "End wet season, viz improving"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Grey reef sharks, mantas",
+    "conditions": "Transition, viz good"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Grey reef sharks build",
+    "conditions": "Dry season begins, clear water"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Grouper spawn, shark wall builds",
+    "conditions": "Dry, excellent 30-40m viz"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Wall of sharks, humpbacks arrive",
+    "conditions": "Dry, peak viz"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Shark wall, humpback whales",
+    "conditions": "Dry, cool, clear"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Sharks, humpback whales",
+    "conditions": "Dry, 30-40m viz"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Sharks, late humpbacks",
+    "conditions": "Dry, excellent viz"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Reef sharks, mantas",
+    "conditions": "Warming, viz good"
+   },
+   "Dec": {
+    "rating": "Shoulder",
+    "marine_life": "Reef sharks, mantas",
+    "conditions": "Wet season onset"
+   }
+  }
+ },
+ {
+  "name": "Moorea",
+  "country": "French Polynesia",
+  "region": "South Pacific",
+  "water_type": "tropical",
+  "difficulty": "intermediate",
+  "access": "resort + day boat",
+  "monthly_temp_c": {
+   "Jan": 29,
+   "Feb": 29,
+   "Mar": 29,
+   "Apr": 29,
+   "May": 28,
+   "Jun": 27,
+   "Jul": 27,
+   "Aug": 26,
+   "Sep": 26,
+   "Oct": 27,
+   "Nov": 28,
+   "Dec": 28
+  },
+  "currents": "Generally mild lagoon and outer-reef currents, some channel flow",
+  "best_months": "Jul-Oct",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "lemon shark",
+   "blacktip reef shark",
+   "grey reef shark",
+   "humpback whale",
+   "eagle ray",
+   "sea turtle"
+  ],
+  "highlights": "Lemon-shark dives and seasonal humpback whale encounters",
+  "monthly": {
+   "Jan": {
+    "rating": "Shoulder",
+    "marine_life": "Lemon, blacktip sharks",
+    "conditions": "Wet season, viz variable"
+   },
+   "Feb": {
+    "rating": "Shoulder",
+    "marine_life": "Lemon sharks, rays",
+    "conditions": "Wet/cyclone season"
+   },
+   "Mar": {
+    "rating": "Shoulder",
+    "marine_life": "Lemon sharks, turtles",
+    "conditions": "End wet season"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Lemon sharks, eagle rays",
+    "conditions": "Transition, viz good"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Reef sharks, rays",
+    "conditions": "Dry begins, clearer water"
+   },
+   "Jun": {
+    "rating": "Good",
+    "marine_life": "Reef sharks, turtles",
+    "conditions": "Dry, good viz"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Humpback whales arrive",
+    "conditions": "Dry, clear, calm"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Humpback whales, sharks",
+    "conditions": "Dry, peak viz"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Humpback whales peak",
+    "conditions": "Dry, excellent viz"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Late humpbacks, sharks",
+    "conditions": "Dry, clear water"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Lemon sharks, rays",
+    "conditions": "Warming, viz good"
+   },
+   "Dec": {
+    "rating": "Shoulder",
+    "marine_life": "Lemon sharks, blacktips",
+    "conditions": "Wet season onset"
+   }
+  }
+ },
+ {
+  "name": "Fiji",
+  "country": "Fiji",
+  "region": "South Pacific",
+  "water_type": "tropical",
+  "difficulty": "intermediate",
+  "access": "resort + liveaboard",
+  "monthly_temp_c": {
+   "Jan": 29,
+   "Feb": 29,
+   "Mar": 29,
+   "Apr": 28,
+   "May": 27,
+   "Jun": 26,
+   "Jul": 25,
+   "Aug": 25,
+   "Sep": 26,
+   "Oct": 27,
+   "Nov": 28,
+   "Dec": 29
+  },
+  "currents": "Strong tidal currents in Somosomo Strait feed soft corals",
+  "best_months": "Jul-Oct",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "soft corals",
+   "bull shark",
+   "grey reef shark",
+   "tiger shark",
+   "manta ray",
+   "reef fish schools"
+  ],
+  "highlights": "Soft-coral capital with Beqa Lagoon bull-shark dives",
+  "monthly": {
+   "Jan": {
+    "rating": "Shoulder",
+    "marine_life": "Bull sharks, soft corals",
+    "conditions": "Wet/cyclone season, viz lower"
+   },
+   "Feb": {
+    "rating": "Shoulder",
+    "marine_life": "Bull sharks, reef life",
+    "conditions": "Wet/cyclone season"
+   },
+   "Mar": {
+    "rating": "Shoulder",
+    "marine_life": "Bull sharks, corals",
+    "conditions": "End wet season"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Sharks, soft corals",
+    "conditions": "Transition, viz improving"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Mantas arrive (Yasawa)",
+    "conditions": "Dry begins, clear"
+   },
+   "Jun": {
+    "rating": "Good",
+    "marine_life": "Manta rays, sharks",
+    "conditions": "Dry, good viz"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Manta rays, bull sharks",
+    "conditions": "Dry, 30m+ viz"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Mantas, sharks, corals",
+    "conditions": "Dry, peak viz"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Mantas, sharks",
+    "conditions": "Dry, excellent viz"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Late mantas, sharks",
+    "conditions": "Dry, clear water"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Bull sharks, corals",
+    "conditions": "Warming, viz good"
+   },
+   "Dec": {
+    "rating": "Shoulder",
+    "marine_life": "Bull sharks, reef life",
+    "conditions": "Wet season onset"
+   }
+  }
+ },
+ {
+  "name": "Maui & Kona",
+  "country": "USA",
+  "region": "Hawaii",
+  "water_type": "tropical",
+  "difficulty": "beginner",
+  "access": "resort + day boat",
+  "monthly_temp_c": {
+   "Jan": 24,
+   "Feb": 24,
+   "Mar": 24,
+   "Apr": 25,
+   "May": 25,
+   "Jun": 26,
+   "Jul": 27,
+   "Aug": 27,
+   "Sep": 27,
+   "Oct": 27,
+   "Nov": 26,
+   "Dec": 25
+  },
+  "currents": "Mostly calm leeward Kona; Maui Molokini mild to moderate",
+  "best_months": "Apr-Oct",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "manta ray",
+   "green sea turtle",
+   "humpback whale",
+   "reef fish",
+   "whitetip reef shark",
+   "spinner dolphin"
+  ],
+  "highlights": "Kona manta-ray night dives year-round plus Molokini crater",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Mantas, humpback whales",
+    "conditions": "Winter swell, viz good"
+   },
+   "Feb": {
+    "rating": "Good",
+    "marine_life": "Mantas, humpbacks peak",
+    "conditions": "Winter swell, clear"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Mantas, late humpbacks",
+    "conditions": "Calming, good viz"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Manta night dives, turtles",
+    "conditions": "Calm, clear water"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Mantas, turtles, dolphins",
+    "conditions": "Calm, 30m viz"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Mantas, pelagics",
+    "conditions": "Calm, excellent viz"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Mantas, turtles",
+    "conditions": "Calm, peak viz"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Mantas, dolphins",
+    "conditions": "Calm, warm, clear"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Mantas, turtles",
+    "conditions": "Calm, excellent viz"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Manta night dives",
+    "conditions": "Calm, clear water"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Mantas, early whales",
+    "conditions": "Swells return"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Mantas, humpbacks arrive",
+    "conditions": "Winter swell, viz good"
+   }
+  }
+ },
+ {
+  "name": "Guadalcanal & Western Province",
+  "country": "Solomon Islands",
+  "region": "South Pacific",
+  "water_type": "tropical",
+  "difficulty": "intermediate",
+  "access": "resort + liveaboard",
+  "monthly_temp_c": {
+   "Jan": 29,
+   "Feb": 29,
+   "Mar": 29,
+   "Apr": 29,
+   "May": 29,
+   "Jun": 28,
+   "Jul": 28,
+   "Aug": 28,
+   "Sep": 28,
+   "Oct": 29,
+   "Nov": 29,
+   "Dec": 29
+  },
+  "currents": "Generally mild reef currents; some channels and passages drift",
+  "best_months": "Apr-Nov",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "WWII wrecks",
+   "grey reef shark",
+   "barracuda",
+   "mandarinfish",
+   "sea turtle",
+   "reef fish schools"
+  ],
+  "highlights": "WWII wrecks and pristine reefs with rich macro life",
+  "monthly": {
+   "Jan": {
+    "rating": "Shoulder",
+    "marine_life": "Reef sharks, macro",
+    "conditions": "Wet season, viz variable"
+   },
+   "Feb": {
+    "rating": "Shoulder",
+    "marine_life": "Reef life, mandarinfish",
+    "conditions": "Wet/cyclone season"
+   },
+   "Mar": {
+    "rating": "Shoulder",
+    "marine_life": "Reef sharks, macro",
+    "conditions": "Wet season, viz lower"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Reef sharks, wrecks",
+    "conditions": "Drier, viz improving"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Sharks, barracuda",
+    "conditions": "Drier, good viz"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Reef sharks, macro",
+    "conditions": "Dry, 30m+ viz"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Sharks, wrecks, macro",
+    "conditions": "Dry, peak viz"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Reef sharks, barracuda",
+    "conditions": "Dry, clear water"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Sharks, mandarinfish",
+    "conditions": "Dry, excellent viz"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Reef sharks, macro",
+    "conditions": "Dry, clear water"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Reef life, wrecks",
+    "conditions": "Warming, viz good"
+   },
+   "Dec": {
+    "rating": "Shoulder",
+    "marine_life": "Reef sharks, macro",
+    "conditions": "Wet season onset"
+   }
+  }
+ },
+ {
+  "name": "Okinawa Islands",
+  "country": "Japan",
+  "region": "East China Sea",
+  "water_type": "subtropical",
+  "difficulty": "advanced",
+  "access": "resort + day boat",
+  "monthly_temp_c": {
+   "Jan": 22,
+   "Feb": 21,
+   "Mar": 22,
+   "Apr": 23,
+   "May": 25,
+   "Jun": 27,
+   "Jul": 29,
+   "Aug": 29,
+   "Sep": 28,
+   "Oct": 27,
+   "Nov": 25,
+   "Dec": 23
+  },
+  "currents": "Strong drift at Yonaguni (hammerheads); Ishigaki Manta Scramble moderate",
+  "best_months": "Apr-Nov mantas; Dec-Feb hammerheads",
+  "wetsuit": "5mm winter / 3mm summer",
+  "signature_species": [
+   "scalloped hammerhead",
+   "manta ray",
+   "sea turtle",
+   "whale shark",
+   "reef fish",
+   "schooling jacks"
+  ],
+  "highlights": "Winter hammerhead schools at Yonaguni, summer mantas at Ishigaki",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Hammerhead schools (Yonaguni)",
+    "conditions": "Cool, winter drift, clear"
+   },
+   "Feb": {
+    "rating": "Peak",
+    "marine_life": "Hammerhead schools peak",
+    "conditions": "Coolest, clear, strong current"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Late hammerheads",
+    "conditions": "Cool, viz good"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Mantas appear, turtles",
+    "conditions": "Warming, viz improving"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Manta rays, reef fish",
+    "conditions": "Warming, good viz"
+   },
+   "Jun": {
+    "rating": "Good",
+    "marine_life": "Manta Scramble, turtles",
+    "conditions": "Warm, viz good"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Manta rays, clear reefs",
+    "conditions": "Warm, 30m viz (typhoon risk)"
+   },
+   "Aug": {
+    "rating": "Good",
+    "marine_life": "Mantas, reef fish",
+    "conditions": "Warm, peak typhoon risk"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Manta mating trains (Ishigaki)",
+    "conditions": "Warm, clear, some typhoons"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Mantas, turtles",
+    "conditions": "Warm, excellent viz"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Late mantas, reef fish",
+    "conditions": "Cooling, good viz"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Hammerheads begin (Yonaguni)",
+    "conditions": "Cooling, winter drift"
+   }
+  }
+ },
+ {
+  "name": "Lord Howe Island",
+  "country": "Australia",
+  "region": "Tasman Sea",
+  "water_type": "subtropical",
+  "difficulty": "intermediate",
+  "access": "resort + day boat",
+  "monthly_temp_c": {
+   "Jan": 24,
+   "Feb": 25,
+   "Mar": 25,
+   "Apr": 24,
+   "May": 22,
+   "Jun": 21,
+   "Jul": 19,
+   "Aug": 18,
+   "Sep": 18,
+   "Oct": 19,
+   "Nov": 21,
+   "Dec": 23
+  },
+  "currents": "Protected lagoon plus exposed sites with moderate current/surge",
+  "best_months": "Dec-May",
+  "wetsuit": "5mm",
+  "signature_species": [
+   "Galapagos whaler shark",
+   "kingfish",
+   "sea turtle",
+   "subtropical reef fish",
+   "Spanish dancer",
+   "double-header wrasse"
+  ],
+  "highlights": "World's southernmost coral reef blending tropical and temperate species",
+  "monthly": {
+   "Jan": {
+    "rating": "Peak",
+    "marine_life": "Galapagos sharks, kingfish",
+    "conditions": "Warm, calm, clear"
+   },
+   "Feb": {
+    "rating": "Peak",
+    "marine_life": "Sharks, turtles, reef fish",
+    "conditions": "Warmest, 30m viz"
+   },
+   "Mar": {
+    "rating": "Peak",
+    "marine_life": "Galapagos sharks, turtles",
+    "conditions": "Warm, excellent viz"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Sharks, kingfish",
+    "conditions": "Mild, clear water"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Reef fish, sharks",
+    "conditions": "Cooling, good viz"
+   },
+   "Jun": {
+    "rating": "Shoulder",
+    "marine_life": "Subtropical reef fish",
+    "conditions": "Cool, viz variable"
+   },
+   "Jul": {
+    "rating": "Low",
+    "marine_life": "Reef fish, wrasse",
+    "conditions": "Coolest, fewer operators"
+   },
+   "Aug": {
+    "rating": "Low",
+    "marine_life": "Temperate species",
+    "conditions": "Cold, limited diving"
+   },
+   "Sep": {
+    "rating": "Low",
+    "marine_life": "Reef fish",
+    "conditions": "Cold, viz variable"
+   },
+   "Oct": {
+    "rating": "Shoulder",
+    "marine_life": "Reef fish, early sharks",
+    "conditions": "Warming, viz improving"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Galapagos sharks return",
+    "conditions": "Warming, good viz"
+   },
+   "Dec": {
+    "rating": "Peak",
+    "marine_life": "Sharks, kingfish, turtles",
+    "conditions": "Warm, clear water"
+   }
+  }
+ },
+ {
+  "name": "Socorro Island",
+  "country": "Mexico",
+  "region": "Eastern Pacific",
+  "water_type": "subtropical",
+  "difficulty": "advanced",
+  "access": "liveaboard",
+  "monthly_temp_c": {
+   "Jan": 25,
+   "Feb": 24,
+   "Mar": 23,
+   "Apr": 24,
+   "May": 25,
+   "Jun": 26,
+   "Jul": 27,
+   "Aug": 28,
+   "Sep": 28,
+   "Oct": 28,
+   "Nov": 27,
+   "Dec": 26
+  },
+  "currents": "Open-ocean surge and currents around seamounts; advanced conditions",
+  "best_months": "Nov-May",
+  "wetsuit": "5mm",
+  "signature_species": [
+   "giant oceanic manta",
+   "humpback whale",
+   "scalloped hammerhead",
+   "silvertip shark",
+   "bottlenose dolphin",
+   "whale shark"
+  ],
+  "highlights": "Liveaboard-only Revillagigedo with friendly giant oceanic mantas",
+  "monthly": {
+   "Jan": {
+    "rating": "Peak",
+    "marine_life": "Giant mantas, humpback whales",
+    "conditions": "Cool, sharky, viz good"
+   },
+   "Feb": {
+    "rating": "Peak",
+    "marine_life": "Mantas, humpbacks, dolphins",
+    "conditions": "Coolest, hammerheads, clear"
+   },
+   "Mar": {
+    "rating": "Peak",
+    "marine_life": "Mantas, humpbacks, sharks",
+    "conditions": "Cool, thermoclines, sharky"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Giant mantas, dolphins",
+    "conditions": "Warming, excellent viz"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Mantas, hammerheads",
+    "conditions": "Warming, 30m+ viz"
+   },
+   "Jun": {
+    "rating": "Shoulder",
+    "marine_life": "Last trips of the season; mantas",
+    "conditions": "Season closing, storm risk rising"
+   },
+   "Jul": {
+    "rating": "Closed",
+    "marine_life": "Season closed",
+    "conditions": "Liveaboards not operating"
+   },
+   "Aug": {
+    "rating": "Closed",
+    "marine_life": "Season closed",
+    "conditions": "Liveaboards not operating"
+   },
+   "Sep": {
+    "rating": "Closed",
+    "marine_life": "Season closed",
+    "conditions": "Hurricane season, closed"
+   },
+   "Oct": {
+    "rating": "Closed",
+    "marine_life": "Season closed",
+    "conditions": "Liveaboards not operating"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Mantas, whale sharks",
+    "conditions": "Season opens, warm, clear"
+   },
+   "Dec": {
+    "rating": "Peak",
+    "marine_life": "Giant mantas, dolphins",
+    "conditions": "Cooling, sharky, good viz"
+   }
+  }
+ }
+]

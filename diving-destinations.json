@@ -135,10 +135,13 @@
         "lat": -3.85,
         "lng": -32.42
       },
-      "current_strength": "Low",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Baia_do_Sancho_Fernando_de_Noronha.JPG/960px-Baia_do_Sancho_Fernando_de_Noronha.JPG",
       "image_credit": "Photo: Roberta monte (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Leeward mild; windward and Dec-Mar currents stronger",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Bahamas",
@@ -252,7 +255,10 @@
       "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/ISS018-E-13222_-_View_of_Earth.jpg/960px-ISS018-E-13222_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Gulf Stream drift at Bimini; Tiger Beach variable",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Bay Islands",
@@ -276,7 +282,7 @@
         "Dec": 27
       },
       "currents": "Generally mild across the group; light drift on walls and channels, gentle seamount current",
-      "best_months": "Mar-Apr & Aug-Oct",
+      "best_months": "Feb-Apr & Oct-Dec (whale sharks)",
       "wetsuit": "3mm",
       "signature_species": [
         "whale sharks",
@@ -329,34 +335,34 @@
           "visibility_m": 24
         },
         "Aug": {
-          "rating": "Peak",
-          "marine_life": "Whale sharks return, turtles",
-          "conditions": "Second whale shark window, warm",
+          "rating": "Good",
+          "marine_life": "Turtles, seahorses, reef fish",
+          "conditions": "Warmest water, occasional storms",
           "visibility_m": 18
         },
         "Sep": {
           "rating": "Good",
-          "marine_life": "Whale sharks, turtles, eagle rays",
+          "marine_life": "Turtles, eagle rays; whale sharks possible",
           "conditions": "Fringe hurricane risk, increasing rain",
           "visibility_m": 18
         },
         "Oct": {
-          "rating": "Shoulder",
-          "marine_life": "Whale sharks tapering, turtles",
-          "conditions": "Rainy season, reduced viz",
-          "visibility_m": 10
+          "rating": "Good",
+          "marine_life": "Whale shark secondary window opens; turtles",
+          "conditions": "Rainy season building, viz variable",
+          "visibility_m": 16
         },
         "Nov": {
           "rating": "Good",
-          "marine_life": "Turtles, eagle rays, reef fish",
+          "marine_life": "Whale sharks (secondary season); turtles",
           "conditions": "Wet, nortes possible, viz variable",
           "visibility_m": 16
         },
         "Dec": {
           "rating": "Good",
-          "marine_life": "Turtles, seahorses, reef fish",
-          "conditions": "Rainy, cooler nortes on north shores",
-          "visibility_m": 18
+          "marine_life": "Whale sharks possible; turtles, reef fish",
+          "conditions": "Rainy, cooler, viz variable",
+          "visibility_m": 16
         }
       },
       "coordinates": {
@@ -366,7 +372,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Chaetodon_capistratus_404160971.jpg",
       "image_credit": "Photo: Pauline Walsh Jacobson (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Sheltered fringing reefs, light currents",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Bonaire",
@@ -480,7 +489,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Acropora_cervicornis_415034251.jpg/960px-Acropora_cervicornis_415034251.jpg",
       "image_credit": "Photo: Jay Brasher (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Protected leeward shore diving, minimal current",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Cayman Islands",
@@ -594,7 +606,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Acropora_palmata_459814539.jpg/960px-Acropora_palmata_459814539.jpg",
       "image_credit": "Photo: Scott Loarie (CC0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Limited tidal range, gentle currents on walls",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Cozumel",
@@ -708,7 +723,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cancer_%28229437593%29.jpeg/960px-Cancer_%28229437593%29.jpeg",
       "image_credit": "Photo: Tobias Spitaler (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Yucatan Current defines drift diving here",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Great Blue Hole",
@@ -822,7 +840,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Acropora_cervicornis_283195200.jpg/960px-Acropora_cervicornis_283195200.jpg",
       "image_credit": "Photo: Loopy30 (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Minimal current; depth/darkness is the challenge",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Roatán",
@@ -936,7 +957,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Aeropuerto_Internacional_Juan_Manuel_G%C3%A1lvez.jpg/960px-Aeropuerto_Internacional_Juan_Manuel_G%C3%A1lvez.jpg",
       "image_credit": "Photo: TomasVial (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Calm sheltered sites, light currents",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Utila",
@@ -960,7 +984,7 @@
         "Dec": 27
       },
       "currents": "Mostly mild and gentle; some seamounts and north-side sites have light current",
-      "best_months": "Mar-Apr & Aug-Oct (whale sharks)",
+      "best_months": "Feb-Apr & Oct-Dec (whale sharks)",
       "wetsuit": "3mm",
       "signature_species": [
         "whale sharks",
@@ -1013,32 +1037,32 @@
           "visibility_m": 18
         },
         "Aug": {
-          "rating": "Peak",
-          "marine_life": "Whale sharks return, turtles",
-          "conditions": "Second whale shark window, warm",
+          "rating": "Good",
+          "marine_life": "Turtles, seahorses, reef fish",
+          "conditions": "Warmest water, occasional storms",
           "visibility_m": 18
         },
         "Sep": {
-          "rating": "Peak",
-          "marine_life": "Whale sharks, turtles, eagle rays",
-          "conditions": "Whale shark season, fringe storm risk",
+          "rating": "Good",
+          "marine_life": "Turtles, eagle rays; whale sharks possible",
+          "conditions": "Fringe hurricane risk, increasing rain",
           "visibility_m": 18
         },
         "Oct": {
           "rating": "Good",
-          "marine_life": "Whale sharks tapering, turtles",
+          "marine_life": "Whale shark secondary window opens; turtles",
           "conditions": "Rainy season building, viz variable",
           "visibility_m": 16
         },
         "Nov": {
-          "rating": "Shoulder",
-          "marine_life": "Turtles, reef fish",
-          "conditions": "Wet, nortes possible, reduced viz",
-          "visibility_m": 10
+          "rating": "Good",
+          "marine_life": "Whale sharks (secondary season); turtles",
+          "conditions": "Wet, nortes possible, viz variable",
+          "visibility_m": 16
         },
         "Dec": {
           "rating": "Good",
-          "marine_life": "Turtles, seahorses, reef fish",
+          "marine_life": "Whale sharks possible; turtles, reef fish",
           "conditions": "Rainy, cooler, viz variable",
           "visibility_m": 16
         }
@@ -1050,7 +1074,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Clavelina_puertosecensis_71640242.jpg/960px-Clavelina_puertosecensis_71640242.jpg",
       "image_credit": "Photo: henrya (CC0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Calm south-coast sites, low current",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Sipadan Island",
@@ -1162,10 +1189,13 @@
         "lat": 4.11,
         "lng": 118.63
       },
-      "current_strength": "Low",
+      "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Blue_Green_Damselfishes_%28Chromis_viridis%29_%288500886718%29.jpg/960px-Blue_Green_Damselfishes_%28Chromis_viridis%29_%288500886718%29.jpg",
       "image_credit": "Photo: Bernard DUPONT from FRANCE (CC BY-SA 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Barracuda Point/South Point strong drift; AOW mandatory",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Great Barrier Reef",
@@ -1277,10 +1307,13 @@
         "lat": -16.9,
         "lng": 146.1
       },
-      "current_strength": "Strong",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Acropora_muricata_177560622.jpg",
       "image_credit": "Photo: Pauline Walsh Jacobson (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Cod Hole gentle; strong drift only at Osprey/Coral Sea",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Whitsunday Islands",
@@ -1304,10 +1337,9 @@
         "Dec": 28
       },
       "currents": "Generally mild on reef; outer reef can have moderate tidal currents",
-      "best_months": "Jun-Oct (best viz, minke whales Jun-Jul)",
+      "best_months": "Jun-Oct (best viz, humpbacks Jun-Sep)",
       "wetsuit": "3mm summer, 5mm winter",
       "signature_species": [
-        "dwarf minke whale",
         "humpback whale",
         "manta ray",
         "green turtle",
@@ -1348,13 +1380,13 @@
         },
         "Jun": {
           "rating": "Peak",
-          "marine_life": "Dwarf minke whales, humpbacks arriving",
+          "marine_life": "Humpback whales arriving, turtles",
           "conditions": "Excellent viz, cooler, calm",
           "visibility_m": 32
         },
         "Jul": {
           "rating": "Peak",
-          "marine_life": "Minke and humpback whales",
+          "marine_life": "Humpback whales, reef sharks",
           "conditions": "Best viz, dry, cooler water",
           "visibility_m": 32
         },
@@ -1393,10 +1425,13 @@
         "lat": -19.9,
         "lng": 149.1
       },
-      "current_strength": "Low",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/ISS030-E-245036_-_View_of_Earth.jpg/960px-ISS030-E-245036_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Large tidal range drives light-to-strong currents",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Heron Island",
@@ -1420,7 +1455,7 @@
         "Dec": 26
       },
       "currents": "Mild to moderate tidal currents at channel sites like Heron Bommie",
-      "best_months": "Sep-Nov (mantas), Jan-Mar (turtle nesting/hatching)",
+      "best_months": "May-Aug (mantas), Jan-Mar (turtle nesting/hatching)",
       "wetsuit": "3mm summer, 5mm winter",
       "signature_species": [
         "manta ray",
@@ -1457,44 +1492,44 @@
           "visibility_m": 16
         },
         "May": {
-          "rating": "Good",
-          "marine_life": "Turtles, reef sharks",
+          "rating": "Peak",
+          "marine_life": "Manta season begins; turtles, reef sharks",
           "conditions": "Cooling, good viz",
           "visibility_m": 24
         },
         "Jun": {
-          "rating": "Good",
-          "marine_life": "Humpback whales passing, turtles",
+          "rating": "Peak",
+          "marine_life": "Manta rays; humpback whales passing",
           "conditions": "Cooler, clear, calm",
           "visibility_m": 24
         },
         "Jul": {
-          "rating": "Good",
-          "marine_life": "Humpback whales, reef sharks",
+          "rating": "Peak",
+          "marine_life": "Peak manta season; humpback whales",
           "conditions": "Coolest water, excellent viz",
           "visibility_m": 32
         },
         "Aug": {
-          "rating": "Good",
-          "marine_life": "Humpback whales, turtles",
+          "rating": "Peak",
+          "marine_life": "Peak mantas; humpback whales",
           "conditions": "Cool, clear, calm",
           "visibility_m": 24
         },
         "Sep": {
-          "rating": "Peak",
-          "marine_life": "Manta rays arrive, whales, turtles",
+          "rating": "Good",
+          "marine_life": "Mantas tail end; whales, turtles",
           "conditions": "Excellent viz, warming",
           "visibility_m": 32
         },
         "Oct": {
-          "rating": "Peak",
-          "marine_life": "Manta rays, turtles, sharks",
+          "rating": "Good",
+          "marine_life": "Turtle breeding begins; reef sharks",
           "conditions": "Great viz, calm, warming",
           "visibility_m": 18
         },
         "Nov": {
-          "rating": "Peak",
-          "marine_life": "Mantas, coral spawning, turtle nesting",
+          "rating": "Good",
+          "marine_life": "Coral spawning; turtle nesting starts",
           "conditions": "Warm, good viz, calm",
           "visibility_m": 24
         },
@@ -1512,7 +1547,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Abudefduf_whitleyi_135459349.jpg/960px-Abudefduf_whitleyi_135459349.jpg",
       "image_credit": "Photo: Bruce Deagle (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Gentle tidal drift dives, beginner-friendly",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Komodo National Park",
@@ -1626,7 +1664,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gallus_varius_31689246.jpg/960px-Gallus_varius_31689246.jpg",
       "image_credit": "Photo: Ellen Rykers (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Ripping tidal currents, reef hooks standard",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Raja Ampat",
@@ -1737,10 +1778,13 @@
         "lat": -0.23,
         "lng": 130.52
       },
-      "current_strength": "Medium",
+      "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/ISS029-E-33302_-_View_of_Earth.jpg/960px-ISS029-E-33302_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Currents define diving; reef hooks at Blue Magic/Sardine",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Okinawa Islands",
@@ -1856,7 +1900,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ISS045-E-15329_-_View_of_Earth.jpg/960px-ISS045-E-15329_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Yonaguni fast currents, drift diving",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Cocos Island",
@@ -1971,7 +2018,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Acanthaster_planci_62223724.jpg/960px-Acanthaster_planci_62223724.jpg",
       "image_credit": "Photo: Robert Webster (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Strong wet-season currents, advanced-only pelagic diving",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Galapagos Islands",
@@ -1982,9 +2032,9 @@
       "access": "liveaboard",
       "monthly_temp_c": {
         "Jan": 24,
-        "Feb": 25,
-        "Mar": 25,
-        "Apr": 25,
+        "Feb": 26,
+        "Mar": 26,
+        "Apr": 26,
         "May": 25,
         "Jun": 23,
         "Jul": 22,
@@ -2087,7 +2137,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Brachymyrmex_heeri_casent0173227_profile_2.jpg/960px-Brachymyrmex_heeri_casent0173227_profile_2.jpg",
       "image_credit": "Photo: April Nobile (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Humboldt/Cromwell currents; Darwin/Wolf advanced only",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Socorro Island",
@@ -2154,9 +2207,9 @@
           "visibility_m": 30
         },
         "Jun": {
-          "rating": "Good",
-          "marine_life": "Mantas, whale sharks possible",
-          "conditions": "Warm, season ending",
+          "rating": "Shoulder",
+          "marine_life": "Last trips of the season; mantas",
+          "conditions": "Season closing, storm risk rising",
           "visibility_m": 18
         },
         "Jul": {
@@ -2203,7 +2256,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mimus_graysoni%2C_Socorro%2C_Colima%2C_Mexico_5.jpg/960px-Mimus_graysoni%2C_Socorro%2C_Colima%2C_Mexico_5.jpg",
       "image_credit": "Photo: sulavanderplank (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Exposed open-Pacific pinnacles, advanced",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Sea of Cortez",
@@ -2271,19 +2327,19 @@
         },
         "Jun": {
           "rating": "Good",
-          "marine_life": "Mobula rays, sea lions",
-          "conditions": "Warming, viz improving; pupping nears",
+          "marine_life": "Mobula rays; Los Islotes closes Jun 1 (pupping)",
+          "conditions": "Warming, viz improving",
           "visibility_m": 16
         },
         "Jul": {
           "rating": "Shoulder",
-          "marine_life": "Sea lions (limited), reef fish",
-          "conditions": "Warm; Los Islotes pupping restrictions",
+          "marine_life": "Reef fish, mobulas; Los Islotes closed",
+          "conditions": "Warm; sea-lion site closed for pupping",
           "visibility_m": 18
         },
         "Aug": {
           "rating": "Good",
-          "marine_life": "Hammerheads, jacks, reef fish",
+          "marine_life": "Hammerheads, jacks; Los Islotes closed to Aug 31",
           "conditions": "Warm, clear, viz improving",
           "visibility_m": 24
         },
@@ -2316,10 +2372,13 @@
         "lat": 24.4,
         "lng": -110.35
       },
-      "current_strength": "Strong",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Cephalopholis_panamensis_53801358.jpg/960px-Cephalopholis_panamensis_53801358.jpg",
       "image_credit": "Photo: Marty Purdy (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Signature sites mild-moderate; seamounts stronger",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Maui & Kona",
@@ -2435,7 +2494,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Haleakal%C4%81_%28a0004416%29_-_panoramio.jpg/960px-Haleakal%C4%81_%28a0004416%29_-_panoramio.jpg",
       "image_credit": "Photo: Thomas Tunsch (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Calm leeward coasts; current only at exposed sites",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Chagos Archipelago / BIOT",
@@ -2443,7 +2505,7 @@
       "region": "Indian Ocean",
       "water_type": "tropical",
       "difficulty": "advanced",
-      "access": "liveaboard",
+      "access": "suspended (no permits issued)",
       "monthly_temp_c": {
         "Jan": 29,
         "Feb": 29,
@@ -2468,86 +2530,89 @@
         "green turtle",
         "tuna"
       ],
-      "highlights": "Ultra-remote pristine MPA atolls, permit/expedition-only, abundant sharks and untouched coral",
+      "highlights": "Ultra-remote pristine MPA atolls - access currently SUSPENDED (no new permits since April 2026 during the Mauritius sovereignty transition)",
       "monthly": {
         "Jan": {
-          "rating": "Shoulder",
-          "marine_life": "Sharks, turtles, reef fish",
-          "conditions": "NW monsoon, variable seas",
-          "visibility_m": 16
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
+          "visibility_m": 18
         },
         "Feb": {
-          "rating": "Good",
-          "marine_life": "Sharks, mantas, pristine coral",
-          "conditions": "Calming seas, good visibility",
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
           "visibility_m": 18
         },
         "Mar": {
-          "rating": "Peak",
-          "marine_life": "Grey reef sharks, mantas, turtles",
-          "conditions": "Calm seas, superb visibility",
-          "visibility_m": 32
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
+          "visibility_m": 18
         },
         "Apr": {
-          "rating": "Peak",
-          "marine_life": "Sharks, mantas, tuna, turtles",
-          "conditions": "Flat seas, 30m+ visibility",
-          "visibility_m": 30
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
+          "visibility_m": 18
         },
         "May": {
-          "rating": "Peak",
-          "marine_life": "Silvertips, mantas, pristine reef",
-          "conditions": "Calm, very clear water",
-          "visibility_m": 24
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
+          "visibility_m": 18
         },
         "Jun": {
-          "rating": "Good",
-          "marine_life": "Sharks, turtles, reef fish",
-          "conditions": "SE trades pick up",
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
           "visibility_m": 18
         },
         "Jul": {
-          "rating": "Shoulder",
-          "marine_life": "Sharks, reef fish",
-          "conditions": "SE monsoon, windier seas",
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
           "visibility_m": 18
         },
         "Aug": {
-          "rating": "Shoulder",
-          "marine_life": "Sharks, turtles",
-          "conditions": "Windy, choppier conditions",
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
           "visibility_m": 18
         },
         "Sep": {
-          "rating": "Shoulder",
-          "marine_life": "Sharks, reef fish",
-          "conditions": "SE trades, variable seas",
-          "visibility_m": 16
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
+          "visibility_m": 18
         },
         "Oct": {
-          "rating": "Good",
-          "marine_life": "Sharks, mantas, turtles",
-          "conditions": "Settling seas, good visibility",
-          "visibility_m": 16
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
+          "visibility_m": 18
         },
         "Nov": {
-          "rating": "Good",
-          "marine_life": "Sharks, pristine coral",
-          "conditions": "Calm transition, clear water",
-          "visibility_m": 24
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
+          "visibility_m": 18
         },
         "Dec": {
-          "rating": "Shoulder",
-          "marine_life": "Sharks, turtles, reef fish",
-          "conditions": "NW monsoon begins, variable",
-          "visibility_m": 16
+          "rating": "Closed",
+          "marine_life": "Pristine sharks/reefs - but no visitor access",
+          "conditions": "Permits suspended since Apr 2026 (BIOT/Mauritius transition)",
+          "visibility_m": 18
         }
       },
       "coordinates": {
         "lat": -6.0,
         "lng": 71.5
       },
-      "current_strength": "Strong"
+      "current_strength": "Strong",
+      "current_note": "Oceanic atoll channels and exposed walls",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Maldives",
@@ -2662,7 +2727,10 @@
       "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Filitheyo.jpg/960px-Filitheyo.jpg",
       "image_credit": "Photo: Tiennegolf (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Tidal channel currents, manageable drift; strong at kandus",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Seychelles",
@@ -2753,13 +2821,13 @@
         },
         "Oct": {
           "rating": "Peak",
-          "marine_life": "Whale shark PEAK; manta activity rising",
+          "marine_life": "Whale shark season peak (sightings rarer in recent years); mantas rising",
           "conditions": "Transition; seas settling, viz recovering",
           "visibility_m": 16
         },
         "Nov": {
           "rating": "Peak",
-          "marine_life": "Whale shark best month; manta peak",
+          "marine_life": "Whale sharks possible (rarer than historically); manta peak",
           "conditions": "Calm, clear; excellent all-round",
           "visibility_m": 32
         },
@@ -2774,10 +2842,13 @@
         "lat": -4.68,
         "lng": 55.49
       },
-      "current_strength": "Strong",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/10_20141024_091056-Plaque_d%27Inauguration_Cascade_waterworks_12_Dec_1975.jpg/960px-10_20141024_091056-Plaque_d%27Inauguration_Cascade_waterworks_12_Dec_1975.jpg",
       "image_credit": "Photo: Lmulud (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Granite sites mild-moderate; current at Shark Bank/Brissare",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Aliwal Shoal",
@@ -2890,10 +2961,13 @@
         "lat": -30.27,
         "lng": 30.83
       },
-      "current_strength": "Strong",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Balistoides_conspicillum_387907584.jpg/960px-Balistoides_conspicillum_387907584.jpg",
       "image_credit": "Photo: Andra Waagmeester (CC0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Moderate-to-strong drift and surge",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Ningaloo Reef",
@@ -2917,7 +2991,7 @@
         "Dec": 27
       },
       "currents": "Sheltered lagoon mild; outer reef and drift sites moderate",
-      "best_months": "Mar-Aug (whale sharks)",
+      "best_months": "Mar-Jul (whale sharks)",
       "wetsuit": "3mm, 5mm winter",
       "signature_species": [
         "whale shark",
@@ -2972,8 +3046,8 @@
           "visibility_m": 32
         },
         "Aug": {
-          "rating": "Peak",
-          "marine_life": "Whale sharks, humpback whales",
+          "rating": "Good",
+          "marine_life": "Humpback whales; whale sharks rare (season ends Jul)",
           "conditions": "Coolest, great viz",
           "visibility_m": 18
         },
@@ -3009,7 +3083,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/00_0856_Cape_Range_National_Park_in_Westaustralien_-_Mangrove_Bay.jpg/960px-00_0856_Cape_Range_National_Park_in_Westaustralien_-_Mangrove_Bay.jpg",
       "image_credit": "Photo: W. Bulach (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Lagoon gentle; tidal passes need slack-tide planning",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Gozo & Malta",
@@ -3124,7 +3201,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Luftaufnahmen_Flug_Hamburg_Malta_2019_by-RaBoe_149.jpg/960px-Luftaufnahmen_Flug_Hamburg_Malta_2019_by-RaBoe_149.jpg",
       "image_credit": "Photo: © Ra Boe / Wikipedia (CC BY-SA 3.0 de) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Mild currents, beginner-friendly shore diving",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Medes Islands",
@@ -3239,7 +3319,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Cerianthus_membranaceus_3017387.jpg/960px-Cerianthus_membranaceus_3017387.jpg",
       "image_credit": "Photo: Julien Renoult (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Protected reserve, mild except pinnacles",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Palau",
@@ -3354,7 +3437,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Bai_er_a_Ngesechel_a_Cherechar_in_Belau_National_Museum%2C_Koror%2C_Palau_%289720085543%29.jpg/960px-Bai_er_a_Ngesechel_a_Cherechar_in_Belau_National_Museum%2C_Koror%2C_Palau_%289720085543%29.jpg",
       "image_credit": "Photo: Matt Kieffer from London, United Kingdom (CC BY-SA 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Blue Corner up to 3 knots; reef hooks essential",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Truk (Chuuk) Lagoon",
@@ -3468,7 +3554,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/ISS044-E-56226_-_View_of_Earth.jpg/960px-ISS044-E-56226_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Sheltered lagoon, minimal current on wrecks",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Cenotes of Yucatán Peninsula",
@@ -3580,10 +3669,13 @@
         "lat": 20.3,
         "lng": -87.4
       },
-      "current_strength": "Medium",
+      "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Cenote_Nohoch_Nah_Chich.jpg/960px-Cenote_Nohoch_Nah_Chich.jpg",
       "image_credit": "Photo: Offthebeatonpath (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Calm still water, no current or waves",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Azores",
@@ -3698,7 +3790,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Dolphines%2C_Pico_island_-_panoramio.jpg/960px-Dolphines%2C_Pico_island_-_panoramio.jpg",
       "image_credit": "Photo: Eduardo Manchon (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Princess Alice strong currents, experienced only",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Lundy Island",
@@ -3809,10 +3904,13 @@
         "lat": 51.18,
         "lng": -4.67
       },
-      "current_strength": "Strong",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Coincya_%28was_Rhynchosinapis%29%2C_Lundy_cabbage%2C_2005_%2833624929531%29.jpg/960px-Coincya_%28was_Rhynchosinapis%29%2C_Lundy_cabbage%2C_2005_%2833624929531%29.jpg",
       "image_credit": "Photo: Dr Mary Gillham Archive Project (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Tidal Bristol Channel; seal coves sheltered",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Scapa Flow",
@@ -3923,10 +4021,13 @@
         "lat": 58.9,
         "lng": -3.18
       },
-      "current_strength": "Low",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Echinus_esculentus_27006456.jpg/960px-Echinus_esculentus_27006456.jpg",
       "image_credit": "Photo: Bernard Picton (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Sheltered Flow centre; blockship channels slack-only",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Silfra Fissure",
@@ -4038,7 +4139,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Iceland_%2819857303599%29.jpg/960px-Iceland_%2819857303599%29.jpg",
       "image_credit": "Photo: Sergei Gussev (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Gentle drift current only",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Vancouver Island",
@@ -4153,7 +4257,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/ISS047-E-118177_-_View_of_Earth.jpg/960px-ISS047-E-118177_-_View_of_Earth.jpg",
       "image_credit": "Photo: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Tidal rapids; current-timed sites",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Red Sea (Egypt)",
@@ -4214,7 +4321,7 @@
         },
         "May": {
           "rating": "Peak",
-          "marine_life": "Whale sharks building; hammerheads ramping at offshore reefs",
+          "marine_life": "Whale sharks building; hammerhead schooling begins (best May-Jul)",
           "conditions": "Warm, calm crossings",
           "visibility_m": 18
         },
@@ -4226,13 +4333,13 @@
         },
         "Jul": {
           "rating": "Good",
-          "marine_life": "Hammerhead peak (Daedalus/Brothers); whale sharks",
+          "marine_life": "Hammerhead schooling (Daedalus/Brothers), season tail; whale sharks",
           "conditions": "Hottest air; calmest crossings; slight plankton dip",
           "visibility_m": 10
         },
         "Aug": {
           "rating": "Good",
-          "marine_life": "Hammerheads continue; coral spawning (lunar)",
+          "marine_life": "Hammerheads taper; coral spawning (lunar)",
           "conditions": "Warmest water ~30C shallows; calm",
           "visibility_m": 18
         },
@@ -4265,10 +4372,13 @@
         "lat": 27.9,
         "lng": 34.3
       },
-      "current_strength": "Low",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Al-Mustafa_Mosque_in_Sharm_El-Sheikh3.jpg/960px-Al-Mustafa_Mosque_in_Sharm_El-Sheikh3.jpg",
       "image_credit": "Photo: patano (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Sheltered north; strong drift at Brothers/Daedalus/Elphinstone",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Fiji",
@@ -4381,7 +4491,10 @@
         "lat": -17.8,
         "lng": 178.1
       },
-      "current_strength": "Strong"
+      "current_strength": "Strong",
+      "current_note": "Current-driven drift dives feed the soft corals",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "French Polynesia",
@@ -4494,7 +4607,10 @@
         "lat": -16.0,
         "lng": -146.0
       },
-      "current_strength": "Strong"
+      "current_strength": "Strong",
+      "current_note": "Tiputa/Fakarava pass currents can be mask-ripping",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Guadalcanal & Western Province",
@@ -4607,7 +4723,10 @@
         "lat": -8.8,
         "lng": 158.5
       },
-      "current_strength": "Low"
+      "current_strength": "Low",
+      "current_note": "Fairly easy diving, not much current",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Moorea",
@@ -4723,7 +4842,10 @@
       "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/20221026_142420_Belv%C3%A9d%C3%A8re_de_Opunohu.jpg/960px-20221026_142420_Belv%C3%A9d%C3%A8re_de_Opunohu.jpg",
       "image_credit": "Photo: tbo47 (CC0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Minimal current, some surge; beginner-friendly",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Poor Knights Islands",
@@ -4838,7 +4960,10 @@
       "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Anagotus_turbotti_123119928.jpg/960px-Anagotus_turbotti_123119928.jpg",
       "image_credit": "Photo: Shaun Lee (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Arches/headlands can run strong; most sites moderate",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Apo Island & Dumaguete",
@@ -4950,10 +5075,13 @@
         "lat": 9.1,
         "lng": 123.27
       },
-      "current_strength": "Low",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Apo_Island_-_Negros_-_panoramio.jpg/960px-Apo_Island_-_Negros_-_panoramio.jpg",
       "image_credit": "Photo: jackylim (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Apo points strong drift; Dauin muck calm",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Bunaken National Marine Park",
@@ -5065,10 +5193,13 @@
         "lat": 1.62,
         "lng": 124.76
       },
-      "current_strength": "Low",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Bahia_Bunaken_-_panoramio.jpg/960px-Bahia_Bunaken_-_panoramio.jpg",
       "image_credit": "Photo: kikofjl (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Wall drift, usually mild, occasionally strong",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "Gili Islands & Lombok",
@@ -5180,10 +5311,13 @@
         "lat": -8.35,
         "lng": 116.04
       },
-      "current_strength": "Low",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Attractive_Growth_%28220846841%29.jpeg/960px-Attractive_Growth_%28220846841%29.jpeg",
       "image_credit": "Photo: Tilonaut (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Lombok Strait drift common; training sites gentle",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Malapascua Island",
@@ -5206,7 +5340,7 @@
         "Nov": 28,
         "Dec": 28
       },
-      "currents": "Moderate currents at Monad Shoal; some sites can be strong",
+      "currents": "Gentle at the dawn shoal dives; currents pick up around full moon",
       "best_months": "Oct-May",
       "wetsuit": "3mm",
       "signature_species": [
@@ -5216,11 +5350,11 @@
         "seahorse",
         "mandarinfish"
       ],
-      "highlights": "Year-round dawn thresher sharks at Monad Shoal plus rich macro life",
+      "highlights": "Year-round dawn thresher sharks at Kimud Shoal (formerly Monad, now visited by tiger sharks), plus rich macro",
       "monthly": {
         "Jan": {
           "rating": "Good",
-          "marine_life": "Thresher sharks at dawn, macro",
+          "marine_life": "Threshers at dawn (Kimud Shoal), macro",
           "conditions": "NE wind, decent visibility",
           "visibility_m": 16
         },
@@ -5295,10 +5429,13 @@
         "lat": 11.32,
         "lng": 124.12
       },
-      "current_strength": "Strong",
+      "current_strength": "Low",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Bangka_from_Bantayan_-_panoramio.jpg/960px-Bangka_from_Bantayan_-_panoramio.jpg",
       "image_credit": "Photo: Robert Breivik (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Shoal dawn dives gentle; current mainly at full moon",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Similan Islands",
@@ -5410,10 +5547,13 @@
         "lat": 8.65,
         "lng": 97.65
       },
-      "current_strength": "Strong",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bluefin_trevally_trio.jpg/960px-Bluefin_trevally_trio.jpg",
       "image_credit": "Photo: TANAKA Juuyoh (田中十洋) (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Mostly mild-moderate; strong at Koh Tachai/Richelieu",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Tubbataha Reefs Natural Park",
@@ -5528,7 +5668,10 @@
       "current_strength": "Strong",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Anous_minutus_by_Gregg_Yan_01.jpg/960px-Anous_minutus_by_Gregg_Yan_01.jpg",
       "image_credit": "Photo: Gregg Yan (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Persistent currents; all dives drift with live boat",
+      "data_confidence": "high",
+      "last_verified": "2026-07"
     },
     {
       "name": "Lord Howe Island",
@@ -5641,10 +5784,13 @@
         "lat": -31.55,
         "lng": 159.08
       },
-      "current_strength": "Strong",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bicycle_Rentals_%2832787183841%29.jpg/960px-Bicycle_Rentals_%2832787183841%29.jpg",
       "image_credit": "Photo: David Stanley from Nanaimo, Canada (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "Island sites sheltered; strong drift at Ball's Pyramid",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     },
     {
       "name": "South West Rocks",
@@ -5668,7 +5814,7 @@
         "Dec": 23
       },
       "currents": "Fish Rock Cave can have strong tidal currents and surge",
-      "best_months": "Feb-Jun (warm water, grey nurse aggregations)",
+      "best_months": "May-Dec (grey nurse aggregations); Feb-Apr warmest water",
       "wetsuit": "5-7mm",
       "signature_species": [
         "grey nurse shark",
@@ -5687,68 +5833,68 @@
           "visibility_m": 18
         },
         "Feb": {
-          "rating": "Peak",
-          "marine_life": "Grey nurse sharks, turtles, wobbegongs",
+          "rating": "Good",
+          "marine_life": "Warm EAC; turtles, rays; fewer grey nurse",
           "conditions": "Warm, best viz with EAC",
           "visibility_m": 32
         },
         "Mar": {
-          "rating": "Peak",
-          "marine_life": "Grey nurse sharks, rays, turtles",
+          "rating": "Good",
+          "marine_life": "Turtles, rays; grey nurse returning late month",
           "conditions": "Warm, good viz, EAC influence",
           "visibility_m": 24
         },
         "Apr": {
-          "rating": "Peak",
-          "marine_life": "Grey nurse sharks, turtles",
+          "rating": "Good",
+          "marine_life": "Grey nurse building; turtles",
           "conditions": "Warm, good viz, calming seas",
           "visibility_m": 24
         },
         "May": {
-          "rating": "Good",
-          "marine_life": "Grey nurse sharks, wobbegongs",
+          "rating": "Peak",
+          "marine_life": "Grey nurse aggregations peak begins",
           "conditions": "Cooling, good viz",
           "visibility_m": 24
         },
         "Jun": {
-          "rating": "Good",
-          "marine_life": "Grey nurse sharks, humpbacks passing",
+          "rating": "Peak",
+          "marine_life": "Grey nurse abundant; humpbacks passing",
           "conditions": "Cooler, viz variable",
           "visibility_m": 16
         },
         "Jul": {
-          "rating": "Shoulder",
-          "marine_life": "Grey nurse sharks, whales passing",
+          "rating": "Good",
+          "marine_life": "Grey nurse abundant; whales passing",
           "conditions": "Cold, viz variable, swell",
           "visibility_m": 16
         },
         "Aug": {
-          "rating": "Shoulder",
-          "marine_life": "Grey nurse sharks, whales",
+          "rating": "Good",
+          "marine_life": "Grey nurse abundant; whales",
           "conditions": "Coldest, winter swell",
           "visibility_m": 18
         },
         "Sep": {
-          "rating": "Shoulder",
-          "marine_life": "Grey nurse sharks, whales returning",
+          "rating": "Good",
+          "marine_life": "Grey nurse abundant; whales returning",
           "conditions": "Cold, viz variable",
           "visibility_m": 16
         },
         "Oct": {
-          "rating": "Good",
-          "marine_life": "Grey nurse sharks, rays",
+          "rating": "Peak",
+          "marine_life": "Grey nurse resting in cave gutters; rays",
           "conditions": "Warming, improving conditions",
           "visibility_m": 16
         },
         "Nov": {
-          "rating": "Good",
-          "marine_life": "Grey nurse sharks, turtles, rays",
+          "rating": "Peak",
+          "marine_life": "Grey nurse; turtles, rays",
           "conditions": "Warming, good viz",
           "visibility_m": 24
         },
         "Dec": {
           "rating": "Good",
-          "marine_life": "Grey nurse sharks, turtles",
+          "marine_life": "Grey nurse in shallow gutters; turtles",
           "conditions": "Warm, EAC arriving, good viz",
           "visibility_m": 24
         }
@@ -5757,10 +5903,13 @@
         "lat": -30.93,
         "lng": 153.07
       },
-      "current_strength": "Strong",
+      "current_strength": "Medium",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Caladenia_catenata_petals_%2836073397306%29.jpg/960px-Caladenia_catenata_petals_%2836073397306%29.jpg",
       "image_credit": "Photo: John Tann from Mullumbimby, Australia (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "current_note": "EAC variable; Fish Rock has sheltered gutters",
+      "data_confidence": "medium",
+      "last_verified": "2026-07"
     }
   ]
 }

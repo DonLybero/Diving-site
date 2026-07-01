@@ -1,0 +1,302 @@
+{
+ "Sipadan Island": {
+  "current_strength": "Strong",
+  "current_note": "Barracuda Point/South Point strong drift; AOW mandatory",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Great Barrier Reef": {
+  "current_strength": "Medium",
+  "current_note": "Cod Hole gentle; strong drift only at Osprey/Coral Sea",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Komodo National Park": {
+  "current_strength": "Strong",
+  "current_note": "Ripping tidal currents, reef hooks standard",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Raja Ampat": {
+  "current_strength": "Strong",
+  "current_note": "Currents define diving; reef hooks at Blue Magic/Sardine",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Cocos Island": {
+  "current_strength": "Strong",
+  "current_note": "Strong wet-season currents, advanced-only pelagic diving",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Galapagos Islands": {
+  "current_strength": "Strong",
+  "current_note": "Humboldt/Cromwell currents; Darwin/Wolf advanced only",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Maldives": {
+  "current_strength": "Medium",
+  "current_note": "Tidal channel currents, manageable drift; strong at kandus",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Seychelles": {
+  "current_strength": "Medium",
+  "current_note": "Granite sites mild-moderate; current at Shark Bank/Brissare",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Palau": {
+  "current_strength": "Strong",
+  "current_note": "Blue Corner up to 3 knots; reef hooks essential",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Truk (Chuuk) Lagoon": {
+  "current_strength": "Low",
+  "current_note": "Sheltered lagoon, minimal current on wrecks",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Red Sea (Egypt)": {
+  "current_strength": "Medium",
+  "current_note": "Sheltered north; strong drift at Brothers/Daedalus/Elphinstone",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Fernando de Noronha": {
+  "current_strength": "Medium",
+  "current_note": "Leeward mild; windward and Dec-Mar currents stronger",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Bahamas": {
+  "current_strength": "Medium",
+  "current_note": "Gulf Stream drift at Bimini; Tiger Beach variable",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Bay Islands": {
+  "current_strength": "Low",
+  "current_note": "Sheltered fringing reefs, light currents",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Bonaire": {
+  "current_strength": "Low",
+  "current_note": "Protected leeward shore diving, minimal current",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Cayman Islands": {
+  "current_strength": "Low",
+  "current_note": "Limited tidal range, gentle currents on walls",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Cozumel": {
+  "current_strength": "Strong",
+  "current_note": "Yucatan Current defines drift diving here",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Great Blue Hole": {
+  "current_strength": "Low",
+  "current_note": "Minimal current; depth/darkness is the challenge",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Roatán": {
+  "current_strength": "Low",
+  "current_note": "Calm sheltered sites, light currents",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Utila": {
+  "current_strength": "Low",
+  "current_note": "Calm south-coast sites, low current",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Whitsunday Islands": {
+  "current_strength": "Medium",
+  "current_note": "Large tidal range drives light-to-strong currents",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Heron Island": {
+  "current_strength": "Low",
+  "current_note": "Gentle tidal drift dives, beginner-friendly",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Okinawa Islands": {
+  "current_strength": "Strong",
+  "current_note": "Yonaguni fast currents, drift diving",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Socorro Island": {
+  "current_strength": "Strong",
+  "current_note": "Exposed open-Pacific pinnacles, advanced",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Sea of Cortez": {
+  "current_strength": "Medium",
+  "current_note": "Signature sites mild-moderate; seamounts stronger",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Maui & Kona": {
+  "current_strength": "Low",
+  "current_note": "Calm leeward coasts; current only at exposed sites",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Chagos Archipelago / BIOT": {
+  "current_strength": "Strong",
+  "current_note": "Oceanic atoll channels and exposed walls",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Aliwal Shoal": {
+  "current_strength": "Medium",
+  "current_note": "Moderate-to-strong drift and surge",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Ningaloo Reef": {
+  "current_strength": "Low",
+  "current_note": "Lagoon gentle; tidal passes need slack-tide planning",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Gozo & Malta": {
+  "current_strength": "Low",
+  "current_note": "Mild currents, beginner-friendly shore diving",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Medes Islands": {
+  "current_strength": "Low",
+  "current_note": "Protected reserve, mild except pinnacles",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Cenotes of Yucatán Peninsula": {
+  "current_strength": "Low",
+  "current_note": "Calm still water, no current or waves",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Azores": {
+  "current_strength": "Strong",
+  "current_note": "Princess Alice strong currents, experienced only",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Lundy Island": {
+  "current_strength": "Medium",
+  "current_note": "Tidal Bristol Channel; seal coves sheltered",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Scapa Flow": {
+  "current_strength": "Medium",
+  "current_note": "Sheltered Flow centre; blockship channels slack-only",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Silfra Fissure": {
+  "current_strength": "Low",
+  "current_note": "Gentle drift current only",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Vancouver Island": {
+  "current_strength": "Strong",
+  "current_note": "Tidal rapids; current-timed sites",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Fiji": {
+  "current_strength": "Strong",
+  "current_note": "Current-driven drift dives feed the soft corals",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "French Polynesia": {
+  "current_strength": "Strong",
+  "current_note": "Tiputa/Fakarava pass currents can be mask-ripping",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Guadalcanal & Western Province": {
+  "current_strength": "Low",
+  "current_note": "Fairly easy diving, not much current",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Moorea": {
+  "current_strength": "Low",
+  "current_note": "Minimal current, some surge; beginner-friendly",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Poor Knights Islands": {
+  "current_strength": "Medium",
+  "current_note": "Arches/headlands can run strong; most sites moderate",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Apo Island & Dumaguete": {
+  "current_strength": "Medium",
+  "current_note": "Apo points strong drift; Dauin muck calm",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Bunaken National Marine Park": {
+  "current_strength": "Medium",
+  "current_note": "Wall drift, usually mild, occasionally strong",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "Gili Islands & Lombok": {
+  "current_strength": "Medium",
+  "current_note": "Lombok Strait drift common; training sites gentle",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Malapascua Island": {
+  "current_strength": "Low",
+  "current_note": "Shoal dawn dives gentle; current mainly at full moon",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Similan Islands": {
+  "current_strength": "Medium",
+  "current_note": "Mostly mild-moderate; strong at Koh Tachai/Richelieu",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Tubbataha Reefs Natural Park": {
+  "current_strength": "Strong",
+  "current_note": "Persistent currents; all dives drift with live boat",
+  "confidence": "high",
+  "verified": "2026-07"
+ },
+ "Lord Howe Island": {
+  "current_strength": "Medium",
+  "current_note": "Island sites sheltered; strong drift at Ball's Pyramid",
+  "confidence": "medium",
+  "verified": "2026-07"
+ },
+ "South West Rocks": {
+  "current_strength": "Medium",
+  "current_note": "EAC variable; Fish Rock has sheltered gutters",
+  "confidence": "medium",
+  "verified": "2026-07"
+ }
+}

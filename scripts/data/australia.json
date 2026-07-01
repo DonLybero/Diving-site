@@ -1,1 +1,673 @@
-[{"name":"Whitsunday Islands","country":"Australia","region":"Coral Sea / Great Barrier Reef","water_type":"tropical","difficulty":"beginner","access":"liveaboard/day-boat","monthly_temp_c":{"Jan":29,"Feb":29,"Mar":28,"Apr":27,"May":25,"Jun":24,"Jul":23,"Aug":23,"Sep":24,"Oct":25,"Nov":27,"Dec":28},"currents":"Generally mild on reef; outer reef can have moderate tidal currents","best_months":"Jun-Oct (best viz, minke whales Jun-Jul)","wetsuit":"3mm summer, 5mm winter","signature_species":["dwarf minke whale","humpback whale","manta ray","green turtle","reef shark","Maori wrasse"],"highlights":"Heart Reef and Hardy Reef coral gardens with winter whale encounters","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Coral, reef fish, turtles","conditions":"Warm; wet/cyclone season, viz variable"},"Feb":{"rating":"Low","marine_life":"Reef fish, turtles","conditions":"Peak cyclone season, rain, lower viz"},"Mar":{"rating":"Shoulder","marine_life":"Reef fish, turtles, rays","conditions":"Wet season easing, warm water"},"Apr":{"rating":"Good","marine_life":"Turtles, reef sharks, rays","conditions":"Improving viz, calmer seas"},"May":{"rating":"Good","marine_life":"Turtles, reef sharks","conditions":"Dry season begins, good viz"},"Jun":{"rating":"Peak","marine_life":"Dwarf minke whales, humpbacks arriving","conditions":"Excellent viz, cooler, calm"},"Jul":{"rating":"Peak","marine_life":"Minke and humpback whales","conditions":"Best viz, dry, cooler water"},"Aug":{"rating":"Peak","marine_life":"Humpback whales, turtles","conditions":"Great viz, dry, calm seas"},"Sep":{"rating":"Peak","marine_life":"Humpback whales, mantas, turtles","conditions":"Excellent viz, warming, calm"},"Oct":{"rating":"Good","marine_life":"Mantas, turtles, reef sharks","conditions":"Good viz, warming, calm"},"Nov":{"rating":"Good","marine_life":"Coral spawning, turtles","conditions":"Warm, viz good before wet season"},"Dec":{"rating":"Shoulder","marine_life":"Reef fish, turtles","conditions":"Warm, wet season onset, viz variable"}}},{"name":"Heron Island","country":"Australia","region":"Coral Sea / Southern Great Barrier Reef","water_type":"tropical/subtropical","difficulty":"beginner","access":"shore/day-boat","monthly_temp_c":{"Jan":27,"Feb":28,"Mar":27,"Apr":26,"May":24,"Jun":23,"Jul":22,"Aug":21,"Sep":22,"Oct":23,"Nov":25,"Dec":26},"currents":"Mild to moderate tidal currents at channel sites like Heron Bommie","best_months":"Sep-Nov (mantas), Jan-Mar (turtle nesting/hatching)","wetsuit":"3mm summer, 5mm winter","signature_species":["manta ray","green turtle","loggerhead turtle","reef shark","epaulette shark","cod"],"highlights":"Coral cay with shore diving, manta cleaning stations and turtle nesting","monthly":{"Jan":{"rating":"Good","marine_life":"Turtle nesting, reef sharks, rays","conditions":"Warm, summer, viz moderate-good"},"Feb":{"rating":"Good","marine_life":"Turtle nesting/hatching, sharks","conditions":"Warmest water, occasional rain"},"Mar":{"rating":"Good","marine_life":"Turtle hatchlings, reef fish","conditions":"Warm, viz good"},"Apr":{"rating":"Good","marine_life":"Reef sharks, turtles, rays","conditions":"Calmer, improving viz"},"May":{"rating":"Good","marine_life":"Turtles, reef sharks","conditions":"Cooling, good viz"},"Jun":{"rating":"Good","marine_life":"Humpback whales passing, turtles","conditions":"Cooler, clear, calm"},"Jul":{"rating":"Good","marine_life":"Humpback whales, reef sharks","conditions":"Coolest water, excellent viz"},"Aug":{"rating":"Good","marine_life":"Humpback whales, turtles","conditions":"Cool, clear, calm"},"Sep":{"rating":"Peak","marine_life":"Manta rays arrive, whales, turtles","conditions":"Excellent viz, warming"},"Oct":{"rating":"Peak","marine_life":"Manta rays, turtles, sharks","conditions":"Great viz, calm, warming"},"Nov":{"rating":"Peak","marine_life":"Mantas, coral spawning, turtle nesting","conditions":"Warm, good viz, calm"},"Dec":{"rating":"Good","marine_life":"Turtle nesting, mantas, sharks","conditions":"Warm summer, viz good"}}},{"name":"Ningaloo Reef","country":"Australia","region":"Indian Ocean / Western Australia","water_type":"tropical/subtropical","difficulty":"beginner","access":"day-boat/shore","monthly_temp_c":{"Jan":28,"Feb":29,"Mar":28,"Apr":27,"May":26,"Jun":24,"Jul":23,"Aug":22,"Sep":22,"Oct":23,"Nov":25,"Dec":27},"currents":"Sheltered lagoon mild; outer reef and drift sites moderate","best_months":"Mar-Aug (whale sharks)","wetsuit":"3mm, 5mm winter","signature_species":["whale shark","humpback whale","manta ray","green turtle","reef shark","dugong"],"highlights":"Whale shark snorkeling on the reef plus year-round mantas and turtles","monthly":{"Jan":{"rating":"Shoulder","marine_life":"Mantas, turtles, reef fish","conditions":"Hot, cyclone risk, viz variable"},"Feb":{"rating":"Shoulder","marine_life":"Mantas, turtles, nesting turtles","conditions":"Warmest, cyclone season, humid"},"Mar":{"rating":"Good","marine_life":"Whale sharks arrive, coral spawning","conditions":"Warm, viz improving"},"Apr":{"rating":"Peak","marine_life":"Whale sharks, mantas, turtles","conditions":"Great viz, calm, warm"},"May":{"rating":"Peak","marine_life":"Whale sharks, mantas, turtles","conditions":"Excellent viz, calm seas"},"Jun":{"rating":"Peak","marine_life":"Whale sharks, humpbacks arrive","conditions":"Cooler, good viz, calm"},"Jul":{"rating":"Peak","marine_life":"Whale sharks, humpback whales","conditions":"Cool, clear, excellent viz"},"Aug":{"rating":"Peak","marine_life":"Whale sharks, humpback whales","conditions":"Coolest, great viz"},"Sep":{"rating":"Good","marine_life":"Humpback whales, mantas, turtles","conditions":"Warming, good viz, calm"},"Oct":{"rating":"Good","marine_life":"Humpback whales, mantas","conditions":"Warming, good viz"},"Nov":{"rating":"Good","marine_life":"Mantas, turtle nesting begins","conditions":"Warm, calm, viz good"},"Dec":{"rating":"Shoulder","marine_life":"Mantas, nesting turtles","conditions":"Hot, cyclone risk onset"}}},{"name":"South West Rocks","country":"Australia","region":"Tasman Sea / New South Wales","water_type":"subtropical/temperate","difficulty":"advanced","access":"day-boat","monthly_temp_c":{"Jan":24,"Feb":25,"Mar":24,"Apr":23,"May":22,"Jun":21,"Jul":20,"Aug":19,"Sep":19,"Oct":20,"Nov":22,"Dec":23},"currents":"Fish Rock Cave can have strong tidal currents and surge","best_months":"Feb-Jun (warm water, grey nurse aggregations)","wetsuit":"5-7mm","signature_species":["grey nurse shark","black cod","wobbegong","green turtle","eagle ray","bull ray"],"highlights":"Fish Rock Cave swim-through with grey nurse shark aggregations","monthly":{"Jan":{"rating":"Good","marine_life":"Grey nurse sharks, turtles, rays","conditions":"Warmest, EAC viz, can be strong current"},"Feb":{"rating":"Peak","marine_life":"Grey nurse sharks, turtles, wobbegongs","conditions":"Warm, best viz with EAC"},"Mar":{"rating":"Peak","marine_life":"Grey nurse sharks, rays, turtles","conditions":"Warm, good viz, EAC influence"},"Apr":{"rating":"Peak","marine_life":"Grey nurse sharks, turtles","conditions":"Warm, good viz, calming seas"},"May":{"rating":"Good","marine_life":"Grey nurse sharks, wobbegongs","conditions":"Cooling, good viz"},"Jun":{"rating":"Good","marine_life":"Grey nurse sharks, humpbacks passing","conditions":"Cooler, viz variable"},"Jul":{"rating":"Shoulder","marine_life":"Grey nurse sharks, whales passing","conditions":"Cold, viz variable, swell"},"Aug":{"rating":"Shoulder","marine_life":"Grey nurse sharks, whales","conditions":"Coldest, winter swell"},"Sep":{"rating":"Shoulder","marine_life":"Grey nurse sharks, whales returning","conditions":"Cold, viz variable"},"Oct":{"rating":"Good","marine_life":"Grey nurse sharks, rays","conditions":"Warming, improving conditions"},"Nov":{"rating":"Good","marine_life":"Grey nurse sharks, turtles, rays","conditions":"Warming, good viz"},"Dec":{"rating":"Good","marine_life":"Grey nurse sharks, turtles","conditions":"Warm, EAC arriving, good viz"}}},{"name":"Aliwal Shoal","country":"South Africa","region":"Indian Ocean / KwaZulu-Natal","water_type":"subtropical","difficulty":"intermediate","access":"day-boat","monthly_temp_c":{"Jan":26,"Feb":27,"Mar":26,"Apr":25,"May":23,"Jun":22,"Jul":21,"Aug":21,"Sep":22,"Oct":23,"Nov":24,"Dec":25},"currents":"Often strong; surf launch by RIB; variable drift conditions","best_months":"Jun-Jul (sardine run), Jun-Nov (raggies)","wetsuit":"5-7mm","signature_species":["ragged-tooth shark","tiger shark","sardine run","blacktip shark","humpback whale","bottlenose dolphin"],"highlights":"Sardine run bait balls plus raggie and baited tiger shark dives","monthly":{"Jan":{"rating":"Good","marine_life":"Tiger sharks, blacktips, dolphins","conditions":"Warm, viz good, summer current"},"Feb":{"rating":"Good","marine_life":"Tiger sharks, blacktips, rays","conditions":"Warmest, good viz, occasional rain"},"Mar":{"rating":"Good","marine_life":"Tiger sharks, blacktips, dolphins","conditions":"Warm, good viz, rainy spells"},"Apr":{"rating":"Good","marine_life":"Tiger sharks, blacktips","conditions":"Warm, good viz"},"May":{"rating":"Good","marine_life":"Raggies arriving, blacktips","conditions":"Cooling, viz good"},"Jun":{"rating":"Peak","marine_life":"Sardine run, raggies, dolphins, whales","conditions":"Cool water, bait balls, viz variable"},"Jul":{"rating":"Peak","marine_life":"Sardine run, raggies, humpback whales","conditions":"Cold, action-packed, viz variable"},"Aug":{"rating":"Good","marine_life":"Raggies, humpback whales","conditions":"Cool, viz variable"},"Sep":{"rating":"Good","marine_life":"Raggies, humpback whales","conditions":"Cool, improving viz"},"Oct":{"rating":"Good","marine_life":"Raggies, blacktips, dolphins","conditions":"Warming, good viz"},"Nov":{"rating":"Good","marine_life":"Raggies departing, tigers returning","conditions":"Warming, good viz"},"Dec":{"rating":"Good","marine_life":"Tiger sharks, blacktips, dolphins","conditions":"Warm, good viz, summer onset"}}},{"name":"Fernando de Noronha","country":"Brazil","region":"Atlantic Ocean / Brazil","water_type":"tropical","difficulty":"beginner","access":"day-boat","monthly_temp_c":{"Jan":28,"Feb":28,"Mar":28,"Apr":28,"May":28,"Jun":27,"Jul":27,"Aug":26,"Sep":26,"Oct":27,"Nov":27,"Dec":28},"currents":"Generally mild; some sites moderate current and swell","best_months":"Aug-Dec (dry season, best viz)","wetsuit":"3mm","signature_species":["spinner dolphin","green turtle","hawksbill turtle","lemon shark","nurse shark","reef shark"],"highlights":"Huge spinner dolphin pods with sharks, turtles and 30m+ visibility","monthly":{"Jan":{"rating":"Good","marine_life":"Spinner dolphins, turtles, sharks","conditions":"Warm, rainy season onset, good viz"},"Feb":{"rating":"Shoulder","marine_life":"Spinner dolphins, turtles","conditions":"Rainy season, viz variable"},"Mar":{"rating":"Shoulder","marine_life":"Spinner dolphins, turtles, nesting","conditions":"Wettest, swell, viz reduced"},"Apr":{"rating":"Shoulder","marine_life":"Spinner dolphins, turtles","conditions":"Rainy, swell, viz variable"},"May":{"rating":"Shoulder","marine_life":"Spinner dolphins, turtles","conditions":"Rain easing, viz improving"},"Jun":{"rating":"Good","marine_life":"Spinner dolphins, turtles, sharks","conditions":"Drier, viz improving, calmer"},"Jul":{"rating":"Good","marine_life":"Spinner dolphins, turtles, sharks","conditions":"Dry season, good viz"},"Aug":{"rating":"Peak","marine_life":"Spinner dolphins, sharks, turtles","conditions":"Dry, excellent viz 30m+, calm"},"Sep":{"rating":"Peak","marine_life":"Spinner dolphins, sharks, turtles","conditions":"Dry, excellent viz, calm seas"},"Oct":{"rating":"Peak","marine_life":"Spinner dolphins, lemon sharks, turtles","conditions":"Dry, superb viz, calm"},"Nov":{"rating":"Peak","marine_life":"Spinner dolphins, sharks, turtles","conditions":"Dry, excellent viz, calm"},"Dec":{"rating":"Good","marine_life":"Spinner dolphins, turtles, sharks","conditions":"Warm, dry tailing off, good viz"}}},{"name":"Sea of Cortez","country":"Mexico","region":"Gulf of California / Pacific","water_type":"subtropical","difficulty":"intermediate","access":"day-boat/liveaboard","monthly_temp_c":{"Jan":21,"Feb":20,"Mar":20,"Apr":21,"May":23,"Jun":26,"Jul":28,"Aug":29,"Sep":30,"Oct":28,"Nov":25,"Dec":23},"currents":"Variable; seamounts like El Bajo can have strong currents","best_months":"Aug-Nov (warm, clear), Oct-Apr whale sharks","wetsuit":"5-7mm winter, 3mm summer","signature_species":["California sea lion","mobula ray","whale shark","humpback whale","hammerhead shark","schooling jacks"],"highlights":"Los Islotes sea lions, mobula swarms and La Paz whale sharks","monthly":{"Jan":{"rating":"Good","marine_life":"Whale sharks, sea lions, humpbacks","conditions":"Cold, green water, viz moderate"},"Feb":{"rating":"Good","marine_life":"Whale sharks, sea lions, whales","conditions":"Coldest, viz moderate, plankton"},"Mar":{"rating":"Good","marine_life":"Whale sharks, sea lions, whales","conditions":"Cold, viz moderate, mobulas building"},"Apr":{"rating":"Good","marine_life":"Mobula rays, whale sharks, sea lions","conditions":"Cool, mobula aggregations, viz improving"},"May":{"rating":"Good","marine_life":"Mobula ray swarms, sea lions","conditions":"Warming, mobula schools, viz improving"},"Jun":{"rating":"Good","marine_life":"Mobula rays, sea lions","conditions":"Warming, viz improving; pupping nears"},"Jul":{"rating":"Shoulder","marine_life":"Sea lions (limited), reef fish","conditions":"Warm; Los Islotes pupping restrictions"},"Aug":{"rating":"Good","marine_life":"Hammerheads, jacks, reef fish","conditions":"Warm, clear, viz improving"},"Sep":{"rating":"Peak","marine_life":"Hammerheads, sea lions, jacks","conditions":"Warmest, excellent viz, calm"},"Oct":{"rating":"Peak","marine_life":"Sea lions, schooling fish, whale sharks","conditions":"Warm, best viz, calm seas"},"Nov":{"rating":"Peak","marine_life":"Sea lions, whale sharks, mobulas","conditions":"Warm, great viz, whale sharks return"},"Dec":{"rating":"Good","marine_life":"Whale sharks, sea lions","conditions":"Cooling, good viz, whale shark season"}}}]
+[
+ {
+  "name": "Whitsunday Islands",
+  "country": "Australia",
+  "region": "Coral Sea / Great Barrier Reef",
+  "water_type": "tropical",
+  "difficulty": "beginner",
+  "access": "liveaboard/day-boat",
+  "monthly_temp_c": {
+   "Jan": 29,
+   "Feb": 29,
+   "Mar": 28,
+   "Apr": 27,
+   "May": 25,
+   "Jun": 24,
+   "Jul": 23,
+   "Aug": 23,
+   "Sep": 24,
+   "Oct": 25,
+   "Nov": 27,
+   "Dec": 28
+  },
+  "currents": "Generally mild on reef; outer reef can have moderate tidal currents",
+  "best_months": "Jun-Oct (best viz, humpbacks Jun-Sep)",
+  "wetsuit": "3mm summer, 5mm winter",
+  "signature_species": [
+   "humpback whale",
+   "manta ray",
+   "green turtle",
+   "reef shark",
+   "Maori wrasse"
+  ],
+  "highlights": "Heart Reef and Hardy Reef coral gardens with winter whale encounters",
+  "monthly": {
+   "Jan": {
+    "rating": "Shoulder",
+    "marine_life": "Coral, reef fish, turtles",
+    "conditions": "Warm; wet/cyclone season, viz variable"
+   },
+   "Feb": {
+    "rating": "Low",
+    "marine_life": "Reef fish, turtles",
+    "conditions": "Peak cyclone season, rain, lower viz"
+   },
+   "Mar": {
+    "rating": "Shoulder",
+    "marine_life": "Reef fish, turtles, rays",
+    "conditions": "Wet season easing, warm water"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Turtles, reef sharks, rays",
+    "conditions": "Improving viz, calmer seas"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Turtles, reef sharks",
+    "conditions": "Dry season begins, good viz"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Humpback whales arriving, turtles",
+    "conditions": "Excellent viz, cooler, calm"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Humpback whales, reef sharks",
+    "conditions": "Best viz, dry, cooler water"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Humpback whales, turtles",
+    "conditions": "Great viz, dry, calm seas"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Humpback whales, mantas, turtles",
+    "conditions": "Excellent viz, warming, calm"
+   },
+   "Oct": {
+    "rating": "Good",
+    "marine_life": "Mantas, turtles, reef sharks",
+    "conditions": "Good viz, warming, calm"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Coral spawning, turtles",
+    "conditions": "Warm, viz good before wet season"
+   },
+   "Dec": {
+    "rating": "Shoulder",
+    "marine_life": "Reef fish, turtles",
+    "conditions": "Warm, wet season onset, viz variable"
+   }
+  }
+ },
+ {
+  "name": "Heron Island",
+  "country": "Australia",
+  "region": "Coral Sea / Southern Great Barrier Reef",
+  "water_type": "tropical/subtropical",
+  "difficulty": "beginner",
+  "access": "shore/day-boat",
+  "monthly_temp_c": {
+   "Jan": 27,
+   "Feb": 28,
+   "Mar": 27,
+   "Apr": 26,
+   "May": 24,
+   "Jun": 23,
+   "Jul": 22,
+   "Aug": 21,
+   "Sep": 22,
+   "Oct": 23,
+   "Nov": 25,
+   "Dec": 26
+  },
+  "currents": "Mild to moderate tidal currents at channel sites like Heron Bommie",
+  "best_months": "May-Aug (mantas), Jan-Mar (turtle nesting/hatching)",
+  "wetsuit": "3mm summer, 5mm winter",
+  "signature_species": [
+   "manta ray",
+   "green turtle",
+   "loggerhead turtle",
+   "reef shark",
+   "epaulette shark",
+   "cod"
+  ],
+  "highlights": "Coral cay with shore diving, manta cleaning stations and turtle nesting",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Turtle nesting, reef sharks, rays",
+    "conditions": "Warm, summer, viz moderate-good"
+   },
+   "Feb": {
+    "rating": "Good",
+    "marine_life": "Turtle nesting/hatching, sharks",
+    "conditions": "Warmest water, occasional rain"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Turtle hatchlings, reef fish",
+    "conditions": "Warm, viz good"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Reef sharks, turtles, rays",
+    "conditions": "Calmer, improving viz"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Manta season begins; turtles, reef sharks",
+    "conditions": "Cooling, good viz"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Manta rays; humpback whales passing",
+    "conditions": "Cooler, clear, calm"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Peak manta season; humpback whales",
+    "conditions": "Coolest water, excellent viz"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Peak mantas; humpback whales",
+    "conditions": "Cool, clear, calm"
+   },
+   "Sep": {
+    "rating": "Good",
+    "marine_life": "Mantas tail end; whales, turtles",
+    "conditions": "Excellent viz, warming"
+   },
+   "Oct": {
+    "rating": "Good",
+    "marine_life": "Turtle breeding begins; reef sharks",
+    "conditions": "Great viz, calm, warming"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Coral spawning; turtle nesting starts",
+    "conditions": "Warm, good viz, calm"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Turtle nesting, mantas, sharks",
+    "conditions": "Warm summer, viz good"
+   }
+  }
+ },
+ {
+  "name": "Ningaloo Reef",
+  "country": "Australia",
+  "region": "Indian Ocean / Western Australia",
+  "water_type": "tropical/subtropical",
+  "difficulty": "beginner",
+  "access": "day-boat/shore",
+  "monthly_temp_c": {
+   "Jan": 28,
+   "Feb": 29,
+   "Mar": 28,
+   "Apr": 27,
+   "May": 26,
+   "Jun": 24,
+   "Jul": 23,
+   "Aug": 22,
+   "Sep": 22,
+   "Oct": 23,
+   "Nov": 25,
+   "Dec": 27
+  },
+  "currents": "Sheltered lagoon mild; outer reef and drift sites moderate",
+  "best_months": "Mar-Jul (whale sharks)",
+  "wetsuit": "3mm, 5mm winter",
+  "signature_species": [
+   "whale shark",
+   "humpback whale",
+   "manta ray",
+   "green turtle",
+   "reef shark",
+   "dugong"
+  ],
+  "highlights": "Whale shark snorkeling on the reef plus year-round mantas and turtles",
+  "monthly": {
+   "Jan": {
+    "rating": "Shoulder",
+    "marine_life": "Mantas, turtles, reef fish",
+    "conditions": "Hot, cyclone risk, viz variable"
+   },
+   "Feb": {
+    "rating": "Shoulder",
+    "marine_life": "Mantas, turtles, nesting turtles",
+    "conditions": "Warmest, cyclone season, humid"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Whale sharks arrive, coral spawning",
+    "conditions": "Warm, viz improving"
+   },
+   "Apr": {
+    "rating": "Peak",
+    "marine_life": "Whale sharks, mantas, turtles",
+    "conditions": "Great viz, calm, warm"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Whale sharks, mantas, turtles",
+    "conditions": "Excellent viz, calm seas"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Whale sharks, humpbacks arrive",
+    "conditions": "Cooler, good viz, calm"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Whale sharks, humpback whales",
+    "conditions": "Cool, clear, excellent viz"
+   },
+   "Aug": {
+    "rating": "Good",
+    "marine_life": "Humpback whales; whale sharks rare (season ends Jul)",
+    "conditions": "Coolest, great viz"
+   },
+   "Sep": {
+    "rating": "Good",
+    "marine_life": "Humpback whales, mantas, turtles",
+    "conditions": "Warming, good viz, calm"
+   },
+   "Oct": {
+    "rating": "Good",
+    "marine_life": "Humpback whales, mantas",
+    "conditions": "Warming, good viz"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Mantas, turtle nesting begins",
+    "conditions": "Warm, calm, viz good"
+   },
+   "Dec": {
+    "rating": "Shoulder",
+    "marine_life": "Mantas, nesting turtles",
+    "conditions": "Hot, cyclone risk onset"
+   }
+  }
+ },
+ {
+  "name": "South West Rocks",
+  "country": "Australia",
+  "region": "Tasman Sea / New South Wales",
+  "water_type": "subtropical/temperate",
+  "difficulty": "advanced",
+  "access": "day-boat",
+  "monthly_temp_c": {
+   "Jan": 24,
+   "Feb": 25,
+   "Mar": 24,
+   "Apr": 23,
+   "May": 22,
+   "Jun": 21,
+   "Jul": 20,
+   "Aug": 19,
+   "Sep": 19,
+   "Oct": 20,
+   "Nov": 22,
+   "Dec": 23
+  },
+  "currents": "Fish Rock Cave can have strong tidal currents and surge",
+  "best_months": "May-Dec (grey nurse aggregations); Feb-Apr warmest water",
+  "wetsuit": "5-7mm",
+  "signature_species": [
+   "grey nurse shark",
+   "black cod",
+   "wobbegong",
+   "green turtle",
+   "eagle ray",
+   "bull ray"
+  ],
+  "highlights": "Fish Rock Cave swim-through with grey nurse shark aggregations",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Grey nurse sharks, turtles, rays",
+    "conditions": "Warmest, EAC viz, can be strong current"
+   },
+   "Feb": {
+    "rating": "Good",
+    "marine_life": "Warm EAC; turtles, rays; fewer grey nurse",
+    "conditions": "Warm, best viz with EAC"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Turtles, rays; grey nurse returning late month",
+    "conditions": "Warm, good viz, EAC influence"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Grey nurse building; turtles",
+    "conditions": "Warm, good viz, calming seas"
+   },
+   "May": {
+    "rating": "Peak",
+    "marine_life": "Grey nurse aggregations peak begins",
+    "conditions": "Cooling, good viz"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Grey nurse abundant; humpbacks passing",
+    "conditions": "Cooler, viz variable"
+   },
+   "Jul": {
+    "rating": "Good",
+    "marine_life": "Grey nurse abundant; whales passing",
+    "conditions": "Cold, viz variable, swell"
+   },
+   "Aug": {
+    "rating": "Good",
+    "marine_life": "Grey nurse abundant; whales",
+    "conditions": "Coldest, winter swell"
+   },
+   "Sep": {
+    "rating": "Good",
+    "marine_life": "Grey nurse abundant; whales returning",
+    "conditions": "Cold, viz variable"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Grey nurse resting in cave gutters; rays",
+    "conditions": "Warming, improving conditions"
+   },
+   "Nov": {
+    "rating": "Peak",
+    "marine_life": "Grey nurse; turtles, rays",
+    "conditions": "Warming, good viz"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Grey nurse in shallow gutters; turtles",
+    "conditions": "Warm, EAC arriving, good viz"
+   }
+  }
+ },
+ {
+  "name": "Aliwal Shoal",
+  "country": "South Africa",
+  "region": "Indian Ocean / KwaZulu-Natal",
+  "water_type": "subtropical",
+  "difficulty": "intermediate",
+  "access": "day-boat",
+  "monthly_temp_c": {
+   "Jan": 26,
+   "Feb": 27,
+   "Mar": 26,
+   "Apr": 25,
+   "May": 23,
+   "Jun": 22,
+   "Jul": 21,
+   "Aug": 21,
+   "Sep": 22,
+   "Oct": 23,
+   "Nov": 24,
+   "Dec": 25
+  },
+  "currents": "Often strong; surf launch by RIB; variable drift conditions",
+  "best_months": "Jun-Jul (sardine run), Jun-Nov (raggies)",
+  "wetsuit": "5-7mm",
+  "signature_species": [
+   "ragged-tooth shark",
+   "tiger shark",
+   "sardine run",
+   "blacktip shark",
+   "humpback whale",
+   "bottlenose dolphin"
+  ],
+  "highlights": "Sardine run bait balls plus raggie and baited tiger shark dives",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Tiger sharks, blacktips, dolphins",
+    "conditions": "Warm, viz good, summer current"
+   },
+   "Feb": {
+    "rating": "Good",
+    "marine_life": "Tiger sharks, blacktips, rays",
+    "conditions": "Warmest, good viz, occasional rain"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Tiger sharks, blacktips, dolphins",
+    "conditions": "Warm, good viz, rainy spells"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Tiger sharks, blacktips",
+    "conditions": "Warm, good viz"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Raggies arriving, blacktips",
+    "conditions": "Cooling, viz good"
+   },
+   "Jun": {
+    "rating": "Peak",
+    "marine_life": "Sardine run, raggies, dolphins, whales",
+    "conditions": "Cool water, bait balls, viz variable"
+   },
+   "Jul": {
+    "rating": "Peak",
+    "marine_life": "Sardine run, raggies, humpback whales",
+    "conditions": "Cold, action-packed, viz variable"
+   },
+   "Aug": {
+    "rating": "Good",
+    "marine_life": "Raggies, humpback whales",
+    "conditions": "Cool, viz variable"
+   },
+   "Sep": {
+    "rating": "Good",
+    "marine_life": "Raggies, humpback whales",
+    "conditions": "Cool, improving viz"
+   },
+   "Oct": {
+    "rating": "Good",
+    "marine_life": "Raggies, blacktips, dolphins",
+    "conditions": "Warming, good viz"
+   },
+   "Nov": {
+    "rating": "Good",
+    "marine_life": "Raggies departing, tigers returning",
+    "conditions": "Warming, good viz"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Tiger sharks, blacktips, dolphins",
+    "conditions": "Warm, good viz, summer onset"
+   }
+  }
+ },
+ {
+  "name": "Fernando de Noronha",
+  "country": "Brazil",
+  "region": "Atlantic Ocean / Brazil",
+  "water_type": "tropical",
+  "difficulty": "beginner",
+  "access": "day-boat",
+  "monthly_temp_c": {
+   "Jan": 28,
+   "Feb": 28,
+   "Mar": 28,
+   "Apr": 28,
+   "May": 28,
+   "Jun": 27,
+   "Jul": 27,
+   "Aug": 26,
+   "Sep": 26,
+   "Oct": 27,
+   "Nov": 27,
+   "Dec": 28
+  },
+  "currents": "Generally mild; some sites moderate current and swell",
+  "best_months": "Aug-Dec (dry season, best viz)",
+  "wetsuit": "3mm",
+  "signature_species": [
+   "spinner dolphin",
+   "green turtle",
+   "hawksbill turtle",
+   "lemon shark",
+   "nurse shark",
+   "reef shark"
+  ],
+  "highlights": "Huge spinner dolphin pods with sharks, turtles and 30m+ visibility",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Spinner dolphins, turtles, sharks",
+    "conditions": "Warm, rainy season onset, good viz"
+   },
+   "Feb": {
+    "rating": "Shoulder",
+    "marine_life": "Spinner dolphins, turtles",
+    "conditions": "Rainy season, viz variable"
+   },
+   "Mar": {
+    "rating": "Shoulder",
+    "marine_life": "Spinner dolphins, turtles, nesting",
+    "conditions": "Wettest, swell, viz reduced"
+   },
+   "Apr": {
+    "rating": "Shoulder",
+    "marine_life": "Spinner dolphins, turtles",
+    "conditions": "Rainy, swell, viz variable"
+   },
+   "May": {
+    "rating": "Shoulder",
+    "marine_life": "Spinner dolphins, turtles",
+    "conditions": "Rain easing, viz improving"
+   },
+   "Jun": {
+    "rating": "Good",
+    "marine_life": "Spinner dolphins, turtles, sharks",
+    "conditions": "Drier, viz improving, calmer"
+   },
+   "Jul": {
+    "rating": "Good",
+    "marine_life": "Spinner dolphins, turtles, sharks",
+    "conditions": "Dry season, good viz"
+   },
+   "Aug": {
+    "rating": "Peak",
+    "marine_life": "Spinner dolphins, sharks, turtles",
+    "conditions": "Dry, excellent viz 30m+, calm"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Spinner dolphins, sharks, turtles",
+    "conditions": "Dry, excellent viz, calm seas"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Spinner dolphins, lemon sharks, turtles",
+    "conditions": "Dry, superb viz, calm"
+   },
+   "Nov": {
+    "rating": "Peak",
+    "marine_life": "Spinner dolphins, sharks, turtles",
+    "conditions": "Dry, excellent viz, calm"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Spinner dolphins, turtles, sharks",
+    "conditions": "Warm, dry tailing off, good viz"
+   }
+  }
+ },
+ {
+  "name": "Sea of Cortez",
+  "country": "Mexico",
+  "region": "Gulf of California / Pacific",
+  "water_type": "subtropical",
+  "difficulty": "intermediate",
+  "access": "day-boat/liveaboard",
+  "monthly_temp_c": {
+   "Jan": 21,
+   "Feb": 20,
+   "Mar": 20,
+   "Apr": 21,
+   "May": 23,
+   "Jun": 26,
+   "Jul": 28,
+   "Aug": 29,
+   "Sep": 30,
+   "Oct": 28,
+   "Nov": 25,
+   "Dec": 23
+  },
+  "currents": "Variable; seamounts like El Bajo can have strong currents",
+  "best_months": "Aug-Nov (warm, clear), Oct-Apr whale sharks",
+  "wetsuit": "5-7mm winter, 3mm summer",
+  "signature_species": [
+   "California sea lion",
+   "mobula ray",
+   "whale shark",
+   "humpback whale",
+   "hammerhead shark",
+   "schooling jacks"
+  ],
+  "highlights": "Los Islotes sea lions, mobula swarms and La Paz whale sharks",
+  "monthly": {
+   "Jan": {
+    "rating": "Good",
+    "marine_life": "Whale sharks, sea lions, humpbacks",
+    "conditions": "Cold, green water, viz moderate"
+   },
+   "Feb": {
+    "rating": "Good",
+    "marine_life": "Whale sharks, sea lions, whales",
+    "conditions": "Coldest, viz moderate, plankton"
+   },
+   "Mar": {
+    "rating": "Good",
+    "marine_life": "Whale sharks, sea lions, whales",
+    "conditions": "Cold, viz moderate, mobulas building"
+   },
+   "Apr": {
+    "rating": "Good",
+    "marine_life": "Mobula rays, whale sharks, sea lions",
+    "conditions": "Cool, mobula aggregations, viz improving"
+   },
+   "May": {
+    "rating": "Good",
+    "marine_life": "Mobula ray swarms, sea lions",
+    "conditions": "Warming, mobula schools, viz improving"
+   },
+   "Jun": {
+    "rating": "Good",
+    "marine_life": "Mobula rays; Los Islotes closes Jun 1 (pupping)",
+    "conditions": "Warming, viz improving"
+   },
+   "Jul": {
+    "rating": "Shoulder",
+    "marine_life": "Reef fish, mobulas; Los Islotes closed",
+    "conditions": "Warm; sea-lion site closed for pupping"
+   },
+   "Aug": {
+    "rating": "Good",
+    "marine_life": "Hammerheads, jacks; Los Islotes closed to Aug 31",
+    "conditions": "Warm, clear, viz improving"
+   },
+   "Sep": {
+    "rating": "Peak",
+    "marine_life": "Hammerheads, sea lions, jacks",
+    "conditions": "Warmest, excellent viz, calm"
+   },
+   "Oct": {
+    "rating": "Peak",
+    "marine_life": "Sea lions, schooling fish, whale sharks",
+    "conditions": "Warm, best viz, calm seas"
+   },
+   "Nov": {
+    "rating": "Peak",
+    "marine_life": "Sea lions, whale sharks, mobulas",
+    "conditions": "Warm, great viz, whale sharks return"
+   },
+   "Dec": {
+    "rating": "Good",
+    "marine_life": "Whale sharks, sea lions",
+    "conditions": "Cooling, good viz, whale shark season"
+   }
+  }
+ }
+]
