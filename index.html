@@ -172,6 +172,9 @@
   .cal td.cell{width:40px;height:32px;text-align:center;color:#04202b;font-weight:700;border-radius:7px;cursor:pointer;
        font-family:var(--mono);transition:transform .12s}
   .cal td.cell:hover{outline:2px solid var(--accent);transform:scale(1.12);z-index:4;position:relative}
+  /* highlighted travel-period month column */
+  .cal th.hl{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;font-weight:700}
+  .cal td.cell.hl{box-shadow:0 0 0 2px var(--accent),0 3px 12px rgba(47,224,214,.45);position:relative;z-index:1}
 
   /* ---------- map ---------- */
   #map{height:560px;border-radius:var(--r);border:1px solid var(--line);background:#072733;box-shadow:var(--shadow)}
@@ -333,26 +336,24 @@
   <!-- DIVE PLANNER — one page: best destinations for your dates + the full-year calendar -->
   <section id="view-planner" class="hidden">
     <div class="sec-head">🧭 Plan your dive</div>
-    <p class="sec-sub">Tell us when you can travel — Scubanaut ranks the best dive destinations for those dates, then lays out the whole seasonal year so you can explore.</p>
+    <p class="sec-sub">Pick your travel period — Scubanaut suggests the top destinations for it and highlights it on the seasonal calendar below.</p>
 
     <div class="controls">
-      <div class="field"><label>Travelling from</label><select id="planFrom"></select></div>
-      <div class="field"><label>to</label><select id="planTo"></select></div>
+      <div class="field"><label>Period of travel</label><select id="planPeriod"></select></div>
       <div class="field"><label>Region</label><select id="planRegion"><option value="">Any</option></select></div>
       <div class="field"><label>Difficulty</label><select id="planDiff">
         <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
       <div class="field"><label>Water</label><select id="planWater">
         <option value="">Any</option><option>tropical</option><option>subtropical</option><option>temperate</option>
         <option>saltwater</option><option>freshwater</option></select></div>
-      <div class="field"><label>Min avg °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
-      <div class="field"><label>Show</label><select id="planLimit">
-        <option value="9">Top 9</option><option value="18">Top 18</option><option value="999">All matches</option></select></div>
+      <div class="field"><label>Min water °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
     </div>
     <p id="planInfo" class="meta" style="text-align:center"></p>
     <div id="planGrid" class="grid"></div>
+    <div id="planMore" style="text-align:center;margin-top:20px"></div>
 
     <div class="sec-head" style="margin-top:44px">📅 Browse the whole year</div>
-    <p class="sec-sub">Every destination, month by month — colour shows the season rating. Click any destination or cell to open its full profile.</p>
+    <p class="sec-sub">Every destination, month by month — colour shows the season rating, and your travel period is highlighted. Click any destination or cell to open its full profile.</p>
     <div class="controls">
       <div class="field"><label>Region</label><select id="calRegion"><option value="">All regions</option></select></div>
       <div class="field"><label>Sort by</label><select id="calSort">
@@ -439,6 +440,11 @@ function initControls(){
     var el=document.getElementById(id[0]);
     regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
   });
+  // Period of travel — the 24 half-month periods, no numbering.
+  var pp=document.getElementById('planPeriod');
+  DivingCalendar.PERIODS.forEach(function(p){var o=document.createElement('option');o.value=p.period_no;o.textContent=p.label;pp.appendChild(o);});
+  var nm=new Date().getMonth();
+  pp.value=nm*2+1;
   ['calRegion','calSort','calShow'].forEach(function(id){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
@@ -446,15 +452,14 @@ function initControls(){
     document.getElementById(id).addEventListener('change',renderSites);
   });
   document.getElementById('gearCat').addEventListener('change',renderGear);
-  fillMonths(document.getElementById('planFrom'));
-  fillMonths(document.getElementById('planTo'));
   fillMonths(document.getElementById('mapMonth'));
-  var nm=new Date().getMonth();
-  document.getElementById('planFrom').value=DivingCalendar.MONTHS[nm];
-  document.getElementById('planTo').value=DivingCalendar.MONTHS[(nm+2)%12];
   document.getElementById('mapMonth').value=DivingCalendar.MONTHS[nm];
-  ['planFrom','planTo','planRegion','planDiff','planWater','planTemp','planLimit'].forEach(function(id){
-    var e=document.getElementById(id); e.addEventListener('change',renderPlanner); e.addEventListener('input',renderPlanner);
+  // Period drives both the suggestions and the calendar highlight; filters affect suggestions only.
+  document.getElementById('planPeriod').addEventListener('change',function(){planExpanded=false;renderPlanner();renderCalendar();});
+  ['planRegion','planDiff','planWater','planTemp'].forEach(function(id){
+    var e=document.getElementById(id);
+    e.addEventListener('change',function(){planExpanded=false;renderPlanner();});
+    e.addEventListener('input',function(){planExpanded=false;renderPlanner();});
   });
   document.getElementById('mapMonth').addEventListener('change',drawMarkers);
 }
@@ -468,15 +473,17 @@ function renderCalendar(){
     var pa=DivingCalendar.MONTHS.filter(function(m){return a.monthly[m].rating==='Peak';}).length;
     var pb=DivingCalendar.MONTHS.filter(function(m){return b.monthly[m].rating==='Peak';}).length;
     return pb-pa||(a.name<b.name?-1:1);}); }
+  var pv=document.getElementById('planPeriod');
+  var hlMonth=(pv&&pv.value)?DivingCalendar.PERIODS[(Number(pv.value)-1+24)%24].month:null;
   var head='<thead><tr><th class="corner">Destination ('+list.length+')</th>'+
-    DivingCalendar.MONTHS.map(function(m){return '<th>'+m+'</th>';}).join('')+'</tr></thead>';
+    DivingCalendar.MONTHS.map(function(m){return '<th'+(m===hlMonth?' class="hl"':'')+'>'+m+'</th>';}).join('')+'</tr></thead>';
   var body=list.map(function(d){
     var cells=DivingCalendar.MONTHS.map(function(m){
       var mm=d.monthly[m], t=d.monthly_temp_c[m];
       var txt = show==='temp'?(t==null?'':t) : show==='viz'?(mm.visibility_m==null?'':mm.visibility_m) : mm.rating[0];
       if(mm.rating==='Closed') txt='✕';
       var title=d.name+' — '+m+': '+mm.rating+' · '+tempStr(t)+' · '+vizStr(mm.visibility_m)+' · '+mm.marine_life;
-      return '<td class="cell" style="background:'+RCOLOR[mm.rating]+'" title="'+title.replace(/"/g,'&quot;')+
+      return '<td class="cell'+(m===hlMonth?' hl':'')+'" style="background:'+RCOLOR[mm.rating]+'" title="'+title.replace(/"/g,'&quot;')+
         '" onclick="openProfile(\''+esc(d.name)+'\')">'+txt+'</td>';
     }).join('');
     return '<tr><td class="name" onclick="openProfile(\''+esc(d.name)+'\')">'+d.name+
@@ -485,30 +492,39 @@ function renderCalendar(){
   document.getElementById('calTable').innerHTML=head+'<tbody>'+body+'</tbody>';
 }
 
+var planExpanded=false;
 function renderPlanner(){
-  var months=DivingCalendar.monthsBetween(val('planFrom'),val('planTo'));
-  var f={region:val('planRegion'),difficulty:val('planDiff'),water_type:val('planWater'),
-         minTemp:num('planTemp'),limit:Number(val('planLimit'))};
-  var ranked=DivingCalendar.rankWindow(DESTS, months, f);
+  var per=Number(val('planPeriod'));
+  var pinfo=DivingCalendar.PERIODS[(per-1+24)%24];
+  var f={region:val('planRegion'),difficulty:val('planDiff'),water_type:val('planWater'),minTemp:num('planTemp')};
+  var full=DivingCalendar.rankPeriod(DESTS, per, f);
+  var g=document.getElementById('planGrid'), more=document.getElementById('planMore');
+  if(!full.length){
+    document.getElementById('planInfo').textContent='';
+    g.innerHTML='<div class="empty">No open destinations match these filters for '+pinfo.label+'.</div>';
+    more.innerHTML=''; return;
+  }
+  var shown=full.slice(0, planExpanded?10:3);
   document.getElementById('planInfo').textContent=
-    'Best destinations for '+months.join(' · ')+' — ranked by average score across '+months.length+' month(s).';
-  var g=document.getElementById('planGrid');
-  if(!ranked.length){g.innerHTML='<div class="empty">No destinations match.</div>';return;}
-  g.innerHTML=ranked.map(function(r){
-    var strip=months.map(function(m,i){var rt=r.ratings[i];
-      return '<span style="background:'+RCOLOR[rt]+'" title="'+m+': '+rt+'">'+m[0]+'</span>';}).join('');
+    'Top '+shown.length+' of '+full.length+' destinations open for '+pinfo.label+'.';
+  g.innerHTML=shown.map(function(r){
     return '<div class="card"><div class="rank">'+r.rank+'</div>'+
       '<h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
-      '<div class="strip">'+strip+'</div>'+
-      '<div class="row"><span class="chip">'+r.peak_months+'/'+months.length+' Peak</span>'+
-        '<span class="chip temp">avg '+tempStr(r.avg_temp_c)+'</span>'+
-        '<span class="chip">avg '+vizStr(r.avg_visibility_m)+'</span>'+
-        (r.closed_months?'<span class="chip" style="color:#f97316">'+r.closed_months+' closed</span>':'')+
-        '<span class="score">avg '+r.avg_score+'</span></div>'+
-      '<div class="hl">'+r.highlights+'</div>'+
+      '<div class="row">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
+        '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+
+        '<span class="score">score '+r.score+'</span></div>'+
+      '<div class="row"><span class="chip">'+r.difficulty+'</span></div>'+
+      '<div class="hl">🐟 '+r.highlight+'</div>'+
+      '<div class="meta" style="margin-top:6px">🌊 '+r.conditions+'</div>'+
       '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div>';
   }).join('');
+  if(full.length>3){
+    more.innerHTML = planExpanded
+      ? '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">Show top 3 ▲</a>'
+      : '<a class="btn ghost" href="#" onclick="togglePlanMore();return false;">See more — top '+Math.min(10,full.length)+' →</a>';
+  } else more.innerHTML='';
 }
+function togglePlanMore(){ planExpanded=!planExpanded; renderPlanner(); }
 
 function initMap(){
   if(typeof L==='undefined'){document.getElementById('mapNote').textContent='Map library could not load. Coordinates are still in the data.';return;}
