@@ -739,12 +739,15 @@ function openProfile(name){
       '<div><span>Difficulty</span>'+d.difficulty+'</div>'+
       '<div><span>Access</span>'+d.access+'</div>'+
       '<div><span>Wetsuit</span><b>'+d.wetsuit+'</b></div>'+
-      '<div><span>Current strength</span><b class="cur-'+d.current_strength+'">'+d.current_strength+'</b></div>'+
+      '<div><span>Current strength</span><b class="cur-'+d.current_strength+'">'+d.current_strength+'</b>'+
+        (d.current_note?'<div class="meta" style="font-size:.68rem;margin-top:2px">'+d.current_note+'</div>':'')+'</div>'+
       '<div style="grid-column:1/-1"><span>Currents detail</span>'+d.currents+'</div>'+
     '</div>'+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
     '<table><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
-    '<tbody>'+rows+'</tbody></table>';
+    '<tbody>'+rows+'</tbody></table>'+
+    (d.last_verified?'<p class="meta" style="margin-top:10px">✓ Data verified '.replace('✓','&#10003;')+d.last_verified+
+      (d.data_confidence?' · source confidence: '+d.data_confidence:'')+'</p>':'');
   document.getElementById('profile').scrollIntoView({behavior:'smooth',block:'start'});
 }
 

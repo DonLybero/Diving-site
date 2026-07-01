@@ -176,6 +176,43 @@ all_dest = deduped
 # stable sort: by region, then name
 all_dest.sort(key=lambda r: (r["region"], r["name"]))
 
+# ---- Preserve baked destination images (written into the output JSON by
+# scripts/fetch_images.py / the fetch-images workflow, not present in sources) ----
+_prev_path = os.path.join(OUTDIR, "diving-destinations.json")
+if os.path.exists(_prev_path):
+    with open(_prev_path) as f:
+        _prev = {d["name"]: d for d in json.load(f).get("destinations", [])}
+    kept = 0
+    for r in all_dest:
+        p = _prev.get(r["name"])
+        if p and p.get("image"):
+            for k in ("image", "image_credit", "image_source"):
+                if p.get(k) is not None:
+                    r[k] = p[k]
+            kept += 1
+    print(f"Preserved baked images for {kept} destinations")
+
+# ---- Apply human/agent verification verdicts (scripts/data/verification.json) ----
+# Shape: {"<name>": {"current_strength": "Low|Medium|Strong", "current_note": "...",
+#                    "confidence": "high|medium|low", "verified": "YYYY-MM"}}
+_ver_path = os.path.join(SCRATCH, "verification.json")
+if os.path.exists(_ver_path):
+    with open(_ver_path) as f:
+        VER = json.load(f)
+    applied = 0
+    for r in all_dest:
+        v = VER.get(r["name"])
+        if not v:
+            continue
+        if v.get("current_strength") in ("Low", "Medium", "Strong"):
+            r["current_strength"] = v["current_strength"]
+        if v.get("current_note"):
+            r["current_note"] = v["current_note"]
+        r["data_confidence"] = v.get("confidence", "medium")
+        r["last_verified"] = v.get("verified")
+        applied += 1
+    print(f"Applied verification verdicts for {applied} destinations")
+
 # ---- Write master JSON ----
 master = {
     "title": "World Diving Calendar",
