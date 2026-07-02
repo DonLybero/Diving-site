@@ -1,4 +1,4 @@
-name: Deploy Scubanaut to GitHub Pages
+name: Deploy DiveSZN to GitHub Pages
 
 on:
   push:

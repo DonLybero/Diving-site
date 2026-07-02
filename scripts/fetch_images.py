@@ -24,7 +24,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "diving-destinations.json")
 PEXELS_KEY = os.environ.get("PEXELS_API_KEY", "").strip()
 FORCE = "--force" in sys.argv
-UA = "ScubanautImageFetcher/1.0 (https://github.com/DonLybero/Diving-site; static-site image baker)"
+UA = "DiveSZNImageFetcher/1.0 (https://github.com/DonLybero/Diving-site; static-site image baker)"
 
 # File names that are clearly not scenery — skip these from Wikimedia geosearch.
 BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagram|"
