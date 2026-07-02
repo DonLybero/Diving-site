@@ -1148,7 +1148,7 @@
     "depth": "8-24m"
    },
    {
-    "name": "Hann's Reef",
+    "name": "Han's Reef",
     "type": "Muck",
     "level": "beginner",
     "blurb": "Gili Air critter site: frogfish, seahorses, ribbon eels, octopus",
@@ -2046,14 +2046,6 @@
     "depth": "10-18m"
    },
    {
-    "name": "Stingray World",
-    "type": "Shore",
-    "level": "beginner",
-    "blurb": "Shallow lagoon encounter with habituated stingrays and blacktips",
-    "source": "Dive Discovery",
-    "depth": "2-5m"
-   },
-   {
     "name": "Temae",
     "type": "Reef",
     "level": "beginner",
@@ -2126,14 +2118,6 @@
     "blurb": "Soft-coral rich islands 10nm off North West Cape; turtles, occasional dugong",
     "source": "Exmouth Dive Centre",
     "depth": "5-18m"
-   },
-   {
-    "name": "Turquoise Bay",
-    "type": "Shore",
-    "level": "beginner",
-    "blurb": "Famous drift-snorkel shore entry over Ningaloo coral gardens",
-    "source": "PADI Travel",
-    "depth": "2-6m"
    },
    {
     "name": "Helga's Tunnels",
@@ -2234,14 +2218,6 @@
     "blurb": "Palau's signature drift over lettuce coral with sharks in the current",
     "source": "PADI Travel",
     "depth": "8-20m"
-   },
-   {
-    "name": "Jellyfish Lake",
-    "type": "Lake",
-    "level": "beginner",
-    "blurb": "Snorkel-only marine lake filled with millions of stingless golden jellyfish",
-    "source": "PADI Travel",
-    "depth": "snorkel 0-5m"
    },
    {
     "name": "Chandelier Cave",
@@ -2818,46 +2794,6 @@
     "blurb": "Silfra's darker sibling, a long 21m-deep fissure in Lake Þingvallavatn",
     "source": "PADI Blog",
     "depth": "10-21m"
-   },
-   {
-    "name": "Strýtan",
-    "type": "Pinnacle",
-    "level": "advanced",
-    "blurb": "55m hydrothermal chimney in Eyjafjörður, the world's only divable vent cone",
-    "source": "Strytan Divecenter",
-    "depth": "15-55m"
-   },
-   {
-    "name": "Arnarnesstrýtur",
-    "type": "Pinnacle",
-    "level": "intermediate",
-    "blurb": "Cluster of smaller hot-vent chimneys rising to 15m, rich fish life",
-    "source": "Strytan Divecenter",
-    "depth": "8-24m"
-   },
-   {
-    "name": "El Grillo",
-    "type": "Wreck",
-    "level": "advanced",
-    "blurb": "150m WWII British oil tanker at 28-45m in Seyðisfjörður, Iceland's biggest wreck",
-    "source": "DIVE.IS",
-    "depth": "28-45m"
-   },
-   {
-    "name": "Nesgjá",
-    "type": "Fissure",
-    "level": "beginner",
-    "blurb": "Crystal-clear north-Iceland fissure dubbed the Silfra of the North",
-    "source": "DIVE.IS",
-    "depth": "3-10m"
-   },
-   {
-    "name": "Bjarnagjá",
-    "type": "Fissure",
-    "level": "intermediate",
-    "blurb": "18m lava ravine on Reykjanes mixing groundwater and sea; eels and anemones",
-    "source": "DIVE.IS",
-    "depth": "5-18m"
    }
   ],
   "Similan Islands": [
@@ -3439,5 +3375,6 @@
    }
   ]
  },
- "depth_note": "Depths are typical published recreational ranges (PADI/SSI/operator listings); always confirm locally."
+ "depth_note": "Depths are typical published recreational ranges (PADI/SSI/operator listings); always confirm locally.",
+ "verified": "2026-07 — every site name Google-verified as a scuba site of its destination"
 }

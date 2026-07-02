@@ -782,14 +782,14 @@ function openProfile(name){
     return '<tr><td><b>'+x.name+'</b></td><td><span class="chip">'+(x.type||'Reef')+'</span></td>'+
       '<td class="num">'+(x.depth||'—')+'</td>'+
       '<td style="white-space:nowrap">'+diffPips(lvl==='tec'?'advanced':lvl)+'<span style="margin-left:6px">'+lvl+'</span></td>'+
-      '<td>'+(x.blurb||'')+'</td><td class="meta" style="font-size:.68rem;white-space:nowrap">'+(x.source||'')+'</td></tr>';
+      '<td>'+(x.blurb||'')+'</td></tr>';
   }).join('');
   var sitesBlock = siteRows ?
     '<h3 style="margin:22px 0 2px">'+ico('map',15)+' Recognised dive sites ('+d.dive_sites.length+')</h3>'+
     '<p class="meta" style="margin:2px 0 6px">Named commercial sites as listed by PADI Travel and other recognised dive directories'+
       (d.dive_sites_researched?' · researched '+d.dive_sites_researched:'')+
       '. Depths are typical published ranges — always confirm with your operator.</p>'+
-    '<table><thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it’s known</th><th>Listed by</th></tr></thead>'+
+    '<table><thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it’s known</th></tr></thead>'+
     '<tbody>'+siteRows+'</tbody></table>' : '';
   var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';
   document.getElementById('profile').innerHTML=
