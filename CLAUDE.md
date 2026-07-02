@@ -1,6 +1,6 @@
-# CLAUDE.md — Scubanaut
+# CLAUDE.md — DiveSZN
 
-Scubanaut is a static diving website: a seasonal **trip planner / calendar** for
+DiveSZN is a static diving website: a seasonal **trip planner / calendar** for
 50 world dive destinations, wrapped in a dive-hub (gear price-comparison,
 reviews, dive centres, liveaboard safaris). No backend.
 
@@ -28,7 +28,7 @@ single-file build stays in sync, then commit. Pushing deploys automatically.
 ## Conventions
 - Keep the scoring formula identical in `build_rankings.py` and
   `diving-calendar.js` (rating base + marine-life bonus ≤25 + visibility 0..18).
-- Brand: name **Scubanaut**, whale-**fluke** logo (no helmets/circles), deep
+- Brand: name **DiveSZN** ("dive season"; wordmark `Dive<b>SZN</b>`), whale-**fluke** logo (no helmets/circles), deep
   teal + aqua, coral for prices/CTAs, monospace data readouts, serif headings.
 - Gear/Reviews/Centres/Safaris are **sample data** wired like real feeds; the
   calendar/dive-site data is **real and researched**.

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scubanaut — The Seasonal Dive Almanac | When &amp; Where to Dive Worldwide</title>
-<meta name="description" content="Know before you go. Scubanaut is the seasonal dive almanac — the world's dive calendar that scores dive destinations worldwide month by month on conditions, marine life, currents and visibility.">
+<title>DiveSZN — The Seasonal Dive Almanac | When &amp; Where to Dive Worldwide</title>
+<meta name="description" content="Know before you go. DiveSZN is the seasonal dive almanac — the world's dive calendar that scores dive destinations worldwide month by month on conditions, marine life, currents and visibility.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 96'><rect width='120' height='96' rx='18' fill='%23062a36'/><path d='M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z' fill='%232fe0d6'/></svg>">
 <link rel="stylesheet" href="vendor/leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -298,7 +298,7 @@
 <body>
 <div class="topbar">
   <div class="brand" onclick="showTab('home')">
-    <svg class="fluke" viewBox="0 0 120 70" role="img" aria-label="Scubanaut fluke logo">
+    <svg class="fluke" viewBox="0 0 120 70" role="img" aria-label="DiveSZN fluke logo">
       <defs><linearGradient id="fl0" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stop-color="#5cf0e6"/><stop offset="1" stop-color="#179e98"/></linearGradient></defs>
       <path d="M60 62 C56 51 53 46 46 41 C35 32 18 24 6 22 C16 28 33 37 48 41 C53 42 56 43 60 47
@@ -306,7 +306,7 @@
             fill="url(#fl0)"/>
     </svg>
     <div class="brand-text">
-      <div class="name">Scuba<b>naut</b></div>
+      <div class="name">Dive<b>SZN</b></div>
       <div class="brand-tag">Know before you go</div>
     </div>
   </div>
@@ -316,7 +316,7 @@
 <header class="hero" id="hero">
   <span class="eyebrow">Your diving buddy</span>
   <h1>Never dive alone.</h1>
-  <p class="tagline">Plan your dive ahead — Scubanaut shows you the water conditions, marine life and visibility to expect at your diving destination, month by month.</p>
+  <p class="tagline">Plan your dive ahead — DiveSZN shows you the water conditions, marine life and visibility to expect at your diving destination, month by month.</p>
   <div class="hero-cta">
     <a class="btn" href="#" onclick="showTab('calendar');return false;"><i class="ico" data-ico="calendar"></i>Open the calendar</a>
     <a class="btn ghost" href="#" onclick="showTab('plan');return false;">Plan a trip →</a>
@@ -360,7 +360,7 @@
   <!-- DIVE PLANNER — one progressive page: filters first, then results as cards / map / year calendar -->
   <section id="view-planner" class="hidden">
     <div class="sec-head"><i class="ico" data-ico="compass"></i>Plan your dive</div>
-    <p class="sec-sub">Tell Scubanaut when (and how) you want to dive — the best matches appear as you select,
+    <p class="sec-sub">Tell DiveSZN when (and how) you want to dive — the best matches appear as you select,
       as ranked cards, on the world map, or across the whole year.</p>
 
     <div class="controls">
@@ -748,7 +748,7 @@ function num(id){var v=document.getElementById(id).value;return v?Number(v):null
 function esc(s){return s.replace(/'/g,"\\'");}
 
 /* ---------------- Dive Hub sections (sample/affiliate-ready content) ---------------- */
-function demo(what){alert('Demo hand-off — on the live site this opens '+what+' via an affiliate link. No reselling: Scubanaut sends you to the authorised retailer / operator.');}
+function demo(what){alert('Demo hand-off — on the live site this opens '+what+' via an affiliate link. No reselling: DiveSZN sends you to the authorised retailer / operator.');}
 
 // nearest hyperbaric chamber per region (curated; generic fallback)
 var CHAMBERS={
@@ -781,7 +781,7 @@ function renderHome(){
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   document.getElementById('view-home').innerHTML=
     '<div class="home-hero"><div class="sec-head">Your ocean, planned month by month.</div>'+
-    '<p class="sec-sub">Scubanaut scores dive destinations worldwide every month on conditions, marine life, currents and visibility — '+
+    '<p class="sec-sub">DiveSZN scores dive destinations worldwide every month on conditions, marine life, currents and visibility — '+
     'then points you to gear at the best price and trips with trusted operators.</p>'+
     '<div class="row" style="margin-top:18px"><a class="btn" href="#" onclick="showTab(\'calendar\');return false;">Open the calendar →</a>'+
     '<a class="btn ghost" href="#" onclick="showTab(\'period\');return false;">Best places to dive now</a></div>'+
@@ -968,7 +968,7 @@ loadData().then(function(res){
     '<div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources; '+
     'water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles. '+
     'Always confirm current conditions with a local dive centre before travelling.</div>'+
-    '<div class="disclosure"><b>Affiliate disclosure:</b> Scubanaut may earn a commission when you buy gear or book a trip through our links, '+
+    '<div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear or book a trip through our links, '+
     'at no extra cost to you. Gear and trip prices shown are sample data for demonstration. We link only to authorised retailers and trusted '+
     'operators, and commissions never influence our ratings.</div>'+
     '<p style="margin-top:10px"><a href="destinations/index.html">Browse all 50 destination season guides →</a></p>';
