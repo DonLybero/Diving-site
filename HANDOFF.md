@@ -78,8 +78,10 @@ within ~1–2 min.
   visibly labelled as samples.
 
 ## Backlog
-- OWNER: trademark knockout search for "Scubanaut" before merch/marketing
-  spend (existing users: SCUBAnauts International(TM), scubanautdiving.com).
+- OWNER: attorney trademark knockout search for "Scubanaut" before
+  merch/marketing spend. Wide web search done 2026-07 — findings and full
+  advisory in `docs/trademark-search-2026-07.md` (9 existing users incl. a
+  Florida state mark; no federal ® surfaced; name kept by decision).
 - OWNER: add the site to Google Search Console and submit sitemap.xml.
 - OWNER: add PEXELS_API_KEY repo secret; rerun fetch-images with --force.
 - Swap sample Gear/Centres for real affiliate-feed data (Amazon,
