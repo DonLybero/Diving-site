@@ -12,7 +12,7 @@ and backlog. Quick orientation:
 - **Canonical data:** `diving-destinations.json` (50 destinations × 12 months).
   Edit it directly, or regenerate from `scripts/` (see below).
 - **Live:** https://donlybero.github.io/Diving-site/ — auto-deploys on push to
-  branch `claude/diving-destinations-research-73uc5i` via
+  `main` via
   `.github/workflows/deploy-pages.yml`.
 
 ## Build / regenerate (paths are repo-relative)
@@ -20,6 +20,7 @@ and backlog. Quick orientation:
 python3 scripts/build_master.py      # diving-destinations.json + CSVs
 python3 scripts/build_rankings.py    # diving-rankings.json
 python3 scripts/build_standalone.py  # diving-site.html (offline single file)
+python3 scripts/build_pages.py       # destinations/*.html + sitemap (SEO pages)
 ```
 After editing data or `index.html`, rerun `build_standalone.py` so the
 single-file build stays in sync, then commit. Pushing deploys automatically.

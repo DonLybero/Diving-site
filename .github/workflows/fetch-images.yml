@@ -27,7 +27,7 @@ jobs:
       - name: Checkout deploy branch
         uses: actions/checkout@v4
         with:
-          ref: claude/diving-destinations-research-73uc5i
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5

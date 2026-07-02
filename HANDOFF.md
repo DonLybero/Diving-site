@@ -6,7 +6,7 @@ centres, liveaboard safaris). Static site, no backend, deployable anywhere.
 
 - **Live site:** https://donlybero.github.io/Diving-site/
 - **Repo:** `DonLybero/Diving-site`
-- **Working branch:** `claude/diving-destinations-research-73uc5i`
+- **Working branch:** `main` (trunk since 2026-07; the old claude/diving-destinations-research-73uc5i branch is retired)
 
 ## Brand
 - **Name:** Scubanaut. **Logo:** a whale **fluke** (bare tail, no circle/text) — inline SVG in `index.html` header + the favicon (data-URI).
@@ -61,19 +61,35 @@ auto-deploys.
 
 ## Deploy
 GitHub Pages is set to **Source = GitHub Actions**. The workflow publishes the
-repo root; `index.html` is the landing page. Every push to the working branch
-redeploys within ~1–2 min. If you rename the branch, update the `on.push.branches`
-list in `.github/workflows/deploy-pages.yml`.
+repo root; `index.html` is the landing page. Every push to `main` redeploys
+within ~1–2 min.
 
-## Common next tasks / backlog
-- Group the nav (11 tabs is a lot) — e.g. a "Plan" group (Calendar/Best/Plan/Map) vs "Hub" group (Gear/Reviews/Centres/Safaris).
-- Swap sample Gear/Centres/Safaris for real affiliate-feed data (Amazon, ShareASale/AvantLink, Booking/Divebooker).
-- Hand-tune borderline current-strength ratings (auto-classified from text).
-- Add a real recompression-chamber directory; add wetsuit-by-temp recommender; price-history/alerts; user dive log (needs a backend).
-- Verify a couple of destinations' data with local operators.
+## Done so far (highlights)
+- 50 destinations fact-checked by research agents (2026-07); current strength
+  hand-verified per destination (`scripts/data/verification.json`, applied by
+  build_master); Chagos marked access-suspended.
+- Destination photos baked via the fetch-images workflow (Wikimedia; add a
+  PEXELS_API_KEY repo secret + rerun with --force for better quality).
+- SVG icon system (no emoji); Dive Sites + Map merged into the Dive Planner
+  (opens on top-3 for the current period; See more 3→10→+5).
+- 50 static SEO pages under `destinations/` + sitemap.xml + robots.txt
+  (`scripts/build_pages.py`).
+- Dive Centres is a factual directory (no invented ratings); gear prices
+  visibly labelled as samples.
+
+## Backlog
+- OWNER: trademark knockout search for "Scubanaut" before merch/marketing
+  spend (existing users: SCUBAnauts International(TM), scubanautdiving.com).
+- OWNER: add the site to Google Search Console and submit sitemap.xml.
+- OWNER: add PEXELS_API_KEY repo secret; rerun fetch-images with --force.
+- Swap sample Gear/Centres for real affiliate-feed data (Amazon,
+  ShareASale/AvantLink) and real centre listings.
+- Mobile design pass (calendar table and planner filters on small screens).
+- Logo refinement (fluke + a diving cue, lockup + size rules).
+- Prune leftover artifacts: map-A/map-B demo pages, diving-calendar-24-periods.md.
+- Later: wetsuit-by-temp recommender, price alerts, verified-diver reviews,
+  dive log (needs a backend).
 
 ## How to continue in a new session
-Open a new Claude Code session on `DonLybero/Diving-site`, working branch
-`claude/diving-destinations-research-73uc5i` (or merge it to `main` first and
-work there — then update the workflow branch). Tell the agent: *"Read
-HANDOFF.md and continue building the Scubanaut site."*
+Open a new Claude Code session on `DonLybero/Diving-site` (branch `main`).
+Tell the agent: *"Read HANDOFF.md and continue building the Scubanaut site."*
