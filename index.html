@@ -707,6 +707,39 @@ function renderSearch(){
   fillDestCovers();
 }
 
+/* Data-generated overview paragraph: best season, water conditions/temps and
+   a tour of the recognised dive sites. Same wording logic as build_pages.py. */
+var SITE_PLURALS={'Muck':'muck dives','Shore':'shore dives','Drift':'drift dives','Shark dive':'shark dives',
+  'Manta dive':'manta dives','Blue hole':'blue holes','Pass':'pass drifts','Thila':'thilas'};
+function sitePlural(t,n){ if(n===1) return t.toLowerCase()==='muck'?'muck dive':t.toLowerCase()+(t==='Drift'||t==='Shore'?' dive':'');
+  return (SITE_PLURALS[t]||t.toLowerCase()+'s'); }
+function joinList(a){ return a.length<=1?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]; }
+function destIntro(d,s){
+  var temps=DivingCalendar.MONTHS.map(function(m){return d.monthly_temp_c[m];}).filter(function(t){return t!=null;});
+  var tmin=Math.min.apply(null,temps), tmax=Math.max.apply(null,temps);
+  var vmax=Math.max.apply(null,DivingCalendar.MONTHS.map(function(m){return d.monthly[m].visibility_m||0;}));
+  var peak=s.byRating.Peak;
+  var water=/water$/.test(d.water_type)?d.water_type:d.water_type+' water';
+  var suit=d.wetsuit.split(';')[0].replace(/\.$/,'');
+  var p1=d.name+' is at its best '+d.best_months+
+    (peak.length?', with '+joinList(peak)+' rating as peak season':'')+'. '+
+    'Expect '+water+' of '+(tmin===tmax?tmin:tmin+'–'+tmax)+'°C (suit: '+suit+
+    '), visibility up to ~'+vmax+'m, and '+d.current_strength.toLowerCase()+' currents — '+
+    (d.current_note||d.currents).replace(/\.$/,'')+'.';
+  var sites=d.dive_sites||[];
+  if(!sites.length) return p1;
+  var counts={}; sites.forEach(function(x){var t=x.type||'Reef';counts[t]=(counts[t]||0)+1;});
+  var breakdown=joinList(Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];})
+    .map(function(t){return counts[t]+' '+sitePlural(t,counts[t]);}));
+  var order={beginner:0,intermediate:1,advanced:2,tec:3};
+  var lv=function(x){return x.level in order?order[x.level]:1;};
+  var sorted=sites.slice().sort(function(a,b){return lv(a)-lv(b);});
+  var easy=sorted[0], hard=sorted[sorted.length-1];
+  var p2=' Divers here work '+sites.length+' recognised sites — '+breakdown+' — ranging from '+
+    easy.name+(easy.depth?' ('+easy.depth+')':'')+' for '+easy.level+' divers up to '+
+    hard.name+(hard.depth?' ('+hard.depth+')':'')+', '+(hard.level==='tec'?'technical-diving':hard.level)+' territory.';
+  return p1+p2;
+}
 function openProfile(name){
   showTab('search');
   var d=DivingCalendar.getDestination(DESTS,name); if(!d)return;
@@ -722,18 +755,21 @@ function openProfile(name){
   var siteRows=(d.dive_sites||[]).map(function(x){
     var lvl=x.level||'intermediate';
     return '<tr><td><b>'+x.name+'</b></td><td><span class="chip">'+(x.type||'Reef')+'</span></td>'+
+      '<td class="num">'+(x.depth||'—')+'</td>'+
       '<td style="white-space:nowrap">'+diffPips(lvl==='tec'?'advanced':lvl)+'<span style="margin-left:6px">'+lvl+'</span></td>'+
       '<td>'+(x.blurb||'')+'</td><td class="meta" style="font-size:.68rem;white-space:nowrap">'+(x.source||'')+'</td></tr>';
   }).join('');
   var sitesBlock = siteRows ?
     '<h3 style="margin:22px 0 2px">'+ico('map',15)+' Recognised dive sites ('+d.dive_sites.length+')</h3>'+
     '<p class="meta" style="margin:2px 0 6px">Named commercial sites as listed by PADI Travel and other recognised dive directories'+
-      (d.dive_sites_researched?' · researched '+d.dive_sites_researched:'')+'.</p>'+
-    '<table><thead><tr><th>Site</th><th>Type</th><th>Level</th><th>Why it’s known</th><th>Listed by</th></tr></thead>'+
+      (d.dive_sites_researched?' · researched '+d.dive_sites_researched:'')+
+      '. Depths are typical published ranges — always confirm with your operator.</p>'+
+    '<table><thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it’s known</th><th>Listed by</th></tr></thead>'+
     '<tbody>'+siteRows+'</tbody></table>' : '';
   var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';
   document.getElementById('profile').innerHTML=
     '<h2>'+d.name+'</h2><p class="lead">'+d.country+' · '+d.region+' — '+d.highlights+'</p>'+
+    '<p style="max-width:78ch;line-height:1.65;color:#d6f3f0;margin:0 0 16px">'+destIntro(d,s)+'</p>'+
     '<div class="best">'+ico('trophy',15)+' <b>Best months:</b> '+(s.byRating.Peak.join(', ')||'—')+
       ' &nbsp;·&nbsp; <b>Top month:</b> '+best+
       ' &nbsp;·&nbsp; <b>Recommended window:</b> '+d.best_months+'</div>'+

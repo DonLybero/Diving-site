@@ -8,63 +8,72 @@
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Famous 27m amphitheatre where ragged-tooth sharks gather Jul-Nov",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "24-27m"
    },
    {
     "name": "Raggie's Cave",
     "type": "Reef",
     "level": "beginner",
     "blurb": "16m overhang sheltering resting ragged-tooth sharks in season",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "14-16m"
    },
    {
     "name": "Produce Wreck",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "1974 bulk carrier at ~32m, home to giant brindle bass",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "26-32m"
    },
    {
     "name": "Nebo Wreck",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "1884 steamer lying at ~27m near the shoal, rich in fish life",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "22-27m"
    },
    {
     "name": "Chunnel",
     "type": "Reef",
     "level": "beginner",
     "blurb": "14m cave and gully system on the shoal's northern section",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-14m"
    },
    {
     "name": "North Sands",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sandy 16m gullies where raggies rest during winter months",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "14-16m"
    },
    {
     "name": "Inside Edge",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "24m ledge along the shoal's inshore rim with rays and turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "22-24m"
    },
    {
     "name": "Outside Edge",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "27m seaward edge of the shoal, best for pelagics and sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "25-27m"
    },
    {
     "name": "Aliwal Baited Shark Dive",
     "type": "Shark dive",
     "level": "advanced",
     "blurb": "Open-water baited dive with blacktip and seasonal tiger sharks",
-    "source": "Aliwal Dive Centre"
+    "source": "Aliwal Dive Centre",
+    "depth": "5-15m"
    }
   ],
   "Apo Island & Dumaguete": [
@@ -73,70 +82,80 @@
     "type": "Drift",
     "level": "advanced",
     "blurb": "Apo's 'washing machine' drift with schooling jacks, snappers and batfish",
-    "source": "PADI"
+    "source": "PADI",
+    "depth": "5-30m"
    },
    {
     "name": "Mamsa Point",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Named for the trevally (mamsa) that school over its coral slope",
-    "source": "Sea Explorers"
+    "source": "Sea Explorers",
+    "depth": "5-25m"
    },
    {
     "name": "Rock Point West",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Wide coral garden from 5m sloping to 20m on Apo's southwest side",
-    "source": "PADI"
+    "source": "PADI",
+    "depth": "5-20m"
    },
    {
     "name": "Chapel Point",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Sandy slope dropping to a wall cut with crevices and small caverns",
-    "source": "Sea Explorers"
+    "source": "Sea Explorers",
+    "depth": "5-25m"
    },
    {
     "name": "Cogon Point",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Current-swept northeast corner with jacks, sweetlips and turtles",
-    "source": "PADI"
+    "source": "PADI",
+    "depth": "8-30m"
    },
    {
     "name": "Apo Marine Sanctuary",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Protected no-take coral garden thick with green turtles",
-    "source": "Sea Explorers"
+    "source": "Sea Explorers",
+    "depth": "3-15m"
    },
    {
     "name": "Dauin Norte",
     "type": "Muck",
     "level": "beginner",
     "blurb": "Black-sand slope with mooring blocks hiding frogfish and pipefish",
-    "source": "Atlantis Dive Resorts"
+    "source": "Atlantis Dive Resorts",
+    "depth": "5-20m"
    },
    {
     "name": "Cars",
     "type": "Muck",
     "level": "beginner",
     "blurb": "Two sunken cars on sand sheltering frogfish, ghost pipefish and shrimp",
-    "source": "Atlantis Dive Resorts"
+    "source": "Atlantis Dive Resorts",
+    "depth": "15-25m"
    },
    {
     "name": "Secret Corner",
     "type": "Muck",
     "level": "intermediate",
     "blurb": "Current-brushed sand slope famed for mimic, blue-ring and coconut octopus",
-    "source": "Atlantis Dive Resorts"
+    "source": "Atlantis Dive Resorts",
+    "depth": "10-25m"
    },
    {
     "name": "Masaplod Norte",
     "type": "Muck",
     "level": "beginner",
     "blurb": "Sanctuary sand-and-rubble site with seahorses and occasional drift",
-    "source": "Dumaguete.com"
+    "source": "Dumaguete.com",
+    "depth": "5-20m"
    }
   ],
   "Azores": [
@@ -145,56 +164,64 @@
     "type": "Seamount",
     "level": "advanced",
     "blurb": "Open-ocean seamount ~45nm off Pico; mobula rays and pelagics in 30m+ viz",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "35-40m"
    },
    {
     "name": "Formigas / Dollabarat Bank",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Remote marine-reserve islets and bank; mantas, sharks and huge fish schools",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-40m"
    },
    {
     "name": "Ambrósio Reef",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Baixa do Ambrósio off Santa Maria; famed mobula-ray aggregations Jun-Oct",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "18-30m"
    },
    {
     "name": "Dori Wreck",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "WWII Liberty ship off Ponta Delgada, São Miguel; lies in 9-20m for all levels",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "9-20m"
    },
    {
     "name": "Condor Bank",
     "type": "Seamount",
     "level": "advanced",
     "blurb": "Protected seamount off Faial known for blue and mako shark encounters",
-    "source": "Visit Azores Dive Guide"
+    "source": "Visit Azores Dive Guide",
+    "depth": "20-40m"
    },
    {
     "name": "Cemitério das Âncoras",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Anchor Graveyard in Angra Bay, Terceira; seabed strewn with centuries-old anchors",
-    "source": "Visit Azores Dive Guide"
+    "source": "Visit Azores Dive Guide",
+    "depth": "6-14m"
    },
    {
     "name": "Baixa dos Rosais",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Reef off western São Jorge; pelagic schools circle the 15m reef top",
-    "source": "Visit Azores Dive Guide"
+    "source": "Visit Azores Dive Guide",
+    "depth": "15-40m"
    },
    {
     "name": "Gruta dos Camarões",
     "type": "Cave",
     "level": "tec",
     "blurb": "Shrimp-filled cave off Faial with entrance at 35m; cave-trained divers only",
-    "source": "Visit Azores Dive Guide"
+    "source": "Visit Azores Dive Guide",
+    "depth": "35-45m"
    }
   ],
   "Bahamas": [
@@ -203,56 +230,64 @@
     "type": "Shark dive",
     "level": "intermediate",
     "blurb": "Shallow Grand Bahama sandbank famous for close tiger and lemon shark encounters",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-12m"
    },
    {
     "name": "Dean's Blue Hole",
     "type": "Blue hole",
     "level": "advanced",
     "blurb": "Long Island sinkhole, among the world's deepest blue holes at 202 m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "max 40m"
    },
    {
     "name": "Theo's Wreck",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "230-ft freighter sunk 1982 off Grand Bahama, lying on its port side at 30 m",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "24-30m"
    },
    {
     "name": "Shark Wall",
     "type": "Shark dive",
     "level": "intermediate",
     "blurb": "Stuart Cove's New Providence wall where Caribbean reef sharks patrol the drop-off",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "12-18m"
    },
    {
     "name": "Ray of Hope",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "200-ft freighter sunk 2003 off Nassau, upright at 21 m beside a shark-feeding site",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "12-21m"
    },
    {
     "name": "Lost Blue Hole",
     "type": "Blue hole",
     "level": "intermediate",
     "blurb": "Nassau blue hole 30 m wide, rim at 12 m ringed by coral heads and reef sharks",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "12-30m"
    },
    {
     "name": "Washing Machine",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Exuma Cays current ride that tumbles divers through a narrow reef gap",
-    "source": "All Star Liveaboards"
+    "source": "All Star Liveaboards",
+    "depth": "5-12m"
    },
    {
     "name": "Current Cut",
     "type": "Drift",
     "level": "advanced",
     "blurb": "High-speed drift through the channel between Eleuthera and Current Island",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "10-20m"
    }
   ],
   "Bay Islands": [
@@ -261,63 +296,72 @@
     "type": "Wreck",
     "level": "advanced",
     "blurb": "240-ft freighter sunk 1987 off Guanaja, intact on sand at 24-33 m",
-    "source": "Scuba Diving Resource"
+    "source": "Scuba Diving Resource",
+    "depth": "24-33m"
    },
    {
     "name": "Black Rock Canyon",
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Volcanic canyons, caves and tunnels off Guanaja with sweepers and silversides",
-    "source": "Clark's Cay Guanaja"
+    "source": "Clark's Cay Guanaja",
+    "depth": "10-25m"
    },
    {
     "name": "Vertigo",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Sheer drop-offs along Guanaja's barrier reef wall",
-    "source": "Clark's Cay Guanaja"
+    "source": "Clark's Cay Guanaja",
+    "depth": "10-40m"
    },
    {
     "name": "The Pinnacle",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Guanaja channel seamount rising from 41 m to 17 m, draped in black coral",
-    "source": "Frommer's"
+    "source": "Frommer's",
+    "depth": "17-41m"
    },
    {
     "name": "Jim's Silverlode",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Guanaja wall tunnel at 21 m opening into a grouper-filled sandy amphitheatre",
-    "source": "Frommer's"
+    "source": "Frommer's",
+    "depth": "15-30m"
    },
    {
     "name": "Mestizo Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Guanaja reef with Columbus and Lempira statues plus 16th-century relics",
-    "source": "Frommer's"
+    "source": "Frommer's",
+    "depth": "8-20m"
    },
    {
     "name": "Don Enrique Wreck",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Sunken shrimp boat at 27 m off Guanaja, mast rising to 15 m, eagle rays nearby",
-    "source": "Frommer's"
+    "source": "Frommer's",
+    "depth": "15-27m"
    },
    {
     "name": "Pelican Point",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Cayos Cochinos reef of elkhorn and staghorn coral, caverns and tarpon to 18 m",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "5-18m"
    },
    {
     "name": "Lion's Head",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Cayos Cochinos wall dive in the marine protected area, rich sponge growth",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "10-30m"
    }
   ],
   "Bonaire": [
@@ -326,56 +370,64 @@
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "72-m freighter on its side at 30 m, Bonaire's premier wreck, shore-accessible",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "18-30m"
    },
    {
     "name": "1000 Steps",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Stairway shore entry to terraced coral from 6 to 30 m; turtles common",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-30m"
    },
    {
     "name": "Salt Pier",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Sponge-encrusted pier pilings in calm shallows with resident turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-18m"
    },
    {
     "name": "Bari Reef",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Kralendijk house reef with the Caribbean's highest recorded fish counts",
-    "source": "Sport Diver"
+    "source": "Sport Diver",
+    "depth": "5-25m"
    },
    {
     "name": "Something Special",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Sandy slope near the marina known for garden eels and seahorses",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-25m"
    },
    {
     "name": "Windsock",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Easy entry near the airport, gentle reef slope from 6 to 25 m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-25m"
    },
    {
     "name": "Karpata",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Northern marine-park classic; dense hard coral terrace and steep drop-off",
-    "source": "Bonaire National Marine Park"
+    "source": "Bonaire National Marine Park",
+    "depth": "8-30m"
    },
    {
     "name": "Forest (Klein Bonaire)",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Klein Bonaire wall named for its black coral forest; frequent turtles",
-    "source": "Bonaire National Marine Park"
+    "source": "Bonaire National Marine Park",
+    "depth": "12-30m"
    }
   ],
   "Bunaken National Marine Park": [
@@ -384,56 +436,64 @@
     "type": "Wall",
     "level": "beginner",
     "blurb": "Bunaken's signature sheer walls, dubbed the City of Turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-35m+"
    },
    {
     "name": "Sachiko's Point",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "World-class coral drop-off from 5m; currents bring pelagics",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "5-35m"
    },
    {
     "name": "Fukui Point",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Coral slope with garden eels and a row of giant Tridacna clams",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "8-25m"
    },
    {
     "name": "Mike's Point",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Wall named for photographer Mike Severns; Napoleon wrasse, pelagics",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "5-30m"
    },
    {
     "name": "Mandolin",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Sea-fan covered wall hiding pygmy seahorses; schooling fusiliers",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "5-30m"
    },
    {
     "name": "Alung Banua",
     "type": "Wall",
     "level": "beginner",
     "blurb": "Sheltered wall with caverns, turtles and reef fish clouds",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "5-30m"
    },
    {
     "name": "Bunaken Timur",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Long east-coast wall, turtles plus rich macro in the crevices",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "5-30m"
    },
    {
     "name": "Tanjung Kopi",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Manado Tua point with sweetlips schools; can carry strong current",
-    "source": "ZuBlu"
+    "source": "ZuBlu",
+    "depth": "8-28m"
    }
   ],
   "Cayman Islands": [
@@ -442,56 +502,64 @@
     "type": "Reef",
     "level": "beginner",
     "blurb": "3-4 m North Sound sandbar where habituated southern stingrays greet divers",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "3-4m"
    },
    {
     "name": "USS Kittiwake",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "76-m submarine rescue ship sunk 2011 off Seven Mile Beach, decks from 5 m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-20m"
    },
    {
     "name": "Bloody Bay Wall",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Little Cayman's sheer wall starting at 6 m and plunging beyond 300 m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-30m+"
    },
    {
     "name": "Babylon",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "North Wall pinnacle with black coral and rope sponges off Grand Cayman",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-30m+"
    },
    {
     "name": "Devil's Grotto",
     "type": "Cavern",
     "level": "beginner",
     "blurb": "George Town caverns and tunnels filled with silversides and tarpon in summer",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-14m"
    },
    {
     "name": "MV Captain Keith Tibbetts",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "100-m Russian frigate sunk 1996 off Cayman Brac, guns still in place",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "14-26m"
    },
    {
     "name": "Ghost Mountain",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Mushroom-shaped pinnacle off Grand Cayman's north tip, top near 15 m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-40m"
    },
    {
     "name": "Trinity Caves",
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Three coral canyons and swim-throughs opening onto Grand Cayman's West Wall",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "12-30m"
    }
   ],
   "Cenotes of Yucatán Peninsula": [
@@ -500,70 +568,80 @@
     "type": "Cavern",
     "level": "beginner",
     "blurb": "Two connected 'eyes'; the world's most famous cavern dive, Barbie and Bat Cave lines",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-10m"
    },
    {
     "name": "El Pit (The Pit)",
     "type": "Cenote",
     "level": "advanced",
     "blurb": "119 m sinkhole; light beams pierce a hydrogen-sulphide cloud around 30 m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "max 30m"
    },
    {
     "name": "Cenote Angelita",
     "type": "Cenote",
     "level": "advanced",
     "blurb": "Eerie sulphide 'cloud river' at 30 m with tree branches poking through",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "max 30m"
    },
    {
     "name": "Gran Cenote",
     "type": "Cavern",
     "level": "beginner",
     "blurb": "Crystal-clear decorated caverns near Tulum; turtles in the shallows",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "5-10m"
    },
    {
     "name": "Casa Cenote",
     "type": "Cenote",
     "level": "beginner",
     "blurb": "Open mangrove-lined cenote to ~8 m; haloclines and the odd tarpon",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "5-8m"
    },
    {
     "name": "Cenote Calavera",
     "type": "Cenote",
     "level": "intermediate",
     "blurb": "'Temple of Doom' skull-hole entry with strong halocline light play",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "5-16m"
    },
    {
     "name": "Chac Mool",
     "type": "Cavern",
     "level": "beginner",
     "blurb": "Dramatic light beams, halocline and a breathable air dome",
-    "source": "Bluewater Dive Travel"
+    "source": "Bluewater Dive Travel",
+    "depth": "8-14m"
    },
    {
     "name": "Taj Mahal (Tajma Ha)",
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Laser-beam light shafts, fossils and limestone halls",
-    "source": "Bluewater Dive Travel"
+    "source": "Bluewater Dive Travel",
+    "depth": "5-15m"
    },
    {
     "name": "Car Wash (Aktun Ha)",
     "type": "Cenote",
     "level": "beginner",
     "blurb": "Lily-pad garden entrance and a decorated cavern beyond",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "5-16m"
    },
    {
     "name": "Cenote Zapote (Hells Bells)",
     "type": "Cenote",
     "level": "advanced",
     "blurb": "Unique bell-shaped speleothems in a deep funnel near Puerto Morelos",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "max 30m"
    }
   ],
   "Chagos Archipelago / BIOT": [
@@ -572,35 +650,40 @@
     "type": "Channel",
     "level": "intermediate",
     "blurb": "Shallow atoll entrance channel with pristine coral; access suspended",
-    "source": "Dive Atlas of the World (expedition record)"
+    "source": "Dive Atlas of the World (expedition record)",
+    "depth": "5-20m"
    },
    {
     "name": "Vienna Rock (Peros Banhos)",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Gorgonian-draped pinnacle rising 15m to 8m off Ile Vache Marine",
-    "source": "Dive Atlas of the World (expedition record)"
+    "source": "Dive Atlas of the World (expedition record)",
+    "depth": "8-15m"
    },
    {
     "name": "Mapou Garden (Peros Banhos)",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Coral garden inside Peros Banhos Atoll noted in expedition logs",
-    "source": "Dive Atlas of the World (expedition record)"
+    "source": "Dive Atlas of the World (expedition record)",
+    "depth": "5-18m"
    },
    {
     "name": "Middle Brother (Great Chagos Bank)",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Remote oceanic reef on the world's largest atoll structure",
-    "source": "Dive Atlas of the World (expedition record)"
+    "source": "Dive Atlas of the World (expedition record)",
+    "depth": "10-30m"
    },
    {
     "name": "Egmont Atoll",
     "type": "Reef",
     "level": "advanced",
     "blurb": "Outer atoll dived under former BIOT permits; among Earth's healthiest reefs",
-    "source": "BIOT permit/liveaboard records"
+    "source": "BIOT permit/liveaboard records",
+    "depth": "10-30m"
    }
   ],
   "Cocos Island": [
@@ -609,56 +692,64 @@
     "type": "Seamount",
     "level": "advanced",
     "blurb": "Seamount topping at 25 m; the sharkiest hammerhead dive at Cocos",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "25-35m"
    },
    {
     "name": "Dirty Rock",
     "type": "Shark dive",
     "level": "advanced",
     "blurb": "Hundreds of schooling scalloped hammerheads off the north coast",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-30m"
    },
    {
     "name": "Manuelita",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Islet with Cocos' famous night dive: swarming hunting whitetips",
-    "source": "Aqua-Firma"
+    "source": "Aqua-Firma",
+    "depth": "10-25m"
    },
    {
     "name": "Dos Amigos Grande",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Huge underwater arch big enough for a whole dive group",
-    "source": "Aqua-Firma"
+    "source": "Aqua-Firma",
+    "depth": "15-35m"
    },
    {
     "name": "Dos Amigos Pequeña",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Current-swept sister pinnacle with Galapagos sharks and jacks",
-    "source": "Undersea Hunter"
+    "source": "Undersea Hunter",
+    "depth": "15-35m"
    },
    {
     "name": "Punta Maria",
     "type": "Seamount",
     "level": "advanced",
     "blurb": "Rocky spine seamount on the west coast; marble rays and hammerheads",
-    "source": "Aqua-Firma"
+    "source": "Aqua-Firma",
+    "depth": "20-35m"
    },
    {
     "name": "Submerged Rock",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Seamount stack with a swim-through arch on Cocos' south side",
-    "source": "Aqua-Firma"
+    "source": "Aqua-Firma",
+    "depth": "12-30m"
    },
    {
     "name": "Chatham Bay",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Sheltered anchorage dive with rays, whitetips and old anchor relics",
-    "source": "Undersea Hunter"
+    "source": "Undersea Hunter",
+    "depth": "10-20m"
    }
   ],
   "Cozumel": [
@@ -667,56 +758,64 @@
     "type": "Drift",
     "level": "beginner",
     "blurb": "3 miles of reef in four sections - Gardens, Caves, Horseshoe, Bricks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "Santa Rosa Wall",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Classic drift along a sheer wall with swim-through tunnels and eagle rays",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m+"
    },
    {
     "name": "Punta Sur (Devil's Throat)",
     "type": "Cavern",
     "level": "advanced",
     "blurb": "Tunnel entered at 24 m exiting the wall at 40 m on Cozumel's southern tip",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "24-40m"
    },
    {
     "name": "Columbia Deep",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Towering coral pinnacles split by sand chutes; turtles and reef sharks",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "12-40m"
    },
    {
     "name": "C-53 Felipe Xicoténcatl",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "56-m ex-minesweeper sunk 2000 as an artificial reef, penetration possible",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "12-24m"
    },
    {
     "name": "Paradise Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Shallow strip reef near the marina, favourite night dive for splendid toadfish",
-    "source": "Blue Note Scuba"
+    "source": "Blue Note Scuba",
+    "depth": "5-14m"
    },
    {
     "name": "Yucab",
     "type": "Drift",
     "level": "beginner",
     "blurb": "Low-profile reef packed with life, a gentle drift and photographer favourite",
-    "source": "Reefs of Cozumel"
+    "source": "Reefs of Cozumel",
+    "depth": "8-15m"
    },
    {
     "name": "Tormentos",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Two-part reef with sandy breaks; lobster, eels, toadfish and jawfish",
-    "source": "Reefs of Cozumel"
+    "source": "Reefs of Cozumel",
+    "depth": "10-21m"
    }
   ],
   "Fernando de Noronha": [
@@ -725,56 +824,64 @@
     "type": "Wreck",
     "level": "tec",
     "blurb": "Intact Brazilian navy corvette sunk 1983, upright at 62 m",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "58-62m"
    },
    {
     "name": "Pedras Secas",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Canyons, tunnels and arches rated among Brazil's best dives",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-22m"
    },
    {
     "name": "Laje Dois Irmãos",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Noronha's largest coral-covered laje; reliable reef-shark passes",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-20m"
    },
    {
     "name": "Caverna da Sapata",
     "type": "Cavern",
     "level": "advanced",
     "blurb": "Cave entrance at ~24 m sheltering big stingrays and black grouper",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "20-30m"
    },
    {
     "name": "Buraco do Inferno",
     "type": "Cavern",
     "level": "beginner",
     "blurb": "Small cave with an air-bubble ceiling; walls drop to 34 m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-20m"
    },
    {
     "name": "Cagarras Rasas",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered marine-park rocks and walls, ideal check-out dive",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-16m"
    },
    {
     "name": "Pontal do Norte",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Huge rock formations at the island's north tip; sharks and jacks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "18-35m"
    },
    {
     "name": "Ressurreta",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Volcanic-vent site by Ilha Rasa inside the national marine park",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-16m"
    }
   ],
   "Fiji": [
@@ -783,63 +890,72 @@
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Somosomo Strait drift wall cascading with white soft corals, 8-40m+",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-30m"
    },
    {
     "name": "Beqa Lagoon Shark Dive (The Bistro)",
     "type": "Shark dive",
     "level": "intermediate",
     "blurb": "Famous baited dive with up to 8 shark species incl. big bull sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-30m"
    },
    {
     "name": "Rainbow Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Soft-coral capital reef system in the current-swept Somosomo Strait",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "Grand Central Station (Namena)",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Namena reserve fish highway: barracuda, trevally, grey reef sharks",
-    "source": "NAI'A Liveaboard"
+    "source": "NAI'A Liveaboard",
+    "depth": "10-30m"
    },
    {
     "name": "Nigali Passage",
     "type": "Pass",
     "level": "intermediate",
     "blurb": "Gau's tidal channel drift with grey reef sharks, ends on cabbage coral patch",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "10-25m"
    },
    {
     "name": "E-6",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Vatu-i-Ra seamount rising from 900m; hammerheads and pelagics",
-    "source": "NAI'A Liveaboard"
+    "source": "NAI'A Liveaboard",
+    "depth": "5-35m"
    },
    {
     "name": "Frigate Passage",
     "type": "Pass",
     "level": "intermediate",
     "blurb": "48m wall on Beqa's barrier reef pass with reef sharks and pelagics",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Purple Wall",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Rainbow Reef wall coated in purple soft corals, fans and sea whips",
-    "source": "Tourism Fiji"
+    "source": "Tourism Fiji",
+    "depth": "10-30m"
    },
    {
     "name": "Caesar's Rocks",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Coral heads and swim-throughs inside Beqa Lagoon",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-20m"
    }
   ],
   "French Polynesia": [
@@ -848,63 +964,72 @@
     "type": "Pass",
     "level": "advanced",
     "blurb": "Iconic incoming-tide drift; 100+ grey reef sharks and resident dolphins",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-35m"
    },
    {
     "name": "Garuae Pass (Fakarava North)",
     "type": "Pass",
     "level": "advanced",
     "blurb": "French Polynesia's widest pass; shark-packed UNESCO biosphere drift",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-35m"
    },
    {
     "name": "Tumakohua Pass (Fakarava South)",
     "type": "Pass",
     "level": "intermediate",
     "blurb": "The 'wall of sharks' — hundreds of grey reef sharks stack in the pass",
-    "source": "Manawa"
+    "source": "Manawa",
+    "depth": "5-30m"
    },
    {
     "name": "Avatoru Pass (Rangiroa)",
     "type": "Pass",
     "level": "advanced",
     "blurb": "Rangiroa's second great pass, known for silvertip sharks",
-    "source": "Manawa"
+    "source": "Manawa",
+    "depth": "15-30m"
    },
    {
     "name": "Tuheiava Pass (Tikehau)",
     "type": "Pass",
     "level": "intermediate",
     "blurb": "Tikehau's only pass; mantas, barracuda, turtles and grey reef sharks",
-    "source": "Manawa"
+    "source": "Manawa",
+    "depth": "10-30m"
    },
    {
     "name": "Anau (Bora Bora)",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Lagoon manta ray cleaning station inside Bora Bora's barrier reef",
-    "source": "Dive Discovery"
+    "source": "Dive Discovery",
+    "depth": "10-20m"
    },
    {
     "name": "Tapu (Bora Bora)",
     "type": "Shark dive",
     "level": "intermediate",
     "blurb": "Outer-reef site renowned for close passes from lemon sharks",
-    "source": "Dive Discovery"
+    "source": "Dive Discovery",
+    "depth": "10-25m"
    },
    {
     "name": "White Valley (Tahiti)",
     "type": "Shark dive",
     "level": "intermediate",
     "blurb": "Tahiti's open-ocean shark rendezvous; lemons and occasional tigers",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "15-25m"
    },
    {
     "name": "The Aquarium (Rangiroa)",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered coral pinnacles near Tiputa Pass, ideal first atoll dive",
-    "source": "TOPDIVE"
+    "source": "TOPDIVE",
+    "depth": "3-12m"
    }
   ],
   "Galapagos Islands": [
@@ -913,56 +1038,64 @@
     "type": "Shark dive",
     "level": "advanced",
     "blurb": "Whale sharks Jun-Nov plus walls of hammerheads on the current line",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-25m"
    },
    {
     "name": "Wolf Island (Landslide & Shark Bay)",
     "type": "Shark dive",
     "level": "advanced",
     "blurb": "Hammerhead and Galapagos shark schools; liveaboard-only",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Gordon Rocks",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Eroded crater 'washing machine' famed for hammerheads off Santa Cruz",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "10-32m"
    },
    {
     "name": "Kicker Rock (León Dormido)",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Split tuff cone channel with sharks, turtles and rays off San Cristóbal",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "10-30m"
    },
    {
     "name": "Cousin's Rock",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Sloping ledges with sea lions, seahorses and frequent mantas",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "5-30m"
    },
    {
     "name": "Cabo Marshall",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Isabela wall drift known for giant mantas and blacktip schools",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "10-30m"
    },
    {
     "name": "Punta Vicente Roca",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Cold-water wall with mola mola, penguins and red-lipped batfish",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "10-25m"
    },
    {
     "name": "North Seymour",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Garden-eel plateau drift with whitetips, rays and turtles",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "10-25m"
    }
   ],
   "Gili Islands & Lombok": [
@@ -971,56 +1104,64 @@
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Sloping reef west of Trawangan; reef sharks, turtles and rays",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-30m"
    },
    {
     "name": "Deep Turbo",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Deep seamounts at 24-32m with sea fans, garden eels, sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "18-32m"
    },
    {
     "name": "Meno Wall",
     "type": "Wall",
     "level": "beginner",
     "blurb": "Gentle wall east of Gili Meno, turtles galore; top night dive",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-20m"
    },
    {
     "name": "Bounty Wreck",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Sunken pontoon at 9-18m off Gili Meno, coral-encrusted and fishy",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "9-18m"
    },
    {
     "name": "Halik Reef",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Coral ridges and canyons off north Trawangan; drift with sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-25m"
    },
    {
     "name": "Turtle Heaven",
     "type": "Pinnacle",
     "level": "beginner",
     "blurb": "Pinnacle north of Gili Meno stacked with green and hawksbill turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-24m"
    },
    {
     "name": "Hann's Reef",
     "type": "Muck",
     "level": "beginner",
     "blurb": "Gili Air critter site: frogfish, seahorses, ribbon eels, octopus",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-18m"
    },
    {
     "name": "Sunset Reef (Manta Point)",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Sloping southwest reef with sharks, turtles and pelagic surprises",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-25m"
    }
   ],
   "Gozo & Malta": [
@@ -1029,70 +1170,80 @@
     "type": "Cavern",
     "level": "beginner",
     "blurb": "Iconic rock pool opening through an underwater arch beside the Azure Window remains",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-25m"
    },
    {
     "name": "Um El Faroud",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "110m oil tanker scuttled 1998 off Wied iz-Zurrieq; Malta's biggest wreck, max 40m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "18-36m"
    },
    {
     "name": "Cirkewwa Arch",
     "type": "Arch",
     "level": "beginner",
     "blurb": "Reef wall with swim-throughs, arch and Madonna statue at Malta's northern tip",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-20m"
    },
    {
     "name": "P29 Patrol Boat",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "52m ex-East German patrol boat scuttled 2007 at Cirkewwa, upright at 35m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-35m"
    },
    {
     "name": "MV Karwela",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "50m ferry scuttled 2006 off Xatt l-Ahmar, Gozo; famous staircase shot at ~40m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "28-40m"
    },
    {
     "name": "Santa Maria Caves (Comino)",
     "type": "Cave",
     "level": "beginner",
     "blurb": "Chain of shallow grottos on Comino with striking light beams and tame bream",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "3-10m"
    },
    {
     "name": "Inland Sea Tunnel",
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Gozo lagoon linked to open sea by 80m cliff tunnel onto a dramatic drop-off",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "3-26m"
    },
    {
     "name": "HMS Maori",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "WWII British destroyer sunk 1942 in Valletta harbour; shallow shore dive to 16m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-16m"
    },
    {
     "name": "Rozi Tugboat",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Intact 35m tug scuttled 1992 at Cirkewwa on sand at ~34m, ringed by barracuda",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "20-34m"
    },
    {
     "name": "Double Arch Reef",
     "type": "Arch",
     "level": "advanced",
     "blurb": "Two stacked natural arches off Xwejni Bay, Marsalforn; scenic reef to ~36m",
-    "source": "Gozo operator listings"
+    "source": "Gozo operator listings",
+    "depth": "18-36m"
    }
   ],
   "Great Barrier Reef": [
@@ -1101,63 +1252,72 @@
     "type": "Reef",
     "level": "beginner",
     "blurb": "Ribbon Reef No.10 site famed for its friendly giant potato cod",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-25m"
    },
    {
     "name": "SS Yongala",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "110m 1911 shipwreck off Townsville, often called the world's best wreck dive",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "16-28m"
    },
    {
     "name": "North Horn",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Osprey Reef shark amphitheatre in the Coral Sea; grey reef and whitetip action",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-40m"
    },
    {
     "name": "Steve's Bommie",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Ribbon Reef #3 pinnacle rising 30m to 5m, dense fish schools and macro life",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "Lighthouse Bommie",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Ribbon Reefs pinnacle; world's premier dwarf minke whale encounters Jun-Jul",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-25m"
    },
    {
     "name": "Pixie Pinnacle",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Coral tower rising from 40m near Ribbon Reef No.10, packed with reef fish",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "Admiralty Anchor",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Osprey Reef wall with swim-throughs and an embedded 19th-century anchor",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Flynn Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Popular Cairns day-boat reef 57km offshore; coral gardens and turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-25m"
    },
    {
     "name": "Saxon Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Shallow coral gardens with cuttlefish, Moorish idols and anemonefish",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-20m"
    }
   ],
   "Great Blue Hole": [
@@ -1166,49 +1326,56 @@
     "type": "Blue hole",
     "level": "advanced",
     "blurb": "300-m-wide, 125-m-deep sinkhole with stalactites at 40 m on Lighthouse Reef",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "max 40m"
    },
    {
     "name": "Half Moon Caye Wall",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Lighthouse Reef wall with reef sharks, turtles, groupers and eagle rays",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Long Caye Aquarium",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Fish-packed shallow reef and wall top, standard third dive on Blue Hole trips",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-25m"
    },
    {
     "name": "Painted Wall",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Coral ridges and sand channels from 5 m dropping to a sponge-painted wall",
-    "source": "Aggressor Adventures"
+    "source": "Aggressor Adventures",
+    "depth": "5-30m"
    },
    {
     "name": "Silver Caves",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Wall swim-through from 10 m often filled with thousands of silversides",
-    "source": "Aggressor Adventures"
+    "source": "Aggressor Adventures",
+    "depth": "10-30m"
    },
    {
     "name": "The Cathedral",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Steeple-like coral formations with sandy cuts on Lighthouse Reef's west side",
-    "source": "Aggressor Adventures"
+    "source": "Aggressor Adventures",
+    "depth": "10-30m"
    },
    {
     "name": "Que Brada",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Sheer current-swept wall cut whose plankton flow feeds rich marine life",
-    "source": "Aggressor Adventures"
+    "source": "Aggressor Adventures",
+    "depth": "10-30m"
    }
   ],
   "Guadalcanal & Western Province": [
@@ -1217,63 +1384,72 @@
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Beached Japanese WWII transport; shore entry from 5m sloping to 55m",
-    "source": "Diveplanit"
+    "source": "Diveplanit",
+    "depth": "5-55m"
    },
    {
     "name": "Kinugawa Maru (Bonegi 2)",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Shallow beached Japanese freighter, snorkel-to-dive shore wreck",
-    "source": "Diveplanit"
+    "source": "Diveplanit",
+    "depth": "2-26m"
    },
    {
     "name": "Toa Maru (Gizo)",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "140m Japanese transport, the Solomons' finest recreational wreck, 12-37m",
-    "source": "Dive Gizo"
+    "source": "Dive Gizo",
+    "depth": "12-37m"
    },
    {
     "name": "Grand Central Station (Njari Island)",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "270+ fish species recorded on a single dive at this current-swept point",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "5-30m"
    },
    {
     "name": "Shark Point (Munda)",
     "type": "Shark dive",
     "level": "intermediate",
     "blurb": "Reef point dropping 600m; schooling grey reefs, hammerheads deeper",
-    "source": "Diveplanit"
+    "source": "Diveplanit",
+    "depth": "10-40m"
    },
    {
     "name": "B-17 Flying Fortress",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Intact WWII bomber 'Bessie the Jap Basher' at 10-20m off Honiara",
-    "source": "Emperor Divers"
+    "source": "Emperor Divers",
+    "depth": "10-20m"
    },
    {
     "name": "I-1 Submarine",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Wreckage of 98m Japanese submarine on the Guadalcanal coast",
-    "source": "ZuBlu"
+    "source": "ZuBlu",
+    "depth": "10-30m"
    },
    {
     "name": "USS John Penn",
     "type": "Wreck",
     "level": "tec",
     "blurb": "US attack transport off Lunga Point, on her side in 35-58m",
-    "source": "Tulagi Dive"
+    "source": "Tulagi Dive",
+    "depth": "35-58m"
    },
    {
     "name": "Kashi Maru (Munda)",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Japanese coastal freighter at 15m; open engine room and cargo holds",
-    "source": "Dive Munda"
+    "source": "Dive Munda",
+    "depth": "5-15m"
    }
   ],
   "Heron Island": [
@@ -1282,56 +1458,64 @@
     "type": "Bommie",
     "level": "beginner",
     "blurb": "Heron's signature 5-20m site; eagle rays, mantas, a Cousteau favourite",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-20m"
    },
    {
     "name": "Gorgonia Hole",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Fan-coral reef edge 7-16m with turtles, reef sharks and mantas",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "7-16m"
    },
    {
     "name": "Coral Grotto",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered grotto of hard corals on Heron Reef's fringing edge",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-15m"
    },
    {
     "name": "The Tenements",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Classic Heron drift along the reef slope; sharks, rays and pelagics",
-    "source": "Diversion Dive Travel"
+    "source": "Diversion Dive Travel",
+    "depth": "8-20m"
    },
    {
     "name": "Coral Cascades",
     "type": "Drift",
     "level": "beginner",
     "blurb": "5-16m coral wall often drifted through to Tenements 1",
-    "source": "Diversion Dive Travel"
+    "source": "Diversion Dive Travel",
+    "depth": "5-16m"
    },
    {
     "name": "Pam's Point",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Reef-edge site on Heron Reef teeming with turtles and reef fish",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-18m"
    },
    {
     "name": "Three Rocks",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Trio of coral heads minutes from Heron jetty, rich invertebrate life",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-15m"
    },
    {
     "name": "Harry's Bommie",
     "type": "Bommie",
     "level": "beginner",
     "blurb": "Coral outcrop on Heron Reef's southern edge; turtles and wobbegongs",
-    "source": "Diversion Dive Travel"
+    "source": "Diversion Dive Travel",
+    "depth": "5-18m"
    }
   ],
   "Komodo National Park": [
@@ -1340,63 +1524,72 @@
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Current-swept rock pinnacle dense with fish and pristine coral",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "Castle Rock",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Submerged seamount with sharks and trevally hunting in current",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "4-30m"
    },
    {
     "name": "Crystal Rock",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Clear-water pinnacle near Castle Rock, soft corals and pelagics",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "Manta Point (Makassar Reef)",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Long shallow drift over rubble past manta cleaning stations",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-15m"
    },
    {
     "name": "The Cauldron (Shotgun)",
     "type": "Channel",
     "level": "advanced",
     "blurb": "Channel dive fired through a bowl by ripping current; mantas",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-25m"
    },
    {
     "name": "Tatawa Besar",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Easy drift over orange soft-coral slopes with turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-25m"
    },
    {
     "name": "Siaba Besar",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered bay dubbed Turtle City, seagrass and coral bommies",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-18m"
    },
    {
     "name": "Mawan",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Sandy-slope manta cleaning station with white-sand shallows",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-20m"
    },
    {
     "name": "Sebayur",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Calm reef slopes ideal for check dives and training",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-24m"
    }
   ],
   "Lord Howe Island": [
@@ -1405,49 +1598,56 @@
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "World's tallest sea stack; Galapagos whalers, kingfish, rare angelfish",
-    "source": "Dive Lord Howe"
+    "source": "Dive Lord Howe",
+    "depth": "15-30m"
    },
    {
     "name": "Admiralty Islands",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Volcanic islets with 30+ sites of pinnacles, canyons and caves",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Erscott's Hole",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered 8m lagoon hole; doubleheader wrasse and spangled emperor",
-    "source": "Dive Lord Howe"
+    "source": "Dive Lord Howe",
+    "depth": "3-8m"
    },
    {
     "name": "Comets Hole",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Coral-ringed lagoon hole teeming with resident reef fish",
-    "source": "Spacifica Travel"
+    "source": "Spacifica Travel",
+    "depth": "3-10m"
    },
    {
     "name": "Tenth of June",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Admiralty islet dive with swim-throughs and dense fish life",
-    "source": "Spacifica Travel"
+    "source": "Spacifica Travel",
+    "depth": "10-25m"
    },
    {
     "name": "Rupert's Reef",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Classic outer-reef coral dive on the world's southernmost coral reef",
-    "source": "Spacifica Travel"
+    "source": "Spacifica Travel",
+    "depth": "10-25m"
    },
    {
     "name": "Deacon's Delight",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Popular boat-dive reef among Lord Howe's 60+ charted sites",
-    "source": "Spacifica Travel"
+    "source": "Spacifica Travel",
+    "depth": "10-25m"
    }
   ],
   "Lundy Island": [
@@ -1456,56 +1656,64 @@
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Lundy's most colourful site: twin pinnacles of jewel anemones and rare cup corals",
-    "source": "Landmark Trust (Lundy MPA)"
+    "source": "Landmark Trust (Lundy MPA)",
+    "depth": "12-24m"
    },
    {
     "name": "Gannets' Bay",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered bay below Gannets' Rock; classic playful grey-seal encounter dive",
-    "source": "Landmark Trust (Lundy MPA)"
+    "source": "Landmark Trust (Lundy MPA)",
+    "depth": "5-15m"
    },
    {
     "name": "MV Robert",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Intact 1975 coaster upright at 25m off the east coast, Lundy's best wreck",
-    "source": "Landmark Trust (Lundy MPA)"
+    "source": "Landmark Trust (Lundy MPA)",
+    "depth": "20-25m"
    },
    {
     "name": "HMS Montagu",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "1906 battleship wreckage in 5-15m off Shutter Point; scheduled monument",
-    "source": "Wessex Archaeology"
+    "source": "Wessex Archaeology",
+    "depth": "5-15m"
    },
    {
     "name": "Iona II",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Confederate blockade-runner paddle steamer at 22m; protected wreck dive trail",
-    "source": "BSAC"
+    "source": "BSAC",
+    "depth": "18-24m"
    },
    {
     "name": "Brazen Ward",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered east-coast headland reef between Knoll Pins and Gannets' Rock",
-    "source": "Landmark Trust (Lundy MPA)"
+    "source": "Landmark Trust (Lundy MPA)",
+    "depth": "6-18m"
    },
    {
     "name": "Battery Point",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Exposed west-coast gullies and walls; haunt of rare spiny lobsters",
-    "source": "Landmark Trust (Lundy MPA)"
+    "source": "Landmark Trust (Lundy MPA)",
+    "depth": "10-25m"
    },
    {
     "name": "Jenny's Cove",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Boulder reef beneath west-coast seabird cliffs, dived in calm weather",
-    "source": "Landmark Trust (Lundy MPA)"
+    "source": "Landmark Trust (Lundy MPA)",
+    "depth": "8-20m"
    }
   ],
   "Malapascua Island": [
@@ -1514,49 +1722,56 @@
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Sunken seamount cleaning station; dawn thresher shark encounters",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-25m"
    },
    {
     "name": "Kimud Shoal",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Sunken island where threshers now gather; occasional hammerheads",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "18-30m"
    },
    {
     "name": "Gato Island",
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Rocky islet with swim-through tunnel, whitetips, sea snakes and macro",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-25m"
    },
    {
     "name": "Dona Marilyn Wreck",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "100m ferry lost in a 1988 typhoon, intact on her port side at 18-33m",
-    "source": "Thresher Shark Divers"
+    "source": "Thresher Shark Divers",
+    "depth": "18-33m"
    },
    {
     "name": "Lighthouse",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Shallow WWII landing-craft wreck; classic sunset mandarinfish dive",
-    "source": "Thresher Shark Divers"
+    "source": "Thresher Shark Divers",
+    "depth": "5-15m"
    },
    {
     "name": "Calanggaman Island",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Sandbar islet with steep coral walls and rare nudibranchs",
-    "source": "Thresher Shark Divers"
+    "source": "Thresher Shark Divers",
+    "depth": "10-35m"
    },
    {
     "name": "Chocolate Island",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Shallow soft-coral islet packed with macro critters",
-    "source": "Greatest Dive Sites"
+    "source": "Greatest Dive Sites",
+    "depth": "5-15m"
    }
   ],
   "Maldives": [
@@ -1565,70 +1780,80 @@
     "type": "Thila",
     "level": "intermediate",
     "blurb": "Legendary North Ari pinnacle; whitetip reef sharks hunt on night dives",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-30m"
    },
    {
     "name": "Fish Head (Mushimasmingili Thila)",
     "type": "Thila",
     "level": "intermediate",
     "blurb": "Protected Ari Atoll pinnacle patrolled by grey reef sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Manta Point (Lankan Reef)",
     "type": "Manta dive",
     "level": "intermediate",
     "blurb": "North Male cleaning station with reliable manta rays Aug-Nov",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-17m"
    },
    {
     "name": "Banana Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "The Maldives' first-discovered dive site, in North Male Atoll",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "Fotteyo Kandu",
     "type": "Channel",
     "level": "advanced",
     "blurb": "Vaavu channel of caves and overhangs; grey reef sharks and eagle rays",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-40m"
    },
    {
     "name": "Kandooma Thila",
     "type": "Thila",
     "level": "advanced",
     "blurb": "Current-swept South Male pinnacle thick with sharks and snapper",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "13-40m"
    },
    {
     "name": "Broken Rock",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "South Ari rock split by a coral-lined canyon swim-through",
-    "source": "Liveaboard/operator listings"
+    "source": "Liveaboard/operator listings",
+    "depth": "12-30m"
    },
    {
     "name": "Kuredu Express",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Fast Lhaviyani channel drift with grey reef sharks and eagle rays",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "12-35m"
    },
    {
     "name": "Fuvahmulah (Tiger Zoo)",
     "type": "Shark dive",
     "level": "advanced",
     "blurb": "Oceanic island famous for year-round tiger shark encounters",
-    "source": "Operator listings"
+    "source": "Operator listings",
+    "depth": "15-40m"
    },
    {
     "name": "Alimatha Jetty",
     "type": "Shark dive",
     "level": "intermediate",
     "blurb": "Vaavu night dive with dozens of nurse sharks and stingrays",
-    "source": "Liveaboard/operator listings"
+    "source": "Liveaboard/operator listings",
+    "depth": "8-16m"
    }
   ],
   "Maui & Kona": [
@@ -1637,70 +1862,80 @@
     "type": "Reef",
     "level": "beginner",
     "blurb": "Crescent volcanic crater with up to 45 m visibility and pelagic visitors",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-27m"
    },
    {
     "name": "Molokini Back Wall",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Sheer 100 m-plus drop-off drift, rated the best US wall dive",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "10-40m+"
    },
    {
     "name": "Kona Manta Ray Night Dive (Garden Eel Cove)",
     "type": "Manta dive",
     "level": "beginner",
     "blurb": "Lights draw plankton and feeding mantas at Makako Bay; ~90% hit rate",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-14m"
    },
    {
     "name": "Cathedrals I & II (Lanai)",
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Lava rooms with light beams through ceiling cracks; a Maui-boat classic",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "12-20m"
    },
    {
     "name": "Mala Wharf",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Collapsed pier turned artificial reef; turtles and whitetips",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "5-12m"
    },
    {
     "name": "Five Caves / Makena Landing",
     "type": "Shore",
     "level": "beginner",
     "blurb": "'Turtle Town' lava arches and caves in 3-12 m",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "3-12m"
    },
    {
     "name": "Honolua Bay",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Marine reserve coral garden; calm summer conditions",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "3-12m"
    },
    {
     "name": "Kaiwi Point (Kona)",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Boat-only reef with dramatic structure, turtles and schooling fish",
-    "source": "Jack's Diving Locker"
+    "source": "Jack's Diving Locker",
+    "depth": "8-25m"
    },
    {
     "name": "Au Au Crater (Kona)",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "V-shaped volcanic canyon with 20-60 m of vertical relief",
-    "source": "Jack's Diving Locker"
+    "source": "Jack's Diving Locker",
+    "depth": "12-30m"
    },
    {
     "name": "Turtle Pinnacle (Kona)",
     "type": "Pinnacle",
     "level": "beginner",
     "blurb": "Coral head cleaning station where wrasses groom green sea turtles",
-    "source": "Jack's Diving Locker"
+    "source": "Jack's Diving Locker",
+    "depth": "8-14m"
    }
   ],
   "Medes Islands": [
@@ -1709,63 +1944,72 @@
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Famed 90m tunnel system with bronze dolphin statue; light shafts, max ~23m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-23m"
    },
    {
     "name": "La Vaca",
     "type": "Cave",
     "level": "intermediate",
     "blurb": "Bright tunnel piercing Meda Gran; entrance at 12m, corals and groupers",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-24m"
    },
    {
     "name": "Carall Bernat",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Southern Medes pinnacle; gorgonian-covered walls from 5m to ~55m, big groupers",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-45m"
    },
    {
     "name": "Pota del Llop",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Deep gorgonian wall on Meda Gran's east coast to 50m; barracuda and dentex",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-45m"
    },
    {
     "name": "Tascó Gros",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "210m-wide rock southeast of the Medes, slopes to ~30m with dense sea fans",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-30m"
    },
    {
     "name": "Tascó Petit",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Small islet beside Tascó Gros; sea whips, moray eels and schooling bream",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-25m"
    },
    {
     "name": "Salpatxot",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Gentle rocky slope to 24m on Meda Gran's sheltered north face",
-    "source": "Costa Brava dive centre association"
+    "source": "Costa Brava dive centre association",
+    "depth": "5-24m"
    },
    {
     "name": "Les Ferranelles",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Easy islet dive between Meda Petita and Tascó Petit, 10-35m",
-    "source": "Costa Brava Divers"
+    "source": "Costa Brava Divers",
+    "depth": "10-35m"
    },
    {
     "name": "Reggio Messina",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "115m ferry scuttled off L'Estartit in 1991; sections lying in 27-35m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "27-35m"
    }
   ],
   "Moorea": [
@@ -1774,56 +2018,64 @@
     "type": "Shark dive",
     "level": "intermediate",
     "blurb": "NW point with lemon, blacktip and grey sharks; tiki statue at 13m",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-20m"
    },
    {
     "name": "Opunohu Canyons",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Coral canyons off Opunohu Bay; big lemon sharks and turtles",
-    "source": "DeeperBlue"
+    "source": "DeeperBlue",
+    "depth": "10-20m"
    },
    {
     "name": "The Rose Garden",
     "type": "Reef",
     "level": "advanced",
     "blurb": "Field of rose-shaped Montipora corals at 40m off Opunohu Pass",
-    "source": "TOPDIVE"
+    "source": "TOPDIVE",
+    "depth": "35-45m"
    },
    {
     "name": "Taotoi Pass",
     "type": "Pass",
     "level": "beginner",
     "blurb": "West-coast site ~15m; blacktips, eagle rays and dense reef fish",
-    "source": "TOPDIVE"
+    "source": "TOPDIVE",
+    "depth": "10-18m"
    },
    {
     "name": "Stingray World",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Shallow lagoon encounter with habituated stingrays and blacktips",
-    "source": "Dive Discovery"
+    "source": "Dive Discovery",
+    "depth": "2-5m"
    },
    {
     "name": "Temae",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Relaxed east-coast reef ~20m; gentle current, turtles and blacktips",
-    "source": "TOPDIVE"
+    "source": "TOPDIVE",
+    "depth": "10-20m"
    },
    {
     "name": "Eden Park",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "North-coast outer-reef dive to ~21m beyond the lagoon near Opunohu",
-    "source": "TOPDIVE"
+    "source": "TOPDIVE",
+    "depth": "15-25m"
    },
    {
     "name": "Rays Corridor",
     "type": "Drift",
     "level": "beginner",
     "blurb": "Easy lagoon corridor with squadrons of eagle rays and whitetips",
-    "source": "TOPDIVE"
+    "source": "TOPDIVE",
+    "depth": "3-15m"
    }
   ],
   "Ningaloo Reef": [
@@ -1832,56 +2084,64 @@
     "type": "Shore",
     "level": "intermediate",
     "blurb": "T-shaped naval jetty rated among the world's best pier dives; wobbegongs, frogfish",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-15m"
    },
    {
     "name": "Blizzard Ridge",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Lighthouse Bay ridge swirling with dense schools of reef fish",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-16m"
    },
    {
     "name": "The Labyrinth",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Limestone maze of craters and swim-throughs; napping green turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "6-14m"
    },
    {
     "name": "Gulliver's",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Lighthouse Bay site with a manta ray cleaning station",
-    "source": "Divernet"
+    "source": "Divernet",
+    "depth": "8-18m"
    },
    {
     "name": "Asho's Gap",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Coral Bay shark cleaning station over a cabbage-coral plateau",
-    "source": "Divernet"
+    "source": "Divernet",
+    "depth": "8-15m"
    },
    {
     "name": "Muiron Islands",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Soft-coral rich islands 10nm off North West Cape; turtles, occasional dugong",
-    "source": "Exmouth Dive Centre"
+    "source": "Exmouth Dive Centre",
+    "depth": "5-18m"
    },
    {
     "name": "Turquoise Bay",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Famous drift-snorkel shore entry over Ningaloo coral gardens",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "2-6m"
    },
    {
     "name": "Helga's Tunnels",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Lighthouse Bay tunnels and overhangs sheltering rays and reef sharks",
-    "source": "Divernet"
+    "source": "Divernet",
+    "depth": "8-16m"
    }
   ],
   "Okinawa Islands": [
@@ -1890,49 +2150,56 @@
     "type": "Monument",
     "level": "advanced",
     "blurb": "Mysterious stepped monolith at 25m; winter hammerhead schools nearby",
-    "source": "PADI"
+    "source": "PADI",
+    "depth": "5-25m"
    },
    {
     "name": "Blue Cave (Cape Maeda)",
     "type": "Cavern",
     "level": "beginner",
     "blurb": "Glowing blue sea cave on Okinawa's west coast; shore-accessible",
-    "source": "PADI"
+    "source": "PADI",
+    "depth": "3-10m"
    },
    {
     "name": "Manta Scramble (Ishigaki)",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Famous Kabira cleaning station where reef mantas hover at 8-16m",
-    "source": "PADI"
+    "source": "PADI",
+    "depth": "8-16m"
    },
    {
     "name": "Kerama Islands",
     "type": "Reef",
     "level": "beginner",
     "blurb": "National-park coral gardens off Naha with turtles and 30m+ visibility",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "USS Emmons",
     "type": "Wreck",
     "level": "tec",
     "blurb": "WWII kamikaze-struck US destroyer lying at 36-45m off Kouri Island",
-    "source": "Fluid Levitation"
+    "source": "Fluid Levitation",
+    "depth": "36-45m"
    },
    {
     "name": "Manza Dream Hole",
     "type": "Cavern",
     "level": "advanced",
     "blurb": "Coral chimney dropping 5-23m into dark tunnels at Cape Manza",
-    "source": "Aloha Divers Okinawa"
+    "source": "Aloha Divers Okinawa",
+    "depth": "5-23m"
    },
    {
     "name": "Sunabe Seawall",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Classic shore dive with soft corals and an underwater postbox at 7m",
-    "source": "JNTO"
+    "source": "JNTO",
+    "depth": "3-12m"
    }
   ],
   "Palau": [
@@ -1941,70 +2208,80 @@
     "type": "Drift",
     "level": "advanced",
     "blurb": "World-famous hook-in drift with a nonstop parade of grey reef sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-30m"
    },
    {
     "name": "German Channel",
     "type": "Channel",
     "level": "intermediate",
     "blurb": "Dredged phosphate channel; manta cleaning station and feeding aggregations",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-18m"
    },
    {
     "name": "Blue Holes",
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Four vertical shafts opening into a vast cavern beside Blue Corner",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-35m"
    },
    {
     "name": "Ulong Channel",
     "type": "Channel",
     "level": "intermediate",
     "blurb": "Palau's signature drift over lettuce coral with sharks in the current",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-20m"
    },
    {
     "name": "Jellyfish Lake",
     "type": "Lake",
     "level": "beginner",
     "blurb": "Snorkel-only marine lake filled with millions of stingless golden jellyfish",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "snorkel 0-5m"
    },
    {
     "name": "Chandelier Cave",
     "type": "Cavern",
     "level": "advanced",
     "blurb": "Air-filled cave chambers where divers surface among stalactites",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-10m"
    },
    {
     "name": "Peleliu Express",
     "type": "Drift",
     "level": "advanced",
     "blurb": "High-voltage current dive off Peleliu with big shark numbers",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-40m"
    },
    {
     "name": "New Drop-Off",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Sheer wall and plateau with sea fans, sharks and schooling pelagics",
-    "source": "Bluewater Dive Travel"
+    "source": "Bluewater Dive Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Big Drop-Off",
     "type": "Wall",
     "level": "beginner",
     "blurb": "Ngemelis wall plunging 300m; praised by Jacques Cousteau",
-    "source": "Bluewater Dive Travel"
+    "source": "Bluewater Dive Travel",
+    "depth": "3-30m+"
    },
    {
     "name": "Siaes Tunnel",
     "type": "Cavern",
     "level": "advanced",
     "blurb": "Deep 30m+ tunnel through the reef wall with rays, turtles and fish schools",
-    "source": "Bluewater Dive Travel"
+    "source": "Bluewater Dive Travel",
+    "depth": "20-40m"
    }
   ],
   "Poor Knights Islands": [
@@ -2013,49 +2290,56 @@
     "type": "Cave",
     "level": "beginner",
     "blurb": "World's largest sea cave by volume; 20m+ at the entrance",
-    "source": "Divernet"
+    "source": "Divernet",
+    "depth": "5-20m"
    },
    {
     "name": "Blue Maomao Arch",
     "type": "Arch",
     "level": "beginner",
     "blurb": "Signature swim-through packed with schooling blue maomao",
-    "source": "Dive Now NZ"
+    "source": "Dive Now NZ",
+    "depth": "5-15m"
    },
    {
     "name": "Northern Arch",
     "type": "Arch",
     "level": "advanced",
     "blurb": "Vertical arch to 38m; stingrays hover mid-water in the current",
-    "source": "Dive Now NZ"
+    "source": "Dive Now NZ",
+    "depth": "10-38m"
    },
    {
     "name": "Middle Arch",
     "type": "Arch",
     "level": "beginner",
     "blurb": "Sheltered arch with kelp, nudibranchs, snapper and demoiselles",
-    "source": "Dive Now NZ"
+    "source": "Dive Now NZ",
+    "depth": "8-25m"
    },
    {
     "name": "Tie Dye Arch",
     "type": "Arch",
     "level": "intermediate",
     "blurb": "Exposed arch named for its patchwork of colourful encrusting life",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "10-30m"
    },
    {
     "name": "Landing Bay Pinnacle",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Steep pinnacle from 6m past 45m; morays, scorpionfish, firebrick stars",
-    "source": "Dive HQ NZ"
+    "source": "Dive HQ NZ",
+    "depth": "6-45m"
    },
    {
     "name": "Cream Garden",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Winter aggregations of bronze whaler sharks in peak visibility",
-    "source": "New Zealand Geographic"
+    "source": "New Zealand Geographic",
+    "depth": "10-25m"
    }
   ],
   "Raja Ampat": [
@@ -2064,63 +2348,72 @@
     "type": "Reef",
     "level": "advanced",
     "blurb": "World-record fish count on one dive; snapper, trevally, sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-35m"
    },
    {
     "name": "Blue Magic",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Dampier Strait seamount with oceanic mantas and wobbegongs",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-30m"
    },
    {
     "name": "Manta Sandy",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Shallow manta cleaning station with marked viewing line",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-18m"
    },
    {
     "name": "Melissa's Garden",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Pristine hard-coral plateau in Penemu, dense reef fish and pygmies",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "5-25m"
    },
    {
     "name": "Sardine Reef",
     "type": "Reef",
     "level": "advanced",
     "blurb": "One of the fishiest sites in the Dampier Strait; big schools",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-28m"
    },
    {
     "name": "Magic Mountain (Shadow Reef)",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Misool seamount where oceanic and reef mantas share cleaners",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "6-30m"
    },
    {
     "name": "The Passage",
     "type": "Channel",
     "level": "advanced",
     "blurb": "River-like channel between Waigeo and Gam, archways and soft coral",
-    "source": "Bluewater Dive Travel"
+    "source": "Bluewater Dive Travel",
+    "depth": "3-15m"
    },
    {
     "name": "Mike's Point",
     "type": "Reef",
     "level": "advanced",
     "blurb": "WWII-bombed island reef with carved ledges, sharks in current",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "5-30m"
    },
    {
     "name": "Arborek Jetty",
     "type": "Muck",
     "level": "beginner",
     "blurb": "Iconic village jetty pilings swarmed by baitfish and macro life",
-    "source": "SSI MyDiveGuide"
+    "source": "SSI MyDiveGuide",
+    "depth": "3-15m"
    }
   ],
   "Red Sea (Egypt)": [
@@ -2129,70 +2422,80 @@
     "type": "Wreck",
     "level": "advanced",
     "blurb": "WWII cargo wreck at ~30m with motorbikes, trucks and locomotives",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "16-32m"
    },
    {
     "name": "Shark & Yolanda Reef (Ras Mohammed)",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Twin coral towers on an 800m wall; snapper and barracuda schools",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Elphinstone Reef",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Offshore ridge near Marsa Alam famed for oceanic whitetips",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-40m+"
    },
    {
     "name": "Big Brother (Brothers Islands)",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Volcanic island walls with thresher and hammerhead sharks plus wrecks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-40m+"
    },
    {
     "name": "Daedalus Reef",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Remote marine-park reef; schooling hammerheads in strong current",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-40m"
    },
    {
     "name": "Jackson Reef (Straits of Tiran)",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Best-known of Tiran's four reefs; soft corals and pelagics",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Blue Hole (Dahab)",
     "type": "Shore",
     "level": "advanced",
     "blurb": "Iconic 100m+ sinkhole; rim dives recreational, the Arch is tec-only",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "rim 7-30m"
    },
    {
     "name": "Giannis D (Abu Nuhas)",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Photogenic 1983 freighter wreck on 'Ships' Graveyard' reef",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "6-27m"
    },
    {
     "name": "St. John's Reefs",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Deep-south reef system of caves, tunnels and pristine coral",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Sha'ab Samadai (Dolphin House)",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered Marsa Alam lagoon reef with resident spinner dolphins",
-    "source": "Operator/marine-park listings"
+    "source": "Operator/marine-park listings",
+    "depth": "5-20m"
    }
   ],
   "Roatán": [
@@ -2201,56 +2504,64 @@
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Volcanic crevice with vertical coral walls, 14-33 m, Roatán's signature dive",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "14-33m"
    },
    {
     "name": "El Aguila Wreck",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "75-m cargo ship at 33 m off Sandy Bay, broken in three by Hurricane Mitch",
-    "source": "Roatan Divers"
+    "source": "Roatan Divers",
+    "depth": "20-33m"
    },
    {
     "name": "Odyssey Wreck",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "90-m freighter in Sandy Bay, one of the Caribbean's largest wrecks",
-    "source": "Roatan Divers"
+    "source": "Roatan Divers",
+    "depth": "12-33m"
    },
    {
     "name": "Blue Channel",
     "type": "Channel",
     "level": "beginner",
     "blurb": "Shallow West End channel with swim-throughs, sweepers and morays",
-    "source": "Roatan Divers"
+    "source": "Roatan Divers",
+    "depth": "5-15m"
    },
    {
     "name": "Hole in the Wall",
     "type": "Cavern",
     "level": "advanced",
     "blurb": "Sand chute and tunnel exiting the wall at 30 m near West End",
-    "source": "Roatan Divers"
+    "source": "Roatan Divers",
+    "depth": "10-30m+"
    },
    {
     "name": "Spooky Channel",
     "type": "Channel",
     "level": "intermediate",
     "blurb": "Deep ice-age canyon with shadowy overhangs on Roatán's north side",
-    "source": "Splash Inn Dive Resort"
+    "source": "Splash Inn Dive Resort",
+    "depth": "8-25m"
    },
    {
     "name": "Texas",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Roatán's true drift dive over a deep plateau; sargassum triggerfish spot",
-    "source": "Roatan Divers"
+    "source": "Roatan Divers",
+    "depth": "10-30m"
    },
    {
     "name": "West End Wall",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Current-brushed wall at Roatán's western tip, barrel sponges and pelagics",
-    "source": "Coconut Tree Divers"
+    "source": "Coconut Tree Divers",
+    "depth": "10-30m"
    }
   ],
   "Scapa Flow": [
@@ -2259,70 +2570,80 @@
     "type": "Wreck",
     "level": "tec",
     "blurb": "König-class battleship at 45m, deepest and most intact of the dreadnoughts",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "24-45m"
    },
    {
     "name": "SMS König",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "Jutland veteran battleship lying inverted in 38m, blast-broken but atmospheric",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "20-38m"
    },
    {
     "name": "SMS Kronprinz Wilhelm",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "Upturned 25,000-ton battleship in 38m; 12-inch guns still visible",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-38m"
    },
    {
     "name": "SMS Cöln",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "Most intact of the light cruisers, on her starboard side in 36m",
-    "source": "Scapa Flow Wrecks"
+    "source": "Scapa Flow Wrecks",
+    "depth": "20-36m"
    },
    {
     "name": "SMS Brummer",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "Fast minelaying cruiser on her starboard side; deck at 22m, seabed 36m",
-    "source": "Scapa Flow Wrecks"
+    "source": "Scapa Flow Wrecks",
+    "depth": "20-36m"
    },
    {
     "name": "SMS Karlsruhe",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Shallowest cruiser at ~27m; guns and capstans within recreational reach",
-    "source": "Scapa Flow Wrecks"
+    "source": "Scapa Flow Wrecks",
+    "depth": "16-27m"
    },
    {
     "name": "SMS Dresden",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "Cöln-class light cruiser on her port side in 38m with striking intact bow",
-    "source": "Scapa Flow Wrecks"
+    "source": "Scapa Flow Wrecks",
+    "depth": "18-38m"
    },
    {
     "name": "Tabarka",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Upside-down Burra Sound blockship in 12m; light-filled slack-water swim-through",
-    "source": "Scapa Flow Wrecks"
+    "source": "Scapa Flow Wrecks",
+    "depth": "8-16m"
    },
    {
     "name": "Gobernador Bories",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Burra Sound blockship in 15m, current-swept and carpeted in anemones",
-    "source": "Scapa Flow Wrecks"
+    "source": "Scapa Flow Wrecks",
+    "depth": "10-17m"
    },
    {
     "name": "F2 & YC21 Barge",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "WWII German escort and salvage barge together in 15m; two wrecks, one dive",
-    "source": "Scapa Flow Wrecks"
+    "source": "Scapa Flow Wrecks",
+    "depth": "10-18m"
    }
   ],
   "Sea of Cortez": [
@@ -2331,56 +2652,64 @@
     "type": "Reef",
     "level": "beginner",
     "blurb": "Colony of ~400 playful California sea lions off Espíritu Santo",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-18m"
    },
    {
     "name": "El Bajo",
     "type": "Seamount",
     "level": "advanced",
     "blurb": "Three-peak seamount famed for schooling hammerhead encounters",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "18-40m"
    },
    {
     "name": "Salvatierra Wreck",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Car ferry sunk 1976 on Swanee Reef, now fish-covered at 18-20 m",
-    "source": "Cortez Club"
+    "source": "Cortez Club",
+    "depth": "18-20m"
    },
    {
     "name": "Fang Ming Wreck",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Chinese vessel scuttled 1999 as an artificial reef; turtles and rays",
-    "source": "Cortez Club"
+    "source": "Cortez Club",
+    "depth": "15-21m"
    },
    {
     "name": "Swanee Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Shallow coral-topped reef alive with tropicals; great training site",
-    "source": "Cortez Club"
+    "source": "Cortez Club",
+    "depth": "5-12m"
    },
    {
     "name": "La Reina",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Lighthouse rock north of Cerralvo; mobulas and visiting giant mantas",
-    "source": "Bluewater Dive Travel"
+    "source": "Bluewater Dive Travel",
+    "depth": "5-25m"
    },
    {
     "name": "El Vencedor Wreck (Cabo Pulmo)",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Tuna-boat wreck patrolled by bull sharks and snapper schools",
-    "source": "Bluewater Dive Travel"
+    "source": "Bluewater Dive Travel",
+    "depth": "12-18m"
    },
    {
     "name": "El Cantil (Cabo Pulmo)",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Hard-coral finger reef with big groupers, turtles and jack tornadoes",
-    "source": "Dive O'Clock"
+    "source": "Dive O'Clock",
+    "depth": "8-18m"
    }
   ],
   "Seychelles": [
@@ -2389,56 +2718,64 @@
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Granite plateau 8km off Mahe; reef sharks, rays and whale sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "18-30m"
    },
    {
     "name": "Ennerdale Wreck",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Seychelles' most famous wreck, a 1970 tanker at ~30m off Mahe",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "20-30m"
    },
    {
     "name": "Brissare Rocks",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Granite reef at 8-16m with swim-throughs and nurse sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-16m"
    },
    {
     "name": "L'Ilot",
     "type": "Pinnacle",
     "level": "beginner",
     "blurb": "Tiny granite islet off north Mahe; a top Seychelles night dive",
-    "source": "Operator listings"
+    "source": "Operator listings",
+    "depth": "5-25m"
    },
    {
     "name": "Trois Bancs",
     "type": "Reef",
     "level": "advanced",
     "blurb": "Three exposed granite banks with drop-offs, caves and pelagics",
-    "source": "Operator listings"
+    "source": "Operator listings",
+    "depth": "15-40m"
    },
    {
     "name": "Ave Maria Rocks",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Granite rocks near La Digue with reliable turtle encounters",
-    "source": "Operator listings"
+    "source": "Operator listings",
+    "depth": "8-20m"
    },
    {
     "name": "Twin Barges",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Two scuttled barges off Beau Vallon, now coral-encrusted reefs",
-    "source": "Operator listings"
+    "source": "Operator listings",
+    "depth": "18-25m"
    },
    {
     "name": "Aldabra Atoll",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Remote UNESCO atoll dived by expedition boats; sharks and mantas",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    }
   ],
   "Silfra Fissure": [
@@ -2447,70 +2784,80 @@
     "type": "Fissure",
     "level": "beginner",
     "blurb": "Silfra's narrowest section, drifting between the tectonic plates",
-    "source": "DIVE.IS"
+    "source": "DIVE.IS",
+    "depth": "7-18m"
    },
    {
     "name": "Silfra Hall",
     "type": "Fissure",
     "level": "beginner",
     "blurb": "Wide section where the 100m+ glacial visibility truly opens up",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-14m"
    },
    {
     "name": "Silfra Cathedral",
     "type": "Fissure",
     "level": "beginner",
     "blurb": "23m-deep canyon, Silfra's most dramatic flight over the rift",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-23m"
    },
    {
     "name": "Silfra Lagoon",
     "type": "Fissure",
     "level": "beginner",
     "blurb": "Shallow exit lagoon with algae fields and views across 100m of water",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "1-5m"
    },
    {
     "name": "Davíðsgjá",
     "type": "Fissure",
     "level": "intermediate",
     "blurb": "Silfra's darker sibling, a long 21m-deep fissure in Lake Þingvallavatn",
-    "source": "PADI Blog"
+    "source": "PADI Blog",
+    "depth": "10-21m"
    },
    {
     "name": "Strýtan",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "55m hydrothermal chimney in Eyjafjörður, the world's only divable vent cone",
-    "source": "Strytan Divecenter"
+    "source": "Strytan Divecenter",
+    "depth": "15-55m"
    },
    {
     "name": "Arnarnesstrýtur",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Cluster of smaller hot-vent chimneys rising to 15m, rich fish life",
-    "source": "Strytan Divecenter"
+    "source": "Strytan Divecenter",
+    "depth": "8-24m"
    },
    {
     "name": "El Grillo",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "150m WWII British oil tanker at 28-45m in Seyðisfjörður, Iceland's biggest wreck",
-    "source": "DIVE.IS"
+    "source": "DIVE.IS",
+    "depth": "28-45m"
    },
    {
     "name": "Nesgjá",
     "type": "Fissure",
     "level": "beginner",
     "blurb": "Crystal-clear north-Iceland fissure dubbed the Silfra of the North",
-    "source": "DIVE.IS"
+    "source": "DIVE.IS",
+    "depth": "3-10m"
    },
    {
     "name": "Bjarnagjá",
     "type": "Fissure",
     "level": "intermediate",
     "blurb": "18m lava ravine on Reykjanes mixing groundwater and sea; eels and anemones",
-    "source": "DIVE.IS"
+    "source": "DIVE.IS",
+    "depth": "5-18m"
    }
   ],
   "Similan Islands": [
@@ -2519,70 +2866,80 @@
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Horseshoe pinnacle of purple soft coral; whale sharks and mantas",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-35m"
    },
    {
     "name": "Elephant Head Rock",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Granite boulder maze of swim-throughs and channels past 40m",
-    "source": "Sunrise Divers"
+    "source": "Sunrise Divers",
+    "depth": "10-40m"
    },
    {
     "name": "Koh Bon (West Ridge)",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Limestone ridge and wall, the Similans' top manta cleaning stop",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-35m"
    },
    {
     "name": "Koh Tachai Pinnacle",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Current-swept plateau with barracuda, trevally, passing whale sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-35m"
    },
    {
     "name": "Anita's Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Gentle east-coast bommies and white sand; classic check-out dive",
-    "source": "Sunrise Divers"
+    "source": "Sunrise Divers",
+    "depth": "5-25m"
    },
    {
     "name": "West of Eden",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Boulders and coral gardens off Island 7, rich macro and reef fish",
-    "source": "Sunrise Divers"
+    "source": "Sunrise Divers",
+    "depth": "8-30m"
    },
    {
     "name": "Christmas Point",
     "type": "Reef",
     "level": "advanced",
     "blurb": "Boulder swim-throughs at Island 9 with sea fans and leopard sharks",
-    "source": "Sunrise Divers"
+    "source": "Sunrise Divers",
+    "depth": "10-35m"
    },
    {
     "name": "Boulder City",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Submerged boulder field south of Island 3, pelagics in current",
-    "source": "Sunrise Divers"
+    "source": "Sunrise Divers",
+    "depth": "12-35m"
    },
    {
     "name": "Shark Fin Reef",
     "type": "Drift",
     "level": "intermediate",
     "blurb": "Long granite ridge with drift along sloping coral; napoleon wrasse",
-    "source": "Sunrise Divers"
+    "source": "Sunrise Divers",
+    "depth": "10-35m"
    },
    {
     "name": "Deep Six",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Deep boulder formations and arches at Island 7's northern tip",
-    "source": "Sunrise Divers"
+    "source": "Sunrise Divers",
+    "depth": "15-40m"
    }
   ],
   "Sipadan Island": [
@@ -2591,63 +2948,72 @@
     "type": "Drift",
     "level": "advanced",
     "blurb": "Tornado-like school of resident barracuda; sharks and strong current",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "South Point",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Pelagic hotspot with schooling barracuda, trevally and many turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-35m"
    },
    {
     "name": "Drop Off",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "600m vertical wall starting steps from the jetty beach",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "5-40m+"
    },
    {
     "name": "Turtle Cavern",
     "type": "Wall",
     "level": "advanced",
     "blurb": "Cavern entrance at 18m in the wall, famed for turtle skeletons",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "15-20m"
    },
    {
     "name": "Hanging Gardens",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Terraced wall draped in soft corals with turtles and reef fish",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-30m"
    },
    {
     "name": "White Tip Avenue",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Whitetip reef sharks resting along a coral-covered drop-off",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-30m"
    },
    {
     "name": "Turtle Patch",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Sloping hard-coral terrace with near-guaranteed green turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-25m"
    },
    {
     "name": "Mid Reef",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Gentle wall of gorgonians and sponges between Sipadan's points",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "8-30m"
    },
    {
     "name": "Staghorn Crest",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Staghorn coral crest atop a steep wall, bumphead parrotfish passes",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-30m"
    }
   ],
   "Socorro Island": [
@@ -2656,42 +3022,48 @@
     "type": "Manta dive",
     "level": "advanced",
     "blurb": "Submerged pinnacle cleaning station; friendly giant oceanic mantas",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "5-30m"
    },
    {
     "name": "Roca Partida",
     "type": "Pinnacle",
     "level": "advanced",
     "blurb": "Lone twin-peaked rock in open Pacific; whitetip-stacked ledges, tuna, sharks",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-40m"
    },
    {
     "name": "The Canyon (San Benedicto)",
     "type": "Shark dive",
     "level": "advanced",
     "blurb": "Shark crossroads: hammerheads, silvertips, Galapagos and silkies",
-    "source": "Nautilus Liveaboards"
+    "source": "Nautilus Liveaboards",
+    "depth": "15-35m"
    },
    {
     "name": "Cabo Pearce (Socorro)",
     "type": "Reef",
     "level": "advanced",
     "blurb": "Lava-finger ridge with playful bottlenose dolphins and mantas",
-    "source": "Nautilus Liveaboards"
+    "source": "Nautilus Liveaboards",
+    "depth": "10-35m"
    },
    {
     "name": "Punta Tosca (Socorro)",
     "type": "Reef",
     "level": "advanced",
     "blurb": "Tiger and Galapagos sharks; humpback song in winter",
-    "source": "Nautilus Liveaboards"
+    "source": "Nautilus Liveaboards",
+    "depth": "10-30m"
    },
    {
     "name": "Roca O'Neal (Socorro)",
     "type": "Shark dive",
     "level": "advanced",
     "blurb": "'Hammerhead central' — current-swept rock off Socorro's northwest",
-    "source": "ZuBlu"
+    "source": "ZuBlu",
+    "depth": "15-35m"
    }
   ],
   "South West Rocks": [
@@ -2700,42 +3072,48 @@
     "type": "Cave",
     "level": "advanced",
     "blurb": "125m ocean cave through Fish Rock; grey nurse sharks at both entrances",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-24m"
    },
    {
     "name": "Shark Gutters",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "15-30m canyons at Fish Rock patrolled by critically endangered grey nurses",
-    "source": "South West Rocks Dive Centre"
+    "source": "South West Rocks Dive Centre",
+    "depth": "15-30m"
    },
    {
     "name": "The Aquarium",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Fish-packed SW corner of Fish Rock near the cave's shallow entrance",
-    "source": "Fish Rock Dive Centre"
+    "source": "Fish Rock Dive Centre",
+    "depth": "8-18m"
    },
    {
     "name": "The Pinnacle",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Sheer Fish Rock walls overlooking gutters holding 20-30 grey nurse sharks",
-    "source": "Fish Rock Dive Centre"
+    "source": "Fish Rock Dive Centre",
+    "depth": "10-30m"
    },
    {
     "name": "Green Island",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Grey nurse critical habitat islet near Smoky Cape, 14-18m rocky reef",
-    "source": "South West Rocks Dive Centre"
+    "source": "South West Rocks Dive Centre",
+    "depth": "12-18m"
    },
    {
     "name": "Black Rock",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Rocky reef 8-20m; rays, schooling morwong, moray eels and lionfish",
-    "source": "Gooddive"
+    "source": "Gooddive",
+    "depth": "8-20m"
    }
   ],
   "Truk (Chuuk) Lagoon": [
@@ -2744,56 +3122,64 @@
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Iconic aircraft-transport with Zero fighters in the holds, 9-34m",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "9-34m"
    },
    {
     "name": "San Francisco Maru",
     "type": "Wreck",
     "level": "tec",
     "blurb": "'Million Dollar Wreck' with tanks, trucks and mines at 50-63m",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "50-63m"
    },
    {
     "name": "Shinkoku Maru",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Coral-encrusted naval tanker; among the lagoon's most popular dives",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "12-38m"
    },
    {
     "name": "Heian Maru",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Largest wreck in the lagoon; submarine tender with periscopes, 10-35m",
-    "source": "Master Liveaboards"
+    "source": "Master Liveaboards",
+    "depth": "10-35m"
    },
    {
     "name": "Nippo Maru",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "Munitions carrier with a tank on deck and an intact bridge",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "25-48m"
    },
    {
     "name": "Rio de Janeiro Maru",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "141m passenger liner turned sub tender, on her starboard side at 30m",
-    "source": "Master Liveaboards"
+    "source": "Master Liveaboards",
+    "depth": "18-34m"
    },
    {
     "name": "Betty Bomber",
     "type": "Wreck",
     "level": "beginner",
     "blurb": "Largely intact Mitsubishi G4M bomber on sand at 18m",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "15-18m"
    },
    {
     "name": "Sankisan Maru",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Freighter with ammunition-filled holds and coral-covered masts, 15-27m",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "15-27m"
    }
   ],
   "Tubbataha Reefs Natural Park": [
@@ -2802,56 +3188,64 @@
     "type": "Wall",
     "level": "advanced",
     "blurb": "Gorgonian-draped wall with huge fish schools and patrolling reef sharks",
-    "source": "PADI"
+    "source": "PADI",
+    "depth": "8-30m"
    },
    {
     "name": "Shark Airport",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Broad plateau cleaning station where whitetip sharks rest in numbers",
-    "source": "Sea Explorers"
+    "source": "Sea Explorers",
+    "depth": "8-25m"
    },
    {
     "name": "Washing Machine",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Unpredictable currents drawing grey reefs, mantas and hammerheads",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "8-25m"
    },
    {
     "name": "Delsan Wreck",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "South Atoll wreckage swarmed by snappers, eagle rays and three shark species",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "10-35m"
    },
    {
     "name": "Malayan Wreck",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "Grounded wreck and reef with fine macro, nudibranchs and crustaceans",
-    "source": "Sea Explorers"
+    "source": "Sea Explorers",
+    "depth": "5-25m"
    },
    {
     "name": "Jessie Beazley Reef",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Isolated reef crown north of the atolls with superb visibility",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "8-30m"
    },
    {
     "name": "Staghorn Point",
     "type": "Reef",
     "level": "intermediate",
     "blurb": "Fields of staghorn coral with turtles and schooling reef fish",
-    "source": "Sea Explorers"
+    "source": "Sea Explorers",
+    "depth": "8-25m"
    },
    {
     "name": "Black Rock",
     "type": "Wall",
     "level": "advanced",
     "blurb": "South Atoll anchorage wall with sharks, rays and pelagic action",
-    "source": "Dive The World"
+    "source": "Dive The World",
+    "depth": "10-30m"
    }
   ],
   "Utila": [
@@ -2860,42 +3254,48 @@
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "Offshore seamount swirling with jacks, wrasse, barracuda and turtles",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "12-30m"
    },
    {
     "name": "Halliburton Wreck",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "30-m cargo ship purpose-sunk 1998, upright on sand at 30 m",
-    "source": "Scuba Diver Life"
+    "source": "Scuba Diver Life",
+    "depth": "18-30m"
    },
    {
     "name": "CJ's Drop Off",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "North-side wall plunging past 40 m with barracuda, jacks and turtles",
-    "source": "ZuBlu"
+    "source": "ZuBlu",
+    "depth": "10-40m"
    },
    {
     "name": "Duppy Waters",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Wall at Turtle Harbour reserve's edge with giant barrel sponges",
-    "source": "Scuba Diver Life"
+    "source": "Scuba Diver Life",
+    "depth": "10-30m"
    },
    {
     "name": "Ted's Point",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Easy reef near the airport with a small sunken sailboat as artificial reef",
-    "source": "Scuba Diver Life"
+    "source": "Scuba Diver Life",
+    "depth": "5-20m"
    },
    {
     "name": "Airport Caves",
     "type": "Cavern",
     "level": "intermediate",
     "blurb": "Caverns and swim-throughs sheltering clouds of glassy sweepers",
-    "source": "Scuba Diver Life"
+    "source": "Scuba Diver Life",
+    "depth": "8-20m"
    }
   ],
   "Vancouver Island": [
@@ -2904,63 +3304,72 @@
     "type": "Wall",
     "level": "advanced",
     "blurb": "Port Hardy wall carpeted in soft coral and anemones; BC's most famous dive",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "10-30m"
    },
    {
     "name": "HMCS Saskatchewan",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "111m destroyer escort sunk 1997 off Snake Island, Nanaimo; upright at 24-40m",
-    "source": "Artificial Reef Society of BC"
+    "source": "Artificial Reef Society of BC",
+    "depth": "24-40m"
    },
    {
     "name": "HMCS Cape Breton",
     "type": "Wreck",
     "level": "advanced",
     "blurb": "134m escort maintenance ship sunk 2001; largest artificial reef in the Pacific NW",
-    "source": "Artificial Reef Society of BC"
+    "source": "Artificial Reef Society of BC",
+    "depth": "21-43m"
    },
    {
     "name": "Race Rocks",
     "type": "Reef",
     "level": "advanced",
     "blurb": "Current-swept ecological reserve off Victoria with playful Steller sea lions",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "10-24m"
    },
    {
     "name": "Ogden Point Breakwater",
     "type": "Shore",
     "level": "beginner",
     "blurb": "Victoria's 800m breakwater shore dive; octopus, wolf eels, easy access",
-    "source": "Ogden Point Dive Centre"
+    "source": "Ogden Point Dive Centre",
+    "depth": "5-18m"
    },
    {
     "name": "Snake Island Wall",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Nanaimo drop-off past 150m with plumose anemones, cloud sponges, harbour seals",
-    "source": "Nanaimo Dive Outfitters"
+    "source": "Nanaimo Dive Outfitters",
+    "depth": "10-35m"
    },
    {
     "name": "GB Church",
     "type": "Wreck",
     "level": "intermediate",
     "blurb": "53m coastal freighter sunk 1991 off Portland Island; BC's first artificial reef",
-    "source": "Artificial Reef Society of BC"
+    "source": "Artificial Reef Society of BC",
+    "depth": "12-27m"
    },
    {
     "name": "Dodd Narrows",
     "type": "Drift",
     "level": "advanced",
     "blurb": "Narrow tidal channel south of Nanaimo; currents to 9 knots over anemone walls",
-    "source": "Nanaimo Dive Outfitters"
+    "source": "Nanaimo Dive Outfitters",
+    "depth": "8-20m"
    },
    {
     "name": "Nakwakto Rapids (Turret Rock)",
     "type": "Drift",
     "level": "advanced",
     "blurb": "World's fastest tidal rapids at slack; gooseneck-barnacle-clad Tremble Island",
-    "source": "Scuba Diving Magazine"
+    "source": "Scuba Diving Magazine",
+    "depth": "10-22m"
    }
   ],
   "Whitsunday Islands": [
@@ -2969,57 +3378,66 @@
     "type": "Reef",
     "level": "beginner",
     "blurb": "Hook Island's most famous site; swim-throughs, mantas May-Sep, maori wrasse",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "3-18m"
    },
    {
     "name": "Blue Pearl Bay",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Sheltered Hayman Island fringing reef to 19m; gorgonians, gullies, wrasse",
-    "source": "Whitsunday Dive Centre"
+    "source": "Whitsunday Dive Centre",
+    "depth": "3-19m"
    },
    {
     "name": "Bait Reef - Stepping Stones",
     "type": "Pinnacle",
     "level": "intermediate",
     "blurb": "18 flat-topped pinnacles rising from 25m on the outer Great Barrier Reef",
-    "source": "Tourism Whitsundays"
+    "source": "Tourism Whitsundays",
+    "depth": "8-25m"
    },
    {
     "name": "Hardy Reef",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Outer reef beside the Reefworld pontoon; giant Queensland grouper, turtles",
-    "source": "Tourism Queensland"
+    "source": "Tourism Queensland",
+    "depth": "8-20m"
    },
    {
     "name": "Luncheon Bay",
     "type": "Reef",
     "level": "beginner",
     "blurb": "Clear-water Hook Island bay to 20m, ideal for novice divers and snorkellers",
-    "source": "Tourism Queensland"
+    "source": "Tourism Queensland",
+    "depth": "3-20m"
    },
    {
     "name": "The Pinnacles",
     "type": "Bommie",
     "level": "intermediate",
     "blurb": "Hook Island bommies rivalling outer-reef sites; mantas and reef sharks",
-    "source": "Tourism Queensland"
+    "source": "Tourism Queensland",
+    "depth": "5-25m"
    },
    {
     "name": "The Cathedral",
     "type": "Bommie",
     "level": "intermediate",
     "blurb": "Large coral bommies, outcrops and adrenaline-pumping swim-throughs",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "8-25m"
    },
    {
     "name": "The Hangover",
     "type": "Wall",
     "level": "intermediate",
     "blurb": "Wall dive off Airlie Beach; giant trevally, barramundi, cod and mackerel",
-    "source": "PADI Travel"
+    "source": "PADI Travel",
+    "depth": "10-25m"
    }
   ]
- }
+ },
+ "depth_note": "Depths are typical published recreational ranges (PADI/SSI/operator listings); always confirm locally."
 }

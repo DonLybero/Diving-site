@@ -70,6 +70,52 @@ def footer_html():
             'marine-life timing shifts year to year — always confirm with a local dive centre.<br>'
             '<a href="index.html">All destinations</a> · <a href="../index.html">Open the dive planner</a></footer>')
 
+# Pluralised wording for site-type breakdowns (mirrors destIntro in index.html)
+SITE_PLURALS = {"Muck": "muck dives", "Shore": "shore dives", "Drift": "drift dives",
+                "Shark dive": "shark dives", "Manta dive": "manta dives",
+                "Blue hole": "blue holes", "Pass": "pass drifts", "Thila": "thilas"}
+
+def _site_plural(t, n):
+    if n == 1:
+        return t.lower() + (" dive" if t in ("Drift", "Shore", "Muck") else "")
+    return SITE_PLURALS.get(t, t.lower() + "s")
+
+def _join_list(items):
+    items = list(items)
+    return items[0] if len(items) == 1 else ", ".join(items[:-1]) + " and " + items[-1]
+
+def dest_intro(d):
+    """Data-generated overview paragraph (same wording logic as destIntro in index.html)."""
+    temps = [t for t in d["monthly_temp_c"].values() if t is not None]
+    tmin, tmax = min(temps), max(temps)
+    vmax = max(d["monthly"][m].get("visibility_m") or 0 for m in MONTHS)
+    peak = [m for m in MONTHS if d["monthly"][m]["rating"] == "Peak"]
+    cur = (d.get("current_note") or d.get("currents") or "").rstrip(".")
+    water = d["water_type"] if d["water_type"].endswith("water") else d["water_type"] + " water"
+    suit = d["wetsuit"].split(";")[0].rstrip(".")
+    p1 = (f'{d["name"]} is at its best {d["best_months"]}'
+          + (f', with {_join_list(peak)} rating as peak season' if peak else "") + ". "
+          + f'Expect {water} of {tmin if tmin == tmax else f"{tmin}–{tmax}"}°C '
+          + f'(suit: {suit}), visibility up to ~{vmax}m, '
+          + f'and {d["current_strength"].lower()} currents — {cur}.')
+    sites = d.get("dive_sites") or []
+    if not sites:
+        return p1
+    counts = {}
+    for x in sites:
+        t = x.get("type") or "Reef"
+        counts[t] = counts.get(t, 0) + 1
+    breakdown = _join_list(f"{n} {_site_plural(t, n)}"
+                           for t, n in sorted(counts.items(), key=lambda kv: -kv[1]))
+    order = {"beginner": 0, "intermediate": 1, "advanced": 2, "tec": 3}
+    by_level = sorted(sites, key=lambda x: order.get(x.get("level"), 1))
+    easy, hard = by_level[0], by_level[-1]
+    hard_lvl = "technical-diving" if hard.get("level") == "tec" else hard.get("level", "advanced")
+    p2 = (f' Divers here work {len(sites)} recognised sites — {breakdown} — ranging from '
+          f'{easy["name"]}{" (" + easy["depth"] + ")" if easy.get("depth") else ""} for {easy.get("level", "beginner")} divers '
+          f'up to {hard["name"]}{" (" + hard["depth"] + ")" if hard.get("depth") else ""}, {hard_lvl} territory.')
+    return p1 + p2
+
 def page(d):
     slug = d["slug"]; url = BASE + "destinations/" + slug + ".html"
     peak = [m for m in MONTHS if d["monthly"][m]["rating"] == "Peak"]
@@ -102,6 +148,7 @@ def page(d):
         ld["containsPlace"] = [{"@type": "TouristAttraction", "name": s.get("name")} for s in sites]
     site_rows = "".join(
         f'<tr><td><b>{esc(s.get("name"))}</b></td><td><span class="chip">{esc(s.get("type") or "Reef")}</span></td>'
+        f'<td class="num">{esc(s.get("depth") or "—")}</td>'
         f'<td class="num">{esc(s.get("level") or "intermediate")}</td>'
         f'<td>{esc(s.get("blurb"))}</td><td class="meta">{esc(s.get("source"))}</td></tr>'
         for s in sites)
@@ -109,9 +156,10 @@ def page(d):
     if site_rows:
         researched = f' · researched {esc(d.get("dive_sites_researched"))}' if d.get("dive_sites_researched") else ""
         sites_block = (f'<h2>Recognised dive sites ({len(sites)})</h2>'
-                       f'<p class="meta">Named commercial sites as listed by PADI Travel and other recognised dive directories{researched}.</p>'
+                       f'<p class="meta">Named commercial sites as listed by PADI Travel and other recognised dive directories{researched}. '
+                       f'Depths are typical published ranges — always confirm with your operator.</p>'
                        f'<div style="overflow:auto"><table>'
-                       f'<thead><tr><th>Site</th><th>Type</th><th>Level</th><th>Why it&#8217;s known</th><th>Listed by</th></tr></thead>'
+                       f'<thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it&#8217;s known</th><th>Listed by</th></tr></thead>'
                        f'<tbody>{site_rows}</tbody></table></div>')
     og_img = f'<meta property="og:image" content="{esc(img)}">' if img else ""
     verified = (f'<p class="meta">&#10003; Data verified {esc(d.get("last_verified"))}'
@@ -139,6 +187,7 @@ def page(d):
   {f'<span class="credit">{esc(d.get("image_credit"))}</span>' if d.get("image_credit") else ""}
 </header>
 <main class="wrap">
+  <p style="max-width:78ch;line-height:1.65;color:#d6f3f0">{esc(dest_intro(d))}</p>
   <div class="best">&#127942; <b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
   <div class="kv">
     <div><span>Water type</span>{esc(d["water_type"])}</div>
