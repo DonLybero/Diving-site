@@ -786,9 +786,7 @@ function openProfile(name){
   }).join('');
   var sitesBlock = siteRows ?
     '<h3 style="margin:22px 0 2px">'+ico('map',15)+' Recognised dive sites ('+d.dive_sites.length+')</h3>'+
-    '<p class="meta" style="margin:2px 0 6px">Named commercial sites as listed by PADI Travel and other recognised dive directories'+
-      (d.dive_sites_researched?' · researched '+d.dive_sites_researched:'')+
-      '. Depths are typical published ranges — always confirm with your operator.</p>'+
+    '<p class="meta" style="margin:2px 0 6px">Depths are typical published ranges — always confirm with your operator.</p>'+
     '<table><thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it’s known</th></tr></thead>'+
     '<tbody>'+siteRows+'</tbody></table>' : '';
   var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';

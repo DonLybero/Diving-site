@@ -154,10 +154,8 @@ def page(d):
         for s in sites)
     sites_block = ""
     if site_rows:
-        researched = f' · researched {esc(d.get("dive_sites_researched"))}' if d.get("dive_sites_researched") else ""
         sites_block = (f'<h2>Recognised dive sites ({len(sites)})</h2>'
-                       f'<p class="meta">Named commercial sites as listed by PADI Travel and other recognised dive directories{researched}. '
-                       f'Depths are typical published ranges — always confirm with your operator.</p>'
+                       f'<p class="meta">Depths are typical published ranges — always confirm with your operator.</p>'
                        f'<div style="overflow:auto"><table>'
                        f'<thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it&#8217;s known</th></tr></thead>'
                        f'<tbody>{site_rows}</tbody></table></div>')
