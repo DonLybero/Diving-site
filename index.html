@@ -377,15 +377,7 @@
       <div class="field"><label>Min water °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
     </div>
 
-    <!-- empty state: nothing else is shown until the diver starts selecting -->
-    <div id="planIntro" class="plan-intro">
-      <div class="gear-ico" style="margin:0 auto 12px"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="15.2 8.8 13.2 13.2 8.8 15.2 10.8 10.8" fill="currentColor" stroke="none"/></svg></div>
-      <b>Where the ocean is best, when you can go.</b>
-      <p class="meta" style="max-width:52ch;margin:8px auto 0">Pick your travel period — or any filter — and your matches
-        appear right here: ranked destination cards, a world map coloured by season, and the full-year calendar.</p>
-    </div>
-
-    <!-- result views: revealed on first selection, one at a time -->
+    <!-- result views: one at a time; opens on "Best matches" for the current period -->
     <div id="planViews" class="subtabs hidden">
       <button id="sub-cards" class="active" onclick="showSub('cards')"><i class="ico" data-ico="fish"></i>Best matches</button>
       <button id="sub-map" onclick="showSub('map')"><i class="ico" data-ico="map"></i>Map</button>
@@ -528,7 +520,7 @@ function showTab(t){
   });
   // The full-height hero anchors the landing/home view only; collapse it on working tabs.
   document.getElementById('hero').classList.toggle('hidden', t!=='home');
-  if(t==='planner' && sub){ planEngage(sub); }   // arriving with intent counts as a selection
+  if(t==='planner'){ planEngage(sub||PLAN_SUB); }   // planner always opens engaged: top 3 for the Now period
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -536,7 +528,6 @@ function showTab(t){
 var PLAN_ENGAGED=false, PLAN_SUB='cards';
 function planEngage(sub){
   PLAN_ENGAGED=true;
-  document.getElementById('planIntro').classList.add('hidden');
   document.getElementById('planViews').classList.remove('hidden');
   showSub(sub||PLAN_SUB);
 }
