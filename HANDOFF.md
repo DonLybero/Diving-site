@@ -52,6 +52,7 @@ python3 scripts/build_standalone.py  # -> diving-site.html (inlined single file)
 Source inputs:
 - `scripts/build_csv.py` + `scripts/meta11.py` — the original 11 destinations (month-by-month tuples + metadata).
 - `scripts/data/*.json` — the other 39 destinations (Caribbean / Europe / Pacific / SE-Asia / Australia research fragments).
+- `scripts/data/dive_sites.json` — 417 recognised named dive sites across all 50 destinations (researched 2026-07, PADI Travel first, cross-checked against SSI MyDiveGuide / Scuba Diving Magazine / operator listings). Merged into each destination as `dive_sites` by build_master; rendered in the profile, the SEO pages and searchable in the Search tab.
 - `scripts/build_master.py` merges all of them, derives `visibility_m` (parsed from conditions text), `current_strength` (Low/Medium/Strong), and coordinates, then writes the JSON + CSVs.
 
 **After changing data, rerun the three scripts**, then commit. The push
@@ -79,6 +80,9 @@ within ~1–2 min.
   (`scripts/build_pages.py`).
 - Dive Centres is a factual directory (no invented ratings); gear prices
   visibly labelled as samples.
+- Recognised named dive sites for all 50 destinations (2026-07): 417 sites in
+  `scripts/data/dive_sites.json`, shown in destination profiles + SEO pages
+  and matched by search (e.g. searching "Blue Corner" finds Palau).
 
 ## Backlog
 - OWNER (URGENT): register **diveszn.com / diveszn.io / diveszn.app** — all

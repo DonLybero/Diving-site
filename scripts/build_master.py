@@ -221,6 +221,29 @@ if os.path.exists(_ver_path):
         applied += 1
     print(f"Applied verification verdicts for {applied} destinations")
 
+# ---- Attach recognised named dive sites (scripts/data/dive_sites.json) ----
+# Researched from PADI Travel and other recognised dive directories.
+# Shape: {"researched": "YYYY-MM", "primary_source": "...",
+#         "destinations": {"<name>": [{"name","type","level","blurb","source"}, ...]}}
+_sites_path = os.path.join(SCRATCH, "dive_sites.json")
+if os.path.exists(_sites_path):
+    with open(_sites_path) as f:
+        _sites_doc = json.load(f)
+    SITES = _sites_doc.get("destinations", {})
+    attached, total_sites = 0, 0
+    for r in all_dest:
+        lst = SITES.get(r["name"])
+        if lst:
+            r["dive_sites"] = lst
+            if _sites_doc.get("researched"):
+                r["dive_sites_researched"] = _sites_doc["researched"]
+            attached += 1
+            total_sites += len(lst)
+    missing = set(SITES) - {r["name"] for r in all_dest}
+    if missing:
+        print("WARNING: dive_sites.json names with no matching destination:", sorted(missing))
+    print(f"Attached {total_sites} dive sites across {attached} destinations")
+
 # ---- Write master JSON ----
 master = {
     "title": "World Diving Calendar",
