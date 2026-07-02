@@ -150,7 +150,7 @@ def page(d):
         f'<tr><td><b>{esc(s.get("name"))}</b></td><td><span class="chip">{esc(s.get("type") or "Reef")}</span></td>'
         f'<td class="num">{esc(s.get("depth") or "—")}</td>'
         f'<td class="num">{esc(s.get("level") or "intermediate")}</td>'
-        f'<td>{esc(s.get("blurb"))}</td><td class="meta">{esc(s.get("source"))}</td></tr>'
+        f'<td>{esc(s.get("blurb"))}</td></tr>'
         for s in sites)
     sites_block = ""
     if site_rows:
@@ -159,7 +159,7 @@ def page(d):
                        f'<p class="meta">Named commercial sites as listed by PADI Travel and other recognised dive directories{researched}. '
                        f'Depths are typical published ranges — always confirm with your operator.</p>'
                        f'<div style="overflow:auto"><table>'
-                       f'<thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it&#8217;s known</th><th>Listed by</th></tr></thead>'
+                       f'<thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it&#8217;s known</th></tr></thead>'
                        f'<tbody>{site_rows}</tbody></table></div>')
     og_img = f'<meta property="og:image" content="{esc(img)}">' if img else ""
     verified = (f'<p class="meta">&#10003; Data verified {esc(d.get("last_verified"))}'
