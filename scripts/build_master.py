@@ -234,7 +234,8 @@ if os.path.exists(_sites_path):
     for r in all_dest:
         lst = SITES.get(r["name"])
         if lst:
-            r["dive_sites"] = lst
+            # publish without the 'source' provenance field (kept in dive_sites.json only)
+            r["dive_sites"] = [{k: v for k, v in s.items() if k != "source"} for s in lst]
             if _sites_doc.get("researched"):
                 r["dive_sites_researched"] = _sites_doc["researched"]
             attached += 1
