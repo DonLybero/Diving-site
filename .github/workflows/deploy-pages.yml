@@ -2,7 +2,7 @@ name: Deploy Scubanaut to GitHub Pages
 
 on:
   push:
-    branches: ["main", "claude/diving-destinations-research-73uc5i"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
