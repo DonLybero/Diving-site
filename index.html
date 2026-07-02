@@ -719,6 +719,18 @@ function openProfile(name){
       '<td class="num">'+(mm.visibility_m==null?'—':mm.visibility_m+'m')+'</td><td>'+mm.marine_life+'</td><td>'+mm.conditions+'</td></tr>';
   }).join('');
   var species=(d.signature_species||[]).map(function(x){return '<span class="chip">'+x+'</span>';}).join('');
+  var siteRows=(d.dive_sites||[]).map(function(x){
+    var lvl=x.level||'intermediate';
+    return '<tr><td><b>'+x.name+'</b></td><td><span class="chip">'+(x.type||'Reef')+'</span></td>'+
+      '<td style="white-space:nowrap">'+diffPips(lvl==='tec'?'advanced':lvl)+'<span style="margin-left:6px">'+lvl+'</span></td>'+
+      '<td>'+(x.blurb||'')+'</td><td class="meta" style="font-size:.68rem;white-space:nowrap">'+(x.source||'')+'</td></tr>';
+  }).join('');
+  var sitesBlock = siteRows ?
+    '<h3 style="margin:22px 0 2px">'+ico('map',15)+' Recognised dive sites ('+d.dive_sites.length+')</h3>'+
+    '<p class="meta" style="margin:2px 0 6px">Named commercial sites as listed by PADI Travel and other recognised dive directories'+
+      (d.dive_sites_researched?' · researched '+d.dive_sites_researched:'')+'.</p>'+
+    '<table><thead><tr><th>Site</th><th>Type</th><th>Level</th><th>Why it’s known</th><th>Listed by</th></tr></thead>'+
+    '<tbody>'+siteRows+'</tbody></table>' : '';
   var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';
   document.getElementById('profile').innerHTML=
     '<h2>'+d.name+'</h2><p class="lead">'+d.country+' · '+d.region+' — '+d.highlights+'</p>'+
@@ -735,6 +747,8 @@ function openProfile(name){
       '<div style="grid-column:1/-1"><span>Currents detail</span>'+d.currents+'</div>'+
     '</div>'+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
+    sitesBlock+
+    '<h3 style="margin:22px 0 2px">'+ico('calendar',15)+' Month-by-month calendar</h3>'+
     '<table><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
     '<tbody>'+rows+'</tbody></table>'+
     (d.last_verified?'<p class="meta" style="margin-top:10px">✓ Data verified '.replace('✓','&#10003;')+d.last_verified+

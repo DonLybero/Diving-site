@@ -194,8 +194,8 @@
     return null;
   }
 
-  /* Fuzzy search across name, country, region and signature species.
-     Returns destinations ranked by match relevance. */
+  /* Fuzzy search across name, country, region, signature species and
+     named dive sites. Returns destinations ranked by match relevance. */
   function searchDestinations(destinations, query) {
     var q = String(query || "").trim().toLowerCase();
     if (!q) return [];
@@ -211,6 +211,10 @@
       if ((d.highlights || "").toLowerCase().indexOf(q) !== -1) s += 10;
       var sp = (d.signature_species || []).join(", ").toLowerCase();
       if (sp.indexOf(q) !== -1) s += 12;
+      var sites = d.dive_sites || [];
+      for (var k = 0; k < sites.length; k++) {
+        if ((sites[k].name || "").toLowerCase().indexOf(q) !== -1) { s += 18; break; }
+      }
       if (s > 0) scored.push({ dest: d, score: s });
     }
     scored.sort(function (a, b) { return b.score - a.score || (a.dest.name < b.dest.name ? -1 : 1); });

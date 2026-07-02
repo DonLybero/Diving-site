@@ -97,6 +97,22 @@ def page(d):
     if d.get("coordinates", {}).get("lat") is not None:
         ld["geo"] = {"@type": "GeoCoordinates", "latitude": d["coordinates"]["lat"], "longitude": d["coordinates"]["lng"]}
     if img: ld["image"] = img
+    sites = d.get("dive_sites") or []
+    if sites:
+        ld["containsPlace"] = [{"@type": "TouristAttraction", "name": s.get("name")} for s in sites]
+    site_rows = "".join(
+        f'<tr><td><b>{esc(s.get("name"))}</b></td><td><span class="chip">{esc(s.get("type") or "Reef")}</span></td>'
+        f'<td class="num">{esc(s.get("level") or "intermediate")}</td>'
+        f'<td>{esc(s.get("blurb"))}</td><td class="meta">{esc(s.get("source"))}</td></tr>'
+        for s in sites)
+    sites_block = ""
+    if site_rows:
+        researched = f' · researched {esc(d.get("dive_sites_researched"))}' if d.get("dive_sites_researched") else ""
+        sites_block = (f'<h2>Recognised dive sites ({len(sites)})</h2>'
+                       f'<p class="meta">Named commercial sites as listed by PADI Travel and other recognised dive directories{researched}.</p>'
+                       f'<div style="overflow:auto"><table>'
+                       f'<thead><tr><th>Site</th><th>Type</th><th>Level</th><th>Why it&#8217;s known</th><th>Listed by</th></tr></thead>'
+                       f'<tbody>{site_rows}</tbody></table></div>')
     og_img = f'<meta property="og:image" content="{esc(img)}">' if img else ""
     verified = (f'<p class="meta">&#10003; Data verified {esc(d.get("last_verified"))}'
                 f' · source confidence: {esc(d.get("data_confidence"))}</p>' if d.get("last_verified") else "")
@@ -139,6 +155,7 @@ def page(d):
     <thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions</th></tr></thead>
     <tbody>{rows}</tbody>
   </table></div>
+  {sites_block}
   {verified}
   <a class="cta" href="../index.html">Plan a dive trip here — open the Scubanaut planner &rarr;</a>
 </main>
