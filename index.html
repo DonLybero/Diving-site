@@ -130,6 +130,15 @@
   .cur-Strong{color:#ff9d83}
   .score{font-size:.82rem;color:var(--coral);font-weight:700;font-family:var(--mono)}
   .hl{font-size:.9rem;margin-top:10px;color:var(--ink-soft);line-height:1.5}
+  /* compact expandable dive-site list on destination cards */
+  .sites{margin-top:9px;font-size:.78rem}
+  .sites summary{cursor:pointer;color:var(--accent);list-style:none;display:inline-flex;align-items:center;gap:5px;font-weight:600}
+  .sites summary::-webkit-details-marker{display:none}
+  .sites summary::after{content:'▾';font-size:.7em;transition:transform .15s}
+  .sites[open] summary::after{transform:rotate(180deg)}
+  .sites ul{margin:7px 0 0;padding:0;list-style:none}
+  .sites li{padding:4px 0;border-top:1px dashed var(--line);line-height:1.45}
+  .sites li .meta{font-family:var(--mono);font-size:.68rem}
   .temp{color:#bdeee8}
   .hidden{display:none}
   .strip{display:flex;gap:3px;margin:12px 0}
@@ -616,6 +625,18 @@ function renderCalendar(){
   document.getElementById('calTable').innerHTML=head+'<tbody>'+body+'</tbody>';
 }
 
+/* Expandable dive-site list shown on every destination card (planner + search). */
+function siteList(name){
+  var d=DivingCalendar.getDestination(DESTS,name);
+  var sites=(d&&d.dive_sites)||[];
+  if(!sites.length) return '';
+  return '<details class="sites"><summary>'+ico('map',12)+' Dive sites ('+sites.length+')</summary><ul>'+
+    sites.map(function(x){
+      return '<li><b>'+x.name+'</b> <span class="meta">'+(x.type||'Reef')+
+        (x.depth?' · '+x.depth:'')+' · '+(x.level||'intermediate')+'</span></li>';
+    }).join('')+'</ul></details>';
+}
+
 /* One unified result card: ranked planner entry + the dive-site details
    (difficulty pips, access, nearest chamber) that used to live on the Dive Sites tab. */
 function plannerCard(r,monthLabel){
@@ -629,6 +650,7 @@ function plannerCard(r,monthLabel){
     '<div class="row">'+diffPips(r.difficulty)+'<span class="chip">'+r.difficulty+'</span><span class="chip">'+r.access+'</span></div>'+
     '<div class="hl">'+ico('fish',13)+' '+r.highlight+'</div>'+
     '<div class="meta" style="margin-top:6px">'+ico('medic',12)+' Nearest chamber: '+chamberFor(r.region)+'</div>'+
+    siteList(r.name)+
     '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div></div>';
 }
 var planShown=3;   // 3 → 10 → +5 → +5 …
@@ -678,9 +700,11 @@ function drawMarkers(){
     var mm=d.monthly[month]; shownCount++;
     var m=L.circleMarker([c.lat,c.lng],{radius:7,color:'#021824',weight:1,
       fillColor:RCOLOR[mm.rating],fillOpacity:.92});
+    var top=(d.dive_sites||[]).slice(0,3).map(function(x){return x.name;}).join(', ');
     m.bindPopup('<b>'+d.name+'</b><br>'+d.country+' · '+d.region+'<br>'+
       month+': <b style="color:'+RCOLOR[mm.rating]+'">'+mm.rating+'</b> · '+tempStr(d.monthly_temp_c[month])+
       ' · '+vizStr(mm.visibility_m)+' · '+d.current_strength+' current<br>'+mm.marine_life+
+      (top?'<br><b>Top sites:</b> '+top+((d.dive_sites.length>3)?' +'+(d.dive_sites.length-3)+' more':''):'')+
       '<br><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">full profile →</a>');
     MARKERS.addLayer(m);
   });
@@ -702,6 +726,7 @@ function renderSearch(){
       '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+curChip(d.current_strength)+'</div>'+
       '<div class="hl">'+d.highlights+'</div>'+
       '<div class="meta" style="margin-top:6px">Best: '+d.best_months+' · Peak months: '+(s.byRating.Peak.join(', ')||'—')+'</div>'+
+      siteList(d.name)+
       '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Open full profile →</a></div></div></div>';
   }).join('');
   fillDestCovers();
