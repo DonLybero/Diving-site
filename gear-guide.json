@@ -512,7 +512,7 @@
      "rank": 2,
      "name": "Scubapro Seawing Nova",
      "blurb": "Award-winning pivoting wing blade delivers split-fin ease with paddle-fin speed; a travel-light favorite.",
-     "image": "",
+     "image": "assets/gear/scubapro-seawing-nova.jpg",
      "options": [
       {
        "store": "LeisurePro",
@@ -640,7 +640,7 @@
      "rank": 6,
      "name": "Scubapro Go Sport",
      "blurb": "Nearly indestructible Monprene travel fin; fits carry-ons, and self-adjusting bungee straps just work.",
-     "image": "",
+     "image": "assets/gear/scubapro-go-sport.jpg",
      "options": [
       {
        "store": "Scuba.com",
@@ -1096,7 +1096,7 @@
      "rank": 10,
      "name": "Sherwood SR2",
      "blurb": "Balanced-piston reliability with a machined-brass second stage — a rugged, easy-breathing crowd favorite.",
-     "image": "",
+     "image": "assets/gear/sherwood-sr2.jpg",
      "options": [
       {
        "store": "Scuba.com",
