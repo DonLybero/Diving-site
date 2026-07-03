@@ -248,12 +248,20 @@
   .readout span{position:relative}
 
   /* ---------- price table ---------- */
-  /* gear buyer's-guide article */
-  .gear-photo{height:180px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:10px;overflow:hidden;margin-bottom:12px;position:relative}
+  /* gear buyer's-guide articles */
+  .gear-photo{height:180px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:10px;overflow:hidden;position:relative}
   .gear-photo img{max-width:92%;max-height:92%;object-fit:contain}
   .gear-photo .gear-ico{position:static;margin:0}
-  .gear-rank{position:absolute;top:8px;left:8px;background:var(--coral);color:#2a0f06;font-family:var(--mono);font-weight:800;border-radius:8px;padding:2px 9px;font-size:.8rem}
-  .gear-cat-head{font-family:var(--serif);font-size:1.7rem;margin:34px 0 4px}
+  .gear-rank{position:absolute;top:8px;left:8px;background:var(--coral);color:#2a0f06;font-family:var(--mono);font-weight:800;border-radius:8px;padding:2px 9px;font-size:.8rem;z-index:1}
+  .gear-index-card{cursor:pointer}
+  .gear-index-card .gear-ico{margin-bottom:10px}
+  .gentry{display:grid;grid-template-columns:250px 1fr;gap:22px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+  .gentry h3{margin:0 0 8px;font-family:var(--serif);font-size:1.35rem}
+  .gentry-review{line-height:1.7;color:#d6f3f0;margin:0 0 10px}
+  .gentry .ptable{max-width:560px}
+  @media(max-width:700px){.gentry{grid-template-columns:1fr;gap:12px}}
+  .tipbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:14px 0;max-width:80ch}
+  .tipbox ul{margin:8px 0 0;padding-left:20px;line-height:1.7;font-size:.9rem}
   .channels{margin:14px 0}
   .channels summary{cursor:pointer;color:var(--accent);font-weight:600}
   .channels ol{columns:2;column-gap:28px;margin:10px 0 0;padding-left:20px;font-size:.85rem;line-height:1.9}
@@ -1020,42 +1028,66 @@ if(AFFILIATE.skimlinks_id){
 function gearIco(g){return '<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[g.icon]||ICONS.tank)+'</svg></div>';}
 var CAT_ICON={'Masks':'mask','Fins':'fins','Regulators':'regulator','BCDs':'bcd','Dive Computers':'computer','Wetsuits':'wetsuit'};
 function fmtPrice(p){return '$'+(p%1?p.toFixed(2):p);}
-function gearItemCard(item,cat){
+function gearPhoto(item,cat){
+  var fallback='<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[CAT_ICON[cat]]||ICONS.tank)+'</svg></div>';
+  return '<div class="gear-photo"><span class="gear-rank">#'+item.rank+'</span>'+
+    (item.image?'<img src="'+item.image+'" alt="'+item.name.replace(/"/g,'&quot;')+'" loading="lazy" '+
+      'onerror="this.parentNode.innerHTML=this.parentNode.querySelector(\'.gear-rank\').outerHTML+'+"'"+fallback.replace(/'/g,"\\'").replace(/"/g,'&quot;')+"'"+';">':fallback)+'</div>';
+}
+function gearEntry(item,cat){
   var offers=item.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;}).slice(0,3);
   var rows=offers.map(function(o,i){
     return '<tr class="'+(i===0?'low':'')+'"><td class="deal">'+o.store+'</td>'+
       '<td class="price">'+fmtPrice(o.price_usd)+'</td>'+
       '<td style="text-align:right"><a class="btn'+(i===0?'':' ghost')+'" href="'+affLink(o.url)+'" target="_blank" rel="noopener sponsored">Buy at '+o.store+'</a></td></tr>';
   }).join('');
-  var save=offers.length>1?Math.round(offers[offers.length-1].price_usd-offers[0].price_usd):0;
-  var fallback='<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[CAT_ICON[cat]]||ICONS.tank)+'</svg></div>';
-  var photo='<div class="gear-photo"><span class="gear-rank">#'+item.rank+'</span>'+
-    (item.image?'<img src="'+item.image+'" alt="'+item.name.replace(/"/g,'&quot;')+'" loading="lazy" '+
-      'onerror="this.parentNode.innerHTML=this.parentNode.querySelector(\'.gear-rank\').outerHTML+'+"'"+fallback.replace(/'/g,"\\'").replace(/"/g,'&quot;')+"'"+';">':fallback)+'</div>';
-  return '<div class="card">'+photo+'<h3>'+item.name+'</h3>'+
-    '<div class="hl">'+item.blurb+'</div>'+
-    '<div class="meta" style="margin-top:6px">Cheapest 3 stores we found'+(save?' · save up to $'+save+' by comparing':'')+'</div>'+
-    '<table class="ptable">'+rows+'</table></div>';
+  return '<div class="gentry">'+gearPhoto(item,cat)+
+    '<div><h3>'+item.rank+'. '+item.name+'</h3>'+
+    '<p class="gentry-review">'+(item.review||item.blurb)+'</p>'+
+    '<div class="meta">Cheapest 3 stores we found — best price highlighted:</div>'+
+    '<table class="ptable">'+rows+'</table></div></div>';
+}
+function openGearArticle(cat){
+  var sel=document.getElementById('gearCat'); sel.value=cat; renderGear();
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 function renderGear(){
   var sel=document.getElementById('gearCat');
   if(!GEAR_GUIDE||!GEAR_GUIDE.categories){document.getElementById('gearGrid').innerHTML='<div class="empty">Gear guide could not load.</div>';return;}
   if(sel.options.length<=1) GEAR_GUIDE.categories.forEach(function(c){var o=document.createElement('option');o.value=c.category;o.textContent=c.category;sel.appendChild(o);});
-  var cat=sel.value;
-  var shown=GEAR_GUIDE.categories.filter(function(c){return !cat||c.category===cat;});
-  var chans=(GEAR_GUIDE.channels||[]).map(function(c){
-    return '<li><a href="'+c.url+'" target="_blank" rel="noopener">'+c.name+'</a> <span class="meta">'+c.subs+' · '+c.focus+'</span></li>';
-  }).join('');
-  var head='<div class="article" style="margin-bottom:6px">'+
-    '<h3 style="margin-top:0">The DiveSZN gear guide — the top 10 of every category</h3>'+
-    '<p>'+(GEAR_GUIDE.intro||'')+'</p>'+
-    (chans?'<details class="channels"><summary>The 20 diving channels &amp; test labs behind this guide ▾</summary><ol>'+chans+'</ol></details>':'')+
-    '<p class="meta">Prices are indicative, checked '+(GEAR_GUIDE.researched||'')+' — click through for the live price. Cheapest option is highlighted.</p></div>';
-  document.getElementById('gearGrid').innerHTML=
-    head+shown.map(function(c){
-      return '<div style="grid-column:1/-1"><h3 class="gear-cat-head">'+ico(CAT_ICON[c.category]||'tank',20)+' Top 10 '+c.category+'</h3></div>'+
-        c.items.map(function(it){return gearItemCard(it,c.category);}).join('');
+  var cat=sel.value, g=document.getElementById('gearGrid');
+  var priceNote='<p class="meta">Prices are indicative, checked '+(GEAR_GUIDE.researched||'')+' — click through for the live price.</p>';
+  if(!cat){
+    // Article index: one card per buyer's guide
+    var chans=(GEAR_GUIDE.channels||[]).map(function(c){
+      return '<li><a href="'+c.url+'" target="_blank" rel="noopener">'+c.name+'</a> <span class="meta">'+c.subs+' · '+c.focus+'</span></li>';
     }).join('');
+    g.innerHTML='<div class="article" style="grid-column:1/-1;margin-bottom:6px">'+
+      '<h3 style="margin-top:0">The DiveSZN buyer’s guides</h3>'+
+      '<p>'+(GEAR_GUIDE.intro||'')+'</p>'+
+      (chans?'<details class="channels"><summary>The 20 diving channels &amp; test labs behind these guides ▾</summary><ol>'+chans+'</ol></details>':'')+
+      priceNote+'</div>'+
+      GEAR_GUIDE.categories.map(function(c){
+        var teaser=(c.article_intro||'').split('. ')[0]+'.';
+        return '<div class="card gear-index-card" onclick="openGearArticle(\''+c.category+'\')">'+
+          '<div class="gear-ico">'+'<svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[CAT_ICON[c.category]]||ICONS.tank)+'</svg></div>'+
+          '<h3>'+(c.title||('Top 10 '+c.category))+'</h3>'+
+          '<div class="hl">'+teaser+'</div>'+
+          '<div style="margin-top:10px"><a href="#" onclick="openGearArticle(\''+c.category+'\');return false;">Read the guide →</a></div></div>';
+      }).join('');
+  }else{
+    var c=GEAR_GUIDE.categories.filter(function(x){return x.category===cat;})[0];
+    if(!c){g.innerHTML='';return;}
+    var tips=(c.tips||[]).map(function(t){return '<li>'+t+'</li>';}).join('');
+    g.innerHTML='<div class="article gear-article" style="grid-column:1/-1">'+
+      '<p class="meta"><a href="#" onclick="openGearArticle(\'\');return false;">← All buyer’s guides</a></p>'+
+      '<h2 style="margin:6px 0 10px">'+(c.title||('Top 10 '+c.category))+'</h2>'+
+      '<p class="gentry-review" style="max-width:80ch">'+(c.article_intro||'')+'</p>'+
+      (tips?'<div class="tipbox"><b>What to look for</b><ul>'+tips+'</ul></div>':'')+
+      priceNote+
+      c.items.map(function(it){return gearEntry(it,c.category);}).join('')+
+      '<p class="meta" style="margin-top:16px"><a href="#" onclick="openGearArticle(\'\');return false;">← Back to all buyer’s guides</a></p></div>';
+  }
   applyIcons();
 }
 
