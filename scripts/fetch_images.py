@@ -28,7 +28,15 @@ UA = "DiveSZNImageFetcher/1.0 (https://github.com/DonLybero/Diving-site; static-
 
 # File names that are clearly not scenery — skip these from Wikimedia geosearch.
 BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagram|"
-                      r"\.svg$|chart|seal|emblem)", re.I)
+                      r"\.svg$|chart|seal|emblem|iss0\d|view_of_earth|airport|aeropuerto|"
+                      r"mosque|church|cathedral|museum|plaque|statue|monument|inauguration|"
+                      r"bicycle|bus_|railway|station|street|road_|casent|herbarium|specimen|"
+                      r"stamp|banknote|coin_|graffiti|hotel|restaurant)", re.I)
+
+# Titles that clearly ARE what we want; used to rank search hits.
+GOOD_HINT = re.compile(r"(underwater|reef|coral|diving|diver|snorkel|wreck|lagoon|atoll|"
+                       r"beach|bay|sea|ocean|island|shark|turtle|manta|ray|fish|aerial|"
+                       r"coast|shore|cenote|kelp|anemone)", re.I)
 
 
 def _get(url, headers=None, tries=3):
@@ -71,6 +79,52 @@ def from_pexels(name, country):
 
 
 # ---------------------------------------------------------------- Wikimedia
+def _commons_pick(titles):
+    """Fetch imageinfo for candidate file titles; return the first good one."""
+    for i in range(0, len(titles), 10):
+        batch = "|".join(titles[i:i + 10])
+        info = ("https://commons.wikimedia.org/w/api.php?action=query&format=json"
+                "&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=960&titles="
+                + urllib.parse.quote(batch))
+        j = _get(info)
+        pages = (((j or {}).get("query") or {}).get("pages")) or {}
+        for page in pages.values():
+            ii = (page.get("imageinfo") or [{}])[0]
+            if ii.get("mime", "") not in ("image/jpeg", "image/png"):
+                continue
+            w, h = ii.get("width", 0), ii.get("height", 0)
+            if w < 800 or h < 450 or h > w * 1.1:      # need a usable landscape photo
+                continue
+            img = ii.get("thumburl") or ii.get("url")
+            if not img:
+                continue
+            meta = ii.get("extmetadata") or {}
+            artist = strip_html((meta.get("Artist") or {}).get("value", "")) or "Wikimedia Commons"
+            lic = strip_html((meta.get("LicenseShortName") or {}).get("value", ""))
+            credit = f"Photo: {artist}" + (f" ({lic})" if lic else "") + " via Wikimedia Commons"
+            return {"image": img, "image_credit": credit, "image_source": "wikimedia"}
+    return None
+
+
+def from_wikimedia_search(name, country):
+    """Keyword search on Commons for marine/scenery photos of the destination."""
+    base = re.sub(r"\s*\(.*?\)", "", name).strip()          # "Red Sea (Egypt)" -> "Red Sea"
+    queries = [f"{base} underwater", f"{base} reef", f"{base} scuba diving",
+               f"{base} coral", f"{base} aerial island", f"{base} {country} sea"]
+    for q in queries:
+        url = ("https://commons.wikimedia.org/w/api.php?action=query&format=json"
+               "&list=search&srnamespace=6&srlimit=25&srsearch=" + urllib.parse.quote(q))
+        j = _get(url)
+        hits = (((j or {}).get("query") or {}).get("search")) or []
+        titles = [h["title"] for h in hits if not BAD_HINT.search(h.get("title", ""))]
+        # rank: titles with marine words first
+        titles.sort(key=lambda t: 0 if GOOD_HINT.search(t) else 1)
+        got = _commons_pick(titles)
+        if got:
+            return got
+    return None
+
+
 def from_wikimedia(coord):
     if not coord or coord.get("lat") is None or coord.get("lng") is None:
         return None
@@ -114,7 +168,9 @@ def main():
         name = d.get("name", "")
         if d.get("image") and not FORCE:
             continue
-        got = from_pexels(name, d.get("country", "")) or from_wikimedia(d.get("coordinates"))
+        got = (from_pexels(name, d.get("country", ""))
+               or from_wikimedia_search(name, d.get("country", ""))
+               or from_wikimedia(d.get("coordinates")))
         if got:
             d.update(got)
             updated += 1
