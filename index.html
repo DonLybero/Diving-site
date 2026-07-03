@@ -248,6 +248,16 @@
   .readout span{position:relative}
 
   /* ---------- price table ---------- */
+  /* gear buyer's-guide article */
+  .gear-photo{height:180px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:10px;overflow:hidden;margin-bottom:12px;position:relative}
+  .gear-photo img{max-width:92%;max-height:92%;object-fit:contain}
+  .gear-photo .gear-ico{position:static;margin:0}
+  .gear-rank{position:absolute;top:8px;left:8px;background:var(--coral);color:#2a0f06;font-family:var(--mono);font-weight:800;border-radius:8px;padding:2px 9px;font-size:.8rem}
+  .gear-cat-head{font-family:var(--serif);font-size:1.7rem;margin:34px 0 4px}
+  .channels{margin:14px 0}
+  .channels summary{cursor:pointer;color:var(--accent);font-weight:600}
+  .channels ol{columns:2;column-gap:28px;margin:10px 0 0;padding-left:20px;font-size:.85rem;line-height:1.9}
+  @media(max-width:700px){.channels ol{columns:1}}
   .ptable{width:100%;margin-top:12px;border-collapse:collapse;font-size:.86rem;background:transparent;border:none}
   .ptable td{padding:10px 8px;border-bottom:1px solid var(--line)}
   .ptable .deal{font-family:var(--mono)}
@@ -355,7 +365,7 @@
     <div class="controls">
       <div class="field"><label>Category</label><select id="gearCat"><option value="">All gear</option></select></div>
     </div>
-    <p class="meta" style="text-align:center">Cheapest price first, always. <b style="color:#ffce5a">Prices shown are illustrative samples</b> — live retailer feeds are connected at launch; product names are real, prices are not yet.</p>
+    <p class="meta" style="text-align:center">Cheapest price first, always. Prices are indicative (checked at research time) — click through to the retailer for the live price.</p>
     <div id="gearGrid" class="grid"></div>
   </section>
 
@@ -446,7 +456,7 @@
 <script src="vendor/leaflet.js"></script>
 <script src="diving-calendar.js"></script>
 <script>
-var DATA=null, DESTS=[], MAP=null, MARKERS=null, LAND=null;
+var DATA=null, DESTS=[], MAP=null, MARKERS=null, LAND=null, GEAR_GUIDE=null;
 var RCOLOR={Peak:'#16a34a',Good:'#0ea5e9',Shoulder:'#eab308',Low:'#f97316',Closed:'#64748b'};
 
 /* ---------- inline SVG icon set (single stroke style, replaces emoji) ---------- */
@@ -844,9 +854,15 @@ function diffPips(d){
 
 function renderHome(){
   var topAug=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:3});
-  var bestGear=GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
+  var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.slice(0,3).map(function(c){
+    var g=c.items[0], lo=g.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;})[0];
+    return '<div class="feature" onclick="showTab(\'gear\')">'+
+      '<div class="gear-photo" style="height:120px">'+(g.image?'<img src="'+g.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
+      '<h4>'+g.name+'</h4><div class="score">from '+fmtPrice(lo.price_usd)+'</div>'+
+      '<div class="meta">#1 '+c.category.replace(/s$/,'')+' · cheapest at '+lo.store+'</div></div>';
+  }):GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
     return '<div class="feature" onclick="showTab(\'gear\')">'+gearIco(g)+'<h4>'+g.name+'</h4>'+
-      '<div class="score">from $'+lo[1]+'</div><div class="meta">sample price · cheapest at '+lo[0]+'</div></div>';}).join('');
+      '<div class="score">from $'+lo[1]+'</div><div class="meta">sample price · cheapest at '+lo[0]+'</div></div>';})).join('');
   var sitePrev=topAug.map(function(r,i){return '<div class="feature photo-card'+(i===0?' featured':'')+'" onclick="openProfile(\''+esc(r.name)+'\')">'+
       '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'">'+badge(r.rating)+'</div>'+
       '<h4>'+r.name+'</h4><div class="meta">'+r.country+'</div>'+
@@ -963,20 +979,45 @@ var GEAR=[
  {name:"OrcaTorch D710 Dive Light",cat:"Torch",icon:"torch",offers:[["Amazon",99],["House of Scuba",95],["Dive Right In",109]]}
 ];
 function gearIco(g){return '<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[g.icon]||ICONS.tank)+'</svg></div>';}
-function renderGear(){
-  var cats=Array.from(new Set(GEAR.map(function(g){return g.cat;})));
-  var sel=document.getElementById('gearCat');
-  if(sel.options.length<=1) cats.forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);});
-  var cat=sel.value;
-  var list=GEAR.filter(function(g){return !cat||g.cat===cat;});
-  document.getElementById('gearGrid').innerHTML=list.map(function(g){
-    var offers=g.offers.slice().sort(function(a,b){return a[1]-b[1];});
-    var rows=offers.map(function(o,i){return '<tr class="'+(i===0?'low':'')+'"><td class="deal">'+o[0]+'</td>'+
-      '<td class="price">$'+o[1]+'</td><td style="text-align:right"><a class="btn'+(i===0?'':' ghost')+'" href="#" onclick="demo(\''+o[0]+'\');return false;">Buy at '+o[0]+'</a></td></tr>';}).join('');
-    var save=offers[offers.length-1][1]-offers[0][1];
-    return '<div class="card">'+gearIco(g)+'<h3>'+g.name+'</h3><div class="meta">'+g.cat+' · save up to $'+save+' by comparing · <span style="color:#ffce5a">sample prices</span></div>'+
-      '<table class="ptable">'+rows+'</table></div>';
+var CAT_ICON={'Masks':'mask','Fins':'fins','Regulators':'regulator','BCDs':'bcd','Dive Computers':'computer','Wetsuits':'wetsuit'};
+function fmtPrice(p){return '$'+(p%1?p.toFixed(2):p);}
+function gearItemCard(item,cat){
+  var offers=item.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;}).slice(0,3);
+  var rows=offers.map(function(o,i){
+    return '<tr class="'+(i===0?'low':'')+'"><td class="deal">'+o.store+'</td>'+
+      '<td class="price">'+fmtPrice(o.price_usd)+'</td>'+
+      '<td style="text-align:right"><a class="btn'+(i===0?'':' ghost')+'" href="'+o.url+'" target="_blank" rel="noopener sponsored">Buy at '+o.store+'</a></td></tr>';
   }).join('');
+  var save=offers.length>1?Math.round(offers[offers.length-1].price_usd-offers[0].price_usd):0;
+  var fallback='<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[CAT_ICON[cat]]||ICONS.tank)+'</svg></div>';
+  var photo='<div class="gear-photo"><span class="gear-rank">#'+item.rank+'</span>'+
+    (item.image?'<img src="'+item.image+'" alt="'+item.name.replace(/"/g,'&quot;')+'" loading="lazy" '+
+      'onerror="this.parentNode.innerHTML=this.parentNode.querySelector(\'.gear-rank\').outerHTML+'+"'"+fallback.replace(/'/g,"\\'").replace(/"/g,'&quot;')+"'"+';">':fallback)+'</div>';
+  return '<div class="card">'+photo+'<h3>'+item.name+'</h3>'+
+    '<div class="hl">'+item.blurb+'</div>'+
+    '<div class="meta" style="margin-top:6px">Cheapest 3 stores we found'+(save?' · save up to $'+save+' by comparing':'')+'</div>'+
+    '<table class="ptable">'+rows+'</table></div>';
+}
+function renderGear(){
+  var sel=document.getElementById('gearCat');
+  if(!GEAR_GUIDE||!GEAR_GUIDE.categories){document.getElementById('gearGrid').innerHTML='<div class="empty">Gear guide could not load.</div>';return;}
+  if(sel.options.length<=1) GEAR_GUIDE.categories.forEach(function(c){var o=document.createElement('option');o.value=c.category;o.textContent=c.category;sel.appendChild(o);});
+  var cat=sel.value;
+  var shown=GEAR_GUIDE.categories.filter(function(c){return !cat||c.category===cat;});
+  var chans=(GEAR_GUIDE.channels||[]).map(function(c){
+    return '<li><a href="'+c.url+'" target="_blank" rel="noopener">'+c.name+'</a> <span class="meta">'+c.subs+' · '+c.focus+'</span></li>';
+  }).join('');
+  var head='<div class="article" style="margin-bottom:6px">'+
+    '<h3 style="margin-top:0">The DiveSZN gear guide — the top 10 of every category</h3>'+
+    '<p>'+(GEAR_GUIDE.intro||'')+'</p>'+
+    (chans?'<details class="channels"><summary>The 20 diving channels &amp; test labs behind this guide ▾</summary><ol>'+chans+'</ol></details>':'')+
+    '<p class="meta">Prices are indicative, checked '+(GEAR_GUIDE.researched||'')+' — click through for the live price. Cheapest option is highlighted.</p></div>';
+  document.getElementById('gearGrid').innerHTML=
+    head+shown.map(function(c){
+      return '<div style="grid-column:1/-1"><h3 class="gear-cat-head">'+ico(CAT_ICON[c.category]||'tank',20)+' Top 10 '+c.category+'</h3></div>'+
+        c.items.map(function(it){return gearItemCard(it,c.category);}).join('');
+    }).join('');
+  applyIcons();
 }
 
 var REVIEW_PICKS=[
@@ -1024,17 +1065,18 @@ function renderCentres(){
 
 // Prefer data embedded by the single-file build; otherwise fetch from disk.
 function loadData(){
-  if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null]);
+  if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null, window.__GEAR_DATA__||null]);
   return Promise.all([
     fetch('diving-destinations.json').then(function(r){return r.json();}),
-    fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+    fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
+    fetch('gear-guide.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
   ]);
 }
 loadData().then(function(res){
-  var j=res[0]; LAND=res[1];
+  var j=res[0]; LAND=res[1]; GEAR_GUIDE=res[2];
   DATA=j; DESTS=j.destinations;
   document.getElementById('foot').innerHTML=
-    '<div style="font-family:var(--serif);font-size:1.5rem;color:var(--ink)">Scuba<b style="color:var(--accent)">naut</b></div>'+
+    '<div style="font-family:var(--serif);font-size:1.5rem;color:var(--ink)">Dive<b style="color:var(--accent)">SZN</b></div>'+
     '<div style="height:14px"></div>'+
     'Seasonal scores for dive destinations worldwide · '+
     'score = conditions rating + sea-life bonus + visibility · ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed'+
@@ -1042,8 +1084,8 @@ loadData().then(function(res){
     'water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles. '+
     'Always confirm current conditions with a local dive centre before travelling.</div>'+
     '<div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear or book a trip through our links, '+
-    'at no extra cost to you. Gear and trip prices shown are sample data for demonstration. We link only to authorised retailers and trusted '+
-    'operators, and commissions never influence our ratings.</div>'+
+    'at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price; trip prices are sample data. '+
+    'We link only to authorised retailers and trusted operators, and commissions never influence our rankings.</div>'+
     '<p style="margin-top:10px"><a href="destinations/index.html">Browse all 50 destination season guides →</a></p>';
   initControls();
   applyIcons(); setHeroPhoto();

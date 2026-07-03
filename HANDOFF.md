@@ -20,9 +20,14 @@ centres, liveaboard safaris). Static site, no backend, deployable anywhere.
   temperature, marine life, conditions, visibility, season rating, plus
   current strength and coordinates. Powers the Calendar, Best-period, Plan,
   Map, Search and Dive Sites sections.
-- **SAMPLE/placeholder (structured like real feeds, ready to swap):** Gear
-  prices/dealers, the Reviews article picks, Dive Centres, Safaris. Buttons
-  pop a demo message; they become affiliate links later.
+- **REAL, researched (2026-07):** the Gear guide (`gear-guide.json`) — top 10
+  per category (masks, fins, regulators, BCDs, computers, wetsuits) compiled
+  from the 20 biggest diving YouTube channels + ScubaLab/DIVE/DiveIn tests,
+  each with 3 cheapest online stores (indicative prices, real links; image
+  URLs best-effort with icon fallback).
+- **SAMPLE/placeholder (structured like real feeds, ready to swap):** the
+  Reviews article picks, Dive Centres, Safaris. Their buttons pop a demo
+  message; they become affiliate links later.
 
 ## File map
 | File | What it is |
