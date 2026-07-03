@@ -31,12 +31,26 @@ BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagra
                       r"\.svg$|chart|seal|emblem|iss0\d|view_of_earth|airport|aeropuerto|"
                       r"mosque|church|cathedral|museum|plaque|statue|monument|inauguration|"
                       r"bicycle|bus_|railway|station|street|road_|casent|herbarium|specimen|"
-                      r"stamp|banknote|coin_|graffiti|hotel|restaurant)", re.I)
+                      r"stamp|banknote|coin_|graffiti|hotel|restaurant|_table|thumbnail|"
+                      r"legends_of|illustration|drawing|painting|poster|book_|experimental|"
+                      r"operations|bognor)", re.I)
 
 # Titles that clearly ARE what we want; used to rank search hits.
 GOOD_HINT = re.compile(r"(underwater|reef|coral|diving|diver|snorkel|wreck|lagoon|atoll|"
                        r"beach|bay|sea|ocean|island|shark|turtle|manta|ray|fish|aerial|"
                        r"coast|shore|cenote|kelp|anemone)", re.I)
+
+# Hand-tuned Commons search queries for destinations the generic queries miss.
+DEST_QUERIES = {
+    "Maui & Kona": ["Molokini crater aerial", "Hawaii coral reef underwater", "Maui underwater turtle"],
+    "Okinawa Islands": ["Kerama Islands underwater", "Okinawa coral reef", "Zamami island sea"],
+    "Truk (Chuuk) Lagoon": ["Chuuk Lagoon shipwreck underwater", "Fujikawa Maru", "Truk Lagoon wreck diving"],
+    "Lundy Island": ["Lundy island coast", "Lundy grey seal", "Lundy Devon sea"],
+    "Vancouver Island": ["British Columbia kelp forest underwater", "Vancouver Island coast aerial", "Pacific Northwest diving"],
+    "South West Rocks": ["Fish Rock Cave", "grey nurse shark Australia", "South West Rocks NSW beach"],
+    "Chagos Archipelago / BIOT": ["Chagos reef", "Diego Garcia lagoon", "Salomon Atoll Chagos"],
+    "Guadalcanal & Western Province": ["Solomon Islands coral reef", "Solomon Islands underwater", "Marovo Lagoon"],
+}
 
 
 def _get(url, headers=None, tries=3):
@@ -109,8 +123,9 @@ def _commons_pick(titles):
 def from_wikimedia_search(name, country):
     """Keyword search on Commons for marine/scenery photos of the destination."""
     base = re.sub(r"\s*\(.*?\)", "", name).strip()          # "Red Sea (Egypt)" -> "Red Sea"
-    queries = [f"{base} underwater", f"{base} reef", f"{base} scuba diving",
-               f"{base} coral", f"{base} aerial island", f"{base} {country} sea"]
+    queries = DEST_QUERIES.get(name) or [
+        f"{base} underwater", f"{base} reef", f"{base} scuba diving",
+        f"{base} coral", f"{base} aerial island", f"{base} {country} sea"]
     for q in queries:
         url = ("https://commons.wikimedia.org/w/api.php?action=query&format=json"
                "&list=search&srnamespace=6&srlimit=25&srsearch=" + urllib.parse.quote(q))
