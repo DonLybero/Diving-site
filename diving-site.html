@@ -1984,7 +1984,6 @@ function gearEntry(item,cat){
     '<div><h3>'+item.rank+'. '+item.name+'</h3>'+
     '<p class="gentry-review">'+(item.review||item.blurb)+'</p>'+
     specs+
-    '<div class="meta">Cheapest 3 stores we found — best price highlighted:</div>'+
     '<table class="ptable">'+rows+'</table></div></div>';
 }
 function openGearArticle(cat){
@@ -2008,8 +2007,7 @@ function renderGear(){
         '<div class="artrow-thumb">'+thumb+'</div>'+
         '<div><div class="kicker">Gear · '+c.category+'</div>'+
         '<h4>'+(c.title||('Top 10 '+c.category))+'</h4>'+
-        '<p>'+teaser+'</p>'+
-        '<span class="meta">10 picks · 3 cheapest stores each · researched '+(GEAR_GUIDE.researched||'')+'</span></div></a>';
+        '<p>'+teaser+'</p></div></a>';
     }).join('');
     g.innerHTML='<div class="article" style="grid-column:1/-1;margin-bottom:6px">'+
       '<p class="gentry-review" style="max-width:80ch;margin-top:0">'+(GEAR_GUIDE.intro||'')+'</p>'+
