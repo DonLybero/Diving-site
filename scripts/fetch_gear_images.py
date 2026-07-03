@@ -28,9 +28,8 @@ BAD_IMG = re.compile(r"(logo|favicon|sprite|placeholder|banner|social|opengraph_
 EXTRA_PAGES = {
     "Scubapro Seawing Nova": ["https://divecatalog.com/products/scubapro-seawing-nova-open-heel-scuba-diving-fin",
                               "https://lancasterscuba.com/products/spfnseawingnova"],
-    "TUSA HyFlex Switch": ["https://divecatalog.com/products/tusa-hyflex-switch-fins",
-                           "https://divecatalog.com/products/tusa-hyflex-switch-open-heel-scuba-diving-fins",
-                           "https://tusa.com/us-en/TUSA/Fins/TUSA_HyFlex_Switch"],
+    "TUSA HyFlex Switch": ["https://divecatalog.com/products/tusa-hyflex-switch-open-heel-scuba-diving-fin",
+                           "https://www.scubatoys.com/products/5977-tusa-hyflex-switch-pro-fins/"],
     "Scubapro Go Sport": ["https://divecatalog.com/products/scubapro-go-sport-fins",
                           "https://divecatalog.com/products/scubapro-go-sport-travel-open-heel-scuba-diving-fin",
                           "https://divecatalog.com/products/scubapro-go-sport-open-heel-scuba-diving-fins"],
