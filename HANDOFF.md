@@ -25,9 +25,10 @@ centres, liveaboard safaris). Static site, no backend, deployable anywhere.
   from the 20 biggest diving YouTube channels + ScubaLab/DIVE/DiveIn tests,
   each with 3 cheapest online stores (indicative prices, real links; image
   URLs best-effort with icon fallback).
-- **SAMPLE/placeholder (structured like real feeds, ready to swap):** the
-  Reviews article picks, Dive Centres, Safaris. Their buttons pop a demo
-  message; they become affiliate links later.
+- **REAL, computed live:** the Destinations tab — 12 "Top Destinations in
+  <Month>" articles ranked live by the scoring engine over the seasonal
+  dataset, with editorial ledes. (The old sample Reviews and Dive Centres
+  sections were removed 2026-07.)
 
 ## File map
 | File | What it is |

@@ -943,6 +943,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .specs div{background:#06262f;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
   .specs dt{color:var(--muted);font-size:.62rem;text-transform:uppercase;letter-spacing:.6px;margin:0}
   .specs dd{margin:2px 0 0;font-family:var(--mono);font-size:.78rem;color:#bdeee8}
+  .dest-photo{height:190px;border-radius:10px;overflow:hidden;position:relative;background:#0f4350}
+  .dest-photo img{width:100%;height:100%;object-fit:cover}
+  .artrow-thumb.dest-thumb{background:#0f4350}
+  .artrow-thumb.dest-thumb img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
   .tipbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:14px 0;max-width:80ch}
   .tipbox ul{margin:8px 0 0;padding-left:20px;line-height:1.7;font-size:.9rem}
   .channels{margin:14px 0}
@@ -1040,8 +1044,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <button id="tab-home" class="active" onclick="showTab('home')"><i class="ico" data-ico="home"></i>Home</button>
     <button id="tab-planner" onclick="showTab('planner')"><i class="ico" data-ico="compass"></i>Dive Planner</button>
     <button id="tab-gear" onclick="showTab('gear')"><i class="ico" data-ico="tank"></i>Diving Gear</button>
-    <button id="tab-reviews" onclick="showTab('reviews')"><i class="ico" data-ico="pen"></i>Reviews</button>
-    <button id="tab-centres" onclick="showTab('centres')"><i class="ico" data-ico="store"></i>Dive Centres</button>
+    <button id="tab-destinations" onclick="showTab('destinations')"><i class="ico" data-ico="trophy"></i>Destinations</button>
     <button id="tab-search" onclick="showTab('search')"><i class="ico" data-ico="search"></i>Search</button>
   </div>
 </div>
@@ -1060,11 +1063,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <div id="gearGrid" class="grid"></div>
   </section>
 
-  <!-- REVIEWS -->
-  <section id="view-reviews" class="hidden"><div id="reviewsBody"></div></section>
-
-  <!-- DIVE CENTRES -->
-  <section id="view-centres" class="hidden"><div id="centresBody"></div></section>
+  <!-- DESTINATIONS: 12 monthly top-destination articles -->
+  <section id="view-destinations" class="hidden"><div id="destBody"></div></section>
 
 
   <!-- DIVE PLANNER — one progressive page: filters first, then results as cards / map / year calendar -->
@@ -1477,7 +1477,7 @@ function setHeroPhoto(){
   }
 }
 
-var TABS=['home','planner','gear','reviews','centres','search'];
+var TABS=['home','planner','gear','destinations','search'];
 // Legacy destinations now living inside the Dive Planner — each routes to a planner sub-view.
 var PLANNER_TOOLS={calendar:'calendar',period:'cards',plan:null,sites:'cards',map:'map'};
 
@@ -2037,47 +2037,74 @@ function renderGear(){
   applyIcons();
 }
 
-var REVIEW_PICKS=[
- ["Scubapro Hydros Pro","Best overall — modular, travel-friendly, near-indestructible Monprene."],
- ["Aqua Lung Outlaw","Best for travel — ultralight back-inflate that packs tiny."],
- ["Mares Dragon SLS","Best comfort — load-distributing harness for long dive days."],
- ["Cressi Travelight","Best value — featherweight wing at a fair price."],
- ["Zeagle Ranger","Best for tech-curious — rugged, hugely adjustable workhorse."]
-];
-function renderReviews(){
-  var picks=REVIEW_PICKS.map(function(p,i){return '<div class="pick"><h4>'+(i+1)+'. '+p[0]+'</h4><p class="meta">'+p[1]+'</p>'+
-    '<a class="btn ghost" href="#" onclick="showTab(\'gear\');return false;">Check price at authorised dealers →</a></div>';}).join('');
-  document.getElementById('reviewsBody').innerHTML=
-    '<div class="article"><div class="sec-head">'+ico('pen')+'Reviews &amp; buying guides</div>'+
-    '<p class="sec-sub">Independent, hands-on guides. We earn from affiliate links, never from rankings.</p>'+
-    '<h3>The Top 5 BCDs of 2026</h3>'+
-    '<p>A buoyancy compensator is the one piece of kit you wear on every dive, so it pays to choose well. '+
-    'We weighted lift, travel weight, durability, comfort and value — and tested each in the water. Here are our five picks.</p>'+
-    picks+
-    '<p class="meta" style="margin-top:14px">More guides coming: best dive computers, best travel regulators, wetsuit thickness by water temperature.</p></div>';
+/* ---------------- Destinations: 12 monthly top-destination articles ----------------
+   Rankings come live from DivingCalendar.rankPeriod over the researched data;
+   the ledes are editorial. */
+var MONTH_FULL={Jan:'January',Feb:'February',Mar:'March',Apr:'April',May:'May',Jun:'June',
+  Jul:'July',Aug:'August',Sep:'September',Oct:'October',Nov:'November',Dec:'December'};
+var MONTH_INTROS={
+Jan:"January belongs to the Indian Ocean and the eastern Pacific. The Maldives hits its dry-season stride with manta trains and whale sharks on the western atolls, Raja Ampat is in full manta season, and Socorro's giant oceanic mantas share the water with wintering humpbacks. Closer to home for North Americans, Bimini's great hammerheads arrive in the Bahamas and the Yucat\u00e1n cenotes run at their clearest.",
+Feb:"February is Palau's moment — reef-hook season at Blue Corner with grey reef sharks stacked in the current — while Thailand's Similans deliver their calmest seas and Richelieu Rock's whale-shark window opens. In the southern hemisphere the Poor Knights hit peak subtropical visibility, and Socorro keeps serving mantas and humpback song.",
+Mar:"March pairs flat seas with big animals across Southeast Asia: the Similans peak before the monsoon turns, Malapascua's dawn thresher sharks are at their most reliable, and Palau rides the tail of its prime season. In the Red Sea the offshore reefs wake up as the water warms, and Belize's Great Blue Hole enjoys its glassiest window of the year.",
+Apr:"April is transition month done right. Palau closes its peak with lunar spawning aggregations, Tubbataha's short liveaboard season opens in the Sulu Sea, Komodo warms into manta season and Malapascua's threshers keep showing. The Caribbean stays calm and clear — and Utila's whale-shark run begins.",
+May:"May opens the whale-shark ledger at Ningaloo — swimming with the world's biggest fish right off the reef — while Tubbataha hits the heart of its ten-week season and Komodo's currents turn the channels into fish soup. Socorro closes its season with late mantas, and the Bahamas stay dependable before storm-watch begins.",
+Jun:"June belongs to the Coral Sea and the passes of French Polynesia. The Great Barrier Reef opens dwarf-minke-whale season on the Ribbon Reefs, Fakarava's groupers gather for the year's great spawning, Cocos starts building toward hammerhead high season, and the northern Red Sea settles into warm, glassy wreck-diving weather.",
+Jul:"July is austral-winter diving at its best: Ningaloo stacks whale sharks, mantas and the first humpbacks, the Great Barrier Reef runs minke encounters and humpback highways, and Heron Island sits in thirty-metre visibility. In the Atlantic, the Azores' seamounts fill with mobulas and blue sharks, while Fiji's soft corals bloom in the trade-wind currents.",
+Aug:"August is big-animal month in the eastern Pacific: Cocos and Gal\u00e1pagos run their hammerhead and whale-shark peaks as cool, nutrient-rich water floods the archipelagos. The Great Barrier Reef and Komodo both sit at the top of their seasons — mola mola come shallow off Komodo's south coast — and the Azores deliver their best blue-water shark diving.",
+Sep:"September keeps the eastern Pacific on top — Cocos' hammerhead schools and Gal\u00e1pagos' whale sharks at full strength — while the Sea of Cortez switches on with sea lions, mobula fever and the warmest water of its year. The Whitsundays fill with humpback mothers and calves, and Komodo stays in peak form.",
+Oct:"October is the Red Sea's sweet spot: thinner crowds, water still holding 27\u00b0C, and oceanic-whitetip season on the offshore reefs — Brothers, Daedalus, Elphinstone. The Sea of Cortez peaks, Komodo closes its dry season strong, and the Seychelles enter a calm inter-monsoon window with whale sharks cruising off Mah\u00e9.",
+Nov:"November puts the Indian Ocean first: the Seychelles' second calm season brings glassy water and whale-shark passes, while the southern Red Sea keeps the shark encounters coming. La Paz opens whale-shark season in the Sea of Cortez, Tiger Beach hits its stride in the Bahamas, and Fernando de Noronha's dry-season visibility tops thirty metres.",
+Dec:"December resets the calendar to the Maldives and Raja Ampat — manta season in full swing on both sides of the equator — while Socorro's winter giants return and the Bahamas run tiger and hammerhead action. Cold-water divers get their moment too: Vancouver Island's plankton settles into its winter-clear best."
+};
+function destArticleEntry(r,month){
+  var d=DivingCalendar.getDestination(DESTS,r.name)||{};
+  var mm=d.monthly?d.monthly[month]:{};
+  var photo='<div class="dest-photo"><span class="gear-rank">#'+r.rank+'</span>'+
+    (d.image?'<img src="'+d.image+'" alt="'+r.name.replace(/"/g,'&quot;')+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>';
+  return '<div class="gentry">'+photo+
+    '<div><h3>'+r.rank+'. '+r.name+'</h3>'+
+    '<div class="meta" style="margin:0 0 8px">'+r.country+' · '+r.region+'</div>'+
+    '<div class="row" style="margin-bottom:8px">'+badge(r.rating)+
+      '<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
+      '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+'</div>'+
+    '<p class="gentry-review"><b>In the water this month:</b> '+(mm.marine_life||r.highlight)+'.'+
+      (mm.conditions?' <b>Conditions:</b> '+mm.conditions+'.':'')+'</p>'+
+    '<a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full season guide →</a></div></div>';
 }
-
-/* Dive Centres: a factual directory (name + location + destination link).
-   No ratings, review counts or claimed badges are shown — verified-diver
-   reviews launch later; we never publish invented ratings for real businesses. */
-var CENTRES=[
- {name:"Emperor Divers",loc:"Sharm el-Sheikh, Egypt",dest:"Red Sea (Egypt)"},
- {name:"Blue Magic Dive Center",loc:"Raja Ampat, Indonesia",dest:"Raja Ampat"},
- {name:"Scuba Junkie",loc:"Mabul / Sipadan, Malaysia",dest:"Sipadan Island"},
- {name:"Manta Dive Gili T",loc:"Gili Trawangan, Indonesia",dest:"Gili Islands & Lombok"},
- {name:"Galapagos Sky",loc:"Galápagos, Ecuador",dest:"Galapagos Islands"},
- {name:"Dive Friends Bonaire",loc:"Kralendijk, Bonaire",dest:"Bonaire"}
-];
-function renderCentres(){
-  document.getElementById('centresBody').innerHTML=
-    '<div class="sec-head">'+ico('store')+'Dive centres</div>'+
-    '<p class="sec-sub">A directory of operators at our destinations — starting small and growing. '+
-    '<b style="color:var(--ink)">Verified-diver reviews are coming</b>; we will never publish ratings we haven\'t collected ourselves.</p>'+
-    CENTRES.map(function(c){return '<div class="crow"><div><b>'+c.name+'</b>'+
-      '<div class="meta">'+c.loc+'</div></div>'+
-      '<div><a class="btn ghost" href="#" onclick="openProfile(\''+esc(c.dest)+'\');return false;">Destination guide →</a></div></div>';}).join('')+
-    '<p class="meta" style="margin-top:14px">Run a dive centre at one of our destinations? '+
-    '<a href="#" onclick="demo(\'the listing request form\');return false;">Ask to be listed</a> — listing is free and factual.</p>';
+function openMonthArticle(m){
+  var sel=document.getElementById('destMonth'); if(sel) sel.value=m;
+  renderDestinations(m);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function renderDestinations(month){
+  var g=document.getElementById('destBody');
+  if(!month){
+    var rows=DivingCalendar.MONTHS.map(function(m){
+      var top=DivingCalendar.rankPeriod(DESTS,DivingCalendar.MONTHS.indexOf(m)*2+1,{limit:1})[0];
+      var d=top?DivingCalendar.getDestination(DESTS,top.name):null;
+      var thumb=(d&&d.image)?'<img src="'+d.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'';
+      var teaser=(MONTH_INTROS[m]||'').split('. ')[0]+'.';
+      return '<a class="artrow" href="#" onclick="openMonthArticle(\''+m+'\');return false;">'+
+        '<div class="artrow-thumb dest-thumb">'+thumb+'</div>'+
+        '<div><div class="kicker">Destinations · '+MONTH_FULL[m]+'</div>'+
+        '<h4>Top Destinations in '+MONTH_FULL[m]+'</h4>'+
+        '<p>'+teaser+'</p></div></a>';
+    }).join('');
+    g.innerHTML='<div class="article">'+
+      '<div class="sec-head">'+ico('trophy')+'Where to dive, month by month</div>'+
+      '<p class="sec-sub" style="text-align:left;margin:0 0 4px;max-width:80ch">DiveSZN scores every destination for every month of the year — these twelve guides rank the places where each month truly delivers, so you can pick the best diving for your vacation dates.</p>'+
+      '<h3 class="artlist-head">Recent articles</h3>'+rows+'</div>';
+  }else{
+    var full=MONTH_FULL[month];
+    var ranked=DivingCalendar.rankPeriod(DESTS,DivingCalendar.MONTHS.indexOf(month)*2+1,{limit:10});
+    g.innerHTML='<div class="article gear-article">'+
+      '<p class="meta"><a href="#" onclick="openMonthArticle(\'\');return false;">← All monthly guides</a></p>'+
+      '<h2 style="margin:6px 0 10px">Top Destinations in '+full+'</h2>'+
+      '<p class="gentry-review" style="max-width:80ch">'+(MONTH_INTROS[month]||'')+'</p>'+
+      ranked.map(function(r){return destArticleEntry(r,month);}).join('')+
+      '<p class="meta" style="margin-top:16px"><a href="#" onclick="openMonthArticle(\'\');return false;">← Back to all monthly guides</a></p></div>';
+  }
+  applyIcons();
 }
 
 // Prefer data embedded by the single-file build; otherwise fetch from disk.
@@ -2106,7 +2133,7 @@ loadData().then(function(res){
     '<p style="margin-top:10px"><a href="destinations/index.html">Browse all 50 destination season guides →</a></p>';
   initControls();
   applyIcons(); setHeroPhoto();
-  renderHome(); renderGear(); renderReviews(); renderCentres();
+  renderHome(); renderGear(); renderDestinations();
   // planner result views render on the diver's first selection (progressive disclosure)
   document.getElementById('searchBox').addEventListener('input', renderSearch);
 }).catch(function(){
