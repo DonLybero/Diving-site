@@ -47,9 +47,16 @@ DEST_QUERIES = {
     "Truk (Chuuk) Lagoon": ["Chuuk Lagoon shipwreck underwater", "Fujikawa Maru", "Truk Lagoon wreck diving"],
     "Lundy Island": ["Lundy island coast", "Lundy grey seal", "Lundy Devon sea"],
     "Vancouver Island": ["British Columbia kelp forest underwater", "Vancouver Island coast aerial", "Pacific Northwest diving"],
-    "South West Rocks": ["Fish Rock Cave", "grey nurse shark Australia", "South West Rocks NSW beach"],
+    "South West Rocks": ["South West Rocks NSW", "Trial Bay Gaol beach", "Smoky Cape lighthouse", "grey nurse shark Australia"],
     "Chagos Archipelago / BIOT": ["Chagos reef", "Diego Garcia lagoon", "Salomon Atoll Chagos"],
-    "Guadalcanal & Western Province": ["Solomon Islands coral reef", "Solomon Islands underwater", "Marovo Lagoon"],
+    "Guadalcanal & Western Province": ["Marovo Lagoon", "Gizo Solomon Islands", "Solomon Islands lagoon aerial", "Honiara coast"],
+}
+
+# For tricky names, a candidate file title MUST match this pattern (keeps
+# "Rocks" from matching a West Virginia highway, "reef" from matching Aruba).
+DEST_REQUIRE = {
+    "Guadalcanal & Western Province": re.compile(r"(solomon|marovo|gizo|munda|roviana|guadalcanal|honiara|tulagi)", re.I),
+    "South West Rocks": re.compile(r"(south.?west.?rocks|trial.?bay|smoky.?cape|arakoon|grey.?nurse)", re.I),
 }
 
 
@@ -123,6 +130,7 @@ def _commons_pick(titles):
 def from_wikimedia_search(name, country):
     """Keyword search on Commons for marine/scenery photos of the destination."""
     base = re.sub(r"\s*\(.*?\)", "", name).strip()          # "Red Sea (Egypt)" -> "Red Sea"
+    require = DEST_REQUIRE.get(name)
     queries = DEST_QUERIES.get(name) or [
         f"{base} underwater", f"{base} reef", f"{base} scuba diving",
         f"{base} coral", f"{base} aerial island", f"{base} {country} sea"]
@@ -132,6 +140,8 @@ def from_wikimedia_search(name, country):
         j = _get(url)
         hits = (((j or {}).get("query") or {}).get("search")) or []
         titles = [h["title"] for h in hits if not BAD_HINT.search(h.get("title", ""))]
+        if require:
+            titles = [t for t in titles if require.search(t)]
         # rank: titles with marine words first
         titles.sort(key=lambda t: 0 if GOOD_HINT.search(t) else 1)
         got = _commons_pick(titles)
