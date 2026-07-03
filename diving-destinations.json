@@ -2867,7 +2867,10 @@
           "depth": "3-12m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Coral_reef_life_near_Akajima_01.jpg/960px-Coral_reef_life_near_Akajima_01.jpg",
+      "image_credit": "Photo: keiyac (CC BY-SA 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Cocos Island",
@@ -3758,7 +3761,10 @@
           "depth": "8-14m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Molokini-crater-maui.jpg/960px-Molokini-crater-maui.jpg",
+      "image_credit": "Photo: Bossfrog (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Chagos Archipelago / BIOT",
@@ -3912,7 +3918,10 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Blenheim_Salomon_Victory_STS049-71-85_%28cropped_to_Blenheim_Reef%29.JPG",
+      "image_credit": "Photo: NASA (Public domain) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Maldives",
@@ -5376,7 +5385,10 @@
           "depth": "15-27m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Fujikawa_Maru_1.JPG",
+      "image_credit": "Photo: Taken by User:Legis at en.wikipedia (CC0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Cenotes of Yucatán Peninsula",
@@ -5920,7 +5932,10 @@
           "depth": "8-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Cliffs_on_the_west_coast_of_Lundy_Island_-_geograph.org.uk_-_4435499.jpg",
+      "image_credit": "Photo: Philip Halling (CC BY-SA 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Scapa Flow",
@@ -6447,7 +6462,10 @@
           "depth": "10-22m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Aerial_photographs_of_the_archipelago_of_Victoria_01.jpg/960px-Aerial_photographs_of_the_archipelago_of_Victoria_01.jpg",
+      "image_credit": "Photo: Buiobuione (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Red Sea (Egypt)",
@@ -7194,7 +7212,10 @@
           "depth": "5-15m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/20060225-Reef-island-of-Aruba.jpg/960px-20060225-Reef-island-of-Aruba.jpg",
+      "image_credit": "Photo: Mike Bowler (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Moorea",
@@ -8960,7 +8981,10 @@
           "depth": "8-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2017-07-30_11_47_44_View_south_along_West_Virginia_State_Route_20_%28Ireland-Rock_Cave_Road%29_at_Fish_Hawk_Drive_in_Rock_Cave%2C_Upshur_County%2C_West_Virginia.jpg/960px-2017-07-30_11_47_44_View_south_along_West_Virginia_State_Route_20_%28Ireland-Rock_Cave_Road%29_at_Fish_Hawk_Drive_in_Rock_Cave%2C_Upshur_County%2C_West_Virginia.jpg",
+      "image_credit": "Photo: Famartin (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     }
   ]
 }
