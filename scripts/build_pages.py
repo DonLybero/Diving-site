@@ -62,7 +62,7 @@ def esc(s): return html.escape(str(s or ""), quote=True)
 
 def topbar():
     return ('<div class="topbar"><a href="../index.html">'+FLUKE+
-            '<span><span class="name">Scuba<b>naut</b></span><br><span class="tag">Know before you go</span></span></a></div>')
+            '<span class="name">Dive<b>SZN</b></span></a></div>')
 
 def footer_html():
     return ('<footer><b style="font-family:var(--serif);color:var(--ink)">DiveSZN</b> · seasonal dive planning, verified against '
