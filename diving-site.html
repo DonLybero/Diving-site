@@ -1903,6 +1903,45 @@ var GEAR=[
  {name:"Fourth Element Proteus II 5mm Wetsuit",cat:"Wetsuit",icon:"wetsuit",offers:[["Amazon",259],["House of Scuba",249],["Dive Right In",269]]},
  {name:"OrcaTorch D710 Dive Light",cat:"Torch",icon:"torch",offers:[["Amazon",99],["House of Scuba",95],["Dive Right In",109]]}
 ];
+/* ---------------- Affiliate link configuration ----------------
+   Fill in each ID as the program approves you; EMPTY values leave links
+   untouched, so this is safe to ship before any approval lands.
+   - amazon_tag:     Amazon Associates tracking ID          e.g. 'diveszn-20'
+   - ebay_campid:    eBay Partner Network campaign ID       e.g. '5338xxxxxx'
+   - avantlink:      website_id + per-merchant IDs (Scuba.com & LeisurePro run on AvantLink)
+   - awin:           affiliate_id + per-merchant IDs (Tradeinn group: Diveinn/Scubastore)
+   - skimlinks_id:   Skimlinks site ID — auto-affiliates every OTHER merchant at click
+                     time (use while direct approvals are pending)                    */
+var AFFILIATE={
+  amazon_tag:'',
+  ebay_campid:'',
+  avantlink:{website_id:'', merchants:{'scuba.com':'', 'leisurepro.com':''}},
+  awin:{affiliate_id:'', merchants:{'tradeinn.com':'', 'diveinn.com':'', 'scubastore.com':''}},
+  skimlinks_id:''
+};
+function affLink(url){
+  try{
+    var host=new URL(url).hostname.replace(/^www\./,'');
+    if(AFFILIATE.amazon_tag && /(^|\.)amazon\./.test(host))
+      return url+(url.indexOf('?')>-1?'&':'?')+'tag='+AFFILIATE.amazon_tag;
+    if(AFFILIATE.ebay_campid && /(^|\.)ebay\./.test(host))
+      return url+(url.indexOf('?')>-1?'&':'?')+'mkcid=1&mkrid=711-53200-19255-0&campid='+AFFILIATE.ebay_campid+'&toolid=10001&mkevt=1';
+    function match(map){var ks=Object.keys(map);for(var i=0;i<ks.length;i++){if(host===ks[i]||host.slice(-ks[i].length-1)==='.'+ks[i])return ks[i];}return null;}
+    var avm=AFFILIATE.avantlink.website_id?match(AFFILIATE.avantlink.merchants):null;
+    if(avm&&AFFILIATE.avantlink.merchants[avm])
+      return 'https://www.avantlink.com/click.php?tt=cl&mi='+AFFILIATE.avantlink.merchants[avm]+'&pw='+AFFILIATE.avantlink.website_id+'&url='+encodeURIComponent(url);
+    var awm=AFFILIATE.awin.affiliate_id?match(AFFILIATE.awin.merchants):null;
+    if(awm&&AFFILIATE.awin.merchants[awm])
+      return 'https://www.awin1.com/cread.php?awinmid='+AFFILIATE.awin.merchants[awm]+'&awinaffid='+AFFILIATE.awin.affiliate_id+'&ued='+encodeURIComponent(url);
+  }catch(e){}
+  return url;  // unmatched links: Skimlinks (if enabled) affiliates them at click time
+}
+if(AFFILIATE.skimlinks_id){
+  var _sk=document.createElement('script');
+  _sk.src='https://s.skimresources.com/js/'+AFFILIATE.skimlinks_id+'.skimlinks.js';
+  _sk.async=true; document.head.appendChild(_sk);
+}
+
 function gearIco(g){return '<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[g.icon]||ICONS.tank)+'</svg></div>';}
 var CAT_ICON={'Masks':'mask','Fins':'fins','Regulators':'regulator','BCDs':'bcd','Dive Computers':'computer','Wetsuits':'wetsuit'};
 function fmtPrice(p){return '$'+(p%1?p.toFixed(2):p);}
@@ -1911,7 +1950,7 @@ function gearItemCard(item,cat){
   var rows=offers.map(function(o,i){
     return '<tr class="'+(i===0?'low':'')+'"><td class="deal">'+o.store+'</td>'+
       '<td class="price">'+fmtPrice(o.price_usd)+'</td>'+
-      '<td style="text-align:right"><a class="btn'+(i===0?'':' ghost')+'" href="'+o.url+'" target="_blank" rel="noopener sponsored">Buy at '+o.store+'</a></td></tr>';
+      '<td style="text-align:right"><a class="btn'+(i===0?'':' ghost')+'" href="'+affLink(o.url)+'" target="_blank" rel="noopener sponsored">Buy at '+o.store+'</a></td></tr>';
   }).join('');
   var save=offers.length>1?Math.round(offers[offers.length-1].price_usd-offers[0].price_usd):0;
   var fallback='<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[CAT_ICON[cat]]||ICONS.tank)+'</svg></div>';

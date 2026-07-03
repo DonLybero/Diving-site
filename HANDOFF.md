@@ -99,8 +99,15 @@ within ~1–2 min.
   `docs/trademark-search-2026-07.md`.
 - OWNER: add the site to Google Search Console and submit sitemap.xml.
 - OWNER: add PEXELS_API_KEY repo secret; rerun fetch-images with --force.
-- Swap sample Gear/Centres for real affiliate-feed data (Amazon,
-  ShareASale/AvantLink) and real centre listings.
+- OWNER: apply to affiliate programs and paste the IDs into the `AFFILIATE`
+  config at the top of the gear section in `index.html` (then rerun
+  build_standalone): Amazon Associates (`amazon_tag`), AvantLink for
+  Scuba.com + LeisurePro (`avantlink.website_id` + per-merchant IDs), Awin
+  for Tradeinn/Diveinn/Scubastore (`awin`), eBay Partner Network
+  (`ebay_campid`), optional Skimlinks (`skimlinks_id`) to auto-affiliate all
+  other stores while approvals are pending. Empty values leave links raw —
+  already safe in production.
+- Swap sample Centres/Safaris for real listings.
 - Mobile design pass (calendar table and planner filters on small screens).
 - Logo refinement (fluke + a diving cue, lockup + size rules).
 - Prune leftover artifacts: map-A/map-B demo pages, diving-calendar-24-periods.md.
