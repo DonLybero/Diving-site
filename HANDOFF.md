@@ -1,4 +1,4 @@
-# Scubanaut — project handoff
+# DiveSZN — project handoff
 
 A diving website: a **seasonal trip planner / calendar** for 50 world dive
 destinations, wrapped in a **dive-hub** (gear price-comparison, reviews, dive
@@ -9,7 +9,10 @@ centres, liveaboard safaris). Static site, no backend, deployable anywhere.
 - **Working branch:** `main` (trunk since 2026-07; the old claude/diving-destinations-research-73uc5i branch is retired)
 
 ## Brand
-- **Name:** Scubanaut. **Logo:** a whale **fluke** (bare tail, no circle/text) — inline SVG in `index.html` header + the favicon (data-URI).
+- **Name:** DiveSZN — "dive season" in sports-slang spelling ("SZN"); named for the
+  site's USP (WHEN to dive WHERE). Wordmark renders as `Dive<b>SZN</b>`. Renamed from
+  "Scubanaut" 2026-07 after a multi-lane naming + clearance study — see
+  `docs/name-change-diveszn-2026-07.md`. **Logo:** a whale **fluke** (bare tail, no circle/text) — inline SVG in `index.html` header + the favicon (data-URI).
 - **Design language:** deep-ocean "instrument panel" — luminous **aqua** (`#2fe0d6`) on deep **teal** (`#04202b`), **coral** (`#ff7a59`) reserved for prices/scores/CTAs. **Monospace** "dive-computer" readout chips for water temp / visibility / current; **editorial serif** (Georgia) for headings.
 
 ## What's real vs. sample data
@@ -87,10 +90,13 @@ within ~1–2 min.
   and matched by search (e.g. searching "Blue Corner" finds Palau).
 
 ## Backlog
-- OWNER: attorney trademark knockout search for "Scubanaut" before
-  merch/marketing spend. Wide web search done 2026-07 — findings and full
-  advisory in `docs/trademark-search-2026-07.md` (9 existing users incl. a
-  Florida state mark; no federal ® surfaced; name kept by decision).
+- OWNER (URGENT): register **diveszn.com / diveszn.io / diveszn.app** — all
+  showed unregistered in the 2026-07 screen (`docs/name-change-diveszn-2026-07.md`)
+  and standard-price availability evaporates fast.
+- OWNER: attorney trademark knockout search for "DiveSZN" (certified
+  USPTO/EUIPO) before merch/marketing spend; the 2026-07 screen used indexed
+  mirrors + DNS only. Historical "Scubanaut" research kept in
+  `docs/trademark-search-2026-07.md`.
 - OWNER: add the site to Google Search Console and submit sitemap.xml.
 - OWNER: add PEXELS_API_KEY repo secret; rerun fetch-images with --force.
 - Swap sample Gear/Centres for real affiliate-feed data (Amazon,
@@ -103,4 +109,4 @@ within ~1–2 min.
 
 ## How to continue in a new session
 Open a new Claude Code session on `DonLybero/Diving-site` (branch `main`).
-Tell the agent: *"Read HANDOFF.md and continue building the Scubanaut site."*
+Tell the agent: *"Read HANDOFF.md and continue building the DiveSZN site."*

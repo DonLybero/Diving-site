@@ -1,5 +1,9 @@
 # "Scubanaut" — trademark & name-collision search (2026-07)
 
+> **SUPERSEDED (2026-07):** the site has been renamed **DiveSZN** following a
+> multi-lane naming + clearance study. This file is kept as the historical
+> record for the old name. See `docs/name-change-diveszn-2026-07.md`.
+
 Wide web + trademark-index search run 2026-07. **This is research, not legal
 advice** — a knockout search by a trademark attorney is still the OWNER action
 before any merch or paid-marketing spend.
@@ -32,7 +36,7 @@ before any merch or paid-marketing spend.
   Nothing found searching EUIPO/WIPO indexes via the web either, but those
   were not searched natively.
 
-## Risk read (name is being kept — decision of 2026-07)
+## Risk read (historical — name has since been changed to DiveSZN)
 
 - **The field is crowded, which cuts both ways.** No single global owner
   means nobody has a strong exclusive claim, and many small users coexist —

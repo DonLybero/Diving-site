@@ -65,7 +65,7 @@ def topbar():
             '<span><span class="name">Scuba<b>naut</b></span><br><span class="tag">Know before you go</span></span></a></div>')
 
 def footer_html():
-    return ('<footer><b style="font-family:var(--serif);color:var(--ink)">Scubanaut</b> · seasonal dive planning, verified against '
+    return ('<footer><b style="font-family:var(--serif);color:var(--ink)">DiveSZN</b> · seasonal dive planning, verified against '
             'dive operators, park authorities and liveaboard calendars.<br>Water temperatures are typical monthly ranges (±1°C); '
             'marine-life timing shifts year to year — always confirm with a local dive centre.<br>'
             '<a href="index.html">All destinations</a> · <a href="../index.html">Open the dive planner</a></footer>')
@@ -168,7 +168,7 @@ def page(d):
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(d["name"])} Diving Season & Calendar — Best Time to Dive | Scubanaut</title>
+<title>{esc(d["name"])} Diving Season & Calendar — Best Time to Dive | DiveSZN</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{esc(url)}">
 <meta property="og:type" content="article"><meta property="og:title" content="{esc(d["name"])} — Best Time to Dive">
@@ -204,7 +204,7 @@ def page(d):
   </table></div>
   {sites_block}
   {verified}
-  <a class="cta" href="../index.html">Plan a dive trip here — open the Scubanaut planner &rarr;</a>
+  <a class="cta" href="../index.html">Plan a dive trip here — open the DiveSZN planner &rarr;</a>
 </main>
 {footer_html()}
 </body></html>"""
@@ -220,7 +220,7 @@ def index_page(dests):
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All Dive Destinations — Season Guides | Scubanaut</title>
+<title>All Dive Destinations — Season Guides | DiveSZN</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{BASE}destinations/index.html">
 <style>{CSS}</style>
