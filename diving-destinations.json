@@ -7212,7 +7212,10 @@
           "depth": "5-15m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Looking_back_from_Marovo_Lagoon_%2819_July_2008%29.jpg/960px-Looking_back_from_Marovo_Lagoon_%2819_July_2008%29.jpg",
+      "image_credit": "Photo: Xplore Dive from Mooloolaba, Australia (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Moorea",
@@ -8978,7 +8981,10 @@
           "depth": "8-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coral_Rock_Oyster%2C_South_West_Rocks_NSW_2431%2C_Australia_imported_from_iNaturalist_photo_524329328.jpg/960px-Coral_Rock_Oyster%2C_South_West_Rocks_NSW_2431%2C_Australia_imported_from_iNaturalist_photo_524329328.jpg",
+      "image_credit": "Photo: no rights reserved (CC0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     }
   ]
 }
