@@ -532,10 +532,9 @@ function curChip(s){return s?'<span class="chip cur-'+s+'">'+ico('current',12)+s
 
 /* Hero photo: use a baked destination image (fetch_images.py) behind the headline.
    Falls back silently to the branded gradient if none is available. */
-/* Hero uses attribution-free images (CC0 / public domain) so no photographer
-   credit is needed on the main page; CC-licensed fallbacks get a tooltip-only credit. */
-var HERO_PICKS=["Cayman Islands","Truk (Chuuk) Lagoon","Socorro Island","Aliwal Shoal",
-  "Fernando de Noronha","Sipadan Island","Maldives","Palau"];
+/* Hero photo credit is tooltip-only (small info mark) — no visible photographer
+   name on the main page while keeping CC attribution accessible. */
+var HERO_PICKS=["Fernando de Noronha","Sipadan Island","Maldives","Palau","Raja Ampat","Great Barrier Reef","Bonaire"];
 function setHeroPhoto(){
   for(var i=0;i<HERO_PICKS.length;i++){
     var d=DivingCalendar.getDestination(DESTS,HERO_PICKS[i]);
