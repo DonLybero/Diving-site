@@ -1071,12 +1071,8 @@ function renderGear(){
   if(!GEAR_GUIDE||!GEAR_GUIDE.categories){document.getElementById('gearGrid').innerHTML='<div class="empty">Gear guide could not load.</div>';return;}
   if(sel.options.length<=1) GEAR_GUIDE.categories.forEach(function(c){var o=document.createElement('option');o.value=c.category;o.textContent=c.category;sel.appendChild(o);});
   var cat=sel.value, g=document.getElementById('gearGrid');
-  var priceNote='<p class="meta">Prices are indicative, checked '+(GEAR_GUIDE.researched||'')+' — click through for the live price.</p>';
   if(!cat){
     // Article index: magazine-style list of buyer's guides
-    var chans=(GEAR_GUIDE.channels||[]).map(function(c){
-      return '<li><a href="'+c.url+'" target="_blank" rel="noopener">'+c.name+'</a> <span class="meta">'+c.subs+' · '+c.focus+'</span></li>';
-    }).join('');
     var rows=GEAR_GUIDE.categories.map(function(c){
       var teaser=(c.article_intro||'').split('. ').slice(0,2).join('. ')+'.';
       var lead=c.items[0]||{};
@@ -1092,9 +1088,8 @@ function renderGear(){
     }).join('');
     g.innerHTML='<div class="article" style="grid-column:1/-1;margin-bottom:6px">'+
       '<p class="gentry-review" style="max-width:80ch;margin-top:0">'+(GEAR_GUIDE.intro||'')+'</p>'+
-      (chans?'<details class="channels"><summary>The 20 diving channels &amp; test labs behind these guides ▾</summary><ol>'+chans+'</ol></details>':'')+
       '<h3 class="artlist-head">Recent articles</h3>'+
-      rows+priceNote+'</div>';
+      rows+'</div>';
   }else{
     var c=GEAR_GUIDE.categories.filter(function(x){return x.category===cat;})[0];
     if(!c){g.innerHTML='';return;}
@@ -1104,7 +1099,6 @@ function renderGear(){
       '<h2 style="margin:6px 0 10px">'+(c.title||('Top 10 '+c.category))+'</h2>'+
       '<p class="gentry-review" style="max-width:80ch">'+(c.article_intro||'')+'</p>'+
       (tips?'<div class="tipbox"><b>What to look for</b><ul>'+tips+'</ul></div>':'')+
-      priceNote+
       c.items.map(function(it){return gearEntry(it,c.category);}).join('')+
       '<p class="meta" style="margin-top:16px"><a href="#" onclick="openGearArticle(\'\');return false;">← Back to all buyer’s guides</a></p></div>';
   }
