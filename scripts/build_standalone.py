@@ -17,13 +17,18 @@ ljs    = read("vendor/leaflet.js")
 engine = read("diving-calendar.js")
 data   = json.loads(read("diving-destinations.json"))
 land   = json.loads(read("vendor/world-land.geojson"))
+try:
+    gear = json.loads(read("gear-guide.json"))
+except FileNotFoundError:
+    gear = None
 
 # 1) inline Leaflet CSS
 html = html.replace('<link rel="stylesheet" href="vendor/leaflet.css">',
                     '<style>\n'+lcss+'\n</style>')
 # 2) embed data BEFORE leaflet/engine scripts, then inline leaflet + engine
 embed = ('<script>window.__DEST_DATA__=' + json.dumps(data, ensure_ascii=False) +
-         ';\nwindow.__LAND_DATA__=' + json.dumps(land, ensure_ascii=False) + ';</script>\n')
+         ';\nwindow.__LAND_DATA__=' + json.dumps(land, ensure_ascii=False) +
+         ';\nwindow.__GEAR_DATA__=' + json.dumps(gear, ensure_ascii=False) + ';</script>\n')
 html = html.replace('<script src="vendor/leaflet.js"></script>',
                     embed + '<script>\n' + ljs + '\n</script>')
 html = html.replace('<script src="diving-calendar.js"></script>',

@@ -30,8 +30,9 @@ single-file build stays in sync, then commit. Pushing deploys automatically.
   `diving-calendar.js` (rating base + marine-life bonus ≤25 + visibility 0..18).
 - Brand: name **Scubanaut**, whale-**fluke** logo (no helmets/circles), deep
   teal + aqua, coral for prices/CTAs, monospace data readouts, serif headings.
-- Gear/Reviews/Centres/Safaris are **sample data** wired like real feeds; the
-  calendar/dive-site data is **real and researched**.
+- Reviews/Centres/Safaris are **sample data** wired like real feeds; the
+  calendar/dive-site data and the Gear guide (`gear-guide.json`, indicative
+  prices + real retailer links) are **real and researched**.
 - Verify UI changes by serving locally (`python3 -m http.server`) — `index.html`
   fetches JSON so it needs HTTP, not `file://` (the standalone build works on
   `file://`).
