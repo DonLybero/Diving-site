@@ -168,7 +168,8 @@
        "price_usd": 179.95,
        "url": "https://www.amazon.com/dp/B0C787TP9W"
       }
-     ]
+     ],
+     "review": "Atomic's flagship wraps ultra-soft 'Gummi Bear' dual silicone around Schott UltraClear glass with the distortion of a shop window — nothing. It costs three times the average mask and owners still call it a bargain; nobody who buys one goes back."
     },
     {
      "rank": 2,
@@ -191,7 +192,8 @@
        "price_usd": 155.0,
        "url": "https://scubapro.johnsonoutdoors.com/us/shop/masks/synergy-2-trufit-dive-mask-w-comfort-strap"
       }
-     ]
+     ],
+     "review": "The Trufit skirt uses two silicone densities — soft where it seals, firm where it supports — and the result fits faces that defeat other masks. A favourite of instructors who wear a mask six hours a day."
     },
     {
      "rank": 3,
@@ -214,7 +216,8 @@
        "price_usd": 89.95,
        "url": "https://www.divers-supply.com/cressi-big-eyes-evolution-mask.html"
       }
-     ]
+     ],
+     "review": "Cressi's inverted-teardrop lenses angle downward so you can actually see your gauges, D-rings and camera without breaking trim. Twenty years on the market and still on every best-of list — the definition of a safe buy."
     },
     {
      "rank": 4,
@@ -237,7 +240,8 @@
        "price_usd": 69.95,
        "url": "https://www.scuba.com/p-mrsmxvn/mares-x-vision-mask"
       }
-     ]
+     ],
+     "review": "The X-Vision's oversized lenses and slim frame give one of the widest fields of view of any twin-lens mask, and it takes Mares prescription lenses. The fit suits medium-to-wide faces superbly."
     },
     {
      "rank": 5,
@@ -260,7 +264,8 @@
        "price_usd": 109.0,
        "url": "https://getwetstore.com/products/aqua-lung-reveal-ultrafit-x2-scuba-dive-mask"
       }
-     ]
+     ],
+     "review": "Aqua Lung's cardanic-joint buckles rotate through every angle so the strap pulls evenly no matter your head shape. A quietly excellent all-rounder that shops reach for when nothing else fits a customer."
     },
     {
      "rank": 6,
@@ -283,7 +288,8 @@
        "price_usd": 89.95,
        "url": "https://www.scuba.com/p-tbtm212/tusa-ceos-mask"
       }
-     ]
+     ],
+     "review": "TUSA's Freedom skirt technology varies the silicone's thickness and surface texture across the seal line, and independent tests keep confirming it: this mask simply leaks less. Huge colour range, fair price."
     },
     {
      "rank": 7,
@@ -306,7 +312,8 @@
        "price_usd": 109.95,
        "url": "https://www.scuba.com/p-hlsm1m/hollis-m1-frameless-mask"
       }
-     ]
+     ],
+     "review": "The tec community's favourite frameless — one big lens, very low volume and a skirt that seals under a hood. Folds flat into a drysuit pocket as a backup, which is how half its owners use it until it becomes their primary."
     },
     {
      "rank": 8,
@@ -329,7 +336,8 @@
        "price_usd": 125.0,
        "url": "https://scubapro.johnsonoutdoors.com/us/shop/masks/frameless-dive-mask"
       }
-     ]
+     ],
+     "review": "The original one-lens frameless design, still in production because it still wins on field of view per dollar. Low volume, easy clearing, and it packs completely flat."
     },
     {
      "rank": 9,
@@ -352,7 +360,8 @@
        "price_usd": 139.95,
        "url": "https://www.divers-supply.com/atomic-subframe-mask.html"
       }
-     ]
+     ],
+     "review": "Atomic solved the frameless durability question by moulding a skeletal frame inside the skirt — frameless view, framed toughness. The mask survives dive-boat abuse that cracks ordinary frames."
     },
     {
      "rank": 10,
@@ -375,8 +384,17 @@
        "price_usd": 54.95,
        "url": "https://www.divers-supply.com/cressi-f1-frameless-mask.html"
       }
-     ]
+     ],
+     "review": "The budget frameless that embarrasses masks costing three times more: one wide lens, soft skirt, folds flat. The most recommended first mask on every diving forum."
     }
+   ],
+   "title": "The 10 Best Scuba Diving Masks of 2026",
+   "article_intro": "A mask is the cheapest piece of kit you'll buy and the one that can ruin a dive fastest. A poor skirt seal means a dive spent clearing water; a narrow lens means missing the eagle ray that glides past your shoulder. The ten masks below kept rising to the top across the big diving YouTube channels, ScubaLab's pool tests and thousands of retailer reviews. They split into two camps: frameless designs that fold flat and give a huge field of view, and twin-lens frames that fit narrow faces and take prescription lenses. Every pick here uses tempered glass and 100% silicone skirts — no PVC anywhere.",
+   "tips": [
+    "Fit test: press the mask to your face without the strap and inhale through your nose — it should hold on suction alone.",
+    "Black skirts cut glare and reflections for photographers; clear skirts feel less claustrophobic for new divers.",
+    "Low-volume masks clear with one breath and equalise easily — freedivers' choice for a reason.",
+    "If you wear glasses, pick a twin-lens frame model that accepts prescription drop-in lenses."
    ]
   },
   {
@@ -403,7 +421,8 @@
        "price_usd": 179.95,
        "url": "https://divegeardepot.com/fins/mares-avanti-quattro-power-fins/"
       }
-     ]
+     ],
+     "review": "Four-channel blades push serious water without punishing your knees, which is why dive guides who fin against current every day still choose the Quattro. Bungee straps now come standard; the design has barely changed because it hasn't needed to."
     },
     {
      "rank": 2,
@@ -426,7 +445,8 @@
        "price_usd": 259.0,
        "url": "https://scubapro.johnsonoutdoors.com/us/shop/fins"
       }
-     ]
+     ],
+     "review": "The articulated hinge lets the whole blade pivot like a propeller, delivering paddle power with split-fin ease — ScubaLab measured it among the fastest fins ever tested. Monprene construction is effectively indestructible."
     },
     {
      "rank": 3,
@@ -449,7 +469,8 @@
        "price_usd": 199.0,
        "url": "https://www.masterydiving.com/store/p/scubapro-jet-fins"
       }
-     ]
+     ],
+     "review": "Sixty years old and still the fin under every technical and military diver: short, heavy, stiff, and unmatched for frog kicks and back kicks. With spring straps it will outlive its owner."
     },
     {
      "rank": 4,
@@ -472,7 +493,8 @@
        "price_usd": 219.0,
        "url": "https://us.apeksdiving.com/products/rk3-dive-fins"
       }
-     ]
+     ],
+     "review": "The RK3 took the Jet Fin concept, lightened it and widened the blade — the drysuit community's default fin. Vented design reduces effort on the upstroke; the oversized spring strap works with thick gloves."
     },
     {
      "rank": 5,
@@ -495,7 +517,8 @@
        "price_usd": 219.0,
        "url": "https://tusa.com/us-en/TUSA/Fins/TUSA_HyFlex_Switch"
       }
-     ]
+     ],
+     "review": "TUSA's switchable blade system lets one fin travel as a compact and dive as a full paddle. Clever engineering that reviewers expected to be a gimmick and wasn't."
     },
     {
      "rank": 6,
@@ -518,7 +541,8 @@
        "price_usd": 125.0,
        "url": "https://scubapro.johnsonoutdoors.com/us/shop/fins/go-sport-fin"
       }
-     ]
+     ],
+     "review": "Designed for the dive-travel age: 700g per fin, fits in carry-on, tough Monprene, and a self-adjusting bungee strap. The fin most often recommended for warm-water trips."
     },
     {
      "rank": 7,
@@ -541,7 +565,8 @@
        "price_usd": 279.95,
        "url": "https://www.otadiving.com/products/atomic-aquatics-scuba-diving-open-heel-split-fin"
       }
-     ]
+     ],
+     "review": "The best split fin ever made — effortless flutter kicks at high cadence with almost no leg fatigue, ideal for divers with knee or ankle issues. Just accept that frog kicks aren't its game."
     },
     {
      "rank": 8,
@@ -564,7 +589,8 @@
        "price_usd": 119.95,
        "url": "https://store.cressi.com/products/frog-plus-fins"
       }
-     ]
+     ],
+     "review": "Cressi's classic paddle delivers honest power at a price that made it the world's most common rental fin — which is the endorsement: operators buy what survives. Great first open-heel fin."
     },
     {
      "rank": 9,
@@ -587,7 +613,8 @@
        "price_usd": 105.0,
        "url": "https://us.aqualung.com/products/storm-dive-fins"
       }
-     ]
+     ],
+     "review": "A one-piece Monprene travel fin with a smart wing-tip blade that channels water even on sloppy kicks. Light, tough, and the bungee strap doubles as a carry handle."
     },
     {
      "rank": 10,
@@ -610,8 +637,17 @@
        "price_usd": 217.95,
        "url": "https://www.mares.com/en_US/product/power-plana-lt-410052"
       }
-     ]
+     ],
+     "review": "Mares' answer to the tec-fin revival: Jet-style geometry in a lighter compound, so you get the frog-kick precision without the airline surcharge. Spring straps standard."
     }
+   ],
+   "title": "The 10 Best Scuba Diving Fins of 2026",
+   "article_intro": "Fins are where opinions get loudest — paddle versus split, short and stiff versus long and soft, rubber versus composite. Strip away the tribalism and the consensus across reviewers is remarkably stable: the same ten fins keep winning tests year after year, several of them decades-old designs that simply refuse to be beaten. Your choice comes down to diving style: strong-current reef diving rewards a stiff paddle you can frog-kick, travel diving rewards light weight and compact length, and cold-water boat diving rewards a spring-strap rubber workhorse that shrugs off a decade of abuse.",
+   "tips": [
+    "Open-heel fins with boots are the default for most diving; full-foot only for warm-water boat dives.",
+    "Swap bungee or spring straps in for buckles — cheap upgrade, no more fiddling with gloved hands.",
+    "Stiffer blades transmit more power but tire untrained legs; efficiency matters more than raw stiffness.",
+    "Check the weight if you fly to dive — rubber classics can eat 4kg of your baggage allowance."
    ]
   },
   {
@@ -638,7 +674,8 @@
        "price_usd": 1249.0,
        "url": "https://8diving.com/products/mk25_evo_s620ti"
       }
-     ]
+     ],
+     "review": "The benchmark high-performance regulator: an air-piston first stage that delivers gas faster than you can demand it, paired with a titanium second stage 30% smaller than its predecessor. Poll dive pros on their own kit and this combination keeps coming up."
     },
     {
      "rank": 2,
@@ -661,7 +698,8 @@
        "price_usd": 1899.95,
        "url": "https://www.diversdirect.com/p/atomic-t3-scuba-regulator-yoke"
       }
-     ]
+     ],
+     "review": "Every wetted part is titanium — corrosion is simply cancelled, and the recommended service interval stretches to three years. The lightest, smoothest-breathing regulator money buys, at a price that makes sense over a decade of ownership."
     },
     {
      "rank": 3,
@@ -684,7 +722,8 @@
        "price_usd": 685.0,
        "url": "https://us.apeksdiving.com/products/xtx50-dive-regulator"
       }
-     ]
+     ],
+     "review": "Paired with the environmentally sealed DST first stage, the XTX50 is the cold-water standard against which everything else is judged. UK-built, endlessly serviceable, and the second stage converts between left- and right-hand hose routing."
     },
     {
      "rank": 4,
@@ -707,7 +746,8 @@
        "price_usd": 729.0,
        "url": "https://www.amazon.com/AQUALUNG-LEG3ND-DIN-Regulator/dp/B0868B5Z64"
       }
-     ]
+     ],
+     "review": "Third generation of the regulator that taught the industry overbalancing: breathing effort actually falls as you go deeper. The heat-exchanger ribs and sealed first stage make it a serious cold-water tool with a mainstream price."
     },
     {
      "rank": 5,
@@ -730,7 +770,8 @@
        "price_usd": 1574.0,
        "url": "https://scubapro.johnsonoutdoors.com/us/shop/regulators/systems/mk19-evo-bt-g260-carbon-bt-dive-regulator-system"
       }
-     ]
+     ],
+     "review": "Scubapro's tec flagship: a dry-sealed diaphragm first stage with black-tech coating and the G260's carbon-fibre cover for cold, deep, demanding dives. The regulator you see on expedition boats."
     },
     {
      "rank": 6,
@@ -753,7 +794,8 @@
        "price_usd": 1095.0,
        "url": "https://us.apeksdiving.com/products/mtx-rc-dive-regulator"
       }
-     ]
+     ],
+     "review": "Descended from a US military spec for regulators that must not freeze, the MTX-RC breathes calmly at 2°C where others free-flow. Over-moulded first stage endcap protects it from knocks; unmistakably a tool."
     },
     {
      "rank": 7,
@@ -776,7 +818,8 @@
        "price_usd": 869.0,
        "url": "https://www.scuba.com/p-mrse82x/mares-epic-82x-regulator"
       }
-     ]
+     ],
+     "review": "Mares' flagship pairs the twin-DFC 82X first stage with an all-metal adjustable second: consistent air delivery on hard demand at depth. Owners praise how dry and quiet it breathes in current."
     },
     {
      "rank": 8,
@@ -799,7 +842,8 @@
        "price_usd": 599.95,
        "url": "https://divecatalog.com/products/hollis-500se-dc7-dive-regulator-set"
       }
-     ]
+     ],
+     "review": "The only server-side second stage on the list — the 500SE's side-exhaust design vents bubbles away from your face, a genuine gift for photographers. Sealed DC7 first stage makes it cold-water capable."
     },
     {
      "rank": 9,
@@ -822,7 +866,8 @@
        "price_usd": 599.0,
        "url": "https://www.houseofscuba.com/products/reg287"
       }
-     ]
+     ],
+     "review": "The value pick: environmentally sealed, cold-water rated, heat-exchanger equipped, and routinely sold for a third of flagship money. Gives up a little suppleness at depth and nothing in reliability."
     },
     {
      "rank": 10,
@@ -845,8 +890,17 @@
        "price_usd": 729.95,
        "url": "https://www.scubatoys.com/products/3361-sherwood-sr2-regulator/"
       }
-     ]
+     ],
+     "review": "Sherwood's quiet classic — a piston first stage of legendary simplicity with a modern balanced second. The regulator dive shops in cold lakes have trusted for years because there is so little on it to fail."
     }
+   ],
+   "title": "The 10 Best Scuba Regulators of 2026",
+   "article_intro": "A regulator is life-support, and the good news is that every model on this list breathes superbly — modern balanced regulators long ago passed the point where breathing effort separates them. What separates them now is cold-water capability, service network, travel weight and the feel of the breathe: some divers like a regulator that almost pushes air at you, others want firm, dry control in a current. Our ten picks pair the consensus first stages and seconds from Scubapro, Apeks, Atomic, Aqua Lung, Mares, Hollis and Sherwood — from no-compromise flagships to workhorses that cost a third as much and give up very little.",
+   "tips": [
+    "Buying for cold water (below 10°C)? Insist on an environmentally sealed first stage — Apeks and the MK19 EVO excel here.",
+    "DIN fits everything with an insert; yoke is still the rental-tank standard in the Caribbean and Asia.",
+    "Factor servicing: a cheap regulator with no local service centre is expensive; Scubapro and Aqua Lung have the widest networks.",
+    "Titanium models resist corrosion and cut weight, but most can't be O2-cleaned for nitrox above 40%."
    ]
   },
   {
@@ -873,7 +927,8 @@
        "price_usd": 949.0,
        "url": "https://scubapro.johnsonoutdoors.com/us/shop/bcds/hydros-pro-bcd-men"
       }
-     ]
+     ],
+     "review": "The Monprene gel harness moulds to your torso, never absorbs water and is essentially impossible to tear — ScubaLab gave it a Testers Choice and owners treat it as a lifetime purchase. Modular everything: swap pockets, weights and colours like Lego."
     },
     {
      "rank": 2,
@@ -896,7 +951,8 @@
        "price_usd": 389.0,
        "url": "https://us.aqualung.com/"
       }
-     ]
+     ],
+     "review": "A back-inflate rig that weighs 1.7kg and packs to the size of a rolled towel — the Outlaw invented the modern minimalist travel BCD. ScubaLab Testers Choice; sized like a T-shirt rather than a jacket."
     },
     {
      "rank": 3,
@@ -919,7 +975,8 @@
        "price_usd": 479.95,
        "url": "https://www.scuba.com/p-csbtl/cressi-travelight-bcd"
       }
-     ]
+     ],
+     "review": "The travel jacket that keeps winning value awards: full weight integration, folding backplate and honest lift at 2.6kg. If you want one BCD for holidays and local diving on a budget, this is the shortlist."
     },
     {
      "rank": 4,
@@ -942,7 +999,8 @@
        "price_usd": 807.95,
        "url": "https://outdoorsportsexpress.com/products/mares-dragon-sls-bcd"
       }
-     ]
+     ],
+     "review": "Mares' load-distributing harness moves tank weight to your hips like a trekking backpack, and the SLS weight system shows a green flag when pockets are locked. The comfort pick for long dive days."
     },
     {
      "rank": 5,
@@ -965,7 +1023,8 @@
        "price_usd": 869.95,
        "url": "https://www.houseofscuba.com/products/bcd72"
       }
-     ]
+     ],
+     "review": "The Ranger has been the do-everything back-inflate for thirty years: 20kg of lift, ballistic nylon, rip-cord weight dump and a harness you can rebuild strap by strap. Buy once, dive it into the next decade."
     },
     {
      "rank": 6,
@@ -988,7 +1047,8 @@
        "price_usd": 659.0,
        "url": "https://www.paragondivestore.com/products/scubapro-level-bcd"
       }
-     ]
+     ],
+     "review": "Scubapro's lightweight jacket keeps the classic feel while cutting weight for travel, with proper pockets and the same quality webbing as the Hydros. The sensible pick for divers who just want a jacket that works."
     },
     {
      "rank": 7,
@@ -1011,7 +1071,8 @@
        "price_usd": 459.0,
        "url": "https://www.diversdirect.com/p/aqua-lung-pro-hd-bcd"
       }
-     ]
+     ],
+     "review": "The world's rental fleet runs on the Pro HD for a reason: weight-integrated, wrap-around bladder, bulletproof fabric, fair price. As a first owned BCD it removes every excuse."
     },
     {
      "rank": 8,
@@ -1034,7 +1095,8 @@
        "price_usd": 1099.0,
        "url": "https://www.newenglanddive.com/products/apeks-exotec-bc-grey-xl-2xl"
       }
-     ]
+     ],
+     "review": "Apeks built the Exotec like an exoskeleton — a rigid spine plate with articulating shoulder joints, so the rig moves with you instead of on you. Expensive, striking, and the most comfortable BCD several reviewers say they have ever worn."
     },
     {
      "rank": 9,
@@ -1057,7 +1119,8 @@
        "price_usd": 599.0,
        "url": "https://www.amazon.com/xdeep-Standard-Single-Scuba-Diving/dp/B0CFYQLPBP"
       }
-     ]
+     ],
+     "review": "A true backplate-and-wing sold as a one-box recreational rig: stainless plate, 28lb donut wing, minimalist harness. The gateway drug to technical configuration, machined to Polish-workshop standards."
     },
     {
      "rank": 10,
@@ -1080,8 +1143,17 @@
        "price_usd": 499.95,
        "url": "https://beachcitiescuba.com/products/hollis-l-t-s-light-travel-system-bcd"
       }
-     ]
+     ],
+     "review": "The LTS ('Light Travel System') gives wing-style trim, weight integration and a folding design at a mid-range price. Tec-brand build quality in a travel package."
     }
+   ],
+   "title": "The 10 Best BCDs of 2026",
+   "article_intro": "The buoyancy compensator is the piece of kit you wear on every single dive, and the market has split three ways: traditional jackets that hug you reassuringly, back-inflate wings that trim you flat for photography, and minimalist travel rigs that weigh barely two kilos. The ten BCDs here dominated reviewer shortlists and ScubaLab Testers Choice awards. The Hydros Pro's near-indestructible Monprene gel harness has made it the default recommendation for divers who dive a lot, while the featherweight Outlaw and Travelight own the carry-on-only crowd, and the Ranger and Zeos serve divers heading toward doubles and technical rigs.",
+   "tips": [
+    "Lift capacity should match your exposure suit: 10-15kg is plenty tropical, 20kg+ for drysuit diving.",
+    "Back-inflate trims you horizontal underwater but can push your face forward at the surface — practise before you buy.",
+    "Weight-integrated pockets must release with one obvious pull; test it in the shop.",
+    "Travelling? Anything under 2.5kg saves a wetsuit's worth of baggage weight."
    ]
   },
   {
@@ -1108,7 +1180,8 @@
        "price_usd": 495,
        "url": "https://www.divers-supply.com/shearwater-peregrine-dive-computer.html"
       }
-     ]
+     ],
+     "review": "Shearwater took the Perdix's phone-bright AMOLED screen and full Bühlmann algorithm and cut the price to mid-market — the Peregrine instantly became the default recommendation for every new diver. Wireless charging, flawless logs, zero menu confusion."
     },
     {
      "rank": 2,
@@ -1131,7 +1204,8 @@
        "price_usd": 1399.99,
        "url": "https://www.amazon.com/Garmin-DescentTM-Multisport-Smartwatch-Integration/dp/B0CNSG4ZXT"
       }
-     ]
+     ],
+     "review": "A full dive computer with optional air integration inside a premium multisport watch — dive Saturday, run Sunday, sleep-track all week. The Mk3i's solar variant and 10-tank T2 transceiver support make it the one-watch-for-everything answer."
     },
     {
      "rank": 3,
@@ -1154,7 +1228,8 @@
        "price_usd": 1255,
        "url": "https://shearwater.com/products/perdix-2"
       }
-     ]
+     ],
+     "review": "The computer on more technical divers' wrists than any other: full trimix, CCR support, four-gas switching and a screen readable in any visibility. Recreational divers buy it to never need another computer."
     },
     {
      "rank": 4,
@@ -1177,7 +1252,8 @@
        "price_usd": 899.95,
        "url": "https://www.playbetter.com/products/suunto-ocean-dive-computer-smartwatch"
       }
-     ]
+     ],
+     "review": "Suunto's comeback statement: AMOLED screen, wrist heart rate, full sports-watch features and the new adjustable Bühlmann implementation. Finally a Suunto that competes head-on with Garmin."
     },
     {
      "rank": 5,
@@ -1200,7 +1276,8 @@
        "price_usd": 549.99,
        "url": "https://www.garmin.com/en-US/p/766516/"
       }
-     ]
+     ],
+     "review": "The G1 packs Garmin's dive feature set into a rugged 45g watch with solar charging that effectively never needs a cable on a dive trip. The practical choice for divers who want data without a colour screen's price."
     },
     {
      "rank": 6,
@@ -1223,7 +1300,8 @@
        "price_usd": 299,
        "url": "https://us.suunto.com/collections/dive-computers"
       }
-     ]
+     ],
+     "review": "The world's best-selling entry computer: huge segment display, user-changeable battery, and Suunto's famously conservative RGBM keeping new divers well clear of trouble. Boring in the best possible way."
     },
     {
      "rank": 7,
@@ -1246,7 +1324,8 @@
        "price_usd": 249.95,
        "url": "https://www.houseofscuba.com/products/com115"
       }
-     ]
+     ],
+     "review": "One button, one screen, one job — the Leonardo is the cheapest credible dive computer from a major brand and the one most often found on rental wrists. Made in Italy, batteries user-changeable."
     },
     {
      "rank": 8,
@@ -1269,7 +1348,8 @@
        "price_usd": 329.95,
        "url": "https://www.walmart.com/browse/sports-outdoors/dive-computers/mares/4125_546956_1075805_7014188_3663623/YnJhbmQ6TWFyZXMie"
       }
-     ]
+     ],
+     "review": "The Puck Pro+ adds Bluetooth log upload to the puck formula: big digits, simple menus, nitrox to 99%, and a price that undercuts everything comparable. The upgrade pick over bare-bones entry models."
     },
     {
      "rank": 9,
@@ -1292,7 +1372,8 @@
        "price_usd": 399,
        "url": "https://us.amazon.com/Aqua-Lung-AQUALUNG-i330R-Computer/dp/B08ZKRHW1W"
       }
-     ]
+     ],
+     "review": "A colour-screen, rechargeable computer at a segment-breaking price — the i330R brought flagship legibility to the entry market. Three-gas nitrox support means it survives your progression to advanced courses."
     },
     {
      "rank": 10,
@@ -1315,8 +1396,17 @@
        "price_usd": 1299,
        "url": "https://www.walmart.com/ip/Apeks-DSX-Dive-Computer/2565668425"
       }
-     ]
+     ],
+     "review": "Apeks' first computer aimed straight at the Perdix: full trimix and CCR, a machined feel, and a vibration alert system divers actually notice. The premium alternative for divers already in Apeks regulators."
     }
+   ],
+   "title": "The 10 Best Dive Computers of 2026",
+   "article_intro": "No category of dive gear has moved faster. Ten years ago a colour screen was exotic; today the mid-market standard is a phone-bright AMOLED display, Bluetooth log sync and a rechargeable battery, and the watch-style computers double as daily fitness trackers. Two brands anchor the top of every reviewer's list: Shearwater, whose Peregrine and Perdix 2 are the recreational and tec benchmarks respectively, and Garmin, whose Descent range won over divers who want one watch for everything. Below them, the Zoop Novo, Leonardo and Puck Pro+ keep doing what they've always done — reliable, readable decompression guidance for the price of a fin set.",
+   "tips": [
+    "Buy the screen you can read at 30m with fogged lenses — big numerals beat extra features.",
+    "Conservative vs liberal algorithms differ by minutes of no-deco time; Bühlmann with adjustable gradient factors is the transparent choice.",
+    "Air integration is genuinely useful but adds a transmitter (~$300) — budget for it or skip it consciously.",
+    "If it's also your watch, check battery life in dive mode; if it's dive-only, a user-changeable battery saves service costs."
    ]
   },
   {
@@ -1343,7 +1433,8 @@
        "price_usd": 804,
        "url": "https://fourthelement.com/product/mens-proteus-ii-5mm-diving-wetsuit/"
       }
-     ]
+     ],
+     "review": "The Proteus II keeps winning warmth-per-millimetre tests thanks to its fleece-lined core panels and glued-and-blindstitched seams. Fourth Element's cut fits real bodies, and the suit is repeatedly voted the one reviewers would spend their own money on."
     },
     {
      "rank": 2,
@@ -1366,7 +1457,8 @@
        "price_usd": 429,
        "url": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/everflex-yulex-dive-steamer-men-3-2mm"
       }
-     ]
+     ],
+     "review": "Scubapro rebuilt its bestselling Everflex in Yulex natural rubber — 100% neoprene-free with an 85% lower carbon footprint and, remarkably, no warmth penalty. ScubaLab Testers Choice and the clear signal of where wetsuits are heading."
     },
     {
      "rank": 3,
@@ -1389,7 +1481,8 @@
        "price_usd": 629.95,
        "url": "https://www.scuba.com/p-bre5rfwm/bare-5mm-reactive-mens-full-wetsuit"
       }
-     ]
+     ],
+     "review": "Bare's Omnired lining weaves ceramic-infused fibres that reflect body heat back as infrared — gimmick-sounding, test-proven. The Reactive is the suit for divers who are always the first one cold."
     },
     {
      "rank": 4,
@@ -1412,7 +1505,8 @@
        "price_usd": 614.95,
        "url": "https://www.scuba.com/p-breef5w/bare-5mm-evoke-womens-full-wetsuit"
       }
-     ]
+     ],
+     "review": "The Evoke brings the same Omnired heat-reflecting technology in a genuinely women's-engineered cut rather than a shrunk men's pattern. Consistently the top women's suit in comfort and warmth tests."
     },
     {
      "rank": 5,
@@ -1435,7 +1529,8 @@
        "price_usd": 169,
        "url": "https://www.mikesdivestore.com/products/mares-reef-3mm-mens-wetsuit"
       }
-     ]
+     ],
+     "review": "A no-drama 3mm workhorse with tough panels where boats and reefs chew suits and stretch panels where you bend. The suit tropical operators buy by the dozen."
     },
     {
      "rank": 6,
@@ -1458,7 +1553,8 @@
        "price_usd": 349.95,
        "url": "https://cressiamerica.com/products/fast-man-5mm-wetsuit"
       }
-     ]
+     ],
+     "review": "Cressi's Fast proves a proper 5mm suit doesn't need to cost $400: anatomic cut, rear zip, solid seams. The best-value temperate-water suit on the market."
     },
     {
      "rank": 7,
@@ -1481,7 +1577,8 @@
        "price_usd": 429,
        "url": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-5mm"
       }
-     ]
+     ],
+     "review": "AquaFlex uses ultra-stretch neoprene throughout, so the suit disappears once it's on — testers consistently rate it the easiest donning suit in its class. Available in more size variants than almost any competitor."
     },
     {
      "rank": 8,
@@ -1504,7 +1601,8 @@
        "price_usd": 114.95,
        "url": "https://us.oneill.com/products/5040-a00-reactor-3-2-back-zip-full"
       }
-     ]
+     ],
+     "review": "The surf giant's entry suit has become a scuba favourite for warm water: fluid seam welds, ultra-stretch panels and a price that forgives a first suit's mistakes. Ideal for tropical liveaboard weeks."
     },
     {
      "rank": 9,
@@ -1527,7 +1625,8 @@
        "price_usd": 239,
        "url": "https://www.scuba.com/p-wpgw30fmn/waterproof-25mm-w30-mens-full-wetsuit"
       }
-     ]
+     ],
+     "review": "Sweden's Waterproof brings drysuit-grade construction to a 2.5mm tropical suit: anti-slip shoulder panels, proper zip garage, seals that keep flush water out. The premium thin suit."
     },
     {
      "rank": 10,
@@ -1550,8 +1649,17 @@
        "price_usd": 199.95,
        "url": "https://www.scuba.com/p-hndtj3pm/henderson-thermoprene-pro-mens-3mm-jumpsuit"
       }
-     ]
+     ],
+     "review": "Henderson's Thermoprene line is the fleet standard across American dive shops: honest warmth, 75% more stretch than standard neoprene, and sizes from XS to 5XL that fit actual humans. Unbeatable serviceability."
     }
+   ],
+   "title": "The 10 Best Wetsuits for Diving of 2026",
+   "article_intro": "Wetsuit buying is thickness-first: 3mm for water above 24°C, 5mm for 18-24°C, 7mm or semi-dry below that. But within a thickness class the differences are real — panel stretch, seam construction, zipper quality and the linings that decide whether a suit feels warm the moment you pull it on. This list leans on ScubaLab's in-water tests and long-term owner reviews. Fourth Element's Proteus II keeps its crown for warmth-to-flexibility, Bare's Reactive and Evoke bring the infrared-reflecting linings from their drysuit line, and Scubapro's Everflex Yulex leads the industry's move away from petroleum neoprene entirely.",
+   "tips": [
+    "Fit beats thickness: a snug 3mm outperforms a baggy 5mm because trapped water stays put.",
+    "Glued-and-blindstitched seams keep water out; flatlock seams are for warm water only.",
+    "Back-zips are easy solo; front-zips flex more and seal better but need practice.",
+    "Rinse in fresh water and dry inside-out in shade — sun-baked neoprene loses its stretch in a season."
    ]
   }
  ]

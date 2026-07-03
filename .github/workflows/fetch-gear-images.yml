@@ -1,0 +1,52 @@
+name: Fetch gear images
+
+# Resolves and validates product images for gear-guide.json by reading the
+# retailer product pages' og:image tags. Runs on GitHub's runners (which
+# have internet — the dev sandbox does not).
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Revalidate and refetch every image (not just missing/broken)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-gear-images
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout deploy branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch gear images
+        run: python3 scripts/fetch_gear_images.py ${{ inputs.force && '--force' || '' }}
+
+      - name: Rebuild standalone single-file build
+        run: python3 scripts/build_standalone.py
+
+      - name: Commit baked images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add gear-guide.json diving-site.html
+          if git diff --cached --quiet; then
+            echo "No image changes to commit."
+          else
+            git commit -m "Bake gear product images into gear-guide.json (automated)"
+            git push
+          fi
