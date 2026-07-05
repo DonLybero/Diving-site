@@ -797,6 +797,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   /* ---------- cards ---------- */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+  .grid>*{min-width:0}
   .card{background:linear-gradient(165deg,#ffffff,#f3f9f9);border:1px solid var(--line);
        border-radius:var(--r);padding:20px;position:relative;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
   .card:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:var(--shadow-glow)}
@@ -959,7 +960,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .gentry h3{margin:0 0 8px;font-family:var(--serif);font-size:1.35rem}
   .gentry-review{line-height:1.7;color:#33565e;margin:0 0 10px}
   .gentry .ptable{max-width:560px}
-  @media(max-width:700px){.gentry{grid-template-columns:1fr;gap:12px}}
+  .gentry>*{min-width:0}
+  @media(max-width:700px){.gentry{grid-template-columns:minmax(0,1fr);gap:12px}}
   .specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px;margin:0 0 12px;max-width:600px}
   .specs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
   .specs dt{color:var(--muted);font-size:.62rem;text-transform:uppercase;letter-spacing:.6px;margin:0}
@@ -981,6 +983,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .ptable tr.low .price{color:var(--coral);font-weight:800}
   .ptable tr.low .deal::after{content:" ◀ cheapest";color:var(--peak);font-size:.66rem;font-family:var(--mono)}
   .ptable .btn{padding:8px 13px;font-size:.78rem}
+  /* ---------- small screens ---------- */
+  @media(max-width:640px){
+    .grid{grid-template-columns:minmax(0,1fr)}
+    .rsel-menu{left:50%;transform:translateX(-50%);width:min(330px,calc(100vw - 20px));max-height:55vh}
+    .ptable,.ptable tbody{display:block;width:100%}
+    .ptable tr{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;
+         padding:10px 0;border-bottom:1px solid var(--line)}
+    .ptable tr:last-child{border-bottom:none}
+    .ptable td{display:block;padding:0;border:none}
+    .ptable td:last-child{grid-column:1/-1;margin-top:7px}
+    .ptable .btn{display:block;text-align:center}
+    .ptable tr.low .deal::after{display:inline-block}
+    .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+    #profile table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    #profile th,#profile td{min-width:72px}
+    #profile th:last-child,#profile td:last-child{min-width:200px}
+  }
 
   /* ---------- articles / reviews ---------- */
   .article{max-width:800px;margin:0 auto;font-size:1.02rem;line-height:1.75}
