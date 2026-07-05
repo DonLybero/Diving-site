@@ -314,6 +314,9 @@
       },
       "current_strength": "Medium",
       "slug": "bahamas",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Acanthurus_tractus_%28San_Salvador_Island%2C_Bahamas%29_1_%2815965199647%29.jpg/960px-Acanthurus_tractus_%28San_Salvador_Island%2C_Bahamas%29_1_%2815965199647%29.jpg",
+      "image_credit": "Photo: James St. John (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Gulf Stream drift at Bimini; Tiger Beach variable",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -375,10 +378,7 @@
           "depth": "10-20m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Acanthurus_tractus_%28San_Salvador_Island%2C_Bahamas%29_1_%2815965199647%29.jpg/960px-Acanthurus_tractus_%28San_Salvador_Island%2C_Bahamas%29_1_%2815965199647%29.jpg",
-      "image_credit": "Photo: James St. John (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Bay Islands",
@@ -1029,6 +1029,9 @@
       },
       "current_strength": "Strong",
       "slug": "cozumel",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cozumel_Fish_%28339332327%29.jpg/960px-Cozumel_Fish_%28339332327%29.jpg",
+      "image_credit": "Photo: Serge Melki from Indianapolis, USA (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Yucatan Current defines drift diving here",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -1090,10 +1093,7 @@
           "depth": "10-21m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cozumel_Fish_%28339332327%29.jpg/960px-Cozumel_Fish_%28339332327%29.jpg",
-      "image_credit": "Photo: Serge Melki from Indianapolis, USA (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Great Blue Hole",
@@ -1376,6 +1376,9 @@
       },
       "current_strength": "Low",
       "slug": "roatan",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Coral_cluster_near_Roat%C3%A1n_Honduras.jpeg/960px-Coral_cluster_near_Roat%C3%A1n_Honduras.jpeg",
+      "image_credit": "Photo: DJ Cane (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Calm sheltered sites, light currents",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -1437,10 +1440,7 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Coral_cluster_near_Roat%C3%A1n_Honduras.jpeg/960px-Coral_cluster_near_Roat%C3%A1n_Honduras.jpeg",
-      "image_credit": "Photo: DJ Cane (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Utila",
@@ -2087,6 +2087,9 @@
       },
       "current_strength": "Medium",
       "slug": "whitsunday-islands",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Great_Barrier_Reef%2C_Australia_%2834471180301%29.jpg/960px-Great_Barrier_Reef%2C_Australia_%2834471180301%29.jpg",
+      "image_credit": "Photo: O.V.E.R.V.I.E.W. (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Large tidal range drives light-to-strong currents",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -2148,10 +2151,7 @@
           "depth": "10-25m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Great_Barrier_Reef%2C_Australia_%2834471180301%29.jpg/960px-Great_Barrier_Reef%2C_Australia_%2834471180301%29.jpg",
-      "image_credit": "Photo: O.V.E.R.V.I.E.W. (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Heron Island",
@@ -2277,7 +2277,7 @@
           "name": "Heron Bommie",
           "type": "Bommie",
           "level": "beginner",
-          "blurb": "Heron's signature 5-20m site; eagle rays, mantas, a Cousteau favourite",
+          "blurb": "Heron's signature 5-20m site; eagle rays, mantas and turtles on one bommie",
           "depth": "5-20m"
         },
         {
@@ -2443,6 +2443,9 @@
       },
       "current_strength": "Strong",
       "slug": "komodo-national-park",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Anemonefish_komodo.jpg/960px-Anemonefish_komodo.jpg",
+      "image_credit": "Photo: Nhobgood (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Ripping tidal currents, reef hooks standard",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -2511,10 +2514,7 @@
           "depth": "5-24m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Anemonefish_komodo.jpg/960px-Anemonefish_komodo.jpg",
-      "image_credit": "Photo: Nhobgood (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Raja Ampat",
@@ -2627,6 +2627,9 @@
       },
       "current_strength": "Strong",
       "slug": "raja-ampat",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/A_diver_in_Raja_Ampat_seascape.jpg/960px-A_diver_in_Raja_Ampat_seascape.jpg",
+      "image_credit": "Photo: Fakhrizal Setiawan (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Currents define diving; reef hooks at Blue Magic/Sardine",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -2695,10 +2698,7 @@
           "depth": "3-15m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/A_diver_in_Raja_Ampat_seascape.jpg/960px-A_diver_in_Raja_Ampat_seascape.jpg",
-      "image_credit": "Photo: Fakhrizal Setiawan (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Okinawa Islands",
@@ -2813,6 +2813,9 @@
       },
       "current_strength": "Strong",
       "slug": "okinawa-islands",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Coral_reef_life_near_Akajima_01.jpg/960px-Coral_reef_life_near_Akajima_01.jpg",
+      "image_credit": "Photo: keiyac (CC BY-SA 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Yonaguni fast currents, drift diving",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -2867,10 +2870,7 @@
           "depth": "3-12m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Coral_reef_life_near_Akajima_01.jpg/960px-Coral_reef_life_near_Akajima_01.jpg",
-      "image_credit": "Photo: keiyac (CC BY-SA 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Cocos Island",
@@ -3163,6 +3163,9 @@
       },
       "current_strength": "Strong",
       "slug": "galapagos-islands",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Gal%C3%A1pagos_Sea_Lion_Zalophus_wollebaeki.jpg/960px-Gal%C3%A1pagos_Sea_Lion_Zalophus_wollebaeki.jpg",
+      "image_credit": "Photo: Paul and Jill (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Humboldt/Cromwell currents; Darwin/Wolf advanced only",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -3224,10 +3227,7 @@
           "depth": "10-25m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Gal%C3%A1pagos_Sea_Lion_Zalophus_wollebaeki.jpg/960px-Gal%C3%A1pagos_Sea_Lion_Zalophus_wollebaeki.jpg",
-      "image_credit": "Photo: Paul and Jill (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Socorro Island",
@@ -3342,6 +3342,9 @@
       },
       "current_strength": "Strong",
       "slug": "socorro-island",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Isla_Socorro%2C_Mexico_%28Unsplash%29.jpg/960px-Isla_Socorro%2C_Mexico_%28Unsplash%29.jpg",
+      "image_credit": "Photo: Talia Cohen taliacohen (CC0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Exposed open-Pacific pinnacles, advanced",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -3389,10 +3392,7 @@
           "depth": "15-35m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Isla_Socorro%2C_Mexico_%28Unsplash%29.jpg/960px-Isla_Socorro%2C_Mexico_%28Unsplash%29.jpg",
-      "image_credit": "Photo: Talia Cohen taliacohen (CC0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Sea of Cortez",
@@ -3686,6 +3686,9 @@
       },
       "current_strength": "Low",
       "slug": "maui-kona",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Molokini-crater-maui.jpg/960px-Molokini-crater-maui.jpg",
+      "image_credit": "Photo: Bossfrog (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Calm leeward coasts; current only at exposed sites",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -3761,10 +3764,7 @@
           "depth": "8-14m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Molokini-crater-maui.jpg/960px-Molokini-crater-maui.jpg",
-      "image_credit": "Photo: Bossfrog (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Chagos Archipelago / BIOT",
@@ -3878,6 +3878,9 @@
       },
       "current_strength": "Strong",
       "slug": "chagos-archipelago-biot",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Blenheim_Salomon_Victory_STS049-71-85_%28cropped_to_Blenheim_Reef%29.JPG",
+      "image_credit": "Photo: NASA (Public domain) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Oceanic atoll channels and exposed walls",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -3918,10 +3921,7 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Blenheim_Salomon_Victory_STS049-71-85_%28cropped_to_Blenheim_Reef%29.JPG",
-      "image_credit": "Photo: NASA (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Maldives",
@@ -4227,6 +4227,9 @@
       },
       "current_strength": "Medium",
       "slug": "seychelles",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Coral_%28Fungia_fungites%29%2C_Mah%C3%A9%2C_Seychelles%2C_2025-09-09%2C_DD_88.jpg/960px-Coral_%28Fungia_fungites%29%2C_Mah%C3%A9%2C_Seychelles%2C_2025-09-09%2C_DD_88.jpg",
+      "image_credit": "Photo: Diego Delso (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Granite sites mild-moderate; current at Shark Bank/Brissare",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -4288,10 +4291,7 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Coral_%28Fungia_fungites%29%2C_Mah%C3%A9%2C_Seychelles%2C_2025-09-09%2C_DD_88.jpg/960px-Coral_%28Fungia_fungites%29%2C_Mah%C3%A9%2C_Seychelles%2C_2025-09-09%2C_DD_88.jpg",
-      "image_credit": "Photo: Diego Delso (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Aliwal Shoal",
@@ -4763,6 +4763,9 @@
       },
       "current_strength": "Low",
       "slug": "gozo-malta",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Concha_de_tulip%C3%A1n_%28Fasciolaria_lignaria%29%2C_Xwejni_Bay%2C_Gozo%2C_Malta%2C_2021-08-23%2C_DD_46.jpg/960px-Concha_de_tulip%C3%A1n_%28Fasciolaria_lignaria%29%2C_Xwejni_Bay%2C_Gozo%2C_Malta%2C_2021-08-23%2C_DD_46.jpg",
+      "image_credit": "Photo: Diego Delso (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Mild currents, beginner-friendly shore diving",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -4838,10 +4841,7 @@
           "depth": "18-36m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Concha_de_tulip%C3%A1n_%28Fasciolaria_lignaria%29%2C_Xwejni_Bay%2C_Gozo%2C_Malta%2C_2021-08-23%2C_DD_46.jpg/960px-Concha_de_tulip%C3%A1n_%28Fasciolaria_lignaria%29%2C_Xwejni_Bay%2C_Gozo%2C_Malta%2C_2021-08-23%2C_DD_46.jpg",
-      "image_credit": "Photo: Diego Delso (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Medes Islands",
@@ -5140,6 +5140,9 @@
       },
       "current_strength": "Strong",
       "slug": "palau",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/In_PalauDSC01941-underwater_photographer.jpg/960px-In_PalauDSC01941-underwater_photographer.jpg",
+      "image_credit": "Photo: Ben Shoshana (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Blue Corner up to 3 knots; reef hooks essential",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -5197,7 +5200,7 @@
           "name": "Big Drop-Off",
           "type": "Wall",
           "level": "beginner",
-          "blurb": "Ngemelis wall plunging 300m; praised by Jacques Cousteau",
+          "blurb": "Ngemelis wall plunging 300m; Palau's signature wall dive",
           "depth": "3-30m+"
         },
         {
@@ -5208,10 +5211,7 @@
           "depth": "20-40m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/In_PalauDSC01941-underwater_photographer.jpg/960px-In_PalauDSC01941-underwater_photographer.jpg",
-      "image_credit": "Photo: Ben Shoshana (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Truk (Chuuk) Lagoon",
@@ -5324,6 +5324,9 @@
       },
       "current_strength": "Low",
       "slug": "truk-chuuk-lagoon",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Fujikawa_Maru_1.JPG",
+      "image_credit": "Photo: Taken by User:Legis at en.wikipedia (CC0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Sheltered lagoon, minimal current on wrecks",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -5385,10 +5388,7 @@
           "depth": "15-27m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Fujikawa_Maru_1.JPG",
-      "image_credit": "Photo: Taken by User:Legis at en.wikipedia (CC0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Cenotes of Yucatán Peninsula",
@@ -5871,6 +5871,9 @@
       },
       "current_strength": "Medium",
       "slug": "lundy-island",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Cliffs_on_the_west_coast_of_Lundy_Island_-_geograph.org.uk_-_4435499.jpg",
+      "image_credit": "Photo: Philip Halling (CC BY-SA 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Tidal Bristol Channel; seal coves sheltered",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -5932,10 +5935,7 @@
           "depth": "8-20m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Cliffs_on_the_west_coast_of_Lundy_Island_-_geograph.org.uk_-_4435499.jpg",
-      "image_credit": "Photo: Philip Halling (CC BY-SA 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Scapa Flow",
@@ -6237,6 +6237,9 @@
       },
       "current_strength": "Low",
       "slug": "silfra-fissure",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Divers_Crossing_%28231060717%29.jpeg/960px-Divers_Crossing_%28231060717%29.jpeg",
+      "image_credit": "Photo: William Warby (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Gentle drift current only",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -6277,10 +6280,7 @@
           "depth": "10-21m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Divers_Crossing_%28231060717%29.jpeg/960px-Divers_Crossing_%28231060717%29.jpeg",
-      "image_credit": "Photo: William Warby (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Vancouver Island",
@@ -6394,6 +6394,9 @@
       },
       "current_strength": "Strong",
       "slug": "vancouver-island",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Aerial_photographs_of_the_archipelago_of_Victoria_01.jpg/960px-Aerial_photographs_of_the_archipelago_of_Victoria_01.jpg",
+      "image_credit": "Photo: Buiobuione (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Tidal rapids; current-timed sites",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -6462,10 +6465,7 @@
           "depth": "10-22m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Aerial_photographs_of_the_archipelago_of_Victoria_01.jpg/960px-Aerial_photographs_of_the_archipelago_of_Victoria_01.jpg",
-      "image_credit": "Photo: Buiobuione (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Red Sea (Egypt)",
@@ -6579,6 +6579,9 @@
       },
       "current_strength": "Medium",
       "slug": "red-sea-egypt",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Coralline_algae_at_Halahi_Reef%2C_Red_Sea%2C_Egypt_-SCUBA_-UNDERWATER_-PICTURES.jpg/960px-Coralline_algae_at_Halahi_Reef%2C_Red_Sea%2C_Egypt_-SCUBA_-UNDERWATER_-PICTURES.jpg",
+      "image_credit": "Photo: Derek Keats (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Sheltered north; strong drift at Brothers/Daedalus/Elphinstone",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -6654,10 +6657,7 @@
           "depth": "5-20m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Coralline_algae_at_Halahi_Reef%2C_Red_Sea%2C_Egypt_-SCUBA_-UNDERWATER_-PICTURES.jpg/960px-Coralline_algae_at_Halahi_Reef%2C_Red_Sea%2C_Egypt_-SCUBA_-UNDERWATER_-PICTURES.jpg",
-      "image_credit": "Photo: Derek Keats (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Fiji",
@@ -6772,6 +6772,9 @@
       },
       "current_strength": "Strong",
       "slug": "fiji",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Coral_reef%2C_Naviti_island%2C_Yasawa%2C_Fiji_-_August_2016.jpg/960px-Coral_reef%2C_Naviti_island%2C_Yasawa%2C_Fiji_-_August_2016.jpg",
+      "image_credit": "Photo: Rickard Törnblad (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Current-driven drift dives feed the soft corals",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -6840,10 +6843,7 @@
           "depth": "5-20m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Coral_reef%2C_Naviti_island%2C_Yasawa%2C_Fiji_-_August_2016.jpg/960px-Coral_reef%2C_Naviti_island%2C_Yasawa%2C_Fiji_-_August_2016.jpg",
-      "image_credit": "Photo: Rickard Törnblad (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "French Polynesia",
@@ -6958,6 +6958,9 @@
       },
       "current_strength": "Strong",
       "slug": "french-polynesia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Acanthurus_reversus_Marquesas_Islands_D_Rolla_2025.jpg/960px-Acanthurus_reversus_Marquesas_Islands_D_Rolla_2025.jpg",
+      "image_credit": "Photo: Nihil7 (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Tiputa/Fakarava pass currents can be mask-ripping",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -7026,10 +7029,7 @@
           "depth": "3-12m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Acanthurus_reversus_Marquesas_Islands_D_Rolla_2025.jpg/960px-Acanthurus_reversus_Marquesas_Islands_D_Rolla_2025.jpg",
-      "image_credit": "Photo: Nihil7 (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Guadalcanal & Western Province",
@@ -7144,6 +7144,9 @@
       },
       "current_strength": "Low",
       "slug": "guadalcanal-western-province",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Looking_back_from_Marovo_Lagoon_%2819_July_2008%29.jpg/960px-Looking_back_from_Marovo_Lagoon_%2819_July_2008%29.jpg",
+      "image_credit": "Photo: Xplore Dive from Mooloolaba, Australia (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Fairly easy diving, not much current",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -7212,10 +7215,7 @@
           "depth": "5-15m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Looking_back_from_Marovo_Lagoon_%2819_July_2008%29.jpg/960px-Looking_back_from_Marovo_Lagoon_%2819_July_2008%29.jpg",
-      "image_credit": "Photo: Xplore Dive from Mooloolaba, Australia (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Moorea",
@@ -7330,6 +7330,9 @@
       },
       "current_strength": "Low",
       "slug": "moorea",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Blacktip_reef_shark_%28Carcharhinus_melanopterus%29_Moorea.jpg/960px-Blacktip_reef_shark_%28Carcharhinus_melanopterus%29_Moorea.jpg",
+      "image_credit": "Photo: Charles J. Sharp (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Minimal current, some surge; beginner-friendly",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -7384,10 +7387,7 @@
           "depth": "3-15m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Blacktip_reef_shark_%28Carcharhinus_melanopterus%29_Moorea.jpg/960px-Blacktip_reef_shark_%28Carcharhinus_melanopterus%29_Moorea.jpg",
-      "image_credit": "Photo: Charles J. Sharp (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Poor Knights Islands",
@@ -7420,7 +7420,7 @@
         "nudibranchs",
         "mola mola"
       ],
-      "highlights": "Cousteau-praised reserve - arches, caves, subtropical fish schools",
+      "highlights": "Marine-reserve arches and caves with subtropical fish schools",
       "monthly": {
         "Jan": {
           "rating": "Peak",
@@ -7501,6 +7501,9 @@
       },
       "current_strength": "Medium",
       "slug": "poor-knights-islands",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Aorangaia_PA171927.JPG/960px-Aorangaia_PA171927.JPG",
+      "image_credit": "Photo: Peter Southwood (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Arches/headlands can run strong; most sites moderate",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -7555,10 +7558,7 @@
           "depth": "10-25m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Aorangaia_PA171927.JPG/960px-Aorangaia_PA171927.JPG",
-      "image_credit": "Photo: Peter Southwood (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Apo Island & Dumaguete",
@@ -8042,6 +8042,9 @@
       },
       "current_strength": "Medium",
       "slug": "gili-islands-lombok",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Clammunity_%28223992521%29.jpeg/960px-Clammunity_%28223992521%29.jpeg",
+      "image_credit": "Photo: Tilonaut (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Lombok Strait drift common; training sites gentle",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -8103,10 +8106,7 @@
           "depth": "8-25m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Clammunity_%28223992521%29.jpeg/960px-Clammunity_%28223992521%29.jpeg",
-      "image_credit": "Photo: Tilonaut (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Malapascua Island",
@@ -8220,6 +8220,9 @@
       },
       "current_strength": "Low",
       "slug": "malapascua-island",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Anemone_fish_in_Anemone.jpg/960px-Anemone_fish_in_Anemone.jpg",
+      "image_credit": "Photo: Matt Kieffer (CC BY-SA 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Shoal dawn dives gentle; current mainly at full moon",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -8274,10 +8277,7 @@
           "depth": "5-15m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Anemone_fish_in_Anemone.jpg/960px-Anemone_fish_in_Anemone.jpg",
-      "image_credit": "Photo: Matt Kieffer (CC BY-SA 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Similan Islands",
@@ -8583,6 +8583,9 @@
       },
       "current_strength": "Strong",
       "slug": "tubbataha-reefs-natural-park",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Tubbataha_Reefs_Natural_Park-112045.jpg/960px-Tubbataha_Reefs_Natural_Park-112045.jpg",
+      "image_credit": "Photo: Ron Van Oers (CC BY-SA 3.0 igo) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Persistent currents; all dives drift with live boat",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -8644,10 +8647,7 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Tubbataha_Reefs_Natural_Park-112045.jpg/960px-Tubbataha_Reefs_Natural_Park-112045.jpg",
-      "image_credit": "Photo: Ron Van Oers (CC BY-SA 3.0 igo) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "Lord Howe Island",
@@ -8762,6 +8762,9 @@
       },
       "current_strength": "Medium",
       "slug": "lord-howe-island",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LordHoweIsland_NorthBay_Reef_02.JPG/960px-LordHoweIsland_NorthBay_Reef_02.JPG",
+      "image_credit": "Photo: Toby Hudson (CC BY-SA 3.0 au) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "Island sites sheltered; strong drift at Ball's Pyramid",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -8816,10 +8819,7 @@
           "depth": "10-25m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LordHoweIsland_NorthBay_Reef_02.JPG/960px-LordHoweIsland_NorthBay_Reef_02.JPG",
-      "image_credit": "Photo: Toby Hudson (CC BY-SA 3.0 au) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     },
     {
       "name": "South West Rocks",
@@ -8934,6 +8934,9 @@
       },
       "current_strength": "Medium",
       "slug": "south-west-rocks",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coral_Rock_Oyster%2C_South_West_Rocks_NSW_2431%2C_Australia_imported_from_iNaturalist_photo_524329328.jpg/960px-Coral_Rock_Oyster%2C_South_West_Rocks_NSW_2431%2C_Australia_imported_from_iNaturalist_photo_524329328.jpg",
+      "image_credit": "Photo: no rights reserved (CC0) via Wikimedia Commons",
+      "image_source": "wikimedia",
       "current_note": "EAC variable; Fish Rock has sheltered gutters",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -8981,10 +8984,7 @@
           "depth": "8-20m"
         }
       ],
-      "dive_sites_researched": "2026-07",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coral_Rock_Oyster%2C_South_West_Rocks_NSW_2431%2C_Australia_imported_from_iNaturalist_photo_524329328.jpg/960px-Coral_Rock_Oyster%2C_South_West_Rocks_NSW_2431%2C_Australia_imported_from_iNaturalist_photo_524329328.jpg",
-      "image_credit": "Photo: no rights reserved (CC0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": "2026-07"
     }
   ]
 }
