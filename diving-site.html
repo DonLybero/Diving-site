@@ -753,6 +753,27 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .tabs button:hover{background:rgba(47,224,214,.08);color:var(--ink);border-color:var(--line)}
   .tabs button.active{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;
        font-weight:700;box-shadow:0 6px 18px -6px rgba(47,224,214,.6)}
+  /* ---------- cascading region picker (planner) ---------- */
+  .rsel{position:relative}
+  .rsel-btn{background:#ffffff;color:var(--ink);border:1px solid var(--line-strong);border-radius:10px;
+       padding:10px 13px;font-size:.92rem;font-family:var(--sans);cursor:pointer;min-width:170px;text-align:left;
+       display:inline-flex;align-items:center;justify-content:space-between;gap:8px}
+  .rsel-btn:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,224,214,.18)}
+  .rsel-caret{color:var(--muted);font-size:.8em}
+  .rsel-menu{position:absolute;top:calc(100% + 6px);left:0;z-index:60;min-width:290px;max-height:420px;overflow-y:auto;
+       background:#ffffff;border:1px solid var(--line-strong);border-radius:12px;box-shadow:var(--shadow);padding:6px}
+  .rsel-row{display:flex;align-items:center;justify-content:space-between;border-radius:8px}
+  .rsel-row>span{flex:1;padding:9px 10px;cursor:pointer;font-size:.9rem;font-weight:600}
+  .rsel-row>span small{color:var(--muted);font-weight:400;margin-left:6px}
+  .rsel-row:hover{background:rgba(14,156,146,.07)}
+  .rsel-arrow{padding:9px 12px;cursor:pointer;color:var(--muted);font-size:.8rem;transition:transform .15s;user-select:none}
+  .rsel-arrow.open{transform:rotate(90deg);color:var(--accent)}
+  .rsel-kids{border-left:2px solid var(--line);margin:0 0 4px 14px;padding-left:4px}
+  .rsel-kids a{display:block;padding:6px 10px;border-radius:7px;font-size:.84rem;color:var(--ink);cursor:pointer}
+  .rsel-kids a small{color:var(--muted)}
+  .rsel-kids a:hover{background:rgba(14,156,146,.08);color:var(--accent-deep)}
+  .rsel-row.sel>span,.rsel-kids a.sel{color:var(--accent-deep)}
+
   /* Dive Planner — the two-part page shares a centered section intro */
   #view-planner>.sec-head{justify-content:center;text-align:center}
   #view-planner>.sec-sub{text-align:center;margin-left:auto;margin-right:auto}
@@ -764,7 +785,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   /* ---------- controls / forms ---------- */
   .controls{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:center;
        background:var(--glass);padding:18px;border-radius:var(--r);margin-bottom:24px;border:1px solid var(--line);
-       backdrop-filter:blur(10px);box-shadow:var(--shadow)}
+       backdrop-filter:blur(10px);box-shadow:var(--shadow);position:relative;z-index:30}
   select,input{background:#ffffff;color:var(--ink);border:1px solid var(--line-strong);border-radius:10px;
        padding:10px 13px;font-size:.92rem;font-family:var(--sans);transition:border-color .15s,box-shadow .15s}
   select:focus,input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,224,214,.18)}
@@ -1080,7 +1101,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <div class="controls">
       <div class="field"><label>Period of travel</label><select id="planPeriod">
         <option value="">— any time —</option></select></div>
-      <div class="field"><label>Region</label><select id="planRegion"><option value="">Any</option></select></div>
+      <div class="field"><label>Region</label>
+        <div class="rsel" id="regionSel">
+          <button type="button" class="rsel-btn" id="regionBtn" onclick="toggleRegionMenu(event)">Any region <span class="rsel-caret">&#9662;</span></button>
+          <div class="rsel-menu hidden" id="regionMenu"></div>
+        </div>
+      </div>
       <div class="field"><label>Difficulty</label><select id="planDiff">
         <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
       <div class="field"><label>Water</label><select id="planWater">
@@ -1534,10 +1560,82 @@ function planMonth(){
   if(v) return DivingCalendar.PERIODS[(Number(v)-1+24)%24].month;
   return DivingCalendar.MONTHS[new Date().getMonth()];
 }
+/* Broad world regions (continent-level, like major dive-travel directories),
+   each expandable to its destinations in the planner's region picker. */
+var REGION_GROUPS={
+ 'Caribbean':['Bahamas','Bay Islands','Bonaire','Cayman Islands','Cozumel','Great Blue Hole','Roat\u00e1n','Utila'],
+ 'Asia':['Apo Island & Dumaguete','Bunaken National Marine Park','Chagos Archipelago / BIOT','Gili Islands & Lombok','Komodo National Park','Malapascua Island','Maldives','Okinawa Islands','Raja Ampat','Similan Islands','Sipadan Island','Tubbataha Reefs Natural Park'],
+ 'Oceania':['Fiji','French Polynesia','Great Barrier Reef','Guadalcanal & Western Province','Heron Island','Lord Howe Island','Moorea','Ningaloo Reef','Palau','Poor Knights Islands','South West Rocks','Truk (Chuuk) Lagoon','Whitsunday Islands'],
+ 'Europe':['Azores','Gozo & Malta','Lundy Island','Medes Islands','Scapa Flow','Silfra Fissure'],
+ 'Africa':['Aliwal Shoal','Red Sea (Egypt)','Seychelles'],
+ 'North America':['Cenotes of Yucat\u00e1n Peninsula','Maui & Kona','Sea of Cortez','Socorro Island','Vancouver Island'],
+ 'Central America':['Cocos Island'],
+ 'South America':['Fernando de Noronha','Galapagos Islands']
+};
+var DEST_GROUP={};
+Object.keys(REGION_GROUPS).forEach(function(g){REGION_GROUPS[g].forEach(function(n){DEST_GROUP[n]=g;});});
+var PLAN_RGROUP='', PLAN_RDEST='';
+
+function matchRegionSel(d){
+  if(PLAN_RDEST) return d.name===PLAN_RDEST;
+  if(PLAN_RGROUP) return DEST_GROUP[d.name]===PLAN_RGROUP;
+  return true;
+}
+function escq(s){return s.replace(/'/g,"\\'");}
+function buildRegionMenu(){
+  var m=document.getElementById('regionMenu');
+  var h='<div class="rsel-row'+((!PLAN_RGROUP&&!PLAN_RDEST)?' sel':'')+'"><span onclick="pickRegion(\'\')">All regions</span></div>';
+  Object.keys(REGION_GROUPS).forEach(function(g){
+    var names=REGION_GROUPS[g].filter(function(n){return DivingCalendar.getDestination(DESTS,n);});
+    if(!names.length) return;
+    h+='<div class="rsel-row'+(PLAN_RGROUP===g&&!PLAN_RDEST?' sel':'')+'">'+
+       '<span onclick="pickRegion(\''+escq(g)+'\')">'+g+' <small>('+names.length+')</small></span>'+
+       '<i class="rsel-arrow" data-g="'+g+'" onclick="toggleRegionKids(event,\''+escq(g)+'\')">&#9656;</i></div>'+
+       '<div class="rsel-kids hidden" data-kids="'+g+'">'+
+       names.map(function(n){var d=DivingCalendar.getDestination(DESTS,n);
+         return '<a class="'+(PLAN_RDEST===n?'sel':'')+'" onclick="pickDest(\''+escq(n)+'\')">'+n+' <small>· '+d.country+'</small></a>';
+       }).join('')+'</div>';
+  });
+  m.innerHTML=h;
+}
+function toggleRegionMenu(ev){
+  ev.stopPropagation();
+  var m=document.getElementById('regionMenu');
+  if(m.classList.contains('hidden')){buildRegionMenu();m.classList.remove('hidden');}
+  else m.classList.add('hidden');
+}
+function toggleRegionKids(ev,g){
+  ev.stopPropagation();
+  var kids=document.querySelector('.rsel-kids[data-kids="'+g+'"]');
+  var arrow=document.querySelector('.rsel-arrow[data-g="'+g+'"]');
+  kids.classList.toggle('hidden');
+  arrow.classList.toggle('open',!kids.classList.contains('hidden'));
+}
+function setRegionBtn(){
+  document.getElementById('regionBtn').innerHTML=
+    (PLAN_RDEST||PLAN_RGROUP||'Any region')+' <span class="rsel-caret">&#9662;</span>';
+}
+function pickRegion(g){
+  PLAN_RGROUP=g; PLAN_RDEST='';
+  setRegionBtn();
+  document.getElementById('regionMenu').classList.add('hidden');
+  planShown=3; refreshPlanViews();
+}
+function pickDest(n){
+  PLAN_RDEST=n; PLAN_RGROUP=DEST_GROUP[n]||'';
+  setRegionBtn();
+  document.getElementById('regionMenu').classList.add('hidden');
+  planShown=3; refreshPlanViews();
+}
+document.addEventListener('click',function(e){
+  var m=document.getElementById('regionMenu');
+  if(m&&!m.classList.contains('hidden')&&!document.getElementById('regionSel').contains(e.target)) m.classList.add('hidden');
+});
+
 // static (non-period) planner filters, shared by cards, map and calendar
 function planStaticMatch(d){
-  var region=val('planRegion'), diff=val('planDiff'), water=val('planWater'), cur=val('planCur');
-  if(region && d.region!==region) return false;
+  var diff=val('planDiff'), water=val('planWater'), cur=val('planCur');
+  if(!matchRegionSel(d)) return false;
   if(diff && d.difficulty.indexOf(diff)===-1) return false;
   if(water && d.water_type.indexOf(water)===-1) return false;
   if(cur && d.current_strength!==cur) return false;
@@ -1549,9 +1647,6 @@ function fillMonths(sel){
 }
 
 function initControls(){
-  var regions=Array.from(new Set(DESTS.map(function(d){return d.region;}))).sort();
-  var el=document.getElementById('planRegion');
-  regions.forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;el.appendChild(o);});
   // Period of travel — the 24 half-month periods; the default is the present period.
   var pp=document.getElementById('planPeriod');
   var nowPeriod=DivingCalendar.PERIODS[new Date().getMonth()*2];
@@ -1562,7 +1657,7 @@ function initControls(){
   });
   document.getElementById('gearCat').addEventListener('change',renderGear);
   // Any planner selection reveals the result views and refreshes the active one.
-  ['planPeriod','planRegion','planDiff','planWater','planCur','planTemp'].forEach(function(id){
+  ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
     var h=function(){planShown=3;refreshPlanViews();};
     e.addEventListener('change',h); e.addEventListener('input',h);
@@ -1632,8 +1727,8 @@ function renderPlanner(){
   // No period chosen = the present period ("Now").
   var per=perVal?Number(perVal):(new Date().getMonth()*2+1);
   var pinfo=DivingCalendar.PERIODS[(per-1+24)%24];
-  var f={region:val('planRegion'),difficulty:val('planDiff'),water_type:val('planWater'),minTemp:num('planTemp')};
-  var full=DivingCalendar.rankPeriod(DESTS, per, f).filter(function(r){
+  var f={difficulty:val('planDiff'),water_type:val('planWater'),minTemp:num('planTemp')};
+  var full=DivingCalendar.rankPeriod(DESTS.filter(matchRegionSel), per, f).filter(function(r){
     var cur=val('planCur'); return !cur||r.current_strength===cur;
   });
   if(!full.length){
