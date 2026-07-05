@@ -1585,7 +1585,7 @@ function escq(s){return s.replace(/'/g,"\\'");}
 function buildRegionMenu(){
   var m=document.getElementById('regionMenu');
   var h='<div class="rsel-row'+((!PLAN_RGROUP&&!PLAN_RDEST)?' sel':'')+'"><span onclick="pickRegion(\'\')">All regions</span></div>';
-  Object.keys(REGION_GROUPS).forEach(function(g){
+  Object.keys(REGION_GROUPS).sort().forEach(function(g){
     var names=REGION_GROUPS[g].filter(function(n){return DivingCalendar.getDestination(DESTS,n);});
     if(!names.length) return;
     h+='<div class="rsel-row'+(PLAN_RGROUP===g&&!PLAN_RDEST?' sel':'')+'">'+
