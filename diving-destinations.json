@@ -9512,7 +9512,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "malpelo-island",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Atardecer_Isla_de_Malpelo_-_Colombia.jpg/960px-Atardecer_Isla_de_Malpelo_-_Colombia.jpg",
+      "image_credit": "Photo: Jdmacarenoq (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Yap",
