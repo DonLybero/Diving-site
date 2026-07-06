@@ -190,7 +190,12 @@ IP with the entity from day one. Do them as one batch at launch (see checklist).
    UAE **PDPL** governing-law line (plus DIFC/ADGM rules if incorporated there).
    Not legal advice — owner's formation agent/lawyer to confirm.
 4. Apply to affiliate programs (business details/payout under the company);
-   paste IDs into `AFFILIATE`; rebuild standalone.
+   paste IDs into `AFFILIATE`; rebuild standalone. NOTE: the static gear
+   pages (`gear/*.html`, built by `build_pages.py`) link *raw* retailer URLs
+   — the JS `affLink()` only wraps links in the SPA. Once IDs are live,
+   either port `affLink()` into `build_pages.py` (add a Python `aff_link`
+   used by `buy_box`) or accept that the crawlable gear pages funnel buy
+   clicks to raw retailers while the app is the monetized surface.
 5. Attorney trademark knockout for "DiveSZN" before marketing spend.
 6. Consider a short **Terms of Use** page to sit beside the privacy policy.
 
