@@ -8996,7 +8996,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "nusa-penida",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/20-Indonesia-Bali_Nusa-Penida_Crystal-Bay_12_%28Mola-Mola_Sunfish3%29-APiazza.JPG/960px-20-Indonesia-Bali_Nusa-Penida_Crystal-Bay_12_%28Mola-Mola_Sunfish3%29-APiazza.JPG",
+      "image_credit": "Photo: Andrepiazza (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Fuvahmulah",
@@ -9165,7 +9168,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "fuvahmulah",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Pleurochorium_annandalei_%2810.3897-BDJ.12.e120128%29_Figure_46a.png",
+      "image_credit": "Photo: Amjad et al. (2024) (CC BY 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Layang Layang",
@@ -9334,7 +9340,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "layang-layang",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Layang-Layang_diving.jpg/960px-Layang-Layang_diving.jpg",
+      "image_credit": "Photo: matthew lee (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Malpelo Island",
@@ -9665,7 +9674,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "yap",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Heinke_Hans_Hass_Diving_Mask_and_Snorkel_Tube.jpg/960px-Heinke_Hans_Hass_Diving_Mask_and_Snorkel_Tube.jpg",
+      "image_credit": "Photo: Helmardine (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Cenderawasih Bay",
@@ -9834,7 +9846,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "cenderawasih-bay",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IN.CB_100920_3064.jpg/960px-IN.CB_100920_3064.jpg",
+      "image_credit": "Photo: Bird's Head Seascape / Jones/Shimlock / Secret Sea Visions (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Jupiter",
@@ -11201,6 +11216,355 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "chania-crete",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Bat Islands",
+      "country": "Costa Rica",
+      "region": "Eastern Pacific / Costa Rica",
+      "water_type": "tropical Pacific (upwelling-influenced)",
+      "difficulty": "advanced",
+      "access": "day-boat",
+      "coordinates": {
+        "lat": 10.87,
+        "lng": -85.93
+      },
+      "best_months": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct"
+      ],
+      "wetsuit": "5mm full (thermoclines can plunge below 21°C even when the surface is warm)",
+      "current_strength": "strong",
+      "current_note": "Exposed offshore pinnacles with strong, variable currents, surge and downcurrents around the rock; the ~45km open-water crossing from Playas del Coco can be rough. Advanced certification and solid buoyancy are expected.",
+      "currents": [
+        "strong",
+        "variable",
+        "surge",
+        "downcurrent"
+      ],
+      "signature_species": [
+        "bull shark",
+        "giant Pacific manta",
+        "spotted eagle ray",
+        "cow-nose ray",
+        "schooling jacks",
+        "green turtle"
+      ],
+      "highlights": "Costa Rica's premier bull shark dive: at the Big Scare (El Gran Susto) a dozen or more 2.5-3.5m bull sharks cruise volcanic pinnacles at 20-30m, joined by giant Pacific mantas, squadrons of eagle and cow-nose rays and dense schools of jacks and snapper. A committing offshore day-boat trip from the Guanacaste coast, best in the warm green season.",
+      "monthly_temp_c": {
+        "Jan": 25,
+        "Feb": 24,
+        "Mar": 24,
+        "Apr": 26,
+        "May": 28,
+        "Jun": 29,
+        "Jul": 29,
+        "Aug": 29,
+        "Sep": 29,
+        "Oct": 28,
+        "Nov": 27,
+        "Dec": 26
+      },
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Dry-season winds and upwelling bring cold thermoclines but clearer water; rays, turtles and big schools of fish, only occasional bull sharks.",
+          "conditions": "Windy Papagayo season; often cooler water and stronger surface chop, but better average visibility.",
+          "visibility_m": 20
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "Peak upwelling clarity with eagle and cow-nose rays, jacks and turtles; bull shark sightings sparse this month.",
+          "conditions": "Strong offshore winds can cancel the crossing; coldest thermoclines of the year.",
+          "visibility_m": 22
+        },
+        "Mar": {
+          "rating": "Low",
+          "marine_life": "Rays, turtles and reef fish remain; bull sharks largely absent before the green season builds.",
+          "conditions": "Windy and cool with variable currents; trips weather-dependent.",
+          "visibility_m": 20
+        },
+        "Apr": {
+          "rating": "Shoulder",
+          "marine_life": "Transition month as water warms; mantas and rays about, early bull shark encounters possible late in the month.",
+          "conditions": "Winds easing, water warming; visibility still generally good.",
+          "visibility_m": 18
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Green season begins and bull sharks return to the Big Scare, with mantas, eagle rays and heavy schooling fish.",
+          "conditions": "Warm water and calmer surface, though rain can cut visibility on some days.",
+          "visibility_m": 15
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "Reliable bull shark aggregations plus giant Pacific mantas, rays and baitballs of jacks and snapper.",
+          "conditions": "Warm green-season water with strong currents at the pinnacles; visibility swings dive to dive.",
+          "visibility_m": 15
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "Prime bull shark month with a dozen or more animals common at the Big Scare, alongside mantas and rays.",
+          "conditions": "Warmest water of the year; brief afternoon downpours, variable currents and visibility.",
+          "visibility_m": 15
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "Peak bull shark density continues with mantas, cow-nose ray squadrons and turtles.",
+          "conditions": "Warm and active green-season diving; visibility can drop with runoff but the action stays high.",
+          "visibility_m": 14
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Bull sharks still abundant with excellent big-animal odds through the wet peak.",
+          "conditions": "Wettest stretch; occasional rough crossings and reduced visibility, but shark encounters are consistent.",
+          "visibility_m": 13
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Strong late-season bull shark presence tapering off, with mantas and rays still frequent.",
+          "conditions": "Green season winding down; warm water, variable visibility and lingering rain.",
+          "visibility_m": 14
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "Bull shark odds ease as the season closes; rays, turtles and schooling fish remain reliable.",
+          "conditions": "Transition to drier weather; water still warm, visibility improving.",
+          "visibility_m": 16
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "Rays, turtles and big schools with clearer water returning; bull sharks now scarce.",
+          "conditions": "Papagayo winds returning bring cooler thermoclines and choppier crossings but sharper visibility.",
+          "visibility_m": 20
+        }
+      },
+      "dive_sites": [
+        {
+          "name": "Big Scare (El Gran Susto)",
+          "type": "rocky pinnacle",
+          "level": "advanced",
+          "depth": "18-27m",
+          "blurb": "The signature site: exposed rocks breaking the surface where six to a dozen large bull sharks patrol the volcanic pinnacles, joined by giant mantas, jacks, snapper and the occasional sailfish or marlin."
+        },
+        {
+          "name": "Black Rock (Bajo Negro)",
+          "type": "volcanic pinnacle",
+          "level": "advanced",
+          "depth": "20-30m",
+          "blurb": "A steep pinnacle rising from around 30m toward the surface off Santa Rosa, drawing squadrons of eagle rays, dense schooling fish, occasional bull sharks and cruising manta rays."
+        },
+        {
+          "name": "Punta Gorda",
+          "type": "point / rocky reef",
+          "level": "advanced",
+          "depth": "12-25m",
+          "blurb": "A rocky point known for gliding groups of common and spotted eagle rays over the boulders, with turtles and reef fish in shallower water."
+        },
+        {
+          "name": "The Point",
+          "type": "rocky reef",
+          "level": "advanced",
+          "depth": "12-24m",
+          "blurb": "Current-swept ridges and boulder gardens holding schooling grunts, snapper and pompano, with rays and turtles working the edges."
+        },
+        {
+          "name": "Coral Gardens",
+          "type": "boulder reef",
+          "level": "intermediate",
+          "depth": "8-18m",
+          "blurb": "A slightly more sheltered rocky-reef area used when conditions are rougher, with morays, invertebrates and reef fish and lighter current than the sharky pinnacles."
+        },
+        {
+          "name": "Bat Island Wall",
+          "type": "wall / slope",
+          "level": "advanced",
+          "depth": "18-30m",
+          "blurb": "A sloping wall along the islands where big pelagic schools, rays and passing bull sharks show up in the current, best dived on slack."
+        }
+      ],
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "slug": "bat-islands",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Coiba",
+      "country": "Panama",
+      "region": "Eastern Pacific / Panama",
+      "water_type": "tropical Pacific, nutrient-rich with thermoclines",
+      "difficulty": "advanced",
+      "access": "Day-boat or multi-day trips from Santa Catalina (about 1 to 1.5 hours by boat to the nearest sites); remote northern Contreras Islands reached by liveaboard-style multi-night trips lodging at Pixvae or park islands.",
+      "coordinates": {
+        "lat": 7.45,
+        "lng": -81.75
+      },
+      "best_months": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May"
+      ],
+      "wetsuit": "5mm full wetsuit (thermoclines can drop to 16-20C; rental centres often stock only 3mm, so bring your own)",
+      "current_strength": "strong",
+      "current_note": "Exposed seamounts and pinnacles run strong, sometimes shifting currents that draw pelagics; negative or semi-negative entries and blue-water ascents are common.",
+      "currents": true,
+      "signature_species": [
+        "scalloped hammerhead",
+        "whitetip reef shark",
+        "whale shark",
+        "giant manta ray",
+        "mobula ray",
+        "green sea turtle"
+      ],
+      "highlights": "A Pacific UNESCO marine park where cool, nutrient-rich upwelling feeds schooling scalloped hammerheads (best March-July), resident whitetip reef sharks, seasonal whale sharks and mantas, plus walls of jacks and barracuda over coral-clad seamounts.",
+      "monthly_temp_c": {
+        "Jan": 27,
+        "Feb": 27,
+        "Mar": 27,
+        "Apr": 28,
+        "May": 28,
+        "Jun": 28,
+        "Jul": 28,
+        "Aug": 28,
+        "Sep": 29,
+        "Oct": 29,
+        "Nov": 28,
+        "Dec": 27
+      },
+      "monthly": {
+        "Jan": {
+          "rating": "Peak",
+          "marine_life": "Dry-season upwelling fuels big schools of jacks and barracuda, whitetip reef sharks and the start of whale shark chances",
+          "conditions": "Calm seas, clear water, cool thermoclines below 15-20m",
+          "visibility_m": 25
+        },
+        "Feb": {
+          "rating": "Peak",
+          "marine_life": "Whale shark window continues, dense fish schools, turtles and mobulas over the seamounts",
+          "conditions": "Dry, calm and clear; strong currents on exposed pinnacles",
+          "visibility_m": 25
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Scalloped hammerhead schools build at pinnacles and Contreras; whale sharks still possible",
+          "conditions": "Pronounced thermoclines begin bringing colder, plankton-rich water",
+          "visibility_m": 22
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "Prime hammerhead season with the biggest schools, plus whitetips, mantas and mobula rays",
+          "conditions": "End of dry season, cool nutrient-rich currents, variable viz on thermoclines",
+          "visibility_m": 20
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Hammerheads still schooling; abundant pelagic action as upwelling peaks",
+          "conditions": "First rains arrive late month; strong currents and cool water",
+          "visibility_m": 18
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Hammerheads best sought at the northern Contreras Islands; big-fish action holds",
+          "conditions": "Rainy season underway, seas and visibility turn variable",
+          "visibility_m": 15
+        },
+        "Jul": {
+          "rating": "Shoulder",
+          "marine_life": "Hammerhead numbers taper; whitetip reef sharks, turtles and rays remain reliable",
+          "conditions": "Wet and variable; run-off can cloud the water, third dives weather-dependent",
+          "visibility_m": 12
+        },
+        "Aug": {
+          "rating": "Shoulder",
+          "marine_life": "Resident reef life, whitetips and mobulas; passing mantas at plankton-rich sites",
+          "conditions": "Peak rains, greener plankton-laden water, calmer seas between storms",
+          "visibility_m": 12
+        },
+        "Sep": {
+          "rating": "Low",
+          "marine_life": "Reef sharks, turtles and macro life; fewer big schools as upwelling eases",
+          "conditions": "Wettest stretch, reduced and inconsistent visibility",
+          "visibility_m": 10
+        },
+        "Oct": {
+          "rating": "Low",
+          "marine_life": "Steady reef life and rays; pelagic action quietest of the year",
+          "conditions": "Still rainy with murkier, plankton-rich water",
+          "visibility_m": 12
+        },
+        "Nov": {
+          "rating": "Shoulder",
+          "marine_life": "Fish schools and whitetips rebuild as conditions clear toward dry season",
+          "conditions": "Rains ease late month; visibility improving in transition",
+          "visibility_m": 15
+        },
+        "Dec": {
+          "rating": "Peak",
+          "marine_life": "Dry-season return brings big schools, whitetips and the first whale shark sightings",
+          "conditions": "Calming seas and clearing water; cool thermoclines at depth",
+          "visibility_m": 22
+        }
+      },
+      "dive_sites": [
+        {
+          "name": "Wahoo Rock",
+          "type": "Exposed seamount / pinnacle",
+          "level": "advanced",
+          "depth": "18-30m",
+          "blurb": "Coiba at its wildest: an offshore pinnacle of coral-, sponge- and fan-covered ridges swept by strong, shifting currents. Negative entries drop you into schooling jacks, barracuda, whitetips and the season's hammerheads."
+        },
+        {
+          "name": "Don Juan",
+          "type": "Rocky reef and boulders",
+          "level": "intermediate",
+          "depth": "12-25m",
+          "blurb": "A gentler rock-and-reef site of boulders and ledges hosting whitetip reef sharks resting on the sand, turtles, morays and dense reef fish, with occasional mobulas cruising the blue."
+        },
+        {
+          "name": "Frijoles",
+          "type": "Coral reef",
+          "level": "intermediate",
+          "depth": "10-22m",
+          "blurb": "A colourful sloping reef good for wide-angle and macro alike: seahorses, frogfish, octopus and morays among the coral, with turtles and schooling snapper overhead."
+        },
+        {
+          "name": "Bajo Uno",
+          "type": "Submerged seamount",
+          "level": "advanced",
+          "depth": "18-30m",
+          "blurb": "A current-swept underwater pinnacle that concentrates pelagic life, from schooling hammerheads and big-fish tornadoes to passing mantas; entries and ascents are made in open blue water."
+        },
+        {
+          "name": "Buffet (La Viuda)",
+          "type": "Pinnacle rising to the surface",
+          "level": "intermediate",
+          "depth": "8-25m",
+          "blurb": "A signature Coiba pinnacle whose tip breaks the surface, wrapped in massive fish schools; plankton draws mantas and mobulas, while whitetips and turtles patrol the rocks."
+        },
+        {
+          "name": "Iglesia",
+          "type": "Rock formations and swim-throughs",
+          "level": "intermediate",
+          "depth": "10-24m",
+          "blurb": "Cathedral-like rock arches and swim-throughs give the site its name, sheltering reef fish, lobster and morays with pelagics passing along the outer walls."
+        },
+        {
+          "name": "Contreras Islands (Montana Rusa)",
+          "type": "Remote pinnacle system",
+          "level": "advanced",
+          "depth": "18-30m",
+          "blurb": "The park's far-north hotspot, reached only on multi-day trips: strong currents deliver the best odds at schooling hammerheads alongside whitetips, mobula rays and green turtles."
+        }
+      ],
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "slug": "coiba",
       "dive_sites_researched": true
     }
   ]
