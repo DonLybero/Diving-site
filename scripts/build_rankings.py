@@ -30,7 +30,10 @@ def visibility_bonus(viz_m):
     return int(round((v - VIZ_MIN) / (VIZ_REF - VIZ_MIN) * VIZ_MAX))
 
 # Headline marine-life keywords -> bonus weight (presence-based, counted once each)
+# Orca & great white are the rarest apex encounters, weighted highest.
+# KEEP THIS TABLE IDENTICAL to MARINE_WEIGHTS in diving-calendar.js.
 MARINE_WEIGHTS = [
+    ("orca", 14), ("killer whale", 14), ("great white", 14),
     ("whale shark", 12), ("sardine run", 12),
     ("hammerhead", 10),
     ("manta", 9), ("minke", 9), ("tiger shark", 9),
@@ -45,13 +48,17 @@ MARINE_WEIGHTS = [
     ("reef shark", 2), ("eagle ray", 2), ("seahorse", 2),
     ("frogfish", 2), ("mandarinfish", 2),
 ]
+# Match longest keywords first and consume each hit, so a specific phrase
+# ("grey reef shark") isn't also counted as its generic substring ("reef shark").
+MARINE_SORTED = sorted(MARINE_WEIGHTS, key=lambda kw: -len(kw[0]))
 
 def marine_bonus(text):
     t = (text or "").lower()
     total = 0
-    for kw, w in MARINE_WEIGHTS:
+    for kw, w in MARINE_SORTED:
         if kw in t:
             total += w
+            t = t.replace(kw, " ")   # remove matched span so shorter keys can't re-match it
     return min(total, BONUS_CAP)
 
 def score_month(dest, month):

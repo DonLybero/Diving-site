@@ -1322,7 +1322,9 @@ window.__GEAR_DATA__={"researched": "2026-07", "intro": "DiveSZN will always gui
   }
 
   // Headline marine-life keywords -> bonus weight (presence-based, once each).
+  // Orca & great white are the rarest apex encounters, weighted highest.
   var MARINE_WEIGHTS = [
+    ["orca", 14], ["killer whale", 14], ["great white", 14],
     ["whale shark", 12], ["sardine run", 12],
     ["hammerhead", 10],
     ["manta", 9], ["minke", 9], ["tiger shark", 9],
@@ -1337,12 +1339,19 @@ window.__GEAR_DATA__={"researched": "2026-07", "intro": "DiveSZN will always gui
     ["reef shark", 2], ["eagle ray", 2], ["seahorse", 2],
     ["frogfish", 2], ["mandarinfish", 2]
   ];
+  // Match longest keywords first and consume each hit, so a specific phrase
+  // ("grey reef shark") isn't also counted as its generic substring ("reef shark").
+  var MARINE_SORTED = MARINE_WEIGHTS.slice().sort(function (a, b) { return b[0].length - a[0].length; });
 
   function marineBonus(text) {
     var t = (text || "").toLowerCase();
     var total = 0;
-    for (var i = 0; i < MARINE_WEIGHTS.length; i++) {
-      if (t.indexOf(MARINE_WEIGHTS[i][0]) !== -1) total += MARINE_WEIGHTS[i][1];
+    for (var i = 0; i < MARINE_SORTED.length; i++) {
+      var kw = MARINE_SORTED[i][0];
+      if (t.indexOf(kw) !== -1) {
+        total += MARINE_SORTED[i][1];
+        t = t.split(kw).join(" ");   // remove matched span so shorter keys can't re-match it
+      }
     }
     return Math.min(total, BONUS_CAP);
   }
