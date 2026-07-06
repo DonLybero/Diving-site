@@ -1803,7 +1803,7 @@
   {
    "category": "Wetsuits",
    "title": "Top Wetsuits in 2026",
-   "article_intro": "Wetsuit thickness is really a water-temperature decision: the colder the water, the more neoprene you want between you and it. We've split our picks the way you'll actually shop — by millimetres — so you can jump straight to the suits built for the water you're diving. Pick a thickness below, then compare the best suits at that rating alongside their cheapest prices.",
+   "article_intro": "Neoprene thickness tracks water temperature, but the ranges overlap more than any chart admits — how cold you run, how long your dives last and whether you add a hood all move the line. As a working guide: 2 mm and shorties above about 27°C, 3 mm from roughly 24 to 29°C, 5 mm through the mid-teens to low twenties, and 7 mm once you're in the low teens or below. Pick a thickness for the suits and prices at that rating.",
    "thickness_groups": [
     {
      "thickness": "2mm",
@@ -1811,7 +1811,7 @@
      "label": "2 mm / shorty — warm tropical",
      "water": "~27-30°C+",
      "sub": "27–30°C+",
-     "article_intro": "When the water sits in the high twenties, a full 5 mm is overkill — you want just enough neoprene to take the edge off long dives and shield you from stings and sun. These thin full suits and shorties give you freedom of movement and pack down to nothing in a carry-on, which is exactly what you want for warm-water reef trips.",
+     "article_intro": "Above 27°C most divers cook inside a 5 mm before they even leave the surface. A 2 mm full suit or a shorty holds off the slow chill of a 60-minute dive and keeps hydroids, fire coral and the sun off your skin without the bulk. A shorty drops the arm and leg coverage for less material and a lower price; a thin full suit costs a little warmth-per-gram but covers everything.",
      "tips": [
       "A shorty covers the core and leaves arms and legs free — cooler and cheaper; a thin full suit adds sting and sun protection on longer or deeper dives.",
       "Flatlock seams are fine at this thickness: they lie flat and comfortable, and a little water exchange is no problem in warm water.",
@@ -2090,7 +2090,7 @@
      "label": "3 mm — tropical / warm water",
      "water": "~24-29°C",
      "sub": "24–29°C",
-     "article_intro": "The 3 mm full suit is the workhorse of tropical scuba diving: warm enough for back-to-back dives on a Caribbean or Coral-Triangle reef, thin enough to stay comfortable and easy to travel with. If you own one wetsuit for warm-water trips, this is it.",
+     "article_intro": "3 mm is the default for most tropical diving — the Caribbean, the Red Sea in summer, the reefs of the Coral Triangle. It carries enough heat for three or four dives a day in 25–28°C water without leaving you sweating on the boat in between, and a good one rolls small enough to pack beside your regulator. Drop below about 24°C, though, and most divers start reaching for a 5 mm or a hood.",
      "tips": [
       "Glued-and-blindstitched seams keep water out far better than flatlock, and matter more as your dives get longer.",
       "A snug fit is what keeps you warm — a 3 mm that fits well beats a 5 mm that gaps at the lower back and floods.",
@@ -2369,7 +2369,7 @@
      "label": "5 mm — temperate / subtropical",
      "water": "~16-24°C",
      "sub": "16–24°C",
-     "article_intro": "Once the water drops into the low twenties and teens, 5 mm is the sweet spot — enough neoprene for temperate and subtropical diving without the bulk of a 7 mm. Pair it with a hood and you can push a well-fitted 5 mm surprisingly cold.",
+     "article_intro": "5 mm covers the awkward middle — Mediterranean summers, Pacific thermoclines, the subtropical diving that's too cold for 3 mm and doesn't yet justify 7 mm. The extra couple of millimetres roughly doubles how long you last before the cold registers, and a hood and vest stretch a well-fitted 5 mm down toward 14–15°C. Fit counts for more here than at any other thickness: a suit that gaps at the back flushes cold water with every kick.",
      "tips": [
       "Seals make the suit: smooth-skin or glide-skin wrist and ankle cuffs cut the cold-water flush that steals your warmth.",
       "High-stretch neoprene is worth paying for at 5 mm — thicker rubber fights you unless it's engineered to flex.",
@@ -2648,7 +2648,7 @@
      "label": "7 mm — cold water",
      "water": "~10-18°C",
      "sub": "10–18°C",
-     "article_intro": "7 mm is where wetsuit diving meets genuinely cold water — kelp forests, quarries, temperate reefs and the shoulder seasons. A good one seals at the wrists, ankles and neck so the thin layer of water you warm stays put, and pairs with a hood, gloves and boots for full cold-water protection.",
+     "article_intro": "7 mm is about as far as a wetsuit sensibly goes — kelp forests, quarries, temperate reefs, shoulder-season diving in the low teens. It only works if it seals: open wrists, ankles and a loose neck let cold water flush through and strip away the warm layer your body just heated, which is why the better suits use smooth-skin or glued cuffs and a snug collar. Below about 10°C most divers switch to a semi-dry or a drysuit rather than pile on more neoprene.",
      "tips": [
       "Sealed or smooth-skin cuffs and a snug neck are non-negotiable at 7 mm — an unsealed suit flushes and you'll get cold fast.",
       "Expect to add weight: thick neoprene is buoyant, so plan your weighting and check trim on the first dive.",
@@ -2791,7 +2791,7 @@
        "rank": 5,
        "name": "Aqua Lung Aquaflex 7mm",
        "blurb": "A supple 4-way-stretch 7mm with dedicated neck and wrist seals that punch above its mid-range price.",
-       "review": "The Aquaflex is a 7mm full suit cut from soft 4-way stretch neoprene, so it hugs the body and keeps donning painless despite the thickness. Dedicated seals at the neck and wrists limit the cold flush that thick suits often suffer, and reinforced kneepads and a back-zip entry make it a practical everyday cold-water workhorse. Divers reach for it as a comfortable, no-drama 7mm that seals well and holds up dive after dive without stretching the budget.",
+       "review": "The Aquaflex is a 7mm full suit cut from soft 4-way stretch neoprene, so it hugs the body and stays easy to pull on despite the thickness. Seals at the neck and wrists limit the cold flush that thick suits often suffer, while reinforced kneepads and a back-zip entry keep it practical for regular cold-water use. It seals well and holds up dive after dive without stretching the budget.",
        "image": "assets/gear/aqua-lung-aquaflex.jpg",
        "specs": {
         "Thickness": "7mm",
