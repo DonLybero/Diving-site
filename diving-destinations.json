@@ -8996,7 +8996,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "nusa-penida",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/20-Indonesia-Bali_Nusa-Penida_Crystal-Bay_12_%28Mola-Mola_Sunfish3%29-APiazza.JPG/960px-20-Indonesia-Bali_Nusa-Penida_Crystal-Bay_12_%28Mola-Mola_Sunfish3%29-APiazza.JPG",
+      "image_credit": "Photo: Andrepiazza (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Fuvahmulah",
@@ -9165,7 +9168,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "fuvahmulah",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Pleurochorium_annandalei_%2810.3897-BDJ.12.e120128%29_Figure_46a.png",
+      "image_credit": "Photo: Amjad et al. (2024) (CC BY 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Layang Layang",
@@ -9334,7 +9340,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "layang-layang",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Layang-Layang_diving.jpg/960px-Layang-Layang_diving.jpg",
+      "image_credit": "Photo: matthew lee (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Malpelo Island",
@@ -9665,7 +9674,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "yap",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Heinke_Hans_Hass_Diving_Mask_and_Snorkel_Tube.jpg/960px-Heinke_Hans_Hass_Diving_Mask_and_Snorkel_Tube.jpg",
+      "image_credit": "Photo: Helmardine (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Cenderawasih Bay",
@@ -9834,7 +9846,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "cenderawasih-bay",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IN.CB_100920_3064.jpg/960px-IN.CB_100920_3064.jpg",
+      "image_credit": "Photo: Bird's Head Seascape / Jones/Shimlock / Secret Sea Visions (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     }
   ]
 }
