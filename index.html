@@ -320,6 +320,16 @@
   .ptable tr.low .price{color:var(--coral);font-weight:800}
   .ptable tr.low .deal::after{content:" ◀ cheapest";color:var(--peak);font-size:.66rem;font-family:var(--mono)}
   .ptable .btn{padding:8px 13px;font-size:.78rem}
+  /* ---------- wetsuit thickness picker ---------- */
+  .thick-nav{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
+  .thick-pill{display:flex;flex-direction:column;gap:1px;background:#fff;border:1px solid var(--line-strong);
+       border-radius:12px;padding:9px 15px;cursor:pointer;transition:border-color .15s,box-shadow .15s,background .15s;text-align:left}
+  .thick-pill:hover{border-color:var(--accent)}
+  .thick-pill b{font-family:var(--serif);font-size:1.12rem;color:var(--ink);line-height:1.1}
+  .thick-pill span{font-size:.68rem;color:var(--muted);font-family:var(--mono);letter-spacing:.02em}
+  .thick-pill.on{background:var(--accent);border-color:var(--accent)}
+  .thick-pill.on b,.thick-pill.on span{color:#fff}
+  .thick-lead{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 6px}
   /* ---------- small screens ---------- */
   @media(max-width:640px){
     .grid{grid-template-columns:minmax(0,1fr)}
@@ -337,6 +347,8 @@
     #profile table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
     #profile th,#profile td{min-width:72px}
     #profile th:last-child,#profile td:last-child{min-width:200px}
+    .thick-nav{gap:6px}
+    .thick-pill{flex:1 1 calc(50% - 6px);padding:8px 12px}
   }
 
   /* ---------- articles / reviews ---------- */
@@ -1007,7 +1019,7 @@ function diffPips(d){
 function renderHome(){
   var topAug=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:3});
   var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.slice(0,3).map(function(c){
-    var g=c.items[0], lo=g.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;})[0];
+    var g=leadItem(c), lo=g.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;})[0];
     return '<div class="feature" onclick="showTab(\'gear\')">'+
       '<div class="gear-photo" style="height:120px">'+(g.image?'<img src="'+g.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<h4>'+g.name+'</h4><div class="score">from '+fmtPrice(lo.price_usd)+'</div>'+
@@ -1194,8 +1206,17 @@ function gearEntry(item,cat){
     specs+
     '<table class="ptable">'+rows+'</table></div></div>';
 }
+var GEAR_THICK=null;
+function leadItem(c){return (c.items&&c.items[0])||(c.thickness_groups&&c.thickness_groups[0].items[0])||{};}
+function pickThickness(t){GEAR_THICK=t; renderGear(); window.scrollTo({top:0,behavior:'smooth'});}
+function thickNav(c){
+  return '<div class="thick-nav">'+c.thickness_groups.map(function(grp){
+    return '<button class="thick-pill'+(grp.thickness===GEAR_THICK?' on':'')+'" onclick="pickThickness(\''+escq(grp.thickness)+'\')">'+
+      '<b>'+(grp.pill||grp.thickness)+'</b><span>'+(grp.sub||grp.water||'')+'</span></button>';
+  }).join('')+'</div>';
+}
 function openGearArticle(cat){
-  var sel=document.getElementById('gearCat'); sel.value=cat; renderGear();
+  var sel=document.getElementById('gearCat'); sel.value=cat; GEAR_THICK=null; renderGear();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function renderGear(){
@@ -1207,7 +1228,7 @@ function renderGear(){
     // Article index: magazine-style list of buyer's guides
     var rows=GEAR_GUIDE.categories.map(function(c){
       var teaser=(c.article_intro||'').split('. ').slice(0,2).join('. ')+'.';
-      var lead=c.items[0]||{};
+      var lead=leadItem(c);
       var iconSvg='<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[CAT_ICON[c.category]]||ICONS.tank)+'</svg></div>';
       var thumb=lead.image?'<img src="'+lead.image+'" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\''+
         iconSvg.replace(/'/g,"\\'").replace(/"/g,'&quot;')+'\'">':iconSvg;
@@ -1224,14 +1245,33 @@ function renderGear(){
   }else{
     var c=GEAR_GUIDE.categories.filter(function(x){return x.category===cat;})[0];
     if(!c){g.innerHTML='';return;}
-    var tips=(c.tips||[]).map(function(t){return '<li>'+t+'</li>';}).join('');
-    g.innerHTML='<div class="article gear-article" style="grid-column:1/-1">'+
-      '<p class="meta"><a href="#" onclick="openGearArticle(\'\');return false;">← All buyer’s guides</a></p>'+
-      '<h2 style="margin:6px 0 10px">'+(c.title||('Top 10 '+c.category))+'</h2>'+
-      '<p class="gentry-review" style="max-width:80ch">'+(c.article_intro||'')+'</p>'+
-      (tips?'<div class="tipbox"><b>What to look for</b><ul>'+tips+'</ul></div>':'')+
-      c.items.map(function(it){return gearEntry(it,c.category);}).join('')+
-      '<p class="meta" style="margin-top:16px"><a href="#" onclick="openGearArticle(\'\');return false;">← Back to all buyer’s guides</a></p></div>';
+    var head='<p class="meta"><a href="#" onclick="openGearArticle(\'\');return false;">← All buyer’s guides</a></p>';
+    var foot='<p class="meta" style="margin-top:16px"><a href="#" onclick="openGearArticle(\'\');return false;">← Back to all buyer’s guides</a></p>';
+    if(c.thickness_groups){
+      // one buyer's guide split into thickness pages, chosen with a pill nav
+      var groups=c.thickness_groups;
+      var grp=groups.filter(function(x){return x.thickness===GEAR_THICK;})[0]||
+              groups.filter(function(x){return x.thickness==='3mm';})[0]||groups[0];
+      GEAR_THICK=grp.thickness;
+      var tipsW=(grp.tips||c.tips||[]).map(function(t){return '<li>'+t+'</li>';}).join('');
+      g.innerHTML='<div class="article gear-article" style="grid-column:1/-1">'+head+
+        '<h2 style="margin:6px 0 10px">'+(c.title||('Top '+c.category))+'</h2>'+
+        '<p class="gentry-review" style="max-width:80ch">'+(c.article_intro||'')+'</p>'+
+        thickNav(c)+
+        '<p class="thick-lead">'+(grp.label||grp.thickness)+(grp.water?' · '+grp.water:'')+'</p>'+
+        (grp.article_intro?'<p class="gentry-review" style="max-width:80ch">'+grp.article_intro+'</p>':'')+
+        (tipsW?'<div class="tipbox"><b>What to look for</b><ul>'+tipsW+'</ul></div>':'')+
+        grp.items.map(function(it){return gearEntry(it,c.category);}).join('')+
+        foot+'</div>';
+    }else{
+      var tips=(c.tips||[]).map(function(t){return '<li>'+t+'</li>';}).join('');
+      g.innerHTML='<div class="article gear-article" style="grid-column:1/-1">'+head+
+        '<h2 style="margin:6px 0 10px">'+(c.title||('Top 10 '+c.category))+'</h2>'+
+        '<p class="gentry-review" style="max-width:80ch">'+(c.article_intro||'')+'</p>'+
+        (tips?'<div class="tipbox"><b>What to look for</b><ul>'+tips+'</ul></div>':'')+
+        c.items.map(function(it){return gearEntry(it,c.category);}).join('')+
+        foot+'</div>';
+    }
   }
   applyIcons();
 }

@@ -1802,335 +1802,1125 @@
   },
   {
    "category": "Wetsuits",
-   "items": [
-    {
-     "rank": 1,
-     "name": "Fourth Element Proteus II",
-     "blurb": "Warmth beyond its millimetres: fleece-lined chest and back panels trap a stable layer of water over your core where heat loss is fastest, while high-stretch limbs keep the donning fight short.",
-     "image": "assets/gear/fourth-element-proteus-ii.jpg",
-     "options": [
-      {
-       "store": "Paragon Dive Store",
-       "price_usd": 765,
-       "url": "https://www.paragondivestore.com/products/fourth-element-proteus-ii-5mm-wetsuit-mens"
-      },
-      {
-       "store": "House of Scuba",
-       "price_usd": 795,
-       "url": "https://www.houseofscuba.com/products/proteus"
-      },
-      {
-       "store": "Fourth Element",
-       "price_usd": 804,
-       "url": "https://fourthelement.com/product/mens-proteus-ii-5mm-diving-wetsuit/"
-      }
-     ],
-     "review": "Warmth beyond its millimetres: fleece-lined chest and back panels trap a stable layer of water over your core where heat loss is fastest, while high-stretch limbs keep the donning fight short. Glued and blind-stitched seams stop flush-through. The cut fits athletic and ordinary bodies alike — this is the suit divers replace with the same suit.",
-     "specs": {
-      "Thickness": "3mm, 5mm",
-      "Material": "Limestone neoprene",
-      "Seams": "Glued, stitched + taped",
-      "Zip": "Back",
-      "Lining": "Hexcore + Thermoflex",
-      "Water temp": "19-30°C (5mm 19°C+)"
-     }
-    },
-    {
-     "rank": 2,
-     "name": "Scubapro Everflex Yulex Steamer",
-     "blurb": "The first mainstream dive steamer built entirely from natural-rubber Yulex instead of petroleum neoprene, cutting the manufacturing footprint dramatically with no measurable loss of warmth or stretch.",
-     "image": "assets/gear/scubapro-everflex-yulex-steamer.jpg",
-     "options": [
-      {
-       "store": "Scuba.com",
-       "price_usd": 419.95,
-       "url": "https://www.scuba.com/p-scpey3m/scubapro-3-2mm-everflex-yulex-mens-full-wetsuit"
-      },
-      {
-       "store": "House of Scuba",
-       "price_usd": 429,
-       "url": "https://www.houseofscuba.com/products/scubapro-3-2mm-mens-everflex-yulex-steamer-wetsuit"
-      },
-      {
-       "store": "Scubapro",
-       "price_usd": 429,
-       "url": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/everflex-yulex-dive-steamer-men-3-2mm"
-      }
-     ],
-     "review": "The first mainstream dive steamer built entirely from natural-rubber Yulex instead of petroleum neoprene, cutting the manufacturing footprint dramatically with no measurable loss of warmth or stretch. Solvent-free glues and recycled linings finish the job, and the seams are glued and blind-stitched like any premium suit. The sustainable choice no longer asks for a performance sacrifice.",
-     "specs": {
-      "Thickness": "3/2, 5/4, 7.5/5mm",
-      "Material": "Yulex natural rubber",
-      "Seams": "Glued + blindstitched",
-      "Zip": "Back",
-      "Lining": "Diamond Span fleece",
-      "Water temp": "10-24°C (by thickness)"
-     }
-    },
-    {
-     "rank": 3,
-     "name": "Bare Reactive",
-     "blurb": "The lining is the point: ceramic-infused fibres reflect your body heat back as infrared, measurably extending comfortable time in the water over a standard-lined suit of the same thickness.",
-     "image": "assets/gear/bare-reactive.jpg",
-     "options": [
-      {
-       "store": "Amazon",
-       "price_usd": 599,
-       "url": "https://www.amazon.com/Bare-Reactive-Mens-Full-Wetsuit/dp/B01KU45MPI"
-      },
-      {
-       "store": "Divers Supply",
-       "price_usd": 599.95,
-       "url": "https://www.divers-supply.com/bare-5mm-reactive-full-black.html"
-      },
-      {
-       "store": "Scuba.com",
-       "price_usd": 629.95,
-       "url": "https://www.scuba.com/p-bre5rfwm/bare-5mm-reactive-mens-full-wetsuit"
-      }
-     ],
-     "review": "The lining is the point: ceramic-infused fibres reflect your body heat back as infrared, measurably extending comfortable time in the water over a standard-lined suit of the same thickness. Full-stretch neoprene keeps mobility high, and seams are glued and blind-stitched. The suit to choose if you're always the first person cold on the boat.",
-     "specs": {
-      "Thickness": "3mm, 5mm, 7mm",
-      "Material": "Full-stretch neoprene",
-      "Seams": "No-stitch (NST) sealed",
-      "Zip": "Back",
-      "Lining": "Graphene Omnired IR",
-      "Water temp": "10-29°C (by thickness)"
-     }
-    },
-    {
-     "rank": 4,
-     "name": "Bare Evoke (Women's)",
-     "blurb": "The same heat-reflecting interior technology in a pattern engineered for women from the first stitch — not a shrunk men's suit: proportions through the hips, bust and torso that seal without pressure points.",
-     "image": "assets/gear/bare-evoke-women-s.jpg",
-     "options": [
-      {
-       "store": "Amazon",
-       "price_usd": 589,
-       "url": "https://www.amazon.com/Wetsuit-Neoprene-Combined-Graphene-Comfortable/dp/B0B46G8X4Q"
-      },
-      {
-       "store": "House of Scuba",
-       "price_usd": 599.95,
-       "url": "https://www.houseofscuba.com/products/wet476"
-      },
-      {
-       "store": "Scuba.com",
-       "price_usd": 614.95,
-       "url": "https://www.scuba.com/p-breef5w/bare-5mm-evoke-womens-full-wetsuit"
-      }
-     ],
-     "review": "The same heat-reflecting interior technology in a pattern engineered for women from the first stitch — not a shrunk men's suit: proportions through the hips, bust and torso that seal without pressure points. Warmth performance matches its sibling suit millimetre for millimetre. Consistently the women's suit that gets repurchased in the next thickness.",
-     "specs": {
-      "Thickness": "3mm, 5mm, 7mm",
-      "Material": "Full-stretch neoprene",
-      "Seams": "No-stitch (NST) sealed",
-      "Zip": "Back",
-      "Lining": "Graphene Omnired IR",
-      "Water temp": "7-29°C (by thickness)"
-     }
-    },
-    {
-     "rank": 5,
-     "name": "Mares Reef",
-     "blurb": "A 3mm tropical workhorse: abrasion-resistant panels where ladders, tanks and reef contact chew suits, stretchier neoprene where you bend.",
-     "image": "assets/gear/mares-reef.jpg",
-     "options": [
-      {
-       "store": "Mike's Dive Store",
-       "price_usd": 120.49,
-       "url": "https://www.mikesdivestore.com/products/mares-reef-3mm-mens-wetsuit"
-      },
-      {
-       "store": "Mareshop",
-       "price_usd": 129,
-       "url": "https://mareshop.eu/en/products/mares-reef-man-3mm-412382-n-a"
-      },
-      {
-       "store": "Mike's Dive Store",
-       "price_usd": 169,
-       "url": "https://www.mikesdivestore.com/products/mares-reef-3mm-mens-wetsuit"
-      }
-     ],
-     "review": "A 3mm tropical workhorse: abrasion-resistant panels where ladders, tanks and reef contact chew suits, stretchier neoprene where you bend. Flatlock seams keep it comfortable in warm water and the price keeps it realistic to own rather than rent. Dive operators buy them by the crate — the strongest kind of field testing there is.",
-     "specs": {
-      "Thickness": "3mm",
-      "Material": "Elastic neoprene",
-      "Seams": "Flatlock",
-      "Zip": "Back",
-      "Lining": "Nylon, Aquastop seals",
-      "Water temp": "24-30°C"
-     }
-    },
-    {
-     "rank": 6,
-     "name": "Cressi Fast",
-     "blurb": "A proper 5mm back-zip steamer priced under most 3mm suits: anatomically pre-bent arms and legs, smooth-skin wrist and ankle seals that slow flushing, and durable stitching throughout.",
-     "image": "assets/gear/cressi-fast.jpg",
-     "options": [
-      {
-       "store": "Mike's Dive Store",
-       "price_usd": 225,
-       "url": "https://www.mikesdivestore.com/products/cressi-fast-5mm-mens-wetsuit"
-      },
-      {
-       "store": "Amazon",
-       "price_usd": 249,
-       "url": "https://www.amazon.com/Cressi-5mm-Fast-Full-Wetsuit/dp/B07QGWJBLH"
-      },
-      {
-       "store": "Cressi America",
-       "price_usd": 349.95,
-       "url": "https://cressiamerica.com/products/fast-man-5mm-wetsuit"
-      }
-     ],
-     "review": "A proper 5mm back-zip steamer priced under most 3mm suits: anatomically pre-bent arms and legs, smooth-skin wrist and ankle seals that slow flushing, and durable stitching throughout. Donning takes patience, as with any value 5mm. For temperate-water divers who need real thermal protection without a premium outlay, this is the shortlist.",
-     "specs": {
-      "Thickness": "3mm, 5mm, 7mm",
-      "Material": "Double-lined neoprene",
-      "Seams": "Glued + blindstitched",
-      "Zip": "Back",
-      "Lining": "Elastic nylon both sides",
-      "Water temp": "10-24°C (by thickness)"
-     }
-    },
-    {
-     "rank": 7,
-     "name": "Aqua Lung AquaFlex",
-     "blurb": "Ultra-stretch neoprene through the entire suit, not just panels: it goes on and off with an ease owners of stiffer suits don't believe until they try it, and the sizing run accommodates real-world bodies unusually well.",
-     "image": "assets/gear/aqua-lung-aquaflex.jpg",
-     "options": [
-      {
-       "store": "Scuba.com",
-       "price_usd": 359,
-       "url": "https://www.scuba.com/p-udra5fm/aqualung-5mm-aquaflex-mens-full-wetsuit"
-      },
-      {
-       "store": "Amazon",
-       "price_usd": 389,
-       "url": "https://www.amazon.com/Aqua-Lung-Aquaflex-5mm-Wetsuit/dp/B0C43Q4QLQ"
-      },
-      {
-       "store": "Aqualung",
-       "price_usd": 429,
-       "url": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-5mm"
-      }
-     ],
-     "review": "Ultra-stretch neoprene through the entire suit, not just panels: it goes on and off with an ease owners of stiffer suits don't believe until they try it, and the sizing run accommodates real-world bodies unusually well. Glued and blind-stitched seams; available in 3, 5 and 7mm to cover tropical through temperate water.",
-     "specs": {
-      "Thickness": "3mm, 5mm, 7mm",
-      "Material": "4-way stretch neoprene",
-      "Seams": "Glued + blindstitched",
-      "Zip": "Back",
-      "Lining": "Thermal chest/back panels",
-      "Water temp": "10-30°C (by thickness)"
-     }
-    },
-    {
-     "rank": 8,
-     "name": "O'Neill Reactor-2",
-     "blurb": "A surf-bred suit that crossed over to diving for good reasons: fluid seam welds outside the stitching keep water out, ultra-stretch panels make it comfortable all day, and the price forgives a first season's scrapes.",
-     "image": "assets/gear/o-neill-reactor-2.jpg",
-     "options": [
-      {
-       "store": "Amazon",
-       "price_usd": 99.95,
-       "url": "https://www.amazon.com/ONeill-Mens-Reactor-Back-Wetsuit/dp/B07885K73W"
-      },
-      {
-       "store": "Wetsuit Wearhouse",
-       "price_usd": 109.95,
-       "url": "https://www.wetsuitwearhouse.com/collections/oneill-reactor-2-wetsuits"
-      },
-      {
-       "store": "O'Neill",
-       "price_usd": 114.95,
-       "url": "https://us.oneill.com/products/5040-a00-reactor-3-2-back-zip-full"
-      }
-     ],
-     "review": "A surf-bred suit that crossed over to diving for good reasons: fluid seam welds outside the stitching keep water out, ultra-stretch panels make it comfortable all day, and the price forgives a first season's scrapes. The 3/2mm build is made for genuinely warm water — treat it as a tropical dive suit and it excels.",
-     "specs": {
-      "Thickness": "3/2mm",
-      "Material": "UltraFlex neoprene",
-      "Seams": "Flatlock",
-      "Zip": "Back",
-      "Lining": "Smoothskin chest panel",
-      "Water temp": "12-17°C+"
-     }
-    },
-    {
-     "rank": 9,
-     "name": "Waterproof W30",
-     "blurb": "A 2.5mm tropical suit built with cold-water discipline: anti-slip shoulder print to hold a BCD in place, a proper zip garage, wrist and ankle seals that actually stop flushing, and patterning taken from the company's expedition suits.",
-     "image": "assets/gear/waterproof-w30.jpg",
-     "options": [
-      {
-       "store": "Mike's Dive Store",
-       "price_usd": 207,
-       "url": "https://www.mikesdivestore.com/products/waterproof-w30-2-5mm-wetsuit-womens-2019"
-      },
-      {
-       "store": "ScubaToys",
-       "price_usd": 229,
-       "url": "https://scubatoys.com/products/7283-waterproof-w30-25mm-full-wetsuit/"
-      },
-      {
-       "store": "Scuba.com",
-       "price_usd": 239,
-       "url": "https://www.scuba.com/p-wpgw30fmn/waterproof-25mm-w30-mens-full-wetsuit"
-      }
-     ],
-     "review": "A 2.5mm tropical suit built with cold-water discipline: anti-slip shoulder print to hold a BCD in place, a proper zip garage, wrist and ankle seals that actually stop flushing, and patterning taken from the company's expedition suits. The premium choice when a shorty won't do but heat isn't the enemy.",
-     "specs": {
-      "Thickness": "2.5mm",
-      "Material": "Neoprene",
-      "Seams": "Flatlock",
-      "Zip": "Back",
-      "Lining": "Nylon, rolled seals",
-      "Water temp": "25°C+"
-     }
-    },
-    {
-     "rank": 10,
-     "name": "Henderson Thermoprene",
-     "blurb": "The fleet standard of dive shops across the Americas: dependable warmth, a neoprene compound with meaningfully more stretch than standard, and a size chart from XS to 5XL with short and tall variants — nearly every diver fits one off the rack.",
-     "image": "assets/gear/henderson-thermoprene.jpg",
-     "options": [
-      {
-       "store": "Wetsuit Wearhouse",
-       "price_usd": 151.95,
-       "url": "https://www.wetsuitwearhouse.com/products/a830mb-01"
-      },
-      {
-       "store": "Amazon",
-       "price_usd": 159,
-       "url": "https://www.amazon.com/Henderson-THERMOPRENE-Mens-Wetsuit-Length/dp/B07BX5LMMP"
-      },
-      {
-       "store": "Scuba.com",
-       "price_usd": 199.95,
-       "url": "https://www.scuba.com/p-hndtj3pm/henderson-thermoprene-pro-mens-3mm-jumpsuit"
-      }
-     ],
-     "review": "The fleet standard of dive shops across the Americas: dependable warmth, a neoprene compound with meaningfully more stretch than standard, and a size chart from XS to 5XL with short and tall variants — nearly every diver fits one off the rack. Panels are repairable and replaceable, which keeps these suits in service for years.",
-     "specs": {
-      "Thickness": "3mm, 5mm, 7mm",
-      "Material": "180% stretch neoprene",
-      "Seams": "Glued + blindstitched",
-      "Zip": "Back",
-      "Lining": "Nylon",
-      "Water temp": "9-26°C (by thickness)"
-     }
-    }
-   ],
    "title": "Top Wetsuits in 2026",
-   "article_intro": "Wetsuit buying is thickness-first: 3mm for water above 24°C, 5mm for 18-24°C, 7mm or semi-dry below that. But within a thickness class the differences are real — panel stretch, seam construction, zipper quality and the linings that decide whether a suit feels warm the moment you pull it on. This list leans on long-term owner experience across thousands of dives. Fourth Element's Proteus II keeps its crown for warmth-to-flexibility, Bare's Reactive and Evoke bring the infrared-reflecting linings from their drysuit line, and Scubapro's Everflex Yulex leads the industry's move away from petroleum neoprene entirely.",
-   "tips": [
-    "Fit beats thickness: a snug 3mm outperforms a baggy 5mm because trapped water stays put.",
-    "Glued-and-blindstitched seams keep water out; flatlock seams are for warm water only.",
-    "Back-zips are easy solo; front-zips flex more and seal better but need practice.",
-    "Rinse in fresh water and dry inside-out in shade — sun-baked neoprene loses its stretch in a season."
+   "article_intro": "Wetsuit thickness is really a water-temperature decision: the colder the water, the more neoprene you want between you and it. We've split our picks the way you'll actually shop — by millimetres — so you can jump straight to the suits built for the water you're diving. Pick a thickness below, then compare the best suits at that rating alongside their cheapest prices.",
+   "thickness_groups": [
+    {
+     "thickness": "2mm",
+     "pill": "2 mm",
+     "label": "2 mm / shorty — warm tropical",
+     "water": "~27-30°C+",
+     "sub": "27–30°C+",
+     "article_intro": "When the water sits in the high twenties, a full 5 mm is overkill — you want just enough neoprene to take the edge off long dives and shield you from stings and sun. These thin full suits and shorties give you freedom of movement and pack down to nothing in a carry-on, which is exactly what you want for warm-water reef trips.",
+     "tips": [
+      "A shorty covers the core and leaves arms and legs free — cooler and cheaper; a thin full suit adds sting and sun protection on longer or deeper dives.",
+      "Flatlock seams are fine at this thickness: they lie flat and comfortable, and a little water exchange is no problem in warm water.",
+      "Look for a back-zip with a long leash and smooth-skin neck for easy solo entry between dives."
+     ],
+     "items": [
+      {
+       "rank": 1,
+       "name": "O'Neill Reactor-2 2mm Back Zip Springsuit",
+       "blurb": "A stretchy, bombproof warm-water shorty that shrugs off boat decks and tank abrasion.",
+       "review": "The Reactor-2 is a 2mm short-sleeve, short-leg springsuit built from super-stretch UltraFlex neoprene, so it pulls on fast and never binds a diver reaching for valves or camera gear. Coverage over the core plus the smoothskin chest and back panel gives a light thermal edge and a buffer between your spine and the tank, while leaving arms and lower legs free for hot tropical water. The back-zip entry with a long pull leash makes it one of the easiest thin suits to self-don on a rocking dive boat.",
+       "image": "assets/gear/o-neill-reactor-2.jpg",
+       "specs": {
+        "Thickness": "2mm shorty",
+        "Material": "UltraFlex super-stretch neoprene",
+        "Seams": "Flatlock stitched",
+        "Zip": "Back zip with pull-tab leash",
+        "Lining": "Smoothskin chest/back panel, nylon interior",
+        "Water temp": "~24-30°C+",
+        "Fit": "Men's (women's cut also offered)"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 99.95,
+         "url": "https://www.scuba.com/p-onlr2ms/oneill-reactor-ii-2mm-mens-spring-shorty"
+        },
+        {
+         "store": "Amazon",
+         "price_usd": 104.95,
+         "url": "https://www.amazon.com/ONeill-Reactor-2-Sleeve-Spring-Wetsuit/dp/B0787GLM3Y"
+        },
+        {
+         "store": "O'Neill",
+         "price_usd": 124.95,
+         "url": "https://us.oneill.com/products/5041-a00-reactor-2-mm-back-zip-spring"
+        }
+       ]
+      },
+      {
+       "rank": 2,
+       "name": "ScubaPro Sport Shorty 2mm",
+       "blurb": "Buttery-soft 2mm neoprene cut specifically for the shoulder mobility divers need.",
+       "review": "Purpose-built for scuba, the Sport Shorty uses very soft 2mm neoprene with an inside-and-outside polyester lining that dries quickly and feels comfortable against skin over long tropical days. Its triathlon-style cut opens up range of motion through the shoulders and armpits, so nothing fights you when you're finning or working a reel. It is the ideal grab-and-go warm-water layer, adding a touch of core warmth and sun and sting protection without the bulk of a full suit.",
+       "image": "",
+       "specs": {
+        "Thickness": "2mm shorty",
+        "Material": "Super-soft 2mm neoprene",
+        "Seams": "Flatlock stitched",
+        "Zip": "Back zip",
+        "Lining": "Inside/outside polyester",
+        "Water temp": "~26-30°C+",
+        "Fit": "Men's (women's version available)"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 129.0,
+         "url": "https://www.divers-supply.com/scubapro-sport-shorty-2mm-mens.html"
+        },
+        {
+         "store": "DiveCatalog",
+         "price_usd": 139.0,
+         "url": "https://divecatalog.com/products/scubapro-sport-shorty-2-mm-men-shorty-scuba-diving-wetsuit"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 149.0,
+         "url": "https://www.scuba.com/p-scpsps2m/scubapro-2mm-sport-mens-shorty-wetsuit"
+        }
+       ]
+      },
+      {
+       "rank": 3,
+       "name": "Cressi Lido 2mm Shorty (Women's)",
+       "blurb": "An anatomically cut women's 2mm shorty that's light, flattering and easy to travel with.",
+       "review": "The Lido Shorty Lady is a hoodless 2mm one-piece shaped for a woman's anatomy, giving a snug, no-bunching fit that thin unisex suits rarely deliver. The double-lined super-stretch neoprene and a front YKK zip make it quick to pull on and off between dives, and the neoprene-hemmed sleeves and legs resist chafe. For very warm tropical water it's the standout budget pick, adding sun, sting and light abrasion protection with barely-there thermal load.",
+       "image": "",
+       "specs": {
+        "Thickness": "2mm shorty",
+        "Material": "Double-lined super-stretch nylon-2 neoprene",
+        "Seams": "Flat-stitched with scratch-resistant thread",
+        "Zip": "Front YKK zip",
+        "Lining": "Double nylon lining",
+        "Water temp": "~27-30°C+",
+        "Fit": "Women's-specific"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 59.0,
+         "url": "https://www.divers-supply.com/cressi-lido-2mm-ladies-shorty.html"
+        },
+        {
+         "store": "Cressi",
+         "price_usd": 69.0,
+         "url": "https://store.cressi.com/products/lido-shorty-lady"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 69.95,
+         "url": "https://www.scuba.com/p-csbswl/cressi-2mm-lido-womens-shorty-wetsuit"
+        }
+       ]
+      },
+      {
+       "rank": 4,
+       "name": "Bare 2mm Sport S-Flex Shorty",
+       "blurb": "Feather-light stretch neoprene at a price that makes it the easy warm-water carry-on.",
+       "review": "Bare's Sport S-Flex Shorty pairs 2mm neoprene with the brand's S-Flex stretch panels, so it moves with you and packs down small for tropical travel. Short arms and legs vent heat while the torso panel keeps your core comfortable and shields your back from the tank and BCD. It's an unfussy, well-priced shorty for divers who just want light coverage against sun, coral scrapes and stinging plankton in bathwater-warm seas.",
+       "image": "",
+       "specs": {
+        "Thickness": "2mm shorty",
+        "Material": "S-Flex stretch neoprene",
+        "Seams": "Flatlock stitched",
+        "Zip": "Back zip",
+        "Lining": "Nylon interior",
+        "Water temp": "~26-30°C+",
+        "Fit": "Men's (women's version available)"
+       },
+       "options": [
+        {
+         "store": "US Water Rescue",
+         "price_usd": 59.0,
+         "url": "https://www.uswaterrescue.com/products/bare-2mm-sport-shorty-mens"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 76.95,
+         "url": "https://www.scuba.com/p-bres2m/bare-2-mm-mens-sport-shorty"
+        },
+        {
+         "store": "Wetsuit Wearhouse",
+         "price_usd": 79.95,
+         "url": "https://www.wetsuitwearhouse.com/collections/bare-wetsuits-drysuits"
+        }
+       ]
+      },
+      {
+       "rank": 5,
+       "name": "Henderson Thermoprene Pro 3mm Front Zip Shorty",
+       "blurb": "A front-zip 3mm shorty with 250% stretch neoprene that donns almost like a jacket.",
+       "review": "The Thermoprene Pro shorty is built from Henderson's high-stretch neoprene that flexes up to 250%, and its front-zip entry makes it far easier to get into than a back-zip when you're solo on a boat. At a nominal 3mm it sits at the warmer end of tropical suits, so it's the pick for divers who chill easily, early-morning entries, or repetitive dive days in 27-28°C water. Glued and blind-stitched seams keep flushing low, and it doubles as a top layer over a jumpsuit if the water turns cooler.",
+       "image": "assets/gear/henderson-thermoprene.jpg",
+       "specs": {
+        "Thickness": "3mm shorty",
+        "Material": "Thermoprene Pro 250% stretch neoprene",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Front zip",
+        "Lining": "Nylon interior",
+        "Water temp": "~24-29°C",
+        "Fit": "Men's (women's version available)"
+       },
+       "options": [
+        {
+         "store": "Pleasure Sports",
+         "price_usd": 129.0,
+         "url": "https://www.pleasuresports.com/henderson-thermoprene-wetsuits-jumpsuits.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 139.95,
+         "url": "https://www.scuba.com/p-hndtps3fm/henderson-3mm-thermoprene-pro-mens-front-zip-shorty-wetsuit"
+        },
+        {
+         "store": "Wetsuit Wearhouse",
+         "price_usd": 144.95,
+         "url": "https://www.wetsuitwearhouse.com/collections/henderson-wetsuits"
+        }
+       ]
+      },
+      {
+       "rank": 6,
+       "name": "Aqualung HydroFlex 3mm Shorty",
+       "blurb": "Eco-minded, PAH-free stretch neoprene shorty tuned for warm-water scuba comfort.",
+       "review": "The HydroFlex shorty is made from non-petroleum-based, PAH-free neoprene that stretches up to 250%, giving a soft, unrestrictive fit for reef diving. Flatlock stitching lies flat against the skin and a V-shaped collar reduces neck chafe, while the short cut keeps you from overheating in tropical water. It's a smart choice for the diver who wants a warm-water shorty with a lighter environmental footprint without sacrificing flex or coverage.",
+       "image": "",
+       "specs": {
+        "Thickness": "3mm shorty",
+        "Material": "Non-petroleum PAH-free super-stretch neoprene",
+        "Seams": "Flatlock stitched",
+        "Zip": "Back zip",
+        "Lining": "Nylon interior",
+        "Water temp": "~25-30°C",
+        "Fit": "Men's (women's version available)"
+       },
+       "options": [
+        {
+         "store": "House of Scuba",
+         "price_usd": 129.0,
+         "url": "https://www.houseofscuba.com/products/srt72"
+        },
+        {
+         "store": "Aqualung",
+         "price_usd": 135.0,
+         "url": "https://us.aqualung.com/products/hydroflex-men-s-dive-shorty-3mm"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 139.95,
+         "url": "https://www.scuba.com/p-udrh3msh/aqualung-3mm-hydroflex-mens-shorty-wetsuit"
+        }
+       ]
+      },
+      {
+       "rank": 7,
+       "name": "ScubaPro Everflex Steamer 3/2mm",
+       "blurb": "A thin full-length steamer that punches above its millimeters for full-body coverage.",
+       "review": "For divers who prefer full arm-and-leg coverage in warm water, the Everflex Steamer wraps you in 3/2mm X-Foam neoprene with ScubaPro's preformed Pure Design panels that move naturally with the body. It runs unusually warm for its thickness while still venting well in the tropics, and the full cut gives total sun and sting protection over reefs and wrecks. Solvent-free water-based seam glue and a comfortable, articulated fit make it a durable one-suit answer for warm-to-mild dive travel.",
+       "image": "",
+       "specs": {
+        "Thickness": "2mm/3mm (3/2 full steamer)",
+        "Material": "100% Everflex X-Foam neoprene",
+        "Seams": "Glued and stitched, water-based Aqua glue",
+        "Zip": "Back zip",
+        "Lining": "Nylon interior",
+        "Water temp": "~16-24°C (warm end for full coverage)",
+        "Fit": "Men's (women's version available)"
+       },
+       "options": [
+        {
+         "store": "Dive Supply",
+         "price_usd": 269.0,
+         "url": "https://www.divesupply.com/product/scubapro-everflex-steamer-wetsuit-3-2-mm/"
+        },
+        {
+         "store": "BelowH2O",
+         "price_usd": 279.0,
+         "url": "https://belowh2o.com/product/scubapro-everflex-3-2-mens/"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 299.0,
+         "url": "https://www.scuba.com/p-scpe32m/scubapro-everflex-steamer-3-2mm-mens-wetsuit-black"
+        }
+       ]
+      },
+      {
+       "rank": 8,
+       "name": "Cressi Lido 2mm Full Wetsuit",
+       "blurb": "Full arm-and-leg 2mm coverage that's still cool enough for the warmest reefs.",
+       "review": "The Lido full suit takes Cressi's flexible nylon-2 neoprene into a lightweight 2mm steamer, giving head-to-toe sun and sting protection for divers who burn or react to jellyfish yet find a 3mm too warm. The front YKK zip is easy to manage solo, and the thin, stretchy build travels light and dries fast between dives. It's an affordable full-coverage option for very warm tropical water where a shorty leaves too much skin exposed.",
+       "image": "",
+       "specs": {
+        "Thickness": "2mm full suit",
+        "Material": "Flexible nylon-2 neoprene",
+        "Seams": "Sewn seams",
+        "Zip": "Front YKK zip",
+        "Lining": "Double nylon lining",
+        "Water temp": "~26-30°C+",
+        "Fit": "Men's (women's version available)"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 99.95,
+         "url": "https://www.scuba.com/p-csbl2jm/cressi-2mm-lido-mens-full-wetsuit"
+        },
+        {
+         "store": "Divers Supply",
+         "price_usd": 104.95,
+         "url": "https://www.divers-supply.com/cressi-lido-2mm-ladies-shorty.html"
+        },
+        {
+         "store": "Cressi USA",
+         "price_usd": 109.0,
+         "url": "https://www.cressiusa.com/catalogue/details.asp?id=1333"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "thickness": "3mm",
+     "pill": "3 mm",
+     "label": "3 mm — tropical / warm water",
+     "water": "~24-29°C",
+     "sub": "24–29°C",
+     "article_intro": "The 3 mm full suit is the workhorse of tropical scuba diving: warm enough for back-to-back dives on a Caribbean or Coral-Triangle reef, thin enough to stay comfortable and easy to travel with. If you own one wetsuit for warm-water trips, this is it.",
+     "tips": [
+      "Glued-and-blindstitched seams keep water out far better than flatlock, and matter more as your dives get longer.",
+      "A snug fit is what keeps you warm — a 3 mm that fits well beats a 5 mm that gaps at the lower back and floods.",
+      "Fabric-lined interiors slide on easily when you're damp; extra chest and back panels add real warmth for the weight."
+     ],
+     "items": [
+      {
+       "rank": 1,
+       "name": "Fourth Element Proteus II 3mm",
+       "blurb": "The benchmark tropical dive suit: warmer, stretchier and tougher than almost anything else at 3mm.",
+       "review": "The Proteus II is a purpose-built scuba wetsuit that pairs a plush thermal fleece lining with high-stretch neoprene, so it swims warm for its thickness while staying easy to move in on multi-dive days. Glued and blind-stitched seams, reinforced knee pads and abrasion panels give it liveaboard-grade durability, and the anatomical cut hugs the torso to cut down on flushing. It is a premium pick for divers who want one high-performance suit for years of warm-water travel.",
+       "image": "assets/gear/fourth-element-proteus-ii.jpg",
+       "specs": {
+        "Thickness": "3mm",
+        "Material": "High-stretch neoprene with thermal fleece lining",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip with anti-flush spine flap",
+        "Lining": "Thermal fleece interior",
+        "Water temp": "~24-29°C",
+        "Fit": "Men's and women's cuts available"
+       },
+       "options": [
+        {
+         "store": "Fourth Element",
+         "price_usd": 692,
+         "url": "https://fourthelement.com/product/mens-proteus-ii-3mm/"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 692,
+         "url": "https://www.scuba.com/p-frtpm3/fourth-element-3mm-proteus-ii-mens-full-wetsuit"
+        },
+        {
+         "store": "Dive Right In Scuba",
+         "price_usd": 692,
+         "url": "https://www.diverightinscuba.com/proteus-ii-men-s-3-mm-wetsuit.html"
+        }
+       ]
+      },
+      {
+       "rank": 2,
+       "name": "Scubapro Definition Steamer 3mm",
+       "blurb": "One of the few suits engineered purely for divers, with an infrared fleece lining that punches above its 3mm rating.",
+       "review": "Built on Scubapro's Body Map System, the Definition Steamer uses a 3D cut and targeted material inserts so it fits close and stretches where a diver needs it. The infrared fleece interior reflects body heat back to the skin for extra warmth, while the limestone-based X-Foam neoprene is light, buoyancy-friendly and hard-wearing. It is a smart middle-ground choice for warm-water divers who want dive-specific features without a top-tier price.",
+       "image": "",
+       "specs": {
+        "Thickness": "3mm",
+        "Material": "X-Foam limestone neoprene, N2S construction",
+        "Seams": "Glued and sewn, flatlock",
+        "Zip": "Back zip",
+        "Lining": "Infrared fleece interior",
+        "Water temp": "Rated above ~22°C",
+        "Fit": "Men's and women's cuts available"
+       },
+       "options": [
+        {
+         "store": "House of Scuba",
+         "price_usd": 340,
+         "url": "https://www.houseofscuba.com/products/wet447"
+        },
+        {
+         "store": "DiveCatalog",
+         "price_usd": 349,
+         "url": "https://divecatalog.com/products/scubapro-definition-steamer-3-mm-mens-full-scuba-diving-wetsuit"
+        },
+        {
+         "store": "Amazon",
+         "price_usd": 359,
+         "url": "https://www.amazon.com/SCUBAPRO-Mens-Definition-Steamer-Wetsuit/dp/B082XDBXLS"
+        }
+       ]
+      },
+      {
+       "rank": 3,
+       "name": "Bare Reactive 3mm",
+       "blurb": "A stitch-free, graphene-lined suit that turns your own body heat into extra warmth with almost no seam leakage.",
+       "review": "The Reactive is one of the first dive suits built with no stitched seams, using Bare's No Stitch Technology to tape the seams inside and out and virtually eliminate flushing. Its Graphene Omnired lining weaves thermo-reactive minerals into the fabric to convert body heat back into warmth, and seamless underarms plus a long back zip make it comfortable and easy to don. It is an excellent choice for divers chasing maximum warmth and comfort from a slim tropical suit.",
+       "image": "assets/gear/bare-reactive.jpg",
+       "specs": {
+        "Thickness": "3mm",
+        "Material": "Ultra-stretch neoprene with Graphene Omnired lining",
+        "Seams": "Taped, no-stitch (NST)",
+        "Zip": "Long back zip (S-Lock)",
+        "Lining": "Graphene Omnired thermal lining",
+        "Water temp": "~24-29°C",
+        "Fit": "Men's (women's sold as Bare Evoke)"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 499,
+         "url": "https://www.scuba.com/p-bre3rfwm/bare-3mm-reactive-mens-full-wetsuit"
+        },
+        {
+         "store": "DIPNDIVE",
+         "price_usd": 499,
+         "url": "https://dipndive.com/products/bare-3mm-mens-reactive-full-wetsuit"
+        },
+        {
+         "store": "Dive Right In Scuba",
+         "price_usd": 519,
+         "url": "https://www.diverightinscuba.com/reactive-3mm-men-s-wetsuit-2021.html"
+        }
+       ]
+      },
+      {
+       "rank": 4,
+       "name": "Henderson Thermoprene Pro 3mm",
+       "blurb": "A front-zip workhorse with 250% stretch that pulls on easily and seals out flushing.",
+       "review": "The Thermoprene Pro uses a high-stretch neoprene rated to 250% elongation, so it slides on and moves with you far better than a standard suit while its double-glued, blind-stitched seams keep water out. The front-zip full suit is easy to don and doff solo and seals cleanly across the chest, and Henderson's build quality makes it a durable, do-everything tropical option. It is a dependable pick for divers who want an easy-entry suit that stays comfortable across a full dive day.",
+       "image": "assets/gear/henderson-thermoprene.jpg",
+       "specs": {
+        "Thickness": "3mm",
+        "Material": "Thermoprene Pro neoprene (250% stretch)",
+        "Seams": "Double glued and blind-stitched",
+        "Zip": "Front zip",
+        "Lining": "Nylon interior",
+        "Water temp": "~24-29°C",
+        "Fit": "Men's and women's cuts available"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 317,
+         "url": "https://www.scuba.com/p-hndtpj3mf/henderson-3mm-thermoprene-pro-mens-front-zip-full-wetsuit"
+        },
+        {
+         "store": "House of Scuba",
+         "price_usd": 329,
+         "url": "https://www.houseofscuba.com/collections/brand-henderson"
+        },
+        {
+         "store": "Divers Supply",
+         "price_usd": 339,
+         "url": "https://www.divers-supply.com/"
+        }
+       ]
+      },
+      {
+       "rank": 5,
+       "name": "Cressi Morea 3mm",
+       "blurb": "The honest value pick for pure warm-water diving: solid warmth and stretch without the premium markup.",
+       "review": "The Morea combines rubberised neoprene across the chest for warmth with Ultraspan neoprene in the arms and legs for easy donning and free movement, all in a one-piece back-zip design. Anatomical cuts and molded knee protection give it a good fit and real durability against reef abrasion, and a quality YKK zipper keeps the closure reliable. For divers who only hit tropical water, it delivers most of what the pricey suits do at a fraction of the cost.",
+       "image": "",
+       "specs": {
+        "Thickness": "3mm",
+        "Material": "Premium neoprene with Ultraspan arms and legs",
+        "Seams": "Glued and sewn",
+        "Zip": "Back zip (YKK)",
+        "Lining": "Nylon interior",
+        "Water temp": "Above ~22°C",
+        "Fit": "Men's and women's cuts available"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 199,
+         "url": "https://www.divers-supply.com/cressi-morea-mens-3mm-wetsuit.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 219,
+         "url": "https://www.scuba.com/p-csbm3jm/cressi-3mm-morea-mens-full-wetsuit"
+        },
+        {
+         "store": "Cressi",
+         "price_usd": 250,
+         "url": "https://cressiamerica.com/products/morea-wetsuit-man"
+        }
+       ]
+      },
+      {
+       "rank": 6,
+       "name": "Pinnacle Tempo XT 3mm Merino",
+       "blurb": "A merino-lined 3mm that dives noticeably warmer than its thickness and costs less than its rivals.",
+       "review": "The Tempo XT lines high-stretch elastiprene neoprene with natural merino wool, which Pinnacle credits with adding up to 35% more insulating power, so it feels cozy well into cooler tropical water. A 10mm spine flap and smoothskin seals behind the rear zip cut flushing, while ankle zips make it quick to get on and off. It is a standout value for divers who want extra warmth and comfort from a slim suit without paying flagship money.",
+       "image": "",
+       "specs": {
+        "Thickness": "3mm",
+        "Material": "Elastiprene neoprene with merino wool lining",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip with 10mm spine flap, ankle zips",
+        "Lining": "Merino wool interior",
+        "Water temp": "~24-29°C",
+        "Fit": "Men's and women's cuts available"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 229,
+         "url": "https://www.scuba.com/p-pinmetm3/pinnacle-merino-elastiprene-tempo-xt-3mm-mens-jumpsuit"
+        },
+        {
+         "store": "House of Scuba",
+         "price_usd": 299,
+         "url": "https://www.houseofscuba.com/products/wet345"
+        },
+        {
+         "store": "Coral Sea Scuba",
+         "price_usd": 329,
+         "url": "https://coralseascuba.com/pinnacle-tempo-xt-3mm-full-scuba-diving-wetsuit-mens-black/"
+        }
+       ]
+      },
+      {
+       "rank": 7,
+       "name": "Aqua Lung Aquaflex 3mm",
+       "blurb": "Four-way stretch neoprene with liquid-sealed seams for a comfortable, leak-resistant tropical fit.",
+       "review": "The Aquaflex is built from four-way stretch neoprene that moves freely and hugs the body, with liquid rubber-sealed seams that boost both warmth and durability against wear. Dive-specific touches like reinforced knees and a smooth, close chest seal make it a comfortable all-day suit for reef and liveaboard trips. It is a well-rounded mid-range choice for divers who prioritise stretch and comfort in warm water.",
+       "image": "assets/gear/aqua-lung-aquaflex.jpg",
+       "specs": {
+        "Thickness": "3mm",
+        "Material": "Four-way stretch neoprene",
+        "Seams": "Glued, blind-stitched and liquid rubber-sealed",
+        "Zip": "Back zip",
+        "Lining": "Nylon interior",
+        "Water temp": "~24-29°C",
+        "Fit": "Men's and women's cuts available"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 259,
+         "url": "https://www.divers-supply.com/aqua-lung-aquaflex-3mm-mens-wetsuit.html"
+        },
+        {
+         "store": "DIPNDIVE",
+         "price_usd": 275,
+         "url": "https://dipndive.com/products/aqua-lung-3mm-men-aquaflex-dive-wetsuit"
+        },
+        {
+         "store": "Aqua Lung",
+         "price_usd": 299,
+         "url": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-3mm"
+        }
+       ]
+      },
+      {
+       "rank": 8,
+       "name": "Bare Evoke 3mm Women's",
+       "blurb": "A women's-specific suit shaped by an all-female design team, with infrared lining for extra warmth.",
+       "review": "The Evoke is cut specifically for the female form for a close, flush-reducing fit, and its Omnired infrared lining is designed to boost circulation and body warmth on longer dives. Nylon-2 neoprene with glued and stitched seams and a back zip keeps it comfortable and durable across reef and liveaboard conditions. It is the standout women's pick for divers who want a warm, well-fitted 3mm suit for tropical travel.",
+       "image": "assets/gear/bare-evoke-women-s.jpg",
+       "specs": {
+        "Thickness": "3mm",
+        "Material": "Nylon-2 neoprene with Omnired infrared lining",
+        "Seams": "Glued and stitched",
+        "Zip": "Back zip",
+        "Lining": "Omnired infrared thermal lining",
+        "Water temp": "~24-29°C",
+        "Fit": "Women's"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 349,
+         "url": "https://www.scuba.com/p-breef3w/bare-3mm-evoke-womens-full-wetsuit"
+        },
+        {
+         "store": "Force-E Scuba",
+         "price_usd": 369,
+         "url": "https://www.force-e.com/huish-womens-3mm-evoke-full-wetsuit.html"
+        },
+        {
+         "store": "Lancaster Scuba",
+         "price_usd": 384,
+         "url": "https://lancasterscuba.com/products/bare-evoke-3mm-womens-full-wetsuit"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "thickness": "5mm",
+     "pill": "5 mm",
+     "label": "5 mm — temperate / subtropical",
+     "water": "~16-24°C",
+     "sub": "16–24°C",
+     "article_intro": "Once the water drops into the low twenties and teens, 5 mm is the sweet spot — enough neoprene for temperate and subtropical diving without the bulk of a 7 mm. Pair it with a hood and you can push a well-fitted 5 mm surprisingly cold.",
+     "tips": [
+      "Seals make the suit: smooth-skin or glide-skin wrist and ankle cuffs cut the cold-water flush that steals your warmth.",
+      "High-stretch neoprene is worth paying for at 5 mm — thicker rubber fights you unless it's engineered to flex.",
+      "Add a matching hood and vest for another few degrees; most of your heat is lost through your head and core."
+     ],
+     "items": [
+      {
+       "rank": 1,
+       "name": "Bare Reactive 5mm",
+       "blurb": "Graphene-lined full-stretch warmth that reflects your own body heat back at you.",
+       "review": "The Reactive is a 5mm full suit built around Bare's Elastek full-stretch neoprene, so it moves with you on descents and long bottom times without pinching at the shoulders. Its OMNIRED lining uses graphene-infused fibre to capture body heat and return it as infrared, adding several degrees of felt warmth in cooler temperate water. Limestone-based foam, glued-and-blind-stitched seams and reinforced knees make it a durable, warm all-rounder for divers who want premium comfort without a drysuit.",
+       "image": "assets/gear/bare-reactive.jpg",
+       "specs": {
+        "Thickness": "5mm",
+        "Material": "Elastek full-stretch limestone neoprene",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip",
+        "Lining": "OMNIRED graphene infrared lining",
+        "Water temp": "~16-22°C",
+        "Fit": "Men's"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 549.0,
+         "url": "https://www.divers-supply.com/bare-5mm-reactive-full-black.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 578.95,
+         "url": "https://www.scuba.com/p-bre5rfwm/bare-mens-5mm-reactive-full-wetsuit"
+        },
+        {
+         "store": "House of Scuba",
+         "price_usd": 599.0,
+         "url": "https://www.houseofscuba.com/products/wet465"
+        }
+       ]
+      },
+      {
+       "rank": 2,
+       "name": "Fourth Element Proteus II 5mm",
+       "blurb": "The benchmark for warmth in a full-stretch diving suit.",
+       "review": "The Proteus II is widely regarded as one of the warmest 5mm suits you can buy, thanks to a plush thermal lining, a Hydrolock inner neck seal and Glideskin wrist seals that together choke off flushing. It is cut from stretchy neoprene that gives excellent range of motion while keeping a snug, water-tight fit, and the recycled linings reflect the brand's sustainability focus. Divers choose it for prolonged dives in water around 19°C and up where they want maximum comfort and minimal heat loss.",
+       "image": "assets/gear/fourth-element-proteus-ii.jpg",
+       "specs": {
+        "Thickness": "5mm",
+        "Material": "Stretch neoprene with recycled thermal lining",
+        "Seams": "Glued and blind-stitched, taped stress points",
+        "Zip": "Back zip",
+        "Lining": "Thermal plush lining with Hydrolock neck seal",
+        "Water temp": "~19-24°C",
+        "Fit": "Men's and women's cuts"
+       },
+       "options": [
+        {
+         "store": "Scuba.com (Open Box)",
+         "price_usd": 699.0,
+         "url": "https://www.scuba.com/p-frtpm5ob/fourth-element-5mm-proteus-ii-mens-full-wetsuit-open-box"
+        },
+        {
+         "store": "Fourth Element",
+         "price_usd": 804.0,
+         "url": "https://fourthelement.com/product/mens-proteus-ii-5mm-diving-wetsuit/"
+        },
+        {
+         "store": "Amazon",
+         "price_usd": 815.0,
+         "url": "https://www.amazon.com/Fourth-Element-Proteus-Wetsuit-Black/dp/B07PFX7L4D"
+        }
+       ]
+      },
+      {
+       "rank": 3,
+       "name": "Scubapro Everflex Yulex 5/4mm",
+       "blurb": "Ultra-flexible plant-based neoprene that feels barely there underwater.",
+       "review": "The Everflex Yulex swaps petroleum foam for natural Yulex rubber, giving a soft, exceptionally stretchy 5/4mm suit that many divers rate as the most mobile in its class. A diagonal front zip and Comfort neck seal reduce flushing while making entry easy, and the fleecy inner lining wicks and warms across a broad temperate range. It is a strong pick for divers who prioritise flexibility and an eco-conscious build without giving up warmth.",
+       "image": "assets/gear/scubapro-everflex-yulex-steamer.jpg",
+       "specs": {
+        "Thickness": "5/4mm",
+        "Material": "Yulex natural rubber neoprene",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Front diagonal zip",
+        "Lining": "Diamond Span fleece lining",
+        "Water temp": "~16-22°C",
+        "Fit": "Men's (women's cut available)"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 458.0,
+         "url": "https://www.scuba.com/p-scpey5m/scubapro-5-4mm-everflex-yulex-mens-full-wetsuit"
+        },
+        {
+         "store": "Divers Supply",
+         "price_usd": 479.0,
+         "url": "https://www.divers-supply.com/scubapro-everflex-yulex-steamer-5-4-men.html"
+        },
+        {
+         "store": "Amazon",
+         "price_usd": 529.0,
+         "url": "https://www.amazon.com/ScubaPro-Mens-Everflex-Steamer-Wetsuit/dp/B0195Y4CFA"
+        }
+       ]
+      },
+      {
+       "rank": 4,
+       "name": "Henderson Thermoprene Pro 5mm",
+       "blurb": "A do-everything 5mm workhorse backed by a 10-year seam warranty.",
+       "review": "The Thermoprene Pro uses Henderson's 250%-stretch neoprene, a big jump over the original, so it pulls on easily and flexes through the full diving range. Seams are minimised, then double-glued and blind-stitched, and a back zip with a leashed pull tab keeps donning simple even solo. Made and warrantied in the USA for a decade, it is the reliable, good-value choice for divers who want durability and warmth without a premium price.",
+       "image": "assets/gear/henderson-thermoprene.jpg",
+       "specs": {
+        "Thickness": "5mm",
+        "Material": "Thermoprene Pro 250%-stretch neoprene",
+        "Seams": "Double-glued and blind-stitched",
+        "Zip": "Back zip",
+        "Lining": "Nylon jersey lining",
+        "Water temp": "~16-23°C",
+        "Fit": "Men's (women's cut available)"
+       },
+       "options": [
+        {
+         "store": "Wetsuit Wearhouse",
+         "price_usd": 349.95,
+         "url": "https://www.wetsuitwearhouse.com/products/ap850mb"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 369.95,
+         "url": "https://www.scuba.com/p-hndtj5pm/henderson-5mm-thermoprene-pro-mens-full-wetsuit"
+        },
+        {
+         "store": "House of Scuba",
+         "price_usd": 389.0,
+         "url": "https://www.houseofscuba.com/products/wet559"
+        }
+       ]
+      },
+      {
+       "rank": 5,
+       "name": "Aqua Lung Aquaflex 5mm",
+       "blurb": "Four-way stretch and Canadian-style seals for stretch, comfort and warmth.",
+       "review": "The Aquaflex is a long-standing favourite built from four-way stretch neoprene that balances easy movement with solid thermal protection in cooler temperate water. On the 5mm it adds Canadian seals at the wrists and ankles to limit water entry, plus abrasion pads and a comfortable collar for long dives. It is a dependable mid-range suit for divers who want proven warmth and fit without stepping up to flagship money.",
+       "image": "assets/gear/aqua-lung-aquaflex.jpg",
+       "specs": {
+        "Thickness": "5mm",
+        "Material": "Four-way stretch neoprene",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip",
+        "Lining": "Nylon jersey with Canadian wrist and ankle seals",
+        "Water temp": "~16-22°C",
+        "Fit": "Men's (women's cut available)"
+       },
+       "options": [
+        {
+         "store": "Exotic Aquatics",
+         "price_usd": 361.0,
+         "url": "https://www.exoticaquaticsscuba.com/shop/scuba/neoprene/5mm-aqualung-aquaflex-wetsuit/"
+        },
+        {
+         "store": "Divers Supply",
+         "price_usd": 375.0,
+         "url": "https://www.divers-supply.com/aqua-lung-aquaflex-5mm-mens.html"
+        },
+        {
+         "store": "House of Scuba",
+         "price_usd": 399.0,
+         "url": "https://www.houseofscuba.com/products/wet484"
+        }
+       ]
+      },
+      {
+       "rank": 6,
+       "name": "Cressi Castoro 5mm",
+       "blurb": "Italian-engineered double-lined warmth at an unbeatable entry price.",
+       "review": "The Castoro is a rugged 5mm double-lined one-piece with a strong YKK back zip and Aquastop under-zip baffle to cut water infiltration. Smooth-neoprene Aquastop seals at the wrists and ankles, pre-shaped legs and anti-wear inserts on the knees and shins make it comfortable to kick and hard to wear out. For divers wanting a warm, durable temperate-water suit on a tight budget, it is one of the best values on the market.",
+       "image": "",
+       "specs": {
+        "Thickness": "5mm",
+        "Material": "Double-lined Nylon II neoprene",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip (YKK)",
+        "Lining": "Double nylon lining, Metallite-covered seals",
+        "Water temp": "~17-24°C",
+        "Fit": "Men's (women's Castoro Lady available)"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 167.0,
+         "url": "https://www.divers-supply.com/cressi-castoro-man-5mm.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 199.95,
+         "url": "https://www.scuba.com/p-csbc2m/cressi-5mm-castoro-mens-full-wetsuit"
+        },
+        {
+         "store": "Amazon",
+         "price_usd": 219.0,
+         "url": "https://www.amazon.com/One-Piece-Wetsuit-Durable-Neoprene-Castoro/dp/B083Y3GHH9"
+        }
+       ]
+      },
+      {
+       "rank": 7,
+       "name": "Bare Nixie Ultra 5mm Women's",
+       "blurb": "A women's-specific 5mm with graphene warmth cut for a true female fit.",
+       "review": "The Nixie Ultra is engineered on a women's-specific pattern, so it fits through the torso, hips and shoulders far better than a unisex suit for less flushing and more comfort. It shares Bare's full-stretch neoprene and OMNIRED graphene lining that reflects body heat back as infrared warmth, with a redesigned collar and ankle zips that make it easy to don and doff. It is the standout choice for women diving temperate and subtropical water who want premium warmth and mobility.",
+       "image": "",
+       "specs": {
+        "Thickness": "5mm",
+        "Material": "Full-stretch limestone neoprene",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip with collar zip and ankle zips",
+        "Lining": "OMNIRED graphene infrared lining",
+        "Water temp": "~16-22°C",
+        "Fit": "Women's"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 449.95,
+         "url": "https://www.scuba.com/p-bre5nuf/bare-5mm-nixie-ultra-full-suit-for-women"
+        },
+        {
+         "store": "Divers Supply",
+         "price_usd": 459.0,
+         "url": "https://www.divers-supply.com/5mm-nixie-ultra-wetsuit.html"
+        },
+        {
+         "store": "Dive Right in Scuba",
+         "price_usd": 479.0,
+         "url": "https://www.diverightinscuba.com/nixie-ultra-5mm-women-s-wetsuit.html"
+        }
+       ]
+      },
+      {
+       "rank": 8,
+       "name": "Scubapro Definition Steamer 5mm",
+       "blurb": "A body-mapped 5mm that fits like a glove and insulates like a flagship.",
+       "review": "The Definition Steamer is cut with Scubapro's Body Map System, using 3D tailoring and stretch panels so it hugs the body and cuts internal water movement that steals heat. An Ultraspan chest panel and Stretchtec fabric add mobility, while petroleum-free X-Foam neoprene delivers efficient heat retention rated for a Class B temperate range. Reinforced shoulder, elbow and knee pads and double-zippered seals make it a warm, hard-wearing pick for divers who want a tailored high-end fit.",
+       "image": "",
+       "specs": {
+        "Thickness": "5mm",
+        "Material": "X-Foam limestone neoprene with Ultraspan and Stretchtec panels",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip",
+        "Lining": "Nylon jersey lining",
+        "Water temp": "~16-18°C",
+        "Fit": "Men's (women's cut available)"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 499.0,
+         "url": "https://www.divers-supply.com/scubapro-definition-steamer-5mm-mens.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 529.0,
+         "url": "https://www.scuba.com/products/scubapro-definition-steamer-5mm-mens-black-blue"
+        },
+        {
+         "store": "House of Scuba",
+         "price_usd": 559.0,
+         "url": "https://www.houseofscuba.com/products/wet473"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "thickness": "7mm",
+     "pill": "7 mm",
+     "label": "7 mm — cold water",
+     "water": "~10-18°C",
+     "sub": "10–18°C",
+     "article_intro": "7 mm is where wetsuit diving meets genuinely cold water — kelp forests, quarries, temperate reefs and the shoulder seasons. A good one seals at the wrists, ankles and neck so the thin layer of water you warm stays put, and pairs with a hood, gloves and boots for full cold-water protection.",
+     "tips": [
+      "Sealed or smooth-skin cuffs and a snug neck are non-negotiable at 7 mm — an unsealed suit flushes and you'll get cold fast.",
+      "Expect to add weight: thick neoprene is buoyant, so plan your weighting and check trim on the first dive.",
+      "A semi-dry with glide-skin seals holds a warmer water layer than a plain 7 mm — worth it if you dive cold often."
+     ],
+     "items": [
+      {
+       "rank": 1,
+       "name": "Henderson Thermoprene Pro 7mm",
+       "blurb": "The default-choice cold-water suit: 250% super-stretch neoprene that dives above its price bracket.",
+       "review": "The Thermoprene Pro is a full 7mm one-piece built from ultra-flexible neoprene that stretches to roughly 250%, so it seals close to the body without fighting you when you kit up. Glued-and-blindstitched seams keep flushing low, the back zip runs on a long leash for easy solo donning, and glideskin collar and cuff seals trim the trickle of cold water. It is the suit most divers land on for temperate and cold seas because it balances warmth, mobility and durability without a premium price.",
+       "image": "assets/gear/henderson-thermoprene.jpg",
+       "specs": {
+        "Thickness": "7mm",
+        "Material": "Thermoprene Pro super-stretch neoprene (up to 250% stretch)",
+        "Seams": "Glued and blindstitched, spot-taped stress points",
+        "Zip": "Back zip with pull-tab leash",
+        "Lining": "Nylon plush interior with glideskin seals",
+        "Water temp": "~10-18°C",
+        "Fit": "Men's / unisex (women's cut also offered)"
+       },
+       "options": [
+        {
+         "store": "Wetsuit Wearhouse",
+         "price_usd": 361.95,
+         "url": "https://www.wetsuitwearhouse.com/products/ap870mb"
+        },
+        {
+         "store": "House of Scuba",
+         "price_usd": 429.95,
+         "url": "https://www.houseofscuba.com/products/wet560"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 449.95,
+         "url": "https://www.scuba.com/p-hndtj7pm/henderson-7mm-thermoprene-pro-mens-full-wetsuit"
+        }
+       ]
+      },
+      {
+       "rank": 2,
+       "name": "BARE Reactive 7mm",
+       "blurb": "The warmest suit in BARE's range, with graphene infrared lining that actively kicks back your body heat.",
+       "review": "The Reactive is a premium 7mm full suit built from Elastek full-stretch neoprene laminated to a Graphene Omnired lining, whose infrared-reactive minerals are woven throughout to return radiant body heat and measurably lift core warmth in cold water. The interior runs seamless where seams normally chafe, the underarms are stitch-free for reach, and a long offset-tooth S-Lock back zip with coated tape guards against entry. Divers pick it when they want maximum thermal protection for long or repetitive dives and are willing to pay for the flexibility and warmth.",
+       "image": "assets/gear/bare-reactive.jpg",
+       "specs": {
+        "Thickness": "7mm",
+        "Material": "Elastek full-stretch neoprene with Graphene Omnired laminate",
+        "Seams": "Glued and blindstitched, seamless underarms",
+        "Zip": "S-Lock2 offset-tooth back zip with PU-coated tape",
+        "Lining": "Graphene Omnired infrared thermal lining",
+        "Water temp": "~10-16°C",
+        "Fit": "Men's"
+       },
+       "options": [
+        {
+         "store": "House of Scuba",
+         "price_usd": 549.95,
+         "url": "https://www.houseofscuba.com/products/wet464"
+        },
+        {
+         "store": "Dive Right in Scuba",
+         "price_usd": 554.95,
+         "url": "https://www.diverightinscuba.com/reactive-7mm-men-s-wetsuit-2021.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 554.95,
+         "url": "https://www.scuba.com/p-bre7rfwm/bare-7mm-reactive-mens-full-wetsuit"
+        }
+       ]
+      },
+      {
+       "rank": 3,
+       "name": "Waterproof W7 7mm",
+       "blurb": "A semi-dry-grade 7mm loaded with seals, pockets and Kevlar knees for divers who want a suit that lasts.",
+       "review": "The W7 is a heavily engineered 7mm full suit that borrows semi-dry thinking: 4-way stretch neoprene keeps it supple while a spine WaterDam and sealed wrist and ankle zips choke off the cold flush that plagues plain wetsuits. It adds practical touches divers actually use, including thigh cargo pockets and Kevlar-reinforced kneepads that shrug off wreck and boat abrasion. Choose it if you dive hard in genuinely cold water and want a durable, well-sealed suit that closes much of the gap to a semi-dry.",
+       "image": "",
+       "specs": {
+        "Thickness": "7mm",
+        "Material": "4-way stretch neoprene",
+        "Seams": "Glued and blindstitched with WaterDam spine baffle",
+        "Zip": "Back zip plus sealed wrist and ankle zips",
+        "Lining": "Warm plush interior lining",
+        "Water temp": "~10-16°C",
+        "Fit": "Men's (women's W7 also offered)"
+       },
+       "options": [
+        {
+         "store": "Dive Right in Scuba",
+         "price_usd": 795.0,
+         "url": "https://www.diverightinscuba.com/w7-7mm-men-s-wetsuit.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 796.5,
+         "url": "https://www.scuba.com/p-wpgw77mf/waterproof-w7-mens-7mm-full-wetsuit"
+        },
+        {
+         "store": "SCDiving",
+         "price_usd": 850.0,
+         "url": "https://www.scdivingstore.com/products/waterproof-brand-mens-wetsuit-w7-7mm"
+        }
+       ]
+      },
+      {
+       "rank": 4,
+       "name": "Scubapro Everflex Steamer 7/5mm",
+       "blurb": "A body-mapped 7/5 steamer that keeps thick warmth over the core and thinner stretch where you move.",
+       "review": "The Everflex Steamer runs 7mm over the torso and 5mm at the limbs, a body-mapped layout that concentrates warmth on your core while freeing the arms and legs for easy finning and reaching. Its Diamond Span inner lining drains and channels water, seams are double-blindstitched outside and single inside to cut flushing, and the trim panel count keeps range of motion high. It is a strong pick for cold temperate seas where a diver wants real 7mm warmth without the stiffness of a uniform-thickness suit.",
+       "image": "",
+       "specs": {
+        "Thickness": "7/5mm (7mm core, 5mm limbs)",
+        "Material": "X-Foam neoprene",
+        "Seams": "Double-blindstitched outer, single-blindstitched inner",
+        "Zip": "Back zip",
+        "Lining": "Diamond Span water-draining inner lining",
+        "Water temp": "~7-12°C",
+        "Fit": "Men's"
+       },
+       "options": [
+        {
+         "store": "Scuba.com",
+         "price_usd": 440.0,
+         "url": "https://www.scuba.com/p-scpe75m/scubapro-everflex-steamer-7-5mm-mens-wetsuit-black"
+        },
+        {
+         "store": "Divers Supply",
+         "price_usd": 449.95,
+         "url": "https://www.divers-supply.com/scubapro-everflex-7-5mm-steamer.html"
+        },
+        {
+         "store": "DiveCatalog",
+         "price_usd": 549.0,
+         "url": "https://divecatalog.com/products/scubapro-everflex-steamer-75-mm-mens-full-scuba-diving-wetsuit"
+        }
+       ]
+      },
+      {
+       "rank": 5,
+       "name": "Aqua Lung Aquaflex 7mm",
+       "blurb": "A supple 4-way-stretch 7mm with dedicated neck and wrist seals that punch above its mid-range price.",
+       "review": "The Aquaflex is a 7mm full suit cut from soft 4-way stretch neoprene, so it hugs the body and keeps donning painless despite the thickness. Dedicated seals at the neck and wrists limit the cold flush that thick suits often suffer, and reinforced kneepads and a back-zip entry make it a practical everyday cold-water workhorse. Divers reach for it as a comfortable, no-drama 7mm that seals well and holds up dive after dive without stretching the budget.",
+       "image": "assets/gear/aqua-lung-aquaflex.jpg",
+       "specs": {
+        "Thickness": "7mm",
+        "Material": "4-way stretch neoprene",
+        "Seams": "Glued and blindstitched",
+        "Zip": "Back zip with pull-tab",
+        "Lining": "Plush thermal lining with neck and wrist seals",
+        "Water temp": "~10-16°C",
+        "Fit": "Men's (women's Aquaflex also offered)"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 419.95,
+         "url": "https://www.divers-supply.com/aqua-lung-aquaflex-7mm-mens-wetsuit.html"
+        },
+        {
+         "store": "Paragon Dive Store",
+         "price_usd": 449.0,
+         "url": "https://www.paragondivestore.com/products/aquaflex-men-s-dive-wetsuit-7mm-su8770113s"
+        },
+        {
+         "store": "Aqualung",
+         "price_usd": 499.95,
+         "url": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-7mm"
+        }
+       ]
+      },
+      {
+       "rank": 6,
+       "name": "Cressi Fast 7mm",
+       "blurb": "A budget-friendly one-piece 7mm that delivers honest cold-water warmth without the premium markup.",
+       "review": "The Fast is a straightforward 7mm monopiece built from high-stretch neoprene with a smooth-skin chest and back panel that blocks wind chill on the surface interval and cuts water flow underneath. Glued-and-sewn seams, a back-zip entry and reinforced knees keep it durable, and the fit is trim enough to hold warmth on temperate and cold dives. It is the value pick of the group, a solid choice for a diver who wants real 7mm protection at an entry-level price.",
+       "image": "assets/gear/cressi-fast.jpg",
+       "specs": {
+        "Thickness": "7mm",
+        "Material": "High-stretch neoprene with smooth-skin chest and back panels",
+        "Seams": "Glued and sewn",
+        "Zip": "Back zip",
+        "Lining": "Nylon plush interior lining",
+        "Water temp": "~12-18°C",
+        "Fit": "Men's (women's Fast also offered)"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 359.95,
+         "url": "https://www.divers-supply.com/cressi-fast-man-wetsuit-7mm.html"
+        },
+        {
+         "store": "Cressi",
+         "price_usd": 399.95,
+         "url": "https://cressiamerica.com/products/fast-7mm-wetsuit-man"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 399.95,
+         "url": "https://scuba.com/products/cressi-fast-mens-7mm-wetsuit"
+        }
+       ]
+      },
+      {
+       "rank": 7,
+       "name": "BARE Nixie Ultra 7mm",
+       "blurb": "A women's-specific cold-water 7mm designed around the female form, with infrared lining for real warmth.",
+       "review": "The Nixie Ultra is BARE's flagship women's 7mm, cut on a female-specific pattern so it seals along the back, waist and legs without the bunching that unisex suits leave. It pairs progressive full-stretch neoprene with Omnired infrared lining that reflects body heat back to the core, and a collar-zip donning system makes a thick suit far easier to get into. It is the standout choice for women diving cold water who want a suit that actually fits and keeps them genuinely warm on long dives.",
+       "image": "",
+       "specs": {
+        "Thickness": "7mm",
+        "Material": "Progressive full-stretch Nylon-2 neoprene",
+        "Seams": "Glued and blindstitched",
+        "Zip": "Back zip with collar-zip donning system",
+        "Lining": "Omnired infrared thermal lining",
+        "Water temp": "~10-16°C",
+        "Fit": "Women's"
+       },
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 449.95,
+         "url": "https://www.divers-supply.com/bare-7mm-nixie-ultra-full-womens-dive-suite.html"
+        },
+        {
+         "store": "House of Scuba",
+         "price_usd": 459.95,
+         "url": "https://www.houseofscuba.com/products/wet404"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 499.95,
+         "url": "https://www.scuba.com/p-bre7nuf/bare-7mm-nixie-ultra-womens-full-wetsuit"
+        }
+       ]
+      },
+      {
+       "rank": 8,
+       "name": "Henderson Greenprene 7mm",
+       "blurb": "A neoprene-free 7mm built from plant-based foam for divers who want cold-water warmth with a lighter footprint.",
+       "review": "The Greenprene is a 7mm full suit made from a limestone-and-petroleum-free insulating foam derived from natural sources such as sugar cane, plant oils and oyster shells, giving warm, buoyant insulation without conventional neoprene. It keeps the practical Henderson touches divers expect, with glued-and-sewn seams for durability and a back-zip entry with pull leash, and carries a long warranty. Choose it if you want dependable cold-water warmth from a more sustainable material and value ruggedness over ultimate stretch.",
+       "image": "",
+       "specs": {
+        "Thickness": "7mm",
+        "Material": "Greenprene bio-based insulating foam (neoprene-free)",
+        "Seams": "Glued and sewn",
+        "Zip": "Back zip with pull-tab leash",
+        "Lining": "Nylon plush interior lining",
+        "Water temp": "~10-16°C",
+        "Fit": "Men's (women's Greenprene also offered)"
+       },
+       "options": [
+        {
+         "store": "House of Scuba",
+         "price_usd": 449.95,
+         "url": "https://www.houseofscuba.com/products/wet435"
+        },
+        {
+         "store": "Scubadelphia",
+         "price_usd": 489.95,
+         "url": "https://scubadelphia.com/products/henderson-7mm-greenprene-fullsuit"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 524.95,
+         "url": "https://www.scuba.com/products/henderson-greenprene-7mm-mens-jumpsuit"
+        }
+       ]
+      }
+     ]
+    }
    ]
   }
  ]
