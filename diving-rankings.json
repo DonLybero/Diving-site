@@ -11,6 +11,9 @@
     "closed": "excluded from rankings",
     "marine_excitement_bonus": "sum of matched headline-species weights, capped at 25",
     "marine_weights": {
+      "orca": 14,
+      "killer whale": 14,
+      "great white": 14,
       "whale shark": 12,
       "sardine run": 12,
       "hammerhead": 10,
@@ -69,7 +72,7 @@
           "visibility_m": 35,
           "current_strength": "Medium",
           "rating": "Peak",
-          "score": 143,
+          "score": 141,
           "highlight": "Hammerheads Rasdhoo (dawn); Fuvahmulah tiger sharks; grey reef sharks",
           "rank": 1
         },
@@ -256,20 +259,6 @@
           "rank": 14
         },
         {
-          "name": "Seychelles",
-          "country": "Seychelles",
-          "region": "Indian Ocean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 28,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 101,
-          "highlight": "Hawksbill turtle nesting peak; eagle rays; whale sharks may linger",
-          "rank": 15
-        },
-        {
           "name": "Sea of Cortez",
           "country": "Mexico",
           "region": "Gulf of California / Pacific",
@@ -281,6 +270,20 @@
           "rating": "Good",
           "score": 99,
           "highlight": "Whale sharks, sea lions, humpbacks",
+          "rank": 15
+        },
+        {
+          "name": "Seychelles",
+          "country": "Seychelles",
+          "region": "Indian Ocean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 28,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 98,
+          "highlight": "Hawksbill turtle nesting peak; eagle rays; whale sharks may linger",
           "rank": 16
         },
         {
@@ -354,20 +357,6 @@
           "rank": 21
         },
         {
-          "name": "Heron Island",
-          "country": "Australia",
-          "region": "Coral Sea / Southern Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 27,
-          "visibility_m": 16,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 88,
-          "highlight": "Turtle nesting, reef sharks, rays",
-          "rank": 22
-        },
-        {
           "name": "Malapascua Island",
           "country": "Philippines",
           "region": "Southeast Asia",
@@ -379,21 +368,7 @@
           "rating": "Good",
           "score": 88,
           "highlight": "Threshers at dawn (Kimud Shoal), macro",
-          "rank": 23
-        },
-        {
-          "name": "Great Barrier Reef",
-          "country": "Australia",
-          "region": "Coral Sea / Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 30,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 87,
-          "highlight": "Green turtle nesting (Raine Is); reef life",
-          "rank": 24
+          "rank": 22
         },
         {
           "name": "Cayman Islands",
@@ -407,7 +382,7 @@
           "rating": "Good",
           "score": 86,
           "highlight": "Stingrays, turtles, reef fish",
-          "rank": 25
+          "rank": 23
         },
         {
           "name": "Fernando de Noronha",
@@ -421,7 +396,7 @@
           "rating": "Good",
           "score": 86,
           "highlight": "Spinner dolphins, turtles, sharks",
-          "rank": 26
+          "rank": 24
         },
         {
           "name": "Sipadan Island",
@@ -435,7 +410,21 @@
           "rating": "Good",
           "score": 86,
           "highlight": "Barracuda tornado, jackfish, reef sharks, turtles; CNY window",
-          "rank": 27
+          "rank": 25
+        },
+        {
+          "name": "Heron Island",
+          "country": "Australia",
+          "region": "Coral Sea / Southern Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 27,
+          "visibility_m": 16,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 85,
+          "highlight": "Turtle nesting, reef sharks, rays",
+          "rank": 26
         },
         {
           "name": "Bonaire",
@@ -449,6 +438,20 @@
           "rating": "Good",
           "score": 84,
           "highlight": "Turtles, tarpon, abundant reef fish",
+          "rank": 27
+        },
+        {
+          "name": "Great Barrier Reef",
+          "country": "Australia",
+          "region": "Coral Sea / Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 30,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 84,
+          "highlight": "Green turtle nesting (Raine Is); reef life",
           "rank": 28
         },
         {
@@ -736,7 +739,7 @@
           "visibility_m": 35,
           "current_strength": "Medium",
           "rating": "Peak",
-          "score": 143,
+          "score": 141,
           "highlight": "Hammerheads Rasdhoo (dawn); Fuvahmulah tiger sharks; grey reef sharks",
           "rank": 1
         },
@@ -923,20 +926,6 @@
           "rank": 14
         },
         {
-          "name": "Seychelles",
-          "country": "Seychelles",
-          "region": "Indian Ocean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 28,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 101,
-          "highlight": "Hawksbill turtle nesting peak; eagle rays; whale sharks may linger",
-          "rank": 15
-        },
-        {
           "name": "Sea of Cortez",
           "country": "Mexico",
           "region": "Gulf of California / Pacific",
@@ -948,6 +937,20 @@
           "rating": "Good",
           "score": 99,
           "highlight": "Whale sharks, sea lions, humpbacks",
+          "rank": 15
+        },
+        {
+          "name": "Seychelles",
+          "country": "Seychelles",
+          "region": "Indian Ocean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 28,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 98,
+          "highlight": "Hawksbill turtle nesting peak; eagle rays; whale sharks may linger",
           "rank": 16
         },
         {
@@ -1021,20 +1024,6 @@
           "rank": 21
         },
         {
-          "name": "Heron Island",
-          "country": "Australia",
-          "region": "Coral Sea / Southern Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 27,
-          "visibility_m": 16,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 88,
-          "highlight": "Turtle nesting, reef sharks, rays",
-          "rank": 22
-        },
-        {
           "name": "Malapascua Island",
           "country": "Philippines",
           "region": "Southeast Asia",
@@ -1046,21 +1035,7 @@
           "rating": "Good",
           "score": 88,
           "highlight": "Threshers at dawn (Kimud Shoal), macro",
-          "rank": 23
-        },
-        {
-          "name": "Great Barrier Reef",
-          "country": "Australia",
-          "region": "Coral Sea / Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 30,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 87,
-          "highlight": "Green turtle nesting (Raine Is); reef life",
-          "rank": 24
+          "rank": 22
         },
         {
           "name": "Cayman Islands",
@@ -1074,7 +1049,7 @@
           "rating": "Good",
           "score": 86,
           "highlight": "Stingrays, turtles, reef fish",
-          "rank": 25
+          "rank": 23
         },
         {
           "name": "Fernando de Noronha",
@@ -1088,7 +1063,7 @@
           "rating": "Good",
           "score": 86,
           "highlight": "Spinner dolphins, turtles, sharks",
-          "rank": 26
+          "rank": 24
         },
         {
           "name": "Sipadan Island",
@@ -1102,7 +1077,21 @@
           "rating": "Good",
           "score": 86,
           "highlight": "Barracuda tornado, jackfish, reef sharks, turtles; CNY window",
-          "rank": 27
+          "rank": 25
+        },
+        {
+          "name": "Heron Island",
+          "country": "Australia",
+          "region": "Coral Sea / Southern Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 27,
+          "visibility_m": 16,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 85,
+          "highlight": "Turtle nesting, reef sharks, rays",
+          "rank": 26
         },
         {
           "name": "Bonaire",
@@ -1116,6 +1105,20 @@
           "rating": "Good",
           "score": 84,
           "highlight": "Turtles, tarpon, abundant reef fish",
+          "rank": 27
+        },
+        {
+          "name": "Great Barrier Reef",
+          "country": "Australia",
+          "region": "Coral Sea / Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 30,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 84,
+          "highlight": "Green turtle nesting (Raine Is); reef life",
           "rank": 28
         },
         {
@@ -1403,7 +1406,7 @@
           "visibility_m": 40,
           "current_strength": "Strong",
           "rating": "Peak",
-          "score": 139,
+          "score": 137,
           "highlight": "Snapper & moorish idol spawning (full moon); mantas; grey reef sharks",
           "rank": 1
         },
@@ -1618,20 +1621,6 @@
           "rank": 16
         },
         {
-          "name": "Cayman Islands",
-          "country": "Cayman Islands (UK)",
-          "region": "Caribbean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 26,
-          "visibility_m": 18,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 98,
-          "highlight": "Grouper spawning aggregations, stingrays",
-          "rank": 17
-        },
-        {
           "name": "Malapascua Island",
           "country": "Philippines",
           "region": "Southeast Asia",
@@ -1643,7 +1632,7 @@
           "rating": "Good",
           "score": 96,
           "highlight": "Threshers, seahorses, mandarinfish",
-          "rank": 18
+          "rank": 17
         },
         {
           "name": "Komodo National Park",
@@ -1657,7 +1646,7 @@
           "rating": "Good",
           "score": 96,
           "highlight": "South manta PEAK (Jan-Feb); macro (Rhinopias, frogfish); hammerheads",
-          "rank": 19
+          "rank": 18
         },
         {
           "name": "Aliwal Shoal",
@@ -1671,6 +1660,20 @@
           "rating": "Good",
           "score": 92,
           "highlight": "Tiger sharks, blacktips, rays",
+          "rank": 19
+        },
+        {
+          "name": "Cayman Islands",
+          "country": "Cayman Islands (UK)",
+          "region": "Caribbean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 26,
+          "visibility_m": 18,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 92,
+          "highlight": "Grouper spawning aggregations, stingrays",
           "rank": 20
         },
         {
@@ -1730,20 +1733,6 @@
           "rank": 24
         },
         {
-          "name": "Seychelles",
-          "country": "Seychelles",
-          "region": "Indian Ocean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 89,
-          "highlight": "Turtle nesting; reef life, eagle rays",
-          "rank": 25
-        },
-        {
           "name": "Bonaire",
           "country": "Caribbean (Netherlands)",
           "region": "Caribbean",
@@ -1755,7 +1744,7 @@
           "rating": "Good",
           "score": 88,
           "highlight": "Turtles, seahorses, frogfish",
-          "rank": 26
+          "rank": 25
         },
         {
           "name": "South West Rocks",
@@ -1769,21 +1758,7 @@
           "rating": "Good",
           "score": 88,
           "highlight": "Warm EAC; turtles, rays; fewer grey nurse",
-          "rank": 27
-        },
-        {
-          "name": "Heron Island",
-          "country": "Australia",
-          "region": "Coral Sea / Southern Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 28,
-          "visibility_m": 18,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 87,
-          "highlight": "Turtle nesting/hatching, sharks",
-          "rank": 28
+          "rank": 26
         },
         {
           "name": "Sipadan Island",
@@ -1797,21 +1772,7 @@
           "rating": "Good",
           "score": 87,
           "highlight": "Barracuda tornado, reef sharks, turtles",
-          "rank": 29
-        },
-        {
-          "name": "Great Barrier Reef",
-          "country": "Australia",
-          "region": "Coral Sea / Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 87,
-          "highlight": "Turtle nesting/hatching peak; reef life",
-          "rank": 30
+          "rank": 27
         },
         {
           "name": "Roatán",
@@ -1825,7 +1786,21 @@
           "rating": "Good",
           "score": 86,
           "highlight": "Turtles, seahorses, nurse sharks",
-          "rank": 31
+          "rank": 28
+        },
+        {
+          "name": "Seychelles",
+          "country": "Seychelles",
+          "region": "Indian Ocean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 86,
+          "highlight": "Turtle nesting; reef life, eagle rays",
+          "rank": 29
         },
         {
           "name": "Apo Island & Dumaguete",
@@ -1839,6 +1814,34 @@
           "rating": "Good",
           "score": 85,
           "highlight": "Turtles, frogfish, nudibranchs",
+          "rank": 30
+        },
+        {
+          "name": "Heron Island",
+          "country": "Australia",
+          "region": "Coral Sea / Southern Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 28,
+          "visibility_m": 18,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 84,
+          "highlight": "Turtle nesting/hatching, sharks",
+          "rank": 31
+        },
+        {
+          "name": "Great Barrier Reef",
+          "country": "Australia",
+          "region": "Coral Sea / Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 84,
+          "highlight": "Turtle nesting/hatching peak; reef life",
           "rank": 32
         },
         {
@@ -2070,7 +2073,7 @@
           "visibility_m": 40,
           "current_strength": "Strong",
           "rating": "Peak",
-          "score": 139,
+          "score": 137,
           "highlight": "Snapper & moorish idol spawning (full moon); mantas; grey reef sharks",
           "rank": 1
         },
@@ -2285,20 +2288,6 @@
           "rank": 16
         },
         {
-          "name": "Cayman Islands",
-          "country": "Cayman Islands (UK)",
-          "region": "Caribbean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 26,
-          "visibility_m": 18,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 98,
-          "highlight": "Grouper spawning aggregations, stingrays",
-          "rank": 17
-        },
-        {
           "name": "Malapascua Island",
           "country": "Philippines",
           "region": "Southeast Asia",
@@ -2310,7 +2299,7 @@
           "rating": "Good",
           "score": 96,
           "highlight": "Threshers, seahorses, mandarinfish",
-          "rank": 18
+          "rank": 17
         },
         {
           "name": "Komodo National Park",
@@ -2324,7 +2313,7 @@
           "rating": "Good",
           "score": 96,
           "highlight": "South manta PEAK (Jan-Feb); macro (Rhinopias, frogfish); hammerheads",
-          "rank": 19
+          "rank": 18
         },
         {
           "name": "Aliwal Shoal",
@@ -2338,6 +2327,20 @@
           "rating": "Good",
           "score": 92,
           "highlight": "Tiger sharks, blacktips, rays",
+          "rank": 19
+        },
+        {
+          "name": "Cayman Islands",
+          "country": "Cayman Islands (UK)",
+          "region": "Caribbean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 26,
+          "visibility_m": 18,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 92,
+          "highlight": "Grouper spawning aggregations, stingrays",
           "rank": 20
         },
         {
@@ -2397,20 +2400,6 @@
           "rank": 24
         },
         {
-          "name": "Seychelles",
-          "country": "Seychelles",
-          "region": "Indian Ocean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 89,
-          "highlight": "Turtle nesting; reef life, eagle rays",
-          "rank": 25
-        },
-        {
           "name": "Bonaire",
           "country": "Caribbean (Netherlands)",
           "region": "Caribbean",
@@ -2422,7 +2411,7 @@
           "rating": "Good",
           "score": 88,
           "highlight": "Turtles, seahorses, frogfish",
-          "rank": 26
+          "rank": 25
         },
         {
           "name": "South West Rocks",
@@ -2436,21 +2425,7 @@
           "rating": "Good",
           "score": 88,
           "highlight": "Warm EAC; turtles, rays; fewer grey nurse",
-          "rank": 27
-        },
-        {
-          "name": "Heron Island",
-          "country": "Australia",
-          "region": "Coral Sea / Southern Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 28,
-          "visibility_m": 18,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 87,
-          "highlight": "Turtle nesting/hatching, sharks",
-          "rank": 28
+          "rank": 26
         },
         {
           "name": "Sipadan Island",
@@ -2464,21 +2439,7 @@
           "rating": "Good",
           "score": 87,
           "highlight": "Barracuda tornado, reef sharks, turtles",
-          "rank": 29
-        },
-        {
-          "name": "Great Barrier Reef",
-          "country": "Australia",
-          "region": "Coral Sea / Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 87,
-          "highlight": "Turtle nesting/hatching peak; reef life",
-          "rank": 30
+          "rank": 27
         },
         {
           "name": "Roatán",
@@ -2492,7 +2453,21 @@
           "rating": "Good",
           "score": 86,
           "highlight": "Turtles, seahorses, nurse sharks",
-          "rank": 31
+          "rank": 28
+        },
+        {
+          "name": "Seychelles",
+          "country": "Seychelles",
+          "region": "Indian Ocean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 86,
+          "highlight": "Turtle nesting; reef life, eagle rays",
+          "rank": 29
         },
         {
           "name": "Apo Island & Dumaguete",
@@ -2506,6 +2481,34 @@
           "rating": "Good",
           "score": 85,
           "highlight": "Turtles, frogfish, nudibranchs",
+          "rank": 30
+        },
+        {
+          "name": "Heron Island",
+          "country": "Australia",
+          "region": "Coral Sea / Southern Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 28,
+          "visibility_m": 18,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 84,
+          "highlight": "Turtle nesting/hatching, sharks",
+          "rank": 31
+        },
+        {
+          "name": "Great Barrier Reef",
+          "country": "Australia",
+          "region": "Coral Sea / Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 84,
+          "highlight": "Turtle nesting/hatching peak; reef life",
           "rank": 32
         },
         {
@@ -3022,34 +3025,6 @@
           "rank": 21
         },
         {
-          "name": "Ningaloo Reef",
-          "country": "Australia",
-          "region": "Indian Ocean / Western Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/shore",
-          "water_temp_c": 28,
-          "visibility_m": 16,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 104,
-          "highlight": "Whale sharks arrive, coral spawning",
-          "rank": 22
-        },
-        {
-          "name": "Seychelles",
-          "country": "Seychelles",
-          "region": "Indian Ocean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 99,
-          "highlight": "Turtle nesting; early whale sharks (Amirantes late Mar)",
-          "rank": 23
-        },
-        {
           "name": "Maui & Kona",
           "country": "USA",
           "region": "Hawaii",
@@ -3061,7 +3036,21 @@
           "rating": "Good",
           "score": 99,
           "highlight": "Mantas, late humpbacks",
-          "rank": 24
+          "rank": 22
+        },
+        {
+          "name": "Ningaloo Reef",
+          "country": "Australia",
+          "region": "Indian Ocean / Western Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/shore",
+          "water_temp_c": 28,
+          "visibility_m": 16,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 98,
+          "highlight": "Whale sharks arrive, coral spawning",
+          "rank": 23
         },
         {
           "name": "Komodo National Park",
@@ -3075,6 +3064,20 @@
           "rating": "Good",
           "score": 98,
           "highlight": "South mantas; hammerheads (to early Apr); rich macro",
+          "rank": 24
+        },
+        {
+          "name": "Seychelles",
+          "country": "Seychelles",
+          "region": "Indian Ocean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 96,
+          "highlight": "Turtle nesting; early whale sharks (Amirantes late Mar)",
           "rank": 25
         },
         {
@@ -3717,34 +3720,6 @@
           "rank": 21
         },
         {
-          "name": "Ningaloo Reef",
-          "country": "Australia",
-          "region": "Indian Ocean / Western Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/shore",
-          "water_temp_c": 28,
-          "visibility_m": 16,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 104,
-          "highlight": "Whale sharks arrive, coral spawning",
-          "rank": 22
-        },
-        {
-          "name": "Seychelles",
-          "country": "Seychelles",
-          "region": "Indian Ocean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 99,
-          "highlight": "Turtle nesting; early whale sharks (Amirantes late Mar)",
-          "rank": 23
-        },
-        {
           "name": "Maui & Kona",
           "country": "USA",
           "region": "Hawaii",
@@ -3756,7 +3731,21 @@
           "rating": "Good",
           "score": 99,
           "highlight": "Mantas, late humpbacks",
-          "rank": 24
+          "rank": 22
+        },
+        {
+          "name": "Ningaloo Reef",
+          "country": "Australia",
+          "region": "Indian Ocean / Western Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/shore",
+          "water_temp_c": 28,
+          "visibility_m": 16,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 98,
+          "highlight": "Whale sharks arrive, coral spawning",
+          "rank": 23
         },
         {
           "name": "Komodo National Park",
@@ -3770,6 +3759,20 @@
           "rating": "Good",
           "score": 98,
           "highlight": "South mantas; hammerheads (to early Apr); rich macro",
+          "rank": 24
+        },
+        {
+          "name": "Seychelles",
+          "country": "Seychelles",
+          "region": "Indian Ocean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 96,
+          "highlight": "Turtle nesting; early whale sharks (Amirantes late Mar)",
           "rank": 25
         },
         {
@@ -4160,20 +4163,6 @@
           "rank": 3
         },
         {
-          "name": "Tubbataha Reefs Natural Park",
-          "country": "Philippines",
-          "region": "Southeast Asia",
-          "difficulty": "advanced",
-          "access": "liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 32,
-          "current_strength": "Strong",
-          "rating": "Peak",
-          "score": 131,
-          "highlight": "Grey reef sharks, mantas, jacks",
-          "rank": 4
-        },
-        {
           "name": "Utila",
           "country": "Honduras",
           "region": "Caribbean",
@@ -4185,7 +4174,7 @@
           "rating": "Peak",
           "score": 130,
           "highlight": "Whale sharks, turtles, seahorses",
-          "rank": 5
+          "rank": 4
         },
         {
           "name": "Ningaloo Reef",
@@ -4199,7 +4188,7 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "Whale sharks, mantas, turtles",
-          "rank": 6
+          "rank": 5
         },
         {
           "name": "Great Blue Hole",
@@ -4213,6 +4202,20 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "Reef sharks; Gladden Spit whale sharks",
+          "rank": 6
+        },
+        {
+          "name": "Tubbataha Reefs Natural Park",
+          "country": "Philippines",
+          "region": "Southeast Asia",
+          "difficulty": "advanced",
+          "access": "liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 32,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 129,
+          "highlight": "Grey reef sharks, mantas, jacks",
           "rank": 7
         },
         {
@@ -4244,20 +4247,6 @@
           "rank": 9
         },
         {
-          "name": "Sipadan Island",
-          "country": "Malaysia",
-          "region": "Celebes Sea / SE Asia",
-          "difficulty": "intermediate",
-          "access": "day-boat (permit required)",
-          "water_temp_c": 30,
-          "visibility_m": 32,
-          "current_strength": "Strong",
-          "rating": "Peak",
-          "score": 129,
-          "highlight": "Turtle nesting begins; barracuda tornado, bumpheads",
-          "rank": 10
-        },
-        {
           "name": "Bay Islands",
           "country": "Honduras",
           "region": "Caribbean",
@@ -4269,7 +4258,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "Whale sharks, turtles, macro",
-          "rank": 11
+          "rank": 10
         },
         {
           "name": "Socorro Island",
@@ -4283,7 +4272,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "Giant mantas, dolphins",
-          "rank": 12
+          "rank": 11
         },
         {
           "name": "Maldives",
@@ -4297,7 +4286,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "Hammerhead season closing; manta activity strengthening",
-          "rank": 13
+          "rank": 12
         },
         {
           "name": "Seychelles",
@@ -4311,6 +4300,20 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "Whale sharks (Amirantes Apr-May peak)",
+          "rank": 13
+        },
+        {
+          "name": "Sipadan Island",
+          "country": "Malaysia",
+          "region": "Celebes Sea / SE Asia",
+          "difficulty": "intermediate",
+          "access": "day-boat (permit required)",
+          "water_temp_c": 30,
+          "visibility_m": 32,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 126,
+          "highlight": "Turtle nesting begins; barracuda tornado, bumpheads",
           "rank": 14
         },
         {
@@ -4496,20 +4499,6 @@
           "rank": 27
         },
         {
-          "name": "French Polynesia",
-          "country": "French Polynesia",
-          "region": "South Pacific",
-          "difficulty": "advanced",
-          "access": "resort + liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Strong",
-          "rating": "Good",
-          "score": 95,
-          "highlight": "Grey reef sharks, mantas",
-          "rank": 28
-        },
-        {
           "name": "Galapagos Islands",
           "country": "Ecuador",
           "region": "Eastern Pacific",
@@ -4521,6 +4510,20 @@
           "rating": "Good",
           "score": 94,
           "highlight": "Mantas increasing; eagle rays",
+          "rank": 28
+        },
+        {
+          "name": "French Polynesia",
+          "country": "French Polynesia",
+          "region": "South Pacific",
+          "difficulty": "advanced",
+          "access": "resort + liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Strong",
+          "rating": "Good",
+          "score": 93,
+          "highlight": "Grey reef sharks, mantas",
           "rank": 29
         },
         {
@@ -4855,20 +4858,6 @@
           "rank": 3
         },
         {
-          "name": "Tubbataha Reefs Natural Park",
-          "country": "Philippines",
-          "region": "Southeast Asia",
-          "difficulty": "advanced",
-          "access": "liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 32,
-          "current_strength": "Strong",
-          "rating": "Peak",
-          "score": 131,
-          "highlight": "Grey reef sharks, mantas, jacks",
-          "rank": 4
-        },
-        {
           "name": "Utila",
           "country": "Honduras",
           "region": "Caribbean",
@@ -4880,7 +4869,7 @@
           "rating": "Peak",
           "score": 130,
           "highlight": "Whale sharks, turtles, seahorses",
-          "rank": 5
+          "rank": 4
         },
         {
           "name": "Ningaloo Reef",
@@ -4894,7 +4883,7 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "Whale sharks, mantas, turtles",
-          "rank": 6
+          "rank": 5
         },
         {
           "name": "Great Blue Hole",
@@ -4908,6 +4897,20 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "Reef sharks; Gladden Spit whale sharks",
+          "rank": 6
+        },
+        {
+          "name": "Tubbataha Reefs Natural Park",
+          "country": "Philippines",
+          "region": "Southeast Asia",
+          "difficulty": "advanced",
+          "access": "liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 32,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 129,
+          "highlight": "Grey reef sharks, mantas, jacks",
           "rank": 7
         },
         {
@@ -4939,20 +4942,6 @@
           "rank": 9
         },
         {
-          "name": "Sipadan Island",
-          "country": "Malaysia",
-          "region": "Celebes Sea / SE Asia",
-          "difficulty": "intermediate",
-          "access": "day-boat (permit required)",
-          "water_temp_c": 30,
-          "visibility_m": 32,
-          "current_strength": "Strong",
-          "rating": "Peak",
-          "score": 129,
-          "highlight": "Turtle nesting begins; barracuda tornado, bumpheads",
-          "rank": 10
-        },
-        {
           "name": "Bay Islands",
           "country": "Honduras",
           "region": "Caribbean",
@@ -4964,7 +4953,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "Whale sharks, turtles, macro",
-          "rank": 11
+          "rank": 10
         },
         {
           "name": "Socorro Island",
@@ -4978,7 +4967,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "Giant mantas, dolphins",
-          "rank": 12
+          "rank": 11
         },
         {
           "name": "Maldives",
@@ -4992,7 +4981,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "Hammerhead season closing; manta activity strengthening",
-          "rank": 13
+          "rank": 12
         },
         {
           "name": "Seychelles",
@@ -5006,6 +4995,20 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "Whale sharks (Amirantes Apr-May peak)",
+          "rank": 13
+        },
+        {
+          "name": "Sipadan Island",
+          "country": "Malaysia",
+          "region": "Celebes Sea / SE Asia",
+          "difficulty": "intermediate",
+          "access": "day-boat (permit required)",
+          "water_temp_c": 30,
+          "visibility_m": 32,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 126,
+          "highlight": "Turtle nesting begins; barracuda tornado, bumpheads",
           "rank": 14
         },
         {
@@ -5191,20 +5194,6 @@
           "rank": 27
         },
         {
-          "name": "French Polynesia",
-          "country": "French Polynesia",
-          "region": "South Pacific",
-          "difficulty": "advanced",
-          "access": "resort + liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Strong",
-          "rating": "Good",
-          "score": 95,
-          "highlight": "Grey reef sharks, mantas",
-          "rank": 28
-        },
-        {
           "name": "Galapagos Islands",
           "country": "Ecuador",
           "region": "Eastern Pacific",
@@ -5216,6 +5205,20 @@
           "rating": "Good",
           "score": 94,
           "highlight": "Mantas increasing; eagle rays",
+          "rank": 28
+        },
+        {
+          "name": "French Polynesia",
+          "country": "French Polynesia",
+          "region": "South Pacific",
+          "difficulty": "advanced",
+          "access": "resort + liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Strong",
+          "rating": "Good",
+          "score": 93,
+          "highlight": "Grey reef sharks, mantas",
           "rank": 29
         },
         {
@@ -5634,20 +5637,6 @@
           "rank": 9
         },
         {
-          "name": "Sipadan Island",
-          "country": "Malaysia",
-          "region": "Celebes Sea / SE Asia",
-          "difficulty": "intermediate",
-          "access": "day-boat (permit required)",
-          "water_temp_c": 30,
-          "visibility_m": 32,
-          "current_strength": "Strong",
-          "rating": "Peak",
-          "score": 123,
-          "highlight": "Turtle nesting full swing; peak conditions",
-          "rank": 10
-        },
-        {
           "name": "Great Blue Hole",
           "country": "Belize",
           "region": "Caribbean",
@@ -5659,7 +5648,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "Reef sharks; whale sharks (full moon)",
-          "rank": 11
+          "rank": 10
         },
         {
           "name": "Heron Island",
@@ -5673,7 +5662,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "Manta season begins; turtles, reef sharks",
-          "rank": 12
+          "rank": 11
         },
         {
           "name": "Cozumel",
@@ -5687,7 +5676,7 @@
           "rating": "Peak",
           "score": 121,
           "highlight": "Turtles nesting begins, eagle rays",
-          "rank": 13
+          "rank": 12
         },
         {
           "name": "Cayman Islands",
@@ -5701,7 +5690,7 @@
           "rating": "Peak",
           "score": 120,
           "highlight": "Turtles, reef sharks, eagle rays",
-          "rank": 14
+          "rank": 13
         },
         {
           "name": "Seychelles",
@@ -5715,6 +5704,20 @@
           "rating": "Peak",
           "score": 120,
           "highlight": "Whale shark peak (Amirantes); moving to inner waters",
+          "rank": 14
+        },
+        {
+          "name": "Sipadan Island",
+          "country": "Malaysia",
+          "region": "Celebes Sea / SE Asia",
+          "difficulty": "intermediate",
+          "access": "day-boat (permit required)",
+          "water_temp_c": 30,
+          "visibility_m": 32,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 120,
+          "highlight": "Turtle nesting full swing; peak conditions",
           "rank": 15
         },
         {
@@ -5937,7 +5940,7 @@
           "visibility_m": 24,
           "current_strength": "Strong",
           "rating": "Good",
-          "score": 89,
+          "score": 87,
           "highlight": "Grey reef sharks build",
           "rank": 31
         },
@@ -6329,20 +6332,6 @@
           "rank": 9
         },
         {
-          "name": "Sipadan Island",
-          "country": "Malaysia",
-          "region": "Celebes Sea / SE Asia",
-          "difficulty": "intermediate",
-          "access": "day-boat (permit required)",
-          "water_temp_c": 30,
-          "visibility_m": 32,
-          "current_strength": "Strong",
-          "rating": "Peak",
-          "score": 123,
-          "highlight": "Turtle nesting full swing; peak conditions",
-          "rank": 10
-        },
-        {
           "name": "Great Blue Hole",
           "country": "Belize",
           "region": "Caribbean",
@@ -6354,7 +6343,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "Reef sharks; whale sharks (full moon)",
-          "rank": 11
+          "rank": 10
         },
         {
           "name": "Heron Island",
@@ -6368,7 +6357,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "Manta season begins; turtles, reef sharks",
-          "rank": 12
+          "rank": 11
         },
         {
           "name": "Cozumel",
@@ -6382,7 +6371,7 @@
           "rating": "Peak",
           "score": 121,
           "highlight": "Turtles nesting begins, eagle rays",
-          "rank": 13
+          "rank": 12
         },
         {
           "name": "Cayman Islands",
@@ -6396,7 +6385,7 @@
           "rating": "Peak",
           "score": 120,
           "highlight": "Turtles, reef sharks, eagle rays",
-          "rank": 14
+          "rank": 13
         },
         {
           "name": "Seychelles",
@@ -6410,6 +6399,20 @@
           "rating": "Peak",
           "score": 120,
           "highlight": "Whale shark peak (Amirantes); moving to inner waters",
+          "rank": 14
+        },
+        {
+          "name": "Sipadan Island",
+          "country": "Malaysia",
+          "region": "Celebes Sea / SE Asia",
+          "difficulty": "intermediate",
+          "access": "day-boat (permit required)",
+          "water_temp_c": 30,
+          "visibility_m": 32,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 120,
+          "highlight": "Turtle nesting full swing; peak conditions",
           "rank": 15
         },
         {
@@ -6632,7 +6635,7 @@
           "visibility_m": 24,
           "current_strength": "Strong",
           "rating": "Good",
-          "score": 89,
+          "score": 87,
           "highlight": "Grey reef sharks build",
           "rank": 31
         },
@@ -6996,20 +6999,6 @@
           "rank": 7
         },
         {
-          "name": "Bonaire",
-          "country": "Caribbean (Netherlands)",
-          "region": "Caribbean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 28,
-          "visibility_m": 32,
-          "current_strength": "Low",
-          "rating": "Peak",
-          "score": 129,
-          "highlight": "Turtles, coral spawning begins late",
-          "rank": 8
-        },
-        {
           "name": "Heron Island",
           "country": "Australia",
           "region": "Coral Sea / Southern Great Barrier Reef",
@@ -7021,7 +7010,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "Manta rays; humpback whales passing",
-          "rank": 9
+          "rank": 8
         },
         {
           "name": "Sipadan Island",
@@ -7035,7 +7024,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "Turtles abundant; barracuda tornado, reef sharks",
-          "rank": 10
+          "rank": 9
         },
         {
           "name": "Maui & Kona",
@@ -7049,6 +7038,20 @@
           "rating": "Peak",
           "score": 125,
           "highlight": "Mantas, pelagics",
+          "rank": 10
+        },
+        {
+          "name": "Bonaire",
+          "country": "Caribbean (Netherlands)",
+          "region": "Caribbean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 28,
+          "visibility_m": 32,
+          "current_strength": "Low",
+          "rating": "Peak",
+          "score": 123,
+          "highlight": "Turtles, coral spawning begins late",
           "rank": 11
         },
         {
@@ -7677,20 +7680,6 @@
           "rank": 7
         },
         {
-          "name": "Bonaire",
-          "country": "Caribbean (Netherlands)",
-          "region": "Caribbean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 28,
-          "visibility_m": 32,
-          "current_strength": "Low",
-          "rating": "Peak",
-          "score": 129,
-          "highlight": "Turtles, coral spawning begins late",
-          "rank": 8
-        },
-        {
           "name": "Heron Island",
           "country": "Australia",
           "region": "Coral Sea / Southern Great Barrier Reef",
@@ -7702,7 +7691,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "Manta rays; humpback whales passing",
-          "rank": 9
+          "rank": 8
         },
         {
           "name": "Sipadan Island",
@@ -7716,7 +7705,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "Turtles abundant; barracuda tornado, reef sharks",
-          "rank": 10
+          "rank": 9
         },
         {
           "name": "Maui & Kona",
@@ -7730,6 +7719,20 @@
           "rating": "Peak",
           "score": 125,
           "highlight": "Mantas, pelagics",
+          "rank": 10
+        },
+        {
+          "name": "Bonaire",
+          "country": "Caribbean (Netherlands)",
+          "region": "Caribbean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 28,
+          "visibility_m": 32,
+          "current_strength": "Low",
+          "rating": "Peak",
+          "score": 123,
+          "highlight": "Turtles, coral spawning begins late",
           "rank": 11
         },
         {
@@ -8843,7 +8846,7 @@
           "visibility_m": 18,
           "current_strength": "Strong",
           "rating": "Low",
-          "score": 54,
+          "score": 48,
           "highlight": "Grouper spawning; mantas; reef sharks",
           "rank": 42
         },
@@ -9496,7 +9499,7 @@
           "visibility_m": 18,
           "current_strength": "Strong",
           "rating": "Low",
-          "score": 54,
+          "score": 48,
           "highlight": "Grouper spawning; mantas; reef sharks",
           "rank": 42
         },
@@ -9846,20 +9849,6 @@
           "rank": 20
         },
         {
-          "name": "Red Sea (Egypt)",
-          "country": "Egypt",
-          "region": "Red Sea / Middle East",
-          "difficulty": "beginner-advanced",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 30,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 103,
-          "highlight": "Hammerheads taper; coral spawning (lunar)",
-          "rank": 21
-        },
-        {
           "name": "Scapa Flow",
           "country": "Scotland",
           "region": "North Atlantic / Europe",
@@ -9871,7 +9860,7 @@
           "rating": "Peak",
           "score": 103,
           "highlight": "Wrecks-as-reef, plumose anemones",
-          "rank": 22
+          "rank": 21
         },
         {
           "name": "Seychelles",
@@ -9885,7 +9874,7 @@
           "rating": "Good",
           "score": 100,
           "highlight": "Whale shark aggregation building (Mahe NW/Beau Vallon); spinner dolphins",
-          "rank": 23
+          "rank": 22
         },
         {
           "name": "Ningaloo Reef",
@@ -9899,21 +9888,21 @@
           "rating": "Good",
           "score": 99,
           "highlight": "Humpback whales; whale sharks rare (season ends Jul)",
-          "rank": 24
+          "rank": 23
         },
         {
-          "name": "Bonaire",
-          "country": "Caribbean (Netherlands)",
-          "region": "Caribbean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 29,
-          "visibility_m": 25,
-          "current_strength": "Low",
+          "name": "Red Sea (Egypt)",
+          "country": "Egypt",
+          "region": "Red Sea / Middle East",
+          "difficulty": "beginner-advanced",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 30,
+          "visibility_m": 18,
+          "current_strength": "Medium",
           "rating": "Good",
           "score": 97,
-          "highlight": "Turtles, tarpon, coral spawning",
-          "rank": 25
+          "highlight": "Hammerheads taper; coral spawning (lunar)",
+          "rank": 24
         },
         {
           "name": "Sea of Cortez",
@@ -9927,6 +9916,20 @@
           "rating": "Good",
           "score": 93,
           "highlight": "Hammerheads, jacks; Los Islotes closed to Aug 31",
+          "rank": 25
+        },
+        {
+          "name": "Bonaire",
+          "country": "Caribbean (Netherlands)",
+          "region": "Caribbean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 29,
+          "visibility_m": 25,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 91,
+          "highlight": "Turtles, tarpon, coral spawning",
           "rank": 26
         },
         {
@@ -10163,7 +10166,7 @@
           "visibility_m": 10,
           "current_strength": "Strong",
           "rating": "Low",
-          "score": 47,
+          "score": 41,
           "highlight": "Grouper spawning; mantas; pelagics",
           "rank": 43
         },
@@ -10499,20 +10502,6 @@
           "rank": 20
         },
         {
-          "name": "Red Sea (Egypt)",
-          "country": "Egypt",
-          "region": "Red Sea / Middle East",
-          "difficulty": "beginner-advanced",
-          "access": "shore/day-boat/liveaboard",
-          "water_temp_c": 30,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 103,
-          "highlight": "Hammerheads taper; coral spawning (lunar)",
-          "rank": 21
-        },
-        {
           "name": "Scapa Flow",
           "country": "Scotland",
           "region": "North Atlantic / Europe",
@@ -10524,7 +10513,7 @@
           "rating": "Peak",
           "score": 103,
           "highlight": "Wrecks-as-reef, plumose anemones",
-          "rank": 22
+          "rank": 21
         },
         {
           "name": "Seychelles",
@@ -10538,7 +10527,7 @@
           "rating": "Good",
           "score": 100,
           "highlight": "Whale shark aggregation building (Mahe NW/Beau Vallon); spinner dolphins",
-          "rank": 23
+          "rank": 22
         },
         {
           "name": "Ningaloo Reef",
@@ -10552,21 +10541,21 @@
           "rating": "Good",
           "score": 99,
           "highlight": "Humpback whales; whale sharks rare (season ends Jul)",
-          "rank": 24
+          "rank": 23
         },
         {
-          "name": "Bonaire",
-          "country": "Caribbean (Netherlands)",
-          "region": "Caribbean",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 29,
-          "visibility_m": 25,
-          "current_strength": "Low",
+          "name": "Red Sea (Egypt)",
+          "country": "Egypt",
+          "region": "Red Sea / Middle East",
+          "difficulty": "beginner-advanced",
+          "access": "shore/day-boat/liveaboard",
+          "water_temp_c": 30,
+          "visibility_m": 18,
+          "current_strength": "Medium",
           "rating": "Good",
           "score": 97,
-          "highlight": "Turtles, tarpon, coral spawning",
-          "rank": 25
+          "highlight": "Hammerheads taper; coral spawning (lunar)",
+          "rank": 24
         },
         {
           "name": "Sea of Cortez",
@@ -10580,6 +10569,20 @@
           "rating": "Good",
           "score": 93,
           "highlight": "Hammerheads, jacks; Los Islotes closed to Aug 31",
+          "rank": 25
+        },
+        {
+          "name": "Bonaire",
+          "country": "Caribbean (Netherlands)",
+          "region": "Caribbean",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 29,
+          "visibility_m": 25,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 91,
+          "highlight": "Turtles, tarpon, coral spawning",
           "rank": 26
         },
         {
@@ -10816,7 +10819,7 @@
           "visibility_m": 10,
           "current_strength": "Strong",
           "rating": "Low",
-          "score": 47,
+          "score": 41,
           "highlight": "Grouper spawning; mantas; pelagics",
           "rank": 43
         },
@@ -13652,20 +13655,6 @@
           "rank": 10
         },
         {
-          "name": "Heron Island",
-          "country": "Australia",
-          "region": "Coral Sea / Southern Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 25,
-          "visibility_m": 24,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 103,
-          "highlight": "Coral spawning; turtle nesting starts",
-          "rank": 11
-        },
-        {
           "name": "Palau",
           "country": "Palau",
           "region": "Micronesia / Pacific",
@@ -13677,7 +13666,7 @@
           "rating": "Good",
           "score": 101,
           "highlight": "Mantas; whale sharks (Nov-Apr); Jellyfish Lake",
-          "rank": 12
+          "rank": 11
         },
         {
           "name": "Maldives",
@@ -13691,7 +13680,7 @@
           "rating": "Good",
           "score": 100,
           "highlight": "Whale sharks (Jul-Nov); mantas around",
-          "rank": 13
+          "rank": 12
         },
         {
           "name": "Galapagos Islands",
@@ -13705,6 +13694,20 @@
           "rating": "Good",
           "score": 98,
           "highlight": "Hammerheads; mola; megafauna tapering",
+          "rank": 13
+        },
+        {
+          "name": "Heron Island",
+          "country": "Australia",
+          "region": "Coral Sea / Southern Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 25,
+          "visibility_m": 24,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 94,
+          "highlight": "Coral spawning; turtle nesting starts",
           "rank": 14
         },
         {
@@ -13717,37 +13720,9 @@
           "visibility_m": 18,
           "current_strength": "Low",
           "rating": "Good",
-          "score": 96,
+          "score": 93,
           "highlight": "Mantas, turtle nesting begins",
           "rank": 15
-        },
-        {
-          "name": "Great Barrier Reef",
-          "country": "Australia",
-          "region": "Coral Sea / Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 27,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 93,
-          "highlight": "CORAL MASS SPAWNING (after full moon); turtle nesting begins",
-          "rank": 16
-        },
-        {
-          "name": "Whitsunday Islands",
-          "country": "Australia",
-          "region": "Coral Sea / Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "liveaboard/day-boat",
-          "water_temp_c": 27,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 93,
-          "highlight": "Coral spawning, turtles",
-          "rank": 17
         },
         {
           "name": "Okinawa Islands",
@@ -13761,7 +13736,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "Late mantas, reef fish",
-          "rank": 18
+          "rank": 16
         },
         {
           "name": "Bay Islands",
@@ -13775,7 +13750,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Whale sharks (secondary season); turtles",
-          "rank": 19
+          "rank": 17
         },
         {
           "name": "French Polynesia",
@@ -13789,7 +13764,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Reef sharks, mantas",
-          "rank": 20
+          "rank": 18
         },
         {
           "name": "Utila",
@@ -13803,7 +13778,21 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Whale sharks (secondary season); turtles",
-          "rank": 21
+          "rank": 19
+        },
+        {
+          "name": "Great Barrier Reef",
+          "country": "Australia",
+          "region": "Coral Sea / Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 27,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 90,
+          "highlight": "CORAL MASS SPAWNING (after full moon); turtle nesting begins",
+          "rank": 20
         },
         {
           "name": "Malapascua Island",
@@ -13817,7 +13806,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "Threshers at dawn, macro",
-          "rank": 22
+          "rank": 21
         },
         {
           "name": "Maui & Kona",
@@ -13831,7 +13820,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "Mantas, early whales",
-          "rank": 23
+          "rank": 22
         },
         {
           "name": "Raja Ampat",
@@ -13845,6 +13834,20 @@
           "rating": "Good",
           "score": 89,
           "highlight": "Manta season opens (Manta Sandy/Ridge)",
+          "rank": 23
+        },
+        {
+          "name": "Whitsunday Islands",
+          "country": "Australia",
+          "region": "Coral Sea / Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "liveaboard/day-boat",
+          "water_temp_c": 27,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 87,
+          "highlight": "Coral spawning, turtles",
           "rank": 24
         },
         {
@@ -14319,20 +14322,6 @@
           "rank": 10
         },
         {
-          "name": "Heron Island",
-          "country": "Australia",
-          "region": "Coral Sea / Southern Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 25,
-          "visibility_m": 24,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 103,
-          "highlight": "Coral spawning; turtle nesting starts",
-          "rank": 11
-        },
-        {
           "name": "Palau",
           "country": "Palau",
           "region": "Micronesia / Pacific",
@@ -14344,7 +14333,7 @@
           "rating": "Good",
           "score": 101,
           "highlight": "Mantas; whale sharks (Nov-Apr); Jellyfish Lake",
-          "rank": 12
+          "rank": 11
         },
         {
           "name": "Maldives",
@@ -14358,7 +14347,7 @@
           "rating": "Good",
           "score": 100,
           "highlight": "Whale sharks (Jul-Nov); mantas around",
-          "rank": 13
+          "rank": 12
         },
         {
           "name": "Galapagos Islands",
@@ -14372,6 +14361,20 @@
           "rating": "Good",
           "score": 98,
           "highlight": "Hammerheads; mola; megafauna tapering",
+          "rank": 13
+        },
+        {
+          "name": "Heron Island",
+          "country": "Australia",
+          "region": "Coral Sea / Southern Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 25,
+          "visibility_m": 24,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 94,
+          "highlight": "Coral spawning; turtle nesting starts",
           "rank": 14
         },
         {
@@ -14384,37 +14387,9 @@
           "visibility_m": 18,
           "current_strength": "Low",
           "rating": "Good",
-          "score": 96,
+          "score": 93,
           "highlight": "Mantas, turtle nesting begins",
           "rank": 15
-        },
-        {
-          "name": "Great Barrier Reef",
-          "country": "Australia",
-          "region": "Coral Sea / Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 27,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 93,
-          "highlight": "CORAL MASS SPAWNING (after full moon); turtle nesting begins",
-          "rank": 16
-        },
-        {
-          "name": "Whitsunday Islands",
-          "country": "Australia",
-          "region": "Coral Sea / Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "liveaboard/day-boat",
-          "water_temp_c": 27,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 93,
-          "highlight": "Coral spawning, turtles",
-          "rank": 17
         },
         {
           "name": "Okinawa Islands",
@@ -14428,7 +14403,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "Late mantas, reef fish",
-          "rank": 18
+          "rank": 16
         },
         {
           "name": "Bay Islands",
@@ -14442,7 +14417,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Whale sharks (secondary season); turtles",
-          "rank": 19
+          "rank": 17
         },
         {
           "name": "French Polynesia",
@@ -14456,7 +14431,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Reef sharks, mantas",
-          "rank": 20
+          "rank": 18
         },
         {
           "name": "Utila",
@@ -14470,7 +14445,21 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Whale sharks (secondary season); turtles",
-          "rank": 21
+          "rank": 19
+        },
+        {
+          "name": "Great Barrier Reef",
+          "country": "Australia",
+          "region": "Coral Sea / Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 27,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 90,
+          "highlight": "CORAL MASS SPAWNING (after full moon); turtle nesting begins",
+          "rank": 20
         },
         {
           "name": "Malapascua Island",
@@ -14484,7 +14473,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "Threshers at dawn, macro",
-          "rank": 22
+          "rank": 21
         },
         {
           "name": "Maui & Kona",
@@ -14498,7 +14487,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "Mantas, early whales",
-          "rank": 23
+          "rank": 22
         },
         {
           "name": "Raja Ampat",
@@ -14512,6 +14501,20 @@
           "rating": "Good",
           "score": 89,
           "highlight": "Manta season opens (Manta Sandy/Ridge)",
+          "rank": 23
+        },
+        {
+          "name": "Whitsunday Islands",
+          "country": "Australia",
+          "region": "Coral Sea / Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "liveaboard/day-boat",
+          "water_temp_c": 27,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 87,
+          "highlight": "Coral spawning, turtles",
           "rank": 24
         },
         {
@@ -14855,7 +14858,7 @@
           "visibility_m": 35,
           "current_strength": "Medium",
           "rating": "Peak",
-          "score": 134,
+          "score": 132,
           "highlight": "Hammerheads Rasdhoo returning; Fuvahmulah tigers; grey reef sharks",
           "rank": 1
         },
@@ -15000,20 +15003,6 @@
           "rank": 11
         },
         {
-          "name": "Great Barrier Reef",
-          "country": "Australia",
-          "region": "Coral Sea / Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 28,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 100,
-          "highlight": "Green turtle nesting (Raine Is); coral spawning spill",
-          "rank": 12
-        },
-        {
           "name": "Sea of Cortez",
           "country": "Mexico",
           "region": "Gulf of California / Pacific",
@@ -15025,7 +15014,7 @@
           "rating": "Good",
           "score": 100,
           "highlight": "Whale sharks, sea lions",
-          "rank": 13
+          "rank": 12
         },
         {
           "name": "Galapagos Islands",
@@ -15039,7 +15028,7 @@
           "rating": "Good",
           "score": 99,
           "highlight": "Mantas returning; hammerheads",
-          "rank": 14
+          "rank": 13
         },
         {
           "name": "Komodo National Park",
@@ -15053,7 +15042,7 @@
           "rating": "Good",
           "score": 98,
           "highlight": "South manta peak begins; macro; reef sharks; dragons active",
-          "rank": 15
+          "rank": 14
         },
         {
           "name": "Cocos Island",
@@ -15067,21 +15056,7 @@
           "rating": "Good",
           "score": 96,
           "highlight": "Tiger sharks; mobula schools building; silkies",
-          "rank": 16
-        },
-        {
-          "name": "Heron Island",
-          "country": "Australia",
-          "region": "Coral Sea / Southern Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 26,
-          "visibility_m": 18,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 96,
-          "highlight": "Turtle nesting, mantas, sharks",
-          "rank": 17
+          "rank": 15
         },
         {
           "name": "Maui & Kona",
@@ -15095,7 +15070,7 @@
           "rating": "Good",
           "score": 96,
           "highlight": "Mantas, humpbacks arrive",
-          "rank": 18
+          "rank": 16
         },
         {
           "name": "Aliwal Shoal",
@@ -15109,7 +15084,7 @@
           "rating": "Good",
           "score": 95,
           "highlight": "Tiger sharks, blacktips, dolphins",
-          "rank": 19
+          "rank": 17
         },
         {
           "name": "Seychelles",
@@ -15123,7 +15098,21 @@
           "rating": "Good",
           "score": 95,
           "highlight": "Whale sharks tailing off; hawksbill nesting begins",
-          "rank": 20
+          "rank": 18
+        },
+        {
+          "name": "Heron Island",
+          "country": "Australia",
+          "region": "Coral Sea / Southern Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 26,
+          "visibility_m": 18,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 93,
+          "highlight": "Turtle nesting, mantas, sharks",
+          "rank": 19
         },
         {
           "name": "Bay Islands",
@@ -15137,7 +15126,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Whale sharks possible; turtles, reef fish",
-          "rank": 21
+          "rank": 20
         },
         {
           "name": "Utila",
@@ -15151,6 +15140,20 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Whale sharks possible; turtles, reef fish",
+          "rank": 21
+        },
+        {
+          "name": "Great Barrier Reef",
+          "country": "Australia",
+          "region": "Coral Sea / Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 28,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 91,
+          "highlight": "Green turtle nesting (Raine Is); coral spawning spill",
           "rank": 22
         },
         {
@@ -15522,7 +15525,7 @@
           "visibility_m": 35,
           "current_strength": "Medium",
           "rating": "Peak",
-          "score": 134,
+          "score": 132,
           "highlight": "Hammerheads Rasdhoo returning; Fuvahmulah tigers; grey reef sharks",
           "rank": 1
         },
@@ -15667,20 +15670,6 @@
           "rank": 11
         },
         {
-          "name": "Great Barrier Reef",
-          "country": "Australia",
-          "region": "Coral Sea / Australia",
-          "difficulty": "beginner",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 28,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 100,
-          "highlight": "Green turtle nesting (Raine Is); coral spawning spill",
-          "rank": 12
-        },
-        {
           "name": "Sea of Cortez",
           "country": "Mexico",
           "region": "Gulf of California / Pacific",
@@ -15692,7 +15681,7 @@
           "rating": "Good",
           "score": 100,
           "highlight": "Whale sharks, sea lions",
-          "rank": 13
+          "rank": 12
         },
         {
           "name": "Galapagos Islands",
@@ -15706,7 +15695,7 @@
           "rating": "Good",
           "score": 99,
           "highlight": "Mantas returning; hammerheads",
-          "rank": 14
+          "rank": 13
         },
         {
           "name": "Komodo National Park",
@@ -15720,7 +15709,7 @@
           "rating": "Good",
           "score": 98,
           "highlight": "South manta peak begins; macro; reef sharks; dragons active",
-          "rank": 15
+          "rank": 14
         },
         {
           "name": "Cocos Island",
@@ -15734,21 +15723,7 @@
           "rating": "Good",
           "score": 96,
           "highlight": "Tiger sharks; mobula schools building; silkies",
-          "rank": 16
-        },
-        {
-          "name": "Heron Island",
-          "country": "Australia",
-          "region": "Coral Sea / Southern Great Barrier Reef",
-          "difficulty": "beginner",
-          "access": "shore/day-boat",
-          "water_temp_c": 26,
-          "visibility_m": 18,
-          "current_strength": "Low",
-          "rating": "Good",
-          "score": 96,
-          "highlight": "Turtle nesting, mantas, sharks",
-          "rank": 17
+          "rank": 15
         },
         {
           "name": "Maui & Kona",
@@ -15762,7 +15737,7 @@
           "rating": "Good",
           "score": 96,
           "highlight": "Mantas, humpbacks arrive",
-          "rank": 18
+          "rank": 16
         },
         {
           "name": "Aliwal Shoal",
@@ -15776,7 +15751,7 @@
           "rating": "Good",
           "score": 95,
           "highlight": "Tiger sharks, blacktips, dolphins",
-          "rank": 19
+          "rank": 17
         },
         {
           "name": "Seychelles",
@@ -15790,7 +15765,21 @@
           "rating": "Good",
           "score": 95,
           "highlight": "Whale sharks tailing off; hawksbill nesting begins",
-          "rank": 20
+          "rank": 18
+        },
+        {
+          "name": "Heron Island",
+          "country": "Australia",
+          "region": "Coral Sea / Southern Great Barrier Reef",
+          "difficulty": "beginner",
+          "access": "shore/day-boat",
+          "water_temp_c": 26,
+          "visibility_m": 18,
+          "current_strength": "Low",
+          "rating": "Good",
+          "score": 93,
+          "highlight": "Turtle nesting, mantas, sharks",
+          "rank": 19
         },
         {
           "name": "Bay Islands",
@@ -15804,7 +15793,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Whale sharks possible; turtles, reef fish",
-          "rank": 21
+          "rank": 20
         },
         {
           "name": "Utila",
@@ -15818,6 +15807,20 @@
           "rating": "Good",
           "score": 91,
           "highlight": "Whale sharks possible; turtles, reef fish",
+          "rank": 21
+        },
+        {
+          "name": "Great Barrier Reef",
+          "country": "Australia",
+          "region": "Coral Sea / Australia",
+          "difficulty": "beginner",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 28,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 91,
+          "highlight": "Green turtle nesting (Raine Is); coral spawning spill",
           "rank": 22
         },
         {
