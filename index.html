@@ -367,6 +367,10 @@
   .pack-cta:hover{filter:brightness(1.06)}
   .pack-cta.ghost{background:#fff;color:var(--coral-deep);border:1px solid var(--line-strong)}
   .pack-cta.ghost:hover{border-color:var(--coral);filter:none}
+  .staybox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+       border-radius:12px;padding:14px 16px;margin:18px 0}
+  .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);
+       display:flex;align-items:center;gap:6px;margin-bottom:6px}
   /* ---------- wetsuit thickness picker ---------- */
   .thick-nav{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
   .thick-pill{display:flex;flex-direction:column;gap:1px;background:#fff;border:1px solid var(--line-strong);
@@ -1067,6 +1071,49 @@ function packBox(d){
   return '<div class="packbox"><div class="pack-head">'+ico('tank',14)+' What to pack here</div>'+
     '<p class="pack-body">'+body+'</p><div class="pack-ctas">'+cta+'</div></div>';
 }
+
+/* ---- where-to-stay cross-sell: Booking.com search deep-link (hotels/resorts)
+   + LiveAboard.com destination page for liveaboard-oriented sites ---- */
+var LIVEABOARD_SLUG={
+ 'Red Sea (Egypt)':'egypt/red-sea','Maldives':'maldives','Raja Ampat':'indonesia',
+ 'Komodo National Park':'indonesia','Cocos Island':'costa-rica','Galapagos Islands':'galapagos',
+ 'Socorro Island':'mexico','Sea of Cortez':'mexico','Seychelles':'seychelles','Palau':'palau',
+ 'Truk (Chuuk) Lagoon':'micronesia','Fiji':'fiji','French Polynesia':'french-polynesia',
+ 'Guadalcanal & Western Province':'solomon-islands','Similan Islands':'thailand',
+ 'Tubbataha Reefs Natural Park':'philippines','Bahamas':'bahamas','Bay Islands':'honduras',
+ 'Cayman Islands':'cayman-islands','Great Blue Hole':'belize','Great Barrier Reef':'australia',
+ 'Whitsunday Islands':'australia'
+};
+function stayQuery(d){
+  var n=(d.name||'').replace(/\s*\(.*?\)\s*/g,' ').trim();
+  var c=(d.country||'').replace(/\s*\(.*?\)\s*/g,' ').trim();
+  return (n+(c&&c!==n?(' '+c):'')).trim();
+}
+function bookingLink(d){
+  var u='https://www.booking.com/searchresults.html?ss='+encodeURIComponent(stayQuery(d))+'&selected_currency=USD';
+  if(AFFILIATE.booking_aid) u+='&aid='+AFFILIATE.booking_aid+'&label=diveszn';
+  return u;
+}
+function liveaboardLink(d){
+  var slug=LIVEABOARD_SLUG[d.name];
+  var u=slug?('https://www.liveaboard.com/diving/'+slug):'https://www.liveaboard.com/';
+  if(AFFILIATE.liveaboard_aff) u+=(u.indexOf('?')>-1?'&':'?')+'aff='+AFFILIATE.liveaboard_aff;
+  return u;
+}
+function hasLiveaboard(d){return /liveaboard/i.test(d.access||'');}
+function stayBox(d){
+  var live=hasLiveaboard(d);
+  var boardOnly=/^\s*liveaboard(\s*\/\s*day-boat)?\s*$/i.test(d.access||'');
+  var book='<a class="pack-cta'+(boardOnly?' ghost':'')+'" href="'+bookingLink(d)+'" target="_blank" rel="noopener sponsored">Find stays near '+d.name.replace(/"/g,'&quot;')+' &rarr;</a>';
+  var board=live?'<a class="pack-cta'+(boardOnly?'':' ghost')+'" href="'+liveaboardLink(d)+'" target="_blank" rel="noopener sponsored">Browse liveaboards &rarr;</a>':'';
+  var body=boardOnly
+    ? 'Diving here is liveaboard-based — you sleep aboard the boat. Book a liveaboard, or a gateway hotel for the nights either side.'
+    : (live? 'Base yourself at a dive resort or hotel near the water — or see it all from a liveaboard.'
+           : 'Base yourself at a dive resort or hotel close to the water.');
+  var ctas=boardOnly?(board+book):(book+board);
+  return '<div class="staybox"><div class="stay-head">'+ico('home',14)+' Where to stay</div>'+
+    '<p class="pack-body">'+body+'</p><div class="pack-ctas">'+ctas+'</div></div>';
+}
 function openProfile(name){
   showTab('search');
   var d=DivingCalendar.getDestination(DESTS,name); if(!d)return;
@@ -1107,7 +1154,7 @@ function openProfile(name){
         (d.current_note?'<div class="meta" style="font-size:.68rem;margin-top:2px">'+d.current_note+'</div>':'')+'</div>'+
       '<div style="grid-column:1/-1"><span>Currents detail</span>'+d.currents+'</div>'+
     '</div>'+
-    packBox(d)+
+    packBox(d)+stayBox(d)+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
     sitesBlock+
     '<h3 style="margin:22px 0 2px">'+ico('calendar',15)+' Month-by-month calendar</h3>'+
@@ -1285,7 +1332,9 @@ var AFFILIATE={
   ebay_campid:'',
   avantlink:{website_id:'', merchants:{'scuba.com':'', 'leisurepro.com':''}},
   awin:{affiliate_id:'', merchants:{'tradeinn.com':'', 'diveinn.com':'', 'scubastore.com':''}},
-  skimlinks_id:''
+  skimlinks_id:'',
+  booking_aid:'',        // Booking.com affiliate id (searchresults ?aid=)
+  liveaboard_aff:''      // LiveAboard.com / Divebooker partner id (appended when set)
 };
 function affLink(url){
   try{
