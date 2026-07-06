@@ -112,12 +112,21 @@ def localize(item):
     except Exception as e:
         print(f"    ! localize failed ({e}) — keeping remote URL")
 
+def cat_items(cat):
+    """Yield every product item in a category, flat or grouped by thickness."""
+    for it in cat.get("items", []) or []:
+        yield it
+    for grp in cat.get("thickness_groups", []):
+        for it in grp.get("items", []):
+            yield it
+
+
 def main():
     with open(GUIDE) as f:
         doc = json.load(f)
     fixed = kept = failed = 0
     for cat in doc["categories"]:
-        for it in cat["items"]:
+        for it in cat_items(cat):
             cur = it.get("image") or ""
             if cur.startswith("assets/") and not FORCE:
                 kept += 1
