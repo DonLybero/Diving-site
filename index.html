@@ -361,9 +361,12 @@
   .pack-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);
        display:flex;align-items:center;gap:6px;margin-bottom:6px}
   .pack-body{margin:0 0 11px;color:var(--ink-soft);font-size:.92rem;line-height:1.6}
+  .pack-ctas{display:flex;flex-wrap:wrap;gap:8px}
   .pack-cta{background:linear-gradient(135deg,var(--coral),var(--coral-deep));color:#fff;border:none;border-radius:9px;
-       padding:9px 15px;font-size:.83rem;font-weight:600;cursor:pointer;font-family:var(--sans)}
+       padding:9px 15px;font-size:.83rem;font-weight:600;cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block}
   .pack-cta:hover{filter:brightness(1.06)}
+  .pack-cta.ghost{background:#fff;color:var(--coral-deep);border:1px solid var(--line-strong)}
+  .pack-cta.ghost:hover{border-color:var(--coral);filter:none}
   /* ---------- wetsuit thickness picker ---------- */
   .thick-nav{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
   .thick-pill{display:flex;flex-direction:column;gap:1px;background:#fff;border:1px solid var(--line-strong);
@@ -1030,6 +1033,20 @@ function gotoWetsuit(th){
   sel.value='Wetsuits'; GEAR_THICK=th; renderGear();
   window.scrollTo({top:0,behavior:'smooth'});
 }
+// deep link e.g. #gear-wetsuits-5mm (used by the static destination SEO pages)
+function handleHash(){
+  var h=(location.hash||'').replace(/^#/,''); if(!h) return;
+  var parts=h.split('-');
+  if(parts[0]!=='gear') return;
+  showTab('gear');
+  var sel=document.getElementById('gearCat'); renderGear();
+  if(parts[1]&&GEAR_GUIDE&&GEAR_GUIDE.categories){
+    var slug=parts[1].toLowerCase();
+    var cat=GEAR_GUIDE.categories.filter(function(c){return c.category.toLowerCase().replace(/[^a-z0-9]/g,'')===slug;})[0];
+    if(cat){ sel.value=cat.category; if(parts[2]) GEAR_THICK=parts[2]; renderGear(); }
+  }
+  window.scrollTo({top:0});
+}
 function packBox(d){
   var r=packRec(d), t=repTemp(d);
   var tpart=t!=null?('sits around <b>'+t+'°C</b>'):'varies by season';
@@ -1041,11 +1058,14 @@ function packBox(d){
     var extra=(r.secondary&&r.secondary!==r.primary)?(' A <b>'+r.secondary+'&nbsp;mm</b> is worth packing for winter or deeper, repeat dives.'):'';
     body='Water '+tpart+' here, so a <b>'+r.primary+'&nbsp;mm wetsuit</b> is the right call.'+extra;
     cta='<button class="pack-cta" onclick="gotoWetsuit(\''+r.primary+'mm\')">See the best '+r.primary+'&nbsp;mm wetsuits &rarr;</button>';
+    if(r.secondary&&r.secondary!==r.primary){
+      cta+='<button class="pack-cta ghost" onclick="gotoWetsuit(\''+r.secondary+'mm\')">See the best '+r.secondary+'&nbsp;mm &rarr;</button>';
+    }
   }else{
     return '';                                     // no clear recommendation → skip
   }
   return '<div class="packbox"><div class="pack-head">'+ico('tank',14)+' What to pack here</div>'+
-    '<p class="pack-body">'+body+'</p>'+cta+'</div>';
+    '<p class="pack-body">'+body+'</p><div class="pack-ctas">'+cta+'</div></div>';
 }
 function openProfile(name){
   showTab('search');
@@ -1561,6 +1581,8 @@ loadData().then(function(res){
   renderHome(); renderGear(); renderDestinations();
   // planner result views render on the diver's first selection (progressive disclosure)
   document.getElementById('searchBox').addEventListener('input', renderSearch);
+  handleHash();                                    // honor a #gear-<cat>-<thickness> deep link on load
+  window.addEventListener('hashchange', handleHash);
 }).catch(function(){
   document.querySelector('.wrap').innerHTML='<div class="empty">Could not load <code>diving-destinations.json</code>.<br>If you opened the file directly, use the single-file build <code>diving-site.html</code>, or serve this folder over HTTP (<code>python3 -m http.server</code>).</div>';
 });

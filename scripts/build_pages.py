@@ -11,7 +11,7 @@ The SPA (index.html) stays the interactive app; these pages give search
 engines one indexable URL per destination with the same researched data.
 Re-run after any data change:  python3 scripts/build_pages.py
 """
-import json, os, html
+import json, os, html, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://donlybero.github.io/Diving-site/"
@@ -52,6 +52,12 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
 .dirlist li{background:var(--panel);border:1px solid var(--line);border-radius:10px}
 .dirlist a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink)}
 .dirlist small{display:block;color:var(--muted)}
+.packbox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--coral);border-radius:12px;padding:14px 16px;margin:18px 0}
+.pack-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:6px}
+.pack-body{margin:0 0 11px;color:#33565e;font-size:.92rem;line-height:1.6}
+.pack-ctas{display:flex;flex-wrap:wrap;gap:8px}
+.pack-cta{display:inline-block;background:var(--coral);color:#2a0f06;border-radius:9px;padding:9px 15px;font-size:.83rem;font-weight:700;text-decoration:none}
+.pack-cta.ghost{background:#fff;color:#b3492f;border:1px solid #e6bcb0}
 """
 
 FLUKE = ('<svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 '
@@ -84,6 +90,42 @@ def _site_plural(t, n):
 def _join_list(items):
     items = list(items)
     return items[0] if len(items) == 1 else ", ".join(items[:-1]) + " and " + items[-1]
+
+def pack_box(d):
+    """Contextual gear cross-sell — maps water/wetsuit to the wetsuit thickness
+    guide (mirrors packBox in index.html). Links deep-link into the SPA gear tab."""
+    w = (d.get("wetsuit") or "").lower()
+    dry = "drysuit" in w
+    th = [int(x) for x in re.findall(r"([2357])\s*mm", w)]
+    rng = re.search(r"([2357])\s*-\s*([2357])\s*mm", w)
+    if rng:
+        th += [int(rng.group(1)), int(rng.group(2))]
+    th = sorted(set(th))
+    primary = th[0] if th else None
+    secondary = th[-1] if len(th) > 1 else None
+    temps = [t for t in (d.get("monthly_temp_c") or {}).values() if isinstance(t, (int, float))]
+    tpart = (f"sits around <b>{sorted(temps)[len(temps)//2]}°C</b>" if temps else "varies by season")
+
+    def cta(mm, label, ghost=False):
+        return (f'<a class="pack-cta{" ghost" if ghost else ""}" '
+                f'href="../index.html#gear-wetsuits-{mm}mm">{label}</a>')
+
+    if dry:
+        body = ("The water here is cold enough that most divers use a <b>drysuit</b>. "
+                "If you dive wet, a <b>7&nbsp;mm</b> and a hood are the warmest option.")
+        ctas = cta(7, "See the warmest 7&nbsp;mm wetsuits &rarr;")
+    elif primary:
+        extra = (f" A <b>{secondary}&nbsp;mm</b> is worth packing for winter or deeper, repeat dives."
+                 if secondary and secondary != primary else "")
+        body = f"Water {tpart} here, so a <b>{primary}&nbsp;mm wetsuit</b> is the right call.{extra}"
+        ctas = cta(primary, f"See the best {primary}&nbsp;mm wetsuits &rarr;")
+        if secondary and secondary != primary:
+            ctas += cta(secondary, f"See the best {secondary}&nbsp;mm &rarr;", ghost=True)
+    else:
+        return ""
+    return (f'<div class="packbox"><div class="pack-head">What to pack here</div>'
+            f'<p class="pack-body">{body}</p><div class="pack-ctas">{ctas}</div></div>')
+
 
 def dest_intro(d):
     """Data-generated overview paragraph (same wording logic as destIntro in index.html)."""
@@ -186,7 +228,7 @@ def page(d):
   {f'<span class="credit">{esc(d.get("image_credit"))}</span>' if d.get("image_credit") else ""}
 </header>
 <main class="wrap">
-  <p style="max-width:78ch;line-height:1.65;color:#d6f3f0">{esc(dest_intro(d))}</p>
+  <p style="max-width:78ch;line-height:1.65;color:#33565e">{esc(dest_intro(d))}</p>
   <div class="best">&#127942; <b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
   <div class="kv">
     <div><span>Water type</span>{esc(d["water_type"])}</div>
@@ -196,6 +238,7 @@ def page(d):
     <div><span>Current strength</span><b>{esc(d["current_strength"])}</b>{cur_note}</div>
     <div style="grid-column:1/-1"><span>Currents detail</span>{esc(d["currents"])}</div>
   </div>
+  {pack_box(d)}
   <span class="meta">Signature sea life</span>
   <div class="chips">{species}</div>
   <h2>Month-by-month diving calendar</h2>
