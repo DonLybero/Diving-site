@@ -1018,6 +1018,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .cmptable .cmp-price{color:var(--coral);font-family:var(--mono);font-weight:800}
   .cmp-photo{height:110px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:8px}
   .cmp-photo img{max-width:92%;max-height:92%;object-fit:contain}
+  /* ---------- destination gear cross-sell ---------- */
+  .packbox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--coral);
+       border-radius:12px;padding:14px 16px;margin:18px 0}
+  .pack-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);
+       display:flex;align-items:center;gap:6px;margin-bottom:6px}
+  .pack-body{margin:0 0 11px;color:var(--ink-soft);font-size:.92rem;line-height:1.6}
+  .pack-cta{background:linear-gradient(135deg,var(--coral),var(--coral-deep));color:#fff;border:none;border-radius:9px;
+       padding:9px 15px;font-size:.83rem;font-weight:600;cursor:pointer;font-family:var(--sans)}
+  .pack-cta:hover{filter:brightness(1.06)}
   /* ---------- wetsuit thickness picker ---------- */
   .thick-nav{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
   .thick-pill{display:flex;flex-direction:column;gap:1px;background:#fff;border:1px solid var(--line-strong);
@@ -1921,6 +1930,48 @@ function destIntro(d,s){
     hard.name+(hard.depth?' ('+hard.depth+')':'')+', '+(hard.level==='tec'?'technical-diving':hard.level)+' territory.';
   return p1+p2;
 }
+/* ---- contextual gear cross-sell: match a destination's water/wetsuit to the
+   matching wetsuit thickness guide (data-driven, no manual mapping) ---- */
+function repTemp(d){
+  var mt=d.monthly_temp_c||{};
+  var v=Object.keys(mt).map(function(k){return mt[k];}).filter(function(x){return typeof x==='number';});
+  if(!v.length) return null;
+  v.sort(function(a,b){return a-b;});
+  return v[Math.floor(v.length/2)];               // median monthly water temp
+}
+function packRec(d){
+  var w=(d.wetsuit||'').toLowerCase();
+  var dry=/drysuit/.test(w);
+  var th=(w.match(/([2357])\s*mm/g)||[]).map(function(s){return parseInt(s,10);});
+  var rng=w.match(/([2357])\s*-\s*([2357])\s*mm/);
+  if(rng){th.push(parseInt(rng[1],10),parseInt(rng[2],10));}
+  th=th.filter(function(x,i,a){return a.indexOf(x)===i;}).sort(function(a,b){return a-b;});
+  return {dry:dry, primary:th[0]||null, secondary:th.length>1?th[th.length-1]:null};
+}
+function gotoWetsuit(th){
+  showTab('gear');
+  var sel=document.getElementById('gearCat');
+  renderGear();                                   // ensure category options exist
+  sel.value='Wetsuits'; GEAR_THICK=th; renderGear();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function packBox(d){
+  var r=packRec(d), t=repTemp(d);
+  var tpart=t!=null?('sits around <b>'+t+'°C</b>'):'varies by season';
+  var body, cta;
+  if(r.dry){
+    body='The water here is cold enough that most divers use a <b>drysuit</b>. If you dive wet, a <b>7&nbsp;mm</b> and a hood are the warmest option.';
+    cta='<button class="pack-cta" onclick="gotoWetsuit(\'7mm\')">See the warmest 7&nbsp;mm wetsuits &rarr;</button>';
+  }else if(r.primary){
+    var extra=(r.secondary&&r.secondary!==r.primary)?(' A <b>'+r.secondary+'&nbsp;mm</b> is worth packing for winter or deeper, repeat dives.'):'';
+    body='Water '+tpart+' here, so a <b>'+r.primary+'&nbsp;mm wetsuit</b> is the right call.'+extra;
+    cta='<button class="pack-cta" onclick="gotoWetsuit(\''+r.primary+'mm\')">See the best '+r.primary+'&nbsp;mm wetsuits &rarr;</button>';
+  }else{
+    return '';                                     // no clear recommendation → skip
+  }
+  return '<div class="packbox"><div class="pack-head">'+ico('tank',14)+' What to pack here</div>'+
+    '<p class="pack-body">'+body+'</p>'+cta+'</div>';
+}
 function openProfile(name){
   showTab('search');
   var d=DivingCalendar.getDestination(DESTS,name); if(!d)return;
@@ -1961,6 +2012,7 @@ function openProfile(name){
         (d.current_note?'<div class="meta" style="font-size:.68rem;margin-top:2px">'+d.current_note+'</div>':'')+'</div>'+
       '<div style="grid-column:1/-1"><span>Currents detail</span>'+d.currents+'</div>'+
     '</div>'+
+    packBox(d)+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
     sitesBlock+
     '<h3 style="margin:22px 0 2px">'+ico('calendar',15)+' Month-by-month calendar</h3>'+
