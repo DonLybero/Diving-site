@@ -68,7 +68,8 @@ def footer_html():
     return ('<footer><b style="font-family:var(--serif);color:var(--ink)">DiveSZN</b> · seasonal dive planning, verified against '
             'dive operators, park authorities and liveaboard calendars.<br>Water temperatures are typical monthly ranges (±1°C); '
             'marine-life timing shifts year to year — always confirm with a local dive centre.<br>'
-            '<a href="index.html">All destinations</a> · <a href="../index.html">Open the dive planner</a></footer>')
+            '<a href="index.html">All destinations</a> · <a href="../index.html">Open the dive planner</a> · '
+            '<a href="../privacy.html">Privacy Policy</a></footer>')
 
 # Pluralised wording for site-type breakdowns (mirrors destIntro in index.html)
 SITE_PLURALS = {"Muck": "muck dives", "Shore": "shore dives", "Drift": "drift dives",
