@@ -2250,7 +2250,7 @@ function openCompare(){
   var photo='<tr><td class="rowlab"></td>'+items.map(function(it){
     return '<td><div class="cmp-photo">'+(it.image?'<img src="'+it.image+'" alt="" onerror="this.style.display=\'none\'">':'')+'</div></td>';}).join('')+'</tr>';
   var name='<tr><td class="rowlab">Model</td>'+items.map(function(it){return '<td class="cmp-name">'+it.name+'</td>';}).join('')+'</tr>';
-  var price='<tr><td class="rowlab">From</td>'+items.map(function(it){return '<td><b class="cmp-price">'+fmtPrice(lowPrice(it))+'</b></td>';}).join('')+'</tr>';
+  var price='<tr><td class="rowlab">Price</td>'+items.map(function(it){return '<td><b class="cmp-price">from '+fmtPrice(lowPrice(it))+'</b></td>';}).join('')+'</tr>';
   var rows=keys.map(function(k){
     var vals=items.map(function(it){return (it.specs&&it.specs[k])||'—';});
     var differ=vals.some(function(v){return v!==vals[0];});
