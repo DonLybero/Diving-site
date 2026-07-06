@@ -547,6 +547,21 @@ EXPERIENCES = [
      "tips": ["The run is weather- and current-driven, so timing shifts year to year — build in flexible days.",
               "Expect open-water entries and fast surface action; buoyancy and boat skills matter more than depth here.",
               "Pack real exposure protection — the run rides cold water even in a warm country."]},
+    {"slug": "orcas", "title": "Orcas", "keywords": ["orca", "killer whale"],
+     "short": "orca encounters",
+     "hero_sub": "The ocean's apex predator — the rarest encounter of all.",
+     "intro": ("Orcas are the ocean's apex predator: fast, social and startlingly intelligent, hunting in tight "
+               "family pods that pass techniques down the generations. Meeting one in the water is the rarest and "
+               "most sought-after big-animal moment in diving — a five-metre black-and-white shape resolving out of "
+               "the blue, sizing you up, and gone. They favour cold, productive water and gather where prey "
+               "concentrates, most famously on the winter herring runs of the high north."),
+     "desc": "Diving with orcas: what makes them the ultimate encounter, and where DiveSZN is headed to cover them.",
+     "no_data": ("Orca encounters are cold-water and opportunistic, and none of our current destinations has a "
+                 "reliable orca season — the classic waters, like northern Norway's winter herring run, are on our "
+                 "list as we expand. The moment orcas are in a destination's data, they'll surface here by month."),
+     "tips": ["Orcas are wild and unpredictable — encounters are never guaranteed and hinge on weather and prey.",
+              "Cold-water skills and serious exposure protection are the price of entry for the best orca waters.",
+              "Give them space and let them choose the interaction — it's their ocean."]},
 ]
 
 def where_when(dests, keywords):
@@ -569,11 +584,15 @@ def marine_article(exp, dests, prefix="../"):
         f'<tr><td><b><a href="{prefix}destinations/{x["slug"]}.html">{esc(x["name"])}</a></b>'
         f'<div class="meta">{esc(x["country"])}</div></td><td>{esc(", ".join(months))}</td></tr>'
         for _, x, months in rows)
-    table = (f'<h2>Where &amp; when to dive it</h2>'
-             f'<p class="greview" style="max-width:78ch">Pulled live from our seasonal data — the destinations where '
-             f'{esc(exp["short"])} shows in the water, and the months to catch it.</p>'
-             f'<div style="overflow:auto"><table><thead><tr><th>Destination</th><th>Best months</th></tr></thead>'
-             f'<tbody>{body_rows}</tbody></table></div>') if rows else ""
+    if rows:
+        table = (f'<h2>Where &amp; when to dive it</h2>'
+                 f'<p class="greview" style="max-width:78ch">Pulled live from our seasonal data — the destinations where '
+                 f'{esc(exp["short"])} shows in the water, and the months to catch it.</p>'
+                 f'<div style="overflow:auto"><table><thead><tr><th>Destination</th><th>Best months</th></tr></thead>'
+                 f'<tbody>{body_rows}</tbody></table></div>')
+    else:
+        table = (f'<h2>Where &amp; when to dive it</h2>'
+                 f'<p class="greview" style="max-width:78ch">{esc(exp.get("no_data") or "This is an opportunistic encounter — none of our current destinations has a fixed season for it yet.")}</p>')
     tips = "".join(f"<li>{esc(t)}</li>" for t in exp.get("tips", []))
     inner = (f'<p class="greview" style="max-width:78ch">{esc(exp["intro"])}</p>'
              + table
