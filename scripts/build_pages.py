@@ -11,7 +11,7 @@ The SPA (index.html) stays the interactive app; these pages give search
 engines one indexable URL per destination with the same researched data.
 Re-run after any data change:  python3 scripts/build_pages.py
 """
-import json, os, html, re
+import json, os, html, re, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://donlybero.github.io/Diving-site/"
@@ -58,6 +58,8 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
 .pack-ctas{display:flex;flex-wrap:wrap;gap:8px}
 .pack-cta{display:inline-block;background:var(--coral);color:#2a0f06;border-radius:9px;padding:9px 15px;font-size:.83rem;font-weight:700;text-decoration:none}
 .pack-cta.ghost{background:#fff;color:#b3492f;border:1px solid #e6bcb0}
+.staybox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:14px 16px;margin:18px 0}
+.stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
 .artlist{list-style:none;padding:0;margin:14px 0}
@@ -150,6 +152,50 @@ def pack_box(d):
     else:
         return ""
     return (f'<div class="packbox"><div class="pack-head">What to pack here</div>'
+            f'<p class="pack-body">{body}</p><div class="pack-ctas">{ctas}</div></div>')
+
+
+LIVEABOARD_SLUG = {
+ "Red Sea (Egypt)": "egypt/red-sea", "Maldives": "maldives", "Raja Ampat": "indonesia",
+ "Komodo National Park": "indonesia", "Cocos Island": "costa-rica", "Galapagos Islands": "galapagos",
+ "Socorro Island": "mexico", "Sea of Cortez": "mexico", "Seychelles": "seychelles", "Palau": "palau",
+ "Truk (Chuuk) Lagoon": "micronesia", "Fiji": "fiji", "French Polynesia": "french-polynesia",
+ "Guadalcanal & Western Province": "solomon-islands", "Similan Islands": "thailand",
+ "Tubbataha Reefs Natural Park": "philippines", "Bahamas": "bahamas", "Bay Islands": "honduras",
+ "Cayman Islands": "cayman-islands", "Great Blue Hole": "belize", "Great Barrier Reef": "australia",
+ "Whitsunday Islands": "australia",
+}
+
+def stay_box(d):
+    """Where-to-stay cross-sell — Booking.com search deep-link (raw; the SPA wraps
+    with the affiliate id) + LiveAboard.com page for liveaboard-oriented sites."""
+    name = re.sub(r"\s*\(.*?\)\s*", " ", d["name"]).strip()
+    country = re.sub(r"\s*\(.*?\)\s*", " ", d.get("country", "")).strip()
+    q = (name + ((" " + country) if country and country != name else "")).strip()
+    booking = f"https://www.booking.com/searchresults.html?ss={urllib.parse.quote(q)}&selected_currency=USD"
+    access = (d.get("access") or "").lower()
+    live = "liveaboard" in access
+    board_only = bool(re.match(r"^\s*liveaboard(\s*/\s*day-boat)?\s*$", access))
+    slug = LIVEABOARD_SLUG.get(d["name"])
+    la = f"https://www.liveaboard.com/diving/{slug}" if slug else "https://www.liveaboard.com/"
+
+    def a(href, label, ghost=False):
+        return (f'<a class="pack-cta{" ghost" if ghost else ""}" href="{esc(href)}" '
+                f'target="_blank" rel="noopener sponsored">{label}</a>')
+
+    book = a(booking, f"Find stays near {esc(name)} &rarr;", ghost=board_only)
+    board = a(la, "Browse liveaboards &rarr;", ghost=not board_only) if live else ""
+    if board_only:
+        body = ("Diving here is liveaboard-based — you sleep aboard the boat. Book a liveaboard, "
+                "or a gateway hotel for the nights either side.")
+        ctas = board + book
+    elif live:
+        body = "Base yourself at a dive resort or hotel near the water — or see it all from a liveaboard."
+        ctas = book + board
+    else:
+        body = "Base yourself at a dive resort or hotel close to the water."
+        ctas = book
+    return (f'<div class="staybox"><div class="stay-head">Where to stay</div>'
             f'<p class="pack-body">{body}</p><div class="pack-ctas">{ctas}</div></div>')
 
 
@@ -265,6 +311,7 @@ def page(d):
     <div style="grid-column:1/-1"><span>Currents detail</span>{esc(d["currents"])}</div>
   </div>
   {pack_box(d)}
+  {stay_box(d)}
   <span class="meta">Signature sea life</span>
   <div class="chips">{species}</div>
   <h2>Month-by-month diving calendar</h2>
