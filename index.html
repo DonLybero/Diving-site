@@ -1326,14 +1326,12 @@ function openCompare(){
     return '<td><div class="cmp-photo">'+(it.image?'<img src="'+it.image+'" alt="" onerror="this.style.display=\'none\'">':'')+'</div></td>';}).join('')+'</tr>';
   var name='<tr><td class="rowlab">Model</td>'+items.map(function(it){return '<td class="cmp-name">'+it.name+'</td>';}).join('')+'</tr>';
   var price='<tr><td class="rowlab">From</td>'+items.map(function(it){return '<td><b class="cmp-price">'+fmtPrice(lowPrice(it))+'</b></td>';}).join('')+'</tr>';
-  var buy='<tr><td class="rowlab">Buy</td>'+items.map(function(it){var o=orderOffers(it.options)[0];
-    return '<td><a class="btn" href="'+affLink(o.url)+'" target="_blank" rel="noopener sponsored">Buy at '+o.store+'</a></td>';}).join('')+'</tr>';
   var rows=keys.map(function(k){
     var vals=items.map(function(it){return (it.specs&&it.specs[k])||'—';});
     var differ=vals.some(function(v){return v!==vals[0];});
     return '<tr class="'+(differ?'diff':'')+'"><td class="rowlab">'+k+'</td>'+vals.map(function(v){return '<td>'+v+'</td>';}).join('')+'</tr>';
   }).join('');
-  document.getElementById('cmpBody').innerHTML='<table class="cmptable"><tbody>'+photo+name+price+buy+rows+'</tbody></table>';
+  document.getElementById('cmpBody').innerHTML='<table class="cmptable"><tbody>'+photo+name+price+rows+'</tbody></table>';
   document.getElementById('cmpModal').classList.remove('hidden');
 }
 function closeCompare(){var m=document.getElementById('cmpModal'); if(m)m.classList.add('hidden');}
