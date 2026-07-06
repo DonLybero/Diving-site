@@ -983,6 +983,41 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .ptable tr.low .price{color:var(--coral);font-weight:800}
   .ptable tr.low .deal::after{content:" ◀ cheapest";color:var(--peak);font-size:.66rem;font-family:var(--mono)}
   .ptable .btn{padding:8px 13px;font-size:.78rem}
+  /* ---------- where-to-buy box ---------- */
+  .buybox{background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-top:12px}
+  .buybox-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:11px}
+  .buy-lead{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:12px}
+  .buy-from{font-family:var(--serif);font-size:1.02rem;color:var(--ink)}
+  .buy-from b{color:var(--coral);font-family:var(--mono);font-weight:800}
+  .buy-live{font-size:.7rem;color:var(--muted)}
+  .buy-btns{display:flex;flex-wrap:wrap;gap:8px}
+  .cmp-toggle{margin-top:11px;background:#fff;border:1px solid var(--line-strong);border-radius:8px;padding:6px 13px;
+       font-size:.78rem;font-family:var(--sans);color:var(--accent-deep);cursor:pointer;transition:background .15s,border-color .15s}
+  .cmp-toggle:hover{border-color:var(--accent)}
+  .cmp-toggle.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  /* ---------- compare bar + modal ---------- */
+  .cmpbar.hidden,.cmpmodal.hidden{display:none}
+  .cmpbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;justify-content:space-between;align-items:center;gap:12px;
+       background:var(--ink);color:#fff;padding:11px 18px;box-shadow:0 -4px 18px rgba(0,0,0,.18)}
+  .cmpbar-text{font-family:var(--mono);font-size:.82rem}
+  .cmpbar-actions{display:flex;gap:8px}
+  .cmpbar .btn.ghost{color:#fff;border-color:rgba(255,255,255,.45);background:transparent}
+  .cmpbar .btn:disabled{opacity:.4;pointer-events:none}
+  .cmpmodal{position:fixed;inset:0;z-index:80;background:rgba(6,26,32,.55);display:flex;align-items:center;justify-content:center;padding:18px}
+  .cmpmodal-inner{background:#fff;border-radius:16px;max-width:980px;width:100%;max-height:88vh;display:flex;flex-direction:column;box-shadow:0 24px 70px rgba(0,0,0,.32)}
+  .cmpmodal-head{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid var(--line)}
+  .cmpmodal-head b{font-family:var(--serif);font-size:1.25rem}
+  .cmpmodal-close{background:none;border:none;font-size:1.4rem;line-height:1;cursor:pointer;color:var(--muted)}
+  .cmpmodal-body{padding:6px 18px 20px;overflow:auto}
+  .cmptable{width:100%;border-collapse:collapse;min-width:480px}
+  .cmptable th,.cmptable td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;font-size:.86rem}
+  .cmptable .rowlab{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+       white-space:nowrap;position:sticky;left:0;background:#fff;z-index:1}
+  .cmptable tr.diff td{background:rgba(255,122,89,.06)}
+  .cmptable .cmp-name{font-family:var(--serif);font-weight:600;font-size:.98rem}
+  .cmptable .cmp-price{color:var(--coral);font-family:var(--mono);font-weight:800}
+  .cmp-photo{height:110px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:8px}
+  .cmp-photo img{max-width:92%;max-height:92%;object-fit:contain}
   /* ---------- wetsuit thickness picker ---------- */
   .thick-nav{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
   .thick-pill{display:flex;flex-direction:column;gap:1px;background:#fff;border:1px solid var(--line-strong);
@@ -1012,6 +1047,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
     #profile th:last-child,#profile td:last-child{min-width:200px}
     .thick-nav{gap:6px}
     .thick-pill{flex:1 1 calc(50% - 6px);padding:8px 12px}
+    .cmpbar{padding:9px 12px;gap:8px}
+    .cmpbar-text{font-size:.72rem}
+    .cmpbar .btn{padding:8px 12px;font-size:.78rem}
+    .cmpmodal{padding:0}
+    .cmpmodal-inner{max-height:100vh;border-radius:0}
   }
 
   /* ---------- articles / reviews ---------- */
@@ -1119,6 +1159,22 @@ svg.leaflet-image-layer.leaflet-interactive path {
     </div>
     <div id="gearGrid" class="grid"></div>
   </section>
+
+  <!-- gear comparison: sticky picker bar + side-by-side modal -->
+  <div id="cmpBar" class="cmpbar hidden">
+    <span class="cmpbar-text" id="cmpBarText">Comparing 0 of 3</span>
+    <div class="cmpbar-actions">
+      <button class="btn ghost" onclick="clearCompare()">Clear</button>
+      <button class="btn" id="cmpGo" onclick="openCompare()" disabled>Compare</button>
+    </div>
+  </div>
+  <div id="cmpModal" class="cmpmodal hidden">
+    <div class="cmpmodal-inner">
+      <div class="cmpmodal-head"><b>Side-by-side</b>
+        <button class="cmpmodal-close" onclick="closeCompare()" aria-label="Close">&times;</button></div>
+      <div class="cmpmodal-body" id="cmpBody"></div>
+    </div>
+  </div>
 
   <!-- DESTINATIONS: 12 monthly top-destination articles -->
   <section id="view-destinations" class="hidden"><div id="destBody"></div></section>
@@ -1559,6 +1615,7 @@ function showTab(t){
   });
   // The full-height hero anchors the landing/home view only; collapse it on working tabs.
   document.getElementById('hero').classList.toggle('hidden', t!=='home');
+  if(t==='gear'){ updateCmpBar(); } else { closeCompare(); var cb=document.getElementById('cmpBar'); if(cb)cb.classList.add('hidden'); }
   if(t==='planner'){ planEngage(sub||PLAN_SUB); }   // planner always opens engaged: top 3 for the Now period
   window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -2115,22 +2172,96 @@ function gearPhoto(item,cat){
     (item.image?'<img src="'+item.image+'" alt="'+item.name.replace(/"/g,'&quot;')+'" loading="lazy" '+
       'onerror="this.parentNode.innerHTML=this.parentNode.querySelector(\'.gear-rank\').outerHTML+'+"'"+fallback.replace(/'/g,"\\'").replace(/"/g,'&quot;')+"'"+';">':fallback)+'</div>';
 }
-function gearEntry(item,cat){
-  var offers=item.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;}).slice(0,3);
-  var rows=offers.map(function(o,i){
-    return '<tr class="'+(i===0?'low':'')+'"><td class="deal">'+o.store+'</td>'+
-      '<td class="price">'+fmtPrice(o.price_usd)+'</td>'+
-      '<td style="text-align:right"><a class="btn'+(i===0?'':' ghost')+'" href="'+affLink(o.url)+'" target="_blank" rel="noopener sponsored">Buy at '+o.store+'</a></td></tr>';
+// Retailers reachable through a named affiliate network rank ahead of
+// Skimlinks-only stores, so on near-equal prices we surface a partner first.
+function partnerTier(store){
+  var s=(store||'').toLowerCase();
+  return /amazon|ebay|scuba\.com|leisurepro|tradeinn|diveinn|scubastore/.test(s)?0:1;
+}
+function orderOffers(options){
+  var s=(options||[]).slice().sort(function(a,b){return a.price_usd-b.price_usd;});
+  if(!s.length) return s;
+  var min=s[0].price_usd, band=min*0.05||1;
+  return s.sort(function(a,b){
+    var ba=Math.floor((a.price_usd-min)/band), bb=Math.floor((b.price_usd-min)/band);
+    if(ba!==bb) return ba-bb;                       // clearly cheaper wins
+    var ta=partnerTier(a.store), tb=partnerTier(b.store);
+    if(ta!==tb) return ta-tb;                       // within ~5%, partner first
+    return a.price_usd-b.price_usd;
+  });
+}
+function lowPrice(item){return (item.options||[]).reduce(function(m,o){return Math.min(m,o.price_usd);}, Infinity);}
+function buyBox(item){
+  var offers=orderOffers(item.options).slice(0,3);
+  var btns=offers.map(function(o,i){
+    return '<a class="btn'+(i===0?'':' ghost')+'" href="'+affLink(o.url)+'" target="_blank" rel="noopener sponsored">Buy at '+o.store+'</a>';
   }).join('');
+  return '<div class="buybox"><div class="buybox-top">'+
+    '<div><span class="buy-lead">Where to buy</span><span class="buy-from">from <b>'+fmtPrice(lowPrice(item))+'</b></span></div>'+
+    '<span class="buy-live">indicative — check the live price at the retailer</span></div>'+
+    '<div class="buy-btns">'+btns+'</div></div>';
+}
+function gearEntry(item,cat,idx){
   var specs=item.specs?'<dl class="specs">'+Object.keys(item.specs).map(function(k){
     return '<div><dt>'+k+'</dt><dd>'+item.specs[k]+'</dd></div>';
   }).join('')+'</dl>':'';
+  var on=inCompare(item);
+  var cmp='<button class="cmp-toggle'+(on?' on':'')+'" data-name="'+item.name.replace(/"/g,'&quot;')+'" '+
+    'onclick="toggleCompare('+idx+')">'+(on?'&#10003; Added to compare':'&#8646; Compare')+'</button>';
   return '<div class="gentry">'+gearPhoto(item,cat)+
     '<div><h3>'+item.rank+'. '+item.name+'</h3>'+
     '<p class="gentry-review">'+(item.review||item.blurb)+'</p>'+
-    specs+
-    '<table class="ptable">'+rows+'</table></div></div>';
+    specs+buyBox(item)+cmp+'</div></div>';
 }
+
+/* ---------- gear comparison (within one category page) ---------- */
+var CMP=[], CMP_SCOPE='', GEAR_VIEW={items:[]};
+function inCompare(item){return CMP.some(function(x){return x.name===item.name;});}
+function toggleCompare(idx){
+  var item=GEAR_VIEW.items[idx]; if(!item) return;
+  var at=-1; CMP.forEach(function(x,i){if(x.name===item.name)at=i;});
+  if(at>-1) CMP.splice(at,1);
+  else{ if(CMP.length>=3){flashCmp();return;} CMP.push(item); }
+  refreshCmpState();
+}
+function refreshCmpState(){
+  var nodes=document.querySelectorAll('.cmp-toggle');
+  for(var i=0;i<nodes.length;i++){
+    var b=nodes[i], on=CMP.some(function(x){return x.name===b.getAttribute('data-name');});
+    b.classList.toggle('on',on);
+    b.innerHTML=on?'&#10003; Added to compare':'&#8646; Compare';
+  }
+  updateCmpBar();
+}
+function updateCmpBar(){
+  var bar=document.getElementById('cmpBar'); if(!bar) return;
+  if(CMP.length>=1){
+    bar.classList.remove('hidden');
+    document.getElementById('cmpBarText').textContent='Comparing '+CMP.length+' of 3'+(CMP.length<2?' — pick one more':'');
+    document.getElementById('cmpGo').disabled=CMP.length<2;
+  }else bar.classList.add('hidden');
+}
+function flashCmp(){var t=document.getElementById('cmpBarText'); if(!t)return; t.textContent='Compare up to 3 at a time'; setTimeout(updateCmpBar,1300);}
+function clearCompare(){CMP=[]; refreshCmpState(); closeCompare();}
+function openCompare(){
+  if(CMP.length<2) return;
+  var items=CMP.slice(), keys=[];
+  items.forEach(function(it){Object.keys(it.specs||{}).forEach(function(k){if(keys.indexOf(k)<0)keys.push(k);});});
+  var photo='<tr><td class="rowlab"></td>'+items.map(function(it){
+    return '<td><div class="cmp-photo">'+(it.image?'<img src="'+it.image+'" alt="" onerror="this.style.display=\'none\'">':'')+'</div></td>';}).join('')+'</tr>';
+  var name='<tr><td class="rowlab">Model</td>'+items.map(function(it){return '<td class="cmp-name">'+it.name+'</td>';}).join('')+'</tr>';
+  var price='<tr><td class="rowlab">From</td>'+items.map(function(it){return '<td><b class="cmp-price">'+fmtPrice(lowPrice(it))+'</b></td>';}).join('')+'</tr>';
+  var buy='<tr><td class="rowlab">Buy</td>'+items.map(function(it){var o=orderOffers(it.options)[0];
+    return '<td><a class="btn" href="'+affLink(o.url)+'" target="_blank" rel="noopener sponsored">Buy at '+o.store+'</a></td>';}).join('')+'</tr>';
+  var rows=keys.map(function(k){
+    var vals=items.map(function(it){return (it.specs&&it.specs[k])||'—';});
+    var differ=vals.some(function(v){return v!==vals[0];});
+    return '<tr class="'+(differ?'diff':'')+'"><td class="rowlab">'+k+'</td>'+vals.map(function(v){return '<td>'+v+'</td>';}).join('')+'</tr>';
+  }).join('');
+  document.getElementById('cmpBody').innerHTML='<table class="cmptable"><tbody>'+photo+name+price+buy+rows+'</tbody></table>';
+  document.getElementById('cmpModal').classList.remove('hidden');
+}
+function closeCompare(){var m=document.getElementById('cmpModal'); if(m)m.classList.add('hidden');}
 var GEAR_THICK=null;
 function leadItem(c){return (c.items&&c.items[0])||(c.thickness_groups&&c.thickness_groups[0].items[0])||{};}
 function pickThickness(t){GEAR_THICK=t; renderGear(); window.scrollTo({top:0,behavior:'smooth'});}
@@ -2149,7 +2280,9 @@ function renderGear(){
   if(!GEAR_GUIDE||!GEAR_GUIDE.categories){document.getElementById('gearGrid').innerHTML='<div class="empty">Gear guide could not load.</div>';return;}
   if(sel.options.length<=1) GEAR_GUIDE.categories.forEach(function(c){var o=document.createElement('option');o.value=c.category;o.textContent=c.category;sel.appendChild(o);});
   var cat=sel.value, g=document.getElementById('gearGrid');
+  function cmpScope(scope,items){ if(scope!==CMP_SCOPE){CMP=[];CMP_SCOPE=scope;} GEAR_VIEW={items:items||[]}; }
   if(!cat){
+    cmpScope('',[]);
     // Article index: magazine-style list of buyer's guides
     var rows=GEAR_GUIDE.categories.map(function(c){
       var teaser=(c.article_intro||'').split('. ').slice(0,2).join('. ')+'.';
@@ -2178,6 +2311,7 @@ function renderGear(){
       var grp=groups.filter(function(x){return x.thickness===GEAR_THICK;})[0]||
               groups.filter(function(x){return x.thickness==='3mm';})[0]||groups[0];
       GEAR_THICK=grp.thickness;
+      cmpScope(cat+'|'+grp.thickness, grp.items);
       var tipsW=(grp.tips||c.tips||[]).map(function(t){return '<li>'+t+'</li>';}).join('');
       g.innerHTML='<div class="article gear-article" style="grid-column:1/-1">'+head+
         '<h2 style="margin:6px 0 10px">'+(c.title||('Top '+c.category))+'</h2>'+
@@ -2186,19 +2320,20 @@ function renderGear(){
         '<p class="thick-lead">'+(grp.label||grp.thickness)+(grp.water?' · '+grp.water:'')+'</p>'+
         (grp.article_intro?'<p class="gentry-review" style="max-width:80ch">'+grp.article_intro+'</p>':'')+
         (tipsW?'<div class="tipbox"><b>What to look for</b><ul>'+tipsW+'</ul></div>':'')+
-        grp.items.map(function(it){return gearEntry(it,c.category);}).join('')+
+        grp.items.map(function(it,idx){return gearEntry(it,c.category,idx);}).join('')+
         foot+'</div>';
     }else{
+      cmpScope(cat, c.items);
       var tips=(c.tips||[]).map(function(t){return '<li>'+t+'</li>';}).join('');
       g.innerHTML='<div class="article gear-article" style="grid-column:1/-1">'+head+
         '<h2 style="margin:6px 0 10px">'+(c.title||('Top 10 '+c.category))+'</h2>'+
         '<p class="gentry-review" style="max-width:80ch">'+(c.article_intro||'')+'</p>'+
         (tips?'<div class="tipbox"><b>What to look for</b><ul>'+tips+'</ul></div>':'')+
-        c.items.map(function(it){return gearEntry(it,c.category);}).join('')+
+        c.items.map(function(it,idx){return gearEntry(it,c.category,idx);}).join('')+
         foot+'</div>';
     }
   }
-  applyIcons();
+  applyIcons(); updateCmpBar();
 }
 
 /* ---------------- Destinations: 12 monthly top-destination articles ----------------
