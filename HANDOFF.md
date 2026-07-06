@@ -1,120 +1,215 @@
-# DiveSZN — project handoff
+# DiveSZN — project handoff & framework
 
-A diving website: a **seasonal trip planner / calendar** for 50 world dive
-destinations, wrapped in a **dive-hub** (gear price-comparison, reviews, dive
-centres, liveaboard safaris). Static site, no backend, deployable anywhere.
+**Read this file first in every new session.** It is the single source of truth
+for what DiveSZN is, how it's built, the non-negotiable editorial rules, the
+operating playbook, and the roadmap. When the owner asks for "a new thing",
+slot it into this framework rather than inventing a parallel one.
+
+---
+
+## 1. What DiveSZN is
+
+A static diving website whose USP is answering **WHEN to dive WHERE**:
+
+- **Core product — Dive Planner:** a seasonal trip planner over 50 world dive
+  destinations × 12 months of researched data (season rating, water temp,
+  visibility, marine life, conditions, currents). Results render three ways:
+  ranked cards, world map, year calendar.
+- **Wrapped in a dive hub:** a monetization-ready Gear guide (top-10 buyer's
+  guides with price comparison), a Destinations section (12 monthly
+  "Top Destinations in <Month>" articles ranked live by the scoring engine),
+  destination search with full profiles, and 409 named dive sites.
+- **No backend.** Pure static: HTML + CSS + vanilla JS + JSON. GitHub Pages.
 
 - **Live site:** https://donlybero.github.io/Diving-site/
-- **Repo:** `DonLybero/Diving-site`
-- **Working branch:** `main` (trunk since 2026-07; the old claude/diving-destinations-research-73uc5i branch is retired)
+- **Repo:** `DonLybero/Diving-site` · trunk is `main`; work on a feature
+  branch, then **merge every finished change into `main`** (standing owner
+  instruction) — pushing to `main` auto-deploys in ~1–2 min.
 
-## Brand
-- **Name:** DiveSZN — "dive season" in sports-slang spelling ("SZN"); named for the
-  site's USP (WHEN to dive WHERE). Wordmark renders as `Dive<b>SZN</b>`. Renamed from
-  "Scubanaut" 2026-07 after a multi-lane naming + clearance study — see
-  `docs/name-change-diveszn-2026-07.md`. **Logo:** a whale **fluke** (bare tail, no circle/text) — inline SVG in `index.html` header + the favicon (data-URI).
-- **Design language:** deep-ocean "instrument panel" — luminous **aqua** (`#2fe0d6`) on deep **teal** (`#04202b`), **coral** (`#ff7a59`) reserved for prices/scores/CTAs. **Monospace** "dive-computer" readout chips for water temp / visibility / current; **editorial serif** (Georgia) for headings.
+## 2. Brand & design system
 
-## What's real vs. sample data
-- **REAL, researched:** the 50-destination seasonal dataset — per-month water
-  temperature, marine life, conditions, visibility, season rating, plus
-  current strength and coordinates. Powers the Calendar, Best-period, Plan,
-  Map, Search and Dive Sites sections.
-- **REAL, researched (2026-07):** the Gear guide (`gear-guide.json`) — top 10
-  per category (masks, fins, regulators, BCDs, computers, wetsuits) compiled
-  from the 20 biggest diving YouTube channels + ScubaLab/DIVE/DiveIn tests,
-  each with 3 cheapest online stores (indicative prices, real links; image
-  URLs best-effort with icon fallback).
-- **REAL, computed live:** the Destinations tab — 12 "Top Destinations in
-  <Month>" articles ranked live by the scoring engine over the seasonal
-  dataset, with editorial ledes. (The old sample Reviews and Dive Centres
-  sections were removed 2026-07.)
+- **Name:** DiveSZN ("dive season", sports-slang SZN). Wordmark `Dive<b>SZN</b>`.
+  Renamed from "Scubanaut" 2026-07 (`docs/name-change-diveszn-2026-07.md`).
+- **Logo:** a whale **fluke** — bare tail, no circles, no helmets. Inline SVG
+  in the header + data-URI favicon.
+- **Theme:** **light/white** (owner-directed redesign 2026-07; the old deep-teal
+  dark theme is retired). Palette lives in `:root` of `index.html`:
+  near-white backgrounds (`--bg:#f4f9f9`, panels `#ffffff`), dark teal ink
+  (`#0e2f37`), teal accent (`#0e9c92` family), **coral (`#ff7a59`) strictly for
+  prices/scores/CTAs**.
+- **Typography:** editorial serif (Georgia) for headings, sans for body,
+  **monospace "dive-computer" chips** for data readouts (temps, viz, scores).
+- **Header is an ad slot:** 728×90 leaderboard on desktop, 320×50 stacked on
+  mobile (`#adHeader`); logo left, no nav clutter.
+- **Icons:** inline SVG system (`ICONS` map) — never emoji in UI.
 
-## File map
+## 3. Editorial rules (owner-mandated, NON-NEGOTIABLE)
+
+1. **Scuba only.** Never mention freediving/snorkelling as the site's audience;
+   snorkel-only sites were deliberately removed from the data.
+2. **Never name third parties in site copy** (no PADI, ScubaLab, DiveIn,
+   magazines, YouTubers, testers, "listed by" credits) — legal-risk decision.
+   Retailer names inside buy links/price tables are the only exception.
+3. **No aphorism intros.** Never open copy with lines like *"Dive trips are won
+   in the planning."* Say directly what DiveSZN does for the reader.
+4. **Taglines** say DiveSZN helps you plan your dive ahead / pick the best
+   destination for your dates — and **never cite destination counts**.
+5. **Gear specs must be explicit** — never write "Both"; spell out
+   e.g. "open heel and full foot". Reviews must be genuinely informative
+   (what it is, why it matters underwater), not marketing fluff.
+6. **Photo credits:** keep attribution data, but on the hero it renders as a
+   tooltip-only ⓘ (owner didn't want a visible photographer name, and did NOT
+   want the photo itself replaced).
+7. Prices are indicative; depth figures always carry the "confirm with your
+   operator" caveat.
+
+## 4. Architecture & file map
+
 | File | What it is |
 |------|-----------|
-| `index.html` | The whole site (HTML + CSS + inline app JS). Loads the data/engine over HTTP. **This is what GitHub Pages serves.** |
-| `diving-calendar.js` | Scoring + query engine: `rankPeriod`, `rankWindow`, `getDestination`, `searchDestinations`, `destinationSeasonSummary`. Browser + Node. |
-| `diving-destinations.json` | **Canonical data** — 50 destinations, each with metadata + 12 monthly entries (rating, temp, visibility_m, marine_life, conditions) + current_strength + coordinates. |
-| `diving-rankings.json` | Precomputed period rankings (optional; site computes live too). |
-| `diving-site.html` | Single-file build (everything inlined) — opens offline by double-click. Regenerate with `scripts/build_standalone.py`. |
-| `diving-calendar-24-periods.csv`, `diving-calendar-grid.csv` | Spreadsheet exports of the data. |
-| `vendor/` | Self-hosted Leaflet + `world-land.geojson` (offline vector map basemap). |
-| `index.html` Map tab | Uses the offline vector basemap by default. |
-| `map-A-osm-tiles.html`, `map-B-vector-offline.html` | Standalone map-style comparison demos. |
-| `scripts/` | Data generators (see below). |
-| `.github/workflows/deploy-pages.yml` | Auto-deploys the repo root to GitHub Pages on every push to the working branch. |
+| `index.html` | **The whole app** — HTML + CSS + inline JS in one file. What Pages serves. Tabs: Home, Dive Planner, Diving Gear, Destinations, Search. |
+| `diving-calendar.js` | Scoring/query engine: `rankPeriod`, `rankWindow`, `getDestination`, `searchDestinations`, `destinationSeasonSummary`. Browser + Node. |
+| `diving-destinations.json` | **Canonical data** — 50 destinations × 12 monthly entries + metadata (coords, currents, wetsuit, access, dive_sites, image). |
+| `gear-guide.json` | Gear guide data — 6 categories × 10 items: review, specs dict, image (local `assets/gear/`), 3 cheapest buy options, article intro/tips. |
+| `diving-site.html` | Single-file offline build (all JSON/JS inlined). **Regenerate after every index.html or data change** (`scripts/build_standalone.py`). |
+| `destinations/*.html` | 50 static SEO pages + sitemap.xml (`scripts/build_pages.py`). |
+| `assets/gear/` | 60 self-hosted product images (no hotlinking). |
+| `vendor/` | Self-hosted Leaflet + world-land geojson (offline map basemap). |
+| `scripts/` | Data build pipeline + CI fetchers (below). |
+| `.github/workflows/deploy-pages.yml` | Deploys repo root to Pages on push to `main`; also manual `workflow_dispatch`. |
+| `.github/workflows/fetch-images.yml` | Destination photos from Wikimedia/Pexels (runs on Actions runners — they have internet). |
+| `.github/workflows/fetch-gear-images.yml` | Gear product images from retailer og:image, localized into `assets/gear/`. |
 
-## Data pipeline (how to regenerate)
-The canonical file is `diving-destinations.json`. You can edit it directly, OR
-regenerate it from source with the scripts (paths are repo-relative):
+### Key JS structures inside `index.html`
+- `AFFILIATE` config + `affLink()` — affiliate wiring (§7).
+- `REGION_GROUPS` / `DEST_GROUP` + `buildRegionMenu()` etc. — the planner's
+  cascading region picker (8 continents, alphabetical, arrow expands to
+  destination · country; picking filters cards/map/calendar).
+- `MONTH_INTROS` + `renderDestinations()` / `openMonthArticle()` — 12 monthly
+  articles, ranked live by the engine.
+- `GEAR_GUIDE` + `renderGear()` / `gearEntry()` — magazine-style article list +
+  per-item photo/review/specs/price-table.
+- `openProfile()` — full destination profile (intro paragraph via
+  `destIntro()`, best months, conditions grid, dive-sites table,
+  month-by-month table).
+
+## 5. Data pipeline
+
+`diving-destinations.json` is canonical. Either edit it directly or regenerate:
 
 ```bash
-python3 scripts/build_master.py      # -> diving-destinations.json + the 2 CSVs
+python3 scripts/build_master.py      # sources -> diving-destinations.json + CSVs
 python3 scripts/build_rankings.py    # -> diving-rankings.json
-python3 scripts/build_standalone.py  # -> diving-site.html (inlined single file)
+python3 scripts/build_standalone.py  # -> diving-site.html (ALWAYS after UI/data edits)
+python3 scripts/build_pages.py       # -> destinations/*.html + sitemap
 ```
 
-Source inputs:
-- `scripts/build_csv.py` + `scripts/meta11.py` — the original 11 destinations (month-by-month tuples + metadata).
-- `scripts/data/*.json` — the other 39 destinations (Caribbean / Europe / Pacific / SE-Asia / Australia research fragments).
-- `scripts/data/dive_sites.json` — 417 recognised named dive sites across all 50 destinations (researched 2026-07, PADI Travel first, cross-checked against SSI MyDiveGuide / Scuba Diving Magazine / operator listings). Merged into each destination as `dive_sites` by build_master; rendered in the profile, the SEO pages and searchable in the Search tab.
-- `scripts/build_master.py` merges all of them, derives `visibility_m` (parsed from conditions text), `current_strength` (Low/Medium/Strong), and coordinates, then writes the JSON + CSVs.
+Sources: `scripts/build_csv.py` + `scripts/meta11.py` (original 11
+destinations), `scripts/data/*.json` (the other 39), `scripts/data/dive_sites.json`
+(**409 verified dive sites** — Google-verified, snorkel-only culled, per-site
+`source` field is research provenance and is **stripped from published
+output**), `scripts/data/verification.json` (hand-verified currents).
+`build_master.py` merges everything, derives `visibility_m` and
+`current_strength`, and preserves baked `image` fields.
 
-**After changing data, rerun the three scripts**, then commit. The push
-auto-deploys.
+### Scoring (MUST stay identical in `build_rankings.py` and `diving-calendar.js`)
+```
+score = rating_base (Peak 100 / Good 72 / Shoulder 48 / Low 22; Closed excluded)
+      + min(marine-life keyword bonus, 25)
+      + visibility bonus 0..18 (visibility_m <=5m → 0, >=35m → 18)
+```
 
-## Scoring (kept identical in `build_rankings.py` and `diving-calendar.js`)
-`score = rating_base (Peak100/Good72/Shoulder48/Low22; Closed excluded)
-       + min(marine-life keyword bonus, 25)
-       + visibility_bonus (0..18, scaled from visibility_m: <=5m→0, >=35m→18)`
+## 6. What's real vs sample
 
-## Deploy
-GitHub Pages is set to **Source = GitHub Actions**. The workflow publishes the
-repo root; `index.html` is the landing page. Every push to `main` redeploys
-within ~1–2 min.
+- **REAL:** the 50-destination seasonal dataset, 409 dive sites, destination
+  photos (Wikimedia/Pexels, openly licensed, attribution kept in data), the
+  Gear guide (researched picks, indicative prices, real retailer links, local
+  images), the 12 monthly Destination articles (computed live from real data).
+- **SAMPLE:** Liveaboard Safaris listings only. (The old sample Reviews and
+  Dive Centres sections were **removed** 2026-07.)
 
-## Done so far (highlights)
-- 50 destinations fact-checked by research agents (2026-07); current strength
-  hand-verified per destination (`scripts/data/verification.json`, applied by
-  build_master); Chagos marked access-suspended.
-- Destination photos baked via the fetch-images workflow (Wikimedia; add a
-  PEXELS_API_KEY repo secret + rerun with --force for better quality).
-- SVG icon system (no emoji); Dive Sites + Map merged into the Dive Planner
-  (opens on top-3 for the current period; See more 3→10→+5).
-- 50 static SEO pages under `destinations/` + sitemap.xml + robots.txt
-  (`scripts/build_pages.py`).
-- Dive Centres is a factual directory (no invented ratings); gear prices
-  visibly labelled as samples.
-- Recognised named dive sites for all 50 destinations (2026-07): 417 sites in
-  `scripts/data/dive_sites.json`, shown in destination profiles + SEO pages
-  and matched by search (e.g. searching "Blue Corner" finds Palau).
+## 7. Monetization (wired, awaiting owner sign-ups)
 
-## Backlog
-- OWNER (URGENT): register **diveszn.com / diveszn.io / diveszn.app** — all
-  showed unregistered in the 2026-07 screen (`docs/name-change-diveszn-2026-07.md`)
-  and standard-price availability evaporates fast.
-- OWNER: attorney trademark knockout search for "DiveSZN" (certified
-  USPTO/EUIPO) before merch/marketing spend; the 2026-07 screen used indexed
-  mirrors + DNS only. Historical "Scubanaut" research kept in
-  `docs/trademark-search-2026-07.md`.
-- OWNER: add the site to Google Search Console and submit sitemap.xml.
-- OWNER: add PEXELS_API_KEY repo secret; rerun fetch-images with --force.
-- OWNER: apply to affiliate programs and paste the IDs into the `AFFILIATE`
-  config at the top of the gear section in `index.html` (then rerun
-  build_standalone): Amazon Associates (`amazon_tag`), AvantLink for
-  Scuba.com + LeisurePro (`avantlink.website_id` + per-merchant IDs), Awin
-  for Tradeinn/Diveinn/Scubastore (`awin`), eBay Partner Network
-  (`ebay_campid`), optional Skimlinks (`skimlinks_id`) to auto-affiliate all
-  other stores while approvals are pending. Empty values leave links raw —
-  already safe in production.
-- Swap sample Centres/Safaris for real listings.
-- Mobile design pass (calendar table and planner filters on small screens).
-- Logo refinement (fluke + a diving cue, lockup + size rules).
-- Prune leftover artifacts: map-A/map-B demo pages, diving-calendar-24-periods.md.
-- Later: wetsuit-by-temp recommender, price alerts, verified-diver reviews,
-  dive log (needs a backend).
+- `AFFILIATE` config at the top of the gear JS in `index.html`:
+  Amazon Associates (`amazon_tag`), AvantLink (Scuba.com/LeisurePro), Awin
+  (Tradeinn/Diveinn/Scubastore), eBay EPN (`ebay_campid`), optional Skimlinks.
+  **Empty values leave links raw — safe in production.** After pasting IDs,
+  rerun `build_standalone.py`.
+- All buy links: `rel="noopener sponsored"`, cheapest-first tables.
+- Header ad slot ready for AdSense/direct placements (`#adHeader`).
 
-## How to continue in a new session
-Open a new Claude Code session on `DonLybero/Diving-site` (branch `main`).
-Tell the agent: *"Read HANDOFF.md and continue building the DiveSZN site."*
+## 8. Operating playbook (how work gets done here)
+
+- **Branch → verify → merge to main** every finished change. The owner expects
+  changes to be *live*, not parked on a branch.
+- **Always rerun `build_standalone.py`** after touching `index.html` or any
+  JSON — `diving-site.html` must stay in sync (it ships in the same commit).
+- **Verify in a real browser before shipping:** serve with
+  `python3 -m http.server` (index.html fetches JSON — `file://` won't work) and
+  drive it with Playwright (Chromium at `/opt/pw-browsers/chromium`,
+  `--no-sandbox`). Test BOTH desktop (~1280px) and phone (~390px) viewports;
+  assert zero horizontal page scroll and zero page errors. External images
+  failing to load in the sandbox is normal (blocked egress), not a bug.
+- **The dev sandbox has no internet** (proxy 403s). Anything that needs the
+  web (image fetching, link checking) runs as a GitHub Actions workflow —
+  runners have internet. Pattern: `fetch-images.yml`, `fetch-gear-images.yml`.
+- **Deploy quirks:** pushes made by workflows with `GITHUB_TOKEN` do NOT
+  trigger the Pages deploy — dispatch `deploy-pages.yml` manually after bot
+  commits. **Never re-run a failed Pages run** (it dies with "Multiple
+  artifacts named github-pages") — trigger a *fresh* dispatch instead.
+  Occasional "Deployment failed, try again later" = GitHub incident; retry.
+- **Cache note:** Pages serves with ~10-min browser cache; "nothing changed"
+  reports right after a deploy are usually the phone's cache.
+- **MCP `actions_list` output is huge** — save to file and extract
+  status/conclusion with a small python snippet instead of reading it raw.
+- **Mobile CSS gotchas already solved** (keep them working): grid/`.gentry`
+  items need `min-width:0`; `.specs` auto-fill grid must cap at 2 columns on
+  phones; `.ptable` restacks (store+price line, full-width buy button);
+  `.rsel-menu` anchors to the controls panel on ≤640px; `#profile` tables
+  scroll inside their own box; `.controls` carries `z-index:30` so the region
+  dropdown isn't painted under the result cards (its `backdrop-filter`
+  creates a stacking context).
+
+## 9. Roadmap
+
+### Owner tasks (blocking revenue/distribution — engineering already done)
+1. **URGENT: register diveszn.com / .io / .app** (all unregistered at the
+   2026-07 screen; see `docs/name-change-diveszn-2026-07.md`).
+2. Apply to affiliate programs; paste IDs into `AFFILIATE`; rebuild standalone.
+3. Add site to Google Search Console; submit `sitemap.xml`.
+4. Attorney trademark knockout search for "DiveSZN" before marketing spend.
+5. Optional: add `PEXELS_API_KEY` repo secret, rerun fetch-images `--force`
+   for higher-quality destination photos.
+6. Pick an ad network / direct sponsor for the header slot.
+
+### Near-term engineering
+- Buy-link health workflow: periodically verify the 180 retailer URLs still
+  resolve (reuse the fetch-gear-images workflow pattern); flag dead links.
+- Replace sample Liveaboard Safaris with researched listings (match the gear
+  guide's data standard) or clearly label as illustrative.
+- Prune leftovers: `map-A-osm-tiles.html`, `map-B-vector-offline.html`,
+  `diving-calendar-24-periods.md`.
+- Quarterly gear-price refresh ritual (prices are indicative, drift over time).
+
+### Mid-term product
+- Wetsuit-by-temperature recommender (data already has per-month temps +
+  wetsuit field — pure front-end feature).
+- Destination comparison view (pick 2–3, compare months side by side).
+- "Best month finder" deep links (shareable URLs for a filtered planner state).
+- Logo refinement (fluke + a diving cue; lockup + size rules).
+- SEO: per-month landing pages ("diving in <month>") generated like
+  `destinations/`.
+
+### Long-term (needs a backend or third-party services)
+- Price alerts; verified-diver reviews; personal dive log.
+
+## 10. How to continue in a new session
+
+1. Read this file, then `CLAUDE.md`.
+2. Honor §3 editorial rules and §8 playbook in every change — they are owner
+   directives, not suggestions.
+3. Workflow for any request: implement on the feature branch → rebuild
+   standalone → Playwright-verify desktop + mobile → commit → push → merge
+   `--no-ff` to `main` → confirm the `deploy-pages.yml` run is green (fresh
+   dispatch if needed) → report back with what changed and evidence
+   (screenshots for UI work).
