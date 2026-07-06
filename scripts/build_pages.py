@@ -102,8 +102,9 @@ def footer_html(prefix="../"):
             'dive operators, park authorities and liveaboard calendars.<br>Water temperatures are typical monthly ranges (±1°C); '
             'marine-life timing shifts year to year — always confirm with a local dive centre.<br>'
             f'<a href="{prefix}index.html">Dive planner</a> · <a href="{prefix}destinations/index.html">Destinations</a> · '
-            f'<a href="{prefix}gear/index.html">Gear guides</a> · <a href="{prefix}how-we-score.html">How we score</a> · '
-            f'<a href="{prefix}about.html">About</a> · <a href="{prefix}privacy.html">Privacy</a></footer>')
+            f'<a href="{prefix}marine-life/index.html">Marine life</a> · <a href="{prefix}gear/index.html">Gear guides</a> · '
+            f'<a href="{prefix}how-we-score.html">How we score</a> · <a href="{prefix}about.html">About</a> · '
+            f'<a href="{prefix}privacy.html">Privacy</a></footer>')
 
 # Pluralised wording for site-type breakdowns (mirrors destIntro in index.html)
 SITE_PLURALS = {"Muck": "muck dives", "Shore": "shore dives", "Drift": "drift dives",
@@ -533,84 +534,8 @@ conditions with a local dive centre.</p>
 # ---------------------------------------------------------------- marine life
 RATING_RANK = {"Peak": 0, "Good": 1, "Shoulder": 2, "Low": 3, "Closed": 9}
 
-EXPERIENCES = [
-    {"slug": "sardine-run", "title": "The Sardine Run", "keywords": ["sardine"],
-     "short": "the sardine run and its bait-ball feeding frenzies",
-     "hero_sub": "The greatest shoal on Earth — and the predators that chase it.",
-     "intro": ("Each southern-hemisphere winter, billions of sardines push north along South Africa's "
-               "east coast on a ribbon of cold water, and the ocean erupts. Dusky and bronze whaler sharks, "
-               "pods of common dolphins, Bryde's whales and dive-bombing gannets corral the shoals into "
-               "churning bait balls — and divers drop straight into the middle of it. It is fast, wild, "
-               "open-water diving, and arguably the most electric big-animal spectacle you can put a "
-               "regulator in the water for."),
-     "desc": "Diving the Sardine Run: what it is, and where and when to dive it, from DiveSZN's seasonal data.",
-     "tips": ["The run is weather- and current-driven, so timing shifts year to year — build in flexible days.",
-              "Expect open-water entries and fast surface action; buoyancy and boat skills matter more than depth here.",
-              "Pack real exposure protection — the run rides cold water even in a warm country."]},
-    {"slug": "orcas", "title": "Orcas", "keywords": ["orca", "killer whale"],
-     "short": "orca encounters",
-     "hero_sub": "The ocean's apex predator — the rarest encounter of all.",
-     "intro": ("Orcas are the ocean's apex predator: fast, social and startlingly intelligent, hunting in tight "
-               "family pods that pass techniques down the generations. Meeting one in the water is the rarest and "
-               "most sought-after big-animal moment in diving — a five-metre black-and-white shape resolving out of "
-               "the blue, sizing you up, and gone. They favour cold, productive water and gather where prey "
-               "concentrates, most famously on the winter herring runs of the high north."),
-     "desc": "Diving with orcas: what makes them the ultimate encounter, and where DiveSZN is headed to cover them.",
-     "no_data": ("Orca encounters happen on the surface, not on scuba, so no destination in our dive guide carries "
-                 "an orca season. The in-water trips that do run are snorkel-based and cold — they're listed below."),
-     "beyond_intro": ("In-water orca encounters are snorkel-only — the water is too cold and the animals too fast for "
-                      "scuba. If a face-to-face with a wild orca is the dream, these are the trips that run it:"),
-     "beyond_scuba": [
-        {"name": "Skjervøy & the Tromsø fjords", "country": "Norway", "mode": "snorkel",
-         "months": ["Nov", "Dec", "Jan"], "q": "orca whale snorkeling Norway Tromso Skjervoy"},
-        {"name": "La Ventana / Sea of Cortez", "country": "Mexico", "mode": "snorkel",
-         "months": ["Jan", "Feb", "Mar"], "q": "orca encounter Baja La Ventana Sea of Cortez"}],
-     "tips": ["Orcas are wild and unpredictable — encounters are never guaranteed and hinge on weather and prey.",
-              "The good orca water is genuinely cold — a proper drysuit or thick hooded exposure kit is essential.",
-              "Give them space and let them choose the interaction — it's their ocean."]},
-    {"slug": "great-white", "title": "Great White Sharks", "keywords": ["great white"],
-     "short": "great white sharks",
-     "hero_sub": "The ocean's most famous predator — met from the cage.",
-     "intro": ("No shark carries the mythology of the great white — a five-metre ambush predator with a presence you "
-               "feel before you see it. It isn't a reef-diving animal: the encounter is cage diving, on a chum line "
-               "in cold, green water, and the moment a white materialises alongside the cage is one of diving's great "
-               "adrenaline hits. The map has shifted, though — some famous sites have gone quiet, and only a handful "
-               "still deliver."),
-     "desc": "Great white shark cage diving in 2026: the sites still operating, and when to go.",
-     "no_data": ("Great whites aren't a scuba animal — the encounter is cage diving — so no destination in our scuba "
-                 "guide carries a great-white season. The currently-operating cage sites are below."),
-     "beyond_intro": ("Great white diving means cage diving — a surface or submerged cage on a bait line, not a reef "
-                      "dive. Mexico closed Guadalupe in 2023 and orca predation has emptied the old Cape hotspots, so "
-                      "the sites still reliably running are:"),
-     "beyond_scuba": [
-        {"name": "Neptune Islands (Port Lincoln)", "country": "Australia", "mode": "cage diving",
-         "months": ["May", "Jun", "Jul", "Aug"], "q": "great white cage diving Port Lincoln Neptune Islands"},
-        {"name": "Mossel Bay", "country": "South Africa", "mode": "cage diving",
-         "months": ["Jun", "Jul", "Aug", "Sep"], "q": "great white cage diving Mossel Bay South Africa"},
-        {"name": "Stewart Island (Foveaux Strait)", "country": "New Zealand", "mode": "cage diving",
-         "months": ["Nov", "Dec", "Jan", "Feb"], "q": "great white cage diving Stewart Island New Zealand"}],
-     "tips": ["Cage diving needs no dive certification — but a warm layer and sea-sickness tablets both earn their keep.",
-              "Water is cold and often green; the best visibility and action come in the cooler months when seals are about.",
-              "Guadalupe (Mexico) has been closed to tourism since 2023, and South Africa's Gansbaai/False Bay whites have largely gone — check any operator is genuinely still seeing whites."]},
-    {"slug": "whale-sharks", "title": "Whale Sharks", "keywords": ["whale shark"],
-     "short": "whale sharks",
-     "hero_sub": "The biggest fish in the sea — and where to dive it.",
-     "intro": ("The whale shark is the largest fish alive — a filter-feeding giant up to twelve metres long, spotted "
-               "like a constellation and utterly harmless. It follows plankton blooms around the tropics, so catching "
-               "one is all about timing. On scuba you meet them on the reef and in the blue; a few of the world's "
-               "biggest gatherings, though, are legally snorkel-only."),
-     "desc": "Diving with whale sharks: where and when to dive with them, from DiveSZN's seasonal data.",
-     "beyond_intro": ("A couple of the planet's greatest whale-shark aggregations are run as snorkel-only trips — no "
-                      "scuba allowed — but they're bucket-list all the same:"),
-     "beyond_scuba": [
-        {"name": "Isla Mujeres & Holbox", "country": "Mexico", "mode": "snorkel",
-         "months": ["Jun", "Jul", "Aug", "Sep"], "q": "whale shark snorkel tour Isla Mujeres Cancun"},
-        {"name": "Gladden Spit", "country": "Belize", "mode": "snorkel",
-         "months": ["Apr", "May", "Jun"], "q": "whale shark snorkel Gladden Spit Placencia Belize"}],
-     "tips": ["Whale sharks follow food — most seasons track plankton blooms, spawning aggregations or monsoon upwellings.",
-              "Keep the regulation distance and never touch or block them; a spooked whale shark simply dives and is gone.",
-              "They cruise near the surface, so a slow, calm approach and good buoyancy get you the longest encounters."]},
-]
+with open(os.path.join(ROOT, "marine-life.json")) as _mf:
+    EXPERIENCES = json.load(_mf)["experiences"]
 
 def where_when(dests, keywords):
     kws = [k.lower() for k in keywords]
@@ -665,6 +590,23 @@ def marine_article(exp, dests, prefix="../"):
           "description": exp["desc"], "url": url}
     return content_shell(exp["title"] + " | DiveSZN", exp["desc"], url, prefix, exp.get("hero_sub"), inner, ld)
 
+def marine_index_page(prefix="../"):
+    url = BASE + "marine-life/index.html"
+    rows = "".join(
+        f'<li><a href="{e["slug"]}.html"><div class="th"></div>'
+        f'<div><h3>{esc(e["title"])}</h3><p>{esc(e.get("hero_sub",""))}</p></div></a></li>'
+        for e in EXPERIENCES)
+    desc = ("Diving with the ocean's headline animals — whale sharks, manta rays, hammerheads, mola mola, "
+            "sea lions and more — with the best destinations and seasons for each.")
+    inner = (f'<p class="greview" style="max-width:80ch">The ocean&#8217;s headline encounters — what they are, and '
+             f'where and when to dive them, pulled live from DiveSZN&#8217;s seasonal data.</p>'
+             f'<h2>Encounters</h2><ul class="artlist">{rows}</ul>'
+             f'<a class="cta" href="../index.html">Open the dive planner &rarr;</a>')
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Marine life encounters",
+          "description": desc, "url": url}
+    return content_shell("Marine Life — Dive With the Ocean's Icons | DiveSZN", desc, url, prefix,
+                         "Whale sharks to orcas — what they are, and where and when to dive them.", inner, ld)
+
 def main():
     with open(os.path.join(ROOT, "diving-destinations.json")) as f:
         dests = json.load(f)["destinations"]
@@ -695,6 +637,8 @@ def main():
     for exp in EXPERIENCES:
         with open(os.path.join(marinedir, exp["slug"] + ".html"), "w", encoding="utf-8") as f:
             f.write(marine_article(exp, dests))
+    with open(os.path.join(marinedir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(marine_index_page())
 
     # trust / info pages (root)
     with open(os.path.join(ROOT, "about.html"), "w", encoding="utf-8") as f:
@@ -705,6 +649,7 @@ def main():
     urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html",
              BASE + "destinations/index.html", BASE + "gear/index.html"]
             + [BASE + "gear/" + s + ".html" for s in gear_slugs]
+            + [BASE + "marine-life/index.html"]
             + [BASE + "marine-life/" + e["slug"] + ".html" for e in EXPERIENCES]
             + [BASE + "destinations/" + d["slug"] + ".html" for d in dests])
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

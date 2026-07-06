@@ -495,6 +495,7 @@
     <button id="tab-planner" onclick="showTab('planner')"><i class="ico" data-ico="compass"></i>Dive Planner</button>
     <button id="tab-gear" onclick="showTab('gear')"><i class="ico" data-ico="tank"></i>Diving Gear</button>
     <button id="tab-destinations" onclick="showTab('destinations')"><i class="ico" data-ico="trophy"></i>Destinations</button>
+    <button id="tab-marine" onclick="MARINE_SLUG='';showTab('marine')"><i class="ico" data-ico="fish"></i>Marine Life</button>
     <button id="tab-search" onclick="showTab('search')"><i class="ico" data-ico="search"></i>Search</button>
   </div>
 </div>
@@ -531,6 +532,9 @@
 
   <!-- DESTINATIONS: 12 monthly top-destination articles -->
   <section id="view-destinations" class="hidden"><div id="destBody"></div></section>
+
+  <!-- MARINE LIFE: encounter articles with data-generated where & when -->
+  <section id="view-marine" class="hidden"><div id="marineBody"></div></section>
 
 
   <!-- DIVE PLANNER — one progressive page: filters first, then results as cards / map / year calendar -->
@@ -691,7 +695,7 @@ function setHeroPhoto(){
   }
 }
 
-var TABS=['home','planner','gear','destinations','search'];
+var TABS=['home','planner','gear','destinations','marine','search'];
 // Legacy destinations now living inside the Dive Planner — each routes to a planner sub-view.
 var PLANNER_TOOLS={calendar:'calendar',period:'cards',plan:null,sites:'cards',map:'map'};
 
@@ -707,6 +711,7 @@ function showTab(t){
   // The full-height hero anchors the landing/home view only; collapse it on working tabs.
   document.getElementById('hero').classList.toggle('hidden', t!=='home');
   if(t==='gear'){ updateCmpBar(); } else { closeCompare(); var cb=document.getElementById('cmpBar'); if(cb)cb.classList.add('hidden'); }
+  if(t==='marine'){ renderMarine(); }
   if(t==='planner'){ planEngage(sub||PLAN_SUB); }   // planner always opens engaged: top 3 for the Now period
   window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -746,9 +751,9 @@ var REGION_GROUPS={
  'Caribbean':['Bahamas','Bay Islands','Bonaire','Cayman Islands','Cozumel','Great Blue Hole','Roat\u00e1n','Utila'],
  'Asia':['Apo Island & Dumaguete','Bunaken National Marine Park','Cenderawasih Bay','Fuvahmulah','Gili Islands & Lombok','Komodo National Park','Layang Layang','Malapascua Island','Maldives','Nusa Penida','Okinawa Islands','Raja Ampat','Similan Islands','Sipadan Island','Tubbataha Reefs Natural Park'],
  'Oceania':['Fiji','French Polynesia','Great Barrier Reef','Guadalcanal & Western Province','Heron Island','Lord Howe Island','Moorea','Ningaloo Reef','Palau','Poor Knights Islands','South West Rocks','Truk (Chuuk) Lagoon','Whitsunday Islands','Yap'],
- 'Europe':['Azores','Gozo & Malta','Lundy Island','Medes Islands','Scapa Flow','Silfra Fissure'],
- 'Africa':['Aliwal Shoal','Red Sea (Egypt)','Seychelles'],
- 'North America':['Cenotes of Yucat\u00e1n Peninsula','Maui & Kona','Sea of Cortez','Socorro Island','Vancouver Island'],
+ 'Europe':['Azores','Chania (Crete)','Gozo & Malta','Kaş','Larnaca','Lundy Island','Medes Islands','Scapa Flow','Silfra Fissure','Ustica','Vis Island'],
+ 'Africa':['Aliwal Shoal','Protea Banks','Red Sea (Egypt)','Seychelles','Tofo'],
+ 'North America':['Cenotes of Yucat\u00e1n Peninsula','Jupiter','Maui & Kona','Sea of Cortez','Socorro Island','Vancouver Island'],
  'Central America':['Cocos Island'],
  'South America':['Fernando de Noronha','Galapagos Islands','Malpelo Island']
 };
@@ -1569,6 +1574,69 @@ function openMonthArticle(m){
   renderDestinations(m);
   window.scrollTo({top:0,behavior:'smooth'});
 }
+/* ---------------- Marine Life: encounter articles, data-generated where&when ---------------- */
+var MARINE=[], MARINE_SLUG='';
+var MRANK={Peak:0,Good:1,Shoulder:2,Low:3,Closed:9};
+function marineWhereWhen(kws){
+  kws=kws.map(function(k){return k.toLowerCase();});
+  var rows=[];
+  DESTS.forEach(function(d){
+    var months=DivingCalendar.MONTHS.filter(function(m){
+      var t=((d.monthly[m]||{}).marine_life||'').toLowerCase();
+      return kws.some(function(k){return t.indexOf(k)>-1;});
+    });
+    if(!months.length) return;
+    var best=Math.min.apply(null, months.map(function(m){var r=d.monthly[m].rating; return (r in MRANK)?MRANK[r]:9;}));
+    rows.push({d:d, months:months, best:best});
+  });
+  rows.sort(function(a,b){return a.best-b.best || a.d.name.localeCompare(b.d.name);});
+  return rows;
+}
+function openMarineArticle(slug){ MARINE_SLUG=slug; showTab('marine'); renderMarine(); window.scrollTo({top:0,behavior:'smooth'}); }
+function renderMarine(){
+  var body=document.getElementById('marineBody'); if(!body) return;
+  if(!MARINE.length){ body.innerHTML='<div class="empty">Marine life guide could not load.</div>'; return; }
+  if(!MARINE_SLUG){
+    var rows=MARINE.map(function(e){
+      return '<a class="artrow" href="#" onclick="openMarineArticle(\''+escq(e.slug)+'\');return false;">'+
+        '<div class="artrow-thumb"><i class="ico" data-ico="fish" style="font-size:34px;color:var(--muted)"></i></div>'+
+        '<div><div class="kicker">Marine life</div><h4>'+e.title+'</h4><p>'+(e.hero_sub||'')+'</p></div></a>';
+    }).join('');
+    body.innerHTML='<div class="article" style="grid-column:1/-1">'+
+      '<div class="sec-head">'+ico('fish',20)+' Marine life</div>'+
+      '<p class="sec-sub">The ocean’s headline encounters — what they are, and, pulled live from our seasonal data, exactly where and when to dive them.</p>'+
+      '<h3 class="artlist-head">Encounters</h3>'+rows+'</div>';
+  }else{
+    var e=MARINE.filter(function(x){return x.slug===MARINE_SLUG;})[0];
+    if(!e){ MARINE_SLUG=''; return renderMarine(); }
+    var back='<p class="meta"><a href="#" onclick="MARINE_SLUG=\'\';renderMarine();window.scrollTo(0,0);return false;">← All marine life</a></p>';
+    var rows=marineWhereWhen(e.keywords), ww;
+    if(rows.length){
+      ww='<h3 style="margin-top:22px">'+ico('map',15)+' Where &amp; when to dive it</h3>'+
+        '<p class="meta">Pulled live from our seasonal data — the destinations where '+e.short+' shows in the water, and the months to catch it.</p>'+
+        '<table><thead><tr><th>Destination</th><th>Best months</th></tr></thead><tbody>'+
+        rows.map(function(r){return '<tr><td><a href="#" onclick="openProfile(\''+escq(r.d.name)+'\');return false;"><b>'+r.d.name+'</b></a>'+
+          '<div class="meta">'+r.d.country+'</div></td><td>'+r.months.join(', ')+'</td></tr>';}).join('')+'</tbody></table>';
+    }else{
+      ww='<h3 style="margin-top:22px">'+ico('map',15)+' Where &amp; when to dive it</h3>'+
+        '<p style="color:#33565e;max-width:80ch">'+(e.no_data||'This is an opportunistic encounter — none of our current destinations has a fixed season for it yet.')+'</p>';
+    }
+    var beyond='';
+    if(e.beyond_scuba&&e.beyond_scuba.length){
+      beyond='<h3 style="margin-top:22px">'+ico('compass',15)+' Beyond scuba — snorkel &amp; cage encounters</h3>'+
+        '<p style="color:#33565e;max-width:80ch">'+(e.beyond_intro||'Some of the best encounters with this animal are not on scuba — they run as snorkel or cage-diving trips.')+'</p>'+
+        '<table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead><tbody>'+
+        e.beyond_scuba.map(function(b){return '<tr><td><b>'+b.name+'</b><div class="meta">'+b.country+' · '+b.mode+'</div></td>'+
+          '<td>'+b.months.join(', ')+'</td><td style="text-align:right"><a class="btn ghost" href="https://www.getyourguide.com/s/?q='+
+          encodeURIComponent(b.q)+'" target="_blank" rel="noopener sponsored">Book</a></td></tr>';}).join('')+'</tbody></table>';
+    }
+    var tips=(e.tips&&e.tips.length)?'<div class="tipbox"><b>Good to know</b><ul>'+e.tips.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>':'';
+    body.innerHTML='<div class="article" style="grid-column:1/-1">'+back+
+      '<h2 style="margin:6px 0 2px">'+e.title+'</h2><p class="sec-sub" style="margin-top:0">'+(e.hero_sub||'')+'</p>'+
+      '<p class="gentry-review" style="max-width:80ch">'+e.intro+'</p>'+ww+beyond+tips+back+'</div>';
+  }
+  applyIcons();
+}
 function renderDestinations(month){
   var g=document.getElementById('destBody');
   if(!month){
@@ -1602,15 +1670,16 @@ function renderDestinations(month){
 
 // Prefer data embedded by the single-file build; otherwise fetch from disk.
 function loadData(){
-  if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null, window.__GEAR_DATA__||null]);
+  if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null, window.__GEAR_DATA__||null, window.__MARINE_DATA__||null]);
   return Promise.all([
     fetch('diving-destinations.json').then(function(r){return r.json();}),
     fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
-    fetch('gear-guide.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+    fetch('gear-guide.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
+    fetch('marine-life.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
   ]);
 }
 loadData().then(function(res){
-  var j=res[0]; LAND=res[1]; GEAR_GUIDE=res[2];
+  var j=res[0]; LAND=res[1]; GEAR_GUIDE=res[2]; MARINE=(res[3]&&res[3].experiences)||[];
   DATA=j; DESTS=j.destinations;
   document.getElementById('foot').innerHTML=
     '<div style="font-family:var(--serif);font-size:1.5rem;color:var(--ink)">Dive<b style="color:var(--accent)">SZN</b></div>'+
@@ -1624,11 +1693,12 @@ loadData().then(function(res){
     'at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price; trip prices are sample data. '+
     'We link only to authorised retailers and trusted operators, and commissions never influence our rankings.</div>'+
     '<p style="margin-top:10px"><a href="destinations/index.html">Destination guides</a> &nbsp;·&nbsp; '+
-    '<a href="gear/index.html">Gear guides</a> &nbsp;·&nbsp; <a href="how-we-score.html">How we score</a> &nbsp;·&nbsp; '+
-    '<a href="about.html">About</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy</a></p>';
+    '<a href="marine-life/index.html">Marine life</a> &nbsp;·&nbsp; <a href="gear/index.html">Gear guides</a> &nbsp;·&nbsp; '+
+    '<a href="how-we-score.html">How we score</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; '+
+    '<a href="privacy.html">Privacy</a></p>';
   initControls();
   applyIcons(); setHeroPhoto();
-  renderHome(); renderGear(); renderDestinations();
+  renderHome(); renderGear(); renderDestinations(); renderMarine();
   // planner result views render on the diver's first selection (progressive disclosure)
   document.getElementById('searchBox').addEventListener('input', renderSearch);
   handleHash();                                    // honor a #gear-<cat>-<thickness> deep link on load

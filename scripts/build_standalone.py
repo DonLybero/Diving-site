@@ -21,6 +21,10 @@ try:
     gear = json.loads(read("gear-guide.json"))
 except FileNotFoundError:
     gear = None
+try:
+    marine = json.loads(read("marine-life.json"))
+except FileNotFoundError:
+    marine = None
 
 # 1) inline Leaflet CSS
 html = html.replace('<link rel="stylesheet" href="vendor/leaflet.css">',
@@ -28,7 +32,8 @@ html = html.replace('<link rel="stylesheet" href="vendor/leaflet.css">',
 # 2) embed data BEFORE leaflet/engine scripts, then inline leaflet + engine
 embed = ('<script>window.__DEST_DATA__=' + json.dumps(data, ensure_ascii=False) +
          ';\nwindow.__LAND_DATA__=' + json.dumps(land, ensure_ascii=False) +
-         ';\nwindow.__GEAR_DATA__=' + json.dumps(gear, ensure_ascii=False) + ';</script>\n')
+         ';\nwindow.__GEAR_DATA__=' + json.dumps(gear, ensure_ascii=False) +
+         ';\nwindow.__MARINE_DATA__=' + json.dumps(marine, ensure_ascii=False) + ';</script>\n')
 html = html.replace('<script src="vendor/leaflet.js"></script>',
                     embed + '<script>\n' + ljs + '\n</script>')
 html = html.replace('<script src="diving-calendar.js"></script>',
