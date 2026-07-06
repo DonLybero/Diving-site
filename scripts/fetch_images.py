@@ -50,6 +50,8 @@ DEST_QUERIES = {
     "South West Rocks": ["South West Rocks NSW", "Trial Bay Gaol beach", "Smoky Cape lighthouse", "grey nurse shark Australia"],
     "Chagos Archipelago / BIOT": ["Chagos reef", "Diego Garcia lagoon", "Salomon Atoll Chagos"],
     "Guadalcanal & Western Province": ["Marovo Lagoon", "Gizo Solomon Islands", "Solomon Islands lagoon aerial", "Honiara coast"],
+    "Malpelo Island": ["Isla de Malpelo", "Malpelo Island Colombia", "Malpelo scalloped hammerhead",
+                       "Malpelo island aerial", "Malpelo Fauna and Flora Sanctuary"],
 }
 
 # For tricky names, a candidate file title MUST match this pattern (keeps
@@ -57,6 +59,7 @@ DEST_QUERIES = {
 DEST_REQUIRE = {
     "Guadalcanal & Western Province": re.compile(r"(solomon|marovo|gizo|munda|roviana|guadalcanal|honiara|tulagi)", re.I),
     "South West Rocks": re.compile(r"(south.?west.?rocks|trial.?bay|smoky.?cape|arakoon|grey.?nurse)", re.I),
+    "Malpelo Island": re.compile(r"malpelo", re.I),
 }
 
 
