@@ -58,6 +58,31 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
 .pack-ctas{display:flex;flex-wrap:wrap;gap:8px}
 .pack-cta{display:inline-block;background:var(--coral);color:#2a0f06;border-radius:9px;padding:9px 15px;font-size:.83rem;font-weight:700;text-decoration:none}
 .pack-cta.ghost{background:#fff;color:#b3492f;border:1px solid #e6bcb0}
+.hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
+.hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
+.artlist{list-style:none;padding:0;margin:14px 0}
+.artlist li{border-bottom:1px solid var(--line)}
+.artlist a{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;padding:16px 0;text-decoration:none;color:var(--ink)}
+.artlist .th{height:88px;border-radius:8px;background:#f4f8f8;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.artlist .th img{max-width:92%;max-height:92%;object-fit:contain}
+.artlist h3{margin:2px 0 4px;font-size:1.2rem}.artlist p{margin:0;color:var(--muted);font-size:.86rem}
+.gentry{display:grid;grid-template-columns:230px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
+.gphoto{height:170px;border-radius:10px;background:#f4f8f8;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.gphoto img{max-width:92%;max-height:92%;object-fit:contain}
+.gentry h3{margin:0 0 8px;font-size:1.3rem}
+.greview{color:#33565e;line-height:1.7;margin:0 0 10px}
+.gspecs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:0 0 12px}
+.gspecs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.gspecs dt{color:var(--muted);font-size:.6rem;text-transform:uppercase;letter-spacing:.5px;margin:0}
+.gspecs dd{margin:2px 0 0;font-family:var(--mono);font-size:.76rem;color:#0b6b74}
+.buybox{background:#f6fbfb;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:6px}
+.buy-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:9px}
+.buy-lead{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.buy-from{font-family:var(--serif)}.buy-from b{color:var(--coral);font-family:var(--mono)}
+.buy-live{font-size:.68rem;color:var(--muted)}
+.tipbox{background:#f2f9f9;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0}
+.tipbox ul{margin:6px 0 0;padding-left:18px}.tipbox li{margin:4px 0;color:#33565e;font-size:.9rem}
+@media(max-width:640px){.gentry{grid-template-columns:1fr}.artlist a{grid-template-columns:90px 1fr}.gspecs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 """
 
 FLUKE = ('<svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 '
@@ -66,16 +91,17 @@ FLUKE = ('<svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><p
 
 def esc(s): return html.escape(str(s or ""), quote=True)
 
-def topbar():
-    return ('<div class="topbar"><a href="../index.html">'+FLUKE+
+def topbar(prefix="../"):
+    return (f'<div class="topbar"><a href="{prefix}index.html">'+FLUKE+
             '<span class="name">Dive<b>SZN</b></span></a></div>')
 
-def footer_html():
+def footer_html(prefix="../"):
     return ('<footer><b style="font-family:var(--serif);color:var(--ink)">DiveSZN</b> · seasonal dive planning, verified against '
             'dive operators, park authorities and liveaboard calendars.<br>Water temperatures are typical monthly ranges (±1°C); '
             'marine-life timing shifts year to year — always confirm with a local dive centre.<br>'
-            '<a href="index.html">All destinations</a> · <a href="../index.html">Open the dive planner</a> · '
-            '<a href="../privacy.html">Privacy Policy</a></footer>')
+            f'<a href="{prefix}index.html">Dive planner</a> · <a href="{prefix}destinations/index.html">Destinations</a> · '
+            f'<a href="{prefix}gear/index.html">Gear guides</a> · <a href="{prefix}how-we-score.html">How we score</a> · '
+            f'<a href="{prefix}about.html">About</a> · <a href="{prefix}privacy.html">Privacy</a></footer>')
 
 # Pluralised wording for site-type breakdowns (mirrors destIntro in index.html)
 SITE_PLURALS = {"Muck": "muck dives", "Shore": "shore dives", "Drift": "drift dives",
@@ -280,9 +306,188 @@ def index_page(dests):
 {footer_html()}
 </body></html>"""
 
+# ---------------------------------------------------------------- gear pages
+def gear_slug(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+def fmtp(p):
+    return f"${p:.2f}" if p % 1 else f"${int(p)}"
+
+def _partner_tier(store):
+    return 0 if re.search(r"amazon|ebay|scuba\.com|leisurepro|tradeinn|diveinn|scubastore", (store or "").lower()) else 1
+
+def order_offers(options):
+    s = sorted(options or [], key=lambda o: o["price_usd"])
+    if not s:
+        return s
+    lo = s[0]["price_usd"]; band = lo * 0.05 or 1
+    return sorted(s, key=lambda o: (int((o["price_usd"] - lo) // band), _partner_tier(o["store"]), o["price_usd"]))
+
+def buy_box(item):
+    offers = order_offers(item.get("options"))[:3]
+    lo = min((o["price_usd"] for o in item.get("options") or []), default=None)
+    btns = "".join(
+        f'<a class="pack-cta{"" if i == 0 else " ghost"}" href="{esc(o["url"])}" '
+        f'target="_blank" rel="noopener sponsored">Buy at {esc(o["store"])}</a>'
+        for i, o in enumerate(offers))
+    frm = f'<span class="buy-from">from <b>{fmtp(lo)}</b></span>' if lo is not None else ""
+    return (f'<div class="buybox"><div class="buy-top"><span class="buy-lead">Where to buy</span>{frm}'
+            f'<span class="buy-live">indicative — check the live price at the retailer</span></div>'
+            f'<div class="pack-ctas">{btns}</div></div>')
+
+def gear_entry(item, prefix):
+    img = item.get("image") or ""
+    imgtag = f'<img src="{prefix}{esc(img)}" alt="{esc(item["name"])}" loading="lazy">' if img else ""
+    specs = ""
+    if item.get("specs"):
+        specs = ('<dl class="gspecs">'
+                 + "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in item["specs"].items())
+                 + "</dl>")
+    return (f'<div class="gentry"><div class="gphoto">{imgtag}</div>'
+            f'<div><h3>{item.get("rank", "")}. {esc(item["name"])}</h3>'
+            f'<p class="greview">{esc(item.get("review") or item.get("blurb"))}</p>{specs}{buy_box(item)}</div></div>')
+
+def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None):
+    ldtag = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>' if ld else ""
+    h1 = esc(title.split(" | ")[0].split(" — ")[0])
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(title)}</title>
+<meta name="description" content="{esc(desc)}">
+<link rel="canonical" href="{esc(url)}">
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}">
+{ldtag}
+<style>{CSS}</style>
+</head>
+<body>
+{topbar(prefix)}
+<header class="hero plain"><h1>{h1}</h1>{f'<p>{esc(hero_sub)}</p>' if hero_sub else ''}</header>
+<main class="wrap">{inner}</main>
+{footer_html(prefix)}
+</body></html>"""
+
+def gear_page(cat, prefix="../"):
+    slug = gear_slug(cat["category"])
+    title = f'{cat.get("title") or ("Top " + cat["category"])} | DiveSZN'
+    url = BASE + "gear/" + slug + ".html"
+    intro = cat.get("article_intro") or ""
+    parts = [f'<p class="greview" style="max-width:80ch">{esc(intro)}</p>'] if intro else []
+    if cat.get("thickness_groups"):
+        for g in cat["thickness_groups"]:
+            head = esc(g.get("label") or g["thickness"]) + (f' · {esc(g["water"])}' if g.get("water") else "")
+            parts.append(f'<h2 id="{esc(g["thickness"])}">{head}</h2>')
+            if g.get("article_intro"):
+                parts.append(f'<p class="greview" style="max-width:80ch">{esc(g["article_intro"])}</p>')
+            tips = "".join(f"<li>{esc(t)}</li>" for t in (g.get("tips") or []))
+            if tips:
+                parts.append(f'<div class="tipbox"><b>What to look for</b><ul>{tips}</ul></div>')
+            parts += [gear_entry(it, prefix) for it in g["items"]]
+    else:
+        tips = "".join(f"<li>{esc(t)}</li>" for t in (cat.get("tips") or []))
+        if tips:
+            parts.append(f'<div class="tipbox"><b>What to look for</b><ul>{tips}</ul></div>')
+        parts += [gear_entry(it, prefix) for it in cat["items"]]
+    parts.append(f'<p class="meta"><a href="index.html">&larr; All gear buyer&#8217;s guides</a></p>')
+    desc = (intro or f'The best {cat["category"].lower()} for scuba diving in 2026.')[:300]
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": cat.get("title"),
+          "description": desc, "url": url}
+    return content_shell(title, desc, url, prefix, None, "".join(parts), ld)
+
+def gear_index_page(gear, prefix="../"):
+    url = BASE + "gear/index.html"
+    rows = ""
+    for cat in gear["categories"]:
+        slug = gear_slug(cat["category"])
+        lead = (cat.get("items") or (cat.get("thickness_groups") or [{}])[0].get("items") or [{}])[0]
+        img = lead.get("image") or ""
+        thumb = f'<img src="{prefix}{esc(img)}" alt="" loading="lazy">' if img else ""
+        teaser = ". ".join((cat.get("article_intro") or "").split(". ")[:2]).strip()
+        rows += (f'<li><a href="{slug}.html"><div class="th">{thumb}</div>'
+                 f'<div><h3>{esc(cat.get("title") or ("Top " + cat["category"]))}</h3>'
+                 f'<p>{esc(teaser)}</p></div></a></li>')
+    desc = "DiveSZN scuba gear buyer's guides — the best masks, fins, regulators, BCDs, dive computers and wetsuits, with specs and where to buy."
+    inner = (f'<p class="greview" style="max-width:80ch">{esc(gear.get("intro") or "")}</p>'
+             f'<h2>Buyer&#8217;s guides</h2><ul class="artlist">{rows}</ul>'
+             f'<a class="cta" href="../index.html#gear">Open the interactive gear guide &rarr;</a>')
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "DiveSZN gear buyer's guides",
+          "description": desc, "url": url}
+    return content_shell("Scuba Diving Gear Buyer’s Guides 2026 | DiveSZN", desc, url, prefix,
+                         "Independent picks, real specs, and where to buy — masks to wetsuits.", inner, ld)
+
+# ---------------------------------------------------------------- about / methodology
+def about_page():
+    url = BASE + "about.html"
+    inner = """
+<p class="greview" style="max-width:78ch">DiveSZN is a seasonal dive-trip planner. It scores world dive
+destinations month by month so you can match your travel dates to the places where the season, the water and
+the wildlife line up — and it pairs that with independent scuba-gear buyer&#8217;s guides so you arrive with
+the right kit.</p>
+<h2>How the data is made</h2>
+<p class="greview" style="max-width:78ch">The seasonal calendar covers 50 destinations across twelve months —
+water temperature, visibility, currents, marine-life timing and a season rating for each. It is compiled and
+cross-checked against dive-operator and liveaboard calendars, marine-park authorities and ocean
+sea-temperature sources, then hand-verified. Water temperatures are typical monthly ranges (±1&deg;C) and
+marine-life timing shifts year to year with plankton and lunar cycles, so we always say the same thing: confirm
+current conditions with a local dive centre before you travel.</p>
+<h2>Our gear guides</h2>
+<p class="greview" style="max-width:78ch">Gear picks are researched independently and chosen on the merits.
+Prices shown are indicative as of our research date — the retailer always shows the live price. DiveSZN is
+reader-supported: some &#8220;Buy&#8221; links are affiliate links and we may earn a commission at no extra cost
+to you. Commissions never influence our rankings.</p>
+<h2>Scuba only</h2>
+<p class="greview" style="max-width:78ch">DiveSZN is written for scuba divers. Every recommendation, from a
+destination&#8217;s best months to a wetsuit&#8217;s thickness, is framed around scuba diving.</p>
+<h2>Get in touch</h2>
+<p class="greview" style="max-width:78ch">Questions, corrections or partnership enquiries:
+<a href="mailto:hello@diveszn.com">hello@diveszn.com</a>. See also our
+<a href="privacy.html">Privacy Policy</a> and <a href="how-we-score.html">How we score</a> page.</p>
+<a class="cta" href="index.html">Open the dive planner &rarr;</a>
+"""
+    desc = "About DiveSZN — a seasonal scuba dive-trip planner and independent gear buyer's guide. How our destination data is compiled and how we stay independent."
+    ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "About DiveSZN", "description": desc, "url": url}
+    return content_shell("About DiveSZN — Seasonal Dive Planner & Gear Guide", desc, url, "", None, inner, ld)
+
+def score_page():
+    url = BASE + "how-we-score.html"
+    inner = """
+<p class="greview" style="max-width:78ch">Every destination gets a rating for every month of the year, and a
+numeric score that ranks the best places to dive in any period. Here is exactly how that works — no black box.</p>
+<h2>Season ratings</h2>
+<p class="greview" style="max-width:78ch">Each month is rated <b>Peak</b>, <b>Good</b>, <b>Shoulder</b>,
+<b>Low</b> or <b>Closed</b>, based on the destination&#8217;s water conditions, marine-life activity and
+diveability that month.</p>
+<h2>The score</h2>
+<p class="greview" style="max-width:78ch">The ranking score is built from three parts:</p>
+<div class="tipbox"><ul>
+<li><b>Conditions base</b> — from the month&#8217;s season rating: Peak 100, Good 72, Shoulder 48, Low 22. Closed
+months are excluded.</li>
+<li><b>Marine-life bonus</b> — up to 25 points for the signature species and events expected that month
+(sharks, mantas, whale sharks, spawning aggregations and so on).</li>
+<li><b>Visibility bonus</b> — 0 to 18 points, scaled from typical visibility that month (about 5&nbsp;m adds
+nothing; 35&nbsp;m or more adds the full 18).</li>
+</ul></div>
+<p class="greview" style="max-width:78ch">Add them up and you get a single comparable score, so &#8220;where is
+diving best in October?&#8221; has an honest, repeatable answer. The identical formula runs in the interactive
+planner and in our data pipeline, so on-page rankings and the calendar never disagree.</p>
+<h2>Where the numbers come from</h2>
+<p class="greview" style="max-width:78ch">Water temperature, visibility, currents and marine-life timing are
+compiled and cross-checked against dive-operator and liveaboard calendars, marine-park authorities and ocean
+sea-temperature sources, then hand-verified. They are typical ranges, not forecasts — always confirm current
+conditions with a local dive centre.</p>
+<a class="cta" href="index.html">See it in the dive planner &rarr;</a>
+"""
+    desc = "How DiveSZN scores dive destinations: season ratings (Peak/Good/Shoulder/Low/Closed) plus a transparent score from conditions, marine-life bonus and visibility."
+    ld = {"@context": "https://schema.org", "@type": "Article", "headline": "How DiveSZN scores dive destinations",
+          "description": desc, "url": url}
+    return content_shell("How We Score Dive Destinations | DiveSZN", desc, url, "", None, inner, ld)
+
 def main():
     with open(os.path.join(ROOT, "diving-destinations.json")) as f:
         dests = json.load(f)["destinations"]
+    with open(os.path.join(ROOT, "gear-guide.json")) as f:
+        gear = json.load(f)
     outdir = os.path.join(ROOT, "destinations")
     os.makedirs(outdir, exist_ok=True)
     for d in dests:
@@ -290,7 +495,28 @@ def main():
             f.write(page(d))
     with open(os.path.join(outdir, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_page(dests))
-    urls = [BASE, BASE + "destinations/index.html"] + [BASE + "destinations/" + d["slug"] + ".html" for d in dests]
+
+    # gear buyer's guides (crawlable static pages)
+    geardir = os.path.join(ROOT, "gear")
+    os.makedirs(geardir, exist_ok=True)
+    gear_slugs = []
+    for cat in gear["categories"]:
+        slug = gear_slug(cat["category"]); gear_slugs.append(slug)
+        with open(os.path.join(geardir, slug + ".html"), "w", encoding="utf-8") as f:
+            f.write(gear_page(cat))
+    with open(os.path.join(geardir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(gear_index_page(gear))
+
+    # trust / info pages (root)
+    with open(os.path.join(ROOT, "about.html"), "w", encoding="utf-8") as f:
+        f.write(about_page())
+    with open(os.path.join(ROOT, "how-we-score.html"), "w", encoding="utf-8") as f:
+        f.write(score_page())
+
+    urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html",
+             BASE + "destinations/index.html", BASE + "gear/index.html"]
+            + [BASE + "gear/" + s + ".html" for s in gear_slugs]
+            + [BASE + "destinations/" + d["slug"] + ".html" for d in dests])
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for u in urls:
         sm += f"  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n"
@@ -299,7 +525,8 @@ def main():
         f.write(sm)
     with open(os.path.join(ROOT, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
-    print(f"Wrote {len(dests)} destination pages + index, sitemap.xml ({len(urls)} URLs), robots.txt")
+    print(f"Wrote {len(dests)} destination pages + index, {len(gear_slugs)} gear pages + index, "
+          f"about + how-we-score, sitemap.xml ({len(urls)} URLs), robots.txt")
 
 if __name__ == "__main__":
     main()
