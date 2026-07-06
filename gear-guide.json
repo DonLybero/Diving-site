@@ -1856,7 +1856,7 @@
        "name": "ScubaPro Sport Shorty 2mm",
        "blurb": "Buttery-soft 2mm neoprene cut specifically for the shoulder mobility divers need.",
        "review": "Purpose-built for scuba, the Sport Shorty uses very soft 2mm neoprene with an inside-and-outside polyester lining that dries quickly and feels comfortable against skin over long tropical days. Its triathlon-style cut opens up range of motion through the shoulders and armpits, so nothing fights you when you're finning or working a reel. It is the ideal grab-and-go warm-water layer, adding a touch of core warmth and sun and sting protection without the bulk of a full suit.",
-       "image": "",
+       "image": "assets/gear/scubapro-sport-shorty-2mm.jpg",
        "specs": {
         "Thickness": "2mm shorty",
         "Material": "Super-soft 2mm neoprene",
@@ -1889,7 +1889,7 @@
        "name": "Cressi Lido 2mm Shorty (Women's)",
        "blurb": "An anatomically cut women's 2mm shorty that's light, flattering and easy to travel with.",
        "review": "The Lido Shorty Lady is a hoodless 2mm one-piece shaped for a woman's anatomy, giving a snug, no-bunching fit that thin unisex suits rarely deliver. The double-lined super-stretch neoprene and a front YKK zip make it quick to pull on and off between dives, and the neoprene-hemmed sleeves and legs resist chafe. For very warm tropical water it's the standout budget pick, adding sun, sting and light abrasion protection with barely-there thermal load.",
-       "image": "",
+       "image": "assets/gear/cressi-lido-2mm-shorty-women-s.jpg",
        "specs": {
         "Thickness": "2mm shorty",
         "Material": "Double-lined super-stretch nylon-2 neoprene",
@@ -1922,7 +1922,7 @@
        "name": "Bare 2mm Sport S-Flex Shorty",
        "blurb": "Feather-light stretch neoprene at a price that makes it the easy warm-water carry-on.",
        "review": "Bare's Sport S-Flex Shorty pairs 2mm neoprene with the brand's S-Flex stretch panels, so it moves with you and packs down small for tropical travel. Short arms and legs vent heat while the torso panel keeps your core comfortable and shields your back from the tank and BCD. It's an unfussy, well-priced shorty for divers who just want light coverage against sun, coral scrapes and stinging plankton in bathwater-warm seas.",
-       "image": "",
+       "image": "assets/gear/bare-2mm-sport-s-flex-shorty.jpg",
        "specs": {
         "Thickness": "2mm shorty",
         "Material": "S-Flex stretch neoprene",
@@ -1988,7 +1988,7 @@
        "name": "Aqualung HydroFlex 3mm Shorty",
        "blurb": "Eco-minded, PAH-free stretch neoprene shorty tuned for warm-water scuba comfort.",
        "review": "The HydroFlex shorty is made from non-petroleum-based, PAH-free neoprene that stretches up to 250%, giving a soft, unrestrictive fit for reef diving. Flatlock stitching lies flat against the skin and a V-shaped collar reduces neck chafe, while the short cut keeps you from overheating in tropical water. It's a smart choice for the diver who wants a warm-water shorty with a lighter environmental footprint without sacrificing flex or coverage.",
-       "image": "",
+       "image": "assets/gear/aqualung-hydroflex-3mm-shorty.jpg",
        "specs": {
         "Thickness": "3mm shorty",
         "Material": "Non-petroleum PAH-free super-stretch neoprene",
@@ -2054,7 +2054,7 @@
        "name": "Cressi Lido 2mm Full Wetsuit",
        "blurb": "Full arm-and-leg 2mm coverage that's still cool enough for the warmest reefs.",
        "review": "The Lido full suit takes Cressi's flexible nylon-2 neoprene into a lightweight 2mm steamer, giving head-to-toe sun and sting protection for divers who burn or react to jellyfish yet find a 3mm too warm. The front YKK zip is easy to manage solo, and the thin, stretchy build travels light and dries fast between dives. It's an affordable full-coverage option for very warm tropical water where a shorty leaves too much skin exposed.",
-       "image": "",
+       "image": "assets/gear/cressi-lido-2mm-full-wetsuit.jpg",
        "specs": {
         "Thickness": "2mm full suit",
         "Material": "Flexible nylon-2 neoprene",
@@ -2135,7 +2135,7 @@
        "name": "Scubapro Definition Steamer 3mm",
        "blurb": "One of the few suits engineered purely for divers, with an infrared fleece lining that punches above its 3mm rating.",
        "review": "Built on Scubapro's Body Map System, the Definition Steamer uses a 3D cut and targeted material inserts so it fits close and stretches where a diver needs it. The infrared fleece interior reflects body heat back to the skin for extra warmth, while the limestone-based X-Foam neoprene is light, buoyancy-friendly and hard-wearing. It is a smart middle-ground choice for warm-water divers who want dive-specific features without a top-tier price.",
-       "image": "",
+       "image": "assets/gear/scubapro-definition-steamer-3mm.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "X-Foam limestone neoprene, N2S construction",
@@ -2234,7 +2234,7 @@
        "name": "Cressi Morea 3mm",
        "blurb": "The honest value pick for pure warm-water diving: solid warmth and stretch without the premium markup.",
        "review": "The Morea combines rubberised neoprene across the chest for warmth with Ultraspan neoprene in the arms and legs for easy donning and free movement, all in a one-piece back-zip design. Anatomical cuts and molded knee protection give it a good fit and real durability against reef abrasion, and a quality YKK zipper keeps the closure reliable. For divers who only hit tropical water, it delivers most of what the pricey suits do at a fraction of the cost.",
-       "image": "",
+       "image": "assets/gear/cressi-morea-3mm.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Premium neoprene with Ultraspan arms and legs",
@@ -2267,7 +2267,7 @@
        "name": "Pinnacle Tempo XT 3mm Merino",
        "blurb": "A merino-lined 3mm that dives noticeably warmer than its thickness and costs less than its rivals.",
        "review": "The Tempo XT lines high-stretch elastiprene neoprene with natural merino wool, which Pinnacle credits with adding up to 35% more insulating power, so it feels cozy well into cooler tropical water. A 10mm spine flap and smoothskin seals behind the rear zip cut flushing, while ankle zips make it quick to get on and off. It is a standout value for divers who want extra warmth and comfort from a slim suit without paying flagship money.",
-       "image": "",
+       "image": "assets/gear/pinnacle-tempo-xt-3mm-merino.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Elastiprene neoprene with merino wool lining",
@@ -2546,7 +2546,7 @@
        "name": "Cressi Castoro 5mm",
        "blurb": "Italian-engineered double-lined warmth at an unbeatable entry price.",
        "review": "The Castoro is a rugged 5mm double-lined one-piece with a strong YKK back zip and Aquastop under-zip baffle to cut water infiltration. Smooth-neoprene Aquastop seals at the wrists and ankles, pre-shaped legs and anti-wear inserts on the knees and shins make it comfortable to kick and hard to wear out. For divers wanting a warm, durable temperate-water suit on a tight budget, it is one of the best values on the market.",
-       "image": "",
+       "image": "assets/gear/cressi-castoro-5mm.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "Double-lined Nylon II neoprene",
@@ -2579,7 +2579,7 @@
        "name": "Bare Nixie Ultra 5mm Women's",
        "blurb": "A women's-specific 5mm with graphene warmth cut for a true female fit.",
        "review": "The Nixie Ultra is engineered on a women's-specific pattern, so it fits through the torso, hips and shoulders far better than a unisex suit for less flushing and more comfort. It shares Bare's full-stretch neoprene and OMNIRED graphene lining that reflects body heat back as infrared warmth, with a redesigned collar and ankle zips that make it easy to don and doff. It is the standout choice for women diving temperate and subtropical water who want premium warmth and mobility.",
-       "image": "",
+       "image": "assets/gear/bare-nixie-ultra-5mm-women-s.png",
        "specs": {
         "Thickness": "5mm",
         "Material": "Full-stretch limestone neoprene",
@@ -2612,7 +2612,7 @@
        "name": "Scubapro Definition Steamer 5mm",
        "blurb": "A body-mapped 5mm that fits like a glove and insulates like a flagship.",
        "review": "The Definition Steamer is cut with Scubapro's Body Map System, using 3D tailoring and stretch panels so it hugs the body and cuts internal water movement that steals heat. An Ultraspan chest panel and Stretchtec fabric add mobility, while petroleum-free X-Foam neoprene delivers efficient heat retention rated for a Class B temperate range. Reinforced shoulder, elbow and knee pads and double-zippered seals make it a warm, hard-wearing pick for divers who want a tailored high-end fit.",
-       "image": "",
+       "image": "assets/gear/scubapro-definition-steamer-5mm.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "X-Foam limestone neoprene with Ultraspan and Stretchtec panels",
@@ -2726,7 +2726,7 @@
        "name": "Waterproof W7 7mm",
        "blurb": "A semi-dry-grade 7mm loaded with seals, pockets and Kevlar knees for divers who want a suit that lasts.",
        "review": "The W7 is a heavily engineered 7mm full suit that borrows semi-dry thinking: 4-way stretch neoprene keeps it supple while a spine WaterDam and sealed wrist and ankle zips choke off the cold flush that plagues plain wetsuits. It adds practical touches divers actually use, including thigh cargo pockets and Kevlar-reinforced kneepads that shrug off wreck and boat abrasion. Choose it if you dive hard in genuinely cold water and want a durable, well-sealed suit that closes much of the gap to a semi-dry.",
-       "image": "",
+       "image": "assets/gear/waterproof-w7-7mm.png",
        "specs": {
         "Thickness": "7mm",
         "Material": "4-way stretch neoprene",
@@ -2759,7 +2759,7 @@
        "name": "Scubapro Everflex Steamer 7/5mm",
        "blurb": "A body-mapped 7/5 steamer that keeps thick warmth over the core and thinner stretch where you move.",
        "review": "The Everflex Steamer runs 7mm over the torso and 5mm at the limbs, a body-mapped layout that concentrates warmth on your core while freeing the arms and legs for easy finning and reaching. Its Diamond Span inner lining drains and channels water, seams are double-blindstitched outside and single inside to cut flushing, and the trim panel count keeps range of motion high. It is a strong pick for cold temperate seas where a diver wants real 7mm warmth without the stiffness of a uniform-thickness suit.",
-       "image": "",
+       "image": "assets/gear/scubapro-everflex-steamer-7-5mm.jpg",
        "specs": {
         "Thickness": "7/5mm (7mm core, 5mm limbs)",
         "Material": "X-Foam neoprene",
@@ -2858,7 +2858,7 @@
        "name": "BARE Nixie Ultra 7mm",
        "blurb": "A women's-specific cold-water 7mm designed around the female form, with infrared lining for real warmth.",
        "review": "The Nixie Ultra is BARE's flagship women's 7mm, cut on a female-specific pattern so it seals along the back, waist and legs without the bunching that unisex suits leave. It pairs progressive full-stretch neoprene with Omnired infrared lining that reflects body heat back to the core, and a collar-zip donning system makes a thick suit far easier to get into. It is the standout choice for women diving cold water who want a suit that actually fits and keeps them genuinely warm on long dives.",
-       "image": "",
+       "image": "assets/gear/bare-nixie-ultra-7mm.jpg",
        "specs": {
         "Thickness": "7mm",
         "Material": "Progressive full-stretch Nylon-2 neoprene",
@@ -2891,7 +2891,7 @@
        "name": "Henderson Greenprene 7mm",
        "blurb": "A neoprene-free 7mm built from plant-based foam for divers who want cold-water warmth with a lighter footprint.",
        "review": "The Greenprene is a 7mm full suit made from a limestone-and-petroleum-free insulating foam derived from natural sources such as sugar cane, plant oils and oyster shells, giving warm, buoyant insulation without conventional neoprene. It keeps the practical Henderson touches divers expect, with glued-and-sewn seams for durability and a back-zip entry with pull leash, and carries a long warranty. Choose it if you want dependable cold-water warmth from a more sustainable material and value ruggedness over ultimate stretch.",
-       "image": "",
+       "image": "assets/gear/henderson-greenprene-7mm.jpg",
        "specs": {
         "Thickness": "7mm",
         "Material": "Greenprene bio-based insulating foam (neoprene-free)",
