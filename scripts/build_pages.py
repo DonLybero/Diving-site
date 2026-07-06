@@ -530,6 +530,59 @@ conditions with a local dive centre.</p>
           "description": desc, "url": url}
     return content_shell("How We Score Dive Destinations | DiveSZN", desc, url, "", None, inner, ld)
 
+# ---------------------------------------------------------------- marine life
+RATING_RANK = {"Peak": 0, "Good": 1, "Shoulder": 2, "Low": 3, "Closed": 9}
+
+EXPERIENCES = [
+    {"slug": "sardine-run", "title": "The Sardine Run", "keywords": ["sardine"],
+     "short": "the sardine run and its bait-ball feeding frenzies",
+     "hero_sub": "The greatest shoal on Earth — and the predators that chase it.",
+     "intro": ("Each southern-hemisphere winter, billions of sardines push north along South Africa's "
+               "east coast on a ribbon of cold water, and the ocean erupts. Dusky and bronze whaler sharks, "
+               "pods of common dolphins, Bryde's whales and dive-bombing gannets corral the shoals into "
+               "churning bait balls — and divers drop straight into the middle of it. It is fast, wild, "
+               "open-water diving, and arguably the most electric big-animal spectacle you can put a "
+               "regulator in the water for."),
+     "desc": "Diving the Sardine Run: what it is, and where and when to dive it, from DiveSZN's seasonal data.",
+     "tips": ["The run is weather- and current-driven, so timing shifts year to year — build in flexible days.",
+              "Expect open-water entries and fast surface action; buoyancy and boat skills matter more than depth here.",
+              "Pack real exposure protection — the run rides cold water even in a warm country."]},
+]
+
+def where_when(dests, keywords):
+    kws = [k.lower() for k in keywords]
+    rows = []
+    for x in dests:
+        months = [m for m in MONTHS
+                  if any(k in (x["monthly"][m].get("marine_life") or "").lower() for k in kws)]
+        if not months:
+            continue
+        best = min(RATING_RANK.get(x["monthly"][m]["rating"], 9) for m in months)
+        rows.append((best, x, months))
+    rows.sort(key=lambda r: (r[0], r[1]["name"]))
+    return rows
+
+def marine_article(exp, dests, prefix="../"):
+    url = BASE + "marine-life/" + exp["slug"] + ".html"
+    rows = where_when(dests, exp["keywords"])
+    body_rows = "".join(
+        f'<tr><td><b><a href="{prefix}destinations/{x["slug"]}.html">{esc(x["name"])}</a></b>'
+        f'<div class="meta">{esc(x["country"])}</div></td><td>{esc(", ".join(months))}</td></tr>'
+        for _, x, months in rows)
+    table = (f'<h2>Where &amp; when to dive it</h2>'
+             f'<p class="greview" style="max-width:78ch">Pulled live from our seasonal data — the destinations where '
+             f'{esc(exp["short"])} shows in the water, and the months to catch it.</p>'
+             f'<div style="overflow:auto"><table><thead><tr><th>Destination</th><th>Best months</th></tr></thead>'
+             f'<tbody>{body_rows}</tbody></table></div>') if rows else ""
+    tips = "".join(f"<li>{esc(t)}</li>" for t in exp.get("tips", []))
+    inner = (f'<p class="greview" style="max-width:78ch">{esc(exp["intro"])}</p>'
+             + table
+             + (f'<div class="tipbox"><b>Good to know</b><ul>{tips}</ul></div>' if tips else "")
+             + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>')
+    ld = {"@context": "https://schema.org", "@type": "Article", "headline": exp["title"],
+          "description": exp["desc"], "url": url}
+    return content_shell(exp["title"] + " | DiveSZN", exp["desc"], url, prefix, exp.get("hero_sub"), inner, ld)
+
 def main():
     with open(os.path.join(ROOT, "diving-destinations.json")) as f:
         dests = json.load(f)["destinations"]
@@ -554,6 +607,13 @@ def main():
     with open(os.path.join(geardir, "index.html"), "w", encoding="utf-8") as f:
         f.write(gear_index_page(gear))
 
+    # marine-life articles (data-generated where & when)
+    marinedir = os.path.join(ROOT, "marine-life")
+    os.makedirs(marinedir, exist_ok=True)
+    for exp in EXPERIENCES:
+        with open(os.path.join(marinedir, exp["slug"] + ".html"), "w", encoding="utf-8") as f:
+            f.write(marine_article(exp, dests))
+
     # trust / info pages (root)
     with open(os.path.join(ROOT, "about.html"), "w", encoding="utf-8") as f:
         f.write(about_page())
@@ -563,6 +623,7 @@ def main():
     urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html",
              BASE + "destinations/index.html", BASE + "gear/index.html"]
             + [BASE + "gear/" + s + ".html" for s in gear_slugs]
+            + [BASE + "marine-life/" + e["slug"] + ".html" for e in EXPERIENCES]
             + [BASE + "destinations/" + d["slug"] + ".html" for d in dests])
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for u in urls:
