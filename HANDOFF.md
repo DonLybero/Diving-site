@@ -172,15 +172,42 @@ score = rating_base (Peak 100 / Good 72 / Shoulder 48 / Low 22; Closed excluded)
 
 ## 9. Roadmap
 
-### Owner tasks (blocking revenue/distribution — engineering already done)
-1. **URGENT: register diveszn.com / .io / .app** (all unregistered at the
-   2026-07 screen; see `docs/name-change-diveszn-2026-07.md`).
-2. Apply to affiliate programs; paste IDs into `AFFILIATE`; rebuild standalone.
-3. Add site to Google Search Console; submit `sitemap.xml`.
-4. Attorney trademark knockout search for "DiveSZN" before marketing spend.
-5. Optional: add `PEXELS_API_KEY` repo secret, rerun fetch-images `--force`
-   for higher-quality destination photos.
-6. Pick an ad network / direct sponsor for the header slot.
+### Owner decision (2026-07): site to be owned by a UAE freezone company
+The owner is forming a **UAE freezone company** that will own DiveSZN (domain +
+site as company assets), so several items below are deliberately **deferred
+until the company + domain exist** — to avoid doing them twice and to keep the
+IP with the entity from day one. Do them as one batch at launch (see checklist).
+
+**Launch checklist — blocked on company + domain (do together):**
+1. **Register diveszn.com** under the company (grab/watch the name meanwhile so
+   it isn't sniped; a personal→company transfer later is cheap if needed).
+2. **Google Search Console** — set up **once, as a Domain property on
+   diveszn.com** (DNS TXT verify), then submit the sitemap. Deliberately NOT
+   done on the github.io URL-prefix property to avoid duplicate setup + a
+   Change-of-Address migration. Update sitemap.xml/robots.txt to the new domain.
+3. **Privacy policy** (`privacy.html`) — swap operator to the real entity name +
+   real contact email (currently placeholder `privacy@diveszn.com`), and add a
+   UAE **PDPL** governing-law line (plus DIFC/ADGM rules if incorporated there).
+   Not legal advice — owner's formation agent/lawyer to confirm.
+4. Apply to affiliate programs (business details/payout under the company);
+   paste IDs into `AFFILIATE`; rebuild standalone.
+5. Attorney trademark knockout for "DiveSZN" before marketing spend.
+6. Consider a short **Terms of Use** page to sit beside the privacy policy.
+
+### Owner tasks (not domain-blocked)
+- Optional: add `PEXELS_API_KEY` repo secret, rerun fetch-images `--force`
+  for higher-quality destination photos.
+- Pick an ad network / direct sponsor for the header slot **when there's
+  traffic** (also triggers a cookie-consent banner + privacy-policy ad section).
+
+### Analytics (PM recommendation, 2026-07)
+Measure the minimum that answers "what earns," cookielessly, when traffic
+arrives — not before. Recommended: a **cookieless tool** (Cloudflare Web
+Analytics free, or Plausible/Fathom) + **outbound "Buy"-click event tracking**
+(the money signal), which needs no consent banner and only a one-line policy
+mention. Hold **GA4** until running Google Ads or needing deep funnels (it
+brings the consent banner). Wiring is ready to add once the owner picks a tool
+and supplies the site token.
 
 ### Near-term engineering
 - Buy-link health workflow: periodically verify the 180 retailer URLs still
