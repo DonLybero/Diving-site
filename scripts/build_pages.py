@@ -556,12 +556,60 @@ EXPERIENCES = [
                "the blue, sizing you up, and gone. They favour cold, productive water and gather where prey "
                "concentrates, most famously on the winter herring runs of the high north."),
      "desc": "Diving with orcas: what makes them the ultimate encounter, and where DiveSZN is headed to cover them.",
-     "no_data": ("Orca encounters are cold-water and opportunistic, and none of our current destinations has a "
-                 "reliable orca season — the classic waters, like northern Norway's winter herring run, are on our "
-                 "list as we expand. The moment orcas are in a destination's data, they'll surface here by month."),
+     "no_data": ("Orca encounters happen on the surface, not on scuba, so no destination in our dive guide carries "
+                 "an orca season. The in-water trips that do run are snorkel-based and cold — they're listed below."),
+     "beyond_intro": ("In-water orca encounters are snorkel-only — the water is too cold and the animals too fast for "
+                      "scuba. If a face-to-face with a wild orca is the dream, these are the trips that run it:"),
+     "beyond_scuba": [
+        {"name": "Skjervøy & the Tromsø fjords", "country": "Norway", "mode": "snorkel",
+         "months": ["Nov", "Dec", "Jan"], "q": "orca whale snorkeling Norway Tromso Skjervoy"},
+        {"name": "La Ventana / Sea of Cortez", "country": "Mexico", "mode": "snorkel",
+         "months": ["Jan", "Feb", "Mar"], "q": "orca encounter Baja La Ventana Sea of Cortez"}],
      "tips": ["Orcas are wild and unpredictable — encounters are never guaranteed and hinge on weather and prey.",
-              "Cold-water skills and serious exposure protection are the price of entry for the best orca waters.",
+              "The good orca water is genuinely cold — a proper drysuit or thick hooded exposure kit is essential.",
               "Give them space and let them choose the interaction — it's their ocean."]},
+    {"slug": "great-white", "title": "Great White Sharks", "keywords": ["great white"],
+     "short": "great white sharks",
+     "hero_sub": "The ocean's most famous predator — met from the cage.",
+     "intro": ("No shark carries the mythology of the great white — a five-metre ambush predator with a presence you "
+               "feel before you see it. It isn't a reef-diving animal: the encounter is cage diving, on a chum line "
+               "in cold, green water, and the moment a white materialises alongside the cage is one of diving's great "
+               "adrenaline hits. The map has shifted, though — some famous sites have gone quiet, and only a handful "
+               "still deliver."),
+     "desc": "Great white shark cage diving in 2026: the sites still operating, and when to go.",
+     "no_data": ("Great whites aren't a scuba animal — the encounter is cage diving — so no destination in our scuba "
+                 "guide carries a great-white season. The currently-operating cage sites are below."),
+     "beyond_intro": ("Great white diving means cage diving — a surface or submerged cage on a bait line, not a reef "
+                      "dive. Mexico closed Guadalupe in 2023 and orca predation has emptied the old Cape hotspots, so "
+                      "the sites still reliably running are:"),
+     "beyond_scuba": [
+        {"name": "Neptune Islands (Port Lincoln)", "country": "Australia", "mode": "cage diving",
+         "months": ["May", "Jun", "Jul", "Aug"], "q": "great white cage diving Port Lincoln Neptune Islands"},
+        {"name": "Mossel Bay", "country": "South Africa", "mode": "cage diving",
+         "months": ["Jun", "Jul", "Aug", "Sep"], "q": "great white cage diving Mossel Bay South Africa"},
+        {"name": "Stewart Island (Foveaux Strait)", "country": "New Zealand", "mode": "cage diving",
+         "months": ["Nov", "Dec", "Jan", "Feb"], "q": "great white cage diving Stewart Island New Zealand"}],
+     "tips": ["Cage diving needs no dive certification — but a warm layer and sea-sickness tablets both earn their keep.",
+              "Water is cold and often green; the best visibility and action come in the cooler months when seals are about.",
+              "Guadalupe (Mexico) has been closed to tourism since 2023, and South Africa's Gansbaai/False Bay whites have largely gone — check any operator is genuinely still seeing whites."]},
+    {"slug": "whale-sharks", "title": "Whale Sharks", "keywords": ["whale shark"],
+     "short": "whale sharks",
+     "hero_sub": "The biggest fish in the sea — and where to dive it.",
+     "intro": ("The whale shark is the largest fish alive — a filter-feeding giant up to twelve metres long, spotted "
+               "like a constellation and utterly harmless. It follows plankton blooms around the tropics, so catching "
+               "one is all about timing. On scuba you meet them on the reef and in the blue; a few of the world's "
+               "biggest gatherings, though, are legally snorkel-only."),
+     "desc": "Diving with whale sharks: where and when to dive with them, from DiveSZN's seasonal data.",
+     "beyond_intro": ("A couple of the planet's greatest whale-shark aggregations are run as snorkel-only trips — no "
+                      "scuba allowed — but they're bucket-list all the same:"),
+     "beyond_scuba": [
+        {"name": "Isla Mujeres & Holbox", "country": "Mexico", "mode": "snorkel",
+         "months": ["Jun", "Jul", "Aug", "Sep"], "q": "whale shark snorkel tour Isla Mujeres Cancun"},
+        {"name": "Gladden Spit", "country": "Belize", "mode": "snorkel",
+         "months": ["Apr", "May", "Jun"], "q": "whale shark snorkel Gladden Spit Placencia Belize"}],
+     "tips": ["Whale sharks follow food — most seasons track plankton blooms, spawning aggregations or monsoon upwellings.",
+              "Keep the regulation distance and never touch or block them; a spooked whale shark simply dives and is gone.",
+              "They cruise near the surface, so a slow, calm approach and good buoyancy get you the longest encounters."]},
 ]
 
 def where_when(dests, keywords):
@@ -593,9 +641,24 @@ def marine_article(exp, dests, prefix="../"):
     else:
         table = (f'<h2>Where &amp; when to dive it</h2>'
                  f'<p class="greview" style="max-width:78ch">{esc(exp.get("no_data") or "This is an opportunistic encounter — none of our current destinations has a fixed season for it yet.")}</p>')
+    # "Beyond scuba" — snorkel & cage experiences (not scuba, so not destinations),
+    # an affiliate surface: book via a tours platform (raw here; wrap when the
+    # experiences affiliate id is set).
+    beyond = ""
+    if exp.get("beyond_scuba"):
+        brows = "".join(
+            f'<tr><td><b>{esc(b["name"])}</b><div class="meta">{esc(b["country"])} · {esc(b["mode"])}</div></td>'
+            f'<td>{esc(", ".join(b["months"]))}</td>'
+            f'<td><a class="pack-cta ghost" href="https://www.getyourguide.com/s/?q={urllib.parse.quote(b["q"])}" '
+            f'target="_blank" rel="noopener sponsored">Book &rarr;</a></td></tr>'
+            for b in exp["beyond_scuba"])
+        beyond = (f'<h2>Beyond scuba — snorkel &amp; cage encounters</h2>'
+                  f'<p class="greview" style="max-width:78ch">{esc(exp.get("beyond_intro") or "Some of the best encounters with this animal do not run on scuba — they are snorkel or cage-diving trips. If that is the experience you are after, these are the places to book it.")}</p>'
+                  f'<div style="overflow:auto"><table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead>'
+                  f'<tbody>{brows}</tbody></table></div>')
     tips = "".join(f"<li>{esc(t)}</li>" for t in exp.get("tips", []))
     inner = (f'<p class="greview" style="max-width:78ch">{esc(exp["intro"])}</p>'
-             + table
+             + table + beyond
              + (f'<div class="tipbox"><b>Good to know</b><ul>{tips}</ul></div>' if tips else "")
              + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>')
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": exp["title"],

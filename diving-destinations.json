@@ -8985,6 +8985,1013 @@
         }
       ],
       "dive_sites_researched": "2026-07"
+    },
+    {
+      "name": "Nusa Penida",
+      "country": "Indonesia",
+      "region": "Coral Triangle / Bali (Indonesia)",
+      "water_type": "tropical/subtropical",
+      "difficulty": "advanced",
+      "access": "day-boat",
+      "coordinates": {
+        "lat": -8.727,
+        "lng": 115.544
+      },
+      "best_months": "Jul-Oct (mola-mola upwelling season; mantas year-round)",
+      "wetsuit": "3mm (bring 5mm for Jul-Oct upwellings, which can drop to 15-18C at Crystal Bay depths)",
+      "current_strength": "Strong",
+      "current_note": "Fast drifts and occasional down-currents at Crystal Bay, Toyapakeh and the north-coast points",
+      "currents": "The Indonesian Throughflow funnels between the islands, driving fast, shifting drifts and sudden down-currents that demand solid buoyancy and guide-led planning.",
+      "signature_species": [
+        "mola mola",
+        "manta ray",
+        "eagle ray",
+        "whitetip reef shark",
+        "bumphead parrotfish",
+        "hawksbill turtle"
+      ],
+      "highlights": "Oceanic sunfish on cold winter upwellings and reef mantas cruising the cleaning stations all year, wrapped in some of Bali's wildest drift diving.",
+      "monthly_temp_c": {
+        "Jan": 29,
+        "Feb": 29,
+        "Mar": 29,
+        "Apr": 29,
+        "May": 28,
+        "Jun": 27,
+        "Jul": 25,
+        "Aug": 24,
+        "Sep": 24,
+        "Oct": 25,
+        "Nov": 28,
+        "Dec": 29
+      },
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Reef mantas active at Manta Point on rich wet-season nutrients; turtles and reef fish",
+          "conditions": "Wet season; afternoon rain and strong currents, morning dives usually fine",
+          "visibility_m": 18
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "Mantas year-round at the cleaning stations; hawksbill turtles and macro on protected reefs",
+          "conditions": "Wet season; plankton-rich water, currents can pick up",
+          "visibility_m": 18
+        },
+        "Mar": {
+          "rating": "Shoulder",
+          "marine_life": "Reliable manta rays plus eagle rays and reef sharks along the walls",
+          "conditions": "End of wet season; seas settling, occasional afternoon showers",
+          "visibility_m": 20
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Mantas at Manta Point, whitetip reef sharks and turtles on the drifts",
+          "conditions": "Dry season begins; calmer seas and clearing water",
+          "visibility_m": 22
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Year-round mantas plus bumphead parrotfish and reef sharks on the north points",
+          "conditions": "Dry season; predictable conditions and strong drift diving",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Mantas cruising; first cool upwellings raise early mola-mola hopes at Crystal Bay",
+          "conditions": "Dry season; strengthening currents as the Throughflow peaks",
+          "visibility_m": 25
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "Mola-mola season opens at Crystal Bay; mantas steady at Manta Point",
+          "conditions": "Dry season; cold upwellings, punchy currents, excellent visibility",
+          "visibility_m": 25
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "Prime mola-mola sightings on cold water; mantas year-round on the reefs",
+          "conditions": "Dry season; strongest upwellings, cool water and clear seas",
+          "visibility_m": 28
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Best-odds mola-mola month alongside reliable reef mantas",
+          "conditions": "Dry season; peak upwelling, cool water and top visibility",
+          "visibility_m": 28
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Mola-mola sightings tapering as upwelling weakens; mantas still steady",
+          "conditions": "Dry season closing; water warming, currents easing, clear seas",
+          "visibility_m": 25
+        },
+        "Nov": {
+          "rating": "Shoulder",
+          "marine_life": "Mantas active on returning nutrients; turtles and reef fish",
+          "conditions": "Wet season starting; rough seas and strong currents possible",
+          "visibility_m": 20
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "Year-round mantas at Manta Point plus reef sharks and macro life",
+          "conditions": "Wet season; afternoon rain, plankton-rich water, brisk currents",
+          "visibility_m": 18
+        }
+      },
+      "dive_sites": [
+        {
+          "name": "Crystal Bay",
+          "type": "reef / mola-mola station",
+          "level": "advanced",
+          "depth": "5-40m",
+          "blurb": "The classic mola-mola site, where cold Jul-Oct upwellings and possible down-currents bring sunfish to cleaning stations on the deep slope."
+        },
+        {
+          "name": "Manta Point",
+          "type": "cleaning station",
+          "level": "intermediate",
+          "depth": "5-15m",
+          "blurb": "Reef mantas glide over cleaning stations year-round on the exposed south coast, often in surge and swell."
+        },
+        {
+          "name": "Manta Bay",
+          "type": "cleaning station / bay",
+          "level": "intermediate",
+          "depth": "5-15m",
+          "blurb": "A shallow bay where schooling reef mantas feed and get cleaned, a calmer alternative to Manta Point."
+        },
+        {
+          "name": "Toyapakeh",
+          "type": "wall / drift",
+          "level": "advanced",
+          "depth": "6-30m",
+          "blurb": "A vivid coral wall in the channel with fast currents and occasional down-currents, and a chance of mola-mola in the deep."
+        },
+        {
+          "name": "SD Point",
+          "type": "drift",
+          "level": "advanced",
+          "depth": "10-30m",
+          "blurb": "A north-coast high-speed drift over sloping reef with turtles, reef sharks and big schools when the current runs."
+        },
+        {
+          "name": "Gamat Bay",
+          "type": "reef / macro",
+          "level": "intermediate",
+          "depth": "5-25m",
+          "blurb": "A sheltered white-sand bay with coral bommies, strong macro life and clear water, best for calmer conditions."
+        },
+        {
+          "name": "Ceningan Wall",
+          "type": "wall / drift",
+          "level": "advanced",
+          "depth": "5-40m",
+          "blurb": "A dramatic drop-off between Penida and Ceningan with strong currents, big fans and pelagic action for experienced divers."
+        }
+      ],
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "slug": "nusa-penida",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Fuvahmulah",
+      "country": "Maldives",
+      "region": "Indian Ocean / Maldives",
+      "water_type": "tropical",
+      "difficulty": "advanced",
+      "access": "day-boat",
+      "coordinates": {
+        "lat": -0.2989,
+        "lng": 73.4239
+      },
+      "best_months": "Dec-Apr (calm dry-season seas and best visibility; tiger sharks year-round)",
+      "wetsuit": "3mm",
+      "current_strength": "Strong",
+      "current_note": "open blue-water drop-offs, tide-driven",
+      "currents": "This is exposed oceanic diving off a single deep-water island, where tidal currents sweep the drop-offs and blue-water dives are done as drifts.",
+      "signature_species": [
+        "tiger shark",
+        "thresher shark",
+        "oceanic manta",
+        "scalloped hammerhead",
+        "silvertip shark",
+        "whale shark"
+      ],
+      "highlights": "The tiger shark capital of the world, where a shallow harbour plateau puts you eye-to-eye with resident tigers while deep drop-offs deliver threshers, oceanic mantas and schooling hammerheads.",
+      "monthly_temp_c": {
+        "Jan": 28,
+        "Feb": 28,
+        "Mar": 29,
+        "Apr": 29,
+        "May": 30,
+        "Jun": 29,
+        "Jul": 29,
+        "Aug": 29,
+        "Sep": 29,
+        "Oct": 29,
+        "Nov": 28,
+        "Dec": 28
+      },
+      "monthly": {
+        "Jan": {
+          "rating": "Peak",
+          "marine_life": "Resident tiger sharks daily; scalloped hammerheads still schooling and silvertips gathering; whale sharks possible along the drop-offs.",
+          "conditions": "Peak northeast-monsoon dry season with calm seas and excellent clarity.",
+          "visibility_m": 35
+        },
+        "Feb": {
+          "rating": "Peak",
+          "marine_life": "Tiger sharks year-round; strong window for silvertips (sometimes in the hundreds), hammerhead schools and whale sharks.",
+          "conditions": "Dry northeast monsoon, settled surface and gin-clear water.",
+          "visibility_m": 35
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Widest diversity of the year: tigers daily, hammerheads still schooling, oceanic manta season opening, threshers on the cleaning stations and whale sharks around.",
+          "conditions": "Late dry season, warm calm seas and top visibility.",
+          "visibility_m": 35
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "Tigers year-round; oceanic mantas building toward their mating peak, with whale sharks and lingering hammerheads.",
+          "conditions": "Tail of the dry northeast monsoon, still calm before the seasonal change.",
+          "visibility_m": 33
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Tiger sharks daily; peak oceanic manta season as they gather to mate, clean and feed.",
+          "conditions": "Southwest monsoon setting in with the warmest water and increasingly variable surface.",
+          "visibility_m": 28
+        },
+        "Jun": {
+          "rating": "Shoulder",
+          "marine_life": "Reliable resident tiger sharks; threshers on the deep cleaning stations and passing oceanic mantas.",
+          "conditions": "Wet southwest monsoon, rougher surface and reduced visibility but quieter sites.",
+          "visibility_m": 25
+        },
+        "Jul": {
+          "rating": "Shoulder",
+          "marine_life": "Tiger sharks year-round; threshers at depth and occasional pelagic passers-by.",
+          "conditions": "Southwest monsoon, wetter and choppier with more current.",
+          "visibility_m": 25
+        },
+        "Aug": {
+          "rating": "Shoulder",
+          "marine_life": "Guaranteed resident tigers; steady thresher shark encounters on the reef cleaning stations.",
+          "conditions": "Peak wet southwest monsoon, unsettled surface and greener water.",
+          "visibility_m": 24
+        },
+        "Sep": {
+          "rating": "Shoulder",
+          "marine_life": "Tiger sharks daily; threshers reliable and some years extra pelagic action on the quieter sites.",
+          "conditions": "Southwest monsoon easing, still wet with variable visibility.",
+          "visibility_m": 25
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Tigers year-round; thresher sharks entering their strongest window and scalloped hammerhead schools beginning to build.",
+          "conditions": "Monsoon transition, seas starting to settle and clarity improving.",
+          "visibility_m": 28
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "Resident tigers daily; prime thresher season continues and hammerhead schools grow as the thermocline shallows.",
+          "conditions": "Early dry northeast monsoon, calmer surface and rising visibility.",
+          "visibility_m": 30
+        },
+        "Dec": {
+          "rating": "Peak",
+          "marine_life": "Tigers year-round; thresher sharks at their peak and dependable schooling hammerheads.",
+          "conditions": "Northeast monsoon dry season returning with calm seas and clear water.",
+          "visibility_m": 33
+        }
+      },
+      "dive_sites": [
+        {
+          "name": "Tiger Harbour",
+          "type": "shark plateau",
+          "level": "intermediate",
+          "depth": "5-12m",
+          "blurb": "The harbour-mouth plateau that made Fuvahmulah famous, where named resident tiger sharks patrol at close range in shallow, clear water."
+        },
+        {
+          "name": "Tiger Zoo",
+          "type": "shark reef",
+          "level": "intermediate",
+          "depth": "8-20m",
+          "blurb": "The most consistent spot to sit with numbers of resident tigers throughout the year, often with silvertips and nurse sharks in the mix."
+        },
+        {
+          "name": "Farikede",
+          "type": "deep reef / cleaning station",
+          "level": "advanced",
+          "depth": "12-40m",
+          "blurb": "Southern reef with thresher shark cleaning stations that rise from deep water, one of the rarest big-animal encounters in the Maldives."
+        },
+        {
+          "name": "Rasgefanno",
+          "type": "reef / big animal",
+          "level": "advanced",
+          "depth": "10-30m",
+          "blurb": "Rocky-bottomed stage for tiger sharks alongside silvertips and leopard sharks, with oceanic mantas occasionally cruising past."
+        },
+        {
+          "name": "Neregando Fannu",
+          "type": "wall / drop-off",
+          "level": "advanced",
+          "depth": "15-40m",
+          "blurb": "Steep oceanic wall drifted in current for hammerhead schools, oceanic mantas and passing pelagics off the deep blue."
+        },
+        {
+          "name": "Thoondu",
+          "type": "reef / drift",
+          "level": "advanced",
+          "depth": "10-30m",
+          "blurb": "Northern point off the famous white-pebble beach, an exposed corner that channels current and pelagic traffic."
+        },
+        {
+          "name": "Razwa Faru",
+          "type": "deep reef",
+          "level": "advanced",
+          "depth": "15-40m",
+          "blurb": "Southern deep reef and drop-off known for threshers on the cleaning stations plus silvertips and schooling hammerheads."
+        }
+      ],
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "slug": "fuvahmulah",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Layang Layang",
+      "country": "Malaysia",
+      "region": "South China Sea / Borneo (Malaysia)",
+      "water_type": "tropical",
+      "difficulty": "advanced",
+      "access": "resort",
+      "coordinates": {
+        "lat": 7.37,
+        "lng": 113.84
+      },
+      "best_months": "Mar-Aug (hammerheads Mar-May)",
+      "wetsuit": "3mm",
+      "current_strength": "Strong",
+      "current_note": "Wall sites can run strong; sheltered lagoon dives are calm",
+      "currents": "Currents range from mild inside the atoll to strong along the exposed drop-offs where the pelagics gather.",
+      "signature_species": [
+        "scalloped hammerhead",
+        "dogtooth tuna",
+        "grey reef shark",
+        "manta ray",
+        "great barracuda",
+        "green turtle"
+      ],
+      "highlights": "A remote oceanic atoll where walls plunge 2,000 m and springtime brings schooling scalloped hammerheads in gin-clear water.",
+      "monthly_temp_c": {
+        "Jan": 28,
+        "Feb": 28,
+        "Mar": 28,
+        "Apr": 29,
+        "May": 29,
+        "Jun": 29,
+        "Jul": 29,
+        "Aug": 29,
+        "Sep": 29,
+        "Oct": 29,
+        "Nov": 28,
+        "Dec": 28
+      },
+      "monthly": {
+        "Jan": {
+          "rating": "Closed",
+          "marine_life": "No access - resort shut",
+          "conditions": "Northeast monsoon; island unreachable",
+          "visibility_m": 0
+        },
+        "Feb": {
+          "rating": "Closed",
+          "marine_life": "No access - resort shut",
+          "conditions": "Monsoon tailing off; resort still closed",
+          "visibility_m": 0
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Schooling scalloped hammerheads arrive, pelagics on the walls",
+          "conditions": "Season opens; flat seas and 30m+ visibility",
+          "visibility_m": 35
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "Hammerhead aggregations at their best, mantas and grey reef sharks",
+          "conditions": "Calmest month; superb visibility",
+          "visibility_m": 40
+        },
+        "May": {
+          "rating": "Peak",
+          "marine_life": "Hammerhead schooling continues, dogtooth tuna and barracuda",
+          "conditions": "Excellent visibility, warm and settled",
+          "visibility_m": 40
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Reef sharks, turtles, big schools of jacks and tuna",
+          "conditions": "Hammerheads thinning; reliable wall diving",
+          "visibility_m": 30
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "Grey reef sharks, mantas, resident pelagics",
+          "conditions": "Steady conditions, good visibility",
+          "visibility_m": 30
+        },
+        "Aug": {
+          "rating": "Shoulder",
+          "marine_life": "Reef sharks, turtles, macro on the reef flats",
+          "conditions": "Season winding down; occasional wind and swell",
+          "visibility_m": 25
+        },
+        "Sep": {
+          "rating": "Closed",
+          "marine_life": "No access - resort shut",
+          "conditions": "Resort closes for the monsoon",
+          "visibility_m": 0
+        },
+        "Oct": {
+          "rating": "Closed",
+          "marine_life": "No access - resort shut",
+          "conditions": "Monsoon building; island unreachable",
+          "visibility_m": 0
+        },
+        "Nov": {
+          "rating": "Closed",
+          "marine_life": "No access - resort shut",
+          "conditions": "Northeast monsoon; rough seas",
+          "visibility_m": 0
+        },
+        "Dec": {
+          "rating": "Closed",
+          "marine_life": "No access - resort shut",
+          "conditions": "Peak monsoon; no operators",
+          "visibility_m": 0
+        }
+      },
+      "dive_sites": [
+        {
+          "name": "Gorgonian Forest",
+          "type": "Wall",
+          "level": "advanced",
+          "blurb": "Sea-fan draped drop-off with strong current - the prime spot for schooling hammerheads",
+          "depth": "15-40m"
+        },
+        {
+          "name": "Dogtooth Lair",
+          "type": "Wall",
+          "level": "advanced",
+          "blurb": "Deep-water wall patrolled by big dogtooth tuna, barracuda and jacks",
+          "depth": "18-40m"
+        },
+        {
+          "name": "The Valley",
+          "type": "Reef",
+          "level": "intermediate",
+          "blurb": "Hard-coral slope with snappers, sweetlips and turtles; hammerheads pass in spring",
+          "depth": "10-30m"
+        },
+        {
+          "name": "Shark's Cave",
+          "type": "Wall",
+          "level": "advanced",
+          "blurb": "Overhangs sheltering resting whitetip, nurse and leopard sharks",
+          "depth": "12-35m"
+        },
+        {
+          "name": "D-Wall",
+          "type": "Wall",
+          "level": "advanced",
+          "blurb": "Sheer vertical wall dropping into 2,000 m of blue - a magnet for pelagics",
+          "depth": "15-40m"
+        },
+        {
+          "name": "Wreck Point",
+          "type": "Reef",
+          "level": "intermediate",
+          "blurb": "Reef corner near the resort channel with reef sharks and cruising trevally",
+          "depth": "10-30m"
+        },
+        {
+          "name": "Snapper Ledges",
+          "type": "Reef",
+          "level": "beginner",
+          "blurb": "Easy sheltered coral garden thick with snapper and colourful reef fish",
+          "depth": "8-20m"
+        }
+      ],
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "slug": "layang-layang",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Malpelo Island",
+      "country": "Colombia",
+      "region": "Eastern Pacific / Colombia",
+      "water_type": "tropical/subtropical",
+      "difficulty": "advanced",
+      "access": "liveaboard",
+      "coordinates": {
+        "lat": 3.98,
+        "lng": -81.61
+      },
+      "best_months": "Dec-Mar (peak hammerhead schools)",
+      "wetsuit": "5mm (7mm or hooded for Dec-May thermoclines down to ~14C)",
+      "current_strength": "Strong",
+      "current_note": "Fierce; reef hooks and drift skills essential",
+      "currents": "Powerful, shifting currents and surge scour the exposed pinnacles and walls, so reef hooks, good buoyancy and solid drift-diving skills are mandatory.",
+      "signature_species": [
+        "scalloped hammerhead",
+        "silky shark",
+        "whale shark",
+        "Galapagos shark",
+        "smalltooth sand tiger shark",
+        "eagle ray"
+      ],
+      "highlights": "Walls of 200-plus schooling scalloped hammerheads, silky shark hordes and the rare smalltooth sand tiger on a remote volcanic seamount 500km offshore.",
+      "monthly_temp_c": {
+        "Jan": 24,
+        "Feb": 24,
+        "Mar": 24,
+        "Apr": 25,
+        "May": 25,
+        "Jun": 26,
+        "Jul": 27,
+        "Aug": 27,
+        "Sep": 28,
+        "Oct": 28,
+        "Nov": 27,
+        "Dec": 25
+      },
+      "monthly": {
+        "Jan": {
+          "rating": "Peak",
+          "marine_life": "Huge scalloped hammerhead schools; smalltooth sand tiger rises to divable depth; Galapagos sharks",
+          "conditions": "Dry season, strong currents, cool shallow thermoclines (~14-18C), plankton cuts viz",
+          "visibility_m": 15
+        },
+        "Feb": {
+          "rating": "Peak",
+          "marine_life": "Dense hammerhead schools; smalltooth sand tiger at El Monstruo; Galapagos sharks",
+          "conditions": "Dry season, powerful currents, cold thermoclines, greenish plankton-rich water",
+          "visibility_m": 15
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Hammerhead schools still numerous; smalltooth sand tiger; Galapagos sharks",
+          "conditions": "Dry season winding down, strong currents, cool water, low-to-moderate viz",
+          "visibility_m": 12
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Hammerheads present; silky shark numbers building; eagle rays",
+          "conditions": "Transition, easing currents, warming water, viz improving",
+          "visibility_m": 18
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Hammerheads; silky shark aggregations increasing; Galapagos sharks",
+          "conditions": "Warmer, deeper thermoclines, calmer seas, clearer water",
+          "visibility_m": 20
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "Hammerheads, big silky shark schools and first whale sharks converge",
+          "conditions": "Wet season onset, warm water, deep thermoclines, good viz",
+          "visibility_m": 25
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "Whale sharks arriving; hundreds of silky sharks; hammerhead schools",
+          "conditions": "Warm, calm seas, occasional rain, strong viz, best all-round window",
+          "visibility_m": 25
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "Whale sharks; massive silky shark aggregations; hammerheads",
+          "conditions": "Warmest water (~27C), calm seas, excellent blue-water viz",
+          "visibility_m": 30
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Whale sharks; silky shark schools; hammerheads",
+          "conditions": "Warm, wet-season rains topside, calm, superb viz",
+          "visibility_m": 30
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Late whale sharks; silky sharks tapering; hammerheads",
+          "conditions": "Warm, rainier topside, generally calm, good viz",
+          "visibility_m": 28
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "Hammerhead schools rebuilding; Galapagos and silky sharks",
+          "conditions": "Transition to dry season, currents strengthening, viz still good",
+          "visibility_m": 22
+        },
+        "Dec": {
+          "rating": "Peak",
+          "marine_life": "Largest scalloped hammerhead schools of the year; Galapagos sharks",
+          "conditions": "Dry season, strong currents returning, cooling thermoclines, viz dropping",
+          "visibility_m": 18
+        }
+      },
+      "dive_sites": [
+        {
+          "name": "La Nevera (The Fridge)",
+          "type": "Cleaning station",
+          "level": "advanced",
+          "depth": "15-40m",
+          "blurb": "Signature cleaning station on the northeast side where scalloped hammerheads and Galapagos sharks queue among reef fish; cold upwelling gives it its name."
+        },
+        {
+          "name": "El Bajo del Monstruo (Monster Seamount)",
+          "type": "Seamount",
+          "level": "advanced",
+          "depth": "20-45m",
+          "blurb": "Offshore pinnacle famous for hundreds of hammerheads and the elusive smalltooth sand tiger that rises to ~21m in the cold season; divable only in good conditions."
+        },
+        {
+          "name": "La Gringa",
+          "type": "Pinnacle",
+          "level": "advanced",
+          "depth": "24-40m",
+          "blurb": "Exposed monolith on the south side pierced by a swim-through cave between 24-40m; hammerheads, Galapagos and silky sharks, tuna and eagle rays in fierce current."
+        },
+        {
+          "name": "El Freezer",
+          "type": "Wall",
+          "level": "advanced",
+          "depth": "15-40m",
+          "blurb": "Volcanic wall partly clad in hard coral, named for the cold water on this flank; walls of hammerheads and passing pelagics dropping into the blue."
+        },
+        {
+          "name": "Los Tres Mosqueteros",
+          "type": "Pinnacle",
+          "level": "advanced",
+          "depth": "15-35m",
+          "blurb": "Trio of rocks off the north coast delivering classic pinnacle diving with silky and Galapagos sharks plus schooling tuna."
+        },
+        {
+          "name": "Sahara",
+          "type": "Reef slope",
+          "level": "advanced",
+          "depth": "15-30m",
+          "blurb": "Southern site where silky sharks congregate in large numbers over a current-swept slope."
+        },
+        {
+          "name": "El Altar de la Virgen",
+          "type": "Pinnacle",
+          "level": "advanced",
+          "depth": "15-35m",
+          "blurb": "Colorful hard-coral pinnacle reliable for hammerhead sightings and cruising eagle rays."
+        }
+      ],
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "slug": "malpelo-island",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Yap",
+      "country": "Micronesia (FSM)",
+      "region": "Western Pacific / Micronesia",
+      "water_type": "tropical",
+      "difficulty": "intermediate",
+      "access": "resort/day-boat",
+      "coordinates": {
+        "lat": 9.53,
+        "lng": 138.13
+      },
+      "best_months": "Dec-Apr (manta mating Dec-Apr)",
+      "wetsuit": "3mm",
+      "current_strength": "Medium",
+      "current_note": "short (channel currents draw mantas)",
+      "currents": "Tidal currents funnel through the reef channels and switch with the tide, so most manta dives are timed as short drifts or hooked hangs at the cleaning stations.",
+      "signature_species": [
+        "manta ray",
+        "mandarinfish",
+        "grey reef shark",
+        "whitetip reef shark",
+        "eagle ray",
+        "lionfish"
+      ],
+      "highlights": "Resident reef mantas queue at channel cleaning stations year-round, peaking in the Dec-Apr mating season, with dusk mandarinfish and shark-lined caverns on the side.",
+      "monthly_temp_c": {
+        "Jan": 28,
+        "Feb": 28,
+        "Mar": 28,
+        "Apr": 29,
+        "May": 29,
+        "Jun": 29,
+        "Jul": 29,
+        "Aug": 30,
+        "Sep": 29,
+        "Oct": 29,
+        "Nov": 29,
+        "Dec": 28
+      },
+      "monthly": {
+        "Jan": {
+          "rating": "Peak",
+          "marine_life": "Peak manta season: courting trains of resident reef mantas stack up at Mi'l Channel cleaning stations.",
+          "conditions": "Dry season, calm seas and minimal current; typhoons rare (tracks pass north of Yap).",
+          "visibility_m": 30
+        },
+        "Feb": {
+          "rating": "Peak",
+          "marine_life": "Manta mating in full swing with regular multi-ray gatherings on the barrier reef.",
+          "conditions": "Dry season peak, calm and settled with excellent clarity.",
+          "visibility_m": 30
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Mantas still aggregating for the mating season; reef sharks and mandarinfish reliable.",
+          "conditions": "Late dry season, calm water and long visibility.",
+          "visibility_m": 30
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "Tail end of the manta mating peak; cleaning stations remain busy.",
+          "conditions": "Dry-to-wet transition begins; mostly calm with the first passing showers.",
+          "visibility_m": 28
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Resident mantas cruising cleaning stations; macro and reef life steady.",
+          "conditions": "Transition to wet season, occasional showers and slightly choppier surface.",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Mantas shift toward Goofnuw and Mi'l channels for summer morning cleanings.",
+          "conditions": "Early wet season, more rain and building plankton; typhoon risk stays low.",
+          "visibility_m": 22
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "Plankton-rich water keeps mantas feeding; pelagics visit the outer walls.",
+          "conditions": "Wet season core, frequent rain and stronger channel currents.",
+          "visibility_m": 18
+        },
+        "Aug": {
+          "rating": "Shoulder",
+          "marine_life": "Summer manta cleanings continue in the channels alongside sharks and eagle rays.",
+          "conditions": "Wet season, warmest water, greener plankton-laden vis and firm currents.",
+          "visibility_m": 18
+        },
+        "Sep": {
+          "rating": "Good",
+          "marine_life": "Mantas still congregating in Goofnuw through early fall; macro life strong.",
+          "conditions": "Late wet season, showery with moderate currents; typhoons uncommon here.",
+          "visibility_m": 20
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Resident mantas at cleaning stations as summer aggregations wind down.",
+          "conditions": "Wet-to-dry transition, seas calming and visibility rebuilding.",
+          "visibility_m": 25
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "Mantas back on the barrier-reef stations as the winter build-up starts.",
+          "conditions": "Early dry season, drier and calmer with improving clarity.",
+          "visibility_m": 27
+        },
+        "Dec": {
+          "rating": "Peak",
+          "marine_life": "Start of the manta mating peak: courting trains form in Mi'l Channel.",
+          "conditions": "Dry season, calm and clear with light currents.",
+          "visibility_m": 30
+        }
+      },
+      "dive_sites": [
+        {
+          "name": "Mi'l Channel",
+          "type": "manta cleaning station / channel",
+          "level": "intermediate",
+          "depth": "5-18m",
+          "blurb": "A 9m coral ridge squeezes the tidal flow into a natural cleaning station where up to 30 resident mantas hover to be groomed by wrasse, at its busiest during the Dec-Apr mating season."
+        },
+        {
+          "name": "Valley of the Rays",
+          "type": "manta cleaning station",
+          "level": "beginner-intermediate",
+          "depth": "15-22m",
+          "blurb": "Coral outcrops rising from the sandy channel floor, including the lettuce-coral 'Merry-Go-Round', act as cleaning stations where mantas queue and hang almost motionless overhead."
+        },
+        {
+          "name": "Goofnuw Channel",
+          "type": "manta cleaning station / channel",
+          "level": "intermediate",
+          "depth": "5-20m",
+          "blurb": "Summer and early-fall manta hotspot where the rays line up each morning at the cleaning stations as the tide pushes through the channel."
+        },
+        {
+          "name": "Yap Caverns",
+          "type": "caverns / reef",
+          "level": "intermediate",
+          "depth": "5-18m",
+          "blurb": "Canyons, chimneys and chasms in the coral with whitetip reef sharks resting in sandy bowls, grey reef sharks patrolling the outer mini-wall and lionfish tucked in the crevices."
+        },
+        {
+          "name": "Lionfish Wall",
+          "type": "wall",
+          "level": "intermediate",
+          "depth": "10-30m",
+          "blurb": "A crevice-riddled wall named for its resident lionfish, with mantas, eagle rays, turtles, sharks and tuna cruising the adjacent blue."
+        },
+        {
+          "name": "Rainbow Reef",
+          "type": "macro / dusk dive",
+          "level": "beginner-intermediate",
+          "depth": "5-12m",
+          "blurb": "Shallow coral rubble where divers gather at dusk to watch mandarinfish pair off and spiral up into the water column in their nightly mating ritual."
+        }
+      ],
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "slug": "yap",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Cenderawasih Bay",
+      "country": "Indonesia",
+      "region": "Coral Triangle / West Papua (Indonesia)",
+      "water_type": "tropical",
+      "difficulty": "beginner",
+      "access": "liveaboard",
+      "coordinates": {
+        "lat": -2.9,
+        "lng": 135.0
+      },
+      "best_months": "Jun-Oct (whale sharks year-round; best liveaboard season)",
+      "wetsuit": "3mm",
+      "current_strength": "Low",
+      "current_note": "calm, almost currentless",
+      "currents": "Sheltered by its near-enclosed geography, the bay stays calm and virtually currentless, so the shallow whale-shark and wreck dives feel effortless.",
+      "signature_species": [
+        "whale shark",
+        "endemic reef fish",
+        "barracuda",
+        "trevally",
+        "hard coral",
+        "barrel sponge"
+      ],
+      "highlights": "The only place on Earth to scuba year-round with resident whale sharks feeding under fishermen's bagan platforms, plus coral-clad WWII wrecks in glassy, currentless water.",
+      "monthly_temp_c": {
+        "Jan": 30,
+        "Feb": 30,
+        "Mar": 30,
+        "Apr": 29,
+        "May": 28,
+        "Jun": 28,
+        "Jul": 27,
+        "Aug": 27,
+        "Sep": 28,
+        "Oct": 28,
+        "Nov": 29,
+        "Dec": 30
+      },
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Whale sharks feed under the Kwatisore bagans year-round; wrecks and endemic reef fish active",
+          "conditions": "Wetter season; bay stays calm but open-water transits can be lumpy, so fewer liveaboards run",
+          "visibility_m": 15
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "Resident whale sharks under the bagans; hard-coral gardens on the Shinwa Maru and endemics",
+          "conditions": "Wet-season swell offshore; sheltered inner-bay dives remain flat and warm",
+          "visibility_m": 15
+        },
+        "Mar": {
+          "rating": "Shoulder",
+          "marine_life": "Whale sharks year-round at the platforms; macro and endemic reef life on the walls",
+          "conditions": "Tail of the wetter season; rougher transits limit liveaboard scheduling",
+          "visibility_m": 18
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Whale sharks under the bagans; wrecks and soft-coral reefs teeming with fish",
+          "conditions": "Seas begin to settle as the dry season opens; comfortable liveaboard conditions returning",
+          "visibility_m": 20
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Whale sharks reliable at Kwatisore; barracuda and trevally schools on the reefs",
+          "conditions": "Dry-season calm building; warm water and easy shallow dives",
+          "visibility_m": 22
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "Peak whale-shark encounters under the bagans plus wrecks and endemic reef fish",
+          "conditions": "Prime liveaboard season begins; calmest seas and driest weather",
+          "visibility_m": 25
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "Multiple whale sharks feeding under the platforms; thriving coral-encrusted wrecks",
+          "conditions": "Peak season; glassy water, minimal current, top visibility",
+          "visibility_m": 28
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "Resident whale sharks under the bagans; barrel sponges, endemics and wreck life",
+          "conditions": "Peak liveaboard season; calm, dry and highly reliable",
+          "visibility_m": 28
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Whale sharks at the platforms plus WWII wrecks and soft-coral reefs",
+          "conditions": "Excellent late-dry conditions; flat seas and strong visibility",
+          "visibility_m": 27
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "Whale sharks year-round; healthy reefs and coral-clad wrecks",
+          "conditions": "End of peak season; still calm and clear before the wetter months",
+          "visibility_m": 25
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "Whale sharks continue under the bagans; wrecks and endemics active",
+          "conditions": "Transition into the wetter season; inner bay stays calm, transits get lumpier",
+          "visibility_m": 20
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "Resident whale sharks feed under the platforms all year; reef and wreck life steady",
+          "conditions": "Wetter season underway; sheltered dives calm but fewer boats operate",
+          "visibility_m": 18
+        }
+      },
+      "dive_sites": [
+        {
+          "name": "Kwatisore Bagans",
+          "type": "whale shark platforms",
+          "level": "beginner",
+          "depth": "3-12m",
+          "blurb": "The signature dive: divers descend beside the anchored fishing platforms where resident whale sharks hang vertically to suck baitfish from the nets, giving unhurried, close scuba encounters in warm, currentless water."
+        },
+        {
+          "name": "Tanjung Mangguar",
+          "type": "soft-coral reef",
+          "level": "beginner",
+          "depth": "5-30m",
+          "blurb": "One of the bay's prettiest reefs, blanketed in soft coral and swarmed by barracuda, trevally, fusiliers and surgeonfish along an easy sloping wall."
+        },
+        {
+          "name": "Shinwa Maru",
+          "type": "wreck",
+          "level": "intermediate",
+          "depth": "16-34m",
+          "blurb": "A 120m Japanese WWII cargo ship lying on its port side, largely intact and now a coral-encrusted reef draped in hard corals and hosting dense fish life."
+        },
+        {
+          "name": "Cross Wreck",
+          "type": "wreck",
+          "level": "beginner",
+          "depth": "12-30m",
+          "blurb": "A shallow, easy Japanese wartime wreck coated in hard coral and marked by a memorial cross, ideal for relaxed exploration and macro life."
+        },
+        {
+          "name": "Tridacna Atoll",
+          "type": "wall / drop-off",
+          "level": "beginner",
+          "depth": "5-35m",
+          "blurb": "Deep drop-offs and fringing reefs carpeted in soft corals, sea whips, giant clams and massive barrel and elephant-ear sponges."
+        },
+        {
+          "name": "P-40 Tomahawk Plane Wreck",
+          "type": "wreck",
+          "level": "intermediate",
+          "depth": "20-30m",
+          "blurb": "A remarkably preserved WWII fighter aircraft resting upright with instrumentation and pilot's seat still in place, sitting quietly on the calm bay floor."
+        },
+        {
+          "name": "Purup Island Reefs",
+          "type": "coral reef",
+          "level": "beginner",
+          "depth": "5-25m",
+          "blurb": "Sheltered fringing reefs rich in West Papua's endemic reef fish, healthy hard corals and abundant macro subjects in flat, easy conditions."
+        }
+      ],
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "slug": "cenderawasih-bay",
+      "dive_sites_researched": true
     }
   ]
 }
