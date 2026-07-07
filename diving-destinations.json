@@ -1206,9 +1206,6 @@
       },
       "current_strength": "Low",
       "slug": "great-blue-hole",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Acropora_cervicornis_283195200.jpg/960px-Acropora_cervicornis_283195200.jpg",
-      "image_credit": "Photo: Loopy30 (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia",
       "current_note": "Minimal current; depth/darkness is the challenge",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -2984,9 +2981,6 @@
       },
       "current_strength": "Strong",
       "slug": "cocos-island",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Acanthaster_planci_62223724.jpg/960px-Acanthaster_planci_62223724.jpg",
-      "image_credit": "Photo: Robert Webster (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia",
       "current_note": "Strong wet-season currents, advanced-only pelagic diving",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -8777,9 +8771,6 @@
       },
       "current_strength": "Medium",
       "slug": "south-west-rocks",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coral_Rock_Oyster%2C_South_West_Rocks_NSW_2431%2C_Australia_imported_from_iNaturalist_photo_524329328.jpg/960px-Coral_Rock_Oyster%2C_South_West_Rocks_NSW_2431%2C_Australia_imported_from_iNaturalist_photo_524329328.jpg",
-      "image_credit": "Photo: no rights reserved (CC0) via Wikimedia Commons",
-      "image_source": "wikimedia",
       "current_note": "EAC variable; Fish Rock has sheltered gutters",
       "data_confidence": "medium",
       "last_verified": "2026-07",
@@ -9168,10 +9159,7 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "fuvahmulah",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fuvahmulah_Kedeyre_Miskiy_-_panoramio.jpg/960px-Fuvahmulah_Kedeyre_Miskiy_-_panoramio.jpg",
-      "image_credit": "Photo: Ibrahim Asad (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Layang Layang",
@@ -9677,10 +9665,7 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "yap",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Heinke_Hans_Hass_Diving_Mask_and_Snorkel_Tube.jpg/960px-Heinke_Hans_Hass_Diving_Mask_and_Snorkel_Tube.jpg",
-      "image_credit": "Photo: Helmardine (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Cenderawasih Bay",
@@ -10179,10 +10164,7 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "protea-banks",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/A_massive_Sand_tiger_Shark_swims_by_%2827287498303%29.jpg/960px-A_massive_Sand_tiger_Shark_swims_by_%2827287498303%29.jpg",
-      "image_credit": "Photo: shankar s. from Dubai, united arab emirates (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Tofo",
@@ -10681,10 +10663,7 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "ka",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2020-09-16_165855_Soviet_submarine_B-515.jpg/960px-2020-09-16_165855_Soviet_submarine_B-515.jpg",
-      "image_credit": "Photo: Tim Rademacher (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Ustica",
@@ -11367,10 +11346,7 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "bat-islands",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Morenas_negras_%28Muraena_augusti%29%2C_franja_marina_Teno-Rasca%2C_Tenerife%2C_Espa%C3%B1a%2C_2022-01-09%2C_DD_52.jpg/960px-Morenas_negras_%28Muraena_augusti%29%2C_franja_marina_Teno-Rasca%2C_Tenerife%2C_Espa%C3%B1a%2C_2022-01-09%2C_DD_52.jpg",
-      "image_credit": "Photo: Diego Delso (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Coiba",
@@ -11539,10 +11515,7 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "coiba",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Coiba_Banner.jpg/960px-Coiba_Banner.jpg",
-      "image_credit": "Photo: LASZLO ILYES from Cleveland, Ohio, USA (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     }
   ]
 }

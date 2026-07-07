@@ -37,7 +37,8 @@ BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagra
                       # scientific journal figures / plates (e.g. 'Figure 46a', DOI-coded files)
                       r"figure|_fig|plate_|zootaxa|zookeys|pensoft|10\.3897|\.e\d{4,}|holotype|paratype|"
                       # dead catch / captivity — destination heroes must be alive and wild
-                      r"caught|landed|_deck|fishery|bycatch|longline|fish_market|aquarium|marineland)", re.I)
+                      r"caught|landed|_deck|fishery|bycatch|longline|fish_market|aquarium|marineland|"
+                      r"banner|miskiy|masjid|diving_mask|snorkel_tube|submarine)", re.I)
 
 # Titles that clearly ARE what we want; used to rank search hits.
 GOOD_HINT = re.compile(r"(underwater|reef|coral|diving|diver|snorkel|wreck|lagoon|atoll|"
@@ -51,28 +52,55 @@ DEST_QUERIES = {
     "Truk (Chuuk) Lagoon": ["Chuuk Lagoon shipwreck underwater", "Fujikawa Maru", "Truk Lagoon wreck diving"],
     "Lundy Island": ["Lundy island coast", "Lundy grey seal", "Lundy Devon sea"],
     "Vancouver Island": ["British Columbia kelp forest underwater", "Vancouver Island coast aerial", "Pacific Northwest diving"],
-    "South West Rocks": ["South West Rocks NSW", "Trial Bay Gaol beach", "Smoky Cape lighthouse", "grey nurse shark Australia"],
+    "South West Rocks": ["Grey nurse shark Fish Rock", "Grey nurse shark Australia underwater",
+                         "Fish Rock Cave NSW", "Smoky Cape lighthouse", "Trial Bay Gaol beach"],
     "Chagos Archipelago / BIOT": ["Chagos reef", "Diego Garcia lagoon", "Salomon Atoll Chagos"],
     "Guadalcanal & Western Province": ["Marovo Lagoon", "Gizo Solomon Islands", "Solomon Islands lagoon aerial", "Honiara coast"],
     "Malpelo Island": ["Isla de Malpelo", "Malpelo Island Colombia", "Malpelo scalloped hammerhead",
                        "Malpelo island aerial", "Malpelo Fauna and Flora Sanctuary"],
     "Ningaloo Reef": ["Whale shark Ningaloo", "Ningaloo Reef underwater", "Ningaloo coral",
                       "Whale shark Exmouth Western Australia", "Ningaloo Reef aerial"],
-    "Protea Banks": ["Ragged-tooth shark South Africa", "Sand tiger shark underwater",
-                     "Carcharias taurus underwater", "Scalloped hammerhead school underwater"],
-    "Fuvahmulah": ["Tiger shark Fuvahmulah", "Tiger shark underwater diver", "Fuvahmulah Maldives",
-                   "Galeocerdo cuvier underwater", "Tiger shark Maldives"],
+    "Protea Banks": ["Ragged-tooth shark Aliwal Shoal", "Ragged tooth shark South Africa",
+                     "Sand tiger shark wreck underwater", "Carcharias taurus underwater"],
+    "Fuvahmulah": ["Tiger shark underwater diver", "Tiger shark Fuvahmulah", "Galeocerdo cuvier underwater",
+                   "Tiger shark Maldives", "Fuvahmulah beach"],
+    "Yap": ["Manta ray Yap Micronesia", "Yap manta ray", "Reef manta ray underwater",
+            "Manta alfredi cleaning station"],
+    "Kaş": ["Kaş Turkey coast", "Kaş Antalya", "Kekova underwater ruins", "Kaş harbour Turkey"],
+    "Cocos Island": ["Hammerhead sharks Cocos Island", "Scalloped hammerhead school underwater",
+                     "Isla del Coco Costa Rica", "Cocos Island Costa Rica aerial"],
+    "Great Blue Hole": ["Great Blue Hole Belize aerial", "Great Blue Hole Belize",
+                        "Lighthouse Reef Belize"],
+    "Bat Islands": ["Islas Murcielago Costa Rica", "Bull shark underwater",
+                    "Guanacaste Costa Rica coast", "Santa Rosa National Park Costa Rica"],
+    "Coiba": ["Coiba island Panama", "Coiba National Park", "Parque Nacional Coiba",
+              "Coiba Panama aerial"],
 }
 
 # For tricky names, a candidate file title MUST match this pattern (keeps
 # "Rocks" from matching a West Virginia highway, "reef" from matching Aruba).
 DEST_REQUIRE = {
     "Guadalcanal & Western Province": re.compile(r"(solomon|marovo|gizo|munda|roviana|guadalcanal|honiara|tulagi)", re.I),
-    "South West Rocks": re.compile(r"(south.?west.?rocks|trial.?bay|smoky.?cape|arakoon|grey.?nurse)", re.I),
+    "South West Rocks": re.compile(r"(grey.?nurse|fish.?rock|trial.?bay|smoky.?cape|arakoon)", re.I),
     "Malpelo Island": re.compile(r"malpelo", re.I),
     "Ningaloo Reef": re.compile(r"(ningaloo|whale.?shark|exmouth|coral.?bay)", re.I),
-    "Protea Banks": re.compile(r"(protea|ragged.?tooth|sand.?tiger|carcharias|hammerhead|sphyrna)", re.I),
+    "Protea Banks": re.compile(r"(protea|ragged|sand.?tiger|carcharias|aliwal)", re.I),
     "Fuvahmulah": re.compile(r"(fuvahmulah|tiger.?shark|galeocerdo)", re.I),
+    "Yap": re.compile(r"(yap|manta)", re.I),
+    "Kaş": re.compile(r"(kaş|kas|kekova|antalya|lycia|meis)", re.I),
+    "Cocos Island": re.compile(r"(cocos|isla_del_coco|hammerhead|sphyrna)", re.I),
+    "Great Blue Hole": re.compile(r"(blue.?hole|lighthouse.?reef|belize)", re.I),
+    "Bat Islands": re.compile(r"(murci|bat.?island|bull.?shark|leucas|guanacaste|santa.?rosa)", re.I),
+    "Coiba": re.compile(r"coiba", re.I),
+}
+
+
+# Exact-file rejects per destination — visually-audited duds that pass the
+# generic filters (e.g. an aquarium sand tiger with no 'aquarium' in the name).
+DEST_BLOCK = {
+    "Protea Banks": re.compile(r"27287498303", re.I),
+    "Coiba": re.compile(r"coiba_banner", re.I),
+    "Fuvahmulah": re.compile(r"kedeyre", re.I),
 }
 
 
@@ -156,6 +184,9 @@ def from_wikimedia_search(name, country):
         j = _get(url)
         hits = (((j or {}).get("query") or {}).get("search")) or []
         titles = [h["title"] for h in hits if not BAD_HINT.search(h.get("title", ""))]
+        block = DEST_BLOCK.get(name)
+        if block:
+            titles = [t for t in titles if not block.search(t)]
         if require:
             titles = [t for t in titles if require.search(t)]
         # rank: titles with marine words first
