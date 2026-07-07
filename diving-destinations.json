@@ -14108,7 +14108,10 @@
       "slug": "dahab",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/BlueHole_Rohscan_bearb_150d.jpg/960px-BlueHole_Rohscan_bearb_150d.jpg",
+      "image_credit": "Photo: S. Ellermann (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Hurghada & El Gouna",
@@ -14278,7 +14281,10 @@
       "slug": "hurghada-el-gouna",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Beach_of_giftun_island.JPG/960px-Beach_of_giftun_island.JPG",
+      "image_credit": "Photo: Caprice4540 (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Marsa Alam",
@@ -14441,7 +14447,10 @@
       "slug": "marsa-alam",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bluecheek_butterflyfish_at_Elphinstone_Reef%2C_Egypt.jpg/960px-Bluecheek_butterflyfish_at_Elphinstone_Reef%2C_Egypt.jpg",
+      "image_credit": "Photo: Polygonia c-album (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Sharm El Sheikh",
@@ -14604,7 +14613,10 @@
       "slug": "sharm-el-sheikh",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Coral_%28Annella_mollis%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_108.jpg/960px-Coral_%28Annella_mollis%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_108.jpg",
+      "image_credit": "Photo: Diego Delso (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     }
   ]
 }
