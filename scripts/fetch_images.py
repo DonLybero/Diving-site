@@ -91,6 +91,14 @@ DEST_QUERIES = {
                  "Mallorca sea cave", "Mallorca cala turquoise"],
     "Muscat & Daymaniyat Islands": ["Daymaniyat Islands Oman", "Dimaniyat islands",
                                     "Bandar Khayran Oman", "Muscat coast Oman", "Oman coast aerial sea"],
+    "Sharm El Sheikh": ["Ras Muhammad underwater", "Ras Mohammed reef", "Tiran island reef",
+                        "Sharm el-Sheikh reef underwater", "Naama Bay"],
+    "Hurghada & El Gouna": ["Giftun island", "Hurghada reef underwater", "Abu Nuhas wreck",
+                            "El Gouna lagoon aerial", "Hurghada coast Red Sea"],
+    "Marsa Alam": ["Elphinstone Reef", "Abu Dabbab", "dugong Marsa Alam", "Marsa Alam reef underwater",
+                   "spinner dolphins Sataya"],
+    "Dahab": ["Blue Hole Dahab", "Dahab lagoon Sinai", "Dahab canyon diving", "Dahab coast",
+              "Blue Hole Sinai aerial"],
 }
 
 # For tricky names, a candidate file title MUST match this pattern (keeps
@@ -116,6 +124,10 @@ DEST_REQUIRE = {
     "Zanzibar": re.compile(r"(zanzibar|mnemba|nungwi|unguja)", re.I),
     "Mallorca": re.compile(r"(mallorca|majorca|formentor|calobra|cala|dragonera)", re.I),
     "Muscat & Daymaniyat Islands": re.compile(r"(daymaniyat|dimaniyat|bandar|muscat|oman)", re.I),
+    "Sharm El Sheikh": re.compile(r"(sharm|ras.?m(o|u)hamm|tiran|naama)", re.I),
+    "Hurghada & El Gouna": re.compile(r"(hurghada|giftun|gouna|abu.?nuhas|carnatic|giannis)", re.I),
+    "Marsa Alam": re.compile(r"(marsa.?alam|elphinstone|abu.?dabbab|sataya|dugong)", re.I),
+    "Dahab": re.compile(r"(dahab|blue.?hole|sinai)", re.I),
 }
 
 

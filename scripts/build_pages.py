@@ -216,7 +216,8 @@ def pack_box(d):
 
 
 LIVEABOARD_SLUG = {
- "Red Sea (Egypt)": "egypt/red-sea", "Maldives": "maldives", "Raja Ampat": "indonesia",
+ "Sharm El Sheikh": "egypt/red-sea", "Hurghada & El Gouna": "egypt/red-sea",
+ "Marsa Alam": "egypt/red-sea", "Dahab": "egypt/red-sea", "Maldives": "maldives", "Raja Ampat": "indonesia",
  "Komodo National Park": "indonesia", "Cocos Island": "costa-rica", "Galapagos Islands": "galapagos",
  "Socorro Island": "mexico", "Sea of Cortez": "mexico", "Seychelles": "seychelles", "Palau": "palau",
  "Truk (Chuuk) Lagoon": "micronesia", "Fiji": "fiji", "French Polynesia": "french-polynesia",
@@ -885,6 +886,30 @@ def main():
             f.write(marine_article(exp, dests))
     with open(os.path.join(marinedir, "index.html"), "w", encoding="utf-8") as f:
         f.write(marine_index_page())
+
+    # legacy URLs for destinations that split into several (keep old links alive)
+    LEGACY = {"red-sea-egypt": {"title": "Red Sea (Egypt)",
+                                "heirs": ["sharm-el-sheikh", "hurghada-el-gouna", "marsa-alam", "dahab"]}}
+    for old_slug, info in LEGACY.items():
+        heirs = [d for d in dests if d["slug"] in info["heirs"]]
+        if not heirs:
+            continue
+        links = "".join(f'<li><a href="{d["slug"]}.html"><b>{esc(d["name"])}</b>'
+                        f'<small>{esc(d.get("highlights") or "")}</small></a></li>' for d in heirs)
+        url = BASE + "destinations/" + old_slug + ".html"
+        stub = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(info["title"])} Diving — Now Split by Resort Town | DiveSZN</title>
+<meta name="description" content="Our {esc(info["title"])} guide is now split into dedicated destination guides.">
+<link rel="canonical" href="{esc(url)}"><style>{CSS}</style></head><body>
+{topbar()}
+<main class="wrap"><h1>{esc(info["title"])} — now four destinations</h1>
+<p class="meta">We split this guide so each resort town gets its own season calendar, dive sites and photos.</p>
+<ul class="dirlist">{links}</ul></main>
+{footer_html()}
+</body></html>"""
+        with open(os.path.join(outdir, old_slug + ".html"), "w", encoding="utf-8") as f:
+            f.write(stub)
 
     # month hubs ("best diving in January" ... one per month)
     monthdir = os.path.join(ROOT, "months")
