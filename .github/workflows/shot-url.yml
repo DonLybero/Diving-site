@@ -1,0 +1,77 @@
+name: Screenshot an external URL (design research)
+
+# Renders any public URL in headless Chromium (desktop + mobile) and pushes
+# the screenshots to the orphan branch url-shots, so the sandboxed dev
+# session can visually review competitor/reference sites.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL to screenshot"
+        required: true
+        default: "https://example.com"
+
+permissions:
+  contents: write
+
+jobs:
+  shoot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null
+          npm i playwright@1.49.0 >/dev/null
+          npx playwright install --with-deps chromium
+
+      - name: Screenshot
+        env:
+          TARGET: ${{ inputs.url }}
+        run: |
+          cat > shoot.mjs <<'EOF'
+          import { chromium } from 'playwright';
+          import fs from 'fs';
+          fs.mkdirSync('shots', {recursive: true});
+          const url = process.env.TARGET;
+          const b = await chromium.launch();
+          for (const [label, w] of [['desktop', 1440], ['mobile', 390]]) {
+            const pg = await b.newPage({viewport:{width:w, height:900},
+              userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36'});
+            try {
+              await pg.goto(url, {waitUntil: 'networkidle', timeout: 45000});
+            } catch (e) { console.log('goto:', e.message); }
+            await pg.waitForTimeout(2500);
+            // nudge lazy content, then return to top before capturing
+            await pg.evaluate(async () => {
+              for (let y = 0; y < document.body.scrollHeight; y += 800) {
+                window.scrollTo(0, y); await new Promise(r => setTimeout(r, 120));
+              }
+              window.scrollTo(0, 0);
+            });
+            await pg.waitForTimeout(1200);
+            await pg.screenshot({path: `shots/url-${label}.png`, fullPage: true});
+            await pg.close();
+            console.log('shot', label);
+          }
+          await b.close();
+          EOF
+          node shoot.mjs
+
+      - name: Push to orphan branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan url-shots
+          git rm -rf --cached . >/dev/null
+          git add -f shots
+          git commit -m "URL screenshots: ${{ inputs.url }}"
+          git push -f origin url-shots
