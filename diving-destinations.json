@@ -10681,7 +10681,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "ka",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Akdeniz-_the_mediterranean-kaputa%C5%9F_beach_-_panoramio.jpg/960px-Akdeniz-_the_mediterranean-kaputa%C5%9F_beach_-_panoramio.jpg",
+      "image_credit": "Photo: HALUK COMERTEL (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Ustica",
@@ -11364,7 +11367,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "bat-islands",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bull_shark_at_unnamed_reef_12-127.jpg/960px-Bull_shark_at_unnamed_reef_12-127.jpg",
+      "image_credit": "Photo: Holobionics (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Coiba",
