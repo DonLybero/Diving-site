@@ -32,7 +32,9 @@ BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagra
                       # old book/plate scans (Internet Archive / Biodiversity Heritage)
                       r"fish_and_game|book_images|biodiversity_heritage|_bhl_|plate_|"
                       # 'orca' the Iberian megalithic tomb, not the whale
-                      r"dolmen|menhir|megalith|pendilhe|cromlech|neolith|\banta\b|\bantas\b|tomb)", re.I)
+                      r"dolmen|menhir|megalith|pendilhe|cromlech|neolith|\banta\b|\bantas\b|tomb|"
+                      # captive animals in parks/aquaria — we want wild encounters
+                      r"marineland|seaworld|sea_world|aquarium|dolphinarium|captiv|_zoo_)", re.I)
 
 # Upload sources that are almost always scanned book plates, not photos — skip
 # even if the file name looks innocent.
