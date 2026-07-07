@@ -37,7 +37,10 @@ BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagra
                       r"marineland|seaworld|sea_world|aquarium|dolphinarium|captiv|_zoo_|"
                       # landed / dead catch — never a fresh-off-the-boat fisheries shot
                       r"caught|landed|deck|fisher|bycatch|longline|hooked|gutted|carcass|"
-                      r"trophy|for_sale|fish_market|on_boat|_boat_|dead_|dries|drying|hanging)", re.I)
+                      r"trophy|for_sale|fish_market|on_boat|_boat_|dead_|dries|drying|hanging|"
+                      # other charismatic animals that must not be the subject (we have no
+                      # turtle/dolphin encounter, so a file naming one is the wrong photo)
+                      r"turtle|chelon|testudin|dolphin|tortoise)", re.I)
 
 # Upload sources that are almost always scanned book plates, not photos — skip
 # even if the file name looks innocent.
@@ -77,8 +80,9 @@ QUERIES = {
                           "Mola mola Bali", "Ocean sunfish Mola"],
     "sea-lions":         ["Sea lion underwater diver", "California sea lion underwater",
                           "Sea lion snorkeling", "Sea lions swimming underwater"],
-    "sardine-run":       ["Sardine run baitball", "Sardine run South Africa",
-                          "Bait ball sardine", "Sardine run dolphins"],
+    "sardine-run":       ["Sardine baitball underwater", "Sardine bait ball",
+                          "Sardine shoal underwater", "Sardinops school",
+                          "Sardine run baitball South Africa"],
     "great-white":       ["Great white shark", "Carcharodon carcharias",
                           "Great white shark cage diving", "White shark underwater"],
     "orcas":             ["Orcinus orca underwater", "Killer whale ocean swimming",
