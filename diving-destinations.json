@@ -12102,10 +12102,7 @@
       "slug": "bali",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Magnificent_Sea_Anemone%2C_USAT_Liberty_Wreck%2C_Tulamben%2C_Bali%2C_Indonesia_imported_from_iNaturalist_photo_428500231.jpg/960px-Magnificent_Sea_Anemone%2C_USAT_Liberty_Wreck%2C_Tulamben%2C_Bali%2C_Indonesia_imported_from_iNaturalist_photo_428500231.jpg",
-      "image_credit": "Photo: (c) Bernard DUPONT, some rights reserved (CC BY-SA) (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Cancún & Playa del Carmen",
@@ -12276,10 +12273,7 @@
       "slug": "cancun-playa-del-carmen",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Cancun%2C_Mexico.JPG/960px-Cancun%2C_Mexico.JPG",
-      "image_credit": "Photo: Karora19 (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Dubai & Fujairah",
@@ -12782,10 +12776,7 @@
       "slug": "koh-tao",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Excellent_visibility_with_Koh_Tao_and_even_Koh_Nangyuan_visible_in_the_far_distance.jpg/960px-Excellent_visibility_with_Koh_Tao_and_even_Koh_Nangyuan_visible_in_the_far_distance.jpg",
-      "image_credit": "Photo: User: (WT-shared) Alf Birnecker at  wts wikivoyage (CC BY-SA 1.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Mallorca",
@@ -13629,10 +13620,7 @@
       "slug": "phuket",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Tha%C3%AFlande_-_Phuket_-_Raya_Island_%2813144513714%29.jpg/960px-Tha%C3%AFlande_-_Phuket_-_Raya_Island_%2813144513714%29.jpg",
-      "image_credit": "Photo: Nicolas Vollmer from Munich [Allemagne] (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Santorini",

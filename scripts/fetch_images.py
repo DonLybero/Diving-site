@@ -75,11 +75,10 @@ DEST_QUERIES = {
                     "Bull shark Bahamas underwater", "Islas Murcielago Costa Rica beach"],
     "Coiba": ["Granito de Oro Coiba", "Coiba beach Panama", "Isla Coiba Panama",
               "Coiba National Park Panama", "Coiba island beach"],
-    "Cancún & Playa del Carmen": ["MUSA underwater museum Cancun", "Museo Subacuatico de Arte",
-                                  "Cancun underwater sculpture", "Manchones reef Isla Mujeres",
-                                  "Playa del Carmen beach aerial"],
-    "Koh Tao": ["Koh Nang Yuan viewpoint", "Koh Tao Thailand island", "Koh Tao underwater",
-                "Sail Rock Koh Tao", "Chumphon Pinnacle"],
+    "Cancún & Playa del Carmen": ["Playa Delfines", "Cancun beach", "Cancun Zona Hotelera aerial",
+                                  "Isla Mujeres beach", "Playa del Carmen beach"],
+    "Koh Tao": ["Ko Nang Yuan", "Nangyuan island Thailand", "Koh Tao beach Thailand",
+                "Koh Tao Thailand island", "Sail Rock Koh Tao"],
     "Phuket": ["Racha Yai underwater", "Phuket Racha island", "Koh Phi Phi cliffs sea",
                "Shark Point Phuket underwater", "Phuket beach aerial"],
     "Bali": ["USAT Liberty wreck Tulamben", "Tulamben wreck diving", "Liberty wreck Bali underwater",
@@ -125,7 +124,10 @@ DEST_REQUIRE = {
 DEST_PINNED = {
     "Coiba": ["File:Kristallklares Wasser Coiba Panama (152311725).jpeg"],
     "Cancún & Playa del Carmen": ["File:Cancun aerial photo by safa.jpg",
-                                  "File:Cancun, Mexico.JPG"],
+                                  "File:Cancun from the air July 1985.jpg"],
+    "Phuket": ["File:Maya Bay, Krabi, Thailand (Panorama).jpg",
+               "File:Longtail Boat At Maya Bay, Krabi, Thailand.jpg",
+               "File:Longtail boat at Maya bay.JPG"],
 }
 
 # Exact-file rejects per destination — visually-audited duds that pass the
@@ -136,10 +138,10 @@ DEST_BLOCK = {
     "Bat Islands": re.compile(r"66636561", re.I),  # sunset-through-twigs panoramio
     "Coiba": re.compile(r"(coiba_banner|police|pickaback|prisoner|penal|_195\d|_196\d)", re.I),
     "Fuvahmulah": re.compile(r"kedeyre", re.I),
-    "Cancún & Playa del Carmen": re.compile(r"(residencial|deir|mar_musa|monast|f\u00f3sil|fosil)", re.I),
-    "Koh Tao": re.compile(r"arrivals", re.I),
-    "Phuket": re.compile(r"(surin|similan|phuket.?sea|night_fishing|fishing)", re.I),
-    "Bali": re.compile(r"22093248545", re.I),
+    "Cancún & Playa del Carmen": re.compile(r"(residencial|deir|mar_musa|monast|f\u00f3sil|fosil|cancun,_mexico)", re.I),
+    "Koh Tao": re.compile(r"(arrivals|excellent_visibility)", re.I),
+    "Phuket": re.compile(r"(surin|similan|phuket.?sea|night_fishing|fishing|24848021407)", re.I),
+    "Bali": re.compile(r"(22093248545|magnificent_sea_anemone|filefish)", re.I),
     "Tenerife": re.compile(r"(babosa|felimare|nudibranch)", re.I),
     "Zanzibar": re.compile(r"(almeja|tridacna)", re.I),
     "Mallorca": re.compile(r"(7838116390|brounderwater)", re.I),
