@@ -4489,7 +4489,10 @@
           "depth": "8-16m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Whale_Shark_Ningaloo.jpg/960px-Whale_Shark_Ningaloo.jpg",
+      "image_credit": "Photo: NeilsPhotography (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Gozo & Malta",
@@ -9165,7 +9168,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "fuvahmulah",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fuvahmulah_Kedeyre_Miskiy_-_panoramio.jpg/960px-Fuvahmulah_Kedeyre_Miskiy_-_panoramio.jpg",
+      "image_credit": "Photo: Ibrahim Asad (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Layang Layang",
@@ -10173,7 +10179,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "protea-banks",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/A_massive_Sand_tiger_Shark_swims_by_%2827287498303%29.jpg/960px-A_massive_Sand_tiger_Shark_swims_by_%2827287498303%29.jpg",
+      "image_credit": "Photo: shankar s. from Dubai, united arab emirates (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Tofo",
