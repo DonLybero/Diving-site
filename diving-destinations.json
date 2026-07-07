@@ -12102,7 +12102,10 @@
       "slug": "bali",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Remains_Of_Liberty_%28219256557%29.jpeg/960px-Remains_Of_Liberty_%28219256557%29.jpeg",
+      "image_credit": "Photo: Tilonaut (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Cancún & Playa del Carmen",
