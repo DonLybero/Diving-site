@@ -197,6 +197,13 @@
   .prof-hero figcaption{font-family:var(--mono);font-size:.6rem;color:var(--muted);padding:6px 12px;background:#f3f9f9}
   @media(max-width:640px){.prof-hero img{height:200px}}
   .prof-essays{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:18px 0 4px}
+  /* "the honest picture": what we can't promise, said proudly rather than in fine print */
+  .honest{background:#fff;border:1px solid var(--line-strong);border-radius:14px;padding:20px 22px;margin:26px 0 8px}
+  .honest-kicker{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:4px}
+  .honest h3{font-family:var(--serif);font-size:1.35rem;margin:0 0 12px}
+  .honest ul{list-style:none;margin:0;padding:0}
+  .honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
+  .honest li b{color:var(--ink)}
   .prof-essay{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
   .prof-essay h3{margin:0 0 8px;font-family:var(--serif);font-size:1.12rem}
   .prof-essay p{margin:0;color:#33565e;line-height:1.7;font-size:.95rem}
@@ -1370,6 +1377,22 @@ function stayBox(d){
   return '<div class="staybox"><div class="stay-head">'+ico('home',14)+' Where to stay</div>'+
     '<p class="pack-body">'+body+'</p><div class="pack-ctas">'+ctas+'</div></div>';
 }
+/* Purnatur-style radical transparency: what we can't promise, as a proud
+   structured section on the product page instead of buried fine print. */
+function honestBlock(d,s){
+  var items=[
+    '<b>Seasons drift.</b> Marine-life timing shifts year to year with plankton blooms and lunar cycles — a peak landing a couple of weeks early or late is normal, not bad luck.',
+    '<b>Temperatures are ranges.</b> Water figures here are typical monthly ranges (±1°C); an upwelling or a heatwave can step outside them.',
+    '<b>Visibility is seasonal, not daily.</b> Wind, swell, rain and plankton move it day to day — read our metres as the month\'s typical form, not a promise for your dive.',
+    '<b>Currents can run above the rating.</b> Conditions on the day decide — brief with your operator before the first dive, and sit one out if it\'s beyond your training.'
+  ];
+  var closed=(s.byRating.Closed||[]);
+  if(closed.length) items.push('<b>Closed means closed.</b> '+joinList(closed)+(closed.length>1?' are':' is')+
+    ' out of season here — weather windows or park rules, not a scheduling choice.');
+  items.push('<b>A score compares, it doesn\'t guarantee.</b> We rank months from dive-operator and liveaboard calendars so you can weigh destinations like for like — always confirm current conditions with a local dive centre.');
+  return '<div class="honest"><div class="honest-kicker">The honest picture</div>'+
+    '<h3>What can change on the day?</h3><ul><li>'+items.join('</li><li>')+'</li></ul></div>';
+}
 function openProfile(name){
   showTab('search');
   var d=DivingCalendar.getDestination(DESTS,name); if(!d)return;
@@ -1410,7 +1433,7 @@ function openProfile(name){
     '<div class="best">'+ico('trophy',15)+' <b>Best months:</b> '+(s.byRating.Peak.join(', ')||'—')+
       ' &nbsp;·&nbsp; <b>Top month:</b> '+best+
       ' &nbsp;·&nbsp; <b>Recommended window:</b> '+d.best_months+'</div>'+
-    '<h3 style="margin:18px 0 6px">'+ico('calendar',15)+' When to dive '+d.name+'</h3>'+
+    '<h3 style="margin:18px 0 6px">'+ico('calendar',15)+' When should you dive '+d.name+'?</h3>'+
     seasonRibbon(d)+
     '<details class="more" style="margin-top:10px;margin-bottom:14px"><summary>Full month-by-month detail</summary>'+
     '<table style="margin-top:10px"><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
@@ -1427,6 +1450,7 @@ function openProfile(name){
     stayBox(d)+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
     sitesBlock+
+    honestBlock(d,s)+
     (d.last_verified?'<p class="meta" style="margin-top:10px">✓ Data verified '.replace('✓','&#10003;')+d.last_verified+
       (d.data_confidence?' · source confidence: '+d.data_confidence:'')+'</p>':'')+
     (d.slug?'<p class="meta"><a href="destinations/'+d.slug+'.html">Permanent season-guide page for '+d.name+' →</a></p>':'');
@@ -1482,7 +1506,7 @@ function renderHome(){
   document.getElementById('view-home').innerHTML=
     '<div class="rv">'+
     '<div class="hero-note" style="margin:2px 0 26px">&#10003; Scoring live for <b>'+MONTH_FULL[nowMonth]+'</b> right now · independent, no sponsored rankings</div>'+
-    '<div class="sec-head">'+ico('fish')+'Top picks for '+MONTH_FULL[nowMonth]+'</div>'+
+    '<div class="sec-head">'+ico('fish')+'Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</div>'+
     '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it.</p><div class="home-grid">'+sitePrev+'</div>'+
     '</div>'+
     '<div class="band rv">'+
@@ -1491,7 +1515,7 @@ function renderHome(){
     '</div>'+
     // --- Methodology, demoted to an expander — credibility on demand, not in the way ---
     '<div class="rv">'+
-    '<div class="sec-head" style="margin-top:8px">'+ico('ruler')+'How we score, in plain terms</div>'+
+    '<div class="sec-head" style="margin-top:8px">'+ico('ruler')+'How does the score work?</div>'+
     '<p class="sec-sub">One transparent score, the same for every destination, every month — so you compare like for like. '+
       '<a href="how-we-score.html">See the full method →</a></p>'+
     '<div class="readout" style="font-size:.84rem;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px">'+

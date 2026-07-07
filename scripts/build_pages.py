@@ -117,6 +117,12 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .prof-essay{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 .prof-essay h2{margin:0 0 8px;font-size:1.12rem}
 .prof-essay p{margin:0;color:#33565e;line-height:1.7;font-size:.95rem}
+.honest{background:#fff;border:1px solid var(--line-strong,#bcd7d9);border-radius:14px;padding:20px 22px;margin:26px 0 8px}
+.honest-kicker{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#0b7d75;margin-bottom:4px}
+.honest h3{font-family:var(--serif);font-size:1.35rem;margin:0 0 12px}
+.honest ul{list-style:none;margin:0;padding:0}
+.honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
+.honest li b{color:var(--ink)}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -290,6 +296,30 @@ def essays_block(d):
     return f'<div class="prof-essays">{cards}</div>' if cards else ""
 
 
+def honest_block(d):
+    """Radical-transparency panel: what we can't promise (mirrors honestBlock in index.html)."""
+    items = [
+        "<b>Seasons drift.</b> Marine-life timing shifts year to year with plankton blooms and lunar "
+        "cycles — a peak landing a couple of weeks early or late is normal, not bad luck.",
+        "<b>Temperatures are ranges.</b> Water figures here are typical monthly ranges (&plusmn;1&deg;C); "
+        "an upwelling or a heatwave can step outside them.",
+        "<b>Visibility is seasonal, not daily.</b> Wind, swell, rain and plankton move it day to day — "
+        "read our metres as the month's typical form, not a promise for your dive.",
+        "<b>Currents can run above the rating.</b> Conditions on the day decide — brief with your "
+        "operator before the first dive, and sit one out if it's beyond your training.",
+    ]
+    closed = [m for m in MONTHS if d["monthly"][m]["rating"] == "Closed"]
+    if closed:
+        items.append(f"<b>Closed means closed.</b> {_join_list(closed)} {'are' if len(closed) > 1 else 'is'} "
+                     "out of season here — weather windows or park rules, not a scheduling choice.")
+    items.append("<b>A score compares, it doesn't guarantee.</b> We rank months from dive-operator and "
+                 "liveaboard calendars so you can weigh destinations like for like — always confirm "
+                 "current conditions with a local dive centre.")
+    lis = "</li><li>".join(items)
+    return ('<div class="honest"><div class="honest-kicker">The honest picture</div>'
+            f'<h3>What can change on the day?</h3><ul><li>{lis}</li></ul></div>')
+
+
 def dest_intro(d):
     """Data-generated overview paragraph (same wording logic as destIntro in index.html)."""
     temps = [t for t in d["monthly_temp_c"].values() if t is not None]
@@ -440,12 +470,13 @@ def page(d):
   {stay_box(d)}
   <span class="meta">Signature sea life</span>
   <div class="chips">{species}</div>
-  <h2>Month-by-month diving calendar</h2>
+  <h2>When should you dive {esc(d["name"])}?</h2>
   <div style="overflow:auto"><table>
     <thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions</th></tr></thead>
     <tbody>{rows}</tbody>
   </table></div>
   {sites_block}
+  {honest_block(d)}
   {verified}
   {related_block(d)}
   <a class="cta" href="../index.html">Plan a dive trip here — open the DiveSZN planner &rarr;</a>
