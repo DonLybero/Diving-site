@@ -16,12 +16,24 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 5
 
 CANDIDATE_QUERIES = {
-    "red-sea-egypt": ["Thistlegorm underwater", "Ras Muhammad underwater", "Anthias Red Sea reef",
-                      "Elphinstone Reef", "Red Sea Egypt diver reef", "lionfish Red Sea Egypt",
-                      "Napoleon wrasse Red Sea"],
-    "cenderawasih-bay": ["Whale shark Papua Indonesia", "whale shark fishing platform", "Kwatisore",
-                         "whale shark aggregation underwater", "West Papua bay aerial",
-                         "Teluk Cenderawasih national park"],
+    # round 3: owner rejected the Thistlegorm set — go for living-reef wide shots
+    "red-sea-egypt": ["Anthias Red Sea reef", "Red Sea reef Egypt underwater diver",
+                      "soft coral Red Sea Egypt", "Napoleon wrasse underwater",
+                      "Ras Mohammed underwater", "fusiliers Red Sea", "Red Sea reef panorama"],
+    # round 2: owner rejected the Gran Cenote set — try other cenotes
+    "cenotes-of-yucatan-peninsula": ["Cenote Ik Kil", "Cenote Suytun", "Cenote Angelita",
+                                     "Cenote Samula", "Cenote Zacil", "cenote Valladolid Mexico",
+                                     "Cenote X'kekén"],
+    # marine-life entry: the sardine-run photo needs the same treatment
+    "sardine-run": ["Sardine run baitball", "baitball dolphins underwater", "common dolphin sardine",
+                    "Cape gannet diving sea", "sardine school underwater", "bait ball underwater sharks"],
+}
+
+# titles the owner has already rejected (or the photo being replaced) — never re-offer
+EXCLUDE = {
+    "red-sea-egypt": re.compile(r"(thistlegorm|^File:Coral \()", re.I),
+    "cenotes-of-yucatan-peninsula": re.compile(r"gran.?cenote", re.I),
+    "sardine-run": re.compile(r"sardinops", re.I),
 }
 
 
@@ -87,6 +99,9 @@ def main():
             if len(picked) >= PER_DEST:
                 break
             titles = [t for t in search_files(q) if t not in seen]
+            ex = EXCLUDE.get(slug)
+            if ex:
+                titles = [t for t in titles if not ex.search(t)]
             info = file_info(titles[:12])
             for t in titles:
                 if t not in info or len(picked) >= PER_DEST:
