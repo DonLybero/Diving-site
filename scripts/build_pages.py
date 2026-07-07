@@ -107,6 +107,10 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
 .pack-cta{display:inline-block;background:var(--coral);color:#2a0f06;border-radius:9px;padding:9px 15px;font-size:.83rem;font-weight:700;text-decoration:none}
 .pack-cta.ghost{background:#fff;color:#b3492f;border:1px solid #e6bcb0}
 .staybox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:14px 16px;margin:18px 0}
+.prof-essays{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:18px 0 4px}
+.prof-essay{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.prof-essay h2{margin:0 0 8px;font-size:1.12rem}
+.prof-essay p{margin:0;color:#33565e;line-height:1.7;font-size:.95rem}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -260,6 +264,16 @@ def stay_box(d):
             f'<p class="pack-body">{body}</p><div class="pack-ctas">{ctas}</div></div>')
 
 
+def essays_block(d):
+    """Editorial 'what to expect / what you'll encounter' cards (same as the SPA profile)."""
+    cards = ""
+    if d.get("underwater"):
+        cards += f'<div class="prof-essay"><h2>What to expect down there</h2><p>{esc(d["underwater"])}</p></div>'
+    if d.get("encounters"):
+        cards += f'<div class="prof-essay"><h2>What you&#8217;ll encounter</h2><p>{esc(d["encounters"])}</p></div>'
+    return f'<div class="prof-essays">{cards}</div>' if cards else ""
+
+
 def dest_intro(d):
     """Data-generated overview paragraph (same wording logic as destIntro in index.html)."""
     temps = [t for t in d["monthly_temp_c"].values() if t is not None]
@@ -396,6 +410,7 @@ def page(d):
 <main class="wrap">
   {f'<p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">{esc(d["description"])}</p>' if d.get("description") else ""}
   <p style="max-width:78ch;line-height:1.65;color:#33565e">{esc(dest_intro(d))}</p>
+  {essays_block(d)}
   <div class="best">&#127942; <b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
   <div class="kv">
     <div><span>Water type</span>{esc(d["water_type"])}</div>

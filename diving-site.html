@@ -855,6 +855,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   /* ---------- profile ---------- */
   .profile{scroll-margin-top:140px}
   .profile h2{margin:0 0 4px;font-size:2rem}.profile .lead{color:var(--muted);margin:0 0 18px;font-size:1rem}
+  .prof-hero{margin:0 0 18px;border-radius:14px;overflow:hidden;background:#dbe9ec;border:1px solid var(--line)}
+  .prof-hero img{display:block;width:100%;height:340px;object-fit:cover}
+  .prof-hero figcaption{font-family:var(--mono);font-size:.6rem;color:var(--muted);padding:6px 12px;background:#f3f9f9}
+  @media(max-width:640px){.prof-hero img{height:200px}}
+  .prof-essays{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:18px 0 4px}
+  .prof-essay{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .prof-essay h3{margin:0 0 8px;font-family:var(--serif);font-size:1.12rem}
+  .prof-essay p{margin:0;color:#33565e;line-height:1.7;font-size:.95rem}
   .best{background:linear-gradient(100deg,rgba(18,168,159,.12),rgba(255,255,255,.65));border:1px solid rgba(34,193,151,.32);
        border-radius:var(--r-sm);padding:14px 16px;margin:14px 0;font-size:.92rem}
   .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:16px 0}
@@ -985,8 +993,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .bregion.open .bregion-body{display:block}
   .bcountry{margin:8px 0}
   .bcountry b{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:2px}
-  .bcountry a{display:block;padding:2px 0;color:var(--ink);text-decoration:none;font-size:.87rem}
+  .bcountry a{display:flex;align-items:center;gap:9px;padding:3px 0;color:var(--ink);text-decoration:none;font-size:.87rem}
   .bcountry a:hover{color:var(--accent)}
+  .bthumb{flex:0 0 38px;width:38px;height:28px;border-radius:6px;overflow:hidden;background:#dbe9ec}
+  .bthumb img{width:100%;height:100%;object-fit:cover;display:block}
   .pack-alt{align-self:center;font-size:.8rem;color:var(--accent);text-decoration:none;font-weight:600;margin-left:4px}
   .pack-alt:hover{text-decoration:underline}
   /* equal-height fact tiles on the profile */
@@ -1750,9 +1760,15 @@ function whyNow(rating, marine, vizM){
 }
 /* DiveIn-style browse directory: region cards that reveal countries and their
    destinations on hover (desktop) or tap (touch). Sits under the planner filter. */
+function thumbURL(u){                 /* small wikimedia thumb variant for list rows */
+  if(!u) return '';
+  return u.indexOf('/thumb/')>-1 ? u.replace(/\/(\d+)px-([^/]+)$/, '/160px-$2') : u;
+}
 function buildBrowseDir(){
   var el=document.getElementById('browseDir');
   if(!el||!DESTS.length) return;
+  var byName={};
+  DESTS.forEach(function(d){byName[d.name]=d;});
   var groups={};
   Object.keys(REGION_GROUPS).sort().forEach(function(g){groups[g]={};});
   DESTS.forEach(function(d){
@@ -1767,7 +1783,9 @@ function buildBrowseDir(){
     if(!n) return '';
     var inner=countries.map(function(c){
       var links=groups[g][c].sort().map(function(nm){
-        return '<a href="#" onclick="openProfile(\''+esc(nm)+'\');return false;">'+nm+'</a>';
+        var im=thumbURL((byName[nm]||{}).image);
+        var th=im?'<span class="bthumb"><img src="'+im+'" alt="" loading="lazy" onerror="this.parentNode.style.visibility=\'hidden\'"></span>':'<span class="bthumb"></span>';
+        return '<a href="#" onclick="openProfile(\''+esc(nm)+'\');return false;">'+th+'<span>'+nm+'</span></a>';
       }).join('');
       return '<div class="bcountry"><b>'+c+'</b>'+links+'</div>';
     }).join('');
@@ -2290,10 +2308,18 @@ function openProfile(name){
     '<table class="sitestable"><thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it’s known</th></tr></thead>'+
     '<tbody>'+siteRows+'</tbody></table>' : '';
   var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';
+  var hero=d.image?'<figure class="prof-hero"><img src="'+d.image+'" alt="Diving at '+d.name.replace(/"/g,'&quot;')+'" loading="lazy" onerror="this.parentNode.style.display=\'none\'">'+
+    (d.image_credit?'<figcaption>'+d.image_credit+'</figcaption>':'')+'</figure>':'';
+  var essays=(d.underwater||d.encounters)?'<div class="prof-essays">'+
+    (d.underwater?'<div class="prof-essay"><h3>'+ico('compass',15)+' What to expect down there</h3><p>'+d.underwater+'</p></div>':'')+
+    (d.encounters?'<div class="prof-essay"><h3>'+ico('fish',15)+' What you\'ll encounter</h3><p>'+d.encounters+'</p></div>':'')+
+    '</div>':'';
   document.getElementById('profile').innerHTML=
+    hero+
     '<h2>'+d.name+'</h2><p class="lead">'+metaLine(d.country,d.region)+' — '+d.highlights+'</p>'+
     (d.description?'<p style="max-width:78ch;line-height:1.7;color:#33565e;margin:0 0 10px;font-size:1.02rem">'+d.description+'</p>':'')+
     '<p style="max-width:78ch;line-height:1.65;color:#33565e;margin:0 0 16px">'+destIntro(d,s)+'</p>'+
+    essays+
     '<div class="best">'+ico('trophy',15)+' <b>Best months:</b> '+(s.byRating.Peak.join(', ')||'—')+
       ' &nbsp;·&nbsp; <b>Top month:</b> '+best+
       ' &nbsp;·&nbsp; <b>Recommended window:</b> '+d.best_months+'</div>'+

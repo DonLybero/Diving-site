@@ -185,7 +185,9 @@ all_dest = deduped
 all_dest.sort(key=lambda r: (r["region"], r["name"]))
 
 # ---- Preserve baked destination images (written into the output JSON by
-# scripts/fetch_images.py / the fetch-images workflow, not present in sources) ----
+# scripts/fetch_images.py / the fetch-images workflow, not present in sources)
+# and editorial fields authored directly in the output JSON ----
+_EDITORIAL = ("description", "underwater", "encounters")
 _prev_path = os.path.join(OUTDIR, "diving-destinations.json")
 if os.path.exists(_prev_path):
     with open(_prev_path) as f:
@@ -193,11 +195,16 @@ if os.path.exists(_prev_path):
     kept = 0
     for r in all_dest:
         p = _prev.get(r["name"])
-        if p and p.get("image"):
+        if not p:
+            continue
+        if p.get("image"):
             for k in ("image", "image_credit", "image_source"):
                 if p.get(k) is not None:
                     r[k] = p[k]
             kept += 1
+        for k in _EDITORIAL:
+            if p.get(k) and not r.get(k):
+                r[k] = p[k]
     print(f"Preserved baked images for {kept} destinations")
 
 # ---- Apply human/agent verification verdicts (scripts/data/verification.json) ----
