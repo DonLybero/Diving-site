@@ -317,17 +317,12 @@
   .sr-key>i{width:11px;height:11px;border-radius:3px;display:inline-block}
   @media(max-width:640px){.sr-cell>i{height:28px}.sr-cell>em{font-size:.56rem}}
   .aff-note{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:0 0 16px}
-  /* browse-the-world directory (region -> countries -> destinations) */
-  .browse-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;text-align:center}
-  .browse{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px;margin:0 0 22px;align-items:start}
-  .bregion{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:13px 16px;cursor:pointer;transition:border-color .18s,box-shadow .18s}
-  .bregion:hover{border-color:var(--line-strong);box-shadow:var(--shadow-glow)}
-  .bregion-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);font-size:1.06rem;font-weight:600}
-  .bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400}
-  .bchev{font-style:normal;display:inline-block;transition:transform .15s}
-  .bregion.open .bchev{transform:rotate(180deg)}
-  .bregion-body{display:none;margin-top:10px;border-top:1px solid var(--line);padding-top:8px;max-height:340px;overflow:auto}
-  .bregion.open .bregion-body{display:block}
+  /* browse-the-world directory: full-page regions -> countries -> destinations */
+  .browse-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:26px 0 4px;text-align:center}
+  .dregion{margin:26px 0 8px}
+  .dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.45rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong)}
+  .bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+  .dcountries{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:6px 26px;margin-top:14px;align-items:start}
   .bcountry{margin:8px 0}
   .bcountry b{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:2px}
   .bcountry a{display:flex;align-items:center;gap:9px;padding:3px 0;color:var(--ink);text-decoration:none;font-size:.87rem}
@@ -670,8 +665,8 @@
   <!-- DIVE PLANNER — one progressive page: filters first, then results as cards / map / year calendar -->
   <section id="view-planner" class="hidden">
     <div class="sec-head"><i class="ico" data-ico="compass"></i>Destinations</div>
-    <p class="sec-sub">Filter by when and how you want to dive — or browse the world by region below.
-      Matches appear as ranked cards, on the world map, or across the whole year.</p>
+    <p class="sec-sub">Browse the whole world below — every region, country and destination —
+      or use the filter to jump straight to ranked matches for your dates.</p>
 
     <div class="controls">
       <div class="field"><label>Period of travel</label><select id="planPeriod">
@@ -842,7 +837,7 @@ function buildBrowseDir(){
     var c=d.country||'—';
     (groups[g][c]=groups[g][c]||[]).push(d.name);
   });
-  var cards=Object.keys(groups).map(function(g){
+  var sections=Object.keys(groups).map(function(g){
     var countries=Object.keys(groups[g]).sort();
     var n=countries.reduce(function(a,c){return a+groups[g][c].length;},0);
     if(!n) return '';
@@ -854,13 +849,11 @@ function buildBrowseDir(){
       }).join('');
       return '<div class="bcountry"><b>'+c+'</b>'+links+'</div>';
     }).join('');
-    return '<div class="bregion" onmouseenter="this.classList.add(\'open\')" '+
-      'onmouseleave="this.classList.remove(\'open\')" '+
-      'onclick="if(!event.target.closest(\'a\'))this.classList.toggle(\'open\')">'+
-      '<div class="bregion-head"><span>'+g+'</span><span class="bcount">'+n+' <i class="bchev">&#9662;</i></span></div>'+
-      '<div class="bregion-body">'+inner+'</div></div>';
+    return '<section class="dregion"><h3><span>'+g+'</span>'+
+      '<span class="bcount">'+n+' destination'+(n===1?'':'s')+'</span></h3>'+
+      '<div class="dcountries">'+inner+'</div></section>';
   }).join('');
-  el.innerHTML='<h3 class="browse-head">Browse by region</h3><div class="browse">'+cards+'</div>';
+  el.innerHTML='<h3 class="browse-head">The world by region</h3>'+sections;
 }
 
 /* country · region line without repeating the country when the region already names it */
@@ -1020,17 +1013,21 @@ function setRegionBtn(){
   document.getElementById('regionBtn').innerHTML=
     (PLAN_RDEST||PLAN_RGROUP||'Any region')+' <span class="rsel-caret">&#9662;</span>';
 }
+function scrollToMatches(){
+  var pv=document.getElementById('planViews');
+  if(pv&&!pv.classList.contains('hidden')) pv.scrollIntoView({behavior:'smooth',block:'start'});
+}
 function pickRegion(g){
   PLAN_RGROUP=g; PLAN_RDEST='';
   setRegionBtn();
   document.getElementById('regionMenu').classList.add('hidden');
-  planShown=3; refreshPlanViews();
+  planShown=3; refreshPlanViews(); scrollToMatches();
 }
 function pickDest(n){
   PLAN_RDEST=n; PLAN_RGROUP=DEST_GROUP[n]||'';
   setRegionBtn();
   document.getElementById('regionMenu').classList.add('hidden');
-  planShown=3; refreshPlanViews();
+  planShown=3; refreshPlanViews(); scrollToMatches();
 }
 document.addEventListener('click',function(e){
   var m=document.getElementById('regionMenu');
@@ -1064,7 +1061,7 @@ function initControls(){
   // Any planner selection reveals the result views and refreshes the active one.
   ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
-    var h=function(){planShown=3;refreshPlanViews();};
+    var h=function(){planShown=3;refreshPlanViews();scrollToMatches();};
     e.addEventListener('change',h); e.addEventListener('input',h);
   });
 }
