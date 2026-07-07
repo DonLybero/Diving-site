@@ -16,24 +16,17 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 5
 
 CANDIDATE_QUERIES = {
-    # round 3: owner rejected the Thistlegorm set — go for living-reef wide shots
-    "red-sea-egypt": ["Anthias Red Sea reef", "Red Sea reef Egypt underwater diver",
-                      "soft coral Red Sea Egypt", "Napoleon wrasse underwater",
-                      "Ras Mohammed underwater", "fusiliers Red Sea", "Red Sea reef panorama"],
-    # round 2: owner rejected the Gran Cenote set — try other cenotes
-    "cenotes-of-yucatan-peninsula": ["Cenote Ik Kil", "Cenote Suytun", "Cenote Angelita",
-                                     "Cenote Samula", "Cenote Zacil", "cenote Valladolid Mexico",
-                                     "Cenote X'kekén"],
-    # marine-life entry: the sardine-run photo needs the same treatment
-    "sardine-run": ["Sardine run baitball", "baitball dolphins underwater", "common dolphin sardine",
-                    "Cape gannet diving sea", "sardine school underwater", "bait ball underwater sharks"],
+    "cenotes-of-yucatan-peninsula": ["Cenote Suytun", "Dos Ojos cenote", "Cenote Calavera",
+                                     "cave diver Mexico stalactites", "Cenote Azul", "Cenote Chac Mool",
+                                     "Cenote Zaci"],
+    "sardine-run": ["sardines school Moalboal", "bronze whaler shark sardines", "gannets diving underwater",
+                    "dolphins hunting sardines underwater", "bait ball Philippines", "sardine shoal Cebu"],
 }
 
-# titles the owner has already rejected (or the photo being replaced) — never re-offer
+# titles the owner has already rejected (or junk series) — never re-offer
 EXCLUDE = {
-    "red-sea-egypt": re.compile(r"(thistlegorm|^File:Coral \()", re.I),
-    "cenotes-of-yucatan-peninsula": re.compile(r"gran.?cenote", re.I),
-    "sardine-run": re.compile(r"sardinops", re.I),
+    "cenotes-of-yucatan-peninsula": re.compile(r"(gran.?cenote|ik.?kil)", re.I),
+    "sardine-run": re.compile(r"(sardinops|drix|ifremer|delmoges|turtle)", re.I),
 }
 
 
