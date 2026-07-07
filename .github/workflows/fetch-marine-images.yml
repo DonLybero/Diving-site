@@ -11,6 +11,15 @@ on:
         description: "Refetch all encounters (overwrite existing images)"
         type: boolean
         default: false
+  # Also run on push when the fetcher or its data changes, so the bake can be
+  # kicked off without the Actions API. The bot's result commit uses
+  # GITHUB_TOKEN and does not re-trigger this, so there is no loop.
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/fetch_marine_images.py'
+      - 'marine-life.json'
+      - '.github/workflows/fetch-marine-images.yml'
 
 permissions:
   contents: write
