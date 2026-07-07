@@ -26,6 +26,10 @@ After editing data or `index.html`, rerun `build_standalone.py` so the
 single-file build stays in sync, then commit. Pushing deploys automatically.
 
 ## Conventions
+- **Design/copy work:** load the `diveszn-design` skill first
+  (`.claude/skills/diveszn-design/` — brand system, editorial rules, imagery
+  standard, QA workflow); `frontend-design` (official Anthropic skill) backs
+  it for general visual-design craft.
 - Keep the scoring formula identical in `build_rankings.py` and
   `diving-calendar.js` (rating base + marine-life bonus ≤25 + visibility 0..18).
 - Brand: name **DiveSZN** ("dive season"; wordmark `Dive<b>SZN</b>`), whale-**fluke** logo (no helmets/circles),
