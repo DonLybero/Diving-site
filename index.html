@@ -309,6 +309,21 @@
   .sr-key>i{width:11px;height:11px;border-radius:3px;display:inline-block}
   @media(max-width:640px){.sr-cell>i{height:28px}.sr-cell>em{font-size:.56rem}}
   .aff-note{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:0 0 16px}
+  /* browse-the-world directory (region -> countries -> destinations) */
+  .browse-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;text-align:center}
+  .browse{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px;margin:0 0 22px;align-items:start}
+  .bregion{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:13px 16px;cursor:pointer;transition:border-color .18s,box-shadow .18s}
+  .bregion:hover{border-color:var(--line-strong);box-shadow:var(--shadow-glow)}
+  .bregion-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);font-size:1.06rem;font-weight:600}
+  .bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400}
+  .bchev{font-style:normal;display:inline-block;transition:transform .15s}
+  .bregion.open .bchev{transform:rotate(180deg)}
+  .bregion-body{display:none;margin-top:10px;border-top:1px solid var(--line);padding-top:8px;max-height:340px;overflow:auto}
+  .bregion.open .bregion-body{display:block}
+  .bcountry{margin:8px 0}
+  .bcountry b{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:2px}
+  .bcountry a{display:block;padding:2px 0;color:var(--ink);text-decoration:none;font-size:.87rem}
+  .bcountry a:hover{color:var(--accent)}
   .pack-alt{align-self:center;font-size:.8rem;color:var(--accent);text-decoration:none;font-weight:600;margin-left:4px}
   .pack-alt:hover{text-decoration:underline}
   /* equal-height fact tiles on the profile */
@@ -584,9 +599,10 @@
 <div class="navwrap">
   <div class="tabs">
     <button id="tab-home" class="active" onclick="showTab('home')"><i class="ico" data-ico="home"></i>Home</button>
-    <button id="tab-planner" onclick="showTab('planner')"><i class="ico" data-ico="compass"></i>Dive Planner</button>
+    <button id="tab-planner" onclick="showTab('planner')"><i class="ico" data-ico="compass"></i>Destinations</button>
+    <button id="tab-trip" onclick="showTab('trip')"><i class="ico" data-ico="calendar"></i>Trip Planner</button>
     <button id="tab-gear" onclick="showTab('gear')"><i class="ico" data-ico="tank"></i>Diving Gear</button>
-    <button id="tab-destinations" onclick="showTab('destinations')"><i class="ico" data-ico="trophy"></i>Destinations</button>
+    <button id="tab-destinations" onclick="showTab('destinations')"><i class="ico" data-ico="trophy"></i>Articles</button>
     <button id="tab-marine" onclick="MARINE_SLUG='';showTab('marine')"><i class="ico" data-ico="fish"></i>Marine Life</button>
     <button id="tab-search" onclick="showTab('search')"><i class="ico" data-ico="search"></i>Search</button>
   </div>
@@ -599,6 +615,18 @@
 
   <!-- DIVE SITES -->
   <!-- GEAR -->
+  <section id="view-trip" class="hidden">
+    <div class="sec-head"><i class="ico" data-ico="calendar"></i>Trip Planner</div>
+    <p class="sec-sub">Something new is being built here.</p>
+    <div class="article" style="max-width:640px;margin:26px auto;text-align:center;padding:44px 30px">
+      <div style="font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px">Coming soon</div>
+      <h3 style="font-family:var(--serif);font-size:1.5rem;margin:0 0 10px">Plan a whole dive trip, end to end.</h3>
+      <p style="color:var(--muted);line-height:1.65;margin:0 0 20px">We're working on a tool that turns a season match into a full
+        itinerary. Until it lands, the Destinations tab finds where the diving is at its best for your dates.</p>
+      <a class="btn" href="#" onclick="showTab('planner');return false;">Browse destinations &rarr;</a>
+    </div>
+  </section>
+
   <section id="view-gear" class="hidden">
     <div class="controls">
       <div class="field"><label>Category</label><select id="gearCat"><option value="">All gear</option></select></div>
@@ -631,9 +659,9 @@
 
   <!-- DIVE PLANNER — one progressive page: filters first, then results as cards / map / year calendar -->
   <section id="view-planner" class="hidden">
-    <div class="sec-head"><i class="ico" data-ico="compass"></i>Plan your dive</div>
-    <p class="sec-sub">Tell DiveSZN when (and how) you want to dive — the best matches appear as you select,
-      as ranked cards, on the world map, or across the whole year.</p>
+    <div class="sec-head"><i class="ico" data-ico="compass"></i>Destinations</div>
+    <p class="sec-sub">Filter by when and how you want to dive — or browse the world by region below.
+      Matches appear as ranked cards, on the world map, or across the whole year.</p>
 
     <div class="controls">
       <div class="field"><label>Period of travel</label><select id="planPeriod">
@@ -653,6 +681,9 @@
         <option value="">Any</option><option>Low</option><option>Medium</option><option>Strong</option></select></div>
       <div class="field"><label>Min water °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
     </div>
+
+    <!-- browse-the-world directory: hover/tap a region to reveal its countries -->
+    <div id="browseDir"></div>
 
     <!-- result views: one at a time; opens on "Best matches" for the current period -->
     <div id="planViews" class="subtabs hidden">
@@ -782,6 +813,38 @@ function whyNow(rating, marine, vizM){
   if(viz) lead+=(lead?' — ':'')+viz;
   return lead? lead.charAt(0).toUpperCase()+lead.slice(1)+'.' : '';
 }
+/* DiveIn-style browse directory: region cards that reveal countries and their
+   destinations on hover (desktop) or tap (touch). Sits under the planner filter. */
+function buildBrowseDir(){
+  var el=document.getElementById('browseDir');
+  if(!el||!DESTS.length) return;
+  var groups={};
+  Object.keys(REGION_GROUPS).sort().forEach(function(g){groups[g]={};});
+  DESTS.forEach(function(d){
+    var g=DEST_GROUP[d.name]||'Other';
+    if(!groups[g]) groups[g]={};
+    var c=d.country||'—';
+    (groups[g][c]=groups[g][c]||[]).push(d.name);
+  });
+  var cards=Object.keys(groups).map(function(g){
+    var countries=Object.keys(groups[g]).sort();
+    var n=countries.reduce(function(a,c){return a+groups[g][c].length;},0);
+    if(!n) return '';
+    var inner=countries.map(function(c){
+      var links=groups[g][c].sort().map(function(nm){
+        return '<a href="#" onclick="openProfile(\''+esc(nm)+'\');return false;">'+nm+'</a>';
+      }).join('');
+      return '<div class="bcountry"><b>'+c+'</b>'+links+'</div>';
+    }).join('');
+    return '<div class="bregion" onmouseenter="this.classList.add(\'open\')" '+
+      'onmouseleave="this.classList.remove(\'open\')" '+
+      'onclick="if(!event.target.closest(\'a\'))this.classList.toggle(\'open\')">'+
+      '<div class="bregion-head"><span>'+g+'</span><span class="bcount">'+n+' <i class="bchev">&#9662;</i></span></div>'+
+      '<div class="bregion-body">'+inner+'</div></div>';
+  }).join('');
+  el.innerHTML='<h3 class="browse-head">Browse by region</h3><div class="browse">'+cards+'</div>';
+}
+
 /* country · region line without repeating the country when the region already names it */
 function metaLine(country, region){
   if(!region) return country||'';
@@ -833,7 +896,7 @@ function setHeroPhoto(){
   }
 }
 
-var TABS=['home','planner','gear','destinations','marine','search'];
+var TABS=['home','planner','trip','gear','destinations','marine','search'];
 // Legacy destinations now living inside the Dive Planner — each routes to a planner sub-view.
 var PLANNER_TOOLS={calendar:'calendar',period:'cards',plan:null,sites:'cards',map:'map'};
 
@@ -1847,7 +1910,9 @@ function renderDestinations(month){
   var g=document.getElementById('destBody');
   if(!month){
     var usedThumb={};   // each month gets a different destination photo — no repeats down the list
-    var rows=DivingCalendar.MONTHS.map(function(m){
+    var nowIdx=new Date().getMonth();
+    var ordered=DivingCalendar.MONTHS.slice(nowIdx).concat(DivingCalendar.MONTHS.slice(0,nowIdx));
+    var rows=ordered.map(function(m){
       var ranked=DivingCalendar.rankPeriod(DESTS,DivingCalendar.MONTHS.indexOf(m)*2+1,{limit:10});
       var d=null;
       for(var i=0;i<ranked.length;i++){
@@ -1860,13 +1925,13 @@ function renderDestinations(month){
       var teaser=(MONTH_INTROS[m]||'').split('. ')[0]+'.';
       return '<a class="artrow" href="#" onclick="openMonthArticle(\''+m+'\');return false;">'+
         '<div class="artrow-thumb dest-thumb">'+thumb+'</div>'+
-        '<div><div class="kicker">Destinations · '+MONTH_FULL[m]+'</div>'+
-        '<h4>Top Destinations in '+MONTH_FULL[m]+'</h4>'+
+        '<div><div class="kicker">Article · '+MONTH_FULL[m]+(m===DivingCalendar.MONTHS[nowIdx]?' · <span style="color:var(--peak,#16a34a)">this month</span>':'')+'</div>'+
+        '<h4>Where to Dive in '+MONTH_FULL[m]+'</h4>'+
         '<p>'+teaser+'</p></div></a>';
     }).join('');
     g.innerHTML='<div class="article">'+
-      '<div class="sec-head">'+ico('trophy')+'Where to dive, month by month</div>'+
-      '<p class="sec-sub" style="text-align:left;margin:0 0 4px;max-width:80ch">DiveSZN scores every destination for every month of the year — these twelve guides rank the places where each month truly delivers, so you can pick the best diving for your vacation dates.</p>'+
+      '<div class="sec-head">'+ico('trophy')+'Articles</div>'+
+      '<p class="sec-sub" style="text-align:left;margin:0 0 4px;max-width:80ch">One guide per month of the year, led by the month you are in now. Each ranks the regions and destinations where that month truly delivers, so your vacation dates pick the spot.</p>'+
       '<h3 class="artlist-head">Recent articles</h3>'+rows+'</div>';
   }else{
     var full=MONTH_FULL[month];
@@ -1915,7 +1980,7 @@ loadData().then(function(res){
     '<a href="privacy.html">Privacy</a></p>';
   initControls();
   applyIcons(); setHeroPhoto();
-  renderHome(); renderGear(); renderDestinations(); renderMarine();
+  renderHome(); renderGear(); renderDestinations(); renderMarine(); buildBrowseDir();
   // planner result views render on the diver's first selection (progressive disclosure)
   document.getElementById('searchBox').addEventListener('input', renderSearch);
   handleHash();                                    // honor a #gear-<cat>-<thickness> deep link on load

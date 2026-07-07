@@ -159,7 +159,7 @@ def footer_html(prefix="../"):
     return ('<footer><b style="font-family:var(--serif);color:var(--ink)">DiveSZN</b> · seasonal dive planning, verified against '
             'dive operators, park authorities and liveaboard calendars.<br>Water temperatures are typical monthly ranges (±1°C); '
             'marine-life timing shifts year to year — always confirm with a local dive centre.<br>'
-            f'<a href="{prefix}index.html">Dive planner</a> · <a href="{prefix}destinations/index.html">Destinations</a> · '
+            f'<a href="{prefix}index.html">Destinations</a> · <a href="{prefix}destinations/index.html">Season guides</a> · '
             f'<a href="{prefix}months/index.html">Best by month</a> · '
             f'<a href="{prefix}marine-life/index.html">Marine life</a> · <a href="{prefix}gear/index.html">Gear guides</a> · '
             f'<a href="{prefix}how-we-score.html">How we score</a> · <a href="{prefix}about.html">About</a> · '
