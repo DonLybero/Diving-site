@@ -11539,7 +11539,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "coiba",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kristallklares_Wasser_Coiba_Panama_%28152311725%29.jpeg/960px-Kristallklares_Wasser_Coiba_Panama_%28152311725%29.jpeg",
+      "image_credit": "Photo: Dronepicr (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     }
   ]
 }
