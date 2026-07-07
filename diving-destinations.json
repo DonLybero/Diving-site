@@ -12102,7 +12102,10 @@
       "slug": "bali",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Magnificent_Sea_Anemone%2C_USAT_Liberty_Wreck%2C_Tulamben%2C_Bali%2C_Indonesia_imported_from_iNaturalist_photo_428500231.jpg/960px-Magnificent_Sea_Anemone%2C_USAT_Liberty_Wreck%2C_Tulamben%2C_Bali%2C_Indonesia_imported_from_iNaturalist_photo_428500231.jpg",
+      "image_credit": "Photo: (c) Bernard DUPONT, some rights reserved (CC BY-SA) (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Cancún & Playa del Carmen",
@@ -12273,7 +12276,10 @@
       "slug": "cancun-playa-del-carmen",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Cancun_aerial_photo_by_safa.jpg/960px-Cancun_aerial_photo_by_safa.jpg",
+      "image_credit": "Photo: Safa in la  but  uploaded by Mardetanha (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Dubai & Fujairah",
@@ -12776,7 +12782,10 @@
       "slug": "koh-tao",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ko_Nang_Yuan.jpg/960px-Ko_Nang_Yuan.jpg",
+      "image_credit": "Photo: User: (WT-shared) Whatsinaname at  wts wikivoyage (Public domain) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Mallorca",
@@ -13620,7 +13629,10 @@
       "slug": "phuket",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Longtail_Boat_At_Maya_Bay%2C_Krabi%2C_Thailand.jpg/960px-Longtail_Boat_At_Maya_Bay%2C_Krabi%2C_Thailand.jpg",
+      "image_credit": "Photo: smmohsinnaseem (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Santorini",
