@@ -238,7 +238,7 @@
       "monthly": {
         "Jan": {
           "rating": "Peak",
-          "marine_life": "great hammerheads gliding over the Bimini sand while tigers make close passes",
+          "marine_life": "great hammerheads gliding over the Bimini sand while tiger sharks make close passes",
           "conditions": "cooler water and twenty to thirty metre visibility as sharks gather",
           "visibility_m": 25
         },
@@ -250,7 +250,7 @@
         },
         "Mar": {
           "rating": "Peak",
-          "marine_life": "hammerheads cruising the shallows while tigers and reef sharks trail the scent line",
+          "marine_life": "hammerheads cruising the shallows while tiger sharks and reef sharks trail the scent line",
           "conditions": "good visibility as the hammerhead window closes",
           "visibility_m": 24
         },
@@ -304,7 +304,7 @@
         },
         "Dec": {
           "rating": "Peak",
-          "marine_life": "tigers prowling the sand flats while the first hammerheads arrive and reef sharks circle",
+          "marine_life": "tiger sharks prowling the sand flats while the first hammerheads arrive and reef sharks circle",
           "conditions": "cooler water as the shark action builds",
           "visibility_m": 18
         }
@@ -3479,7 +3479,7 @@
         },
         "Jun": {
           "rating": "Good",
-          "marine_life": "mobula rays still swarming while Los Islotes closes for sea-lion pupping",
+          "marine_life": "mobula rays still swarming while Los Islotes closes for the pupping season",
           "conditions": "warming water with improving visibility",
           "visibility_m": 16
         },
@@ -3828,13 +3828,13 @@
         },
         "Feb": {
           "rating": "Peak",
-          "marine_life": "hammerheads schooling off Rasdhoo while Fuvahmulah tigers hold at the cleaning station",
+          "marine_life": "hammerheads schooling off Rasdhoo while Fuvahmulah tiger sharks hold at the cleaning station",
           "conditions": "dry-season calm with superb visibility",
           "visibility_m": 32
         },
         "Mar": {
           "rating": "Peak",
-          "marine_life": "hammerheads gathering off Rasdhoo through the season while Fuvahmulah tigers patrol the outer reef",
+          "marine_life": "hammerheads gathering off Rasdhoo through the season while Fuvahmulah tiger sharks patrol the outer reef",
           "conditions": "clear, calm water with all-round diving",
           "visibility_m": 24
         },
@@ -3888,7 +3888,7 @@
         },
         "Dec": {
           "rating": "Peak",
-          "marine_life": "hammerheads returning off Rasdhoo while Fuvahmulah tigers and grey reef sharks patrol the channels",
+          "marine_life": "hammerheads returning off Rasdhoo while Fuvahmulah tiger sharks and grey reef sharks patrol the channels",
           "conditions": "northeast monsoon returning calm with visibility thirty to forty metres",
           "visibility_m": 35
         }
@@ -4255,7 +4255,7 @@
         },
         "Nov": {
           "rating": "Good",
-          "marine_life": "raggies departing the shoal while tigers return to the warming reef",
+          "marine_life": "raggies departing the shoal while tiger sharks return to the warming reef",
           "conditions": "warming water with good visibility",
           "visibility_m": 24
         },
@@ -9105,13 +9105,13 @@
         },
         "Mar": {
           "rating": "Peak",
-          "marine_life": "tigers daily while hammerheads school, oceanic mantas arrive, threshers clean at depth and whale sharks pass",
+          "marine_life": "tiger sharks daily while hammerheads school, oceanic mantas arrive, threshers clean at depth and whale sharks pass",
           "conditions": "late dry season with warm calm seas and top visibility",
           "visibility_m": 35
         },
         "Apr": {
           "rating": "Peak",
-          "marine_life": "tigers holding year-round while oceanic mantas build toward mating with whale sharks and lingering hammerheads",
+          "marine_life": "tiger sharks holding year-round while oceanic mantas build toward mating with whale sharks and lingering hammerheads",
           "conditions": "tail of the dry northeast monsoon, calm before the seasonal change",
           "visibility_m": 33
         },
@@ -9135,7 +9135,7 @@
         },
         "Aug": {
           "rating": "Shoulder",
-          "marine_life": "resident tigers guaranteed while thresher sharks work the reef cleaning stations steadily",
+          "marine_life": "resident tiger sharks guaranteed while thresher sharks work the reef cleaning stations steadily",
           "conditions": "wet southwest monsoon at full strength with unsettled surface and greener water",
           "visibility_m": 24
         },
@@ -9147,19 +9147,19 @@
         },
         "Oct": {
           "rating": "Good",
-          "marine_life": "tigers holding year-round while thresher sharks enter their strongest window and scalloped hammerhead schools build",
+          "marine_life": "tiger sharks holding year-round while thresher sharks enter their strongest window and scalloped hammerhead schools build",
           "conditions": "monsoon transition with seas settling and clarity improving",
           "visibility_m": 28
         },
         "Nov": {
           "rating": "Good",
-          "marine_life": "resident tigers daily while thresher season continues and hammerhead schools grow as the thermocline shallows",
+          "marine_life": "resident tiger sharks daily while thresher season continues and hammerhead schools grow as the thermocline shallows",
           "conditions": "early dry northeast monsoon with calmer surface and rising visibility",
           "visibility_m": 30
         },
         "Dec": {
           "rating": "Peak",
-          "marine_life": "tigers holding year-round while thresher sharks crowd the cleaning stations and hammerheads school dependably",
+          "marine_life": "tiger sharks holding year-round while thresher sharks crowd the cleaning stations and hammerheads school dependably",
           "conditions": "northeast monsoon dry season returning with calm seas and clear water",
           "visibility_m": 33
         }

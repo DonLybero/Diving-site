@@ -56,7 +56,7 @@
   var MARINE_SORTED = MARINE_WEIGHTS.slice().sort(function (a, b) { return b[0].length - a[0].length; });
 
   function marineBonus(text) {
-    var t = (text || "").toLowerCase();
+    var t = (text || "").toLowerCase().replace(/-/g, " ");   // "whale-shark" counts as "whale shark"
     var total = 0;
     for (var i = 0; i < MARINE_SORTED.length; i++) {
       var kw = MARINE_SORTED[i][0];

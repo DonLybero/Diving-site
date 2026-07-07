@@ -105,6 +105,20 @@
           "rank": 3
         },
         {
+          "name": "Bahamas",
+          "country": "Bahamas",
+          "region": "Caribbean",
+          "difficulty": "intermediate",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 24,
+          "visibility_m": 25,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 131,
+          "highlight": "great hammerheads gliding over the Bimini sand while tiger sharks make close passes",
+          "rank": 4
+        },
+        {
           "name": "Jupiter",
           "country": "USA",
           "region": "Atlantic / Florida (USA)",
@@ -116,7 +130,7 @@
           "rating": "Peak",
           "score": 130,
           "highlight": "lemon shark aggregation building while great hammerheads and bull sharks patrol the drift",
-          "rank": 4
+          "rank": 5
         },
         {
           "name": "Zanzibar",
@@ -130,7 +144,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "whale sharks passing offshore while turtles pack Mnemba and dolphins work the channel",
-          "rank": 5
+          "rank": 6
         },
         {
           "name": "Coiba",
@@ -144,7 +158,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "jacks and barracuda balling up while whitetip reef sharks and the first whale shark cruise through",
-          "rank": 6
+          "rank": 7
         },
         {
           "name": "Raja Ampat",
@@ -158,7 +172,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "mantas swarming Manta Sandy and Manta Ridge while wobbegongs, walking sharks and pygmy seahorses hide below",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Yap",
@@ -172,7 +186,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "courting trains of resident reef mantas stacking up at the Mi'l Channel cleaning stations",
-          "rank": 8
+          "rank": 9
         },
         {
           "name": "Socorro Island",
@@ -186,20 +200,6 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "giant mantas circling the cleaning stations while humpback whales sing offshore",
-          "rank": 9
-        },
-        {
-          "name": "Bahamas",
-          "country": "Bahamas",
-          "region": "Caribbean",
-          "difficulty": "intermediate",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 24,
-          "visibility_m": 25,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 122,
-          "highlight": "great hammerheads gliding over the Bimini sand while tigers make close passes",
           "rank": 10
         },
         {
@@ -1192,6 +1192,20 @@
           "rank": 3
         },
         {
+          "name": "Bahamas",
+          "country": "Bahamas",
+          "region": "Caribbean",
+          "difficulty": "intermediate",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 24,
+          "visibility_m": 25,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 131,
+          "highlight": "great hammerheads gliding over the Bimini sand while tiger sharks make close passes",
+          "rank": 4
+        },
+        {
           "name": "Jupiter",
           "country": "USA",
           "region": "Atlantic / Florida (USA)",
@@ -1203,7 +1217,7 @@
           "rating": "Peak",
           "score": 130,
           "highlight": "lemon shark aggregation building while great hammerheads and bull sharks patrol the drift",
-          "rank": 4
+          "rank": 5
         },
         {
           "name": "Zanzibar",
@@ -1217,7 +1231,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "whale sharks passing offshore while turtles pack Mnemba and dolphins work the channel",
-          "rank": 5
+          "rank": 6
         },
         {
           "name": "Coiba",
@@ -1231,7 +1245,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "jacks and barracuda balling up while whitetip reef sharks and the first whale shark cruise through",
-          "rank": 6
+          "rank": 7
         },
         {
           "name": "Raja Ampat",
@@ -1245,7 +1259,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "mantas swarming Manta Sandy and Manta Ridge while wobbegongs, walking sharks and pygmy seahorses hide below",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Yap",
@@ -1259,7 +1273,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "courting trains of resident reef mantas stacking up at the Mi'l Channel cleaning stations",
-          "rank": 8
+          "rank": 9
         },
         {
           "name": "Socorro Island",
@@ -1273,20 +1287,6 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "giant mantas circling the cleaning stations while humpback whales sing offshore",
-          "rank": 9
-        },
-        {
-          "name": "Bahamas",
-          "country": "Bahamas",
-          "region": "Caribbean",
-          "difficulty": "intermediate",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 24,
-          "visibility_m": 25,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 122,
-          "highlight": "great hammerheads gliding over the Bimini sand while tigers make close passes",
           "rank": 10
         },
         {
@@ -2279,6 +2279,20 @@
           "rank": 3
         },
         {
+          "name": "Maldives",
+          "country": "Maldives",
+          "region": "Indian Ocean",
+          "difficulty": "beginner-intermediate",
+          "access": "liveaboard/resort",
+          "water_temp_c": 28,
+          "visibility_m": 32,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 135,
+          "highlight": "hammerheads schooling off Rasdhoo while Fuvahmulah tiger sharks hold at the cleaning station",
+          "rank": 4
+        },
+        {
           "name": "Tofo",
           "country": "Mozambique",
           "region": "Indian Ocean / Mozambique",
@@ -2290,7 +2304,7 @@
           "rating": "Peak",
           "score": 133,
           "highlight": "whale sharks feeding along the coast while mantas and leopard sharks work the reefs",
-          "rank": 4
+          "rank": 5
         },
         {
           "name": "Coiba",
@@ -2304,7 +2318,7 @@
           "rating": "Peak",
           "score": 132,
           "highlight": "whale sharks cruising through while turtles and mobulas glide over the seamounts above dense fish schools",
-          "rank": 5
+          "rank": 6
         },
         {
           "name": "Poor Knights Islands",
@@ -2318,7 +2332,7 @@
           "rating": "Peak",
           "score": 131,
           "highlight": "stingrays gliding through the arches while mantas, kingfish and mola mola cruise the pinnacles",
-          "rank": 6
+          "rank": 7
         },
         {
           "name": "Socorro Island",
@@ -2332,7 +2346,7 @@
           "rating": "Peak",
           "score": 130,
           "highlight": "mantas hovering at the boulders while humpbacks pass and dolphins ride the bow",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Bahamas",
@@ -2346,20 +2360,6 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "hammerheads sweeping in low over the sand while tiger sharks and reef sharks circle above",
-          "rank": 8
-        },
-        {
-          "name": "Maldives",
-          "country": "Maldives",
-          "region": "Indian Ocean",
-          "difficulty": "beginner-intermediate",
-          "access": "liveaboard/resort",
-          "water_temp_c": 28,
-          "visibility_m": 32,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 126,
-          "highlight": "hammerheads schooling off Rasdhoo while Fuvahmulah tigers hold at the cleaning station",
           "rank": 9
         },
         {
@@ -3366,6 +3366,20 @@
           "rank": 3
         },
         {
+          "name": "Maldives",
+          "country": "Maldives",
+          "region": "Indian Ocean",
+          "difficulty": "beginner-intermediate",
+          "access": "liveaboard/resort",
+          "water_temp_c": 28,
+          "visibility_m": 32,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 135,
+          "highlight": "hammerheads schooling off Rasdhoo while Fuvahmulah tiger sharks hold at the cleaning station",
+          "rank": 4
+        },
+        {
           "name": "Tofo",
           "country": "Mozambique",
           "region": "Indian Ocean / Mozambique",
@@ -3377,7 +3391,7 @@
           "rating": "Peak",
           "score": 133,
           "highlight": "whale sharks feeding along the coast while mantas and leopard sharks work the reefs",
-          "rank": 4
+          "rank": 5
         },
         {
           "name": "Coiba",
@@ -3391,7 +3405,7 @@
           "rating": "Peak",
           "score": 132,
           "highlight": "whale sharks cruising through while turtles and mobulas glide over the seamounts above dense fish schools",
-          "rank": 5
+          "rank": 6
         },
         {
           "name": "Poor Knights Islands",
@@ -3405,7 +3419,7 @@
           "rating": "Peak",
           "score": 131,
           "highlight": "stingrays gliding through the arches while mantas, kingfish and mola mola cruise the pinnacles",
-          "rank": 6
+          "rank": 7
         },
         {
           "name": "Socorro Island",
@@ -3419,7 +3433,7 @@
           "rating": "Peak",
           "score": 130,
           "highlight": "mantas hovering at the boulders while humpbacks pass and dolphins ride the bow",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Bahamas",
@@ -3433,20 +3447,6 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "hammerheads sweeping in low over the sand while tiger sharks and reef sharks circle above",
-          "rank": 8
-        },
-        {
-          "name": "Maldives",
-          "country": "Maldives",
-          "region": "Indian Ocean",
-          "difficulty": "beginner-intermediate",
-          "access": "liveaboard/resort",
-          "water_temp_c": 28,
-          "visibility_m": 32,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 126,
-          "highlight": "hammerheads schooling off Rasdhoo while Fuvahmulah tigers hold at the cleaning station",
           "rank": 9
         },
         {
@@ -4421,7 +4421,7 @@
           "current_strength": "Strong",
           "rating": "Peak",
           "score": 143,
-          "highlight": "tigers daily while hammerheads school, oceanic mantas arrive, threshers clean at depth and whale sharks pass",
+          "highlight": "tiger sharks daily while hammerheads school, oceanic mantas arrive, threshers clean at depth and whale sharks pass",
           "rank": 1
         },
         {
@@ -4453,6 +4453,20 @@
           "rank": 3
         },
         {
+          "name": "Palau",
+          "country": "Palau",
+          "region": "Micronesia / Pacific",
+          "difficulty": "intermediate-advanced",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 30,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 134,
+          "highlight": "grey-reef sharks packing the corners while bumphead spawning fires on the new moon and mantas feed",
+          "rank": 4
+        },
+        {
           "name": "Coiba",
           "country": "Panama",
           "region": "Eastern Pacific / Panama",
@@ -4464,21 +4478,21 @@
           "rating": "Peak",
           "score": 132,
           "highlight": "scalloped hammerhead schools building over the pinnacles and Contreras while whale sharks still cruise past",
-          "rank": 4
+          "rank": 5
         },
         {
-          "name": "Palau",
-          "country": "Palau",
-          "region": "Micronesia / Pacific",
-          "difficulty": "intermediate-advanced",
+          "name": "Bahamas",
+          "country": "Bahamas",
+          "region": "Caribbean",
+          "difficulty": "intermediate",
           "access": "day-boat/liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 30,
-          "current_strength": "Strong",
+          "water_temp_c": 24,
+          "visibility_m": 24,
+          "current_strength": "Medium",
           "rating": "Peak",
           "score": 132,
-          "highlight": "grey-reef sharks packing the corners while bumphead spawning fires on the new moon and mantas feed",
-          "rank": 5
+          "highlight": "hammerheads cruising the shallows while tiger sharks and reef sharks trail the scent line",
+          "rank": 6
         },
         {
           "name": "Great Blue Hole",
@@ -4492,7 +4506,21 @@
           "rating": "Peak",
           "score": 130,
           "highlight": "reef sharks holding in the shadows while the first whale sharks gather at Gladden Spit",
-          "rank": 6
+          "rank": 7
+        },
+        {
+          "name": "Maldives",
+          "country": "Maldives",
+          "region": "Indian Ocean",
+          "difficulty": "beginner-intermediate",
+          "access": "liveaboard/resort",
+          "water_temp_c": 29,
+          "visibility_m": 24,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 130,
+          "highlight": "hammerheads gathering off Rasdhoo through the season while Fuvahmulah tiger sharks patrol the outer reef",
+          "rank": 8
         },
         {
           "name": "Malapascua Island",
@@ -4506,7 +4534,7 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "threshers sweeping the shoal at sunrise while mantas pass and macro life stirs",
-          "rank": 7
+          "rank": 9
         },
         {
           "name": "Bay Islands",
@@ -4520,7 +4548,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "whale sharks feeding along the north side while turtles and eagle rays glide the reef",
-          "rank": 8
+          "rank": 10
         },
         {
           "name": "Layang Layang",
@@ -4534,7 +4562,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "schooling scalloped hammerheads arriving on the walls while pelagics patrol the drop-offs",
-          "rank": 9
+          "rank": 11
         },
         {
           "name": "Yap",
@@ -4548,7 +4576,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "mantas still aggregating to mate while reef sharks patrol and mandarinfish spawn reliably",
-          "rank": 10
+          "rank": 12
         },
         {
           "name": "Jupiter",
@@ -4562,7 +4590,7 @@
           "rating": "Peak",
           "score": 125,
           "highlight": "great hammerheads patrolling while lemon sharks taper and bull sharks cruise the drift",
-          "rank": 11
+          "rank": 13
         },
         {
           "name": "Koh Tao",
@@ -4576,7 +4604,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "whale sharks arriving at Chumphon Pinnacle while plankton blooms pull them in from the blue",
-          "rank": 12
+          "rank": 14
         },
         {
           "name": "Raja Ampat",
@@ -4590,7 +4618,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "mantas still crowding the cleaning stations while macro subjects fill the shallows",
-          "rank": 13
+          "rank": 15
         },
         {
           "name": "Zanzibar",
@@ -4604,7 +4632,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "turtles and Napoleon wrasse holding while late-season whale sharks linger before the rains",
-          "rank": 14
+          "rank": 16
         },
         {
           "name": "Socorro Island",
@@ -4618,21 +4646,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "mantas soaring at the boulders while humpbacks pass and sharks patrol the drop-offs",
-          "rank": 15
-        },
-        {
-          "name": "Bahamas",
-          "country": "Bahamas",
-          "region": "Caribbean",
-          "difficulty": "intermediate",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 24,
-          "visibility_m": 24,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 123,
-          "highlight": "hammerheads cruising the shallows while tigers and reef sharks trail the scent line",
-          "rank": 16
+          "rank": 17
         },
         {
           "name": "Utila",
@@ -4646,7 +4660,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "whale sharks cruising the north side while turtles and eagle rays work the reef",
-          "rank": 17
+          "rank": 18
         },
         {
           "name": "Poor Knights Islands",
@@ -4660,20 +4674,6 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "rays sweeping the sandy gutters while mola mola and subtropical fish drift through the arches",
-          "rank": 18
-        },
-        {
-          "name": "Maldives",
-          "country": "Maldives",
-          "region": "Indian Ocean",
-          "difficulty": "beginner-intermediate",
-          "access": "liveaboard/resort",
-          "water_temp_c": 29,
-          "visibility_m": 24,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 121,
-          "highlight": "hammerheads gathering off Rasdhoo through the season while Fuvahmulah tigers patrol the outer reef",
           "rank": 19
         },
         {
@@ -5550,7 +5550,7 @@
           "current_strength": "Strong",
           "rating": "Peak",
           "score": 143,
-          "highlight": "tigers daily while hammerheads school, oceanic mantas arrive, threshers clean at depth and whale sharks pass",
+          "highlight": "tiger sharks daily while hammerheads school, oceanic mantas arrive, threshers clean at depth and whale sharks pass",
           "rank": 1
         },
         {
@@ -5582,6 +5582,20 @@
           "rank": 3
         },
         {
+          "name": "Palau",
+          "country": "Palau",
+          "region": "Micronesia / Pacific",
+          "difficulty": "intermediate-advanced",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 29,
+          "visibility_m": 30,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 134,
+          "highlight": "grey-reef sharks packing the corners while bumphead spawning fires on the new moon and mantas feed",
+          "rank": 4
+        },
+        {
           "name": "Coiba",
           "country": "Panama",
           "region": "Eastern Pacific / Panama",
@@ -5593,21 +5607,21 @@
           "rating": "Peak",
           "score": 132,
           "highlight": "scalloped hammerhead schools building over the pinnacles and Contreras while whale sharks still cruise past",
-          "rank": 4
+          "rank": 5
         },
         {
-          "name": "Palau",
-          "country": "Palau",
-          "region": "Micronesia / Pacific",
-          "difficulty": "intermediate-advanced",
+          "name": "Bahamas",
+          "country": "Bahamas",
+          "region": "Caribbean",
+          "difficulty": "intermediate",
           "access": "day-boat/liveaboard",
-          "water_temp_c": 29,
-          "visibility_m": 30,
-          "current_strength": "Strong",
+          "water_temp_c": 24,
+          "visibility_m": 24,
+          "current_strength": "Medium",
           "rating": "Peak",
           "score": 132,
-          "highlight": "grey-reef sharks packing the corners while bumphead spawning fires on the new moon and mantas feed",
-          "rank": 5
+          "highlight": "hammerheads cruising the shallows while tiger sharks and reef sharks trail the scent line",
+          "rank": 6
         },
         {
           "name": "Great Blue Hole",
@@ -5621,7 +5635,21 @@
           "rating": "Peak",
           "score": 130,
           "highlight": "reef sharks holding in the shadows while the first whale sharks gather at Gladden Spit",
-          "rank": 6
+          "rank": 7
+        },
+        {
+          "name": "Maldives",
+          "country": "Maldives",
+          "region": "Indian Ocean",
+          "difficulty": "beginner-intermediate",
+          "access": "liveaboard/resort",
+          "water_temp_c": 29,
+          "visibility_m": 24,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 130,
+          "highlight": "hammerheads gathering off Rasdhoo through the season while Fuvahmulah tiger sharks patrol the outer reef",
+          "rank": 8
         },
         {
           "name": "Malapascua Island",
@@ -5635,7 +5663,7 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "threshers sweeping the shoal at sunrise while mantas pass and macro life stirs",
-          "rank": 7
+          "rank": 9
         },
         {
           "name": "Bay Islands",
@@ -5649,7 +5677,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "whale sharks feeding along the north side while turtles and eagle rays glide the reef",
-          "rank": 8
+          "rank": 10
         },
         {
           "name": "Layang Layang",
@@ -5663,7 +5691,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "schooling scalloped hammerheads arriving on the walls while pelagics patrol the drop-offs",
-          "rank": 9
+          "rank": 11
         },
         {
           "name": "Yap",
@@ -5677,7 +5705,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "mantas still aggregating to mate while reef sharks patrol and mandarinfish spawn reliably",
-          "rank": 10
+          "rank": 12
         },
         {
           "name": "Jupiter",
@@ -5691,7 +5719,7 @@
           "rating": "Peak",
           "score": 125,
           "highlight": "great hammerheads patrolling while lemon sharks taper and bull sharks cruise the drift",
-          "rank": 11
+          "rank": 13
         },
         {
           "name": "Koh Tao",
@@ -5705,7 +5733,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "whale sharks arriving at Chumphon Pinnacle while plankton blooms pull them in from the blue",
-          "rank": 12
+          "rank": 14
         },
         {
           "name": "Raja Ampat",
@@ -5719,7 +5747,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "mantas still crowding the cleaning stations while macro subjects fill the shallows",
-          "rank": 13
+          "rank": 15
         },
         {
           "name": "Zanzibar",
@@ -5733,7 +5761,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "turtles and Napoleon wrasse holding while late-season whale sharks linger before the rains",
-          "rank": 14
+          "rank": 16
         },
         {
           "name": "Socorro Island",
@@ -5747,21 +5775,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "mantas soaring at the boulders while humpbacks pass and sharks patrol the drop-offs",
-          "rank": 15
-        },
-        {
-          "name": "Bahamas",
-          "country": "Bahamas",
-          "region": "Caribbean",
-          "difficulty": "intermediate",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 24,
-          "visibility_m": 24,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 123,
-          "highlight": "hammerheads cruising the shallows while tigers and reef sharks trail the scent line",
-          "rank": 16
+          "rank": 17
         },
         {
           "name": "Utila",
@@ -5775,7 +5789,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "whale sharks cruising the north side while turtles and eagle rays work the reef",
-          "rank": 17
+          "rank": 18
         },
         {
           "name": "Poor Knights Islands",
@@ -5789,20 +5803,6 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "rays sweeping the sandy gutters while mola mola and subtropical fish drift through the arches",
-          "rank": 18
-        },
-        {
-          "name": "Maldives",
-          "country": "Maldives",
-          "region": "Indian Ocean",
-          "difficulty": "beginner-intermediate",
-          "access": "liveaboard/resort",
-          "water_temp_c": 29,
-          "visibility_m": 24,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 121,
-          "highlight": "hammerheads gathering off Rasdhoo through the season while Fuvahmulah tigers patrol the outer reef",
           "rank": 19
         },
         {
@@ -6707,7 +6707,7 @@
           "current_strength": "Strong",
           "rating": "Peak",
           "score": 142,
-          "highlight": "tigers holding year-round while oceanic mantas build toward mating with whale sharks and lingering hammerheads",
+          "highlight": "tiger sharks holding year-round while oceanic mantas build toward mating with whale sharks and lingering hammerheads",
           "rank": 3
         },
         {
@@ -7836,7 +7836,7 @@
           "current_strength": "Strong",
           "rating": "Peak",
           "score": 142,
-          "highlight": "tigers holding year-round while oceanic mantas build toward mating with whale sharks and lingering hammerheads",
+          "highlight": "tiger sharks holding year-round while oceanic mantas build toward mating with whale sharks and lingering hammerheads",
           "rank": 3
         },
         {
@@ -9487,6 +9487,20 @@
           "rank": 40
         },
         {
+          "name": "Palau",
+          "country": "Palau",
+          "region": "Micronesia / Pacific",
+          "difficulty": "intermediate-advanced",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 30,
+          "visibility_m": 18,
+          "current_strength": "Strong",
+          "rating": "Good",
+          "score": 93,
+          "highlight": "grey-reef sharks stacked in the current and mantas feeding on plankton blooms overhead",
+          "rank": 41
+        },
+        {
           "name": "Fiji",
           "country": "Fiji",
           "region": "South Pacific",
@@ -9498,7 +9512,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "mantas arrive in the channels off the Yasawa islands and begin feeding in numbers",
-          "rank": 41
+          "rank": 42
         },
         {
           "name": "Tofo",
@@ -9512,7 +9526,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "mantas queueing at the cleaning stations while reef sharks cruise the walls below",
-          "rank": 42
+          "rank": 43
         },
         {
           "name": "Dubai & Fujairah",
@@ -9526,7 +9540,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "first whale shark reports around Dibba Rock while snapper aggregations build and batfish hover nearby",
-          "rank": 43
+          "rank": 44
         },
         {
           "name": "Galapagos Islands",
@@ -9540,7 +9554,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "mantas massing at the cleaning stations through the last warm month",
-          "rank": 44
+          "rank": 45
         },
         {
           "name": "Muscat & Daymaniyat Islands",
@@ -9554,7 +9568,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "turtles nesting on the islands while mobulas, cuttlefish and dense fish soup fill the water",
-          "rank": 45
+          "rank": 46
         },
         {
           "name": "Okinawa Islands",
@@ -9568,7 +9582,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "manta rays gliding over the cleaning stations while reef fish swarm the coral",
-          "rank": 46
+          "rank": 47
         },
         {
           "name": "Sea of Cortez",
@@ -9582,20 +9596,6 @@
           "rating": "Good",
           "score": 92,
           "highlight": "mobula ray swarms leaping across the surface while sea lions patrol the rocks",
-          "rank": 47
-        },
-        {
-          "name": "Palau",
-          "country": "Palau",
-          "region": "Micronesia / Pacific",
-          "difficulty": "intermediate-advanced",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 30,
-          "visibility_m": 18,
-          "current_strength": "Strong",
-          "rating": "Good",
-          "score": 91,
-          "highlight": "grey-reef sharks stacked in the current and mantas feeding on plankton blooms overhead",
           "rank": 48
         },
         {
@@ -10616,6 +10616,20 @@
           "rank": 40
         },
         {
+          "name": "Palau",
+          "country": "Palau",
+          "region": "Micronesia / Pacific",
+          "difficulty": "intermediate-advanced",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 30,
+          "visibility_m": 18,
+          "current_strength": "Strong",
+          "rating": "Good",
+          "score": 93,
+          "highlight": "grey-reef sharks stacked in the current and mantas feeding on plankton blooms overhead",
+          "rank": 41
+        },
+        {
           "name": "Fiji",
           "country": "Fiji",
           "region": "South Pacific",
@@ -10627,7 +10641,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "mantas arrive in the channels off the Yasawa islands and begin feeding in numbers",
-          "rank": 41
+          "rank": 42
         },
         {
           "name": "Tofo",
@@ -10641,7 +10655,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "mantas queueing at the cleaning stations while reef sharks cruise the walls below",
-          "rank": 42
+          "rank": 43
         },
         {
           "name": "Dubai & Fujairah",
@@ -10655,7 +10669,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "first whale shark reports around Dibba Rock while snapper aggregations build and batfish hover nearby",
-          "rank": 43
+          "rank": 44
         },
         {
           "name": "Galapagos Islands",
@@ -10669,7 +10683,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "mantas massing at the cleaning stations through the last warm month",
-          "rank": 44
+          "rank": 45
         },
         {
           "name": "Muscat & Daymaniyat Islands",
@@ -10683,7 +10697,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "turtles nesting on the islands while mobulas, cuttlefish and dense fish soup fill the water",
-          "rank": 45
+          "rank": 46
         },
         {
           "name": "Okinawa Islands",
@@ -10697,7 +10711,7 @@
           "rating": "Good",
           "score": 92,
           "highlight": "manta rays gliding over the cleaning stations while reef fish swarm the coral",
-          "rank": 46
+          "rank": 47
         },
         {
           "name": "Sea of Cortez",
@@ -10711,20 +10725,6 @@
           "rating": "Good",
           "score": 92,
           "highlight": "mobula ray swarms leaping across the surface while sea lions patrol the rocks",
-          "rank": 47
-        },
-        {
-          "name": "Palau",
-          "country": "Palau",
-          "region": "Micronesia / Pacific",
-          "difficulty": "intermediate-advanced",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 30,
-          "visibility_m": 18,
-          "current_strength": "Strong",
-          "rating": "Good",
-          "score": 91,
-          "highlight": "grey-reef sharks stacked in the current and mantas feeding on plankton blooms overhead",
           "rank": 48
         },
         {
@@ -11367,6 +11367,20 @@
           "rank": 13
         },
         {
+          "name": "Cenderawasih Bay",
+          "country": "Indonesia",
+          "region": "Coral Triangle / West Papua (Indonesia)",
+          "difficulty": "beginner",
+          "access": "liveaboard",
+          "water_temp_c": 28,
+          "visibility_m": 25,
+          "current_strength": "Low",
+          "rating": "Peak",
+          "score": 124,
+          "highlight": "whale-shark encounters under the bagans while wrecks and endemic reef fish thrive",
+          "rank": 14
+        },
+        {
           "name": "Bonaire",
           "country": "Caribbean (Netherlands)",
           "region": "Caribbean",
@@ -11378,7 +11392,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "turtles grazing the shallows while the first coral spawning arrives late in the month",
-          "rank": 14
+          "rank": 15
         },
         {
           "name": "Whitsunday Islands",
@@ -11392,7 +11406,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "humpback whales arriving in the passages while turtles hold the fringing reefs",
-          "rank": 15
+          "rank": 16
         },
         {
           "name": "Aliwal Shoal",
@@ -11406,7 +11420,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "the sardine run igniting bait balls while raggies hold below and dolphins and whales hunt",
-          "rank": 16
+          "rank": 17
         },
         {
           "name": "Mallorca",
@@ -11420,7 +11434,7 @@
           "rating": "Peak",
           "score": 120,
           "highlight": "barracuda tornadoes swirling and eagle rays passing while grouper patrol the busy cave life",
-          "rank": 17
+          "rank": 18
         },
         {
           "name": "Ustica",
@@ -11434,7 +11448,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "bold dusky groupers greeting divers while barracuda schools, amberjack and octopus spread across the sites",
-          "rank": 18
+          "rank": 19
         },
         {
           "name": "Silfra Fissure",
@@ -11448,7 +11462,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "crystal visibility with no marine life, a pure geology dive between the continental plates",
-          "rank": 19
+          "rank": 20
         },
         {
           "name": "Guadalcanal & Western Province",
@@ -11462,7 +11476,7 @@
           "rating": "Peak",
           "score": 117,
           "highlight": "reef sharks riding the current lines while macro life fills the sheltered shallows",
-          "rank": 20
+          "rank": 21
         },
         {
           "name": "Kaş",
@@ -11476,7 +11490,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "grouper and amberjack thickening on the reefs while barracuda school and the first turtles arrive",
-          "rank": 21
+          "rank": 22
         },
         {
           "name": "Gozo & Malta",
@@ -11490,7 +11504,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "groupers stacked on the wrecks and barracuda schooling thick in the blue",
-          "rank": 22
+          "rank": 23
         },
         {
           "name": "Santorini",
@@ -11504,7 +11518,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "anthias clouding the walls while barracuda school and octopus and nudibranchs cover everything",
-          "rank": 23
+          "rank": 24
         },
         {
           "name": "Vis Island",
@@ -11518,7 +11532,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "grouper and lobster showing on every reef and wreck while the full Adriatic cast assembles",
-          "rank": 24
+          "rank": 25
         },
         {
           "name": "Oahu",
@@ -11532,7 +11546,7 @@
           "rating": "Peak",
           "score": 114,
           "highlight": "turtles and spinner dolphins about while Galapagos sharks show on offshore trips amid dense reef-fish activity",
-          "rank": 25
+          "rank": 26
         },
         {
           "name": "Larnaca",
@@ -11546,7 +11560,7 @@
           "rating": "Peak",
           "score": 114,
           "highlight": "barracuda and amberjack schooling over the wrecks while grouper hold structure and turtles pass through",
-          "rank": 26
+          "rank": 27
         },
         {
           "name": "South West Rocks",
@@ -11560,7 +11574,7 @@
           "rating": "Peak",
           "score": 114,
           "highlight": "grey nurse sharks massing in the cave while humpbacks pass offshore",
-          "rank": 27
+          "rank": 28
         },
         {
           "name": "Bali",
@@ -11574,20 +11588,6 @@
           "rating": "Peak",
           "score": 112,
           "highlight": "schools swirling over the wreck and walls while turtles cruise Menjangan and macro thrives at Seraya",
-          "rank": 28
-        },
-        {
-          "name": "Cenderawasih Bay",
-          "country": "Indonesia",
-          "region": "Coral Triangle / West Papua (Indonesia)",
-          "difficulty": "beginner",
-          "access": "liveaboard",
-          "water_temp_c": 28,
-          "visibility_m": 25,
-          "current_strength": "Low",
-          "rating": "Peak",
-          "score": 112,
-          "highlight": "whale-shark encounters under the bagans while wrecks and endemic reef fish thrive",
           "rank": 29
         },
         {
@@ -11965,7 +11965,7 @@
           "current_strength": "Medium",
           "rating": "Good",
           "score": 87,
-          "highlight": "mobula rays still swarming while Los Islotes closes for sea-lion pupping",
+          "highlight": "mobula rays still swarming while Los Islotes closes for the pupping season",
           "rank": 56
         },
         {
@@ -12482,6 +12482,20 @@
           "rank": 13
         },
         {
+          "name": "Cenderawasih Bay",
+          "country": "Indonesia",
+          "region": "Coral Triangle / West Papua (Indonesia)",
+          "difficulty": "beginner",
+          "access": "liveaboard",
+          "water_temp_c": 28,
+          "visibility_m": 25,
+          "current_strength": "Low",
+          "rating": "Peak",
+          "score": 124,
+          "highlight": "whale-shark encounters under the bagans while wrecks and endemic reef fish thrive",
+          "rank": 14
+        },
+        {
           "name": "Bonaire",
           "country": "Caribbean (Netherlands)",
           "region": "Caribbean",
@@ -12493,7 +12507,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "turtles grazing the shallows while the first coral spawning arrives late in the month",
-          "rank": 14
+          "rank": 15
         },
         {
           "name": "Whitsunday Islands",
@@ -12507,7 +12521,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "humpback whales arriving in the passages while turtles hold the fringing reefs",
-          "rank": 15
+          "rank": 16
         },
         {
           "name": "Aliwal Shoal",
@@ -12521,7 +12535,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "the sardine run igniting bait balls while raggies hold below and dolphins and whales hunt",
-          "rank": 16
+          "rank": 17
         },
         {
           "name": "Mallorca",
@@ -12535,7 +12549,7 @@
           "rating": "Peak",
           "score": 120,
           "highlight": "barracuda tornadoes swirling and eagle rays passing while grouper patrol the busy cave life",
-          "rank": 17
+          "rank": 18
         },
         {
           "name": "Ustica",
@@ -12549,7 +12563,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "bold dusky groupers greeting divers while barracuda schools, amberjack and octopus spread across the sites",
-          "rank": 18
+          "rank": 19
         },
         {
           "name": "Silfra Fissure",
@@ -12563,7 +12577,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "crystal visibility with no marine life, a pure geology dive between the continental plates",
-          "rank": 19
+          "rank": 20
         },
         {
           "name": "Guadalcanal & Western Province",
@@ -12577,7 +12591,7 @@
           "rating": "Peak",
           "score": 117,
           "highlight": "reef sharks riding the current lines while macro life fills the sheltered shallows",
-          "rank": 20
+          "rank": 21
         },
         {
           "name": "Kaş",
@@ -12591,7 +12605,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "grouper and amberjack thickening on the reefs while barracuda school and the first turtles arrive",
-          "rank": 21
+          "rank": 22
         },
         {
           "name": "Gozo & Malta",
@@ -12605,7 +12619,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "groupers stacked on the wrecks and barracuda schooling thick in the blue",
-          "rank": 22
+          "rank": 23
         },
         {
           "name": "Santorini",
@@ -12619,7 +12633,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "anthias clouding the walls while barracuda school and octopus and nudibranchs cover everything",
-          "rank": 23
+          "rank": 24
         },
         {
           "name": "Vis Island",
@@ -12633,7 +12647,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "grouper and lobster showing on every reef and wreck while the full Adriatic cast assembles",
-          "rank": 24
+          "rank": 25
         },
         {
           "name": "Oahu",
@@ -12647,7 +12661,7 @@
           "rating": "Peak",
           "score": 114,
           "highlight": "turtles and spinner dolphins about while Galapagos sharks show on offshore trips amid dense reef-fish activity",
-          "rank": 25
+          "rank": 26
         },
         {
           "name": "Larnaca",
@@ -12661,7 +12675,7 @@
           "rating": "Peak",
           "score": 114,
           "highlight": "barracuda and amberjack schooling over the wrecks while grouper hold structure and turtles pass through",
-          "rank": 26
+          "rank": 27
         },
         {
           "name": "South West Rocks",
@@ -12675,7 +12689,7 @@
           "rating": "Peak",
           "score": 114,
           "highlight": "grey nurse sharks massing in the cave while humpbacks pass offshore",
-          "rank": 27
+          "rank": 28
         },
         {
           "name": "Bali",
@@ -12689,20 +12703,6 @@
           "rating": "Peak",
           "score": 112,
           "highlight": "schools swirling over the wreck and walls while turtles cruise Menjangan and macro thrives at Seraya",
-          "rank": 28
-        },
-        {
-          "name": "Cenderawasih Bay",
-          "country": "Indonesia",
-          "region": "Coral Triangle / West Papua (Indonesia)",
-          "difficulty": "beginner",
-          "access": "liveaboard",
-          "water_temp_c": 28,
-          "visibility_m": 25,
-          "current_strength": "Low",
-          "rating": "Peak",
-          "score": 112,
-          "highlight": "whale-shark encounters under the bagans while wrecks and endemic reef fish thrive",
           "rank": 29
         },
         {
@@ -13080,7 +13080,7 @@
           "current_strength": "Medium",
           "rating": "Good",
           "score": 87,
-          "highlight": "mobula rays still swarming while Los Islotes closes for sea-lion pupping",
+          "highlight": "mobula rays still swarming while Los Islotes closes for the pupping season",
           "rank": 56
         },
         {
@@ -15673,6 +15673,20 @@
           "rank": 6
         },
         {
+          "name": "Maldives",
+          "country": "Maldives",
+          "region": "Indian Ocean",
+          "difficulty": "beginner-intermediate",
+          "access": "liveaboard/resort",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 129,
+          "highlight": "mantas crowding Hanifaru Bay in the hundreds while whale-sharks join the feeding",
+          "rank": 7
+        },
+        {
           "name": "Galapagos Islands",
           "country": "Ecuador",
           "region": "Eastern Pacific",
@@ -15684,7 +15698,7 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "whale sharks and hammerheads crowding Darwin and Wolf while mola mola rise from the deep",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Azores",
@@ -15698,7 +15712,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "blue and mako sharks cruising the banks while mantas and dolphins work the seamounts",
-          "rank": 8
+          "rank": 9
         },
         {
           "name": "Heron Island",
@@ -15712,7 +15726,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "mantas queueing at the cleaning stations while humpback whales breach beyond the reef",
-          "rank": 9
+          "rank": 10
         },
         {
           "name": "Cenderawasih Bay",
@@ -15726,7 +15740,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "resident whale sharks hovering under the bagans while barrel sponges, endemics and wreck life flourish",
-          "rank": 10
+          "rank": 11
         },
         {
           "name": "French Polynesia",
@@ -15740,7 +15754,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "the shark wall holding thick in the passes while humpback whales sing offshore",
-          "rank": 11
+          "rank": 12
         },
         {
           "name": "Maui & Kona",
@@ -15754,7 +15768,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "mantas feeding under the lights while dolphins spin in the warm shallows",
-          "rank": 12
+          "rank": 13
         },
         {
           "name": "Jupiter",
@@ -15768,7 +15782,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "goliath grouper spawning aggregation with dozens stacked on the wrecks",
-          "rank": 13
+          "rank": 14
         },
         {
           "name": "Bat Islands",
@@ -15782,7 +15796,7 @@
           "rating": "Peak",
           "score": 121,
           "highlight": "bull sharks massing in their thickest numbers while mantas, cow-nose ray squadrons and turtles stream past",
-          "rank": 14
+          "rank": 15
         },
         {
           "name": "Fernando de Noronha",
@@ -15796,7 +15810,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "spinner dolphins swirling at the surface while sharks and turtles work the clear blue below",
-          "rank": 15
+          "rank": 16
         },
         {
           "name": "Kaş",
@@ -15810,7 +15824,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "turtles gliding over the reefs while pelagics sweep through on nearly every dive",
-          "rank": 16
+          "rank": 17
         },
         {
           "name": "Ustica",
@@ -15824,7 +15838,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "big groupers holding court while pelagic amberjack and barracuda hunt at their most active",
-          "rank": 17
+          "rank": 18
         },
         {
           "name": "Protea Banks",
@@ -15838,7 +15852,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "ragged-tooth sharks filling the Northern caves while bull sharks cruise and guitarfish rest on the sand",
-          "rank": 18
+          "rank": 19
         },
         {
           "name": "Silfra Fissure",
@@ -15852,7 +15866,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "crystal visibility with no marine life, a pure geology dive between the continental plates",
-          "rank": 19
+          "rank": 20
         },
         {
           "name": "Mallorca",
@@ -15866,7 +15880,7 @@
           "rating": "Peak",
           "score": 117,
           "highlight": "barracuda walling up at El Toro and Malgrats with grouper, eagle ray and the odd amberjack",
-          "rank": 20
+          "rank": 21
         },
         {
           "name": "Fiji",
@@ -15880,20 +15894,6 @@
           "rating": "Peak",
           "score": 117,
           "highlight": "mantas somersaulting through the plankton lines while sharks cruise and corals glow in clear water",
-          "rank": 21
-        },
-        {
-          "name": "Maldives",
-          "country": "Maldives",
-          "region": "Indian Ocean",
-          "difficulty": "beginner-intermediate",
-          "access": "liveaboard/resort",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 117,
-          "highlight": "mantas crowding Hanifaru Bay in the hundreds while whale-sharks join the feeding",
           "rank": 22
         },
         {
@@ -16415,6 +16415,20 @@
           "rank": 59
         },
         {
+          "name": "Fuvahmulah",
+          "country": "Maldives",
+          "region": "Indian Ocean / Maldives",
+          "difficulty": "advanced",
+          "access": "day-boat",
+          "water_temp_c": 29,
+          "visibility_m": 24,
+          "current_strength": "Strong",
+          "rating": "Shoulder",
+          "score": 77,
+          "highlight": "resident tiger sharks guaranteed while thresher sharks work the reef cleaning stations steadily",
+          "rank": 60
+        },
+        {
           "name": "Truk (Chuuk) Lagoon",
           "country": "Micronesia (FSM)",
           "region": "Micronesia / Pacific",
@@ -16426,7 +16440,7 @@
           "rating": "Good",
           "score": 75,
           "highlight": "wreck reefs busy as ever while sharks and rays patrol the sandy channels",
-          "rank": 60
+          "rank": 61
         },
         {
           "name": "Coiba",
@@ -16440,7 +16454,7 @@
           "rating": "Shoulder",
           "score": 69,
           "highlight": "resident reef life thriving with whitetips and mobulas while passing mantas feed at plankton-rich sites",
-          "rank": 61
+          "rank": 62
         },
         {
           "name": "Muscat & Daymaniyat Islands",
@@ -16454,20 +16468,6 @@
           "rating": "Shoulder",
           "score": 69,
           "highlight": "whale sharks feeding on the blooms while devil rays and huge trevally schools sweep past",
-          "rank": 62
-        },
-        {
-          "name": "Fuvahmulah",
-          "country": "Maldives",
-          "region": "Indian Ocean / Maldives",
-          "difficulty": "advanced",
-          "access": "day-boat",
-          "water_temp_c": 29,
-          "visibility_m": 24,
-          "current_strength": "Strong",
-          "rating": "Shoulder",
-          "score": 68,
-          "highlight": "resident tigers guaranteed while thresher sharks work the reef cleaning stations steadily",
           "rank": 63
         },
         {
@@ -16760,6 +16760,20 @@
           "rank": 6
         },
         {
+          "name": "Maldives",
+          "country": "Maldives",
+          "region": "Indian Ocean",
+          "difficulty": "beginner-intermediate",
+          "access": "liveaboard/resort",
+          "water_temp_c": 29,
+          "visibility_m": 18,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 129,
+          "highlight": "mantas crowding Hanifaru Bay in the hundreds while whale-sharks join the feeding",
+          "rank": 7
+        },
+        {
           "name": "Galapagos Islands",
           "country": "Ecuador",
           "region": "Eastern Pacific",
@@ -16771,7 +16785,7 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "whale sharks and hammerheads crowding Darwin and Wolf while mola mola rise from the deep",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Azores",
@@ -16785,7 +16799,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "blue and mako sharks cruising the banks while mantas and dolphins work the seamounts",
-          "rank": 8
+          "rank": 9
         },
         {
           "name": "Heron Island",
@@ -16799,7 +16813,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "mantas queueing at the cleaning stations while humpback whales breach beyond the reef",
-          "rank": 9
+          "rank": 10
         },
         {
           "name": "Cenderawasih Bay",
@@ -16813,7 +16827,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "resident whale sharks hovering under the bagans while barrel sponges, endemics and wreck life flourish",
-          "rank": 10
+          "rank": 11
         },
         {
           "name": "French Polynesia",
@@ -16827,7 +16841,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "the shark wall holding thick in the passes while humpback whales sing offshore",
-          "rank": 11
+          "rank": 12
         },
         {
           "name": "Maui & Kona",
@@ -16841,7 +16855,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "mantas feeding under the lights while dolphins spin in the warm shallows",
-          "rank": 12
+          "rank": 13
         },
         {
           "name": "Jupiter",
@@ -16855,7 +16869,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "goliath grouper spawning aggregation with dozens stacked on the wrecks",
-          "rank": 13
+          "rank": 14
         },
         {
           "name": "Bat Islands",
@@ -16869,7 +16883,7 @@
           "rating": "Peak",
           "score": 121,
           "highlight": "bull sharks massing in their thickest numbers while mantas, cow-nose ray squadrons and turtles stream past",
-          "rank": 14
+          "rank": 15
         },
         {
           "name": "Fernando de Noronha",
@@ -16883,7 +16897,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "spinner dolphins swirling at the surface while sharks and turtles work the clear blue below",
-          "rank": 15
+          "rank": 16
         },
         {
           "name": "Kaş",
@@ -16897,7 +16911,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "turtles gliding over the reefs while pelagics sweep through on nearly every dive",
-          "rank": 16
+          "rank": 17
         },
         {
           "name": "Ustica",
@@ -16911,7 +16925,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "big groupers holding court while pelagic amberjack and barracuda hunt at their most active",
-          "rank": 17
+          "rank": 18
         },
         {
           "name": "Protea Banks",
@@ -16925,7 +16939,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "ragged-tooth sharks filling the Northern caves while bull sharks cruise and guitarfish rest on the sand",
-          "rank": 18
+          "rank": 19
         },
         {
           "name": "Silfra Fissure",
@@ -16939,7 +16953,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "crystal visibility with no marine life, a pure geology dive between the continental plates",
-          "rank": 19
+          "rank": 20
         },
         {
           "name": "Mallorca",
@@ -16953,7 +16967,7 @@
           "rating": "Peak",
           "score": 117,
           "highlight": "barracuda walling up at El Toro and Malgrats with grouper, eagle ray and the odd amberjack",
-          "rank": 20
+          "rank": 21
         },
         {
           "name": "Fiji",
@@ -16967,20 +16981,6 @@
           "rating": "Peak",
           "score": 117,
           "highlight": "mantas somersaulting through the plankton lines while sharks cruise and corals glow in clear water",
-          "rank": 21
-        },
-        {
-          "name": "Maldives",
-          "country": "Maldives",
-          "region": "Indian Ocean",
-          "difficulty": "beginner-intermediate",
-          "access": "liveaboard/resort",
-          "water_temp_c": 29,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 117,
-          "highlight": "mantas crowding Hanifaru Bay in the hundreds while whale-sharks join the feeding",
           "rank": 22
         },
         {
@@ -17502,6 +17502,20 @@
           "rank": 59
         },
         {
+          "name": "Fuvahmulah",
+          "country": "Maldives",
+          "region": "Indian Ocean / Maldives",
+          "difficulty": "advanced",
+          "access": "day-boat",
+          "water_temp_c": 29,
+          "visibility_m": 24,
+          "current_strength": "Strong",
+          "rating": "Shoulder",
+          "score": 77,
+          "highlight": "resident tiger sharks guaranteed while thresher sharks work the reef cleaning stations steadily",
+          "rank": 60
+        },
+        {
           "name": "Truk (Chuuk) Lagoon",
           "country": "Micronesia (FSM)",
           "region": "Micronesia / Pacific",
@@ -17513,7 +17527,7 @@
           "rating": "Good",
           "score": 75,
           "highlight": "wreck reefs busy as ever while sharks and rays patrol the sandy channels",
-          "rank": 60
+          "rank": 61
         },
         {
           "name": "Coiba",
@@ -17527,7 +17541,7 @@
           "rating": "Shoulder",
           "score": 69,
           "highlight": "resident reef life thriving with whitetips and mobulas while passing mantas feed at plankton-rich sites",
-          "rank": 61
+          "rank": 62
         },
         {
           "name": "Muscat & Daymaniyat Islands",
@@ -17541,20 +17555,6 @@
           "rating": "Shoulder",
           "score": 69,
           "highlight": "whale sharks feeding on the blooms while devil rays and huge trevally schools sweep past",
-          "rank": 62
-        },
-        {
-          "name": "Fuvahmulah",
-          "country": "Maldives",
-          "region": "Indian Ocean / Maldives",
-          "difficulty": "advanced",
-          "access": "day-boat",
-          "water_temp_c": 29,
-          "visibility_m": 24,
-          "current_strength": "Strong",
-          "rating": "Shoulder",
-          "score": 68,
-          "highlight": "resident tigers guaranteed while thresher sharks work the reef cleaning stations steadily",
           "rank": 63
         },
         {
@@ -18001,6 +18001,20 @@
           "rank": 17
         },
         {
+          "name": "Koh Tao",
+          "country": "Thailand",
+          "region": "Gulf of Thailand / Thailand",
+          "difficulty": "beginner-friendly",
+          "access": "shore / day-boat",
+          "water_temp_c": 29,
+          "visibility_m": 22,
+          "current_strength": "Moderate",
+          "rating": "Peak",
+          "score": 122,
+          "highlight": "whale-shark sightings picking back up while the pinnacles hit their fishiest stretch",
+          "rank": 18
+        },
+        {
           "name": "Okinawa Islands",
           "country": "Japan",
           "region": "East China Sea",
@@ -18012,7 +18026,7 @@
           "rating": "Peak",
           "score": 120,
           "highlight": "manta mating trains snaking over the Ishigaki reefs while cleaning stations stay busy",
-          "rank": 18
+          "rank": 19
         },
         {
           "name": "Fernando de Noronha",
@@ -18026,7 +18040,7 @@
           "rating": "Peak",
           "score": 119,
           "highlight": "spinner dolphins circling the bay while sharks patrol and turtles drift the walls",
-          "rank": 19
+          "rank": 20
         },
         {
           "name": "Zanzibar",
@@ -18040,7 +18054,7 @@
           "rating": "Peak",
           "score": 119,
           "highlight": "humpback whales gathering in numbers while barracuda and tuna school offshore",
-          "rank": 20
+          "rank": 21
         },
         {
           "name": "Guadalcanal & Western Province",
@@ -18054,7 +18068,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "sharks cruising the reef edges while mandarinfish flare up at dusk in the shallows",
-          "rank": 21
+          "rank": 22
         },
         {
           "name": "Kaş",
@@ -18068,7 +18082,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "turtles feeding in the shallows while amberjack and barracuda hunt over abundant reef fish",
-          "rank": 22
+          "rank": 23
         },
         {
           "name": "Jupiter",
@@ -18082,7 +18096,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "goliath grouper spawn peaking in big schools around the new moon",
-          "rank": 23
+          "rank": 24
         },
         {
           "name": "Great Barrier Reef",
@@ -18096,7 +18110,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "humpbacks still passing while sharks patrol the walls and potato cod mob the divers",
-          "rank": 24
+          "rank": 25
         },
         {
           "name": "Ustica",
@@ -18110,7 +18124,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "groupers, barracuda and amberjack still swarming the walls as the action carries on",
-          "rank": 25
+          "rank": 26
         },
         {
           "name": "Aqaba",
@@ -18124,7 +18138,7 @@
           "rating": "Peak",
           "score": 116,
           "highlight": "eagle rays and turtles cruising through thick fish life while anthias clouds hover over the wrecks",
-          "rank": 26
+          "rank": 27
         },
         {
           "name": "Chania (Crete)",
@@ -18138,7 +18152,7 @@
           "rating": "Peak",
           "score": 116,
           "highlight": "big-fish activity hitting its best of the year while the reefs stay rich",
-          "rank": 27
+          "rank": 28
         },
         {
           "name": "Larnaca",
@@ -18152,7 +18166,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "large barracuda and amberjack schools circling while grouper hold the wrecks and turtles cruise past",
-          "rank": 28
+          "rank": 29
         },
         {
           "name": "Sipadan Island",
@@ -18166,7 +18180,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "turtles gliding along the wall while the barracuda school reforms over the point",
-          "rank": 29
+          "rank": 30
         },
         {
           "name": "Gozo & Malta",
@@ -18180,7 +18194,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "groupers out on the ledges while barracuda and tuna hunt the drop-offs",
-          "rank": 30
+          "rank": 31
         },
         {
           "name": "Santorini",
@@ -18194,7 +18208,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "big groupers out in the open while barracuda hunt among pelagic visitors",
-          "rank": 31
+          "rank": 32
         },
         {
           "name": "Vis Island",
@@ -18208,7 +18222,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "grouper, lobster and octopus staying plentiful while the warm water keeps the reefs active",
-          "rank": 32
+          "rank": 33
         },
         {
           "name": "Mallorca",
@@ -18222,7 +18236,7 @@
           "rating": "Peak",
           "score": 114,
           "highlight": "amberjack hunting hard while barracuda, grouper and rays crowd reefs at their richest",
-          "rank": 33
+          "rank": 34
         },
         {
           "name": "Gili Islands & Lombok",
@@ -18236,7 +18250,7 @@
           "rating": "Peak",
           "score": 113,
           "highlight": "turtles crowding the slopes while reef sharks hold in the gentle current",
-          "rank": 34
+          "rank": 35
         },
         {
           "name": "Oahu",
@@ -18250,7 +18264,7 @@
           "rating": "Peak",
           "score": 113,
           "highlight": "fish massing while turtles, reef sharks and rays work the wrecks with an occasional monk seal",
-          "rank": 35
+          "rank": 36
         },
         {
           "name": "Bat Islands",
@@ -18264,7 +18278,7 @@
           "rating": "Peak",
           "score": 112,
           "highlight": "bull sharks staying abundant while big-animal encounters hold up right through the wet months",
-          "rank": 36
+          "rank": 37
         },
         {
           "name": "Bunaken National Marine Park",
@@ -18278,20 +18292,6 @@
           "rating": "Peak",
           "score": 111,
           "highlight": "turtles feeding along the reef crest while reef fish shoal and sharks cruise deeper water",
-          "rank": 37
-        },
-        {
-          "name": "Koh Tao",
-          "country": "Thailand",
-          "region": "Gulf of Thailand / Thailand",
-          "difficulty": "beginner-friendly",
-          "access": "shore / day-boat",
-          "water_temp_c": 29,
-          "visibility_m": 22,
-          "current_strength": "Moderate",
-          "rating": "Peak",
-          "score": 110,
-          "highlight": "whale-shark sightings picking back up while the pinnacles hit their fishiest stretch",
           "rank": 38
         },
         {
@@ -19074,6 +19074,20 @@
           "rank": 17
         },
         {
+          "name": "Koh Tao",
+          "country": "Thailand",
+          "region": "Gulf of Thailand / Thailand",
+          "difficulty": "beginner-friendly",
+          "access": "shore / day-boat",
+          "water_temp_c": 29,
+          "visibility_m": 22,
+          "current_strength": "Moderate",
+          "rating": "Peak",
+          "score": 122,
+          "highlight": "whale-shark sightings picking back up while the pinnacles hit their fishiest stretch",
+          "rank": 18
+        },
+        {
           "name": "Okinawa Islands",
           "country": "Japan",
           "region": "East China Sea",
@@ -19085,7 +19099,7 @@
           "rating": "Peak",
           "score": 120,
           "highlight": "manta mating trains snaking over the Ishigaki reefs while cleaning stations stay busy",
-          "rank": 18
+          "rank": 19
         },
         {
           "name": "Fernando de Noronha",
@@ -19099,7 +19113,7 @@
           "rating": "Peak",
           "score": 119,
           "highlight": "spinner dolphins circling the bay while sharks patrol and turtles drift the walls",
-          "rank": 19
+          "rank": 20
         },
         {
           "name": "Zanzibar",
@@ -19113,7 +19127,7 @@
           "rating": "Peak",
           "score": 119,
           "highlight": "humpback whales gathering in numbers while barracuda and tuna school offshore",
-          "rank": 20
+          "rank": 21
         },
         {
           "name": "Guadalcanal & Western Province",
@@ -19127,7 +19141,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "sharks cruising the reef edges while mandarinfish flare up at dusk in the shallows",
-          "rank": 21
+          "rank": 22
         },
         {
           "name": "Kaş",
@@ -19141,7 +19155,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "turtles feeding in the shallows while amberjack and barracuda hunt over abundant reef fish",
-          "rank": 22
+          "rank": 23
         },
         {
           "name": "Jupiter",
@@ -19155,7 +19169,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "goliath grouper spawn peaking in big schools around the new moon",
-          "rank": 23
+          "rank": 24
         },
         {
           "name": "Great Barrier Reef",
@@ -19169,7 +19183,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "humpbacks still passing while sharks patrol the walls and potato cod mob the divers",
-          "rank": 24
+          "rank": 25
         },
         {
           "name": "Ustica",
@@ -19183,7 +19197,7 @@
           "rating": "Peak",
           "score": 118,
           "highlight": "groupers, barracuda and amberjack still swarming the walls as the action carries on",
-          "rank": 25
+          "rank": 26
         },
         {
           "name": "Aqaba",
@@ -19197,7 +19211,7 @@
           "rating": "Peak",
           "score": 116,
           "highlight": "eagle rays and turtles cruising through thick fish life while anthias clouds hover over the wrecks",
-          "rank": 26
+          "rank": 27
         },
         {
           "name": "Chania (Crete)",
@@ -19211,7 +19225,7 @@
           "rating": "Peak",
           "score": 116,
           "highlight": "big-fish activity hitting its best of the year while the reefs stay rich",
-          "rank": 27
+          "rank": 28
         },
         {
           "name": "Larnaca",
@@ -19225,7 +19239,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "large barracuda and amberjack schools circling while grouper hold the wrecks and turtles cruise past",
-          "rank": 28
+          "rank": 29
         },
         {
           "name": "Sipadan Island",
@@ -19239,7 +19253,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "turtles gliding along the wall while the barracuda school reforms over the point",
-          "rank": 29
+          "rank": 30
         },
         {
           "name": "Gozo & Malta",
@@ -19253,7 +19267,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "groupers out on the ledges while barracuda and tuna hunt the drop-offs",
-          "rank": 30
+          "rank": 31
         },
         {
           "name": "Santorini",
@@ -19267,7 +19281,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "big groupers out in the open while barracuda hunt among pelagic visitors",
-          "rank": 31
+          "rank": 32
         },
         {
           "name": "Vis Island",
@@ -19281,7 +19295,7 @@
           "rating": "Peak",
           "score": 115,
           "highlight": "grouper, lobster and octopus staying plentiful while the warm water keeps the reefs active",
-          "rank": 32
+          "rank": 33
         },
         {
           "name": "Mallorca",
@@ -19295,7 +19309,7 @@
           "rating": "Peak",
           "score": 114,
           "highlight": "amberjack hunting hard while barracuda, grouper and rays crowd reefs at their richest",
-          "rank": 33
+          "rank": 34
         },
         {
           "name": "Gili Islands & Lombok",
@@ -19309,7 +19323,7 @@
           "rating": "Peak",
           "score": 113,
           "highlight": "turtles crowding the slopes while reef sharks hold in the gentle current",
-          "rank": 34
+          "rank": 35
         },
         {
           "name": "Oahu",
@@ -19323,7 +19337,7 @@
           "rating": "Peak",
           "score": 113,
           "highlight": "fish massing while turtles, reef sharks and rays work the wrecks with an occasional monk seal",
-          "rank": 35
+          "rank": 36
         },
         {
           "name": "Bat Islands",
@@ -19337,7 +19351,7 @@
           "rating": "Peak",
           "score": 112,
           "highlight": "bull sharks staying abundant while big-animal encounters hold up right through the wet months",
-          "rank": 36
+          "rank": 37
         },
         {
           "name": "Bunaken National Marine Park",
@@ -19351,20 +19365,6 @@
           "rating": "Peak",
           "score": 111,
           "highlight": "turtles feeding along the reef crest while reef fish shoal and sharks cruise deeper water",
-          "rank": 37
-        },
-        {
-          "name": "Koh Tao",
-          "country": "Thailand",
-          "region": "Gulf of Thailand / Thailand",
-          "difficulty": "beginner-friendly",
-          "access": "shore / day-boat",
-          "water_temp_c": 29,
-          "visibility_m": 22,
-          "current_strength": "Moderate",
-          "rating": "Peak",
-          "score": 110,
-          "highlight": "whale-shark sightings picking back up while the pinnacles hit their fishiest stretch",
           "rank": 38
         },
         {
@@ -19993,6 +19993,20 @@
           "rank": 6
         },
         {
+          "name": "Cocos Island",
+          "country": "Costa Rica",
+          "region": "Eastern Pacific",
+          "difficulty": "advanced",
+          "access": "liveaboard",
+          "water_temp_c": 25,
+          "visibility_m": 10,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 128,
+          "highlight": "hammerheads and whale-sharks crowding the cleaning stations while mantas glide overhead",
+          "rank": 7
+        },
+        {
           "name": "Maldives",
           "country": "Maldives",
           "region": "Indian Ocean",
@@ -20004,7 +20018,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "mantas tailing off at Hanifaru while whale sharks stay frequent across the atolls",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Muscat & Daymaniyat Islands",
@@ -20018,7 +20032,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "late whale sharks and mobulas lingering while turtles and leopard sharks return to the reef",
-          "rank": 8
+          "rank": 9
         },
         {
           "name": "Galapagos Islands",
@@ -20032,7 +20046,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "whale sharks tapering off while hammerheads and mola still crowd the northern seamounts",
-          "rank": 9
+          "rank": 10
         },
         {
           "name": "Sipadan Island",
@@ -20046,7 +20060,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "barracuda tornado wheeling off the point while turtles and reef sharks work the wall",
-          "rank": 10
+          "rank": 11
         },
         {
           "name": "Okinawa Islands",
@@ -20060,7 +20074,7 @@
           "rating": "Peak",
           "score": 125,
           "highlight": "mantas lingering at the cleaning stations while turtles cruise the reef edges",
-          "rank": 11
+          "rank": 12
         },
         {
           "name": "Cenderawasih Bay",
@@ -20074,7 +20088,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "whale sharks holding year-round while healthy reefs and coral-clad wrecks flourish",
-          "rank": 12
+          "rank": 13
         },
         {
           "name": "French Polynesia",
@@ -20088,20 +20102,6 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "sharks still walling up in the passes while late humpbacks linger offshore",
-          "rank": 13
-        },
-        {
-          "name": "Cocos Island",
-          "country": "Costa Rica",
-          "region": "Eastern Pacific",
-          "difficulty": "advanced",
-          "access": "liveaboard",
-          "water_temp_c": 25,
-          "visibility_m": 10,
-          "current_strength": "Strong",
-          "rating": "Peak",
-          "score": 122,
-          "highlight": "hammerheads and whale-sharks crowding the cleaning stations while mantas glide overhead",
           "rank": 14
         },
         {
@@ -20245,6 +20245,20 @@
           "rank": 24
         },
         {
+          "name": "Fuvahmulah",
+          "country": "Maldives",
+          "region": "Indian Ocean / Maldives",
+          "difficulty": "advanced",
+          "access": "day-boat",
+          "water_temp_c": 29,
+          "visibility_m": 28,
+          "current_strength": "Strong",
+          "rating": "Good",
+          "score": 111,
+          "highlight": "tiger sharks holding year-round while thresher sharks enter their strongest window and scalloped hammerhead schools build",
+          "rank": 25
+        },
+        {
           "name": "Tenerife",
           "country": "Spain",
           "region": "Atlantic / Canary Islands (Spain)",
@@ -20256,7 +20270,7 @@
           "rating": "Peak",
           "score": 110,
           "highlight": "rays and turtles everywhere while roncador schools pack thick over the wrecks",
-          "rank": 25
+          "rank": 26
         },
         {
           "name": "Malpelo Island",
@@ -20270,7 +20284,7 @@
           "rating": "Good",
           "score": 108,
           "highlight": "late whale sharks lingering while silky sharks taper off and hammerheads school",
-          "rank": 26
+          "rank": 27
         },
         {
           "name": "South West Rocks",
@@ -20284,7 +20298,7 @@
           "rating": "Peak",
           "score": 107,
           "highlight": "grey nurse sharks resting in the cave gutters while rays cruise the sand",
-          "rank": 27
+          "rank": 28
         },
         {
           "name": "Protea Banks",
@@ -20298,20 +20312,6 @@
           "rating": "Good",
           "score": 106,
           "highlight": "bull sharks patrolling while scalloped hammerhead schools build and tiger sharks return with the warming water",
-          "rank": 28
-        },
-        {
-          "name": "Fuvahmulah",
-          "country": "Maldives",
-          "region": "Indian Ocean / Maldives",
-          "difficulty": "advanced",
-          "access": "day-boat",
-          "water_temp_c": 29,
-          "visibility_m": 28,
-          "current_strength": "Strong",
-          "rating": "Good",
-          "score": 105,
-          "highlight": "tigers holding year-round while thresher sharks enter their strongest window and scalloped hammerhead schools build",
           "rank": 29
         },
         {
@@ -21080,6 +21080,20 @@
           "rank": 6
         },
         {
+          "name": "Cocos Island",
+          "country": "Costa Rica",
+          "region": "Eastern Pacific",
+          "difficulty": "advanced",
+          "access": "liveaboard",
+          "water_temp_c": 25,
+          "visibility_m": 10,
+          "current_strength": "Strong",
+          "rating": "Peak",
+          "score": 128,
+          "highlight": "hammerheads and whale-sharks crowding the cleaning stations while mantas glide overhead",
+          "rank": 7
+        },
+        {
           "name": "Maldives",
           "country": "Maldives",
           "region": "Indian Ocean",
@@ -21091,7 +21105,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "mantas tailing off at Hanifaru while whale sharks stay frequent across the atolls",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Muscat & Daymaniyat Islands",
@@ -21105,7 +21119,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "late whale sharks and mobulas lingering while turtles and leopard sharks return to the reef",
-          "rank": 8
+          "rank": 9
         },
         {
           "name": "Galapagos Islands",
@@ -21119,7 +21133,7 @@
           "rating": "Peak",
           "score": 128,
           "highlight": "whale sharks tapering off while hammerheads and mola still crowd the northern seamounts",
-          "rank": 9
+          "rank": 10
         },
         {
           "name": "Sipadan Island",
@@ -21133,7 +21147,7 @@
           "rating": "Peak",
           "score": 126,
           "highlight": "barracuda tornado wheeling off the point while turtles and reef sharks work the wall",
-          "rank": 10
+          "rank": 11
         },
         {
           "name": "Okinawa Islands",
@@ -21147,7 +21161,7 @@
           "rating": "Peak",
           "score": 125,
           "highlight": "mantas lingering at the cleaning stations while turtles cruise the reef edges",
-          "rank": 11
+          "rank": 12
         },
         {
           "name": "Cenderawasih Bay",
@@ -21161,7 +21175,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "whale sharks holding year-round while healthy reefs and coral-clad wrecks flourish",
-          "rank": 12
+          "rank": 13
         },
         {
           "name": "French Polynesia",
@@ -21175,20 +21189,6 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "sharks still walling up in the passes while late humpbacks linger offshore",
-          "rank": 13
-        },
-        {
-          "name": "Cocos Island",
-          "country": "Costa Rica",
-          "region": "Eastern Pacific",
-          "difficulty": "advanced",
-          "access": "liveaboard",
-          "water_temp_c": 25,
-          "visibility_m": 10,
-          "current_strength": "Strong",
-          "rating": "Peak",
-          "score": 122,
-          "highlight": "hammerheads and whale-sharks crowding the cleaning stations while mantas glide overhead",
           "rank": 14
         },
         {
@@ -21332,6 +21332,20 @@
           "rank": 24
         },
         {
+          "name": "Fuvahmulah",
+          "country": "Maldives",
+          "region": "Indian Ocean / Maldives",
+          "difficulty": "advanced",
+          "access": "day-boat",
+          "water_temp_c": 29,
+          "visibility_m": 28,
+          "current_strength": "Strong",
+          "rating": "Good",
+          "score": 111,
+          "highlight": "tiger sharks holding year-round while thresher sharks enter their strongest window and scalloped hammerhead schools build",
+          "rank": 25
+        },
+        {
           "name": "Tenerife",
           "country": "Spain",
           "region": "Atlantic / Canary Islands (Spain)",
@@ -21343,7 +21357,7 @@
           "rating": "Peak",
           "score": 110,
           "highlight": "rays and turtles everywhere while roncador schools pack thick over the wrecks",
-          "rank": 25
+          "rank": 26
         },
         {
           "name": "Malpelo Island",
@@ -21357,7 +21371,7 @@
           "rating": "Good",
           "score": 108,
           "highlight": "late whale sharks lingering while silky sharks taper off and hammerheads school",
-          "rank": 26
+          "rank": 27
         },
         {
           "name": "South West Rocks",
@@ -21371,7 +21385,7 @@
           "rating": "Peak",
           "score": 107,
           "highlight": "grey nurse sharks resting in the cave gutters while rays cruise the sand",
-          "rank": 27
+          "rank": 28
         },
         {
           "name": "Protea Banks",
@@ -21385,20 +21399,6 @@
           "rating": "Good",
           "score": 106,
           "highlight": "bull sharks patrolling while scalloped hammerhead schools build and tiger sharks return with the warming water",
-          "rank": 28
-        },
-        {
-          "name": "Fuvahmulah",
-          "country": "Maldives",
-          "region": "Indian Ocean / Maldives",
-          "difficulty": "advanced",
-          "access": "day-boat",
-          "water_temp_c": 29,
-          "visibility_m": 28,
-          "current_strength": "Strong",
-          "rating": "Good",
-          "score": 105,
-          "highlight": "tigers holding year-round while thresher sharks enter their strongest window and scalloped hammerhead schools build",
           "rank": 29
         },
         {
@@ -22265,6 +22265,20 @@
           "rank": 13
         },
         {
+          "name": "Fuvahmulah",
+          "country": "Maldives",
+          "region": "Indian Ocean / Maldives",
+          "difficulty": "advanced",
+          "access": "day-boat",
+          "water_temp_c": 28,
+          "visibility_m": 30,
+          "current_strength": "Strong",
+          "rating": "Good",
+          "score": 112,
+          "highlight": "resident tiger sharks daily while thresher season continues and hammerhead schools grow as the thermocline shallows",
+          "rank": 14
+        },
+        {
           "name": "South West Rocks",
           "country": "Australia",
           "region": "Tasman Sea / New South Wales",
@@ -22276,7 +22290,7 @@
           "rating": "Peak",
           "score": 111,
           "highlight": "grey nurse sharks holding in the gutters while turtles and rays return",
-          "rank": 14
+          "rank": 15
         },
         {
           "name": "Tenerife",
@@ -22290,20 +22304,6 @@
           "rating": "Peak",
           "score": 110,
           "highlight": "stingrays massing while turtles roam and the first angel sharks edge into the shallows",
-          "rank": 15
-        },
-        {
-          "name": "Fuvahmulah",
-          "country": "Maldives",
-          "region": "Indian Ocean / Maldives",
-          "difficulty": "advanced",
-          "access": "day-boat",
-          "water_temp_c": 28,
-          "visibility_m": 30,
-          "current_strength": "Strong",
-          "rating": "Good",
-          "score": 106,
-          "highlight": "resident tigers daily while thresher season continues and hammerhead schools grow as the thermocline shallows",
           "rank": 16
         },
         {
@@ -22489,6 +22489,20 @@
           "rank": 29
         },
         {
+          "name": "Aliwal Shoal",
+          "country": "South Africa",
+          "region": "Indian Ocean / KwaZulu-Natal",
+          "difficulty": "intermediate",
+          "access": "day-boat",
+          "water_temp_c": 24,
+          "visibility_m": 24,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 92,
+          "highlight": "raggies departing the shoal while tiger sharks return to the warming reef",
+          "rank": 30
+        },
+        {
           "name": "Cancún & Playa del Carmen",
           "country": "Mexico",
           "region": "Caribbean / Mexico",
@@ -22500,7 +22514,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "first bull sharks appearing off Playa del Carmen mid-month while eagle rays return to the wrecks",
-          "rank": 30
+          "rank": 31
         },
         {
           "name": "Bay Islands",
@@ -22514,7 +22528,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "whale sharks cruising offshore again while turtles hold the sheltered reef walls",
-          "rank": 31
+          "rank": 32
         },
         {
           "name": "French Polynesia",
@@ -22528,7 +22542,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "reef sharks holding in the current while mantas return to the lagoon cleaning stations",
-          "rank": 32
+          "rank": 33
         },
         {
           "name": "Utila",
@@ -22542,7 +22556,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "whale sharks making a second run offshore while turtles patrol the reef",
-          "rank": 33
+          "rank": 34
         },
         {
           "name": "Great Barrier Reef",
@@ -22556,7 +22570,7 @@
           "rating": "Good",
           "score": 90,
           "highlight": "coral mass spawning erupting after the full moon while turtle nesting begins on the cays",
-          "rank": 34
+          "rank": 35
         },
         {
           "name": "Malapascua Island",
@@ -22570,7 +22584,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "threshers gliding through the cleaning station at dawn while macro life stirs inshore",
-          "rank": 35
+          "rank": 36
         },
         {
           "name": "Maui & Kona",
@@ -22584,7 +22598,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "mantas feeding under the lights while the early whales return to the channel",
-          "rank": 36
+          "rank": 37
         },
         {
           "name": "Aqaba",
@@ -22598,7 +22612,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "seahorses and frogfish showing themselves more readily while the reefs stay lively and crowds thin",
-          "rank": 37
+          "rank": 38
         },
         {
           "name": "Raja Ampat",
@@ -22612,7 +22626,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "mantas gathering again at Manta Sandy and Manta Ridge while cleaning stations get busy",
-          "rank": 38
+          "rank": 39
         },
         {
           "name": "Whitsunday Islands",
@@ -22626,7 +22640,7 @@
           "rating": "Good",
           "score": 87,
           "highlight": "coral spawning drifting over the reefs at night while turtles graze the shallows",
-          "rank": 39
+          "rank": 40
         },
         {
           "name": "Fiji",
@@ -22640,7 +22654,7 @@
           "rating": "Good",
           "score": 87,
           "highlight": "bull sharks massing at the feeds while corals brighten as the water warms",
-          "rank": 40
+          "rank": 41
         },
         {
           "name": "Oahu",
@@ -22654,7 +22668,7 @@
           "rating": "Good",
           "score": 87,
           "highlight": "first humpbacks arriving while turtles, whitetips and big schools gather on the south-shore wrecks",
-          "rank": 41
+          "rank": 42
         },
         {
           "name": "Bat Islands",
@@ -22668,7 +22682,7 @@
           "rating": "Good",
           "score": 86,
           "highlight": "bull shark odds easing while rays, turtles and schooling fish keep the pinnacles busy",
-          "rank": 42
+          "rank": 43
         },
         {
           "name": "Komodo National Park",
@@ -22682,7 +22696,7 @@
           "rating": "Good",
           "score": 86,
           "highlight": "south mantas building at Manta Alley while reef sharks patrol the channel reefs",
-          "rank": 43
+          "rank": 44
         },
         {
           "name": "Cozumel",
@@ -22696,7 +22710,7 @@
           "rating": "Good",
           "score": 85,
           "highlight": "eagle rays schooling along the drop-offs while toadfish croak and turtles graze the reef",
-          "rank": 44
+          "rank": 45
         },
         {
           "name": "Bonaire",
@@ -22710,7 +22724,7 @@
           "rating": "Good",
           "score": 84,
           "highlight": "turtles riding the gentle current while tarpon gather under piers and macro life abounds",
-          "rank": 45
+          "rank": 46
         },
         {
           "name": "Cayman Islands",
@@ -22724,7 +22738,7 @@
           "rating": "Good",
           "score": 83,
           "highlight": "turtles cruising calm walls while stingrays gather on the sandbar among curious reef fish",
-          "rank": 46
+          "rank": 47
         },
         {
           "name": "Similan Islands",
@@ -22738,20 +22752,6 @@
           "rating": "Good",
           "score": 83,
           "highlight": "reef fish schooling over the granite while leopard sharks doze on the sand",
-          "rank": 47
-        },
-        {
-          "name": "Aliwal Shoal",
-          "country": "South Africa",
-          "region": "Indian Ocean / KwaZulu-Natal",
-          "difficulty": "intermediate",
-          "access": "day-boat",
-          "water_temp_c": 24,
-          "visibility_m": 24,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 83,
-          "highlight": "raggies departing the shoal while tigers return to the warming reef",
           "rank": 48
         },
         {
@@ -23352,6 +23352,20 @@
           "rank": 13
         },
         {
+          "name": "Fuvahmulah",
+          "country": "Maldives",
+          "region": "Indian Ocean / Maldives",
+          "difficulty": "advanced",
+          "access": "day-boat",
+          "water_temp_c": 28,
+          "visibility_m": 30,
+          "current_strength": "Strong",
+          "rating": "Good",
+          "score": 112,
+          "highlight": "resident tiger sharks daily while thresher season continues and hammerhead schools grow as the thermocline shallows",
+          "rank": 14
+        },
+        {
           "name": "South West Rocks",
           "country": "Australia",
           "region": "Tasman Sea / New South Wales",
@@ -23363,7 +23377,7 @@
           "rating": "Peak",
           "score": 111,
           "highlight": "grey nurse sharks holding in the gutters while turtles and rays return",
-          "rank": 14
+          "rank": 15
         },
         {
           "name": "Tenerife",
@@ -23377,20 +23391,6 @@
           "rating": "Peak",
           "score": 110,
           "highlight": "stingrays massing while turtles roam and the first angel sharks edge into the shallows",
-          "rank": 15
-        },
-        {
-          "name": "Fuvahmulah",
-          "country": "Maldives",
-          "region": "Indian Ocean / Maldives",
-          "difficulty": "advanced",
-          "access": "day-boat",
-          "water_temp_c": 28,
-          "visibility_m": 30,
-          "current_strength": "Strong",
-          "rating": "Good",
-          "score": 106,
-          "highlight": "resident tigers daily while thresher season continues and hammerhead schools grow as the thermocline shallows",
           "rank": 16
         },
         {
@@ -23576,6 +23576,20 @@
           "rank": 29
         },
         {
+          "name": "Aliwal Shoal",
+          "country": "South Africa",
+          "region": "Indian Ocean / KwaZulu-Natal",
+          "difficulty": "intermediate",
+          "access": "day-boat",
+          "water_temp_c": 24,
+          "visibility_m": 24,
+          "current_strength": "Medium",
+          "rating": "Good",
+          "score": 92,
+          "highlight": "raggies departing the shoal while tiger sharks return to the warming reef",
+          "rank": 30
+        },
+        {
           "name": "Cancún & Playa del Carmen",
           "country": "Mexico",
           "region": "Caribbean / Mexico",
@@ -23587,7 +23601,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "first bull sharks appearing off Playa del Carmen mid-month while eagle rays return to the wrecks",
-          "rank": 30
+          "rank": 31
         },
         {
           "name": "Bay Islands",
@@ -23601,7 +23615,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "whale sharks cruising offshore again while turtles hold the sheltered reef walls",
-          "rank": 31
+          "rank": 32
         },
         {
           "name": "French Polynesia",
@@ -23615,7 +23629,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "reef sharks holding in the current while mantas return to the lagoon cleaning stations",
-          "rank": 32
+          "rank": 33
         },
         {
           "name": "Utila",
@@ -23629,7 +23643,7 @@
           "rating": "Good",
           "score": 91,
           "highlight": "whale sharks making a second run offshore while turtles patrol the reef",
-          "rank": 33
+          "rank": 34
         },
         {
           "name": "Great Barrier Reef",
@@ -23643,7 +23657,7 @@
           "rating": "Good",
           "score": 90,
           "highlight": "coral mass spawning erupting after the full moon while turtle nesting begins on the cays",
-          "rank": 34
+          "rank": 35
         },
         {
           "name": "Malapascua Island",
@@ -23657,7 +23671,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "threshers gliding through the cleaning station at dawn while macro life stirs inshore",
-          "rank": 35
+          "rank": 36
         },
         {
           "name": "Maui & Kona",
@@ -23671,7 +23685,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "mantas feeding under the lights while the early whales return to the channel",
-          "rank": 36
+          "rank": 37
         },
         {
           "name": "Aqaba",
@@ -23685,7 +23699,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "seahorses and frogfish showing themselves more readily while the reefs stay lively and crowds thin",
-          "rank": 37
+          "rank": 38
         },
         {
           "name": "Raja Ampat",
@@ -23699,7 +23713,7 @@
           "rating": "Good",
           "score": 89,
           "highlight": "mantas gathering again at Manta Sandy and Manta Ridge while cleaning stations get busy",
-          "rank": 38
+          "rank": 39
         },
         {
           "name": "Whitsunday Islands",
@@ -23713,7 +23727,7 @@
           "rating": "Good",
           "score": 87,
           "highlight": "coral spawning drifting over the reefs at night while turtles graze the shallows",
-          "rank": 39
+          "rank": 40
         },
         {
           "name": "Fiji",
@@ -23727,7 +23741,7 @@
           "rating": "Good",
           "score": 87,
           "highlight": "bull sharks massing at the feeds while corals brighten as the water warms",
-          "rank": 40
+          "rank": 41
         },
         {
           "name": "Oahu",
@@ -23741,7 +23755,7 @@
           "rating": "Good",
           "score": 87,
           "highlight": "first humpbacks arriving while turtles, whitetips and big schools gather on the south-shore wrecks",
-          "rank": 41
+          "rank": 42
         },
         {
           "name": "Bat Islands",
@@ -23755,7 +23769,7 @@
           "rating": "Good",
           "score": 86,
           "highlight": "bull shark odds easing while rays, turtles and schooling fish keep the pinnacles busy",
-          "rank": 42
+          "rank": 43
         },
         {
           "name": "Komodo National Park",
@@ -23769,7 +23783,7 @@
           "rating": "Good",
           "score": 86,
           "highlight": "south mantas building at Manta Alley while reef sharks patrol the channel reefs",
-          "rank": 43
+          "rank": 44
         },
         {
           "name": "Cozumel",
@@ -23783,7 +23797,7 @@
           "rating": "Good",
           "score": 85,
           "highlight": "eagle rays schooling along the drop-offs while toadfish croak and turtles graze the reef",
-          "rank": 44
+          "rank": 45
         },
         {
           "name": "Bonaire",
@@ -23797,7 +23811,7 @@
           "rating": "Good",
           "score": 84,
           "highlight": "turtles riding the gentle current while tarpon gather under piers and macro life abounds",
-          "rank": 45
+          "rank": 46
         },
         {
           "name": "Cayman Islands",
@@ -23811,7 +23825,7 @@
           "rating": "Good",
           "score": 83,
           "highlight": "turtles cruising calm walls while stingrays gather on the sandbar among curious reef fish",
-          "rank": 46
+          "rank": 47
         },
         {
           "name": "Similan Islands",
@@ -23825,20 +23839,6 @@
           "rating": "Good",
           "score": 83,
           "highlight": "reef fish schooling over the granite while leopard sharks doze on the sand",
-          "rank": 47
-        },
-        {
-          "name": "Aliwal Shoal",
-          "country": "South Africa",
-          "region": "Indian Ocean / KwaZulu-Natal",
-          "difficulty": "intermediate",
-          "access": "day-boat",
-          "water_temp_c": 24,
-          "visibility_m": 24,
-          "current_strength": "Medium",
-          "rating": "Good",
-          "score": 83,
-          "highlight": "raggies departing the shoal while tigers return to the warming reef",
           "rank": 48
         },
         {
@@ -24266,9 +24266,23 @@
           "visibility_m": 33,
           "current_strength": "Strong",
           "rating": "Peak",
-          "score": 136,
-          "highlight": "tigers holding year-round while thresher sharks crowd the cleaning stations and hammerheads school dependably",
+          "score": 142,
+          "highlight": "tiger sharks holding year-round while thresher sharks crowd the cleaning stations and hammerheads school dependably",
           "rank": 1
+        },
+        {
+          "name": "Maldives",
+          "country": "Maldives",
+          "region": "Indian Ocean",
+          "difficulty": "beginner-intermediate",
+          "access": "liveaboard/resort",
+          "water_temp_c": 28,
+          "visibility_m": 35,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 141,
+          "highlight": "hammerheads returning off Rasdhoo while Fuvahmulah tiger sharks and grey reef sharks patrol the channels",
+          "rank": 2
         },
         {
           "name": "Tofo",
@@ -24282,21 +24296,21 @@
           "rating": "Peak",
           "score": 133,
           "highlight": "whale sharks feeding inshore while mantas circle the stations and leopard sharks rest on the sand",
-          "rank": 2
+          "rank": 3
         },
         {
-          "name": "Maldives",
-          "country": "Maldives",
-          "region": "Indian Ocean",
-          "difficulty": "beginner-intermediate",
-          "access": "liveaboard/resort",
-          "water_temp_c": 28,
-          "visibility_m": 35,
+          "name": "Bahamas",
+          "country": "Bahamas",
+          "region": "Caribbean",
+          "difficulty": "intermediate",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 25,
+          "visibility_m": 18,
           "current_strength": "Medium",
           "rating": "Peak",
-          "score": 132,
-          "highlight": "hammerheads returning off Rasdhoo while Fuvahmulah tigers and grey reef sharks patrol the channels",
-          "rank": 3
+          "score": 129,
+          "highlight": "tiger sharks prowling the sand flats while the first hammerheads arrive and reef sharks circle",
+          "rank": 4
         },
         {
           "name": "Protea Banks",
@@ -24310,7 +24324,7 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "scalloped hammerheads schooling while bull and tiger sharks round out the Southern Pinnacles pelagic mix",
-          "rank": 4
+          "rank": 5
         },
         {
           "name": "Phuket",
@@ -24324,7 +24338,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "mantas cruising in while leopard and blacktip sharks, turtles and barracuda tornadoes swirl at the Bidas",
-          "rank": 5
+          "rank": 6
         },
         {
           "name": "Yap",
@@ -24338,7 +24352,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "mantas beginning to court as trains form in the Mi'l Channel",
-          "rank": 6
+          "rank": 7
         },
         {
           "name": "Raja Ampat",
@@ -24352,7 +24366,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "mantas piling into the cleaning stations while current-swept ridges come alive",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Socorro Island",
@@ -24366,7 +24380,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "giant mantas circling the seamounts while dolphins play in the wake",
-          "rank": 8
+          "rank": 9
         },
         {
           "name": "Coiba",
@@ -24380,7 +24394,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "big schools returning in force while whitetips patrol and the first whale shark cruises in",
-          "rank": 9
+          "rank": 10
         },
         {
           "name": "Cancún & Playa del Carmen",
@@ -24394,20 +24408,6 @@
           "rating": "Peak",
           "score": 121,
           "highlight": "bull sharks holding deep off Playa del Carmen while sailfish arrive offshore and eagle rays school",
-          "rank": 10
-        },
-        {
-          "name": "Bahamas",
-          "country": "Bahamas",
-          "region": "Caribbean",
-          "difficulty": "intermediate",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 25,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 120,
-          "highlight": "tigers prowling the sand flats while the first hammerheads arrive and reef sharks circle",
           "rank": 11
         },
         {
@@ -25353,9 +25353,23 @@
           "visibility_m": 33,
           "current_strength": "Strong",
           "rating": "Peak",
-          "score": 136,
-          "highlight": "tigers holding year-round while thresher sharks crowd the cleaning stations and hammerheads school dependably",
+          "score": 142,
+          "highlight": "tiger sharks holding year-round while thresher sharks crowd the cleaning stations and hammerheads school dependably",
           "rank": 1
+        },
+        {
+          "name": "Maldives",
+          "country": "Maldives",
+          "region": "Indian Ocean",
+          "difficulty": "beginner-intermediate",
+          "access": "liveaboard/resort",
+          "water_temp_c": 28,
+          "visibility_m": 35,
+          "current_strength": "Medium",
+          "rating": "Peak",
+          "score": 141,
+          "highlight": "hammerheads returning off Rasdhoo while Fuvahmulah tiger sharks and grey reef sharks patrol the channels",
+          "rank": 2
         },
         {
           "name": "Tofo",
@@ -25369,21 +25383,21 @@
           "rating": "Peak",
           "score": 133,
           "highlight": "whale sharks feeding inshore while mantas circle the stations and leopard sharks rest on the sand",
-          "rank": 2
+          "rank": 3
         },
         {
-          "name": "Maldives",
-          "country": "Maldives",
-          "region": "Indian Ocean",
-          "difficulty": "beginner-intermediate",
-          "access": "liveaboard/resort",
-          "water_temp_c": 28,
-          "visibility_m": 35,
+          "name": "Bahamas",
+          "country": "Bahamas",
+          "region": "Caribbean",
+          "difficulty": "intermediate",
+          "access": "day-boat/liveaboard",
+          "water_temp_c": 25,
+          "visibility_m": 18,
           "current_strength": "Medium",
           "rating": "Peak",
-          "score": 132,
-          "highlight": "hammerheads returning off Rasdhoo while Fuvahmulah tigers and grey reef sharks patrol the channels",
-          "rank": 3
+          "score": 129,
+          "highlight": "tiger sharks prowling the sand flats while the first hammerheads arrive and reef sharks circle",
+          "rank": 4
         },
         {
           "name": "Protea Banks",
@@ -25397,7 +25411,7 @@
           "rating": "Peak",
           "score": 129,
           "highlight": "scalloped hammerheads schooling while bull and tiger sharks round out the Southern Pinnacles pelagic mix",
-          "rank": 4
+          "rank": 5
         },
         {
           "name": "Phuket",
@@ -25411,7 +25425,7 @@
           "rating": "Peak",
           "score": 127,
           "highlight": "mantas cruising in while leopard and blacktip sharks, turtles and barracuda tornadoes swirl at the Bidas",
-          "rank": 5
+          "rank": 6
         },
         {
           "name": "Yap",
@@ -25425,7 +25439,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "mantas beginning to court as trains form in the Mi'l Channel",
-          "rank": 6
+          "rank": 7
         },
         {
           "name": "Raja Ampat",
@@ -25439,7 +25453,7 @@
           "rating": "Peak",
           "score": 124,
           "highlight": "mantas piling into the cleaning stations while current-swept ridges come alive",
-          "rank": 7
+          "rank": 8
         },
         {
           "name": "Socorro Island",
@@ -25453,7 +25467,7 @@
           "rating": "Peak",
           "score": 123,
           "highlight": "giant mantas circling the seamounts while dolphins play in the wake",
-          "rank": 8
+          "rank": 9
         },
         {
           "name": "Coiba",
@@ -25467,7 +25481,7 @@
           "rating": "Peak",
           "score": 122,
           "highlight": "big schools returning in force while whitetips patrol and the first whale shark cruises in",
-          "rank": 9
+          "rank": 10
         },
         {
           "name": "Cancún & Playa del Carmen",
@@ -25481,20 +25495,6 @@
           "rating": "Peak",
           "score": 121,
           "highlight": "bull sharks holding deep off Playa del Carmen while sailfish arrive offshore and eagle rays school",
-          "rank": 10
-        },
-        {
-          "name": "Bahamas",
-          "country": "Bahamas",
-          "region": "Caribbean",
-          "difficulty": "intermediate",
-          "access": "day-boat/liveaboard",
-          "water_temp_c": 25,
-          "visibility_m": 18,
-          "current_strength": "Medium",
-          "rating": "Peak",
-          "score": 120,
-          "highlight": "tigers prowling the sand flats while the first hammerheads arrive and reef sharks circle",
           "rank": 11
         },
         {

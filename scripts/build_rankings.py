@@ -53,7 +53,7 @@ MARINE_WEIGHTS = [
 MARINE_SORTED = sorted(MARINE_WEIGHTS, key=lambda kw: -len(kw[0]))
 
 def marine_bonus(text):
-    t = (text or "").lower()
+    t = (text or "").lower().replace("-", " ")   # "whale-shark" counts as "whale shark"
     total = 0
     for kw, w in MARINE_SORTED:
         if kw in t:
