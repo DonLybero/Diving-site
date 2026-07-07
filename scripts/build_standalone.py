@@ -26,6 +26,23 @@ try:
 except FileNotFoundError:
     marine = None
 
+# Gear photos live in the repo (assets/gear/…); relative paths break when the
+# single file is opened from an arbitrary folder, so point them at the live
+# site (destination/marine photos already load from the web the same way).
+ASSET_BASE = "https://donlybero.github.io/Diving-site/"
+def _absolutize_images(node):
+    if isinstance(node, dict):
+        img = node.get("image")
+        if isinstance(img, str) and img and not img.startswith(("http://", "https://", "data:")):
+            node["image"] = ASSET_BASE + img.lstrip("./")
+        for v in node.values():
+            _absolutize_images(v)
+    elif isinstance(node, list):
+        for v in node:
+            _absolutize_images(v)
+if gear:
+    _absolutize_images(gear)
+
 # 1) inline Leaflet CSS
 html = html.replace('<link rel="stylesheet" href="vendor/leaflet.css">',
                     '<style>\n'+lcss+'\n</style>')
