@@ -1,0 +1,32 @@
+name: Photo candidates (owner review)
+
+# Gathers candidate Commons photos for the destinations listed in
+# scripts/photo_candidates.py and pushes them to the orphan branch
+# photo-cands for visual review in the dev session.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gather:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Gather candidates
+        run: python3 scripts/photo_candidates.py
+
+      - name: Push to orphan branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan photo-cands
+          git rm -rf --cached . >/dev/null
+          git add -f cands
+          git commit -m "Photo candidates (automated)"
+          git push -f origin photo-cands
