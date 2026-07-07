@@ -11,13 +11,61 @@ The SPA (index.html) stays the interactive app; these pages give search
 engines one indexable URL per destination with the same researched data.
 Re-run after any data change:  python3 scripts/build_pages.py
 """
-import json, os, html, re, urllib.parse
+import json, os, html, re, urllib.parse, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://donlybero.github.io/Diving-site/"
 MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 RCOLOR = {"Peak":"#16a34a","Good":"#0ea5e9","Shoulder":"#eab308","Low":"#f97316","Closed":"#64748b"}
-TODAY = "2026-07-01"
+MONTH_FULL = {"Jan":"January","Feb":"February","Mar":"March","Apr":"April","May":"May","Jun":"June",
+              "Jul":"July","Aug":"August","Sep":"September","Oct":"October","Nov":"November","Dec":"December"}
+
+def _index_src():
+    with open(os.path.join(ROOT, "index.html"), encoding="utf-8") as f:
+        return f.read()
+
+def _junesc(t):
+    """Decode JS \\uXXXX escapes and escaped quotes; literal UTF-8 passes through."""
+    t = re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), t)
+    return t.replace("\\'", "'").replace('\\"', '"')
+
+def load_region_groups():
+    """Parse REGION_GROUPS out of index.html so the SPA stays the single source
+    of truth for the continent grouping. Fails loudly if the shape changes."""
+    m = re.search(r"var REGION_GROUPS=\{(.*?)\};", _index_src(), re.S)
+    if not m:
+        raise RuntimeError("REGION_GROUPS not found in index.html")
+    groups = {}
+    for gm in re.finditer(r"'([^']+)'\s*:\s*\[(.*?)\]", m.group(1), re.S):
+        names = re.findall(r"'((?:[^'\\]|\\.)*)'", gm.group(2))
+        groups[gm.group(1)] = [_junesc(n) for n in names]
+    if not groups:
+        raise RuntimeError("REGION_GROUPS parsed empty")
+    return groups
+
+def load_month_intros():
+    """Parse the editorial MONTH_INTROS ledes out of index.html (best effort)."""
+    m = re.search(r"var MONTH_INTROS=\{(.*?)\};", _index_src(), re.S)
+    if not m:
+        return {}
+    intros = {}
+    for im in re.finditer(r'(\w{3}):"((?:[^"\\]|\\.)*)"', m.group(1)):
+        intros[im.group(1)] = _junesc(im.group(2))
+    return intros
+
+REGION_GROUPS = load_region_groups()
+DEST_GROUP = {n: g for g, names in REGION_GROUPS.items() for n in names}
+MONTH_INTROS = load_month_intros()
+
+def crumbs(pairs):
+    return {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": u}
+        for i, (n, u) in enumerate(pairs)]}
+
+def graph_ld(*nodes):
+    return {"@context": "https://schema.org",
+            "@graph": [{k: v for k, v in n.items() if k != "@context"} for n in nodes if n]}
+TODAY = datetime.date.today().isoformat()
 
 CSS = """
 :root{--bg:#f4f9f9;--panel:#ffffff;--ink:#0e2f37;--muted:#61838a;--accent:#0e9c92;--coral:#ff7a59;--line:#d7e5e7;
@@ -91,6 +139,10 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
 .tipbox{background:#f2f9f9;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0}
 .tipbox ul{margin:6px 0 0;padding-left:18px}.tipbox li{margin:4px 0;color:#33565e;font-size:.9rem}
 @media(max-width:640px){.gentry{grid-template-columns:1fr}.artlist a{grid-template-columns:90px 1fr}.gspecs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.region-head{font-family:var(--serif);font-size:1.5rem;margin:34px 0 2px;padding-top:22px;border-top:2px solid var(--line)}
+.region-lede{color:var(--muted);font-size:.9rem;margin:2px 0 8px}
+.dphoto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
+.badge.sm{font-size:.66rem}
 """
 
 FLUKE = ('<svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 '
@@ -108,6 +160,7 @@ def footer_html(prefix="../"):
             'dive operators, park authorities and liveaboard calendars.<br>Water temperatures are typical monthly ranges (±1°C); '
             'marine-life timing shifts year to year — always confirm with a local dive centre.<br>'
             f'<a href="{prefix}index.html">Dive planner</a> · <a href="{prefix}destinations/index.html">Destinations</a> · '
+            f'<a href="{prefix}months/index.html">Best by month</a> · '
             f'<a href="{prefix}marine-life/index.html">Marine life</a> · <a href="{prefix}gear/index.html">Gear guides</a> · '
             f'<a href="{prefix}how-we-score.html">How we score</a> · <a href="{prefix}about.html">About</a> · '
             f'<a href="{prefix}privacy.html">Privacy</a></footer>')
@@ -143,7 +196,7 @@ def pack_box(d):
 
     def cta(mm, label, ghost=False):
         return (f'<a class="pack-cta{" ghost" if ghost else ""}" '
-                f'href="../index.html#gear-wetsuits-{mm}mm">{label}</a>')
+                f'href="../gear/wetsuits.html#{mm}mm">{label}</a>')
 
     if dry:
         body = ("The water here is cold enough that most divers use a <b>drysuit</b>. "
@@ -238,6 +291,39 @@ def dest_intro(d):
           f'up to {hard["name"]}{" (" + hard["depth"] + ")" if hard.get("depth") else ""}, {hard_lvl} territory.')
     return p1 + p2
 
+def related_block(d):
+    """Internal links: month hubs for its peak months, same-region siblings,
+    and marine-life guides for what swims here (distributes authority)."""
+    parts = []
+    peak = [m for m in MONTHS if d["monthly"][m]["rating"] == "Peak"]
+    if peak:
+        links = " · ".join(f'<a href="../months/{MONTH_FULL[m].lower()}.html">{MONTH_FULL[m]}</a>' for m in peak[:6])
+        parts.append(f'<p class="meta"><b>Best months here:</b> {links}</p>')
+    text = " ".join((d["monthly"][m].get("marine_life") or "") for m in MONTHS).lower() + \
+           " " + " ".join(d.get("signature_species") or []).lower()
+    seen = []
+    for exp in EXPERIENCES:
+        if any(k.lower() in text for k in exp.get("keywords", [])):
+            seen.append(f'<a href="../marine-life/{exp["slug"]}.html">{esc(exp["title"])}</a>')
+        if len(seen) >= 4:
+            break
+    if seen:
+        parts.append(f'<p class="meta"><b>Dive with:</b> {" · ".join(seen)}</p>')
+    group = DEST_GROUP.get(d["name"])
+    if group:
+        sibs = [n for n in REGION_GROUPS[group] if n != d["name"]][:3]
+        if sibs:
+            links = " · ".join(f'<a href="{_slug_of(n)}.html">{esc(n)}</a>' for n in sibs if _slug_of(n))
+            if links:
+                parts.append(f'<p class="meta"><b>More in {esc(group)}:</b> {links}</p>')
+    if not parts:
+        return ""
+    return '<h2>Related guides</h2>' + "".join(parts)
+
+_SLUGS = {}
+def _slug_of(name):
+    return _SLUGS.get(name)
+
 def page(d):
     slug = d["slug"]; url = BASE + "destinations/" + slug + ".html"
     peak = [m for m in MONTHS if d["monthly"][m]["rating"] == "Peak"]
@@ -258,7 +344,7 @@ def page(d):
                  f'<td>{esc(mm["marine_life"])}</td><td>{esc(mm["conditions"])}</td></tr>')
     species = "".join(f'<span class="chip">{esc(s)}</span>' for s in d.get("signature_species", []))
     ld = {
-        "@context": "https://schema.org", "@type": "TouristDestination",
+        "@type": "TouristDestination",
         "name": d["name"] + " scuba diving", "description": desc, "url": url,
         "touristType": "Scuba divers",
     }
@@ -296,7 +382,7 @@ def page(d):
 <meta property="og:type" content="article"><meta property="og:title" content="{esc(d["name"])} — Best Time to Dive">
 <meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}">{og_img}
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<script type="application/ld+json">{json.dumps(graph_ld(ld, crumbs([("Home", BASE), ("Destinations", BASE + "destinations/index.html"), (d["name"], url)])), ensure_ascii=False)}</script>
 <style>{CSS}</style>
 </head>
 <body>
@@ -328,6 +414,7 @@ def page(d):
   </table></div>
   {sites_block}
   {verified}
+  {related_block(d)}
   <a class="cta" href="../index.html">Plan a dive trip here — open the DiveSZN planner &rarr;</a>
 </main>
 {footer_html()}
@@ -444,9 +531,33 @@ def gear_page(cat, prefix="../"):
             parts.append(f'<div class="tipbox"><b>What to look for</b><ul>{tips}</ul></div>')
         parts += [gear_entry(it, prefix) for it in cat["items"]]
     parts.append(f'<p class="meta"><a href="index.html">&larr; All gear buyer&#8217;s guides</a></p>')
-    desc = (intro or f'The best {cat["category"].lower()} for scuba diving in 2026.')[:300]
-    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": cat.get("title"),
-          "description": desc, "url": url}
+    desc = (intro or f'The best {cat["category"].lower()} for scuba diving in 2026.')[:160]
+    def _product_ld(item):
+        opts = item.get("options") or []
+        if not opts:
+            return None
+        prices = [o["price_usd"] for o in opts]
+        node = {"@type": "Product", "name": item["name"],
+                "offers": {"@type": "AggregateOffer", "priceCurrency": "USD",
+                           "lowPrice": min(prices), "highPrice": max(prices), "offerCount": len(opts),
+                           "offers": [{"@type": "Offer", "price": o["price_usd"], "priceCurrency": "USD",
+                                       "url": o.get("url", ""),
+                                       "seller": {"@type": "Organization", "name": o.get("store", "")}}
+                                      for o in opts]}}
+        blurb = item.get("review") or item.get("blurb")
+        if blurb:
+            node["description"] = blurb
+        img = item.get("image") or ""
+        if img:
+            node["image"] = img if img.startswith("http") else BASE + img
+        return node
+    items = list(cat.get("items") or [])
+    for g in cat.get("thickness_groups") or []:
+        items += g.get("items") or []
+    coll = {"@type": "CollectionPage", "name": cat.get("title"), "description": desc, "url": url}
+    bc = crumbs([("Home", BASE), ("Gear guides", BASE + "gear/index.html"),
+                 (cat.get("title") or cat["category"], url)])
+    ld = graph_ld(coll, bc, *[_product_ld(i) for i in items])
     return content_shell(title, desc, url, prefix, None, "".join(parts), ld)
 
 def gear_index_page(gear, prefix="../"):
@@ -598,8 +709,13 @@ def marine_article(exp, dests, prefix="../"):
              + table + beyond
              + (f'<div class="tipbox"><b>Good to know</b><ul>{tips}</ul></div>' if tips else "")
              + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>')
-    ld = {"@context": "https://schema.org", "@type": "Article", "headline": exp["title"],
-          "description": exp["desc"], "url": url}
+    art = {"@type": "Article", "headline": exp["title"], "description": exp["desc"], "url": url,
+           "author": {"@type": "Organization", "name": "DiveSZN"},
+           "publisher": {"@type": "Organization", "name": "DiveSZN", "url": BASE}}
+    if exp.get("image"):
+        art["image"] = exp["image"]
+    ld = graph_ld(art, crumbs([("Home", BASE), ("Marine life", BASE + "marine-life/index.html"),
+                               (exp["title"], url)]))
     return content_shell(exp["title"] + " | DiveSZN", exp["desc"], url, prefix, exp.get("hero_sub"), inner, ld)
 
 def marine_index_page(prefix="../"):
@@ -623,11 +739,110 @@ def marine_index_page(prefix="../"):
     return content_shell("Marine Life — Dive With the Ocean's Icons | DiveSZN", desc, url, prefix,
                          "Whale sharks to orcas — what they are, and where and when to dive them.", inner, ld)
 
+# ---------------------------------------------------------------- month hubs
+def month_ranked(rankings, month, dests_by_name):
+    """Merge a month's two half-periods (max score per destination), keep
+    Peak/Good, cap at 15 — the same selection the SPA's monthly guide makes."""
+    best = {}
+    for per in rankings["periods"]:
+        if per["month"] != month:
+            continue
+        for r in per["ranked"]:
+            cur = best.get(r["name"])
+            if cur is None or r["score"] > cur["score"]:
+                best[r["name"]] = r
+    rows = sorted(best.values(), key=lambda r: -r["score"])
+    rows = [r for r in rows if r["rating"] in ("Peak", "Good") and r["name"] in dests_by_name]
+    return rows[:15]
+
+def month_page(month, rankings, dests_by_name):
+    full = MONTH_FULL[month]
+    url = BASE + "months/" + full.lower() + ".html"
+    rows = month_ranked(rankings, month, dests_by_name)
+    groups, order = {}, []
+    for r in rows:
+        g = DEST_GROUP.get(r["name"]) or r["region"]
+        if g not in groups:
+            groups[g] = []; order.append(g)
+        groups[g].append(r)
+
+    def block(r):
+        d = dests_by_name[r["name"]]
+        mm = d["monthly"][month]
+        ctry = f' <span class="meta">— {esc(r["country"])}</span>' if r["country"] and r["country"] != r["name"] else ""
+        img = d.get("image") or ""
+        photo = (f'<div class="gphoto dphoto"><img src="{esc(img)}" alt="{esc(r["name"])}" loading="lazy"></div>'
+                 if img else '<div class="gphoto dphoto"></div>')
+        chips = (f'<span class="badge sm" style="background:{RCOLOR[r["rating"]]}'
+                 f'{";color:#fff" if r["rating"] in ("Peak","Low","Closed") else ""}">{r["rating"]}</span> '
+                 f'<span class="chip">{r["water_temp_c"] if r["water_temp_c"] is not None else "—"}°C</span> '
+                 f'<span class="chip">{r.get("visibility_m") or "—"}m viz</span>'
+                 + (f' <span class="chip">{esc(r["current_strength"])} current</span>' if r.get("current_strength") else ""))
+        expect = (f'<b>What to expect in {full}:</b> {esc(mm["marine_life"])}.'
+                  + (f' <b>Conditions:</b> {esc(mm["conditions"])}.' if mm.get("conditions") else ""))
+        return (f'<div class="gentry">{photo}<div>'
+                f'<h3><a href="../destinations/{d["slug"]}.html" style="text-decoration:none;color:inherit">{esc(r["name"])}</a>{ctry}</h3>'
+                f'<div class="chips" style="margin:2px 0 10px">{chips}</div>'
+                f'<p class="greview">{esc(d.get("highlights") or "")}</p>'
+                f'<p class="greview">{expect}</p>'
+                f'<a href="../destinations/{d["slug"]}.html">Full guide: {esc(r["name"])} &rarr;</a></div></div>')
+
+    sections = ""
+    for g in order:
+        rs = groups[g]
+        peak_n = sum(1 for r in rs if r["rating"] == "Peak")
+        lede = (f'{rs[0]["name"]} carries the region this month.' if len(rs) == 1 else
+                f'{len(rs)} picks, ' + ("all at peak season" if peak_n == len(rs) else f"{peak_n} at peak")
+                + f' — {rs[0]["name"]} leads.')
+        sections += (f'<h2 class="region-head">{esc(g)}</h2><p class="region-lede">{esc(lede)}</p>'
+                     + "".join(block(r) for r in rs))
+
+    mi = MONTHS.index(month)
+    prev_m, next_m = MONTH_FULL[MONTHS[(mi + 11) % 12]], MONTH_FULL[MONTHS[(mi + 1) % 12]]
+    pager = (f'<p class="meta" style="display:flex;justify-content:space-between;gap:12px">'
+             f'<a href="{prev_m.lower()}.html">&larr; {prev_m}</a>'
+             f'<a href="index.html">All months</a>'
+             f'<a href="{next_m.lower()}.html">{next_m} &rarr;</a></p>')
+    top3 = ", ".join(r["name"] for r in rows[:3])
+    desc = f"The best scuba diving in {full}: {top3} and more — season ratings, water temperature, visibility and the marine life in season."[:160]
+    inner = (pager
+             + f'<p class="greview" style="max-width:80ch">{esc(MONTH_INTROS.get(month) or "")}</p>'
+             + sections + pager
+             + f'<a class="cta" href="../index.html">Plan your {full} trip in the dive planner &rarr;</a>')
+    ld = graph_ld({"@type": "CollectionPage", "name": f"Best scuba diving in {full}",
+                   "description": desc, "url": url},
+                  crumbs([("Home", BASE), ("Best diving by month", BASE + "months/index.html"), (full, url)]))
+    return content_shell(f"Best Scuba Diving in {full} — Where to Dive | DiveSZN", desc, url, "../",
+                         f"Where the water is at its best in {full}, region by region.", inner, ld)
+
+def months_index_page(rankings, dests_by_name):
+    url = BASE + "months/index.html"
+    rows = ""
+    for m in MONTHS:
+        full = MONTH_FULL[m]
+        top = month_ranked(rankings, m, dests_by_name)[:3]
+        teaser = ", ".join(r["name"] for r in top)
+        rows += (f'<li><a href="{full.lower()}.html"><div class="th"></div>'
+                 f'<div><h3>Best diving in {full}</h3><p>{esc(teaser)}</p></div></a></li>')
+    desc = "Month-by-month guides to the world's best scuba diving — where the season, marine life and visibility line up for each month of the year."[:160]
+    inner = (f'<p class="greview" style="max-width:80ch">Twelve guides, one per month — every destination scored for '
+             f'that month and grouped by region, so your travel dates pick the spot.</p>'
+             f'<h2>Guides</h2><ul class="artlist">{rows}</ul>'
+             f'<a class="cta" href="../index.html">Open the dive planner &rarr;</a>')
+    ld = graph_ld({"@type": "CollectionPage", "name": "Best scuba diving by month", "description": desc, "url": url},
+                  crumbs([("Home", BASE), ("Best diving by month", url)]))
+    return content_shell("Best Scuba Diving by Month | DiveSZN", desc, url, "../",
+                         "Where to dive in January through December.", inner, ld)
+
 def main():
     with open(os.path.join(ROOT, "diving-destinations.json")) as f:
         dests = json.load(f)["destinations"]
     with open(os.path.join(ROOT, "gear-guide.json")) as f:
         gear = json.load(f)
+    with open(os.path.join(ROOT, "diving-rankings.json")) as f:
+        rankings = json.load(f)
+    dests_by_name = {d["name"]: d for d in dests}
+    _SLUGS.update({d["name"]: d["slug"] for d in dests})
     outdir = os.path.join(ROOT, "destinations")
     os.makedirs(outdir, exist_ok=True)
     for d in dests:
@@ -656,14 +871,24 @@ def main():
     with open(os.path.join(marinedir, "index.html"), "w", encoding="utf-8") as f:
         f.write(marine_index_page())
 
+    # month hubs ("best diving in January" ... one per month)
+    monthdir = os.path.join(ROOT, "months")
+    os.makedirs(monthdir, exist_ok=True)
+    for m in MONTHS:
+        with open(os.path.join(monthdir, MONTH_FULL[m].lower() + ".html"), "w", encoding="utf-8") as f:
+            f.write(month_page(m, rankings, dests_by_name))
+    with open(os.path.join(monthdir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(months_index_page(rankings, dests_by_name))
+
     # trust / info pages (root)
     with open(os.path.join(ROOT, "about.html"), "w", encoding="utf-8") as f:
         f.write(about_page())
     with open(os.path.join(ROOT, "how-we-score.html"), "w", encoding="utf-8") as f:
         f.write(score_page())
 
-    urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html",
-             BASE + "destinations/index.html", BASE + "gear/index.html"]
+    urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html", BASE + "privacy.html",
+             BASE + "destinations/index.html", BASE + "gear/index.html", BASE + "months/index.html"]
+            + [BASE + "months/" + MONTH_FULL[m].lower() + ".html" for m in MONTHS]
             + [BASE + "gear/" + s + ".html" for s in gear_slugs]
             + [BASE + "marine-life/index.html"]
             + [BASE + "marine-life/" + e["slug"] + ".html" for e in EXPERIENCES]
@@ -676,8 +901,9 @@ def main():
         f.write(sm)
     with open(os.path.join(ROOT, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
-    print(f"Wrote {len(dests)} destination pages + index, {len(gear_slugs)} gear pages + index, "
-          f"about + how-we-score, sitemap.xml ({len(urls)} URLs), robots.txt")
+    print(f"Wrote {len(dests)} destination pages + index, 12 month hubs + index, "
+          f"{len(gear_slugs)} gear pages + index, about + how-we-score, "
+          f"sitemap.xml ({len(urls)} URLs), robots.txt")
 
 if __name__ == "__main__":
     main()

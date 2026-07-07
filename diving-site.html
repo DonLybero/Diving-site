@@ -4,7 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DiveSZN — Plan Your Dive Trip by Season | Best Time to Dive Worldwide</title>
-<meta name="description" content="DiveSZN helps you plan your dive trip around the season — analysing 50-plus destinations for the water conditions and the marine life you can expect, so you know before you go that your trip lands on perfect conditions.">
+<meta name="description" content="Month-by-month dive-trip planner: season scores, water temperature, visibility, currents and marine life for the world's top dive destinations.">
+<link rel="canonical" href="https://donlybero.github.io/Diving-site/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DiveSZN">
+<meta property="og:title" content="DiveSZN — Plan Your Dive Trip by Season">
+<meta property="og:description" content="Month-by-month dive-season planner: conditions, visibility, currents and marine life for the world's top dive destinations.">
+<meta property="og:url" content="https://donlybero.github.io/Diving-site/">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/A_diver_in_Raja_Ampat_seascape.jpg/960px-A_diver_in_Raja_Ampat_seascape.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DiveSZN — Plan Your Dive Trip by Season">
+<meta name="twitter:description" content="Month-by-month dive-season planner: conditions, visibility, currents and marine life for the world's top dive destinations.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"DiveSZN","url":"https://donlybero.github.io/Diving-site/"},{"@type":"Organization","name":"DiveSZN","url":"https://donlybero.github.io/Diving-site/"}]}</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 96'><rect width='120' height='96' rx='18' fill='%23062a36'/><path d='M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z' fill='%232fe0d6'/></svg>">
 <style>
 /* required styles */
@@ -1029,6 +1040,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   @media(max-width:640px){.artrow{grid-template-columns:110px 1fr;gap:12px}.artrow-thumb{height:76px}}
   .gentry{display:grid;grid-template-columns:250px 1fr;gap:22px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
   .gentry h3{margin:0 0 8px;font-family:var(--serif);font-size:1.35rem}
+  .region-head{font-family:var(--serif);font-size:1.5rem;margin:34px 0 2px;padding-top:22px;border-top:2px solid var(--line-strong,#c8dde0)}
+  .region-lede{color:var(--muted);font-size:.9rem;margin:2px 0 10px}
   .gentry-review{line-height:1.7;color:#33565e;margin:0 0 10px}
   .gentry .ptable{max-width:560px}
   .gentry>*{min-width:0}
@@ -2269,7 +2282,9 @@ function diffPips(d){
 }
 
 function renderHome(){
-  var topAug=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:3});
+  var pool=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:12});
+  var seenC={}, topAug=[];
+  pool.forEach(function(r){ if(topAug.length<3 && !seenC[r.country]){ seenC[r.country]=1; topAug.push(r); } });
   var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.slice(0,3).map(function(c){
     var g=leadItem(c), lo=g.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;})[0];
     return '<div class="feature" onclick="showTab(\'gear\')">'+
@@ -2621,20 +2636,47 @@ Oct:"October is the Red Sea's sweet spot: thinner crowds, water still holding 27
 Nov:"November puts the Indian Ocean first: the Seychelles' second calm season brings glassy water and whale-shark passes, while the southern Red Sea keeps the shark encounters coming. La Paz opens whale-shark season in the Sea of Cortez, Tiger Beach hits its stride in the Bahamas, and Fernando de Noronha's dry-season visibility tops thirty metres.",
 Dec:"December resets the calendar to the Maldives and Raja Ampat — manta season in full swing on both sides of the equator — while Socorro's winter giants return and the Bahamas run tiger and hammerhead action. Cold-water divers get their moment too: Vancouver Island's plankton settles into its winter-clear best."
 };
-function destArticleEntry(r,month){
+/* One destination inside a monthly guide: photo, description, then a
+   "what to expect" briefing built from that month's data. */
+function destMonthBlock(r,month){
   var d=DivingCalendar.getDestination(DESTS,r.name)||{};
   var mm=d.monthly?d.monthly[month]:{};
-  var photo='<div class="dest-photo"><span class="gear-rank">#'+r.rank+'</span>'+
+  var ctry=(r.country&&r.country!==r.name)?' <span class="meta" style="font-size:.78rem">— '+r.country+'</span>':'';
+  var photo='<div class="dest-photo">'+
     (d.image?'<img src="'+d.image+'" alt="'+r.name.replace(/"/g,'&quot;')+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>';
+  var expect='<b>What to expect in '+MONTH_FULL[month]+':</b> '+(mm.marine_life||r.highlight)+'.'+
+    (mm.conditions?' <b>Conditions:</b> '+mm.conditions+'.':'')+
+    ' Water around '+tempStr(r.water_temp_c)+
+    (r.visibility_m?', visibility to ~'+r.visibility_m+'&nbsp;m':'')+
+    (r.current_strength?', '+r.current_strength.toLowerCase()+' currents':'')+'.';
   return '<div class="gentry clickable" onclick="cardOpen(event,\''+esc(r.name)+'\')">'+photo+
-    '<div><h3>'+r.rank+'. '+r.name+'</h3>'+
-    '<div class="meta" style="margin:0 0 8px">'+metaLine(r.country,r.region)+'</div>'+
-    '<div class="row" style="margin-bottom:8px">'+badge(r.rating)+
+    '<div><h3 style="font-size:1.25rem">'+r.name+ctry+'</h3>'+
+    '<div class="row" style="margin:2px 0 8px">'+badge(r.rating)+
       '<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
       '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+'</div>'+
-    '<p class="gentry-review"><b>In the water this month:</b> '+(mm.marine_life||r.highlight)+'.'+
-      (mm.conditions?' <b>Conditions:</b> '+mm.conditions+'.':'')+'</p>'+
-    '<a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full season guide →</a></div></div>';
+    '<p class="gentry-review">'+(d.highlights||'')+'</p>'+
+    '<p class="gentry-review">'+expect+'</p>'+
+    '<a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full guide: '+r.name+' →</a></div></div>';
+}
+/* Group the month's Peak/Good destinations by continent, ordered by each
+   region's best-ranked pick — one guide per month, one paragraph per region. */
+function monthRegionSections(month){
+  var ranked=DivingCalendar.rankPeriod(DESTS,DivingCalendar.MONTHS.indexOf(month)*2+1,{});
+  var good=ranked.filter(function(r){return r.rating==='Peak'||r.rating==='Good';}).slice(0,15);
+  var groups={},order=[];
+  good.forEach(function(r){
+    var g=DEST_GROUP[r.name]||r.region;
+    if(!groups[g]){groups[g]=[];order.push(g);}
+    groups[g].push(r);
+  });
+  return order.map(function(gname){
+    var rs=groups[gname], peakN=rs.filter(function(r){return r.rating==='Peak';}).length;
+    var lede = rs.length===1
+      ? rs[0].name+' carries the region this month.'
+      : rs.length+' picks, '+(peakN===rs.length?'all at peak season':peakN+' at peak')+' — '+rs[0].name+' leads.';
+    return '<h3 class="region-head">'+gname+'</h3><p class="region-lede">'+lede+'</p>'+
+      rs.map(function(r){return destMonthBlock(r,month);}).join('');
+  }).join('');
 }
 function openMonthArticle(m){
   var sel=document.getElementById('destMonth'); if(sel) sel.value=m;
@@ -2753,11 +2795,10 @@ function renderDestinations(month){
       '<a href="#" onclick="openMonthArticle(\''+prevM+'\');return false;">← '+MONTH_FULL[prevM]+'</a>'+
       '<a href="#" onclick="openMonthArticle(\'\');return false;">All monthly guides</a>'+
       '<a href="#" onclick="openMonthArticle(\''+nextM+'\');return false;">'+MONTH_FULL[nextM]+' →</a></p>';
-    var ranked=DivingCalendar.rankPeriod(DESTS,mi*2+1,{limit:10});
     g.innerHTML='<div class="article gear-article">'+pager+
-      '<h2 style="margin:6px 0 10px">Top Destinations in '+full+'</h2>'+
+      '<h2 style="margin:6px 0 10px">Where to dive in '+full+'</h2>'+
       '<p class="gentry-review" style="max-width:80ch">'+(MONTH_INTROS[month]||'')+'</p>'+
-      ranked.map(function(r){return destArticleEntry(r,month);}).join('')+
+      monthRegionSections(month)+
       '<div style="margin-top:16px">'+pager+'</div></div>';
   }
   applyIcons();
