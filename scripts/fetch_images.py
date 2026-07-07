@@ -128,6 +128,18 @@ DEST_PINNED = {
     "Phuket": ["File:Maya Bay, Krabi, Thailand (Panorama).jpg",
                "File:Longtail Boat At Maya Bay, Krabi, Thailand.jpg",
                "File:Longtail boat at Maya bay.JPG"],
+    # Owner-approved picks (photo review, 2026-07) — never let search replace these.
+    "Bonaire": ["File:Snorkeling Bari Reef, Bonaire (12840799335).jpg"],
+    "Cenderawasih Bay": ["File:Hiu Paus yang kesepian.jpg"],
+    "Chania (Crete)": ["File:Aerial view of Balos Lagoon on the island of Crete, Greece.jpg"],
+    "Dubai & Fujairah": ["File:Pristine blue waters of Snoopy Island.jpg"],
+    "Great Barrier Reef": ["File:Aerial View of Great Barrier Reef (Ank Kumar) 09.jpg"],
+    "Lord Howe Island": ["File:Balls Pyramid, Lord Howe Marine Park 1008.jpg"],
+    "Seychelles": ["File:Anse Source d'Argent 3-La Digue.jpg"],
+    "Silfra Fissure": ["File:Cañón Silfra, Parque Nacional de Þingvellir, Suðurland, Islandia, 2014-08-16, DD 055.JPG"],
+    "Ustica": ["File:Grotta verde.jpg"],
+    "Vancouver Island": ["File:Diving Humpback Whale near Vancouver Island, Canada (54881205528).jpg"],
+    "Whitsunday Islands": ["File:Whitehaven Beach - Northern End.jpg"],
 }
 
 # Exact-file rejects per destination — visually-audited duds that pass the
