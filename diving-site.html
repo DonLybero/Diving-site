@@ -1760,10 +1760,10 @@ function whyNow(rating, marine, vizM){
 }
 /* DiveIn-style browse directory: region cards that reveal countries and their
    destinations on hover (desktop) or tap (touch). Sits under the planner filter. */
-function thumbURL(u){                 /* small wikimedia thumb variant for list rows */
-  if(!u) return '';
-  return u.indexOf('/thumb/')>-1 ? u.replace(/\/(\d+)px-([^/]+)$/, '/160px-$2') : u;
-}
+/* Use the baked image URL as-is for list thumbs: Wikimedia rejects rewritten
+   thumb widths (ORB-blocked error page), and these only load lazily when a
+   region card is opened. */
+function thumbURL(u){ return u||''; }
 function buildBrowseDir(){
   var el=document.getElementById('browseDir');
   if(!el||!DESTS.length) return;
