@@ -1837,9 +1837,16 @@ function renderMarine(){
 function renderDestinations(month){
   var g=document.getElementById('destBody');
   if(!month){
+    var usedThumb={};   // each month gets a different destination photo — no repeats down the list
     var rows=DivingCalendar.MONTHS.map(function(m){
-      var top=DivingCalendar.rankPeriod(DESTS,DivingCalendar.MONTHS.indexOf(m)*2+1,{limit:1})[0];
-      var d=top?DivingCalendar.getDestination(DESTS,top.name):null;
+      var ranked=DivingCalendar.rankPeriod(DESTS,DivingCalendar.MONTHS.indexOf(m)*2+1,{limit:10});
+      var d=null;
+      for(var i=0;i<ranked.length;i++){
+        var cand=DivingCalendar.getDestination(DESTS,ranked[i].name);
+        if(cand&&cand.image&&!usedThumb[cand.image]){d=cand;break;}
+      }
+      if(!d&&ranked.length) d=DivingCalendar.getDestination(DESTS,ranked[0].name);
+      if(d&&d.image) usedThumb[d.image]=1;
       var thumb=(d&&d.image)?'<img src="'+d.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'';
       var teaser=(MONTH_INTROS[m]||'').split('. ')[0]+'.';
       return '<a class="artrow" href="#" onclick="openMonthArticle(\''+m+'\');return false;">'+

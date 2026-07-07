@@ -818,11 +818,19 @@ def month_page(month, rankings, dests_by_name):
 def months_index_page(rankings, dests_by_name):
     url = BASE + "months/index.html"
     rows = ""
+    used = set()   # each month gets a different destination photo — no repeats down the list
     for m in MONTHS:
         full = MONTH_FULL[m]
-        top = month_ranked(rankings, m, dests_by_name)[:3]
-        teaser = ", ".join(r["name"] for r in top)
-        rows += (f'<li><a href="{full.lower()}.html"><div class="th"></div>'
+        ranked = month_ranked(rankings, m, dests_by_name)
+        teaser = ", ".join(r["name"] for r in ranked[:3])
+        img = ""
+        for r in ranked:
+            cand = dests_by_name[r["name"]].get("image") or ""
+            if cand and cand not in used:
+                img = cand; used.add(cand); break
+        th = (f'<div class="th photo"><img src="{esc(img)}" alt="" loading="lazy"></div>'
+              if img else '<div class="th"></div>')
+        rows += (f'<li><a href="{full.lower()}.html">{th}'
                  f'<div><h3>Best diving in {full}</h3><p>{esc(teaser)}</p></div></a></li>')
     desc = "Month-by-month guides to the world's best scuba diving — where the season, marine life and visibility line up for each month of the year."[:160]
     inner = (f'<p class="greview" style="max-width:80ch">Twelve guides, one per month — every destination scored for '
