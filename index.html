@@ -886,14 +886,15 @@ function planMonth(){
 /* Broad world regions (continent-level, like major dive-travel directories),
    each expandable to its destinations in the planner's region picker. */
 var REGION_GROUPS={
- 'Caribbean':['Bahamas','Bay Islands','Bonaire','Cayman Islands','Cozumel','Great Blue Hole','Roat\u00e1n','Utila'],
- 'Asia':['Apo Island & Dumaguete','Bunaken National Marine Park','Cenderawasih Bay','Fuvahmulah','Gili Islands & Lombok','Komodo National Park','Layang Layang','Malapascua Island','Maldives','Nusa Penida','Okinawa Islands','Raja Ampat','Similan Islands','Sipadan Island','Tubbataha Reefs Natural Park'],
+ 'Caribbean':['Aruba','Bahamas','Bay Islands','Bonaire','Cayman Islands','Cozumel','Great Blue Hole','Roat\u00e1n','Utila'],
+ 'Asia':['Apo Island & Dumaguete','Bali','Bunaken National Marine Park','Cenderawasih Bay','Fuvahmulah','Gili Islands & Lombok','Koh Tao','Komodo National Park','Layang Layang','Malapascua Island','Maldives','Nusa Penida','Okinawa Islands','Phuket','Raja Ampat','Similan Islands','Sipadan Island','Tubbataha Reefs Natural Park'],
  'Oceania':['Fiji','French Polynesia','Great Barrier Reef','Guadalcanal & Western Province','Heron Island','Lord Howe Island','Moorea','Ningaloo Reef','Palau','Poor Knights Islands','South West Rocks','Truk (Chuuk) Lagoon','Whitsunday Islands','Yap'],
- 'Europe':['Azores','Chania (Crete)','Gozo & Malta','Kaş','Larnaca','Lundy Island','Medes Islands','Scapa Flow','Silfra Fissure','Ustica','Vis Island'],
- 'Africa':['Aliwal Shoal','Protea Banks','Red Sea (Egypt)','Seychelles','Tofo'],
- 'North America':['Cenotes of Yucat\u00e1n Peninsula','Jupiter','Maui & Kona','Sea of Cortez','Socorro Island','Vancouver Island'],
+ 'Europe':['Azores','Chania (Crete)','Gozo & Malta','Kaş','Larnaca','Lundy Island','Mallorca','Medes Islands','Santorini','Scapa Flow','Silfra Fissure','Tenerife','Ustica','Vis Island'],
+ 'Africa':['Aliwal Shoal','Mauritius','Protea Banks','Red Sea (Egypt)','Seychelles','Tofo','Zanzibar'],
+ 'North America':['Canc\u00fan & Playa del Carmen','Cenotes of Yucat\u00e1n Peninsula','Florida Keys','Jupiter','Maui & Kona','Oahu','Sea of Cortez','Socorro Island','Vancouver Island'],
  'Central America':['Bat Islands','Cocos Island','Coiba'],
- 'South America':['Fernando de Noronha','Galapagos Islands','Malpelo Island']
+ 'South America':['Fernando de Noronha','Galapagos Islands','Malpelo Island'],
+ 'Middle East':['Aqaba','Dubai & Fujairah','Muscat & Daymaniyat Islands']
 };
 var DEST_GROUP={};
 Object.keys(REGION_GROUPS).forEach(function(g){REGION_GROUPS[g].forEach(function(n){DEST_GROUP[n]=g;});});

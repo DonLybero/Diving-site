@@ -11608,6 +11608,2485 @@
       "image_credit": "Photo: Dronepicr (CC BY 3.0) via Wikimedia Commons",
       "image_source": "wikimedia",
       "description": "Panama's UNESCO-listed Coiba National Park protects a swath of eastern Pacific where cool, nutrient-rich upwelling turns seamounts into pelagic magnets: schooling scalloped hammerheads (strongest March through July), resident whitetip reef sharks, and seasonal whale sharks and mantas. Expect negative entries onto current-swept pinnacles like Wahoo Rock, thermoclines that can dip to 16-20C, and blue-water ascents. Most diving runs as day trips or multi-day expeditions out of Santa Catalina, and it firmly favors experienced divers."
+    },
+    {
+      "name": "Aqaba",
+      "country": "Jordan",
+      "region": "Red Sea / Jordan",
+      "coordinates": {
+        "lat": 29.43,
+        "lng": 34.97
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly",
+      "access": "shore / day-boat",
+      "best_months": "Apr-Jun & Sep-Nov",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Quiet reefs, strong macro — seahorses, nudibranchs, octopus among resident anthias and lionfish",
+          "conditions": "Cool, flat-calm gulf; crisp winter visibility, mild air",
+          "visibility_m": 25
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "Macro life plus occasional manta passing through the gulf",
+          "conditions": "Coldest water of the year but sheltered and clear",
+          "visibility_m": 25
+        },
+        "Mar": {
+          "rating": "Good",
+          "marine_life": "Reef fish activity picking up; turtles, frogfish and pipefish on the house reefs",
+          "conditions": "Sea warming slowly, calm seas, reliably clear water",
+          "visibility_m": 24
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Hawksbill turtles, eagle rays and schooling fusiliers over the coral gardens",
+          "conditions": "Pleasant spring air, calm water, excellent visibility",
+          "visibility_m": 24
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Plankton bloom draws bigger visitors — whale shark sightings possible late month",
+          "conditions": "Warm and calm; bloom can soften visibility slightly",
+          "visibility_m": 20
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Whale shark season peaks offshore; reefs busy with juveniles",
+          "conditions": "Hot desert air, warm calm sea, long days",
+          "visibility_m": 22
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "Full summer reef activity — lionfish, moray eels, blue-spotted rays on the sand",
+          "conditions": "Very hot topside; water at its warmest and glassy",
+          "visibility_m": 25
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "Warm-water reef life in full swing, octopus and cuttlefish at dusk",
+          "conditions": "Peak heat on land, bath-warm flat sea below",
+          "visibility_m": 25
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Abundant fish life — eagle rays, turtles and dense anthias clouds over the wrecks",
+          "conditions": "Air cooling, sea still warm, visibility opening up",
+          "visibility_m": 28
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "Best all-round month: turtles, rays, thick reef fish and active macro",
+          "conditions": "Ideal temperatures above and below, 30m-plus visibility",
+          "visibility_m": 30
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "Reefs still lively; seahorses and frogfish easier to find as crowds thin",
+          "conditions": "Comfortable air, gently cooling water, superb clarity",
+          "visibility_m": 27
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "Resident reef life and macro; quiet, uncrowded sites",
+          "conditions": "Cool clear water, calm sheltered gulf, mild winter days",
+          "visibility_m": 25
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 22,
+        "Feb": 21,
+        "Mar": 21,
+        "Apr": 22,
+        "May": 24,
+        "Jun": 26,
+        "Jul": 27,
+        "Aug": 28,
+        "Sep": 27,
+        "Oct": 26,
+        "Nov": 25,
+        "Dec": 23
+      },
+      "highlights": "Jordan's 27km Red Sea window packs the Cedar Pride wreck, a scuttled C-130 Hercules, a sunken tank and an underwater military museum alongside pristine coral gardens — nearly all divable straight off the beach.",
+      "signature_species": [
+        "Hawksbill turtle",
+        "Spotted eagle ray",
+        "Seahorse",
+        "Frogfish",
+        "Blue-spotted ribbontail ray",
+        "Whale shark"
+      ],
+      "current_strength": "Low",
+      "currents": "The Gulf of Aqaba is deeply sheltered, so currents are typically negligible to mild, with only a light longshore drift on some reef sites. This is one of the calmest stretches of the Red Sea and rarely dictates dive planning.",
+      "current_note": "sheltered gulf, near-still water most days",
+      "wetsuit": "3mm full suit May-Nov; 5mm (some add a hood) Dec-Apr when water dips to 21°C",
+      "dive_sites": [
+        {
+          "name": "Cedar Pride",
+          "type": "Wreck",
+          "depth": "8-26m",
+          "level": "beginner",
+          "blurb": "A soft-coral-carpeted Lebanese freighter lying on her port side 150m off the beach — one of the Red Sea's most accessible signature wrecks."
+        },
+        {
+          "name": "C-130 Hercules",
+          "type": "Wreck",
+          "depth": "12-17m",
+          "level": "beginner",
+          "blurb": "An intact four-engine cargo plane scuttled in 2017, sitting upright on sand with an easy cockpit-to-tail swim-through."
+        },
+        {
+          "name": "The Tank",
+          "type": "Artificial reef",
+          "depth": "5-6m",
+          "level": "beginner",
+          "blurb": "An M42 anti-aircraft tank sunk just 20m from shore, now crusted in coral and a favourite for training dives and long safety-stop photo ops."
+        },
+        {
+          "name": "Japanese Garden",
+          "type": "Reef",
+          "depth": "5-30m",
+          "level": "beginner",
+          "blurb": "Aqaba's prettiest coral slope — table, brain and soft corals in botanical-garden density with turtles cruising the shallows."
+        },
+        {
+          "name": "Underwater Military Museum",
+          "type": "Artificial reef",
+          "depth": "15-28m",
+          "level": "intermediate",
+          "blurb": "A battle-formation column of scuttled tanks, troop carriers and a helicopter arranged down the reef slope since 2019."
+        },
+        {
+          "name": "Power Station",
+          "type": "Wall",
+          "depth": "12-40m",
+          "level": "advanced",
+          "blurb": "A dramatic drop-off at the northern end of the coast with black coral, gorgonians and the best chance of pelagic fly-bys."
+        }
+      ],
+      "description": "Jordan's single short coastline squeezes remarkable variety into the calm, current-free northern tip of the Red Sea: a legendary freighter wreck, a scuttled cargo plane, sunken military hardware and genuinely healthy fringing reefs, almost all reached by walking in from the beach. Water stays warm and flat year-round, visibility rarely drops below 20m, and macro hunting is superb. Ideal for new divers, wreck lovers and anyone pairing dives with Petra and Wadi Rum.",
+      "slug": "aqaba",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Aruba",
+      "country": "Aruba",
+      "region": "Caribbean / Aruba",
+      "coordinates": {
+        "lat": 12.52,
+        "lng": -70.03
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly",
+      "access": "shore / day-boat",
+      "best_months": "Mar-Jun & Sep",
+      "monthly": {
+        "Jan": {
+          "rating": "Good",
+          "marine_life": "Green and hawksbill turtles on the reefs, barracuda over the wrecks, stingrays on sand",
+          "conditions": "Dry and sunny with steady 20-25 mph trades; protected west coast stays diveable",
+          "visibility_m": 20
+        },
+        "Feb": {
+          "rating": "Good",
+          "marine_life": "Turtles, southern stingrays and seahorses in the seagrass; reef fish thick on the Antilla",
+          "conditions": "Driest, coolest water of the year; brisk trade winds, calm leeward sites",
+          "visibility_m": 20
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Eagle rays cruising outer reefs, turtles everywhere, wrecks carpeted in tube sponges and fish",
+          "conditions": "Peak dry season; calm, clear water on the sheltered west coast",
+          "visibility_m": 24
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "Eagle rays and stingrays active, turtle sightings building toward nesting season",
+          "conditions": "Sunny and settled with excellent clarity; ideal wreck-diving window",
+          "visibility_m": 24
+        },
+        "May": {
+          "rating": "Peak",
+          "marine_life": "Turtle nesting season begins; frequent green and hawksbill encounters, barracuda schools",
+          "conditions": "Warm and dry; trades strengthen but leeward sites remain flat",
+          "visibility_m": 22
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Turtles at their most abundant, rays over the sand flats, dense fish on the Jane Sea",
+          "conditions": "Windiest stretch of the year; surface chop, though west-coast dives stay easy",
+          "visibility_m": 20
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "Turtle hatchlings and adults, frogfish and seahorses for sharp-eyed divers",
+          "conditions": "Strong trades continue; reliable sun, warm water, mild surface texture",
+          "visibility_m": 20
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "Late-season turtles, eagle rays on the outer reef, octopus on night dives",
+          "conditions": "Hot and breezy; well outside the hurricane belt so seas stay predictable",
+          "visibility_m": 20
+        },
+        "Sep": {
+          "rating": "Good",
+          "marine_life": "Warmest water draws big barracuda and rays; juvenile fish swarm the wrecks",
+          "conditions": "Trades ease to their calmest; glassy mornings and long viz",
+          "visibility_m": 24
+        },
+        "Oct": {
+          "rating": "Shoulder",
+          "marine_life": "Rays, turtles and resident wreck life unchanged; macro critters in the seagrass",
+          "conditions": "Warmest sea of the year; brief showers begin, occasional fringe swell",
+          "visibility_m": 18
+        },
+        "Nov": {
+          "rating": "Shoulder",
+          "marine_life": "Turtles and stingrays year-round; reef fish activity steady on the leeward reefs",
+          "conditions": "Wettest month, though rain falls in short bursts; slightly softer viz",
+          "visibility_m": 15
+        },
+        "Dec": {
+          "rating": "Good",
+          "marine_life": "Turtles, barracuda and eagle rays back on the usual circuits",
+          "conditions": "Showers taper, trades rebuild; busy holiday season with easy conditions",
+          "visibility_m": 18
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 26,
+        "Feb": 26,
+        "Mar": 26,
+        "Apr": 27,
+        "May": 27,
+        "Jun": 28,
+        "Jul": 28,
+        "Aug": 28,
+        "Sep": 29,
+        "Oct": 29,
+        "Nov": 28,
+        "Dec": 27
+      },
+      "highlights": "The 120m Antilla — one of the Caribbean's largest diveable wrecks — headlines a leeward coast of WWII ships, sunken airplanes and shore-accessible reefs that dive well twelve months a year outside the hurricane belt.",
+      "signature_species": [
+        "green sea turtle",
+        "hawksbill turtle",
+        "spotted eagle ray",
+        "southern stingray",
+        "great barracuda",
+        "longsnout seahorse"
+      ],
+      "current_strength": "Moderate",
+      "currents": "Constant northeast trade winds drive a west-flowing current along the island, so diving concentrates on the sheltered leeward coast where it is usually mild. Southern sites like the Jane Sea and Baby Beach Reef can run strong and are dived as drifts when it picks up.",
+      "current_note": "mild on the leeward wrecks; can run strong at the southern reef sites",
+      "wetsuit": "3mm shorty or full suit year-round; many divers go rash-guard only Aug-Oct",
+      "dive_sites": [
+        {
+          "name": "SS Antilla",
+          "type": "Wreck",
+          "depth": "3-18m",
+          "level": "beginner",
+          "blurb": "A 120m German freighter scuttled in 1940 and one of the Caribbean's largest wrecks, shallow enough to cover in a single dive and blanketed in tube sponges and fish."
+        },
+        {
+          "name": "Pedernales",
+          "type": "Wreck",
+          "depth": "6-10m",
+          "level": "beginner",
+          "blurb": "The scattered midsection of an oil tanker torpedoed by a U-boat in 1942, lying in calm shallows with cabins and pipeline sections to weave through."
+        },
+        {
+          "name": "Jane Sea",
+          "type": "Wreck",
+          "depth": "15-27m",
+          "level": "advanced",
+          "blurb": "An upright 52m cement freighter sunk as an artificial reef in 1988, thickly overgrown with coral and swept by the currents that bring in barracuda and rays."
+        },
+        {
+          "name": "Sonesta Airplanes",
+          "type": "Wreck",
+          "depth": "12-24m",
+          "level": "intermediate",
+          "blurb": "A YS-11 turboprop and a deeper DC-3 sunk off Renaissance Island, giving Aruba its signature airplane-wreck double bill."
+        },
+        {
+          "name": "Mangel Halto",
+          "type": "Reef",
+          "depth": "5-33m",
+          "level": "beginner",
+          "blurb": "The island's best shore dive: a mangrove-fringed lagoon spilling onto a sloping reef where turtles are near-guaranteed and seahorses hide in the grass."
+        },
+        {
+          "name": "Baby Beach Reef",
+          "type": "Reef",
+          "depth": "6-18m",
+          "level": "intermediate",
+          "blurb": "A hard-coral reef at the island's southeastern tip known for barracuda and turtles, with current that rewards a watchful drift."
+        }
+      ],
+      "description": "Aruba sits at the Caribbean's southern edge, below the hurricane belt, where steady trade winds shape a dry, sunny island and a sheltered leeward coast that dives reliably all year. Wrecks are the story here: the vast Antilla, the torpedoed Pedernales, a coral-covered freighter and a pair of sunken airplanes, most in easy recreational depths. Warm water, short boat rides and genuine shore entries make it a natural pick for new wreck divers and mixed-ability groups.",
+      "slug": "aruba",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Bali",
+      "country": "Indonesia",
+      "region": "Coral Triangle / Indonesia",
+      "coordinates": {
+        "lat": -8.274,
+        "lng": 115.593
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly",
+      "access": "shore / day-boat",
+      "best_months": "Apr-Jul & Oct-Nov",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "resident wreck fish, nudibranch numbers climbing on the muck slopes, bumpheads at dawn on the Liberty",
+          "conditions": "wet-season rains and runoff soften visibility; east-coast shore entries stay sheltered and diveable",
+          "visibility_m": 12
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "macro life thick at Seraya and the Padang Bai jetty; frogfish, ghost pipefish and octopus on the black sand",
+          "conditions": "rainiest stretch of the year; mornings calmest, viz variable after downpours",
+          "visibility_m": 12
+        },
+        "Mar": {
+          "rating": "Good",
+          "marine_life": "reef fish spawning activity, turtles on the walls, harlequin shrimp and boxer crabs in the muck",
+          "conditions": "rains easing, seas settling; visibility recovering on the wreck and at Menjangan",
+          "visibility_m": 15
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "schooling jacks and sweetlips crowd the Liberty; pygmy seahorses on the fans, reef sharks off the drop-offs",
+          "conditions": "dry season begins — flat seas, warm water and fast-improving clarity coast-wide",
+          "visibility_m": 20
+        },
+        "May": {
+          "rating": "Peak",
+          "marine_life": "wreck at its liveliest — bumphead parrotfish at first light, garden eels, dense fish soup over the coral",
+          "conditions": "glassy mornings and superb visibility; prime month for the east coast",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "big schools on the wreck and walls, turtles at Menjangan, full macro spread at Amed and Seraya",
+          "conditions": "dry, calm and clear across all four areas; light southeast trades",
+          "visibility_m": 25
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "cooler water wakes up the critters — rhinopias and blue-ringed octopus sightings pick up at Padang Bai",
+          "conditions": "dry and clear; trade winds add chop to boat crossings, water noticeably cooler",
+          "visibility_m": 25
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "reef sharks and schooling fish thrive in the cool upwellings; nudibranchs everywhere on the muck slopes",
+          "conditions": "coolest water and briskest winds of the year; viz strong but some swell on exposed sites",
+          "visibility_m": 20
+        },
+        "Sep": {
+          "rating": "Good",
+          "marine_life": "fish life dense on the Liberty, thermocline critters still active, turtles steady at Menjangan",
+          "conditions": "dry and reliable; winds beginning to ease, water slowly warming",
+          "visibility_m": 20
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "peak fish activity on the wreck and walls; gorgonian fans at Menjangan hosting pygmy seahorses",
+          "conditions": "calm seas and the year's clearest water, especially over Menjangan's walls",
+          "visibility_m": 30
+        },
+        "Nov": {
+          "rating": "Peak",
+          "marine_life": "nudibranch numbers surge as plankton returns; wreck and Blue Lagoon fishy and photogenic",
+          "conditions": "clarity still exceptional early in the month before the first rains arrive",
+          "visibility_m": 30
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "resident wreck fauna, mandarinfish and frogfish at the jetty, macro season ramping up",
+          "conditions": "wet season building — warm, sheltered shore diving with softer visibility",
+          "visibility_m": 15
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 29,
+        "Feb": 29,
+        "Mar": 29,
+        "Apr": 29,
+        "May": 28,
+        "Jun": 28,
+        "Jul": 27,
+        "Aug": 26,
+        "Sep": 27,
+        "Oct": 28,
+        "Nov": 29,
+        "Dec": 29
+      },
+      "highlights": "A coral-encrusted WWII wreck you can walk into off a pebble beach, world-class black-sand muck at Seraya and Padang Bai, and Menjangan's sheer gorgonian walls — all shore- or short-boat accessible year-round.",
+      "signature_species": [
+        "Bumphead parrotfish",
+        "Pygmy seahorse",
+        "Harlequin shrimp",
+        "Mimic octopus",
+        "Blue-ringed octopus",
+        "Hawksbill turtle"
+      ],
+      "current_strength": "Low",
+      "currents": "The northeast coast at Tulamben and Amed is sheltered, with gentle currents that rarely trouble shore entries. Sites in the Padang Bai channel feel the Lombok Strait's pull and can switch on quickly, so guides time slack windows there.",
+      "current_note": "calm shore sites; channel sites near Padang Bai can run",
+      "wetsuit": "3mm full year-round; 5mm for the cooler Jul-Sep water and repetitive days",
+      "dive_sites": [
+        {
+          "name": "USAT Liberty, Tulamben",
+          "type": "Wreck",
+          "depth": "5-30m",
+          "level": "beginner",
+          "blurb": "A 120m WWII cargo ship smothered in coral just 30m off the beach — arguably the world's easiest great wreck dive, with bumphead parrotfish at dawn."
+        },
+        {
+          "name": "Tulamben Drop-Off",
+          "type": "Wall",
+          "depth": "5-40m",
+          "level": "intermediate",
+          "blurb": "A river-mouth wall plunging past big gorgonians and barrel sponges, with reef sharks and schooling fish in the blue."
+        },
+        {
+          "name": "Seraya Secrets",
+          "type": "Muck",
+          "depth": "5-20m",
+          "level": "beginner",
+          "blurb": "Bali's most famous black-sand macro slope, where photographers hunt harlequin shrimp, boxer crabs and ghost pipefish."
+        },
+        {
+          "name": "Blue Lagoon, Padang Bai",
+          "type": "Reef",
+          "depth": "5-22m",
+          "level": "beginner",
+          "blurb": "A calm white-sand bay packed with unusual critters — rhinopias, leaf scorpionfish and blue-ringed octopus turn up here."
+        },
+        {
+          "name": "Jemeluk Wall & Pyramids, Amed",
+          "type": "Wall / Artificial reef",
+          "depth": "5-35m",
+          "level": "beginner",
+          "blurb": "An easy shore-entry wall and artificial-reef pyramids alive with glassfish, garden eels and passing turtles."
+        },
+        {
+          "name": "Menjangan Island",
+          "type": "Wall",
+          "depth": "5-40m",
+          "level": "beginner",
+          "blurb": "Sheer walls in a marine park off Bali's northwest tip, famous for the island's clearest water and gorgonian-draped drop-offs."
+        }
+      ],
+      "description": "Bali's mainland coast packs remarkable variety into short taxi rides: the coral-carpeted USAT Liberty wreck at Tulamben, black-sand muck slopes at Seraya and Amed, critter-rich bays at Padang Bai, and Menjangan's crystalline walls in the northwest. Warm, mostly gentle water and shore entries make it a superb place to build skills, while the macro life keeps seasoned photographers busy for weeks. Dry-season months bring the flattest seas and clearest water.",
+      "slug": "bali",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Cancún & Playa del Carmen",
+      "country": "Mexico",
+      "region": "Caribbean / Mexico",
+      "coordinates": {
+        "lat": 20.9,
+        "lng": -86.96
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly to advanced",
+      "access": "day-boat",
+      "best_months": "Nov-Mar & Jul-Aug",
+      "monthly": {
+        "Jan": {
+          "rating": "Peak",
+          "marine_life": "Bull sharks at their thickest off Playa; sailfish balling baitfish offshore; eagle rays on the wrecks",
+          "conditions": "Dry season, coolest water, superb clarity; odd norte blows through for a day or two",
+          "visibility_m": 25
+        },
+        "Feb": {
+          "rating": "Peak",
+          "marine_life": "Pregnant bull sharks still stacked at Shark Point; sailfish run in full swing; turtles on every drift",
+          "conditions": "Dry, settled seas between fronts, excellent visibility",
+          "visibility_m": 25
+        },
+        "Mar": {
+          "rating": "Good",
+          "marine_life": "Last of the bull sharks through mid-month; sailfish action offshore; reef fish and rays everywhere",
+          "conditions": "Dry and warming, calm seas, very good visibility",
+          "visibility_m": 25
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Turtles, eagle rays and nurse sharks on the reefs; big schools over the sculptures at MUSA",
+          "conditions": "Flat, warm and clear; one of the calmest, least crowded windows",
+          "visibility_m": 25
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "First whale sharks arrive on the offshore banks mid-month; turtles nesting season begins",
+          "conditions": "Warm and mostly calm; sargassum starts drifting onto beaches but reefs stay clean",
+          "visibility_m": 20
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Whale shark numbers building offshore; reef life prolific, turtles abundant",
+          "conditions": "Hot, rainy season starts; short afternoon storms, sea still diveable most days",
+          "visibility_m": 20
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "Hundreds of whale sharks aggregate offshore — the world's largest gathering; turtles and rays inshore",
+          "conditions": "Hot and humid, bathtub-warm water, generally calm mornings",
+          "visibility_m": 20
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "Whale shark aggregation at its height; mantas sometimes mixed in; turtles on the reefs",
+          "conditions": "Warmest water of the year; calm spells broken by tropical squalls",
+          "visibility_m": 20
+        },
+        "Sep": {
+          "rating": "Shoulder",
+          "marine_life": "Whale sharks disperse mid-month; reef standards — turtles, morays, barracuda — carry the diving",
+          "conditions": "Peak hurricane month; diveable between systems but cancellation risk is real",
+          "visibility_m": 15
+        },
+        "Oct": {
+          "rating": "Shoulder",
+          "marine_life": "Quiet pelagic month; healthy reef life, rays and turtles on the drifts",
+          "conditions": "Tail of hurricane season, rain easing late in the month, visibility recovering",
+          "visibility_m": 18
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "First bull sharks appear off Playa mid-month; eagle rays returning to the wrecks",
+          "conditions": "Dry season begins; first nortes can stir the sea for a day or two",
+          "visibility_m": 22
+        },
+        "Dec": {
+          "rating": "Peak",
+          "marine_life": "Bull shark season in full swing at 24m off Playa; sailfish arriving offshore; eagle rays schooling",
+          "conditions": "Cooling, clear dry-season water; occasional norte, otherwise excellent",
+          "visibility_m": 25
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 26,
+        "Feb": 26,
+        "Mar": 26,
+        "Apr": 27,
+        "May": 28,
+        "Jun": 28,
+        "Jul": 29,
+        "Aug": 29,
+        "Sep": 29,
+        "Oct": 28,
+        "Nov": 27,
+        "Dec": 26
+      },
+      "highlights": "Two headline shark seasons — cageless bull shark dives at 24m off Playa del Carmen from November to March and the planet's biggest whale shark aggregation offshore in July-August — bolted onto easy drift reefs, hurricane-split wrecks and the sculpture galleries of the MUSA underwater museum on Manchones reef.",
+      "signature_species": [
+        "Bull shark",
+        "Whale shark",
+        "Atlantic sailfish",
+        "Spotted eagle ray",
+        "Green turtle",
+        "Loggerhead turtle",
+        "Nurse shark"
+      ],
+      "current_strength": "Moderate",
+      "currents": "The north-flowing Yucatán Current sweeps the coast, so most Playa del Carmen reef diving is done as relaxed one-way drifts with the boat following. Inshore Cancún sites like Manchones and MUSA sit in protected shallows with little water movement, while the deeper wrecks can carry genuinely strong flow.",
+      "current_note": "Drift-style boat diving on the Playa reefs; strong current possible on the deep wrecks",
+      "wetsuit": "3mm full year-round; 5mm comfortable for repetitive dives Dec-Mar",
+      "dive_sites": [
+        {
+          "name": "MUSA — Manchones",
+          "type": "Artificial reef",
+          "depth": "8-10m",
+          "level": "beginner",
+          "blurb": "The underwater museum's main gallery, where hundreds of life-size sculptures on Manchones reef have become coral-crusted habitat in calm, clear shallows."
+        },
+        {
+          "name": "Manchones Reef",
+          "type": "Reef",
+          "depth": "8-12m",
+          "level": "beginner",
+          "blurb": "Long, shallow ridge of hard coral off Isla Mujeres with big schools of grunts and snapper, gentle conditions and generous bottom time."
+        },
+        {
+          "name": "Shark Point",
+          "type": "Reef",
+          "depth": "22-25m",
+          "level": "advanced",
+          "blurb": "A featureless sand flat off Playa del Carmen where kneeling divers watch pregnant bull sharks cruise within metres from November to March."
+        },
+        {
+          "name": "C-58 General Anaya",
+          "type": "Wreck",
+          "depth": "24-26m",
+          "level": "advanced",
+          "blurb": "WWII-era minesweeper broken in two by hurricanes, opening swim-throughs that fill with eagle rays in winter; a live-drop drift dive in current."
+        },
+        {
+          "name": "Mama Viña",
+          "type": "Wreck",
+          "depth": "24-30m",
+          "level": "advanced",
+          "blurb": "Shrimp trawler sunk as an artificial reef off Playa, sitting upright on sand and swept by current that keeps it dense with barracuda and sponges."
+        },
+        {
+          "name": "Tortugas",
+          "type": "Drift",
+          "depth": "14-25m",
+          "level": "intermediate",
+          "blurb": "Playa's turtle alley — a mellow drift over sponge-covered slopes where green and loggerhead turtles feed at close range."
+        },
+        {
+          "name": "Los Arcos",
+          "type": "Reef",
+          "depth": "25-30m",
+          "level": "advanced",
+          "blurb": "Deeper Playa reef of arches, overhangs and swim-throughs that pulls in nurse sharks, rays and the occasional passing pelagic."
+        }
+      ],
+      "description": "The Cancún–Playa del Carmen corridor is high-volume Caribbean diving with two genuinely wild seasons stitched in. Winter brings pregnant bull sharks to a 24-metre sand flat off Playa and sailfish to the blue; summer stacks hundreds of whale sharks offshore. Between them you drift warm, easy reefs on the Yucatán Current, land on hurricane-split wrecks, and tour the sculpture galleries of MUSA. Short boat rides and year-round warm water suit everyone from new divers to shark-focused veterans.",
+      "slug": "cancun-playa-del-carmen",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Dubai & Fujairah",
+      "country": "United Arab Emirates",
+      "region": "Gulf of Oman / United Arab Emirates",
+      "coordinates": {
+        "lat": 25.49,
+        "lng": 56.36
+      },
+      "water_type": "tropical (very warm in summer)",
+      "difficulty": "beginner-friendly",
+      "access": "shore / day-boat",
+      "best_months": "Oct-May",
+      "monthly": {
+        "Jan": {
+          "rating": "Peak",
+          "marine_life": "Turtles and blacktip reef sharks on Dibba Rock, cuttlefish pairing up, big morays on the wrecks",
+          "conditions": "Cool, calm winter seas; the year's clearest water",
+          "visibility_m": 15
+        },
+        "Feb": {
+          "rating": "Peak",
+          "marine_life": "Cuttlefish courtship, eagle rays, jawfish colonies in the sand, resident turtles",
+          "conditions": "Coolest water of the year but settled and clear",
+          "visibility_m": 16
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Rays and guitarfish over the sand, nudibranchs blooming on Martini Rock, turtles everywhere",
+          "conditions": "Warming, mostly calm; occasional plankton haze starts",
+          "visibility_m": 14
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Baitballs building, barracuda schools, blacktips patrolling the shallows",
+          "conditions": "Warm and pleasant; spring blooms can soften the viz",
+          "visibility_m": 12
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "First whale shark reports around Dibba Rock, snapper aggregations, batfish on the Inchcapes",
+          "conditions": "Getting hot topside; sea still friendly, viz variable",
+          "visibility_m": 10
+        },
+        "Jun": {
+          "rating": "Shoulder",
+          "marine_life": "Whale shark season begins in earnest, plankton feeders active, turtles unbothered by the heat",
+          "conditions": "Bathwater sea, hazy plankton-rich water, hot boat rides",
+          "visibility_m": 8
+        },
+        "Jul": {
+          "rating": "Shoulder",
+          "marine_life": "Best whale shark odds of the year, big schools of fusiliers and jacks in the green water",
+          "conditions": "Sea over 30°C, milky visibility, extreme surface heat",
+          "visibility_m": 8
+        },
+        "Aug": {
+          "rating": "Low",
+          "marine_life": "Whale sharks still possible; reef life subdued in the warmest, greenest water",
+          "conditions": "Peak heat; algal blooms most likely and viz can collapse",
+          "visibility_m": 6
+        },
+        "Sep": {
+          "rating": "Shoulder",
+          "marine_life": "Late whale sharks, barracuda tornadoes returning, morays and scorpionfish thick on the wrecks",
+          "conditions": "Still hot; bloom risk lingers but the sea starts to settle",
+          "visibility_m": 8
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Rays back over the sand, schooling snapper and trevally, turtles on every Snoopy Island dive",
+          "conditions": "Cooling and clearing; comfortable diving resumes",
+          "visibility_m": 10
+        },
+        "Nov": {
+          "rating": "Peak",
+          "marine_life": "Blacktips, honeycomb morays, cuttlefish arriving, dense fish life on Martini Rock",
+          "conditions": "Calm, clear and comfortable — the sweet spot begins",
+          "visibility_m": 12
+        },
+        "Dec": {
+          "rating": "Peak",
+          "marine_life": "Turtles, eagle rays, cuttlefish and prolific macro on the coral outcrops",
+          "conditions": "Cool, glassy winter conditions with the clearest water",
+          "visibility_m": 14
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 24,
+        "Feb": 23,
+        "Mar": 24,
+        "Apr": 27,
+        "May": 29,
+        "Jun": 31,
+        "Jul": 32,
+        "Aug": 32,
+        "Sep": 31,
+        "Oct": 29,
+        "Nov": 27,
+        "Dec": 25
+      },
+      "highlights": "Easy year-round diving on the Gulf of Oman east coast — turtle-packed reefs at Dibba Rock and Snoopy Island, soft-coral-crusted Martini Rock, the purpose-sunk Inchcape wrecks, plus Dubai's artificial-reef wreck sites, with summer whale shark visits.",
+      "signature_species": [
+        "Whale shark",
+        "Green turtle",
+        "Blacktip reef shark",
+        "Honeycomb moray",
+        "Yellowbar angelfish",
+        "Pharaoh cuttlefish"
+      ],
+      "current_strength": "Low",
+      "currents": "Currents on the east coast are generally mild, with only occasional gentle drift along exposed outcrops like Martini Rock and the Inchcape wrecks. Surge can pick up in the shallows when swell wraps around Dibba Rock.",
+      "current_note": "mostly slack; light current or surge on exposed sites",
+      "wetsuit": "3mm full Oct-May (5mm midwinter for the cold-prone); shorty or 1mm skin in 31-32°C summer water",
+      "dive_sites": [
+        {
+          "name": "Dibba Rock",
+          "type": "Reef",
+          "depth": "5-14m",
+          "level": "beginner",
+          "blurb": "A protected rocky islet whose sloping reef delivers turtles on nearly every dive, patrolling blacktips and the coast's most reliable whale shark encounters in summer."
+        },
+        {
+          "name": "Snoopy Island",
+          "type": "Reef",
+          "depth": "5-12m",
+          "level": "beginner",
+          "blurb": "A shore-accessible boulder islet off Al Aqah where hard-coral gardens shelter turtles, rays and dense schooling fish in easy, shallow water."
+        },
+        {
+          "name": "Martini Rock",
+          "type": "Reef",
+          "depth": "6-22m",
+          "level": "intermediate",
+          "blurb": "A submerged pinnacle carpeted in orange teddy-bear soft coral, famous for macro life, nudibranchs, morays and winter cuttlefish."
+        },
+        {
+          "name": "Inchcape 1",
+          "type": "Wreck",
+          "depth": "27-32m",
+          "level": "advanced",
+          "blurb": "A 21m supply vessel purpose-sunk in 2001, sitting upright at 30m and now smothered in growth with lionfish, jacks and big morays."
+        },
+        {
+          "name": "Inchcape 2",
+          "type": "Wreck",
+          "depth": "17-23m",
+          "level": "intermediate",
+          "blurb": "The shallower sister wreck near Martini Wall, sunk in 2002 as an accessible artificial reef busy with batfish, snapper and scorpionfish."
+        },
+        {
+          "name": "Car Cemetery",
+          "type": "Artificial reef",
+          "depth": "12-16m",
+          "level": "beginner",
+          "blurb": "Rows of sunken vehicles on the Fujairah sand that have grown into a quirky artificial reef stacked with morays, rays and glassfish."
+        },
+        {
+          "name": "Zainab Wreck",
+          "type": "Wreck",
+          "depth": "22-30m",
+          "level": "advanced",
+          "blurb": "Dubai's signature wreck — a 70m smuggling tanker scuttled in 2001, lying on her port side and swarmed by barracuda, snapper and batfish."
+        }
+      ],
+      "description": "The UAE's real diving lives on the Fujairah side, where the Gulf of Oman's plankton-rich water feeds rocky reefs at Dibba Rock, Snoopy Island and Martini Rock, plus the purpose-sunk Inchcape wrecks; Dubai adds sandy-bottom wreck sites and artificial reefs in the Gulf. Expect warm, easy conditions with modest visibility that peaks in winter and can green out during summer blooms — when whale sharks arrive. Ideal for new divers, wreck fans and layover diving.",
+      "slug": "dubai-fujairah",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Florida Keys",
+      "country": "United States",
+      "region": "Atlantic / Florida (USA)",
+      "coordinates": {
+        "lat": 25.09,
+        "lng": -80.44
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly (deep wrecks advanced)",
+      "access": "day-boat",
+      "best_months": "Apr-Sep",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Reef fish, turtles, nurse sharks; sailfish and bait balls offshore",
+          "conditions": "Cold fronts bring wind and chop; superb clarity between fronts",
+          "visibility_m": 20
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "Grunts and snapper schooling thick; spotted eagle rays cruising the reef edge",
+          "conditions": "Coolest water of the year; front-driven blowouts possible, calm days crystal clear",
+          "visibility_m": 20
+        },
+        "Mar": {
+          "rating": "Good",
+          "marine_life": "Reef life waking up; eagle rays, turtles, big barracuda on the wrecks",
+          "conditions": "Fronts taper off, seas settling; water still cool",
+          "visibility_m": 18
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Turtles nesting season begins; reef fish spawning activity picks up",
+          "conditions": "Calming seas, warming water, reliable boat schedules",
+          "visibility_m": 18
+        },
+        "May": {
+          "rating": "Peak",
+          "marine_life": "Full reef activity — angelfish, parrotfish, Caribbean reef sharks on the deep wrecks",
+          "conditions": "Flat calm stretches, warm water, long daylight",
+          "visibility_m": 18
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "Tarpon and permit on the wrecks; nurse sharks and turtles everywhere",
+          "conditions": "Warm and mostly calm; hurricane season starts but early risk is low",
+          "visibility_m": 15
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "Peak reef abundance; lobster walking the reef, big jacks over the wrecks",
+          "conditions": "Bathwater-warm, glassy mornings; busiest boats of the year",
+          "visibility_m": 15
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "Goliath grouper begin aggregating on the deep wrecks; coral spawning after the full moon",
+          "conditions": "Hot and calm between systems; watch the tropics for storms",
+          "visibility_m": 15
+        },
+        "Sep": {
+          "rating": "Good",
+          "marine_life": "Goliath grouper aggregation peaks — dozens of 200kg fish on Spiegel Grove and the Vandenberg",
+          "conditions": "Statistical hurricane peak; superb diving when the weather window holds",
+          "visibility_m": 15
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Lingering goliaths, thick baitfish clouds, reef sharks patrolling",
+          "conditions": "Storm risk fades late month; warm water, thinning crowds",
+          "visibility_m": 15
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "Reef fish dense, eagle rays returning; wrecks quiet and fishy",
+          "conditions": "First mild fronts arrive; mostly diveable with clearing visibility",
+          "visibility_m": 18
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "Turtles, nurse sharks and schooling grunts; occasional offshore pelagics",
+          "conditions": "Cold fronts return with windy spells; clear, cooler water between them",
+          "visibility_m": 20
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 23,
+        "Feb": 23,
+        "Mar": 24,
+        "Apr": 26,
+        "May": 28,
+        "Jun": 29,
+        "Jul": 30,
+        "Aug": 30,
+        "Sep": 29,
+        "Oct": 28,
+        "Nov": 26,
+        "Dec": 24
+      },
+      "highlights": "America's reef tract in one island chain — the towering Spiegel Grove and Vandenberg wrecks, the Christ of the Abyss statue, spur-and-groove gardens at Molasses Reef and Looe Key, and a late-summer goliath grouper aggregation that turns the deep wrecks into cathedrals of giants.",
+      "signature_species": [
+        "Goliath grouper",
+        "Green sea turtle",
+        "Caribbean reef shark",
+        "Nurse shark",
+        "Spotted eagle ray",
+        "Great barracuda",
+        "Queen angelfish"
+      ],
+      "current_strength": "Moderate",
+      "currents": "The Gulf Stream runs just offshore, washing the outer reefs with clear water and pushing moderate — occasionally strong — current across the deep wrecks like the Duane and Spiegel Grove. Inshore spur-and-groove reefs are usually gentle.",
+      "current_note": "Deep wrecks can rip when the Gulf Stream swings in; descend on the mooring line",
+      "wetsuit": "Shorty or 3mm in summer; 5mm full suit December-March",
+      "dive_sites": [
+        {
+          "name": "Spiegel Grove",
+          "type": "Wreck",
+          "depth": "18-40m",
+          "level": "advanced",
+          "blurb": "A 155m landing ship dock off Key Largo — one of the world's largest artificial reefs, sprawling enough for a dozen dives and a goliath grouper magnet in late summer."
+        },
+        {
+          "name": "Christ of the Abyss",
+          "type": "Reef",
+          "depth": "5-8m",
+          "level": "beginner",
+          "blurb": "A bronze statue standing arms-raised in the shallows of Key Largo Dry Rocks, ringed by coral heads and clouds of grunts — the Keys' most photographed dive."
+        },
+        {
+          "name": "Molasses Reef",
+          "type": "Reef",
+          "depth": "6-21m",
+          "level": "beginner",
+          "blurb": "Gulf Stream-washed spur-and-groove with the best visibility in the Upper Keys, huge snapper schools and the old Slobodna windlass."
+        },
+        {
+          "name": "USNS Vandenberg",
+          "type": "Wreck",
+          "depth": "14-43m",
+          "level": "advanced",
+          "blurb": "A 159m missile-tracking ship off Key West whose giant radar dishes make it one of the most photogenic wrecks in the Atlantic."
+        },
+        {
+          "name": "Looe Key",
+          "type": "Reef",
+          "depth": "2-11m",
+          "level": "beginner",
+          "blurb": "The Lower Keys' classic spur-and-groove sanctuary reef, dense with elkhorn relics, parrotfish and resident goliath grouper."
+        },
+        {
+          "name": "USCGC Duane",
+          "type": "Wreck",
+          "depth": "18-37m",
+          "level": "advanced",
+          "blurb": "An upright, fully intact coast guard cutter sitting in the Gulf Stream's path — current-swept, sharky and blue."
+        }
+      ],
+      "description": "The Florida Keys string 200km of the continental US's only coral barrier reef alongside a fleet of massive purpose-sunk warships. Days here alternate easy spur-and-groove reef dives at Molasses and Looe Key with serious deep wrecks — Spiegel Grove, Duane, Vandenberg — and in August and September goliath grouper aggregate on those hulls by the dozen. Easy logistics and warm water suit new divers; the wrecks reward advanced tickets. Hurricane season demands flexible plans.",
+      "slug": "florida-keys",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Koh Tao",
+      "country": "Thailand",
+      "region": "Gulf of Thailand / Thailand",
+      "coordinates": {
+        "lat": 10.0956,
+        "lng": 99.8404
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly",
+      "access": "shore / day-boat",
+      "best_months": "Mar-May & Sep-Oct",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Reef fish rebounding after monsoon; barracuda schools returning to the pinnacles",
+          "conditions": "Northeast monsoon easing; seas calming, visibility slowly recovering",
+          "visibility_m": 12
+        },
+        "Feb": {
+          "rating": "Good",
+          "marine_life": "Chevron barracuda and trevally back in numbers; healthy macro in the bays",
+          "conditions": "Often glassy, mirror-calm seas; clear water and light winds",
+          "visibility_m": 20
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Whale shark season begins as plankton blooms draw them to Chumphon Pinnacle",
+          "conditions": "Hot, dry and flat calm; superb visibility on the offshore pinnacles",
+          "visibility_m": 25
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "Best odds of whale sharks; giant trevally hunting fusilier balls on the pinnacles",
+          "conditions": "Hottest, calmest stretch of the year; visibility at its best",
+          "visibility_m": 28
+        },
+        "May": {
+          "rating": "Peak",
+          "marine_life": "Whale sharks still passing through; big schools of batfish and barracuda",
+          "conditions": "Warm and mostly calm; first southwest-monsoon breezes late in the month",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Resident pinnacle life steady; groupers, snapper and triggerfish nesting in the shallows",
+          "conditions": "Southwest monsoon brings occasional westerly chop; east-coast sites stay sheltered",
+          "visibility_m": 18
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "Fusilier and barracuda schools thick at Chumphon and Southwest Pinnacle",
+          "conditions": "Short showers and some wind-driven waves; visibility variable but often fine",
+          "visibility_m": 18
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "Trevally hunts and dense baitfish; occasional whale shark surprise",
+          "conditions": "Often surprisingly calm and clear despite the season",
+          "visibility_m": 20
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Second whale-shark window; pinnacles at their fishiest",
+          "conditions": "Calm seas and clear water before the northeast monsoon builds",
+          "visibility_m": 22
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Whale sharks still possible early; schooling fish remain thick",
+          "conditions": "Transition month; increasing showers and the first monsoon swells",
+          "visibility_m": 18
+        },
+        "Nov": {
+          "rating": "Low",
+          "marine_life": "Reef life sheltering; sightings limited by runoff-clouded water",
+          "conditions": "Northeast monsoon peaks with heavy rain, wind and the year's worst visibility",
+          "visibility_m": 8
+        },
+        "Dec": {
+          "rating": "Low",
+          "marine_life": "Hardy reef residents only; big animals scarce in stirred-up water",
+          "conditions": "Strong winds and frequent downpours; boats weather-dependent, viz reduced",
+          "visibility_m": 10
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 27,
+        "Feb": 27,
+        "Mar": 28,
+        "Apr": 29,
+        "May": 30,
+        "Jun": 29,
+        "Jul": 29,
+        "Aug": 29,
+        "Sep": 29,
+        "Oct": 29,
+        "Nov": 28,
+        "Dec": 27
+      },
+      "highlights": "Granite pinnacles rising from the Gulf of Thailand where whale sharks cruise through walls of barracuda, ringed by calm, shallow bays that make some of the easiest learning conditions anywhere.",
+      "signature_species": [
+        "whale shark",
+        "chevron barracuda",
+        "giant trevally",
+        "longfin batfish",
+        "titan triggerfish",
+        "blue-spotted ribbontail ray"
+      ],
+      "current_strength": "Moderate",
+      "currents": "The sheltered bays around the island are nearly current-free, which is why so many divers learn here. The offshore pinnacles — Chumphon, Southwest and Sail Rock — can carry moderate current that concentrates the schooling fish.",
+      "current_note": "calm bays; moderate flow possible on the offshore pinnacles",
+      "wetsuit": "3mm shorty or rash guard year-round; 3mm full if you run cold in Dec-Feb",
+      "dive_sites": [
+        {
+          "name": "Chumphon Pinnacle",
+          "type": "Pinnacle",
+          "depth": "14-36m",
+          "level": "intermediate",
+          "blurb": "The Gulf's marquee site — an anemone-carpeted granite tower swarmed by trevally and barracuda, and the island's most reliable whale-shark spot."
+        },
+        {
+          "name": "Sail Rock",
+          "type": "Pinnacle",
+          "depth": "5-40m",
+          "level": "advanced",
+          "blurb": "A lone rock between Koh Tao and Koh Phangan with a vertical chimney swim-through and frequent whale-shark visits."
+        },
+        {
+          "name": "Southwest Pinnacle",
+          "type": "Pinnacle",
+          "depth": "6-28m",
+          "level": "intermediate",
+          "blurb": "A cluster of anemone-topped peaks patrolled by big groupers and dense barracuda schools."
+        },
+        {
+          "name": "HTMS Sattakut",
+          "type": "Wreck",
+          "depth": "18-30m",
+          "level": "intermediate",
+          "blurb": "A 48m former navy vessel sunk as an artificial reef, its gun turrets now home to groupers and glassfish."
+        },
+        {
+          "name": "White Rock",
+          "type": "Reef",
+          "depth": "5-22m",
+          "level": "beginner",
+          "blurb": "A sprawling two-part reef busy with angelfish and territorial titan triggerfish — the island's classic night dive."
+        },
+        {
+          "name": "Twins",
+          "type": "Reef",
+          "depth": "5-18m",
+          "level": "beginner",
+          "blurb": "Two boulder clusters in easy shallows, famous for a resident family of saddleback anemonefish."
+        }
+      ],
+      "description": "Koh Tao is where the Gulf of Thailand earns its reputation as an easy, generous place to dive: warm, calm bays over shallow reef for new divers, and offshore granite pinnacles that punch far above their weight. Chumphon Pinnacle and Sail Rock stack barracuda, trevally and — in spring and early autumn — whale sharks over anemone-covered rock. Budget-friendly and boat rides are short; skip the November-December monsoon and it delivers year-round.",
+      "slug": "koh-tao",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Mallorca",
+      "country": "Spain",
+      "region": "Mediterranean / Balearic Islands (Spain)",
+      "coordinates": {
+        "lat": 39.57,
+        "lng": 2.65
+      },
+      "water_type": "warm-temperate Mediterranean",
+      "difficulty": "beginner-friendly",
+      "access": "shore / day-boat",
+      "best_months": "May-Oct",
+      "monthly": {
+        "Jan": {
+          "rating": "Low",
+          "marine_life": "resident grouper, octopus, moray and scorpionfish on quiet reefs",
+          "conditions": "cold water, winter swells, many operators closed; viz often surprisingly clear",
+          "visibility_m": 20
+        },
+        "Feb": {
+          "rating": "Low",
+          "marine_life": "grouper, conger and lobster deep in the caves; nudibranchs start appearing",
+          "conditions": "coldest water of the year, weather-dependent boat days",
+          "visibility_m": 20
+        },
+        "Mar": {
+          "rating": "Low",
+          "marine_life": "nudibranchs peak, octopus active, first cuttlefish inshore",
+          "conditions": "still cold, mixed seas as winter fronts fade",
+          "visibility_m": 18
+        },
+        "Apr": {
+          "rating": "Shoulder",
+          "marine_life": "cuttlefish and octopus mating inshore, grouper emerging from winter lies",
+          "conditions": "seas settle, water slowly warming, dive centres reopening",
+          "visibility_m": 18
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "barracuda schools regroup over El Toro, dusky grouper bold in the reserves",
+          "conditions": "calm spells lengthen, water warming, clear pre-season viz",
+          "visibility_m": 22
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "big barracuda tornadoes, grouper, eagle rays passing, cave life everywhere",
+          "conditions": "warm, flat summer seas begin; long daylight, excellent viz",
+          "visibility_m": 25
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "dense barracuda and bream schools, tame dusky grouper, octopus and moray on every dive",
+          "conditions": "warmest, calmest seas of the year; light beams in the caverns",
+          "visibility_m": 30
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "barracuda walls at El Toro and Malgrats, grouper, occasional eagle ray and amberjack",
+          "conditions": "peak water warmth and 30m-plus viz, but busiest boats and sites",
+          "visibility_m": 30
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "marine life at its richest — hunting amberjack, barracuda, grouper, rays",
+          "conditions": "sea still warm, crowds thin, generally settled with first autumn storms late",
+          "visibility_m": 28
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "barracuda and grouper still thick in the reserves, cuttlefish returning",
+          "conditions": "pleasantly warm water, quieter sites, occasional storm days",
+          "visibility_m": 22
+        },
+        "Nov": {
+          "rating": "Shoulder",
+          "marine_life": "reef life settling into winter mode; grouper, moray, lobster in the overhangs",
+          "conditions": "cooling fast, more wind and swell, many centres winding down",
+          "visibility_m": 20
+        },
+        "Dec": {
+          "rating": "Low",
+          "marine_life": "hardy residents — grouper, conger, octopus — for those who brave it",
+          "conditions": "cold water and winter weather windows; limited operator schedules",
+          "visibility_m": 20
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 15,
+        "Feb": 14,
+        "Mar": 14,
+        "Apr": 16,
+        "May": 18,
+        "Jun": 22,
+        "Jul": 25,
+        "Aug": 26,
+        "Sep": 25,
+        "Oct": 22,
+        "Nov": 19,
+        "Dec": 16
+      },
+      "highlights": "Sunlit Mediterranean caverns, swim-throughs and air-dome caves paired with the barracuda schools and tame dusky grouper of the El Toro and Malgrats marine reserves.",
+      "signature_species": [
+        "Dusky grouper",
+        "Mediterranean barracuda",
+        "Common octopus",
+        "Moray eel",
+        "Cuttlefish",
+        "Nudibranchs",
+        "Eagle ray"
+      ],
+      "current_strength": "Low",
+      "currents": "The Balearics are largely tide-free, so most sites see little to no current. Exposed headlands and the offshore reserve islets can pick up mild surface current or surge when the wind has been blowing.",
+      "current_note": "mostly still water; light surge at exposed islets",
+      "wetsuit": "3-5mm full suit Jun-Oct; 7mm semi-dry or drysuit Nov-May",
+      "dive_sites": [
+        {
+          "name": "El Toro Marine Reserve",
+          "type": "Reef",
+          "depth": "8-40m",
+          "level": "beginner",
+          "blurb": "Protected islet where dense barracuda schools and fearless dusky grouper patrol a sloping reef that drops past 35m for conger and john dory."
+        },
+        {
+          "name": "Malgrats Islands",
+          "type": "Wall",
+          "depth": "10-36m",
+          "level": "intermediate",
+          "blurb": "Twin-islet marine reserve whose wall, tunnels and arches hold midwater barracuda, big bream, grouper and lobster."
+        },
+        {
+          "name": "The Cathedral",
+          "type": "Cave",
+          "depth": "10-22m",
+          "level": "advanced",
+          "blurb": "Vast cavern with a breathable air dome, sheltering moray, scorpionfish, crawfish and octopus in its shadows."
+        },
+        {
+          "name": "El Formatge (The Cheese)",
+          "type": "Cave",
+          "depth": "12-27m",
+          "level": "intermediate",
+          "blurb": "Hole-riddled rock islet off Cala Ratjada laced with swim-through tunnels frequented by octopus, moray and nudibranchs."
+        },
+        {
+          "name": "Sa Dragonera",
+          "type": "Wall",
+          "depth": "12-40m",
+          "level": "intermediate",
+          "blurb": "Nature-park island off the west coast with clear-water walls, caves and passing pelagics."
+        },
+        {
+          "name": "Cave of Light (Portals Vells)",
+          "type": "Cave",
+          "depth": "6-14m",
+          "level": "beginner",
+          "blurb": "Shallow cavern famous for the shafts of sunlight that cut through its blue entrance on calm summer days."
+        }
+      ],
+      "description": "Mallorca is the Mediterranean's limestone playground: decades of erosion have drilled its coastline into caverns, arches and swim-throughs, most of them shallow, sunlit and forgiving. The El Toro and Malgrats marine reserves supply the fish — wall-to-wall barracuda and dusky grouper so protected they ignore you. With tide-free seas, easy day-boat logistics and 30-metre summer visibility, it suits new divers building skills and cavern fans alike; May to October is the season that matters.",
+      "slug": "mallorca",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Mauritius",
+      "country": "Mauritius",
+      "region": "Indian Ocean / Mauritius",
+      "coordinates": {
+        "lat": -20.28,
+        "lng": 57.55
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly, with advanced wrecks and caverns",
+      "access": "shore / day-boat",
+      "best_months": "Oct-Dec & Apr-May",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Warm-water reef life at its busiest; turtles, moray eels and reef sharks on the west coast",
+          "conditions": "Hot and humid with cyclone risk building; calm spells give lovely diving between systems",
+          "visibility_m": 20
+        },
+        "Feb": {
+          "rating": "Low",
+          "marine_life": "Reef fish and turtles still about, but swell and runoff can scatter the action",
+          "conditions": "Peak cyclone month; storms can blow out diving for days and stir the lagoons",
+          "visibility_m": 15
+        },
+        "Mar": {
+          "rating": "Shoulder",
+          "marine_life": "Warmest water of the year keeps reefs lively; frogfish and morays on the wrecks",
+          "conditions": "Cyclone risk tapering but still real; settled weeks dive very well",
+          "visibility_m": 18
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "Full tropical spread — turtles, barracuda, grey reef sharks at the Cathedral drop-off",
+          "conditions": "Cyclone season over, winds light and seas settled; some of the year's clearest water",
+          "visibility_m": 25
+        },
+        "May": {
+          "rating": "Peak",
+          "marine_life": "Big schools build as water cools; dogtooth tuna and pelagics start cruising the north",
+          "conditions": "Calm, dry early-winter weather; comfortable seas on the sheltered west coast",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Pelagic season — tuna, trevally and dense fish shoals; first humpback whales arrive offshore",
+          "conditions": "Cooler and breezier as trade winds pick up; west-coast sites stay protected",
+          "visibility_m": 20
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "Humpback whales migrating past; shoaling fish, spinner dolphins and macro critters on the reefs",
+          "conditions": "Coolest water and steady southeast trades; morning dives on the west coast are calmest",
+          "visibility_m": 18
+        },
+        "Aug": {
+          "rating": "Shoulder",
+          "marine_life": "Humpback activity peaks offshore; reef life steady with morays, scorpionfish and nudibranchs",
+          "conditions": "Windiest month with swell on exposed coasts; sheltered west-coast diving only some days",
+          "visibility_m": 18
+        },
+        "Sep": {
+          "rating": "Good",
+          "marine_life": "Whales still passing; big schools linger and turtles are reliable on the wrecks",
+          "conditions": "Winds beginning to ease; cool, clear water and improving sea states",
+          "visibility_m": 20
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "Warming water wakes the reefs; sharks at Coin de Mire, turtles and dense wreck life",
+          "conditions": "Dry, settled shoulder season — light winds, flat seas and excellent visibility",
+          "visibility_m": 25
+        },
+        "Nov": {
+          "rating": "Peak",
+          "marine_life": "High season for diversity — reef sharks, barracuda, rays and thick reef-fish aggregations",
+          "conditions": "Warm, calm and clear before the wet season; arguably the year's best all-round conditions",
+          "visibility_m": 30
+        },
+        "Dec": {
+          "rating": "Peak",
+          "marine_life": "Summer abundance in full swing; turtles, morays and pelagics around the northern islets",
+          "conditions": "Warm and mostly settled early in the month; humidity and shower risk rise toward New Year",
+          "visibility_m": 30
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 28,
+        "Feb": 28,
+        "Mar": 28,
+        "Apr": 27,
+        "May": 26,
+        "Jun": 24,
+        "Jul": 23,
+        "Aug": 23,
+        "Sep": 23,
+        "Oct": 24,
+        "Nov": 26,
+        "Dec": 27
+      },
+      "highlights": "A volcanic island ringed by lagoon and drop-off, pairing the cavern-lit Cathedral at Flic en Flac with fish-thick wrecks like the Stella Maru and Djabeda and shark-patrolled walls off Coin de Mire islet.",
+      "signature_species": [
+        "Green turtle",
+        "Grey reef shark",
+        "Giant moray",
+        "Leaf scorpionfish",
+        "Dogtooth tuna",
+        "Spinner dolphin"
+      ],
+      "current_strength": "Moderate",
+      "currents": "Most lagoon-side and west-coast sites are calm, but exposed reefs like Rempart Serpent and the passes around Coin de Mire can run moderate to strong with the tide. Boats time slack water on the wrecks, so currents rarely dictate the day.",
+      "current_note": "gentle inside the reef, brisker on exposed northern passes",
+      "wetsuit": "3mm full in summer (Nov-Apr); 5mm in winter (Jun-Sep) when water dips to 23°C",
+      "dive_sites": [
+        {
+          "name": "Cathedral",
+          "type": "Cave",
+          "depth": "18-28m",
+          "level": "intermediate",
+          "blurb": "Flic en Flac's signature dive — a shaft of light pours into a boulder-roofed chamber on the drop-off where grey reef sharks and soldierfish shelter."
+        },
+        {
+          "name": "Stella Maru",
+          "type": "Wreck",
+          "depth": "18-25m",
+          "level": "intermediate",
+          "blurb": "A trawler scuttled off Trou aux Biches decades ago, now a coral-dressed artificial reef with frogfish, porcupinefish and a resident giant moray."
+        },
+        {
+          "name": "Djabeda",
+          "type": "Wreck",
+          "depth": "28-34m",
+          "level": "advanced",
+          "blurb": "A 44m Japanese fishing vessel sitting upright off Coin de Mire since 1998, wrapped in soft coral and circled by tuna and honeycomb morays."
+        },
+        {
+          "name": "The Wall, Coin de Mire",
+          "type": "Wall",
+          "depth": "12-30m",
+          "level": "intermediate",
+          "blurb": "A sheer face off the northern islet where clear oceanic water brings sharks, barracuda and passing pelagics close to the rock."
+        },
+        {
+          "name": "Rempart Serpent",
+          "type": "Reef",
+          "depth": "20-26m",
+          "level": "advanced",
+          "blurb": "A snake-shaped ridge off Flic en Flac famous for an improbable density of scorpionfish, stonefish and moray eels on one small reef."
+        },
+        {
+          "name": "Blue Bay Marine Park",
+          "type": "Reef",
+          "depth": "5-18m",
+          "level": "beginner",
+          "blurb": "A protected southeastern lagoon and outer reef with healthy hard coral gardens — the island's gentlest introduction to its underwater life."
+        }
+      ],
+      "description": "Mauritius wraps a volcanic island in barrier reef, so most diving happens minutes offshore where the lagoon wall drops into blue water. The west coast around Flic en Flac delivers the light-shafted Cathedral cavern and macro-rich ridges, while the north stacks wrecks and shark walls around Coin de Mire islet. It suits divers who want variety — caverns, scuttled ships, coral gardens — without long crossings, though January-to-March cyclones can interrupt; October to December and April to May dive best.",
+      "slug": "mauritius",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Muscat & Daymaniyat Islands",
+      "country": "Oman",
+      "region": "Gulf of Oman / Oman",
+      "coordinates": {
+        "lat": 23.85,
+        "lng": 58.1
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly",
+      "access": "day-boat",
+      "best_months": "Sep-Nov & Mar-May",
+      "monthly": {
+        "Jan": {
+          "rating": "Good",
+          "marine_life": "Leopard sharks resting on sand, turtles, eagle rays, dense reef fish",
+          "conditions": "Coolest water with thermoclines; mostly calm seas, clear winter viz",
+          "visibility_m": 15
+        },
+        "Feb": {
+          "rating": "Good",
+          "marine_life": "Leopard sharks, honeycomb morays, rays, nudibranchs at their best",
+          "conditions": "Chilly thermoclines below 15m; settled seas, good clarity",
+          "visibility_m": 15
+        },
+        "Mar": {
+          "rating": "Good",
+          "marine_life": "Turtles gathering, leopard sharks, mobula rays start cruising through",
+          "conditions": "Warming water, calm seas, visibility improving toward spring best",
+          "visibility_m": 18
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Mobula squadrons, green and hawksbill turtles, big snapper schools",
+          "conditions": "Flat seas and some of the clearest water of the year",
+          "visibility_m": 20
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Turtles nesting on the islands, mobulas, cuttlefish, dense fish soup",
+          "conditions": "Warm and calm; island landings close but diving carries on",
+          "visibility_m": 20
+        },
+        "Jun": {
+          "rating": "Shoulder",
+          "marine_life": "Plankton draws rays and the first big pelagic visitors",
+          "conditions": "Very warm surface water; blooms start to green the viz",
+          "visibility_m": 12
+        },
+        "Jul": {
+          "rating": "Shoulder",
+          "marine_life": "Early whale shark chances, mobulas, baitballs in green water",
+          "conditions": "Peak heat and plankton; viz drops but seas stay diveable",
+          "visibility_m": 8
+        },
+        "Aug": {
+          "rating": "Shoulder",
+          "marine_life": "Whale sharks feeding on blooms, devil rays, huge trevally schools",
+          "conditions": "Hot and humid, milky plankton-rich water, occasional swell",
+          "visibility_m": 8
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Whale shark aggregations, sometimes several per dive, plus mobulas",
+          "conditions": "Blooms easing, viz rebuilding, warm calm seas",
+          "visibility_m": 12
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "Late whale sharks, mobulas, turtles, leopard sharks returning",
+          "conditions": "Clearing fast; the sweet spot of big animals and good viz",
+          "visibility_m": 18
+        },
+        "Nov": {
+          "rating": "Peak",
+          "marine_life": "Mobula rays, eagle rays, turtles everywhere, thick reef life",
+          "conditions": "Clear blue water, comfortable temps, reliably calm days",
+          "visibility_m": 20
+        },
+        "Dec": {
+          "rating": "Good",
+          "marine_life": "Leopard sharks, turtles, morays, seahorses and macro on the reefs",
+          "conditions": "Cooling water and first thermoclines; clean winter visibility",
+          "visibility_m": 18
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 24,
+        "Feb": 23,
+        "Mar": 25,
+        "Apr": 27,
+        "May": 29,
+        "Jun": 31,
+        "Jul": 31,
+        "Aug": 31,
+        "Sep": 30,
+        "Oct": 29,
+        "Nov": 27,
+        "Dec": 25
+      },
+      "highlights": "A protected island nature reserve an hour off Muscat where whale sharks gather over pristine hard coral in September-October, leopard sharks and turtles laze on the sand year-round, and an intact 84m navy wreck waits in a sheltered bay nearby.",
+      "signature_species": [
+        "Whale shark",
+        "Leopard (zebra) shark",
+        "Mobula ray",
+        "Green turtle",
+        "Hawksbill turtle",
+        "Honeycomb moray",
+        "Eagle ray"
+      ],
+      "current_strength": "Low",
+      "currents": "Currents around the Daymaniyats are generally gentle, with occasional moderate flow along exposed walls and over the Al Munassir wreck. Most sites are relaxed plateau and bay dives suited to easy multilevel profiles.",
+      "current_note": "mostly mild; occasional pushes on walls and the wreck",
+      "wetsuit": "3mm full May-Oct; 5mm Nov-Apr for winter thermoclines",
+      "dive_sites": [
+        {
+          "name": "Aquarium",
+          "type": "Reef",
+          "depth": "7-30m",
+          "level": "beginner",
+          "blurb": "An oval coral plateau dropping to 30m, packed with leopard sharks, honeycomb morays, turtles and clouds of snapper."
+        },
+        {
+          "name": "Police Wall",
+          "type": "Wall",
+          "depth": "10-30m",
+          "level": "intermediate",
+          "blurb": "A drop-off on Police Island where whale sharks and mobulas cruise past divers in season."
+        },
+        {
+          "name": "Three Sisters",
+          "type": "Reef",
+          "depth": "8-24m",
+          "level": "beginner",
+          "blurb": "Boulder swim-throughs draped in soft tree corals, reliable for eagle rays, leopard sharks and both turtle species."
+        },
+        {
+          "name": "Al Munassir Wreck",
+          "type": "Wreck",
+          "depth": "18-30m",
+          "level": "intermediate",
+          "blurb": "An 84m navy landing ship scuttled in 2003, sitting upright and intact with guns in place, penetrable and thick with morays."
+        },
+        {
+          "name": "Fahal Island",
+          "type": "Reef",
+          "depth": "10-30m",
+          "level": "intermediate",
+          "blurb": "Muscat's 'shark island' with a swim-through cavern, blacktip reef sharks, rays and passing dolphins."
+        },
+        {
+          "name": "Bandar Khayran",
+          "type": "Reef",
+          "depth": "5-20m",
+          "level": "beginner",
+          "blurb": "Sheltered fjord-like bays of coral gardens ideal for easy dives, night dives and macro hunting."
+        }
+      ],
+      "description": "An hour's boat ride from Oman's capital, the Daymaniyat Islands are a strictly protected reserve where Gulf of Oman nutrients meet genuinely healthy hard coral. Winter brings clear water, leopard sharks and turtles; summer plankton blooms trade visibility for whale sharks that peak in September and October, with mobula squadrons either side. Add Fahal Island and the sheltered wreck-filled bays of Bandar Khayran, and it suits any diver who values animals over infinity-pool viz.",
+      "slug": "muscat-daymaniyat-islands",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Oahu",
+      "country": "USA",
+      "region": "Central Pacific / Hawaii (USA)",
+      "coordinates": {
+        "lat": 21.28,
+        "lng": -157.84
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly (wrecks intermediate-advanced)",
+      "access": "shore / day-boat",
+      "best_months": "May-Oct",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Humpback whale song on every dive, green turtles, whitetip reef sharks, eagle rays on the wrecks",
+          "conditions": "Big winter swell shuts the North Shore; south-shore boat diving holds up, viz dips after rain",
+          "visibility_m": 15
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "Peak humpback season audibly underwater, turtles at cleaning stations, spinner dolphins along the west side",
+          "conditions": "Coolest water of the year, large north swells, sheltered south and west shores diveable",
+          "visibility_m": 15
+        },
+        "Mar": {
+          "rating": "Shoulder",
+          "marine_life": "Last of the humpbacks, Galapagos and sandbar sharks offshore, octopus and frogfish on the reefs",
+          "conditions": "North swell easing late month; passing fronts can stir shallow sites",
+          "visibility_m": 15
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Turtles, eagle rays and schooling bluestripe snapper thick on the YO-257 and Sea Tiger",
+          "conditions": "Swell windows open, seas settling, water warming and viz improving",
+          "visibility_m": 18
+        },
+        "May": {
+          "rating": "Peak",
+          "marine_life": "Green turtles everywhere, spinner dolphin pods, endemic reef fish, whitetips resting in lava tubes",
+          "conditions": "North Shore shore sites open, calm seas island-wide, clean blue water",
+          "visibility_m": 21
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "Turtles, spinner dolphins, Galapagos sharks on offshore trips, dense reef-fish activity",
+          "conditions": "Flat summer seas, steady trade winds, excellent visibility on all coasts",
+          "visibility_m": 24
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "Sharks Cove lava tubes busy with turtles, octopus and eels; tiger sharks patrol offshore banks",
+          "conditions": "Warmest, calmest stretch; long flat spells and 25m-plus viz days",
+          "visibility_m": 24
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "Green turtles at cleaning stations, spotted eagle rays, spinner dolphins at Kahe Point",
+          "conditions": "Warm water, gentle seas, all four shores routinely diveable",
+          "visibility_m": 24
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Peak fish abundance, turtles, reef sharks and rays on wrecks, occasional monk seal sighting",
+          "conditions": "Often the calmest, clearest month of the year across the island",
+          "visibility_m": 24
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "Turtles and eagle rays on the Waikiki wrecks, Galapagos sharks offshore, spinner dolphins westside",
+          "conditions": "First north swells arrive late month; south shore stays reliable",
+          "visibility_m": 21
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "First humpbacks arriving, turtles, whitetips and big schools on the south-shore wrecks",
+          "conditions": "North Shore closes as winter surf builds; boat diving off Waikiki still consistent",
+          "visibility_m": 18
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "Humpback whales returning in numbers, turtles, sandbar and Galapagos sharks offshore",
+          "conditions": "Winter swell and rain squalls; diving retreats to the sheltered south and west shores",
+          "visibility_m": 15
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 24,
+        "Feb": 24,
+        "Mar": 24,
+        "Apr": 25,
+        "May": 26,
+        "Jun": 26,
+        "Jul": 27,
+        "Aug": 27,
+        "Sep": 27,
+        "Oct": 27,
+        "Nov": 26,
+        "Dec": 25
+      },
+      "highlights": "Two intact wrecks minutes off Waikiki, summer lava-tube diving on the North Shore, green turtles at every cleaning station and pelagic sharks on the offshore banks.",
+      "signature_species": [
+        "Green sea turtle",
+        "Spinner dolphin",
+        "Galapagos shark",
+        "Tiger shark",
+        "Spotted eagle ray",
+        "Whitetip reef shark",
+        "Humpback whale (Dec-Mar)"
+      ],
+      "current_strength": "Moderate",
+      "currents": "Most reef sites see mild tidal flow, but the offshore wrecks off Waikiki can carry noticeable current on the mooring lines, and winter swell adds strong surge to shallow shore sites. Channels between coasts and the offshore shark banks run stronger.",
+      "current_note": "mild on reefs; current and surge on wrecks and in winter",
+      "wetsuit": "3mm full May-Nov; 5mm Dec-Apr",
+      "dive_sites": [
+        {
+          "name": "YO-257 & San Pedro",
+          "type": "Wreck",
+          "depth": "20-35m",
+          "level": "intermediate",
+          "blurb": "Twin wrecks off Waikiki sunk as artificial reefs, swarming with turtles, eagle rays and schooling snapper a short boat ride from Honolulu."
+        },
+        {
+          "name": "Sea Tiger",
+          "type": "Wreck",
+          "depth": "24-37m",
+          "level": "advanced",
+          "blurb": "Largely intact former trading vessel with open swim-throughs, resident turtles and whitetips at the edge of recreational depth."
+        },
+        {
+          "name": "Sharks Cove",
+          "type": "Reef / Cave",
+          "depth": "5-18m",
+          "level": "beginner",
+          "blurb": "North Shore lava tubes and caverns that only open in summer flat spells, packed with turtles, octopus and endemic reef fish."
+        },
+        {
+          "name": "Corsair",
+          "type": "Wreck",
+          "depth": "32-35m",
+          "level": "advanced",
+          "blurb": "A WWII-era fighter plane sitting upright on a bare sand flat, ringed by garden eels and occasional passing eagle rays."
+        },
+        {
+          "name": "Kahe Point (Electric Beach)",
+          "type": "Reef",
+          "depth": "6-12m",
+          "level": "beginner",
+          "blurb": "Warm-water outflow on the west side that draws crowds of fish, green turtles and regular spinner dolphin fly-bys."
+        },
+        {
+          "name": "Makaha Caverns",
+          "type": "Cave / Reef",
+          "depth": "9-15m",
+          "level": "beginner",
+          "blurb": "Collapsed lava-tube network on the leeward coast with skylights, resting whitetip sharks and reliably easy conditions."
+        },
+        {
+          "name": "Hanauma Bay Witches Brew",
+          "type": "Reef",
+          "depth": "8-18m",
+          "level": "intermediate",
+          "blurb": "Outer corner of the protected crater bay where dense, unafraid fish life and turtle traffic reward a longer swim."
+        }
+      ],
+      "description": "Oahu packs real variety into one very reachable island: intact wrecks like the YO-257 and Sea Tiger minutes off Waikiki, lava-tube caverns at Sharks Cove and Makaha, and shark banks offshore where Galapagos and tiger sharks patrol. Green turtles are near-guaranteed, spinner dolphins escort west-side boats, and winter dives come with humpback song. South and west shores dive year-round; the North Shore is a summer-only prize when the surf sleeps.",
+      "slug": "oahu",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Phuket",
+      "country": "Thailand",
+      "region": "Andaman Sea / Thailand",
+      "coordinates": {
+        "lat": 7.8804,
+        "lng": 98.3923
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly to intermediate",
+      "access": "day-boat",
+      "best_months": "Nov-Apr",
+      "monthly": {
+        "Jan": {
+          "rating": "Peak",
+          "marine_life": "Leopard sharks on the sand at Shark Point, manta sightings at Racha Noi, dense reef fish everywhere",
+          "conditions": "Dry-season calm, flat crossings to all local sites, excellent viz",
+          "visibility_m": 25
+        },
+        "Feb": {
+          "rating": "Peak",
+          "marine_life": "Mantas cruising Racha Noi's south tip, leopard and blacktip reef sharks, big barracuda schools",
+          "conditions": "Calmest seas of the year, light winds, superb viz",
+          "visibility_m": 25
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "Manta chances continue, turtles and leopard sharks, plankton pulses can pull in big filter feeders",
+          "conditions": "Warm, glassy seas; viz occasionally hazy with plankton",
+          "visibility_m": 20
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "Last reliable manta window at Racha Noi, leopard sharks, huge snapper and fusilier schools",
+          "conditions": "Hottest month, seas still mostly calm before the monsoon turns",
+          "visibility_m": 20
+        },
+        "May": {
+          "rating": "Shoulder",
+          "marine_life": "Reef life unchanged — leopard sharks, turtles, moray-rich pinnacles",
+          "conditions": "Southwest monsoon arrives; passing squalls, crossings get lumpier",
+          "visibility_m": 15
+        },
+        "Jun": {
+          "rating": "Shoulder",
+          "marine_life": "Healthy reef action at the Rachas, bamboo sharks in the King Cruiser, macro on Koh Doc Mai",
+          "conditions": "Green season; boats favor sheltered east-coast Racha sites, viz variable",
+          "visibility_m": 12
+        },
+        "Jul": {
+          "rating": "Shoulder",
+          "marine_life": "Racha Yai's east bays fish-thick; leopard sharks still around Shark Point on calm days",
+          "conditions": "Monsoon swell and rain in bursts; outer-site trips weather-dependent",
+          "visibility_m": 12
+        },
+        "Aug": {
+          "rating": "Low",
+          "marine_life": "Reef staples remain — turtles, morays, schooling snapper in protected bays",
+          "conditions": "Rough windward seas and rain; some crossings cancelled, reduced viz",
+          "visibility_m": 10
+        },
+        "Sep": {
+          "rating": "Low",
+          "marine_life": "Marine life unchanged but harder to reach; macro life thrives in the nutrient-rich water",
+          "conditions": "Wettest month, biggest swell, most cancellations; sheltered sites only",
+          "visibility_m": 10
+        },
+        "Oct": {
+          "rating": "Shoulder",
+          "marine_life": "Fish stocks fattened by monsoon nutrients, leopard sharks returning to the pinnacles",
+          "conditions": "Monsoon tapering; seas settle late in the month, viz improving",
+          "visibility_m": 12
+        },
+        "Nov": {
+          "rating": "Peak",
+          "marine_life": "First mantas of the season at Racha Noi, leopard sharks, thick soft-coral pinnacles in full color",
+          "conditions": "Dry season begins; seas flatten quickly, viz climbs",
+          "visibility_m": 20
+        },
+        "Dec": {
+          "rating": "Peak",
+          "marine_life": "Mantas, leopard and blacktip sharks, turtles, barracuda tornadoes at the Bidas",
+          "conditions": "Prime dry-season diving, calm crossings to every local site",
+          "visibility_m": 25
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 28,
+        "Feb": 28,
+        "Mar": 29,
+        "Apr": 30,
+        "May": 30,
+        "Jun": 29,
+        "Jul": 29,
+        "Aug": 28,
+        "Sep": 28,
+        "Oct": 29,
+        "Nov": 29,
+        "Dec": 28
+      },
+      "highlights": "Easy day-boat diving from a full-service island hub: leopard sharks and soft-coral pinnacles at Shark Point, the 85m King Cruiser wreck, manta chances at Racha Noi, and Phi Phi's limestone walls all within a day's reach.",
+      "signature_species": [
+        "Leopard (zebra) shark",
+        "Oceanic manta ray",
+        "Blacktip reef shark",
+        "Hawksbill turtle",
+        "Great barracuda",
+        "Tigertail seahorse"
+      ],
+      "current_strength": "Moderate",
+      "currents": "Tidal currents run north-south across the mid-channel pinnacles and can be brisk at Shark Point, Anemone Reef and the King Cruiser, especially around spring tides. The Racha Islands are gentler, though Racha Noi's exposed tips can pump when the manta action is best.",
+      "current_note": "strongest at the mid-channel pinnacles and wreck on spring tides",
+      "wetsuit": "3mm shorty or full suit year-round; water rarely drops below 28°C",
+      "dive_sites": [
+        {
+          "name": "Shark Point (Hin Mu Sang)",
+          "type": "Reef",
+          "depth": "10-24m",
+          "level": "intermediate",
+          "blurb": "Three soft-coral-smothered limestone pinnacles famous for leopard sharks resting on the sand."
+        },
+        {
+          "name": "Anemone Reef (Hin Jom)",
+          "type": "Reef",
+          "depth": "5-27m",
+          "level": "intermediate",
+          "blurb": "A submerged pinnacle carpeted in sea anemones that pulls in hunting trevally, tuna and barracuda."
+        },
+        {
+          "name": "King Cruiser Wreck",
+          "type": "Wreck",
+          "depth": "16-31m",
+          "level": "advanced",
+          "blurb": "An 85m car ferry sunk in 1997 after striking Anemone Reef, now thick with schooling snapper, lionfish and bamboo sharks."
+        },
+        {
+          "name": "Racha Noi South Tip",
+          "type": "Drift",
+          "depth": "18-40m",
+          "level": "advanced",
+          "blurb": "Granite boulders and a cleaning station with Phuket's most reliable oceanic manta encounters in season."
+        },
+        {
+          "name": "Racha Yai Bay 1",
+          "type": "Reef",
+          "depth": "5-25m",
+          "level": "beginner",
+          "blurb": "Sheltered east-coast hard-coral slopes with reliably clear water, ideal for training and easy multi-dive days."
+        },
+        {
+          "name": "Koh Doc Mai",
+          "type": "Wall",
+          "depth": "10-26m",
+          "level": "intermediate",
+          "blurb": "A limestone islet whose sheer wall of sea fans and oysters hides seahorses, ghost pipefish and other prized macro."
+        },
+        {
+          "name": "Koh Bida Nok (Phi Phi)",
+          "type": "Wall",
+          "depth": "5-30m",
+          "level": "intermediate",
+          "blurb": "Phi Phi's signature limestone karst dive, mixing soft-coral walls and overhangs with blacktip reef sharks and turtles."
+        }
+      ],
+      "description": "Phuket is Thailand's day-trip diving workhorse: big comfortable boats leave Chalong every morning for the granite boulders of the Racha Islands, the leopard-shark pinnacles of Shark Point and Anemone Reef, the King Cruiser wreck, and Phi Phi's karst walls. Warm, easy water and sheltered training bays suit new divers, while the wreck, currents and Racha Noi's manta-patrolled south tip give experienced divers real teeth. November to April delivers the calm seas and best visibility.",
+      "slug": "phuket",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Santorini",
+      "country": "Greece",
+      "region": "Mediterranean / Greece",
+      "coordinates": {
+        "lat": 36.4,
+        "lng": 25.4
+      },
+      "water_type": "warm-temperate Mediterranean",
+      "difficulty": "beginner-friendly",
+      "access": "shore / day-boat",
+      "best_months": "May-Oct",
+      "monthly": {
+        "Jan": {
+          "rating": "Low",
+          "marine_life": "resident groupers, morays and octopus hunkered in the lava rock",
+          "conditions": "cool water, winter winds and swell; most operators closed",
+          "visibility_m": 25
+        },
+        "Feb": {
+          "rating": "Low",
+          "marine_life": "octopus, morays and nudibranchs on quiet reefs",
+          "conditions": "coldest water of the year; exposed caldera sites often blown out",
+          "visibility_m": 25
+        },
+        "Mar": {
+          "rating": "Low",
+          "marine_life": "nudibranchs and crustaceans active in cold clear water",
+          "conditions": "cold and windy late winter; boats rarely running",
+          "visibility_m": 25
+        },
+        "Apr": {
+          "rating": "Shoulder",
+          "marine_life": "reef fish waking up; wrasse, groupers and early octopus activity",
+          "conditions": "season opening; water still chilly, viz sharpening",
+          "visibility_m": 28
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "groupers, morays, octopus and busy wrasse over the lava walls",
+          "conditions": "settling seas and empty sites; cool water in a thick suit",
+          "visibility_m": 30
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "anthias clouds, barracuda schooling, octopus and nudibranchs everywhere",
+          "conditions": "warm, calm and glass-clear inside the caldera",
+          "visibility_m": 30
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "barracuda and tuna passing offshore; glassfish packing the caverns",
+          "conditions": "warmest, calmest diving; meltemi gusts topside but sheltered caldera",
+          "visibility_m": 30
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "peak fish activity — barracuda, groupers, rays and dense baitfish",
+          "conditions": "hottest water of the year; superb viz, busiest boats",
+          "visibility_m": 30
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "big groupers out in the open, hunting barracuda and pelagic visitors",
+          "conditions": "warm sea, calming winds and thinning crowds — prime month",
+          "visibility_m": 30
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "groupers, morays and octopus still active as water cools",
+          "conditions": "quiet end of season; still-warm water, first autumn swells",
+          "visibility_m": 28
+        },
+        "Nov": {
+          "rating": "Shoulder",
+          "marine_life": "resident reef life only; octopus and cuttlefish on the black sand",
+          "conditions": "operators winding down; increasing wind and swell",
+          "visibility_m": 25
+        },
+        "Dec": {
+          "rating": "Low",
+          "marine_life": "sparse winter reef life sheltering in the volcanic rock",
+          "conditions": "cool rough winter sea; diving effectively shut down",
+          "visibility_m": 25
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 16,
+        "Feb": 15,
+        "Mar": 15,
+        "Apr": 16,
+        "May": 19,
+        "Jun": 22,
+        "Jul": 24,
+        "Aug": 25,
+        "Sep": 24,
+        "Oct": 22,
+        "Nov": 19,
+        "Dec": 17
+      },
+      "highlights": "Diving inside a flooded volcanic caldera on sheer lava walls, the shallow Santa Maria wreck off Nea Kameni and glass-clear Aegean water with 30m-plus visibility.",
+      "signature_species": [
+        "dusky grouper",
+        "Mediterranean moray",
+        "common octopus",
+        "barracuda",
+        "ornate wrasse",
+        "nudibranchs"
+      ],
+      "current_strength": "Low",
+      "currents": "The Aegean is virtually tideless and the caldera is sheltered, so water movement is minimal to non-existent at most sites. Outer-coast walls can pick up light surface chop and mild drift when the summer meltemi blows.",
+      "current_note": "essentially still water inside the caldera",
+      "wetsuit": "3mm or shorty in Jul-Aug; 5mm for most of the season; 7mm in May, Oct and winter",
+      "dive_sites": [
+        {
+          "name": "Santa Maria Wreck",
+          "type": "Wreck",
+          "depth": "16-19m",
+          "level": "beginner",
+          "blurb": "A 35m passenger ship sunk off Nea Kameni in the 1970s, sitting shallow enough for any certified diver and thick with glassfish and morays."
+        },
+        {
+          "name": "Nea Kameni Volcanic Reef",
+          "type": "Reef",
+          "depth": "10-30m",
+          "level": "intermediate",
+          "blurb": "Lava flows and black volcanic boulders around the caldera's active young islet, with a WWII boat and a deeper tug lying nearby."
+        },
+        {
+          "name": "Adiavati Reef",
+          "type": "Reef",
+          "depth": "12-30m",
+          "level": "intermediate",
+          "blurb": "A reef inside the caldera rim — locally tied to the Atlantis legend — crawling with crustaceans, invertebrates, groupers and barracuda."
+        },
+        {
+          "name": "Aspronisi (White Island) Walls",
+          "type": "Wall",
+          "depth": "7-40m",
+          "level": "advanced",
+          "blurb": "Sponge-encrusted lava walls on the caldera's western edge that start at snorkel depth and plunge past 40m into deep blue."
+        },
+        {
+          "name": "The Caves",
+          "type": "Cave",
+          "depth": "5-10m",
+          "level": "beginner",
+          "blurb": "Shallow volcanic caverns, canyons and swim-throughs on the south coast, lit by shafts of sun and packed with glassfish and octopus."
+        },
+        {
+          "name": "Perissa Rock",
+          "type": "Reef",
+          "depth": "6-18m",
+          "level": "beginner",
+          "blurb": "Maze-like volcanic rock formations off the black-sand beach, an easy classroom reef full of wrasse, morays and crustaceans."
+        }
+      ],
+      "description": "Santorini is diving inside a drowned volcano: sheer lava walls plunge from the caldera rim into deep cobalt water, and the shallow Santa Maria wreck rests off the still-steaming islet of Nea Kameni. Life is classic Mediterranean — groupers, morays, octopus, passing barracuda — sparse but sharply lit by 30m visibility and near-zero current. Best for divers who value geology, wrecks and effortless conditions over fish density, from easy shore reefs to deep caldera walls.",
+      "slug": "santorini",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Tenerife",
+      "country": "Spain",
+      "region": "Atlantic / Canary Islands (Spain)",
+      "coordinates": {
+        "lat": 28.05,
+        "lng": -16.72
+      },
+      "water_type": "warm-temperate Atlantic",
+      "difficulty": "beginner-friendly (advanced options)",
+      "access": "shore / day-boat",
+      "best_months": "Sep-Mar",
+      "monthly": {
+        "Jan": {
+          "rating": "Good",
+          "marine_life": "Angel sharks on the sand, stingrays gathering, turtles at El Puertito",
+          "conditions": "Coolest water but crisp winter viz; south coast stays sheltered",
+          "visibility_m": 25
+        },
+        "Feb": {
+          "rating": "Good",
+          "marine_life": "Peak angel shark encounters, rays pairing up in the caves, morays and octopus",
+          "conditions": "Cool and clear; occasional Atlantic swell on exposed corners",
+          "visibility_m": 25
+        },
+        "Mar": {
+          "rating": "Good",
+          "marine_life": "Last reliable angel sharks, stingrays, cuttlefish and trumpetfish everywhere",
+          "conditions": "Clear late-winter water, seas settling as spring arrives",
+          "visibility_m": 22
+        },
+        "Apr": {
+          "rating": "Shoulder",
+          "marine_life": "Angel sharks thinning out; turtles, barracuda schools and reef fish carry the show",
+          "conditions": "Transitional; water still cool, generally calm with good viz",
+          "visibility_m": 20
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Turtles, bull rays cruising the drop-offs, big schools of bream and roncadores",
+          "conditions": "Calm spring seas, warming water, reliably clear",
+          "visibility_m": 20
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Rays active, turtles daily at El Puertito, barracuda and bastard grunt schools",
+          "conditions": "Warm, settled early summer; trade winds pick up above water",
+          "visibility_m": 20
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "Turtles, stingrays, trumpetfish clouds; juveniles fill the volcanic reef",
+          "conditions": "Warm and busy; brief upwellings can trim viz on some days",
+          "visibility_m": 18
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "Stingray aggregations off Las Galletas, turtles, octopus and cuttlefish",
+          "conditions": "Warmest air, lively resorts; sea calm with occasional plankton haze",
+          "visibility_m": 18
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Warmest-water action: bull rays, big barracuda, turtles and dense fish schools",
+          "conditions": "Sea at its warmest and calmest; long settled spells",
+          "visibility_m": 20
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "Rays and turtles everywhere, roncador schools thick over the wrecks",
+          "conditions": "Warm water lingers, glassy autumn seas, excellent viz",
+          "visibility_m": 22
+        },
+        "Nov": {
+          "rating": "Peak",
+          "marine_life": "Stingrays massing, turtles, first angel sharks edging into the shallows",
+          "conditions": "Still-warm water, quiet sites, clear autumn conditions",
+          "visibility_m": 22
+        },
+        "Dec": {
+          "rating": "Good",
+          "marine_life": "Angel shark season opens; rays, turtles and cuttlefish on the sand flats",
+          "conditions": "Mild winter, sheltered south coast diving, viz sharpening",
+          "visibility_m": 25
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 20,
+        "Feb": 19,
+        "Mar": 19,
+        "Apr": 19,
+        "May": 20,
+        "Jun": 21,
+        "Jul": 22,
+        "Aug": 23,
+        "Sep": 24,
+        "Oct": 24,
+        "Nov": 23,
+        "Dec": 21
+      },
+      "highlights": "Volcanic Atlantic diving off Europe's doorstep — green turtles over the El Puertito seagrass, stingray aggregations off Las Galletas, the basalt-column Condesito wreck, and one of the world's few reliable winter windows on critically endangered angel sharks.",
+      "signature_species": [
+        "Angel shark",
+        "Green turtle",
+        "Round stingray",
+        "Bull ray",
+        "Trumpetfish",
+        "Canary moray"
+      ],
+      "current_strength": "Low",
+      "currents": "The leeward south coast is well sheltered from the prevailing northeast trades, so most sites see little to no current. Exposed headlands and offshore banks can pick up moderate flow when Atlantic swell or spring tides run.",
+      "current_note": "Mostly calm on the sheltered south coast",
+      "wetsuit": "5mm full year-round; add a hooded vest or 7mm Dec-Apr, 3mm fine Aug-Oct",
+      "dive_sites": [
+        {
+          "name": "El Puertito",
+          "type": "Reef",
+          "depth": "5-15m",
+          "level": "beginner",
+          "blurb": "Sheltered sandy bay near Armeñime where resident green turtles graze the seagrass at snoozing-pace depths."
+        },
+        {
+          "name": "El Condesito",
+          "type": "Wreck",
+          "depth": "6-21m",
+          "level": "beginner",
+          "blurb": "Cement carrier lost in 1971, its scattered hull draped against hexagonal basalt columns and patrolled by trumpetfish and morays."
+        },
+        {
+          "name": "Los Chuchos",
+          "type": "Reef",
+          "depth": "12-22m",
+          "level": "beginner",
+          "blurb": "The 'city of stingrays' minutes off Las Galletas harbour, with overhangs, a small sunken fishing boat and the island's densest ray population."
+        },
+        {
+          "name": "Montaña Amarilla",
+          "type": "Reef",
+          "depth": "5-25m",
+          "level": "beginner",
+          "blurb": "Shore-access lunar landscape of yellow volcanic tuff with terraces, swim-throughs and winter angel shark sightings."
+        },
+        {
+          "name": "Tabaiba Wreck (El Peñón)",
+          "type": "Wreck",
+          "depth": "18-30m",
+          "level": "intermediate",
+          "blurb": "Intact 35m tug scuttled off Tabaiba, upright at 30m with engine-room penetration for advanced divers."
+        },
+        {
+          "name": "Palm-Mar Cave",
+          "type": "Cave",
+          "depth": "16-38m",
+          "level": "advanced",
+          "blurb": "Galleried lava cave below a 17m plateau where Atlantic stingrays gather to court in winter."
+        }
+      ],
+      "description": "Tenerife turns volcanic geology into a year-round Atlantic playground: basalt columns, lava arches and yellow tuff terraces in water that never leaves the high teens. Green turtles hold court at El Puertito, stingrays mass off Las Galletas, and from December to March the sand hides critically endangered angel sharks — one of the few places on earth you can count on them. Easy shore entries and short boat rides suit new divers; wrecks and lava caves keep experienced hands busy.",
+      "slug": "tenerife",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Zanzibar",
+      "country": "Tanzania",
+      "region": "Indian Ocean / Tanzania",
+      "coordinates": {
+        "lat": -5.92,
+        "lng": 39.31
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly to advanced",
+      "access": "day-boat",
+      "best_months": "Sep-Oct & Jan-Mar",
+      "monthly": {
+        "Jan": {
+          "rating": "Peak",
+          "marine_life": "whale sharks passing offshore, turtles thick on Mnemba, dolphins in the channel",
+          "conditions": "kaskazi monsoon, warm calm seas, superb visibility",
+          "visibility_m": 25
+        },
+        "Feb": {
+          "rating": "Peak",
+          "marine_life": "reef fish spawning aggregations, green turtles, resident bottlenose dolphins",
+          "conditions": "hot and settled, glassy mornings, top-of-year visibility",
+          "visibility_m": 25
+        },
+        "Mar": {
+          "rating": "Peak",
+          "marine_life": "turtles, Napoleon wrasse and late-season whale sharks before the rains",
+          "conditions": "calmest seas of the year as kaskazi fades, warmest water",
+          "visibility_m": 25
+        },
+        "Apr": {
+          "rating": "Low",
+          "marine_life": "reef life unchanged but sightings limited by runoff and plankton",
+          "conditions": "long rains (masika), heavy downpours, reduced visibility, some boats pause",
+          "visibility_m": 12
+        },
+        "May": {
+          "rating": "Low",
+          "marine_life": "macro on the reefs for those who go; big animals scarce",
+          "conditions": "tail end of the long rains, choppy seas, patchy visibility",
+          "visibility_m": 12
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "healthy reef action returns, turtles and schooling trevally at Leven Bank",
+          "conditions": "dry season begins, kusi breeze, cooling clearing water",
+          "visibility_m": 20
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "pelagics on the northern banks, dense reef fish at Mnemba",
+          "conditions": "kusi monsoon wind, some chop on crossings, good visibility",
+          "visibility_m": 22
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "first humpback whales migrate past Leven Bank and the Mnemba channel",
+          "conditions": "breezy kusi peak, coolest water, reliable visibility",
+          "visibility_m": 20
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "humpback whales at their peak, barracuda and tuna schooling offshore",
+          "conditions": "winds easing, dry and clear, excellent visibility",
+          "visibility_m": 25
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "late humpbacks overlap with the first whale sharks; turtles everywhere",
+          "conditions": "calm inter-monsoon lull, flat seas, superb visibility",
+          "visibility_m": 25
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "whale shark season builds, dolphins and rays in the channels",
+          "conditions": "short rains (vuli) bring brief showers, seas mostly workable",
+          "visibility_m": 20
+        },
+        "Dec": {
+          "rating": "Good",
+          "marine_life": "whale sharks most frequent, turtles nesting-season active at Mnemba",
+          "conditions": "kaskazi sets in, warm water, visibility climbing again",
+          "visibility_m": 22
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 28,
+        "Feb": 29,
+        "Mar": 29,
+        "Apr": 29,
+        "May": 28,
+        "Jun": 27,
+        "Jul": 26,
+        "Aug": 25,
+        "Sep": 25,
+        "Oct": 26,
+        "Nov": 27,
+        "Dec": 28
+      },
+      "highlights": "Mnemba Atoll's turtle-packed coral slopes and the current-swept pelagic seamount of Leven Bank, with humpback whales passing in September and whale sharks from October to February.",
+      "signature_species": [
+        "Green turtle",
+        "Bottlenose dolphin",
+        "Whale shark",
+        "Humpback whale",
+        "Great barracuda",
+        "Napoleon wrasse",
+        "Leaf fish"
+      ],
+      "current_strength": "Moderate",
+      "currents": "Tides of up to five metres drive currents that range from slack to brisk on the Mnemba and Tumbatu reefs, making gentle drifts the norm. Leven Bank in the open Pemba Channel is another matter, with strong, unpredictable current that demands drift experience.",
+      "current_note": "gentle reef drifts inshore; strong and shifty at Leven Bank",
+      "wetsuit": "3mm shorty or full suit Nov-Apr; 3mm-5mm full in the cooler Jun-Sep season",
+      "dive_sites": [
+        {
+          "name": "Kichwani",
+          "type": "Wall",
+          "depth": "2-30m",
+          "level": "beginner",
+          "blurb": "Mnemba's classic sloping wall drift, dense with hard and soft coral, trevally, morays and well-camouflaged leaf fish."
+        },
+        {
+          "name": "Wattabomi",
+          "type": "Reef",
+          "depth": "6-30m",
+          "level": "beginner",
+          "blurb": "A gentle Mnemba slope of bommies and plate coral where green turtles are near-guaranteed and dolphins sometimes cruise through mid-dive."
+        },
+        {
+          "name": "Big Wall",
+          "type": "Wall",
+          "depth": "14-70m",
+          "level": "advanced",
+          "blurb": "Mnemba's vertical face of overhangs and sponge-crusted ledges, drawing tuna, barracuda, rays and the occasional hammerhead off the blue."
+        },
+        {
+          "name": "Leven Bank",
+          "type": "Drift",
+          "depth": "12-55m",
+          "level": "advanced",
+          "blurb": "An open-ocean seamount in the Pemba Channel where strong current pulls in kingfish, tuna, big morays and schooling barracuda."
+        },
+        {
+          "name": "Hunga Reef",
+          "type": "Reef",
+          "depth": "10-17m",
+          "level": "intermediate",
+          "blurb": "A circular open-water reef off Nungwi known for huge coral bommies and consistently sharp visibility."
+        },
+        {
+          "name": "Tumbatu Coral Gardens",
+          "type": "Reef",
+          "depth": "8-20m",
+          "level": "beginner",
+          "blurb": "Quiet, current-brushed gardens off Tumbatu Island regarded as Zanzibar's healthiest coral, with seahorses and turtles among the highlights."
+        }
+      ],
+      "description": "Zanzibar pairs easy tropical reef diving with a genuine big-animal calendar. Day boats work Mnemba Atoll's coral slopes, where green turtles and dolphins are routine, while Leven Bank's current-raked seamount gives experienced divers kingfish, tuna and barracuda in the Pemba Channel. Two monsoons shape the year: kaskazi brings warm, glassy water from December to March, kusi cooler humpback-season seas from June to October, and the April-May long rains close the window. Suits new divers and drift-hungry veterans alike.",
+      "slug": "zanzibar",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
     }
   ]
 }
