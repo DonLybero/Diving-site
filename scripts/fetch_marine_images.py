@@ -69,6 +69,7 @@ REQUIRE = {
 # search keeps landing on technically-correct but weak photos (e.g. the orca
 # result was a grainy 1970s surface scan). Exact file titles, best first.
 PINNED = {
+    "sardine-run": ["File:Multitude in Reef.jpg"],   # owner-approved (photo review, 2026-07)
     "orcas": ["File:Killerwhales jumping.jpg",
               "File:Orca porpoising.jpg",
               "File:Type C Orcas.jpg",

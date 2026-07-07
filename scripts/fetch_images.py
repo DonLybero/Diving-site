@@ -129,6 +129,8 @@ DEST_PINNED = {
                "File:Longtail Boat At Maya Bay, Krabi, Thailand.jpg",
                "File:Longtail boat at Maya bay.JPG"],
     # Owner-approved picks (photo review, 2026-07) — never let search replace these.
+    "Cenotes of Yucatán Peninsula": ["File:Cenote Ik Kil, Yucatan, Dec 2011 - 06.jpg"],
+    "Red Sea (Egypt)": ["File:Unterwasserwelt im Roten Meer, Ägypten DSCF4057WI.jpg"],
     "Bonaire": ["File:Snorkeling Bari Reef, Bonaire (12840799335).jpg"],
     "Cenderawasih Bay": ["File:Hiu Paus yang kesepian.jpg"],
     "Chania (Crete)": ["File:Aerial view of Balos Lagoon on the island of Crete, Greece.jpg"],
