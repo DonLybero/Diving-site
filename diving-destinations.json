@@ -12276,7 +12276,10 @@
       "slug": "cancun-playa-del-carmen",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Acropora_palmata_f%C3%B3sil.jpg/960px-Acropora_palmata_f%C3%B3sil.jpg",
+      "image_credit": "Photo: Buceo Xtabay (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Dubai & Fujairah",
@@ -13626,7 +13629,10 @@
       "slug": "phuket",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Tha%C3%AFlande_-_Phuket_-_Raya_Island_%2813144513714%29.jpg/960px-Tha%C3%AFlande_-_Phuket_-_Raya_Island_%2813144513714%29.jpg",
+      "image_credit": "Photo: Nicolas Vollmer from Munich [Allemagne] (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Santorini",
