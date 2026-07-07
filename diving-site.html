@@ -1784,7 +1784,7 @@ function buildBrowseDir(){
     var inner=countries.map(function(c){
       var links=groups[g][c].sort().map(function(nm){
         var im=thumbURL((byName[nm]||{}).image);
-        var th=im?'<span class="bthumb"><img src="'+im+'" alt="" loading="lazy" onerror="this.parentNode.style.visibility=\'hidden\'"></span>':'<span class="bthumb"></span>';
+        var th=im?'<span class="bthumb"><img src="'+im+'" alt="" loading="lazy" onerror="this.style.display=\'none\'"></span>':'<span class="bthumb"></span>';
         return '<a href="#" onclick="openProfile(\''+esc(nm)+'\');return false;">'+th+'<span>'+nm+'</span></a>';
       }).join('');
       return '<div class="bcountry"><b>'+c+'</b>'+links+'</div>';
