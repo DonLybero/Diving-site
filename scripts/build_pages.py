@@ -393,6 +393,7 @@ def page(d):
   {f'<span class="credit">{esc(d.get("image_credit"))}</span>' if d.get("image_credit") else ""}
 </header>
 <main class="wrap">
+  {f'<p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">{esc(d["description"])}</p>' if d.get("description") else ""}
   <p style="max-width:78ch;line-height:1.65;color:#33565e">{esc(dest_intro(d))}</p>
   <div class="best">&#127942; <b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
   <div class="kv">
@@ -753,7 +754,13 @@ def month_ranked(rankings, month, dests_by_name):
                 best[r["name"]] = r
     rows = sorted(best.values(), key=lambda r: -r["score"])
     rows = [r for r in rows if r["rating"] in ("Peak", "Good") and r["name"] in dests_by_name]
-    return rows[:15]
+    # one destination per country per guide (no Fuvahmulah + Maldives double-spot)
+    seen, out = set(), []
+    for r in rows:
+        if r["country"] in seen:
+            continue
+        seen.add(r["country"]); out.append(r)
+    return out[:15]
 
 def month_page(month, rankings, dests_by_name):
     full = MONTH_FULL[month]
@@ -783,7 +790,7 @@ def month_page(month, rankings, dests_by_name):
         return (f'<div class="gentry">{photo}<div>'
                 f'<h3><a href="../destinations/{d["slug"]}.html" style="text-decoration:none;color:inherit">{esc(r["name"])}</a>{ctry}</h3>'
                 f'<div class="chips" style="margin:2px 0 10px">{chips}</div>'
-                f'<p class="greview">{esc(d.get("highlights") or "")}</p>'
+                f'<p class="greview">{esc(d.get("description") or d.get("highlights") or "")}</p>'
                 f'<p class="greview">{expect}</p>'
                 f'<a href="../destinations/{d["slug"]}.html">Full guide: {esc(r["name"])} &rarr;</a></div></div>')
 

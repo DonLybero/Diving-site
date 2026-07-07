@@ -1293,6 +1293,7 @@ function openProfile(name){
   var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';
   document.getElementById('profile').innerHTML=
     '<h2>'+d.name+'</h2><p class="lead">'+metaLine(d.country,d.region)+' — '+d.highlights+'</p>'+
+    (d.description?'<p style="max-width:78ch;line-height:1.7;color:#33565e;margin:0 0 10px;font-size:1.02rem">'+d.description+'</p>':'')+
     '<p style="max-width:78ch;line-height:1.65;color:#33565e;margin:0 0 16px">'+destIntro(d,s)+'</p>'+
     '<div class="best">'+ico('trophy',15)+' <b>Best months:</b> '+(s.byRating.Peak.join(', ')||'—')+
       ' &nbsp;·&nbsp; <b>Top month:</b> '+best+
@@ -1719,7 +1720,7 @@ function destMonthBlock(r,month){
     '<div class="row" style="margin:2px 0 8px">'+badge(r.rating)+
       '<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
       '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+'</div>'+
-    '<p class="gentry-review">'+(d.highlights||'')+'</p>'+
+    '<p class="gentry-review">'+(d.description||d.highlights||'')+'</p>'+
     '<p class="gentry-review">'+expect+'</p>'+
     '<a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full guide: '+r.name+' →</a></div></div>';
 }
@@ -1727,7 +1728,14 @@ function destMonthBlock(r,month){
    region's best-ranked pick — one guide per month, one paragraph per region. */
 function monthRegionSections(month){
   var ranked=DivingCalendar.rankPeriod(DESTS,DivingCalendar.MONTHS.indexOf(month)*2+1,{});
-  var good=ranked.filter(function(r){return r.rating==='Peak'||r.rating==='Good';}).slice(0,15);
+  // one destination per country per guide — "Fuvahmulah" and "Maldives" must
+  // never appear as two spots in the same month
+  var seenCountry={};
+  var good=ranked.filter(function(r){
+    if(r.rating!=='Peak'&&r.rating!=='Good') return false;
+    if(seenCountry[r.country]) return false;
+    seenCountry[r.country]=1; return true;
+  }).slice(0,15);
   var groups={},order=[];
   good.forEach(function(r){
     var g=DEST_GROUP[r.name]||r.region;
