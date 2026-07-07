@@ -28,7 +28,15 @@ BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagra
                       r"\.svg$|chart|seal|emblem|stamp|banknote|coin_|drawing|"
                       r"illustration|painting|sketch|diagram|distribution|range_|"
                       r"skeleton|jaw|teeth|specimen|museum|dissect|embryo|fossil|"
-                      r"anatomy|logo|sign_|graph)", re.I)
+                      r"anatomy|logo|sign_|graph|"
+                      # old book/plate scans (Internet Archive / Biodiversity Heritage)
+                      r"fish_and_game|book_images|biodiversity_heritage|_bhl_|plate_|"
+                      # 'orca' the Iberian megalithic tomb, not the whale
+                      r"dolmen|menhir|megalith|pendilhe|cromlech|neolith|\banta\b|\bantas\b|tomb)", re.I)
+
+# Upload sources that are almost always scanned book plates, not photos — skip
+# even if the file name looks innocent.
+BAD_ARTIST = re.compile(r"(internet archive book images|biodiversity heritage)", re.I)
 
 # Titles that ARE what we want; used to rank hits (in the water beats a beach).
 GOOD_HINT = re.compile(r"(underwater|diver|diving|snorkel|school|shoal|baitball|"
@@ -40,10 +48,10 @@ QUERIES = {
                           "Whale shark snorkeler", "Whale shark Ningaloo"],
     "manta-rays":        ["Manta ray diving", "Manta birostris underwater",
                           "Reef manta ray", "Manta ray cleaning station"],
-    "hammerhead-sharks": ["Scalloped hammerhead school", "Hammerhead shark underwater",
-                          "Sphyrna lewini", "Hammerhead sharks Galapagos"],
-    "thresher-sharks":   ["Thresher shark underwater", "Pelagic thresher shark",
-                          "Alopias pelagicus", "Thresher shark Malapascua"],
+    "hammerhead-sharks": ["Scalloped hammerhead shark underwater", "Hammerhead shark school diving",
+                          "Sphyrna lewini underwater", "Hammerhead sharks Galapagos Darwin"],
+    "thresher-sharks":   ["Thresher shark Malapascua", "Pelagic thresher shark underwater",
+                          "Thresher shark diving", "Alopias pelagicus underwater"],
     "mola-mola":         ["Mola mola diver", "Ocean sunfish underwater",
                           "Mola mola Bali", "Ocean sunfish Mola"],
     "sea-lions":         ["Sea lion underwater diver", "California sea lion underwater",
@@ -52,8 +60,8 @@ QUERIES = {
                           "Bait ball sardine", "Sardine run dolphins"],
     "great-white":       ["Great white shark", "Carcharodon carcharias",
                           "Great white shark cage diving", "White shark underwater"],
-    "orcas":             ["Orca underwater", "Killer whale Norway underwater",
-                          "Orcas swimming", "Orca pod ocean"],
+    "orcas":             ["Orcinus orca underwater", "Killer whale ocean swimming",
+                          "Killer whale Norway diving", "Orca whale sea"],
 }
 
 
@@ -95,6 +103,8 @@ def _commons_pick(titles):
                 continue
             meta = ii.get("extmetadata") or {}
             artist = strip_html((meta.get("Artist") or {}).get("value", "")) or "Wikimedia Commons"
+            if BAD_ARTIST.search(artist):
+                continue                                   # scanned book plate, not a photo
             lic = strip_html((meta.get("LicenseShortName") or {}).get("value", ""))
             credit = f"Photo: {artist}" + (f" ({lic})" if lic else "") + " via Wikimedia Commons"
             return {"image": img, "image_credit": credit, "image_source": "wikimedia"}
