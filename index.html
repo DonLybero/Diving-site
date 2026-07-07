@@ -275,10 +275,11 @@
   /* Expander used on cards / profile for progressive disclosure */
   details.more{margin:0}
   .card.photo-card details.more{margin:0 20px}
-  details.more>summary{cursor:pointer;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);list-style:none;padding:6px 0}
+  details.more>summary{cursor:pointer;font-size:.82rem;font-weight:600;color:var(--accent);list-style:none;padding:6px 0;display:inline-flex;align-items:center;gap:6px}
+  details.more>summary:hover{text-decoration:underline}
   details.more>summary::-webkit-details-marker{display:none}
-  details.more>summary::before{content:"+ ";font-weight:700}
-  details.more[open]>summary::before{content:"– "}
+  details.more>summary::before{content:"▸";font-size:.7rem;transition:transform .15s ease}
+  details.more[open]>summary::before{transform:rotate(90deg)}
   /* Contextual CTA row on result cards */
   .card-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:12px 20px 4px;padding-top:10px;border-top:1px solid var(--line);font-size:.82rem}
   .card-cta a{text-decoration:none;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:4px}
@@ -297,6 +298,27 @@
   .sr-key>i{width:11px;height:11px;border-radius:3px;display:inline-block}
   @media(max-width:640px){.sr-cell>i{height:28px}.sr-cell>em{font-size:.56rem}}
   .aff-note{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:0 0 16px}
+  .pack-alt{align-self:center;font-size:.8rem;color:var(--accent);text-decoration:none;font-weight:600;margin-left:4px}
+  .pack-alt:hover{text-decoration:underline}
+  /* equal-height fact tiles on the profile */
+  .kv div{min-height:74px}
+  /* home Top-picks: covers align, chips sit on a shared baseline */
+  .feature.photo-card{display:flex;flex-direction:column}
+  .feature.photo-card .row{margin-top:auto}
+  /* marine list: kill the trailing right void */
+  #view-marine .article{max-width:880px}
+  /* mini season ribbon inside marine "where & when" rows */
+  .mini-ribbon{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;max-width:260px;margin-top:4px}
+  .mini-ribbon i{display:block;height:12px;border-radius:3px}
+  .mini-ribbon i.now{box-shadow:0 0 0 1.5px #fff,0 0 0 3px var(--ink)}
+  /* dive-sites table stacks to readable cards on phones */
+  @media(max-width:640px){
+    .sitestable thead{display:none}
+    .sitestable, .sitestable tbody, .sitestable tr, .sitestable td{display:block;width:100%}
+    .sitestable tr{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:10px;background:var(--glass)}
+    .sitestable td{border:none;padding:2px 0}
+    .sitestable td .chip{white-space:nowrap}
+  }
   .home-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
   .feature{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);
        border-radius:var(--r);padding:20px;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}
@@ -337,7 +359,7 @@
   .artrow{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);align-items:center}
   .artrow-thumb{height:104px;border-radius:8px;overflow:hidden;background:#f4f8f8;display:flex;align-items:center;justify-content:center}
   .artrow-thumb img{max-width:92%;max-height:92%;object-fit:contain}
-  .artrow .kicker{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral)}
+  .artrow .kicker{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep)}
   .artrow h4{margin:3px 0 5px;font-family:var(--serif);font-size:1.3rem;font-weight:600;transition:color .15s}
   .artrow:hover h4{color:var(--accent)}
   .artrow p{margin:0 0 4px;color:var(--muted);font-size:.86rem;line-height:1.55}
@@ -375,7 +397,7 @@
   .ptable .deal{font-family:var(--mono)}
   .ptable .price{font-family:var(--mono);text-align:right;color:#0b6b74}
   .ptable tr.low .price{color:var(--coral);font-weight:800}
-  .ptable tr.low .deal::after{content:" ◀ cheapest";color:var(--peak);font-size:.66rem;font-family:var(--mono)}
+  .ptable tr.low .deal::after{content:" ◀ best authorised price";color:var(--peak);font-size:.66rem;font-family:var(--mono)}
   .ptable .btn{padding:8px 13px;font-size:.78rem}
   /* ---------- where-to-buy box ---------- */
   .buybox{background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-top:12px}
@@ -415,7 +437,7 @@
   /* ---------- destination gear cross-sell ---------- */
   .packbox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--coral);
        border-radius:12px;padding:14px 16px;margin:18px 0}
-  .pack-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);
+  .pack-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);
        display:flex;align-items:center;gap:6px;margin-bottom:6px}
   .pack-body{margin:0 0 11px;color:var(--ink-soft);font-size:.92rem;line-height:1.6}
   .pack-ctas{display:flex;flex-wrap:wrap;gap:8px}
@@ -437,7 +459,7 @@
   .thick-pill span{font-size:.68rem;color:var(--muted);font-family:var(--mono);letter-spacing:.02em}
   .thick-pill.on{background:var(--accent);border-color:var(--accent)}
   .thick-pill.on b,.thick-pill.on span{color:#fff}
-  .thick-lead{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 6px}
+  .thick-lead{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 6px}
   /* ---------- small screens ---------- */
   @media(max-width:640px){
     .grid{grid-template-columns:minmax(0,1fr)}
@@ -536,12 +558,12 @@
 </div>
 
 <header class="hero" id="hero">
-  <span class="eyebrow">Your diving buddy</span>
-  <h1>Never dive alone.</h1>
-  <p class="tagline">DiveSZN helps you plan your dive ahead — matching your travel dates to the destinations where the season, the water and the wildlife are at their best, so you know before you go that your trip lands on a great dive.</p>
+  <span class="eyebrow">Never dive alone — your diving buddy</span>
+  <h1>Know your trip lands on great diving — before you book.</h1>
+  <p class="tagline">Every destination is scored for all twelve months on the things that make a dive: season, marine life, visibility and currents. Tell DiveSZN when you can travel, and see exactly where the water is at its best.</p>
   <div class="hero-cta">
-    <a class="btn" href="#" onclick="showTab('calendar');return false;"><i class="ico" data-ico="calendar"></i>Open the calendar</a>
-    <a class="btn ghost" href="#" onclick="showTab('plan');return false;">Plan a trip →</a>
+    <a class="btn" href="#" onclick="showTab('planner');return false;"><i class="ico" data-ico="compass"></i>Plan by your dates →</a>
+    <a class="btn ghost" href="#" onclick="showTab('calendar');return false;">Browse the year calendar</a>
   </div>
   <span class="photo-credit" id="heroCredit"></span>
 </header>
@@ -728,12 +750,30 @@ function curChip(s){return s?'<span class="chip cur-'+s+'">'+ico('current',12)+s
    replaces the bare species list + naked score that made cards read like a spreadsheet. */
 function whyNow(rating, marine, vizM){
   var status={Peak:'Peak season',Good:'Strong diving',Shoulder:'Shoulder season',Low:'Quiet season',Closed:'Closed this month'}[rating]||'';
-  var life=(marine||'').trim().replace(/\s*\.\s*$/,'');
-  if(life) life=life.charAt(0).toLowerCase()+life.slice(1);
+  var raw=(marine||'').trim().replace(/\s*\.\s*$/,'');
+  // avoid "Peak season for peak of the ..." echoes
+  raw=raw.replace(/^(peak|good|shoulder|low)( season)?( of)?( the)?\s*/i,'');
   var viz = vizM==null ? '' : (vizM>=25 ? 'clear '+vizM+' m water' : vizM+' m visibility');
-  var lead = (status&&life) ? status+' for '+life : (life||status);
-  if(viz) lead += (lead?' — ':'')+viz;
-  return lead ? lead.charAt(0).toUpperCase()+lead.slice(1)+'.' : '';
+  // Closed / no-life months: don't force a "for ..." clause
+  if(rating==='Closed' || /closed|no marine life/i.test(raw)){
+    var l0=status; if(viz) l0+=' — '+viz;
+    return l0? l0+'.' : '';
+  }
+  // Split telegraphic fragments, keep at most two, join as prose
+  var parts=raw.split(';').map(function(s){return s.trim().replace(/\.$/,'').replace(/\s+-\s+/g,' — ');}).filter(Boolean);
+  if(parts.length && parts[0].length>45) parts=parts.slice(0,1); else parts=parts.slice(0,2);
+  // lowercase a fragment's first letter only when the second char is lowercase (protects proper nouns)
+  parts=parts.map(function(s){return (s.length>1 && s[1]===s[1].toLowerCase() && /[A-Z]/.test(s[0]))? s[0].toLowerCase()+s.slice(1) : s;});
+  var life=parts.length===2? parts[0]+' and '+parts[1] : (parts[0]||'');
+  var lead=(status&&life)? status+' for '+life : (life||status);
+  if(viz) lead+=(lead?' — ':'')+viz;
+  return lead? lead.charAt(0).toUpperCase()+lead.slice(1)+'.' : '';
+}
+/* country · region line without repeating the country when the region already names it */
+function metaLine(country, region){
+  if(!region) return country||'';
+  if(!country) return region;
+  return region.toLowerCase().indexOf(country.toLowerCase())!==-1 ? region : country+' · '+region;
 }
 /* Season score as a filled bar (0..~150) rather than a naked number on the card. */
 function scoreBar(score){
@@ -988,7 +1028,7 @@ function plannerCard(r,monthLabel){
   var d=DivingCalendar.getDestination(DESTS,r.name);
   return '<div class="card photo-card clickable'+(r.rank===1?' lead':'')+'" onclick="cardOpen(event,\''+esc(r.name)+'\')"><div class="rank">'+r.rank+'</div>'+
     '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'"></div>'+
-    '<div class="card-body"><h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
+    '<div class="card-body"><h3>'+r.name+'</h3><div class="meta">'+metaLine(r.country,r.region)+'</div>'+
     '<p class="why">'+whyNow(r.rating, r.highlight, r.visibility_m)+'</p>'+
     '<div class="row tight">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
       '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+'</div>'+
@@ -998,11 +1038,11 @@ function plannerCard(r,monthLabel){
       '<div class="meta" style="margin-top:6px">'+ico('medic',12)+' Nearest chamber: '+chamberFor(r.region)+'</div>'+
       siteList(r.name)+'</details>'+
     '<div class="card-cta">'+
-      (d?'<a class="stay-link" href="'+bookingLink(d)+'" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">'+ico('home',12)+' Where to stay</a>':'')+
-      '<a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">See the month-by-month →</a></div>'+
+      (d?'<a class="stay-link" href="'+bookingLink(d)+'" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">'+ico('home',12)+' Stays near '+r.name+'</a>':'')+
+      '<a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full guide: '+r.name+' →</a></div>'+
     '</div></div>';
 }
-var planShown=3;   // 3 → 10 → +5 → +5 …
+var planShown=(typeof window!=='undefined'&&window.innerWidth>820)?10:3;   // desktop 10 → +5; mobile 3 → 10 → +5
 function renderPlanner(){
   var perVal=val('planPeriod');
   var g=document.getElementById('planGrid'), more=document.getElementById('planMore');
@@ -1050,7 +1090,7 @@ function drawMarkers(){
     var m=L.circleMarker([c.lat,c.lng],{radius:7,color:'#ffffff',weight:1.4,
       fillColor:RCOLOR[mm.rating],fillOpacity:.92});
     var top=(d.dive_sites||[]).slice(0,3).map(function(x){return x.name;}).join(', ');
-    m.bindPopup('<b>'+d.name+'</b><br>'+d.country+' · '+d.region+'<br>'+
+    m.bindPopup('<b>'+d.name+'</b><br>'+metaLine(d.country,d.region)+'<br>'+
       month+': <b style="color:'+RCOLOR[mm.rating]+'">'+mm.rating+'</b> · '+tempStr(d.monthly_temp_c[month])+
       ' · '+vizStr(mm.visibility_m)+' · '+d.current_strength+' current<br>'+mm.marine_life+
       (top?'<br><b>Top sites:</b> '+top+((d.dive_sites.length>3)?' +'+(d.dive_sites.length-3)+' more':''):'')+
@@ -1071,13 +1111,13 @@ function renderSearch(){
   sr.innerHTML=res.slice(0,12).map(function(d){
     var s=DivingCalendar.destinationSeasonSummary(d);
     return '<div class="card photo-card clickable" onclick="cardOpen(event,\''+esc(d.name)+'\')"><div class="cover" data-name="'+encodeURIComponent(d.name)+'" data-country="'+encodeURIComponent(d.country)+'"></div>'+
-      '<div class="card-body"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
+      '<div class="card-body"><h3>'+d.name+'</h3><div class="meta">'+metaLine(d.country,d.region)+'</div>'+
       '<p class="why">'+d.highlights+'</p>'+
       '<div class="row tight"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+curChip(d.current_strength)+'</div>'+
       '<div class="meta" style="margin-top:8px">'+ico('trophy',12)+' Best window: '+d.best_months+' · Peak: '+(s.byRating.Peak.join(', ')||'—')+'</div>'+
       siteList(d.name)+
-      '<div class="card-cta"><a class="stay-link" href="'+bookingLink(d)+'" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">'+ico('home',12)+' Where to stay</a>'+
-      '<a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">See the month-by-month →</a></div></div></div>';
+      '<div class="card-cta"><a class="stay-link" href="'+bookingLink(d)+'" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">'+ico('home',12)+' Stays near '+d.name+'</a>'+
+      '<a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Full guide: '+d.name+' →</a></div></div></div>';
   }).join('');
   fillDestCovers();
 }
@@ -1096,22 +1136,18 @@ function destIntro(d,s){
   var peak=s.byRating.Peak;
   var water=/water$/.test(d.water_type)?d.water_type:d.water_type+' water';
   var suit=d.wetsuit.split(';')[0].replace(/\.$/,'');
-  var p1=d.name+' is at its best '+d.best_months+
-    (peak.length?', with '+joinList(peak)+' rating as peak season':'')+'. '+
-    'Expect '+water+' of '+(tmin===tmax?tmin:tmin+'–'+tmax)+'°C (suit: '+suit+
-    '), visibility up to ~'+vmax+'m, and '+d.current_strength.toLowerCase()+' currents — '+
+  var p1=d.name+' is at its best '+d.best_months+'. Expect '+water+' of '+
+    (tmin===tmax?tmin:tmin+'–'+tmax)+'°C, visibility up to ~'+vmax+'m, and '+
+    d.current_strength.toLowerCase()+' currents — '+
     (d.current_note||d.currents).replace(/\.$/,'')+'.';
   var sites=d.dive_sites||[];
   if(!sites.length) return p1;
-  var counts={}; sites.forEach(function(x){var t=x.type||'Reef';counts[t]=(counts[t]||0)+1;});
-  var breakdown=joinList(Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];})
-    .map(function(t){return counts[t]+' '+sitePlural(t,counts[t]);}));
   var order={beginner:0,intermediate:1,advanced:2,tec:3};
   var lv=function(x){return x.level in order?order[x.level]:1;};
   var sorted=sites.slice().sort(function(a,b){return lv(a)-lv(b);});
   var easy=sorted[0], hard=sorted[sorted.length-1];
-  var p2=' Divers here work '+sites.length+' recognised sites — '+breakdown+' — ranging from '+
-    easy.name+(easy.depth?' ('+easy.depth+')':'')+' for '+easy.level+' divers up to '+
+  var p2=' Divers here work '+sites.length+' recognised sites, from '+
+    easy.name+(easy.depth?' ('+easy.depth+')':'')+' up to '+
     hard.name+(hard.depth?' ('+hard.depth+')':'')+', '+(hard.level==='tec'?'technical-diving':hard.level)+' territory.';
   return p1+p2;
 }
@@ -1166,7 +1202,7 @@ function packBox(d){
     body='Water '+tpart+' here, so a <b>'+r.primary+'&nbsp;mm wetsuit</b> is the right call.'+extra;
     cta='<button class="pack-cta" onclick="gotoWetsuit(\''+r.primary+'mm\')">See the best '+r.primary+'&nbsp;mm wetsuits &rarr;</button>';
     if(r.secondary&&r.secondary!==r.primary){
-      cta+='<button class="pack-cta ghost" onclick="gotoWetsuit(\''+r.secondary+'mm\')">See the best '+r.secondary+'&nbsp;mm &rarr;</button>';
+      cta+='<a class="pack-alt" href="#" onclick="gotoWetsuit(\''+r.secondary+'mm\');return false;">or the best '+r.secondary+'&nbsp;mm &rarr;</a>';
     }
   }else{
     return '';                                     // no clear recommendation → skip
@@ -1211,8 +1247,8 @@ function stayBox(d){
   var board=live?'<a class="pack-cta'+(boardOnly?'':' ghost')+'" href="'+liveaboardLink(d)+'" target="_blank" rel="noopener sponsored">Browse liveaboards &rarr;</a>':'';
   var body=boardOnly
     ? 'Diving here is liveaboard-based — you sleep aboard the boat. Book a liveaboard, or a gateway hotel for the nights either side.'
-    : (live? 'Base yourself at a dive resort or hotel near the water — or see it all from a liveaboard.'
-           : 'Base yourself at a dive resort or hotel close to the water.');
+    : (live? 'Dive boats leave early — stay within a short ride of the jetty, or see it all from a liveaboard.'
+           : 'Dive boats leave early — stay within a short ride of the jetty.');
   var ctas=boardOnly?(board+book):(book+board);
   return '<div class="staybox"><div class="stay-head">'+ico('home',14)+' Where to stay</div>'+
     '<p class="pack-body">'+body+'</p><div class="pack-ctas">'+ctas+'</div></div>';
@@ -1239,32 +1275,32 @@ function openProfile(name){
   var sitesBlock = siteRows ?
     '<h3 style="margin:22px 0 2px">'+ico('map',15)+' Recognised dive sites ('+d.dive_sites.length+')</h3>'+
     '<p class="meta" style="margin:2px 0 6px">Depths are typical published ranges — always confirm with your operator.</p>'+
-    '<table><thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it’s known</th></tr></thead>'+
+    '<table class="sitestable"><thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it’s known</th></tr></thead>'+
     '<tbody>'+siteRows+'</tbody></table>' : '';
   var best=s.bestMonth?(s.bestMonth.month+' (score '+s.bestMonth.score+')'):'—';
   document.getElementById('profile').innerHTML=
-    '<h2>'+d.name+'</h2><p class="lead">'+d.country+' · '+d.region+' — '+d.highlights+'</p>'+
+    '<h2>'+d.name+'</h2><p class="lead">'+metaLine(d.country,d.region)+' — '+d.highlights+'</p>'+
     '<p style="max-width:78ch;line-height:1.65;color:#33565e;margin:0 0 16px">'+destIntro(d,s)+'</p>'+
     '<div class="best">'+ico('trophy',15)+' <b>Best months:</b> '+(s.byRating.Peak.join(', ')||'—')+
       ' &nbsp;·&nbsp; <b>Top month:</b> '+best+
       ' &nbsp;·&nbsp; <b>Recommended window:</b> '+d.best_months+'</div>'+
+    '<h3 style="margin:18px 0 6px">'+ico('calendar',15)+' When to dive '+d.name+'</h3>'+
+    seasonRibbon(d)+
+    '<details class="more" style="margin-top:10px;margin-bottom:14px"><summary>Full month-by-month detail</summary>'+
+    '<table style="margin-top:10px"><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
+    '<tbody>'+rows+'</tbody></table></details>'+
     '<div class="kv">'+
       '<div><span>Water type</span>'+d.water_type+'</div>'+
       '<div><span>Difficulty</span>'+d.difficulty+'</div>'+
       '<div><span>Access</span>'+d.access+'</div>'+
-      '<div><span>Wetsuit</span><b>'+d.wetsuit+'</b></div>'+
-      '<div><span>Current strength</span><b class="cur-'+d.current_strength+'">'+d.current_strength+'</b>'+
-        (d.current_note?'<div class="meta" style="font-size:.68rem;margin-top:2px">'+d.current_note+'</div>':'')+'</div>'+
+      '<div><span>Wetsuit</span><b>'+d.wetsuit.split(';')[0].replace(/\.$/,'')+'</b></div>'+
+      '<div><span>Current strength</span><b class="cur-'+d.current_strength+'">'+d.current_strength+'</b></div>'+
       '<div style="grid-column:1/-1"><span>Currents detail</span>'+d.currents+'</div>'+
     '</div>'+
-    packBox(d)+stayBox(d)+
+    packBox(d)+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
     sitesBlock+
-    '<h3 style="margin:22px 0 6px">'+ico('calendar',15)+' When to dive '+d.name+'</h3>'+
-    seasonRibbon(d)+
-    '<details class="more" style="margin-top:12px"><summary>Full month-by-month detail</summary>'+
-    '<table style="margin-top:10px"><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
-    '<tbody>'+rows+'</tbody></table></details>'+
+    stayBox(d)+
     (d.last_verified?'<p class="meta" style="margin-top:10px">✓ Data verified '.replace('✓','&#10003;')+d.last_verified+
       (d.data_confidence?' · source confidence: '+d.data_confidence:'')+'</p>':'')+
     (d.slug?'<p class="meta"><a href="destinations/'+d.slug+'.html">Permanent season-guide page for '+d.name+' →</a></p>':'');
@@ -1304,25 +1340,19 @@ function renderHome(){
     return '<div class="feature" onclick="showTab(\'gear\')">'+
       '<div class="gear-photo" style="height:120px">'+(g.image?'<img src="'+g.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<h4>'+g.name+'</h4><div class="score">from '+fmtPrice(lo.price_usd)+'</div>'+
-      '<div class="meta">#1 '+c.category.replace(/s$/,'')+' · cheapest at '+lo.store+'</div></div>';
+      '<div class="meta">#1 '+c.category.replace(/s$/,'')+' · best authorised price — '+lo.store+'</div></div>';
   }):GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
     return '<div class="feature" onclick="showTab(\'gear\')">'+gearIco(g)+'<h4>'+g.name+'</h4>'+
-      '<div class="score">from $'+lo[1]+'</div><div class="meta">sample price · cheapest at '+lo[0]+'</div></div>';})).join('');
+      '<div class="score">from $'+lo[1]+'</div><div class="meta">sample price · via authorised dealers</div></div>';})).join('');
   var sitePrev=topAug.map(function(r,i){return '<div class="feature photo-card'+(i===0?' featured':'')+'" onclick="openProfile(\''+esc(r.name)+'\')">'+
       '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'">'+badge(r.rating)+'</div>'+
       '<h4>'+r.name+'</h4><div class="meta">'+r.country+'</div>'+
       '<p class="why" style="margin:8px 18px 0">'+whyNow(r.rating, r.highlight, r.visibility_m)+'</p>'+
-      '<div class="row" style="margin:10px 18px 18px"><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+'</div></div>';}).join('');
+      '<div class="row" style="margin:10px 18px 18px;align-items:center"><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+
+      '<span style="margin-left:auto;color:var(--accent);font-weight:600;font-size:.82rem">Full guide →</span></div></div>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   document.getElementById('view-home').innerHTML=
-    '<div class="home-hero"><div class="hero-eyebrow">'+ico('calendar',13)+' Seasonal dive planner</div>'+
-    '<div class="sec-head">Know your trip lands on great diving — before you book.</div>'+
-    '<p class="sec-sub">Every destination is scored for all twelve months on the things that make a dive: season, marine life, '+
-    'visibility and currents. Tell us when you can travel, and see exactly where the water is at its best.</p>'+
-    '<div class="row" style="margin-top:20px"><a class="btn" href="#" onclick="showTab(\'planner\');return false;">Plan by your dates →</a>'+
-    '<a class="btn ghost" href="#" onclick="showTab(\'calendar\');return false;">Browse the year calendar</a></div>'+
-    '<div class="hero-note">&#10003; Scoring live for <b>'+MONTH_FULL[nowMonth]+'</b> right now · independent, no sponsored rankings</div>'+
-    '</div>'+
+    '<div class="hero-note" style="margin:2px 0 26px">&#10003; Scoring live for <b>'+MONTH_FULL[nowMonth]+'</b> right now · independent, no sponsored rankings</div>'+
     '<div class="sec-head">'+ico('fish')+'Top picks for '+MONTH_FULL[nowMonth]+'</div>'+
     '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it.</p><div class="home-grid">'+sitePrev+'</div>'+
     '<div class="band">'+
@@ -1663,7 +1693,7 @@ function destArticleEntry(r,month){
     (d.image?'<img src="'+d.image+'" alt="'+r.name.replace(/"/g,'&quot;')+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>';
   return '<div class="gentry clickable" onclick="cardOpen(event,\''+esc(r.name)+'\')">'+photo+
     '<div><h3>'+r.rank+'. '+r.name+'</h3>'+
-    '<div class="meta" style="margin:0 0 8px">'+r.country+' · '+r.region+'</div>'+
+    '<div class="meta" style="margin:0 0 8px">'+metaLine(r.country,r.region)+'</div>'+
     '<div class="row" style="margin-bottom:8px">'+badge(r.rating)+
       '<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
       '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+'</div>'+
@@ -1691,7 +1721,9 @@ function marineWhereWhen(kws){
     var best=Math.min.apply(null, months.map(function(m){var r=d.monthly[m].rating; return (r in MRANK)?MRANK[r]:9;}));
     rows.push({d:d, months:months, best:best});
   });
-  rows.sort(function(a,b){return a.best-b.best || a.d.name.localeCompare(b.d.name);});
+  var nowM=DivingCalendar.MONTHS[new Date().getMonth()];
+  rows.forEach(function(r){r.now=r.months.indexOf(nowM)>-1?0:1;});
+  rows.sort(function(a,b){return a.now-b.now || a.best-b.best || a.d.name.localeCompare(b.d.name);});
   return rows;
 }
 function openMarineArticle(slug){ MARINE_SLUG=slug; showTab('marine'); renderMarine(); window.scrollTo({top:0,behavior:'smooth'}); }
@@ -1714,7 +1746,7 @@ function renderMarine(){
     var rows=MARINE.map(function(e){
       return '<a class="artrow" href="#" onclick="openMarineArticle(\''+escq(e.slug)+'\');return false;">'+
         marineThumb(e)+
-        '<div><div class="kicker">Marine life</div><h4>'+e.title+'</h4><p>'+(e.hero_sub||'')+'</p></div></a>';
+        '<div><h4>'+e.title+'</h4><p>'+(e.hero_sub||'')+'</p></div></a>';
     }).join('');
     body.innerHTML='<div class="article" style="grid-column:1/-1">'+
       '<div class="sec-head">'+ico('fish',20)+' Marine life</div>'+
@@ -1729,8 +1761,16 @@ function renderMarine(){
       ww='<h3 style="margin-top:22px">'+ico('map',15)+' Where &amp; when to dive it</h3>'+
         '<p class="meta">Pulled live from our seasonal data — the destinations where '+e.short+' shows in the water, and the months to catch it.</p>'+
         '<table><thead><tr><th>Destination</th><th>Best months</th></tr></thead><tbody>'+
-        rows.map(function(r){return '<tr><td><a href="#" onclick="openProfile(\''+escq(r.d.name)+'\');return false;"><b>'+r.d.name+'</b></a>'+
-          '<div class="meta">'+r.d.country+'</div></td><td>'+r.months.join(', ')+'</td></tr>';}).join('')+'</tbody></table>';
+        rows.map(function(r){
+          var nowM=DivingCalendar.MONTHS[new Date().getMonth()];
+          var mini=DivingCalendar.MONTHS.map(function(m){
+            var inSeason=r.months.indexOf(m)>-1;
+            var c=inSeason?(RCOLOR[r.d.monthly[m].rating]||'#94a3b8'):'var(--line)';
+            return '<i style="background:'+c+'"'+(m===nowM&&inSeason?' class="now"':'')+' title="'+m+(inSeason?' — '+r.d.monthly[m].rating:'')+'"></i>';
+          }).join('');
+          return '<tr><td><a href="#" onclick="openProfile(\''+escq(r.d.name)+'\');return false;"><b>'+r.d.name+'</b></a>'+
+          '<div class="meta">'+r.d.country+(r.now===0?' · <b style=\"color:var(--peak,#16a34a)\">in season now</b>':'')+'</div></td>'+
+          '<td><div class="mini-ribbon">'+mini+'</div></td></tr>';}).join('')+'</tbody></table>';
     }else{
       ww='<h3 style="margin-top:22px">'+ico('map',15)+' Where &amp; when to dive it</h3>'+
         '<p style="color:#33565e;max-width:80ch">'+(e.no_data||'This is an opportunistic encounter — none of our current destinations has a fixed season for it yet.')+'</p>';
@@ -1772,13 +1812,18 @@ function renderDestinations(month){
       '<h3 class="artlist-head">Recent articles</h3>'+rows+'</div>';
   }else{
     var full=MONTH_FULL[month];
-    var ranked=DivingCalendar.rankPeriod(DESTS,DivingCalendar.MONTHS.indexOf(month)*2+1,{limit:10});
-    g.innerHTML='<div class="article gear-article">'+
-      '<p class="meta"><a href="#" onclick="openMonthArticle(\'\');return false;">← All monthly guides</a></p>'+
+    var mi=DivingCalendar.MONTHS.indexOf(month);
+    var prevM=DivingCalendar.MONTHS[(mi+11)%12], nextM=DivingCalendar.MONTHS[(mi+1)%12];
+    var pager='<p class="meta" style="display:flex;justify-content:space-between;gap:12px">'+
+      '<a href="#" onclick="openMonthArticle(\''+prevM+'\');return false;">← '+MONTH_FULL[prevM]+'</a>'+
+      '<a href="#" onclick="openMonthArticle(\'\');return false;">All monthly guides</a>'+
+      '<a href="#" onclick="openMonthArticle(\''+nextM+'\');return false;">'+MONTH_FULL[nextM]+' →</a></p>';
+    var ranked=DivingCalendar.rankPeriod(DESTS,mi*2+1,{limit:10});
+    g.innerHTML='<div class="article gear-article">'+pager+
       '<h2 style="margin:6px 0 10px">Top Destinations in '+full+'</h2>'+
       '<p class="gentry-review" style="max-width:80ch">'+(MONTH_INTROS[month]||'')+'</p>'+
       ranked.map(function(r){return destArticleEntry(r,month);}).join('')+
-      '<p class="meta" style="margin-top:16px"><a href="#" onclick="openMonthArticle(\'\');return false;">← Back to all monthly guides</a></p></div>';
+      '<div style="margin-top:16px">'+pager+'</div></div>';
   }
   applyIcons();
 }
