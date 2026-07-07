@@ -913,8 +913,53 @@ svg.leaflet-image-layer.leaflet-interactive path {
        border:1px solid var(--line);border-radius:24px;padding:38px;margin-bottom:30px;box-shadow:var(--shadow)}
   .home-hero::before{content:"";position:absolute;top:-40%;right:-10%;width:420px;height:420px;
        background:radial-gradient(circle,rgba(47,224,214,.16),transparent 70%);pointer-events:none}
-  .home-hero .sec-head{font-size:clamp(1.8rem,4vw,2.6rem);max-width:18ch}
-  .home-hero .sec-sub{font-size:1.05rem;max-width:60ch}
+  .home-hero{border:none;background:radial-gradient(120% 140% at 85% -20%,rgba(47,224,214,.18),transparent 55%),linear-gradient(150deg,#ffffff,#e9f5f5);padding:48px 40px}
+  .home-hero .sec-head{font-size:clamp(2.1rem,5vw,3.1rem);max-width:16ch;line-height:1.08;letter-spacing:-.01em}
+  .home-hero .sec-sub{font-size:1.08rem;max-width:58ch;line-height:1.6}
+  .hero-eyebrow{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-bottom:14px}
+  .hero-note{margin-top:16px;font-size:.82rem;color:var(--muted)}
+  .hero-note b{color:var(--ink)}
+  /* Tinted band to break the uniform card grid between home sections */
+  .band{background:var(--bg2,#e8f1f2);border:1px solid var(--line);border-radius:22px;margin:40px 0;padding:32px}
+  @media(max-width:820px){.band{padding:24px 18px;margin:32px 0}}
+  /* Two card elevation tiers: the rank-1 / lead card outweighs the rest */
+  .card.photo-card.lead{box-shadow:0 16px 36px -18px rgba(13,60,70,.32);border-color:transparent}
+  .card.photo-card.lead .card-body h3{font-size:1.5rem}
+  /* "Why now" lead sentence — the insight that replaces the bare species+score */
+  .why{font-size:1.02rem;line-height:1.5;color:var(--ink);margin:2px 0 12px;font-weight:500}
+  .card.photo-card .why{margin:2px 20px 12px}
+  .row.tight{gap:6px;margin-bottom:10px}
+  /* Season score shown as a quiet bar, not a headline number */
+  .scoreline{display:flex;align-items:center;gap:10px;margin:4px 0 10px}
+  .scaption{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .sbar{flex:1;max-width:150px;height:6px;background:var(--line);border-radius:5px;overflow:hidden}
+  .sbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#16a34a);border-radius:5px}
+  .card.photo-card .scoreline{margin:4px 20px 10px}
+  /* Expander used on cards / profile for progressive disclosure */
+  details.more{margin:0}
+  .card.photo-card details.more{margin:0 20px}
+  details.more>summary{cursor:pointer;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);list-style:none;padding:6px 0}
+  details.more>summary::-webkit-details-marker{display:none}
+  details.more>summary::before{content:"+ ";font-weight:700}
+  details.more[open]>summary::before{content:"– "}
+  /* Contextual CTA row on result cards */
+  .card-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:12px 20px 4px;padding-top:10px;border-top:1px solid var(--line);font-size:.82rem}
+  .card-cta a{text-decoration:none;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:4px}
+  .card-cta .stay-link{color:var(--muted);font-weight:500}
+  .card-cta .stay-link:hover{color:var(--accent)}
+  /* Season ribbon — 12-cell "when to go" strip */
+  .ribbon{margin:6px 0 4px}
+  .sr-row{display:grid;grid-template-columns:repeat(12,1fr);gap:5px}
+  .sr-cell{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .sr-cell>i{display:block;width:100%;height:34px;border-radius:5px;background:var(--rc)}
+  .sr-cell>em{font-family:var(--mono);font-size:.62rem;color:var(--muted);font-style:normal}
+  .sr-cell.now>i{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--rc)}
+  .sr-cell.now>em{color:var(--ink);font-weight:700}
+  .sr-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+  .sr-key{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;color:var(--muted)}
+  .sr-key>i{width:11px;height:11px;border-radius:3px;display:inline-block}
+  @media(max-width:640px){.sr-cell>i{height:28px}.sr-cell>em{font-size:.56rem}}
+  .aff-note{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:0 0 16px}
   .home-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
   .feature{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);
        border-radius:var(--r);padding:20px;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}
@@ -1614,6 +1659,34 @@ function badge(r){return '<span class="badge b-'+r+'">'+r+'</span>';}
 function tempStr(t){return t==null?'—':t+'°C';}
 function vizStr(v){return v==null?'—':ico('eye',12)+' '+v+'m';}
 function curChip(s){return s?'<span class="chip cur-'+s+'">'+ico('current',12)+s+' current</span>':'';}
+/* One-sentence "why dive here now", built from the month's real data — this
+   replaces the bare species list + naked score that made cards read like a spreadsheet. */
+function whyNow(rating, marine, vizM){
+  var status={Peak:'Peak season',Good:'Strong diving',Shoulder:'Shoulder season',Low:'Quiet season',Closed:'Closed this month'}[rating]||'';
+  var life=(marine||'').trim().replace(/\s*\.\s*$/,'');
+  if(life) life=life.charAt(0).toLowerCase()+life.slice(1);
+  var viz = vizM==null ? '' : (vizM>=25 ? 'clear '+vizM+' m water' : vizM+' m visibility');
+  var lead = (status&&life) ? status+' for '+life : (life||status);
+  if(viz) lead += (lead?' — ':'')+viz;
+  return lead ? lead.charAt(0).toUpperCase()+lead.slice(1)+'.' : '';
+}
+/* Season score as a filled bar (0..~150) rather than a naked number on the card. */
+function scoreBar(score){
+  var pct=Math.max(6,Math.min(100,Math.round((score/150)*100)));
+  return '<span class="sbar" title="Season score '+score+'"><i style="width:'+pct+'%"></i></span>';
+}
+/* 12-cell season strip coloured by monthly rating — the scannable "when to go"
+   ribbon that fronts the full month table on a destination profile. */
+function seasonRibbon(d){
+  var cells=DivingCalendar.MONTHS.map(function(m){
+    var mm=d.monthly[m], c=RCOLOR[mm.rating]||'#cbd5e1';
+    var now=(m===DivingCalendar.MONTHS[new Date().getMonth()]);
+    return '<span class="sr-cell'+(now?' now':'')+'" style="--rc:'+c+'" title="'+m+' — '+mm.rating+'"><i></i><em>'+m[0]+'</em></span>';
+  }).join('');
+  var legend=['Peak','Good','Shoulder','Low','Closed'].map(function(r){
+    return '<span class="sr-key"><i style="background:'+RCOLOR[r]+'"></i>'+r+'</span>';}).join('');
+  return '<div class="ribbon"><div class="sr-row">'+cells+'</div><div class="sr-legend">'+legend+'</div></div>';
+}
 
 /* Hero photo: use a baked destination image (fetch_images.py) behind the headline.
    Falls back silently to the branded gradient if none is available. */
@@ -1847,18 +1920,22 @@ function cardOpen(ev,name){
 /* One unified result card: ranked planner entry + the dive-site details
    (difficulty pips, access, nearest chamber) that used to live on the Dive Sites tab. */
 function plannerCard(r,monthLabel){
-  return '<div class="card photo-card clickable" onclick="cardOpen(event,\''+esc(r.name)+'\')"><div class="rank">'+r.rank+'</div>'+
+  var d=DivingCalendar.getDestination(DESTS,r.name);
+  return '<div class="card photo-card clickable'+(r.rank===1?' lead':'')+'" onclick="cardOpen(event,\''+esc(r.name)+'\')"><div class="rank">'+r.rank+'</div>'+
     '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'"></div>'+
     '<div class="card-body"><h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
-    '<div class="row">'+badge(r.rating)+'<span class="chip">'+monthLabel+'</span>'+
-      '<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
-      '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+
-      '<span class="score">score '+r.score+'</span></div>'+
-    '<div class="row">'+diffPips(r.difficulty)+'<span class="chip">'+r.difficulty+'</span><span class="chip">'+r.access+'</span></div>'+
-    '<div class="hl">'+ico('fish',13)+' '+r.highlight+'</div>'+
-    '<div class="meta" style="margin-top:6px">'+ico('medic',12)+' Nearest chamber: '+chamberFor(r.region)+'</div>'+
-    siteList(r.name)+
-    '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">Full profile →</a></div></div></div>';
+    '<p class="why">'+whyNow(r.rating, r.highlight, r.visibility_m)+'</p>'+
+    '<div class="row tight">'+badge(r.rating)+'<span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+
+      '<span class="chip">'+vizStr(r.visibility_m)+'</span>'+curChip(r.current_strength)+'</div>'+
+    '<div class="scoreline"><span class="scaption">'+monthLabel+' season</span>'+scoreBar(r.score)+'</div>'+
+    '<details class="more"><summary>Difficulty, access &amp; dive sites</summary>'+
+      '<div class="row" style="margin-top:8px">'+diffPips(r.difficulty)+'<span class="chip">'+r.difficulty+'</span><span class="chip">'+r.access+'</span></div>'+
+      '<div class="meta" style="margin-top:6px">'+ico('medic',12)+' Nearest chamber: '+chamberFor(r.region)+'</div>'+
+      siteList(r.name)+'</details>'+
+    '<div class="card-cta">'+
+      (d?'<a class="stay-link" href="'+bookingLink(d)+'" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">'+ico('home',12)+' Where to stay</a>':'')+
+      '<a href="#" onclick="openProfile(\''+esc(r.name)+'\');return false;">See the month-by-month →</a></div>'+
+    '</div></div>';
 }
 var planShown=3;   // 3 → 10 → +5 → +5 …
 function renderPlanner(){
@@ -1930,11 +2007,12 @@ function renderSearch(){
     var s=DivingCalendar.destinationSeasonSummary(d);
     return '<div class="card photo-card clickable" onclick="cardOpen(event,\''+esc(d.name)+'\')"><div class="cover" data-name="'+encodeURIComponent(d.name)+'" data-country="'+encodeURIComponent(d.country)+'"></div>'+
       '<div class="card-body"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
-      '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+curChip(d.current_strength)+'</div>'+
-      '<div class="hl">'+d.highlights+'</div>'+
-      '<div class="meta" style="margin-top:6px">Best: '+d.best_months+' · Peak months: '+(s.byRating.Peak.join(', ')||'—')+'</div>'+
+      '<p class="why">'+d.highlights+'</p>'+
+      '<div class="row tight"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+curChip(d.current_strength)+'</div>'+
+      '<div class="meta" style="margin-top:8px">'+ico('trophy',12)+' Best window: '+d.best_months+' · Peak: '+(s.byRating.Peak.join(', ')||'—')+'</div>'+
       siteList(d.name)+
-      '<div style="margin-top:8px"><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">Open full profile →</a></div></div></div>';
+      '<div class="card-cta"><a class="stay-link" href="'+bookingLink(d)+'" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">'+ico('home',12)+' Where to stay</a>'+
+      '<a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">See the month-by-month →</a></div></div></div>';
   }).join('');
   fillDestCovers();
 }
@@ -2117,9 +2195,11 @@ function openProfile(name){
     packBox(d)+stayBox(d)+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
     sitesBlock+
-    '<h3 style="margin:22px 0 2px">'+ico('calendar',15)+' Month-by-month calendar</h3>'+
-    '<table><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
-    '<tbody>'+rows+'</tbody></table>'+
+    '<h3 style="margin:22px 0 6px">'+ico('calendar',15)+' When to dive '+d.name+'</h3>'+
+    seasonRibbon(d)+
+    '<details class="more" style="margin-top:12px"><summary>Full month-by-month detail</summary>'+
+    '<table style="margin-top:10px"><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
+    '<tbody>'+rows+'</tbody></table></details>'+
     (d.last_verified?'<p class="meta" style="margin-top:10px">✓ Data verified '.replace('✓','&#10003;')+d.last_verified+
       (d.data_confidence?' · source confidence: '+d.data_confidence:'')+'</p>':'')+
     (d.slug?'<p class="meta"><a href="destinations/'+d.slug+'.html">Permanent season-guide page for '+d.name+' →</a></p>':'');
@@ -2166,36 +2246,35 @@ function renderHome(){
   var sitePrev=topAug.map(function(r,i){return '<div class="feature photo-card'+(i===0?' featured':'')+'" onclick="openProfile(\''+esc(r.name)+'\')">'+
       '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'">'+badge(r.rating)+'</div>'+
       '<h4>'+r.name+'</h4><div class="meta">'+r.country+'</div>'+
-      '<div class="row"><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+'</div></div>';}).join('');
+      '<p class="why" style="margin:8px 18px 0">'+whyNow(r.rating, r.highlight, r.visibility_m)+'</p>'+
+      '<div class="row" style="margin:10px 18px 18px"><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+'</div></div>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   document.getElementById('view-home').innerHTML=
-    '<div class="home-hero"><div class="sec-head">Your ocean, planned month by month.</div>'+
-    '<p class="sec-sub">DiveSZN scores dive destinations worldwide every month on conditions, marine life, currents and visibility — '+
-    'then points you to gear at the best price and trips with trusted operators.</p>'+
-    '<div class="row" style="margin-top:18px"><a class="btn" href="#" onclick="showTab(\'calendar\');return false;">Open the calendar →</a>'+
-    '<a class="btn ghost" href="#" onclick="showTab(\'period\');return false;">Best places to dive now</a></div>'+
-    '<div class="home-grid" style="margin-top:24px">'+
-      '<div class="trust" style="margin:0;grid-column:1/-1;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">'+
-        '<div><b style="font-size:1.7rem;display:block">12</b><span class="meta">months scored, every destination</span></div>'+
-        '<div><b style="font-size:1.7rem;display:block">4</b><span class="meta">conditions tracked each month</span></div>'+
-        '<div><b style="font-size:1.7rem;display:block">24</b><span class="meta">travel periods ranked</span></div>'+
-        '<div><b style="font-size:1.7rem;display:block">'+nowMonth+'</b><span class="meta">scoring live right now</span></div>'+
-      '</div>'+
-    '</div></div>'+
-    '<div class="sec-head">'+ico('fish')+'Top picks for this month</div>'+
-    '<p class="sec-sub">Highest-scoring destinations for '+nowMonth+', based on live conditions.</p><div class="home-grid">'+sitePrev+'</div>'+
-    '<div class="sec-head" style="margin-top:28px">'+ico('tank')+'Best-price gear</div>'+
-    '<p class="sec-sub">Sample price comparison across authorised dealers.</p><div class="home-grid">'+bestGear+'</div>'+
-    // --- Methodology / "show your receipts" — the credibility core of a reference brand ---
-    '<div class="sec-head" style="margin-top:28px">'+ico('ruler')+'How we score</div>'+
-    '<p class="sec-sub">No opinions, no sponsorships — every destination gets the same transparent score each month, '+
-      'so you can compare like for like. Higher is better.</p>'+
-    '<div class="readout" style="font-size:.84rem;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap">'+
+    '<div class="home-hero"><div class="hero-eyebrow">'+ico('calendar',13)+' Seasonal dive planner</div>'+
+    '<div class="sec-head">Know your trip lands on great diving — before you book.</div>'+
+    '<p class="sec-sub">Every destination is scored for all twelve months on the things that make a dive: season, marine life, '+
+    'visibility and currents. Tell us when you can travel, and see exactly where the water is at its best.</p>'+
+    '<div class="row" style="margin-top:20px"><a class="btn" href="#" onclick="showTab(\'planner\');return false;">Plan by your dates →</a>'+
+    '<a class="btn ghost" href="#" onclick="showTab(\'calendar\');return false;">Browse the year calendar</a></div>'+
+    '<div class="hero-note">&#10003; Scoring live for <b>'+MONTH_FULL[nowMonth]+'</b> right now · independent, no sponsored rankings</div>'+
+    '</div>'+
+    '<div class="sec-head">'+ico('fish')+'Top picks for '+MONTH_FULL[nowMonth]+'</div>'+
+    '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it.</p><div class="home-grid">'+sitePrev+'</div>'+
+    '<div class="band">'+
+    '<div class="sec-head">'+ico('tank')+'Gear, at the right price</div>'+
+    '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p><div class="home-grid">'+bestGear+'</div>'+
+    '</div>'+
+    // --- Methodology, demoted to an expander — credibility on demand, not in the way ---
+    '<div class="sec-head" style="margin-top:8px">'+ico('ruler')+'How we score, in plain terms</div>'+
+    '<p class="sec-sub">One transparent score, the same for every destination, every month — so you compare like for like. '+
+      '<a href="how-we-score.html">See the full method →</a></p>'+
+    '<div class="readout" style="font-size:.84rem;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px">'+
       '<span class="badge b-Peak">Season rating</span><span>+</span>'+
       '<span class="badge b-Shoulder">Marine-life bonus</span><span>+</span>'+
       '<span class="badge b-Good">Visibility</span><span>=</span>'+
       '<span class="score" style="font-size:1rem">Monthly score</span>'+
     '</div>'+
+    '<details class="more"><summary>What each part means</summary>'+
     '<div class="home-grid" style="margin-top:14px">'+
       '<div class="feature" style="cursor:default"><div class="gear-ico"><svg viewBox="0 0 24 24">'+ICONS.calendar+'</svg></div><h4>Season rating</h4>'+
         '<p class="meta">Peak, Good, Shoulder, Low or Closed — the base of the score, from dive-operator and liveaboard calendars. '+
@@ -2210,7 +2289,7 @@ function renderHome(){
     '<p class="sec-sub" style="margin-top:14px;font-size:.82rem">Seasonal data is compiled from dive operators, liveaboard '+
       'calendars and ocean sea-temperature datasets; water temperatures are typical monthly ranges (±1°C) and marine-life timing '+
       'shifts year to year. <b style="color:var(--ink)">Data reviewed June 2026.</b> Always confirm current conditions with a local '+
-      'dive centre before travelling.</p>'+
+      'dive centre before travelling.</p></details>'+
     '<div class="trust">'+
       '<div><b>Independent by design</b><br><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
       '<div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
@@ -2459,6 +2538,7 @@ function renderGear(){
     if(!c){g.innerHTML='';return;}
     var head='<p class="meta"><a href="#" onclick="openGearArticle(\'\');return false;">← All buyer’s guides</a></p>';
     var foot='<p class="meta" style="margin-top:16px"><a href="#" onclick="openGearArticle(\'\');return false;">← Back to all buyer’s guides</a></p>';
+    var affNote='<p class="aff-note">'+ico('current',12)+' Prices are indicative — check the live price at the retailer. We may earn a commission at no extra cost to you, and it never changes a ranking.</p>';
     if(c.thickness_groups){
       // one buyer's guide split into thickness pages, chosen with a pill nav
       var groups=c.thickness_groups;
@@ -2474,6 +2554,7 @@ function renderGear(){
         '<p class="thick-lead">'+(grp.label||grp.thickness)+(grp.water?' · '+grp.water:'')+'</p>'+
         (grp.article_intro?'<p class="gentry-review" style="max-width:80ch">'+grp.article_intro+'</p>':'')+
         (tipsW?'<div class="tipbox"><b>What to look for</b><ul>'+tipsW+'</ul></div>':'')+
+        affNote+
         grp.items.map(function(it,idx){return gearEntry(it,c.category,idx);}).join('')+
         foot+'</div>';
     }else{
@@ -2483,6 +2564,7 @@ function renderGear(){
         '<h2 style="margin:6px 0 10px">'+(c.title||('Top 10 '+c.category))+'</h2>'+
         '<p class="gentry-review" style="max-width:80ch">'+(c.article_intro||'')+'</p>'+
         (tips?'<div class="tipbox"><b>What to look for</b><ul>'+tips+'</ul></div>':'')+
+        affNote+
         c.items.map(function(it,idx){return gearEntry(it,c.category,idx);}).join('')+
         foot+'</div>';
     }
