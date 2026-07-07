@@ -34,7 +34,10 @@ BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagra
                       # 'orca' the Iberian megalithic tomb, not the whale
                       r"dolmen|menhir|megalith|pendilhe|cromlech|neolith|\banta\b|\bantas\b|tomb|"
                       # captive animals in parks/aquaria — we want wild encounters
-                      r"marineland|seaworld|sea_world|aquarium|dolphinarium|captiv|_zoo_)", re.I)
+                      r"marineland|seaworld|sea_world|aquarium|dolphinarium|captiv|_zoo_|"
+                      # landed / dead catch — never a fresh-off-the-boat fisheries shot
+                      r"caught|landed|deck|fisher|bycatch|longline|hooked|gutted|carcass|"
+                      r"trophy|for_sale|fish_market|on_boat|_boat_|dead_|dries|drying|hanging)", re.I)
 
 # Upload sources that are almost always scanned book plates, not photos — skip
 # even if the file name looks innocent.
@@ -67,8 +70,9 @@ QUERIES = {
                           "Reef manta ray", "Manta ray cleaning station"],
     "hammerhead-sharks": ["Scalloped hammerhead shark underwater", "Hammerhead shark school diving",
                           "Sphyrna lewini underwater", "Hammerhead sharks Galapagos Darwin"],
-    "thresher-sharks":   ["Thresher shark Malapascua", "Pelagic thresher shark underwater",
-                          "Thresher shark diving", "Alopias pelagicus underwater"],
+    "thresher-sharks":   ["Thresher shark Malapascua underwater", "Pelagic thresher Monad Shoal",
+                          "Thresher shark reef diver", "Alopias pelagicus swimming underwater",
+                          "Pelagic thresher shark diving"],
     "mola-mola":         ["Mola mola diver", "Ocean sunfish underwater",
                           "Mola mola Bali", "Ocean sunfish Mola"],
     "sea-lions":         ["Sea lion underwater diver", "California sea lion underwater",
