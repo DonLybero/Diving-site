@@ -1,0 +1,47 @@
+name: Audit marine images (download for visual review)
+
+# Downloads every marine-life.json image to an orphan branch so the sandboxed
+# dev session (which cannot reach Wikimedia) can pull and visually verify each
+# photo actually shows the animal it claims. Throwaway branch: marine-audit.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download images
+        run: |
+          python3 - <<'EOF'
+          import json, os, urllib.request
+          os.makedirs("audit", exist_ok=True)
+          data = json.load(open("marine-life.json"))
+          for e in data["experiences"]:
+              url = e.get("image")
+              if not url:
+                  print("no image:", e["slug"]); continue
+              req = urllib.request.Request(url, headers={"User-Agent": "DiveSZNAudit/1.0 (https://github.com/DonLybero/Diving-site)"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  blob = r.read()
+              with open(f"audit/{e['slug']}.jpg", "wb") as f:
+                  f.write(blob)
+              print("ok:", e["slug"], len(blob)//1024, "KB")
+          EOF
+
+      - name: Push to orphan audit branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan marine-audit
+          git rm -rf --cached . >/dev/null
+          git add -f audit
+          git commit -m "Marine image audit snapshot (automated)"
+          git push -f origin marine-audit
