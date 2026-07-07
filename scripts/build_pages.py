@@ -457,7 +457,7 @@ def page(d):
   {f'<p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">{esc(d["description"])}</p>' if d.get("description") else ""}
   <p style="max-width:78ch;line-height:1.65;color:#33565e">{esc(dest_intro(d))}</p>
   {essays_block(d)}
-  <div class="best">&#127942; <b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
+  <div class="best"><b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
   <div class="kv">
     <div><span>Water type</span>{esc(d["water_type"])}</div>
     <div><span>Difficulty</span>{esc(d["difficulty"])}</div>
