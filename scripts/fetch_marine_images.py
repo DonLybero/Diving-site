@@ -65,6 +65,16 @@ REQUIRE = {
     "orcas":             re.compile(r"(orca|killer.?whale|orcinus)", re.I),
 }
 
+# Visually-vetted Commons files, tried before any search — for encounters where
+# search keeps landing on technically-correct but weak photos (e.g. the orca
+# result was a grainy 1970s surface scan). Exact file titles, best first.
+PINNED = {
+    "orcas": ["File:Killerwhales jumping.jpg",
+              "File:Orca porpoising.jpg",
+              "File:Type C Orcas.jpg",
+              "File:Orcinus orca surfacing near Unimak Island.jpg"],
+}
+
 # Hand-tuned Commons search queries per encounter slug (best first).
 QUERIES = {
     "whale-sharks":      ["Whale shark diving", "Rhincodon typus underwater",
@@ -137,6 +147,12 @@ def _commons_pick(titles):
 
 
 def from_commons(slug, title):
+    pinned = PINNED.get(slug)
+    if pinned:
+        got = _commons_pick(pinned)
+        if got:
+            print("    · pinned file")
+            return got
     queries = QUERIES.get(slug) or [title]
     require = REQUIRE.get(slug)
     for q in queries:
