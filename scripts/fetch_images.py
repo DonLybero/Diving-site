@@ -66,13 +66,13 @@ DEST_QUERIES = {
                    "Tiger shark Maldives", "Fuvahmulah beach"],
     "Yap": ["Manta ray Yap Micronesia", "Yap manta ray", "Reef manta ray underwater",
             "Manta alfredi cleaning station"],
-    "Kaş": ["Kaş Turkey coast", "Kaş Antalya", "Kekova underwater ruins", "Kaş harbour Turkey"],
+    "Kaş": ["Kaputaş Beach", "Kaputas beach Turkey", "Kaş Turkey aerial", "Kekova underwater ruins"],
     "Cocos Island": ["Hammerhead sharks Cocos Island", "Scalloped hammerhead school underwater",
                      "Isla del Coco Costa Rica", "Cocos Island Costa Rica aerial"],
     "Great Blue Hole": ["Great Blue Hole Belize aerial", "Great Blue Hole Belize",
                         "Lighthouse Reef Belize"],
-    "Bat Islands": ["Islas Murcielago Costa Rica", "Bull shark underwater",
-                    "Guanacaste Costa Rica coast", "Santa Rosa National Park Costa Rica"],
+    "Bat Islands": ["Bull shark Carcharhinus leucas underwater", "Bull shark underwater diver",
+                    "Bull shark Bahamas underwater", "Islas Murcielago Costa Rica beach"],
     "Coiba": ["Granito de Oro Coiba", "Coiba beach Panama", "Isla Coiba Panama",
               "Coiba National Park Panama", "Coiba island beach"],
 }
@@ -87,7 +87,7 @@ DEST_REQUIRE = {
     "Protea Banks": re.compile(r"(protea|ragged|sand.?tiger|carcharias|aliwal)", re.I),
     "Fuvahmulah": re.compile(r"(fuvahmulah|tiger.?shark|galeocerdo)", re.I),
     "Yap": re.compile(r"(yap|manta)", re.I),
-    "Kaş": re.compile(r"(kaş|kas|kekova|antalya|lycia|meis)", re.I),
+    "Kaş": re.compile(r"(kaş|kas|kaputa|kekova|antalya|lycia|meis)", re.I),
     "Cocos Island": re.compile(r"(cocos|isla_del_coco|hammerhead|sphyrna)", re.I),
     "Great Blue Hole": re.compile(r"(blue.?hole|lighthouse.?reef|belize)", re.I),
     "Bat Islands": re.compile(r"(murci|bat.?island|bull.?shark|leucas|guanacaste|santa.?rosa)", re.I),
@@ -105,6 +105,8 @@ DEST_PINNED = {
 # generic filters (e.g. an aquarium sand tiger with no 'aquarium' in the name).
 DEST_BLOCK = {
     "Protea Banks": re.compile(r"27287498303", re.I),
+    "Kaş": re.compile(r"comertel", re.I),          # timestamped 2005 harbour snapshot
+    "Bat Islands": re.compile(r"66636561", re.I),  # sunset-through-twigs panoramio
     "Coiba": re.compile(r"(coiba_banner|police|pickaback|prisoner|penal|_195\d|_196\d)", re.I),
     "Fuvahmulah": re.compile(r"kedeyre", re.I),
 }
