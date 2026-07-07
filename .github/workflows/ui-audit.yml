@@ -50,6 +50,11 @@ jobs:
           const views = [
             ['home', null],
             ['planner', async p=>{await p.click('#tab-planner'); await p.waitForTimeout(900);}],
+            ['browse', async p=>{await p.click('#tab-planner'); await p.waitForTimeout(900);
+              await p.evaluate(()=>{var r=document.querySelectorAll('#browseDir .bregion');
+                if(r[0])r[0].classList.add('open'); if(r[1])r[1].classList.add('open');});
+              await p.evaluate(()=>document.getElementById('browseDir').scrollIntoView());}],
+            ['trip', async p=>{await p.click('#tab-trip'); await p.waitForTimeout(600);}],
             ['profile', async p=>{await p.click('#tab-planner'); await p.waitForTimeout(900);
               await p.click('#planGrid .card.photo-card'); await p.waitForTimeout(900);}],
             ['gear-article', async p=>{await p.click('#tab-gear'); await p.waitForTimeout(500);
