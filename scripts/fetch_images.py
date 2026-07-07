@@ -138,14 +138,14 @@ DEST_BLOCK = {
     "Bat Islands": re.compile(r"66636561", re.I),  # sunset-through-twigs panoramio
     "Coiba": re.compile(r"(coiba_banner|police|pickaback|prisoner|penal|_195\d|_196\d)", re.I),
     "Fuvahmulah": re.compile(r"kedeyre", re.I),
-    "Cancún & Playa del Carmen": re.compile(r"(residencial|deir|mar_musa|monast|f\u00f3sil|fosil|cancun,_mexico)", re.I),
-    "Koh Tao": re.compile(r"(arrivals|excellent_visibility)", re.I),
-    "Phuket": re.compile(r"(surin|similan|phuket.?sea|night_fishing|fishing|24848021407)", re.I),
-    "Bali": re.compile(r"(22093248545|magnificent_sea_anemone|filefish)", re.I),
+    "Cancún & Playa del Carmen": re.compile(r"(residencial|deir|mar[_ ]musa|monast|f\u00f3sil|fosil|cancun,[_ ]mexico)", re.I),
+    "Koh Tao": re.compile(r"(arrivals|excellent[_ ]visibility)", re.I),
+    "Phuket": re.compile(r"(surin|similan|phuket.?sea|night[_ ]fishing|fishing|24848021407)", re.I),
+    "Bali": re.compile(r"(22093248545|magnificent[_ ]sea[_ ]anemone|filefish|anemone)", re.I),
     "Tenerife": re.compile(r"(babosa|felimare|nudibranch)", re.I),
     "Zanzibar": re.compile(r"(almeja|tridacna)", re.I),
-    "Mallorca": re.compile(r"(7838116390|brounderwater)", re.I),
-    "Muscat & Daymaniyat Islands": re.compile(r"(moral_eel|207977467)", re.I),
+    "Mallorca": re.compile(r"(7838116390|bro[_ ]?underwater)", re.I),
+    "Muscat & Daymaniyat Islands": re.compile(r"(moral[_ ]eel|207977467)", re.I),
 }
 
 
