@@ -138,6 +138,10 @@
   .card{background:linear-gradient(165deg,#ffffff,#f3f9f9);border:1px solid var(--line);
        border-radius:var(--r);padding:20px;position:relative;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
   .card:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:var(--shadow-glow)}
+  .clickable{cursor:pointer}
+  .gentry.clickable{border-radius:var(--r);transition:background .18s ease}
+  .gentry.clickable:hover{background:#f3f9f9}
+  .gentry.clickable:hover h3{color:var(--accent)}
   .rank{position:absolute;top:-12px;left:-12px;width:38px;height:38px;border-radius:14px;font-family:var(--mono);z-index:3;
        background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;font-weight:700;font-size:.95rem;
        display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -6px rgba(47,224,214,.7)}
@@ -889,10 +893,18 @@ function siteList(name){
     }).join('')+'</ul></details>';
 }
 
+/* Make a whole result card clickable. Clicks that land on an interactive
+   child (the dive-site expander, a link, a button, a form control) are left
+   alone so those keep their own behaviour; anything else opens the profile. */
+function cardOpen(ev,name){
+  if(ev.target.closest('a,button,summary,details,input,label,select,textarea')) return;
+  openProfile(name);
+}
+
 /* One unified result card: ranked planner entry + the dive-site details
    (difficulty pips, access, nearest chamber) that used to live on the Dive Sites tab. */
 function plannerCard(r,monthLabel){
-  return '<div class="card photo-card"><div class="rank">'+r.rank+'</div>'+
+  return '<div class="card photo-card clickable" onclick="cardOpen(event,\''+esc(r.name)+'\')"><div class="rank">'+r.rank+'</div>'+
     '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'"></div>'+
     '<div class="card-body"><h3>'+r.name+'</h3><div class="meta">'+r.country+' · '+r.region+'</div>'+
     '<div class="row">'+badge(r.rating)+'<span class="chip">'+monthLabel+'</span>'+
@@ -973,7 +985,7 @@ function renderSearch(){
   if(!res.length){sr.innerHTML='<div class="empty">No matches.</div>';return;}
   sr.innerHTML=res.slice(0,12).map(function(d){
     var s=DivingCalendar.destinationSeasonSummary(d);
-    return '<div class="card photo-card"><div class="cover" data-name="'+encodeURIComponent(d.name)+'" data-country="'+encodeURIComponent(d.country)+'"></div>'+
+    return '<div class="card photo-card clickable" onclick="cardOpen(event,\''+esc(d.name)+'\')"><div class="cover" data-name="'+encodeURIComponent(d.name)+'" data-country="'+encodeURIComponent(d.country)+'"></div>'+
       '<div class="card-body"><h3>'+d.name+'</h3><div class="meta">'+d.country+' · '+d.region+'</div>'+
       '<div class="row"><span class="chip">'+d.difficulty+'</span><span class="chip">'+d.water_type+'</span>'+curChip(d.current_strength)+'</div>'+
       '<div class="hl">'+d.highlights+'</div>'+
@@ -1559,7 +1571,7 @@ function destArticleEntry(r,month){
   var mm=d.monthly?d.monthly[month]:{};
   var photo='<div class="dest-photo"><span class="gear-rank">#'+r.rank+'</span>'+
     (d.image?'<img src="'+d.image+'" alt="'+r.name.replace(/"/g,'&quot;')+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>';
-  return '<div class="gentry">'+photo+
+  return '<div class="gentry clickable" onclick="cardOpen(event,\''+esc(r.name)+'\')">'+photo+
     '<div><h3>'+r.rank+'. '+r.name+'</h3>'+
     '<div class="meta" style="margin:0 0 8px">'+r.country+' · '+r.region+'</div>'+
     '<div class="row" style="margin-bottom:8px">'+badge(r.rating)+

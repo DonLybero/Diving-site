@@ -10030,14 +10030,7 @@
         "lat": -30.86,
         "lng": 30.53
       },
-      "best_months": [
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Nov",
-        "Dec"
-      ],
+      "best_months": "Jun-Sep & Nov-Dec",
       "wetsuit": "5mm full year-round; 7mm or hooded 5mm in winter for cold thermoclines, 3mm possible on warmest summer days",
       "current_strength": "Strong",
       "current_note": "Offshore fossil-dune reef 7-8 km out swept by the Agulhas Current; drift dives are the norm and current can run hard north or south, sometimes shifting mid-dive.",
@@ -10367,13 +10360,7 @@
         "lat": 34.8917,
         "lng": 33.6517
       },
-      "best_months": [
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct"
-      ],
+      "best_months": "Jun-Oct",
       "wetsuit": "5mm; 3mm high summer",
       "current_strength": "mild",
       "current_note": "Sheltered Larnaca Bay is usually calm; mild drift and surge can build on exposed reefs and inside the Zenobia when wind picks up, and deeper penetration carries silt-out and depth hazards.",
@@ -10538,13 +10525,7 @@
         "lat": 36.2018,
         "lng": 29.6412
       },
-      "best_months": [
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct"
-      ],
+      "best_months": "Jun-Oct",
       "wetsuit": "5mm; 3mm high summer",
       "current_strength": "mild to moderate",
       "current_note": "Most sheltered reefs are calm, but exposed sites like the Canyon can run a brisk southerly current across the shallow gorge before the wall.",
@@ -10716,13 +10697,7 @@
         "lat": 38.7075,
         "lng": 13.1936
       },
-      "best_months": [
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct"
-      ],
+      "best_months": "Jun-Oct",
       "wetsuit": "5mm; 3mm high summer",
       "current_strength": "mild to moderate",
       "current_note": "Sheltered bays and pinnacles are usually calm, but exposed offshore seamounts like Secca della Colombara and the pinnacle at Scoglio del Medico can pick up moderate current when wind and swell build.",
@@ -10894,14 +10869,7 @@
         "lat": 43.06,
         "lng": 16.18
       },
-      "best_months": [
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October"
-      ],
+      "best_months": "May-Oct",
       "wetsuit": "5mm; 3mm high summer",
       "current_strength": "mild",
       "current_note": "Sheltered reefs and inshore wrecks are usually slack; deeper offshore wrecks and exposed points can run when wind and tide align, so plan drops around slack water.",
@@ -10914,12 +10882,7 @@
         "common octopus",
         "moray eel"
       ],
-      "highlights": [
-        "The B-17 Flying Fortress, one of the best-preserved WWII aircraft wrecks in the world, resting intact on sand at 65-72m for technical divers",
-        "Historic steamer wrecks including the shallow Teti and the ~105m Greek cargo ship Vassilios T., still laden with coal",
-        "The Blue Cave of Biševo, where midday sun floods the chamber with electric blue light",
-        "Reefs, drop-off walls and swim-through caves rich in Adriatic life around Vis and its outer islets"
-      ],
+      "highlights": "The B-17 Flying Fortress, one of the best-preserved WWII aircraft wrecks in the world, resting intact on sand at 65-72m for technical divers. Historic steamer wrecks including the shallow Teti and the ~105m Greek cargo ship Vassilios T., still laden with coal. The Blue Cave of Biševo, where midday sun floods the chamber with electric blue light. Reefs, drop-off walls and swim-through caves rich in Adriatic life around Vis and its outer islets.",
       "monthly_temp_c": {
         "Jan": 14,
         "Feb": 13,
@@ -11078,13 +11041,7 @@
         "lat": 35.51,
         "lng": 24.02
       },
-      "best_months": [
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct"
-      ],
+      "best_months": "Jun-Oct",
       "wetsuit": "5mm; 3mm high summer",
       "current_strength": "mild",
       "current_note": "Generally sheltered water on the north coast; mild currents possible around exposed capes, islets and the cave entrances, stronger with meltemi wind.",
@@ -11256,13 +11213,7 @@
         "lat": 10.87,
         "lng": -85.93
       },
-      "best_months": [
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct"
-      ],
+      "best_months": "Jun-Oct",
       "wetsuit": "5mm full (thermoclines can plunge below 21°C even when the surface is warm)",
       "current_strength": "strong",
       "current_note": "Exposed offshore pinnacles with strong, variable currents, surge and downcurrents around the rock; the ~45km open-water crossing from Playas del Coco can be rough. Advanced certification and solid buoyancy are expected.",
@@ -11432,14 +11383,7 @@
         "lat": 7.45,
         "lng": -81.75
       },
-      "best_months": [
-        "Dec",
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May"
-      ],
+      "best_months": "Jan-May & Dec",
       "wetsuit": "5mm full wetsuit (thermoclines can drop to 16-20C; rental centres often stock only 3mm, so bring your own)",
       "current_strength": "strong",
       "current_note": "Exposed seamounts and pinnacles run strong, sometimes shifting currents that draw pelagics; negative or semi-negative entries and blue-water ascents are common.",
