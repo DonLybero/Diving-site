@@ -141,6 +141,7 @@ DEST_PINNED = {
                "File:Longtail Boat At Maya Bay, Krabi, Thailand.jpg",
                "File:Longtail boat at Maya bay.JPG"],
     # Owner-approved picks (photo review, 2026-07) — never let search replace these.
+    "Marsa Alam": ["File:Unterwasserwelt im Roten Meer, Ägypten DSCF4057WI.jpg"],
     "Cenotes of Yucatán Peninsula": ["File:Cenote Ik Kil, Yucatan, Dec 2011 - 06.jpg"],
     "Red Sea (Egypt)": ["File:Unterwasserwelt im Roten Meer, Ägypten DSCF4057WI.jpg"],
     "Bonaire": ["File:Snorkeling Bari Reef, Bonaire (12840799335).jpg"],
@@ -159,6 +160,7 @@ DEST_PINNED = {
 # Exact-file rejects per destination — visually-audited duds that pass the
 # generic filters (e.g. an aquarium sand tiger with no 'aquarium' in the name).
 DEST_BLOCK = {
+    "Dahab": re.compile(r"(rohscan|_scan|bearb)", re.I),
     "Protea Banks": re.compile(r"27287498303", re.I),
     "Kaş": re.compile(r"comertel", re.I),          # timestamped 2005 harbour snapshot
     "Bat Islands": re.compile(r"66636561", re.I),  # sunset-through-twigs panoramio
