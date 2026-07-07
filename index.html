@@ -1702,6 +1702,7 @@ function buyBox(item){
     '<span class="buy-live">indicative — check the live price at the retailer</span></div>'+
     '<div class="buy-btns">'+btns+'</div></div>';
 }
+function gearSlug(name){return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
 function gearEntry(item,cat,idx){
   var specs=item.specs?'<dl class="specs">'+Object.keys(item.specs).map(function(k){
     return '<div><dt>'+k+'</dt><dd>'+item.specs[k]+'</dd></div>';
@@ -1712,7 +1713,9 @@ function gearEntry(item,cat,idx){
   return '<div class="gentry">'+gearPhoto(item,cat)+
     '<div><h3>'+item.rank+'. '+item.name+'</h3>'+
     '<p class="gentry-review">'+(item.review||item.blurb)+'</p>'+
-    specs+buyBox(item)+cmp+'</div></div>';
+    specs+buyBox(item)+cmp+
+    '<p class="meta" style="margin-top:8px"><a href="gear/'+gearSlug(item.name)+'.html">Full page: photos, specs &amp; prices &rarr;</a></p>'+
+    '</div></div>';
 }
 
 /* ---------- gear comparison (within one category page) ---------- */
