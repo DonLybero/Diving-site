@@ -2248,9 +2248,9 @@ function openProfile(name){
       '<div style="grid-column:1/-1"><span>Currents detail</span>'+d.currents+'</div>'+
     '</div>'+
     packBox(d)+
+    stayBox(d)+
     '<div><span style="color:var(--muted);font-size:.78rem">Signature sea life</span><div class="species">'+species+'</div></div>'+
     sitesBlock+
-    stayBox(d)+
     (d.last_verified?'<p class="meta" style="margin-top:10px">✓ Data verified '.replace('✓','&#10003;')+d.last_verified+
       (d.data_confidence?' · source confidence: '+d.data_confidence:'')+'</p>':'')+
     (d.slug?'<p class="meta"><a href="destinations/'+d.slug+'.html">Permanent season-guide page for '+d.name+' →</a></p>':'');
