@@ -1260,7 +1260,10 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Belize_Blue_Hole_%28TMP%29_%2816912331906%29.jpg/960px-Belize_Blue_Hole_%28TMP%29_%2816912331906%29.jpg",
+      "image_credit": "Photo: The TerraMar Project (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Roatán",
@@ -3042,7 +3045,10 @@
           "depth": "10-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hammerhead_shark%2C_Cocos_Island%2C_Costa_Rica.jpg/960px-Hammerhead_shark%2C_Cocos_Island%2C_Costa_Rica.jpg",
+      "image_credit": "Photo: Barry Peters (CC BY 2.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Galapagos Islands",
@@ -8818,7 +8824,10 @@
           "depth": "8-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Grey_Nurse_Shark_at_Fish_Rock_Cave%2C_NSW.jpg/960px-Grey_Nurse_Shark_at_Fish_Rock_Cave%2C_NSW.jpg",
+      "image_credit": "Photo: Photographer: Richard Ling &lt;wikipedia@rling.com&gt; (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Nusa Penida",
@@ -9159,7 +9168,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "fuvahmulah",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Tiger_Shark_At_Tigerbeach_Bahamas_%28149044369%29.jpeg",
+      "image_credit": "Photo: Marion Kraschl (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Layang Layang",
@@ -9665,7 +9677,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "yap",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Manta_ray_from_Yap.jpg",
+      "image_credit": "Photo: Original uploader was Bartek.cieslak at pl.wikipedia (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Cenderawasih Bay",
@@ -10164,7 +10179,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "protea-banks",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ragged-tooth_shark_during_winter_at_Aliwal_Shoal.jpg/960px-Ragged-tooth_shark_during_winter_at_Aliwal_Shoal.jpg",
+      "image_credit": "Photo: Willemferguson2 (CC BY-SA 4.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Tofo",
@@ -10663,7 +10681,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "ka",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Akdeniz-_the_mediterranean-ka%C5%9F_-_panoramio_-_HALUK_COMERTEL.jpg/960px-Akdeniz-_the_mediterranean-ka%C5%9F_-_panoramio_-_HALUK_COMERTEL.jpg",
+      "image_credit": "Photo: HALUK COMERTEL (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Ustica",
@@ -11346,7 +11367,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "bat-islands",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Isla_Murci%C3%A9lago_Costa_Rica_%2866636561%29.jpeg/960px-Isla_Murci%C3%A9lago_Costa_Rica_%2866636561%29.jpeg",
+      "image_credit": "Photo: Oscar Ortiz (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Coiba",
@@ -11515,7 +11539,10 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "coiba",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/A_police_officer_goes_ashore_pickaback%2C_Coiba_Island%2C_1956_%288231825221%29.jpg/960px-A_police_officer_goes_ashore_pickaback%2C_Coiba_Island%2C_1956_%288231825221%29.jpg",
+      "image_credit": "Photo: Smithsonian Institution from United States (No restrictions) via Wikimedia Commons",
+      "image_source": "wikimedia"
     }
   ]
 }
