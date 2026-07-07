@@ -16,32 +16,12 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 5
 
 CANDIDATE_QUERIES = {
-    "great-barrier-reef": ["Great Barrier Reef aerial", "Heart Reef Australia", "Great Barrier Reef coral underwater",
-                           "Green turtle Great Barrier Reef", "clownfish anemone Great Barrier Reef"],
-    "seychelles": ["Anse Source d'Argent", "Seychelles granite boulders beach", "La Digue Seychelles",
-                   "Seychelles island aerial", "hawksbill turtle Seychelles"],
-    "cenderawasih-bay": ["Whale shark Cenderawasih", "Cenderawasih Bay Indonesia", "whale shark bagan fishermen",
-                         "whale shark feeding underwater", "Teluk Cenderawasih"],
-    "whitsunday-islands": ["Whitehaven Beach", "Hill Inlet Whitsundays aerial", "Whitsunday Islands aerial",
-                           "Whitehaven Beach swirls", "Whitsunday sailing sea"],
-    "ustica": ["Ustica underwater", "Ustica island Sicily coast", "Ustica grotta", "Ustica diving grouper",
-               "Ustica mare"],
-    "silfra-fissure": ["Silfra diver", "Silfra fissure underwater", "Silfra Thingvellir diving",
-                       "Silfra crack Iceland", "diver Silfra clear water"],
-    "chania-crete": ["Balos lagoon Crete", "Chania Venetian harbour", "Elafonisi beach Crete",
-                     "Seitan Limania beach", "Crete underwater sea"],
-    "red-sea-egypt": ["Red Sea coral reef Egypt underwater", "anthias coral Red Sea", "SS Thistlegorm wreck",
-                      "Ras Mohammed reef underwater", "Red Sea reef fish Egypt"],
-    "bonaire": ["Bonaire reef underwater", "Salt Pier Bonaire", "Bonaire shore diving", "Bonaire coral reef",
-                "Klein Bonaire beach"],
-    "dubai-fujairah": ["Snoopy Island Fujairah", "Fujairah coast", "Khor Fakkan beach", "Dibba Rock",
-                       "Martini Rock underwater"],
-    "cenotes-of-yucatan-peninsula": ["cenote light beams diver", "Gran Cenote Tulum", "Cenote Dos Ojos",
-                                     "cenote cave diving underwater", "Cenote Ik Kil"],
-    "lord-howe-island": ["Lord Howe Island aerial", "Balls Pyramid", "Lord Howe Island lagoon",
-                         "Neds Beach Lord Howe", "Mount Gower Lord Howe"],
-    "vancouver-island": ["giant Pacific octopus underwater", "kelp forest British Columbia underwater",
-                         "wolf eel underwater", "Vancouver Island diving", "God's Pocket Browning Pass"],
+    "red-sea-egypt": ["Thistlegorm underwater", "Ras Muhammad underwater", "Anthias Red Sea reef",
+                      "Elphinstone Reef", "Red Sea Egypt diver reef", "lionfish Red Sea Egypt",
+                      "Napoleon wrasse Red Sea"],
+    "cenderawasih-bay": ["Whale shark Papua Indonesia", "whale shark fishing platform", "Kwatisore",
+                         "whale shark aggregation underwater", "West Papua bay aerial",
+                         "Teluk Cenderawasih national park"],
 }
 
 
