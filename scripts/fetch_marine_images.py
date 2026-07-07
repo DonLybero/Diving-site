@@ -44,6 +44,21 @@ BAD_ARTIST = re.compile(r"(internet archive book images|biodiversity heritage)",
 GOOD_HINT = re.compile(r"(underwater|diver|diving|snorkel|school|shoal|baitball|"
                        r"bait_ball|swimming|reef|ocean|sea|cage)", re.I)
 
+# A candidate file title MUST name the species — stops the search from falling
+# through to a loosely-related "whale"/"ray"/"shark" photo when good matches are
+# scarce (e.g. a right whale for orcas, or a stingray for mantas).
+REQUIRE = {
+    "whale-sharks":      re.compile(r"(whale.?shark|rhincodon)", re.I),
+    "manta-rays":        re.compile(r"(manta|mobula|devil.?ray)", re.I),
+    "hammerhead-sharks": re.compile(r"(hammerhead|sphyrna)", re.I),
+    "thresher-sharks":   re.compile(r"(thresher|alopias)", re.I),
+    "mola-mola":         re.compile(r"(mola|sunfish)", re.I),
+    "sea-lions":         re.compile(r"(sea.?lion|zalophus|otari)", re.I),
+    "sardine-run":       re.compile(r"(sardine|bait.?ball)", re.I),
+    "great-white":       re.compile(r"(great.?white|white.?shark|carcharodon)", re.I),
+    "orcas":             re.compile(r"(orca|killer.?whale|orcinus)", re.I),
+}
+
 # Hand-tuned Commons search queries per encounter slug (best first).
 QUERIES = {
     "whale-sharks":      ["Whale shark diving", "Rhincodon typus underwater",
@@ -115,12 +130,15 @@ def _commons_pick(titles):
 
 def from_commons(slug, title):
     queries = QUERIES.get(slug) or [title]
+    require = REQUIRE.get(slug)
     for q in queries:
         url = ("https://commons.wikimedia.org/w/api.php?action=query&format=json"
                "&list=search&srnamespace=6&srlimit=25&srsearch=" + urllib.parse.quote(q))
         j = _get(url)
         hits = (((j or {}).get("query") or {}).get("search")) or []
         titles = [h["title"] for h in hits if not BAD_HINT.search(h.get("title", ""))]
+        if require:
+            titles = [t for t in titles if require.search(t)]
         titles.sort(key=lambda t: 0 if GOOD_HINT.search(t) else 1)
         got = _commons_pick(titles)
         if got:
