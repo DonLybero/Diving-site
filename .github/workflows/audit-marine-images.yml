@@ -22,18 +22,29 @@ jobs:
         run: |
           python3 - <<'EOF'
           import json, os, urllib.request
+          UA = {"User-Agent": "DiveSZNAudit/1.0 (https://github.com/DonLybero/Diving-site)"}
+          def grab(url, path):
+              req = urllib.request.Request(url, headers=UA)
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  blob = r.read()
+              with open(path, "wb") as f:
+                  f.write(blob)
+              return len(blob)
           os.makedirs("audit", exist_ok=True)
-          data = json.load(open("marine-life.json"))
-          for e in data["experiences"]:
+          for e in json.load(open("marine-life.json"))["experiences"]:
               url = e.get("image")
               if not url:
                   print("no image:", e["slug"]); continue
-              req = urllib.request.Request(url, headers={"User-Agent": "DiveSZNAudit/1.0 (https://github.com/DonLybero/Diving-site)"})
-              with urllib.request.urlopen(req, timeout=30) as r:
-                  blob = r.read()
-              with open(f"audit/{e['slug']}.jpg", "wb") as f:
-                  f.write(blob)
-              print("ok:", e["slug"], len(blob)//1024, "KB")
+              print("ok:", e["slug"], grab(url, f"audit/{e['slug']}.jpg")//1024, "KB")
+          os.makedirs("audit/dest", exist_ok=True)
+          for d in json.load(open("diving-destinations.json"))["destinations"]:
+              url = d.get("image")
+              if not url:
+                  print("no image:", d["slug"]); continue
+              try:
+                  print("ok:", d["slug"], grab(url, f"audit/dest/{d['slug']}.jpg")//1024, "KB")
+              except Exception as ex:
+                  print("FAIL:", d["slug"], ex)
           EOF
 
       - name: Push to orphan audit branch

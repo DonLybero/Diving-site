@@ -33,7 +33,11 @@ BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagra
                       r"bicycle|bus_|railway|station|street|road_|casent|herbarium|specimen|"
                       r"stamp|banknote|coin_|graffiti|hotel|restaurant|_table|thumbnail|"
                       r"legends_of|illustration|drawing|painting|poster|book_|experimental|"
-                      r"operations|bognor)", re.I)
+                      r"operations|bognor|"
+                      # scientific journal figures / plates (e.g. 'Figure 46a', DOI-coded files)
+                      r"figure|_fig|plate_|zootaxa|zookeys|pensoft|10\.3897|\.e\d{4,}|holotype|paratype|"
+                      # dead catch / captivity — destination heroes must be alive and wild
+                      r"caught|landed|_deck|fishery|bycatch|longline|fish_market|aquarium|marineland)", re.I)
 
 # Titles that clearly ARE what we want; used to rank search hits.
 GOOD_HINT = re.compile(r"(underwater|reef|coral|diving|diver|snorkel|wreck|lagoon|atoll|"
@@ -52,6 +56,12 @@ DEST_QUERIES = {
     "Guadalcanal & Western Province": ["Marovo Lagoon", "Gizo Solomon Islands", "Solomon Islands lagoon aerial", "Honiara coast"],
     "Malpelo Island": ["Isla de Malpelo", "Malpelo Island Colombia", "Malpelo scalloped hammerhead",
                        "Malpelo island aerial", "Malpelo Fauna and Flora Sanctuary"],
+    "Ningaloo Reef": ["Whale shark Ningaloo", "Ningaloo Reef underwater", "Ningaloo coral",
+                      "Whale shark Exmouth Western Australia", "Ningaloo Reef aerial"],
+    "Protea Banks": ["Ragged-tooth shark South Africa", "Sand tiger shark underwater",
+                     "Carcharias taurus underwater", "Scalloped hammerhead school underwater"],
+    "Fuvahmulah": ["Tiger shark Fuvahmulah", "Tiger shark underwater diver", "Fuvahmulah Maldives",
+                   "Galeocerdo cuvier underwater", "Tiger shark Maldives"],
 }
 
 # For tricky names, a candidate file title MUST match this pattern (keeps
@@ -60,6 +70,9 @@ DEST_REQUIRE = {
     "Guadalcanal & Western Province": re.compile(r"(solomon|marovo|gizo|munda|roviana|guadalcanal|honiara|tulagi)", re.I),
     "South West Rocks": re.compile(r"(south.?west.?rocks|trial.?bay|smoky.?cape|arakoon|grey.?nurse)", re.I),
     "Malpelo Island": re.compile(r"malpelo", re.I),
+    "Ningaloo Reef": re.compile(r"(ningaloo|whale.?shark|exmouth|coral.?bay)", re.I),
+    "Protea Banks": re.compile(r"(protea|ragged.?tooth|sand.?tiger|carcharias|hammerhead|sphyrna)", re.I),
+    "Fuvahmulah": re.compile(r"(fuvahmulah|tiger.?shark|galeocerdo)", re.I),
 }
 
 

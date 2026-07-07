@@ -4435,9 +4435,6 @@
       },
       "current_strength": "Low",
       "slug": "ningaloo-reef",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/00_0856_Cape_Range_National_Park_in_Westaustralien_-_Mangrove_Bay.jpg/960px-00_0856_Cape_Range_National_Park_in_Westaustralien_-_Mangrove_Bay.jpg",
-      "image_credit": "Photo: W. Bulach (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia",
       "current_note": "Lagoon gentle; tidal passes need slack-tide planning",
       "data_confidence": "high",
       "last_verified": "2026-07",
@@ -9168,10 +9165,7 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "fuvahmulah",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Pleurochorium_annandalei_%2810.3897-BDJ.12.e120128%29_Figure_46a.png",
-      "image_credit": "Photo: Amjad et al. (2024) (CC BY 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Layang Layang",
@@ -10179,10 +10173,7 @@
       "data_confidence": "researched",
       "last_verified": "2026-07",
       "slug": "protea-banks",
-      "dive_sites_researched": true,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Porcostoma_dentata_15609017.jpg/960px-Porcostoma_dentata_15609017.jpg",
-      "image_credit": "Photo: Georgina Jones (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "dive_sites_researched": true
     },
     {
       "name": "Tofo",
