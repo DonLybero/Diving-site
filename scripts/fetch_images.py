@@ -73,8 +73,8 @@ DEST_QUERIES = {
                         "Lighthouse Reef Belize"],
     "Bat Islands": ["Islas Murcielago Costa Rica", "Bull shark underwater",
                     "Guanacaste Costa Rica coast", "Santa Rosa National Park Costa Rica"],
-    "Coiba": ["Coiba island Panama", "Coiba National Park", "Parque Nacional Coiba",
-              "Coiba Panama aerial"],
+    "Coiba": ["Granito de Oro Coiba", "Coiba beach Panama", "Isla Coiba Panama",
+              "Coiba National Park Panama", "Coiba island beach"],
 }
 
 # For tricky names, a candidate file title MUST match this pattern (keeps
@@ -99,7 +99,7 @@ DEST_REQUIRE = {
 # generic filters (e.g. an aquarium sand tiger with no 'aquarium' in the name).
 DEST_BLOCK = {
     "Protea Banks": re.compile(r"27287498303", re.I),
-    "Coiba": re.compile(r"coiba_banner", re.I),
+    "Coiba": re.compile(r"(coiba_banner|police|pickaback|prisoner|penal|_195\d|_196\d)", re.I),
     "Fuvahmulah": re.compile(r"kedeyre", re.I),
 }
 
