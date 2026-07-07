@@ -14108,7 +14108,10 @@
       "slug": "dahab",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Blue_Hole_2005.JPG/960px-Blue_Hole_2005.JPG",
+      "image_credit": "Photo: No machine-readable author provided. Nowic assumed (based on copyright claims). (Public domain) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Hurghada & El Gouna",
