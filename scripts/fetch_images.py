@@ -95,6 +95,12 @@ DEST_REQUIRE = {
 }
 
 
+# Visually-vetted exact Commons files, tried before any search (mirrors the
+# marine fetcher's PINNED map) — for destinations where search keeps missing.
+DEST_PINNED = {
+    "Coiba": ["File:Kristallklares Wasser Coiba Panama (152311725).jpeg"],
+}
+
 # Exact-file rejects per destination — visually-audited duds that pass the
 # generic filters (e.g. an aquarium sand tiger with no 'aquarium' in the name).
 DEST_BLOCK = {
@@ -173,6 +179,12 @@ def _commons_pick(titles):
 
 def from_wikimedia_search(name, country):
     """Keyword search on Commons for marine/scenery photos of the destination."""
+    pinned = DEST_PINNED.get(name)
+    if pinned:
+        got = _commons_pick(pinned)
+        if got:
+            print("    · pinned file")
+            return got
     base = re.sub(r"\s*\(.*?\)", "", name).strip()          # "Red Sea (Egypt)" -> "Red Sea"
     require = DEST_REQUIRE.get(name)
     queries = DEST_QUERIES.get(name) or [
