@@ -12276,7 +12276,10 @@
       "slug": "cancun-playa-del-carmen",
       "data_confidence": "researched",
       "last_verified": "2026-07",
-      "dive_sites_researched": true
+      "dive_sites_researched": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Cancun%2C_Mexico.JPG/960px-Cancun%2C_Mexico.JPG",
+      "image_credit": "Photo: Karora19 (CC BY-SA 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "name": "Dubai & Fujairah",
