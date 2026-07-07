@@ -124,6 +124,8 @@ DEST_REQUIRE = {
 # marine fetcher's PINNED map) — for destinations where search keeps missing.
 DEST_PINNED = {
     "Coiba": ["File:Kristallklares Wasser Coiba Panama (152311725).jpeg"],
+    "Cancún & Playa del Carmen": ["File:Cancun aerial photo by safa.jpg",
+                                  "File:Cancun, Mexico.JPG"],
 }
 
 # Exact-file rejects per destination — visually-audited duds that pass the
@@ -134,7 +136,7 @@ DEST_BLOCK = {
     "Bat Islands": re.compile(r"66636561", re.I),  # sunset-through-twigs panoramio
     "Coiba": re.compile(r"(coiba_banner|police|pickaback|prisoner|penal|_195\d|_196\d)", re.I),
     "Fuvahmulah": re.compile(r"kedeyre", re.I),
-    "Cancún & Playa del Carmen": re.compile(r"(residencial|deir|mar_musa|monast)", re.I),
+    "Cancún & Playa del Carmen": re.compile(r"(residencial|deir|mar_musa|monast|f\u00f3sil|fosil)", re.I),
     "Koh Tao": re.compile(r"arrivals", re.I),
     "Phuket": re.compile(r"(surin|similan|phuket.?sea|night_fishing|fishing)", re.I),
     "Bali": re.compile(r"22093248545", re.I),
