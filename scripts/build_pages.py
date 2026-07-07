@@ -428,7 +428,7 @@ def index_page(dests):
         peak = ", ".join(m for m in MONTHS if d["monthly"][m]["rating"] == "Peak") or "—"
         items += (f'<li><a href="{d["slug"]}.html"><b>{esc(d["name"])}</b>'
                   f'<small>{esc(d["country"])} · peak: {esc(peak)}</small></a></li>')
-    desc = "Season guides for 50 world scuba diving destinations: best months, water temperature, visibility, currents and marine life."
+    desc = "Season guides for the world's scuba diving destinations: best months, water temperature, visibility, currents and marine life."
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -578,8 +578,9 @@ def gear_index_page(gear, prefix="../"):
     inner = (f'<p class="greview" style="max-width:80ch">{esc(gear.get("intro") or "")}</p>'
              f'<h2>Buyer&#8217;s guides</h2><ul class="artlist">{rows}</ul>'
              f'<a class="cta" href="../index.html#gear">Open the interactive gear guide &rarr;</a>')
-    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "DiveSZN gear buyer's guides",
-          "description": desc, "url": url}
+    ld = graph_ld({"@type": "CollectionPage", "name": "DiveSZN gear buyer's guides",
+                   "description": desc, "url": url},
+                  crumbs([("Home", BASE), ("Gear guides", url)]))
     return content_shell("Scuba Diving Gear Buyer’s Guides 2026 | DiveSZN", desc, url, prefix,
                          "Independent picks, real specs, and where to buy — masks to wetsuits.", inner, ld)
 
@@ -592,12 +593,16 @@ destinations month by month so you can match your travel dates to the places whe
 the wildlife line up — and it pairs that with independent scuba-gear buyer&#8217;s guides so you arrive with
 the right kit.</p>
 <h2>How the data is made</h2>
-<p class="greview" style="max-width:78ch">The seasonal calendar covers 50 destinations across twelve months —
+<p class="greview" style="max-width:78ch">The seasonal calendar covers every destination on the site across all twelve months —
 water temperature, visibility, currents, marine-life timing and a season rating for each. It is compiled and
 cross-checked against dive-operator and liveaboard calendars, marine-park authorities and ocean
 sea-temperature sources, then hand-verified. Water temperatures are typical monthly ranges (±1&deg;C) and
 marine-life timing shifts year to year with plankton and lunar cycles, so we always say the same thing: confirm
 current conditions with a local dive centre before you travel.</p>
+<h2>Beyond the planner</h2>
+<p class="greview" style="max-width:78ch">The same seasonal data powers our <a href="marine-life/index.html">marine-life
+guides</a> — where and when to dive whale sharks, mantas, hammerheads and more — and the
+<a href="months/index.html">month-by-month guides</a> that rank where diving is at its best for any travel date.</p>
 <h2>Our gear guides</h2>
 <p class="greview" style="max-width:78ch">Gear picks are researched independently and chosen on the merits.
 Prices shown are indicative as of our research date — the retailer always shows the live price. DiveSZN is
@@ -736,8 +741,9 @@ def marine_index_page(prefix="../"):
              f'where and when to dive them, pulled live from DiveSZN&#8217;s seasonal data.</p>'
              f'<h2>Encounters</h2><ul class="artlist">{rows}</ul>'
              f'<a class="cta" href="../index.html">Open the dive planner &rarr;</a>')
-    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Marine life encounters",
-          "description": desc, "url": url}
+    ld = graph_ld({"@type": "CollectionPage", "name": "Marine life encounters",
+                   "description": desc, "url": url},
+                  crumbs([("Home", BASE), ("Marine life", url)]))
     return content_shell("Marine Life — Dive With the Ocean's Icons | DiveSZN", desc, url, prefix,
                          "Whale sharks to orcas — what they are, and where and when to dive them.", inner, ld)
 
