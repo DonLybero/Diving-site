@@ -95,7 +95,13 @@ th{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.
 .num{font-family:var(--mono);color:#0b6b74;white-space:nowrap}
 .cta{display:inline-block;background:var(--coral);color:#2a0f06;border-radius:8px;padding:10px 16px;font-weight:700;text-decoration:none;margin:16px 0}
 .meta{color:var(--muted);font-size:.8rem}
-footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;line-height:1.7;border-top:1px solid var(--line);margin-top:30px}
+footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 28px;line-height:1.7;border-top:1px solid var(--line);margin-top:56px}
+.foot-mark{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,9vw,5.2rem);line-height:1;letter-spacing:-.03em;color:var(--ink);margin:0 0 4px}
+.foot-mark b{color:var(--accent)}
+.foot-tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin:22px 0 6px}
+.foot-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.foot-nav a:hover{color:var(--accent)}
 .dirlist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
 .dirlist li{background:var(--panel);border:1px solid var(--line);border-radius:10px}
 .dirlist a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink)}
@@ -131,6 +137,8 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
 .gphoto img{max-width:92%;max-height:92%;object-fit:contain}
 .gentry h3{margin:0 0 8px;font-size:1.3rem}
 .greview{color:#33565e;line-height:1.7;margin:0 0 10px}
+.lede{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.45;color:var(--ink);max-width:34ch;margin:14px 0;letter-spacing:-.01em}
+.lede::after{content:"";display:block;width:64px;height:3px;border-radius:2px;margin-top:16px;background:linear-gradient(90deg,var(--accent),transparent)}
 .gspecs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:0 0 12px}
 .gspecs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
 .gspecs dt{color:var(--muted);font-size:.6rem;text-transform:uppercase;letter-spacing:.5px;margin:0}
@@ -160,14 +168,22 @@ def topbar(prefix="../"):
             '<span class="name">Dive<b>SZN</b></span></a></div>')
 
 def footer_html(prefix="../"):
-    return ('<footer><b style="font-family:var(--serif);color:var(--ink)">DiveSZN</b> · seasonal dive planning, verified against '
-            'dive operators, park authorities and liveaboard calendars.<br>Water temperatures are typical monthly ranges (±1°C); '
-            'marine-life timing shifts year to year — always confirm with a local dive centre.<br>'
-            f'<a href="{prefix}index.html">Destinations</a> · <a href="{prefix}destinations/index.html">Season guides</a> · '
-            f'<a href="{prefix}months/index.html">Best by month</a> · '
-            f'<a href="{prefix}marine-life/index.html">Marine life</a> · <a href="{prefix}gear/index.html">Gear guides</a> · '
-            f'<a href="{prefix}how-we-score.html">How we score</a> · <a href="{prefix}about.html">About</a> · '
-            f'<a href="{prefix}privacy.html">Privacy</a></footer>')
+    return ('<footer>'
+            '<div class="foot-mark">Dive<b>SZN</b></div>'
+            '<div class="foot-tag">Know the season before you book</div>'
+            '<div class="foot-nav">'
+            f'<a href="{prefix}index.html">Destinations</a>'
+            f'<a href="{prefix}destinations/index.html">Season guides</a>'
+            f'<a href="{prefix}months/index.html">Best by month</a>'
+            f'<a href="{prefix}marine-life/index.html">Marine life</a>'
+            f'<a href="{prefix}gear/index.html">Gear guides</a>'
+            f'<a href="{prefix}how-we-score.html">How we score</a>'
+            f'<a href="{prefix}about.html">About</a>'
+            f'<a href="{prefix}privacy.html">Privacy</a></div>'
+            '<div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. '
+            'Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — '
+            'always confirm with a local dive centre.</div>'
+            '</footer>')
 
 # Pluralised wording for site-type breakdowns (mirrors destIntro in index.html)
 SITE_PLURALS = {"Muck": "muck dives", "Shore": "shore dives", "Drift": "drift dives",
@@ -834,8 +850,12 @@ def month_page(month, rankings, dests_by_name):
              f'<a href="{next_m.lower()}.html">{next_m} &rarr;</a></p>')
     top3 = ", ".join(r["name"] for r in rows[:3])
     desc = f"The best scuba diving in {full}: {top3} and more — season ratings, water temperature, visibility and the marine life in season."[:160]
+    intro = MONTH_INTROS.get(month) or ""
+    cut = intro.find(". ")
+    lede, rest = (intro[:cut + 1], intro[cut + 2:]) if cut > -1 else (intro, "")
     inner = (pager
-             + f'<p class="greview" style="max-width:80ch">{esc(MONTH_INTROS.get(month) or "")}</p>'
+             + (f'<p class="lede">{esc(lede)}</p>' if lede else "")
+             + (f'<p class="greview" style="max-width:80ch">{esc(rest)}</p>' if rest else "")
              + sections + pager
              + f'<a class="cta" href="../index.html">Plan your {full} trip in the dive planner &rarr;</a>')
     ld = graph_ld({"@type": "CollectionPage", "name": f"Best scuba diving in {full}",

@@ -37,7 +37,13 @@ th{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.
 .num{font-family:var(--mono);color:#0b6b74;white-space:nowrap}
 .cta{display:inline-block;background:var(--coral);color:#2a0f06;border-radius:8px;padding:10px 16px;font-weight:700;text-decoration:none;margin:16px 0}
 .meta{color:var(--muted);font-size:.8rem}
-footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;line-height:1.7;border-top:1px solid var(--line);margin-top:30px}
+footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 28px;line-height:1.7;border-top:1px solid var(--line);margin-top:56px}
+.foot-mark{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,9vw,5.2rem);line-height:1;letter-spacing:-.03em;color:var(--ink);margin:0 0 4px}
+.foot-mark b{color:var(--accent)}
+.foot-tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin:22px 0 6px}
+.foot-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.foot-nav a:hover{color:var(--accent)}
 .dirlist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
 .dirlist li{background:var(--panel);border:1px solid var(--line);border-radius:10px}
 .dirlist a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink)}
@@ -73,6 +79,8 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
 .gphoto img{max-width:92%;max-height:92%;object-fit:contain}
 .gentry h3{margin:0 0 8px;font-size:1.3rem}
 .greview{color:#33565e;line-height:1.7;margin:0 0 10px}
+.lede{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.45;color:var(--ink);max-width:34ch;margin:14px 0;letter-spacing:-.01em}
+.lede::after{content:"";display:block;width:64px;height:3px;border-radius:2px;margin-top:16px;background:linear-gradient(90deg,var(--accent),transparent)}
 .gspecs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:0 0 12px}
 .gspecs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
 .gspecs dt{color:var(--muted);font-size:.6rem;text-transform:uppercase;letter-spacing:.5px;margin:0}
@@ -125,5 +133,5 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
   <h2>Related guides</h2><p class="meta"><b>Best months here:</b> <a href="../months/february.html">February</a> · <a href="../months/march.html">March</a> · <a href="../months/april.html">April</a></p><p class="meta"><b>Dive with:</b> <a href="../marine-life/whale-sharks.html">Whale Sharks</a></p><p class="meta"><b>More in Caribbean:</b> <a href="aruba.html">Aruba</a> · <a href="bahamas.html">Bahamas</a> · <a href="bay-islands.html">Bay Islands</a></p>
   <a class="cta" href="../index.html">Plan a dive trip here — open the DiveSZN planner &rarr;</a>
 </main>
-<footer><b style="font-family:var(--serif);color:var(--ink)">DiveSZN</b> · seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars.<br>Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — always confirm with a local dive centre.<br><a href="../index.html">Destinations</a> · <a href="../destinations/index.html">Season guides</a> · <a href="../months/index.html">Best by month</a> · <a href="../marine-life/index.html">Marine life</a> · <a href="../gear/index.html">Gear guides</a> · <a href="../how-we-score.html">How we score</a> · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></footer>
+<footer><div class="foot-mark">Dive<b>SZN</b></div><div class="foot-tag">Know the season before you book</div><div class="foot-nav"><a href="../index.html">Destinations</a><a href="../destinations/index.html">Season guides</a><a href="../months/index.html">Best by month</a><a href="../marine-life/index.html">Marine life</a><a href="../gear/index.html">Gear guides</a><a href="../how-we-score.html">How we score</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a></div><div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — always confirm with a local dive centre.</div></footer>
 </body></html>
