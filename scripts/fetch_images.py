@@ -75,6 +75,23 @@ DEST_QUERIES = {
                     "Bull shark Bahamas underwater", "Islas Murcielago Costa Rica beach"],
     "Coiba": ["Granito de Oro Coiba", "Coiba beach Panama", "Isla Coiba Panama",
               "Coiba National Park Panama", "Coiba island beach"],
+    "Cancún & Playa del Carmen": ["MUSA underwater museum Cancun", "Museo Subacuatico de Arte",
+                                  "Cancun underwater sculpture", "Manchones reef Isla Mujeres",
+                                  "Playa del Carmen beach aerial"],
+    "Koh Tao": ["Koh Nang Yuan viewpoint", "Koh Tao Thailand island", "Koh Tao underwater",
+                "Sail Rock Koh Tao", "Chumphon Pinnacle"],
+    "Phuket": ["Racha Yai underwater", "Phuket Racha island", "Koh Phi Phi cliffs sea",
+               "Shark Point Phuket underwater", "Phuket beach aerial"],
+    "Bali": ["USAT Liberty wreck Tulamben", "Tulamben wreck diving", "Liberty wreck Bali underwater",
+             "Menjangan island underwater", "Amed Bali coast"],
+    "Tenerife": ["Green turtle Tenerife underwater", "El Puertito turtle Tenerife",
+                 "Tenerife underwater volcanic reef", "Los Gigantes cliffs Tenerife"],
+    "Zanzibar": ["Mnemba Atoll", "Zanzibar Nungwi beach dhow", "Mnemba island aerial",
+                 "Zanzibar reef underwater", "Zanzibar dhow"],
+    "Mallorca": ["Cala Figuera Mallorca", "Cap de Formentor Mallorca", "Sa Calobra Mallorca",
+                 "Mallorca sea cave", "Mallorca cala turquoise"],
+    "Muscat & Daymaniyat Islands": ["Daymaniyat Islands Oman", "Dimaniyat islands",
+                                    "Bandar Khayran Oman", "Muscat coast Oman", "Oman coast aerial sea"],
 }
 
 # For tricky names, a candidate file title MUST match this pattern (keeps
@@ -92,6 +109,14 @@ DEST_REQUIRE = {
     "Great Blue Hole": re.compile(r"(blue.?hole|lighthouse.?reef|belize)", re.I),
     "Bat Islands": re.compile(r"(murci|bat.?island|bull.?shark|leucas|guanacaste|santa.?rosa)", re.I),
     "Coiba": re.compile(r"coiba", re.I),
+    "Cancún & Playa del Carmen": re.compile(r"(musa|subacu|cancun|canc\u00fan|manchones|isla_mujeres|playa_del_carmen)", re.I),
+    "Koh Tao": re.compile(r"(koh.?tao|nang.?yuan|sail.?rock|chumphon)", re.I),
+    "Phuket": re.compile(r"(phuket|racha|phi.?phi|shark.?point)", re.I),
+    "Bali": re.compile(r"(tulamben|liberty|menjangan|amed|bali)", re.I),
+    "Tenerife": re.compile(r"(tenerife|puertito|gigantes|turtle|chelonia)", re.I),
+    "Zanzibar": re.compile(r"(zanzibar|mnemba|nungwi|unguja)", re.I),
+    "Mallorca": re.compile(r"(mallorca|majorca|formentor|calobra|cala|dragonera)", re.I),
+    "Muscat & Daymaniyat Islands": re.compile(r"(daymaniyat|dimaniyat|bandar|muscat|oman)", re.I),
 }
 
 
@@ -109,6 +134,14 @@ DEST_BLOCK = {
     "Bat Islands": re.compile(r"66636561", re.I),  # sunset-through-twigs panoramio
     "Coiba": re.compile(r"(coiba_banner|police|pickaback|prisoner|penal|_195\d|_196\d)", re.I),
     "Fuvahmulah": re.compile(r"kedeyre", re.I),
+    "Cancún & Playa del Carmen": re.compile(r"residencial", re.I),
+    "Koh Tao": re.compile(r"arrivals", re.I),
+    "Phuket": re.compile(r"(surin|similan|phuket.?sea)", re.I),
+    "Bali": re.compile(r"22093248545", re.I),
+    "Tenerife": re.compile(r"(babosa|felimare|nudibranch)", re.I),
+    "Zanzibar": re.compile(r"(almeja|tridacna)", re.I),
+    "Mallorca": re.compile(r"(7838116390|brounderwater)", re.I),
+    "Muscat & Daymaniyat Islands": re.compile(r"(moral_eel|207977467)", re.I),
 }
 
 
