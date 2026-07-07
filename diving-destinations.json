@@ -201,7 +201,8 @@
           "depth": "8-16m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Some 350 km off Brazil's northeast coast, this volcanic archipelago sits inside a strictly protected marine park where visibility routinely tops 30 m. Day boats work canyons, tunnels and arches like Pedras Secas while huge spinner dolphin pods, turtles and lemon and reef sharks patrol the blue. Most sites suit newer divers in the dry Aug-Dec season, and technical divers get a genuine prize: an intact navy corvette upright at 62 m."
     },
     {
       "name": "Bahamas",
@@ -378,7 +379,8 @@
           "depth": "10-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "No destination puts big sharks in front of divers more reliably than the Bahamas. Baited dives on shallow sandbanks bring tiger and lemon sharks within arm's length, great hammerheads and oceanic whitetips show in winter, and reef sharks patrol nearly every wall. Between shark runs there are upright freighter wrecks, coral-rimmed blue holes and ripping channel drifts like Current Cut. Day boats and liveaboards cover it, with Nov-May the prime window."
     },
     {
       "name": "Bay Islands",
@@ -562,7 +564,8 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Strung along the Mesoamerican Reef off Honduras, Roatan, Utila and Guanaja deliver some of the Caribbean's most affordable wall diving, with seasonal whale sharks as the headline pelagic. Guanaja adds volcanic canyons, a black-coral seamount and the intact Jado Trader wreck at 24-33 m, while the Cayos Cochinos marine reserve keeps pristine elkhorn shallows. Currents stay mostly mild, and shore entries, day boats and liveaboards all work here."
     },
     {
       "name": "Bonaire",
@@ -739,7 +742,8 @@
           "depth": "12-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Bonaire perfected drive-and-dive freedom: rent a truck, load tanks, and roll into any of the marked sites along the leeward west coast whenever you like. The fringing reef starts meters from shore and stays remarkably healthy, from the fish-thick house reefs off Kralendijk to the sponge-wrapped pilings of Salt Pier and the shore-accessible Hilma Hooker wreck at 30 m. Calm, easy conditions make it ideal for new divers and macro hunters chasing frogfish and seahorses."
     },
     {
       "name": "Cayman Islands",
@@ -916,7 +920,8 @@
           "depth": "12-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Three islands, one theme: walls that fall away into genuinely deep blue. Little Cayman's Bloody Bay Wall starts at 6 m and plunges past 300 m, Grand Cayman stacks caverns, pinnacles and the diver-friendly Kittiwake wreck off Seven Mile Beach, and Cayman Brac holds a Russian frigate with its guns still mounted. Conditions stay clear and mostly mild, so day boats handle nearly everything, and the famous stingray sandbar makes an easy interval between wall dives."
     },
     {
       "name": "Cozumel",
@@ -1093,7 +1098,8 @@
           "depth": "10-21m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Drift diving doesn't get more effortless than Cozumel. A steady current sweeps divers along the island's Mesoamerican reef walls in gin-clear water while the boat follows, so you simply hang and watch Palancar's coral buttresses, Santa Rosa's swim-throughs and passing eagle rays slide by. Gentle strip reefs suit beginners, Devil's Throat's 40 m tunnel rewards advanced divers, and night dives turn up the endemic splendid toadfish. Diving runs year-round, calmest May-Aug."
     },
     {
       "name": "Great Blue Hole",
@@ -1263,7 +1269,8 @@
       "dive_sites_researched": "2026-07",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Belize_Blue_Hole_%28TMP%29_%2816912331906%29.jpg/960px-Belize_Blue_Hole_%28TMP%29_%2816912331906%29.jpg",
       "image_credit": "Photo: The TerraMar Project (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Belize's Great Blue Hole is a flooded ice-age cavern 300 m across and 125 m deep in the middle of Lighthouse Reef, its rim a near-perfect circle visible from the air. The dive itself is a short, deep descent past stalactites at 40 m with Caribbean reef sharks circling in the gloom, best treated as an advanced bounce. The real richness lies on the surrounding atoll walls, so day trips and liveaboards pair the hole with sites like Half Moon Caye Wall."
     },
     {
       "name": "Roatán",
@@ -1440,7 +1447,8 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "The largest of Honduras's Bay Islands puts a wall minutes from almost every beach, making it one of the Caribbean's best-value places to dive and to learn. Mild, clear conditions favor beginners, yet the signature dives have teeth: the vertical coral crevice of Mary's Place, ice-age canyons like Spooky Channel, and two of the region's biggest wrecks off Sandy Bay. Shore entries and short boat runs mean three or four relaxed dives a day is the norm."
     },
     {
       "name": "Utila",
@@ -1603,7 +1611,8 @@
           "depth": "8-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Small, cheap and endlessly sociable, Utila has certified generations of divers on its calm Bay Islands reefs, and it backs the training-ground reputation with real substance. Whale sharks cruise the open water off the north side year-round, peaking Feb-Apr and Oct-Dec, while offshore seamounts like Black Hills swirl with jacks and barracuda. Day boats reach everything in minutes, from easy sponge-draped walls to the upright Halliburton wreck at 30 m."
     },
     {
       "name": "Sipadan Island",
@@ -1788,7 +1797,8 @@
           "depth": "8-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Sipadan rises 600 m straight from the Celebes Sea floor, an oceanic pinnacle off Malaysian Borneo where daily permits cap diver numbers. Current is the switch that turns the action on: at Barracuda Point a resident school of chevron barracuda coils into its famous tornado, whitetips rest along the ledges, and green and hawksbill turtles are everywhere. Day boats run from nearby islands, conditions favor experienced divers, and the island closes every November."
     },
     {
       "name": "Great Barrier Reef",
@@ -1973,7 +1983,8 @@
           "depth": "5-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Stretching more than 2,300 kilometers along Queensland's coast, the Great Barrier Reef is the largest reef system on Earth, and its best diving lives offshore. Liveaboards run the Ribbon Reefs for Cod Hole's tame potato cod and June-July dwarf minke whale encounters, then push into the Coral Sea for shark action at Osprey's North Horn. Day boats from Cairns cover easy coral gardens, while the current-swept SS Yongala wreck rewards advanced divers."
     },
     {
       "name": "Whitsunday Islands",
@@ -2151,7 +2162,8 @@
           "depth": "10-25m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Seventy-four islands scatter across the Coral Sea off central Queensland, pairing sheltered fringing reefs with runs to the outer Great Barrier Reef. Hook Island's bays deliver swim-throughs, Maori wrasse, and manta rays from May through September, while Hardy Reef adds giant Queensland grouper on the outer barrier. Humpback whales pass through from June to September. Calm bays and shallow profiles make this one of Australia's easiest places to log relaxed day-boat and liveaboard dives."
     },
     {
       "name": "Heron Island",
@@ -2330,7 +2342,8 @@
           "depth": "5-18m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "A true coral cay on the southern Great Barrier Reef, Heron Island puts its dive sites just minutes from the jetty, some reachable straight from shore. Heron Bommie stacks manta rays, eagle rays, and turtles on a single outcrop, and gentle drifts along the Tenements carry you past reef sharks with barely a fin kick. Come May through August for mantas, or midsummer when green and loggerhead turtles nest on the beach. Few places make beginner diving this rich."
     },
     {
       "name": "Komodo National Park",
@@ -2514,7 +2527,8 @@
           "depth": "5-24m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Tides squeeze between the Pacific and Indian Oceans through Komodo's narrow straits, and the currents they generate power some of the most electric diving in Indonesia. Hook into the reef at Castle Rock or Crystal Rock as sharks and trevally hunt the flow, fire through the Shotgun's channel, then drift Makassar Reef's manta cleaning stations. The warm north and cold, nutrient-rich south fish differently by season, so liveaboards cover it best. Bring drift experience."
     },
     {
       "name": "Raja Ampat",
@@ -2698,7 +2712,8 @@
           "depth": "3-15m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Off West Papua's Bird's Head Peninsula, Raja Ampat's four big islands and hundreds of karst islets sit at the epicenter of global marine biodiversity; Cape Kri holds the record fish count for a single dive. Nutrient-rich currents pump through the Dampier Strait, feeding seamounts like Blue Magic where oceanic mantas circle above carpeted wobbegongs. Reef hooks earn the fishiest sites, but sheltered cleaning stations and jetty dives balance the itinerary. Dive it by liveaboard or resort, October through April."
     },
     {
       "name": "Okinawa Islands",
@@ -2870,7 +2885,8 @@
           "depth": "3-12m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Japan's subtropical island chain strings across the East China Sea, and its diving swings from easy shore entries to serious drift. Winter sends schooling scalloped hammerheads past Yonaguni's fast currents, near the stepped stone monument that still fuels debate over its origins, while summer mantas hover over Ishigaki's cleaning stations. Around the main island, the glowing Blue Cave suits new divers and the deep USS Emmons wreck demands technical training. Day boats reach nearly all of it."
     },
     {
       "name": "Cocos Island",
@@ -3048,7 +3064,8 @@
       "dive_sites_researched": "2026-07",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hammerhead_shark%2C_Cocos_Island%2C_Costa_Rica.jpg/960px-Hammerhead_shark%2C_Cocos_Island%2C_Costa_Rica.jpg",
       "image_credit": "Photo: Barry Peters (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Thirty-six hours of open Pacific separate Cocos Island from mainland Costa Rica, and the payoff is some of the densest scalloped hammerhead schooling on the planet. Hook in on Bajo Alcyone's seamount as the schools stack overhead, watch for whale sharks and tigers off Dirty Rock, then finish with Manuelita's frenzied night dive of hunting whitetips. Strong currents, surge, and thermoclines make this strictly advanced, liveaboard-only diving; the June-November wet season brings the biggest shark numbers."
     },
     {
       "name": "Galapagos Islands",
@@ -3227,7 +3244,8 @@
           "depth": "10-25m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Converging ocean currents collide at this volcanic archipelago 1,000 kilometers off Ecuador, stacking cold, nutrient-loaded water against the equator, which is why nothing else dives like the Galapagos. Liveaboards push north to Darwin and Wolf, where whale sharks cruise past walls of scalloped hammerheads from June to November, while central sites add playful sea lions, mola mola, and feeding marine iguanas. Expect negative entries, down-currents, and surge: this is advanced diving, and worth every degree of chill."
     },
     {
       "name": "Socorro Island",
@@ -3392,7 +3410,8 @@
           "depth": "15-35m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Far out in the open Pacific south of Baja California, the volcanic Revillagigedo islands are reached only by liveaboard, and their giant oceanic mantas rank among the friendliest anywhere, banking within arm's reach at El Boiler's cleaning station. Roca Partida's lone spire stacks whitetips on its ledges while hammerheads, silvertips, and curious bottlenose dolphins patrol midwater. Humpback song fills winter dives. Surge and current across exposed pinnacles keep this advanced territory; the season runs November through May."
     },
     {
       "name": "Sea of Cortez",
@@ -3571,7 +3590,8 @@
           "depth": "8-18m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Squeezed between Baja California and mainland Mexico, the Sea of Cortez trades coral walls for sheer biomass: sea lion pups that mouth your fins at Los Islotes, tornadoes of jacks over Cabo Pulmo's hard-coral fingers, and mobula rays massing in the blue. Day boats from La Paz add wrecks like the Salvatierra, and whale sharks gather in the bay from October to April. Advanced divers push out to El Bajo seamount for hammerheads; warm, clear late summer is prime."
     },
     {
       "name": "Maui & Kona",
@@ -3764,7 +3784,8 @@
           "depth": "8-14m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Hawaii's twin dive hubs pack volcanic drama into calm leeward water. Off Kona, dive lights draw plankton, and feeding manta rays, to Garden Eel Cove nearly every night of the year, while Maui day boats run to Molokini, a sunken crescent crater with visibility pushing 45 m and a sheer back wall dropping past 100 m. Lava caverns off Lanai and turtle-thick shore entries round out a destination that serves new divers and wall-drift veterans alike."
     },
     {
       "name": "Maldives",
@@ -3956,7 +3977,8 @@
           "depth": "8-16m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Scattered across 26 atolls in the Indian Ocean, the Maldives runs on current. Monsoon-driven flow funnels through channel mouths and over isolated thilas, stacking grey reef sharks, eagle rays and schooling snapper wherever it pushes hardest. December to April brings the clearest water; May to November shifts mantas and whale sharks to the plankton-rich eastern atolls. Liveaboards cover the most ground, resorts add house-reef ease, and solid drift skills pay off everywhere."
     },
     {
       "name": "Seychelles",
@@ -4134,7 +4156,8 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Granite sets the Seychelles apart from anywhere else in the Indian Ocean: ancient boulders tumble off the beaches and continue underwater as sculpted reefs, swim-throughs and fish-wrapped pinnacles. Inner-island diving off Mahe and Praslin stays mild and beginner-friendly, with hawksbill turtles and reef sharks routine and whale sharks cruising through from August to November. The remote outer atolls, Aldabra among them, are liveaboard territory for divers chasing wilder, sharkier walls."
     },
     {
       "name": "Aliwal Shoal",
@@ -4320,7 +4343,8 @@
           "depth": "5-15m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "A fossilized dune ridge a few kilometers off South Africa's KwaZulu-Natal coast, Aliwal Shoal delivers raw big-animal diving that begins with a surf launch through the breakers. From June to November, ragged-tooth sharks crowd its amphitheaters and sandy gullies; baited dives pull in blacktips and tiger sharks, and the winter sardine run can erupt into bait-ball chaos. Currents, surge and bouncing RIB rides make this one for divers who like their adrenaline unfiltered."
     },
     {
       "name": "Ningaloo Reef",
@@ -4492,7 +4516,8 @@
       "dive_sites_researched": "2026-07",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Whale_Shark_Ningaloo.jpg/960px-Whale_Shark_Ningaloo.jpg",
       "image_credit": "Photo: NeilsPhotography (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Australia's largest fringing reef hugs the Western Australian coast, its coral gardens starting a short swim off the beach. The diving runs mellow and animal-rich: manta rays circling the cleaning station at Gulliver's, reef sharks queuing over cabbage coral at Asho's Gap, green turtles napping in limestone swim-throughs. The Exmouth Navy Pier alone justifies the trip, its pylons crowded with wobbegongs and frogfish, and whale sharks gather along the reef from March to July."
     },
     {
       "name": "Gozo & Malta",
@@ -4684,7 +4709,8 @@
           "depth": "18-36m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Few places make shore diving this easy. The Maltese islands drop straight into clear blue Mediterranean water, and most of the classics, from the Blue Hole at Dwejra to the Cirkewwa arch to the scuttled tanker Um El Faroud, are reached by walking in with your kit. Limestone shapes the character here: caverns, chimneys and light-shafted grottoes at every level, plus deliberately sunk wrecks deep enough to reward advanced divers. May through October brings warm, settled conditions."
     },
     {
       "name": "Medes Islands",
@@ -4869,7 +4895,8 @@
           "depth": "27-35m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Seven limestone islets off Spain's Costa Brava, the Medes Islands show what decades of strict protection do for the Mediterranean: outsized, fearless dusky groupers that swim out to inspect divers, clouds of barracuda, and gorgonian-draped walls falling toward 50 m. Tunnels like El Dofi thread clean through the rock with theatrical light shafts. Boat rides from L'Estartit take minutes, currents stay mild, and the sites layer neatly from easy caverns to deep pinnacle dives."
     },
     {
       "name": "Palau",
@@ -5054,7 +5081,8 @@
           "depth": "20-40m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Tides drive everything in Palau. Water pours through this Micronesian archipelago's reef passes, and at Blue Corner divers hook into the reef lip while grey reef sharks parade past in the flow; German Channel trades speed for manta rays circling a cleaning station. Between drifts come the vertical shafts of Blue Holes, the air-filled chambers of Chandelier Cave and lunar spawning aggregations. Day boats and liveaboards both work, but the strong currents flatter experienced divers."
     },
     {
       "name": "Truk (Chuuk) Lagoon",
@@ -5231,7 +5259,8 @@
           "depth": "15-27m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "History rests on the floor of Truk Lagoon. A 1944 air raid caught Japan's wartime supply fleet at anchor inside this Micronesian barrier reef, and more than 50 ships sank into calm, sheltered water where they still lie, holds packed with fighter planes, tanks and trucks, hulls dressed in coral. Mild currents and no thermocline keep conditions simple; depth sets the challenge, from 9 m deck tours to technical penetrations past 50 m. Liveaboards maximize bottom time."
     },
     {
       "name": "Cenotes of Yucatán Peninsula",
@@ -5423,7 +5452,8 @@
           "depth": "max 30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Beneath the Yucatan's jungle, rain has dissolved the limestone into vast flooded cave systems, and cenotes are the sinkhole windows that let divers in. Expect gin-clear fresh water with virtually no current, cathedral light beams, stalactite-hung passages and haloclines that blur vision like oil in water. Guided cavern lines at Dos Ojos and Gran Cenote welcome any certified diver; El Pit and Angelita, with their eerie sulfide clouds at 30 m, reward deeper experience."
     },
     {
       "name": "Azores",
@@ -5601,7 +5631,8 @@
           "depth": "35-45m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Nine volcanic Portuguese islands anchor the mid-Atlantic, and their diving happens in serious blue water. Offshore seamounts like Princess Alice Bank draw squadrons of mobula rays, Condor Bank stages blue and mako shark encounters, and visibility routinely tops 30 meters. Currents run strong out there, so the banks are boat trips for confident divers, though coastal wrecks and Terceira's anchor graveyard offer easier days. July through October is prime season."
     },
     {
       "name": "Lundy Island",
@@ -5778,7 +5809,8 @@
           "depth": "8-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "A granite outpost in the Bristol Channel, Lundy became the UK's first marine reserve, and its grey seals treat divers as entertainment, tugging fins in the shallows of Gannets' Bay. The Knoll Pins pile on color with jewel anemones and rare cup corals, while the battleship HMS Montagu and the upright coaster MV Robert add wreck history. Tides run hard here, so day boats work the slack, June through September."
     },
     {
       "name": "Scapa Flow",
@@ -5969,7 +6001,8 @@
           "depth": "10-18m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "In 1919 the interned German High Seas Fleet was scuttled in this Orkney anchorage, leaving battleships and light cruisers scattered across the seabed, still bristling with guns. The dreadnoughts lie deep, 38 to 45 meters, and reward advanced and technical divers; cruisers like SMS Karlsruhe and the light-filled Burra Sound blockships keep recreational depths honest. Cold, dark, and utterly compelling, it is dived by hardboat from Stromness, May to September."
     },
     {
       "name": "Silfra Fissure",
@@ -6123,7 +6156,8 @@
           "depth": "10-21m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Glacial meltwater, filtered through lava for decades, fills this crack between the North American and Eurasian tectonic plates in Iceland's Thingvellir National Park, delivering visibility beyond 100 meters. You drift gently through the Big Crack, over the 23-meter Cathedral canyon, and out across the algae-green lagoon. There is almost no life to watch; the geology is the show. A drysuit shore dive in 2-4 C water, easy enough for any certified diver."
     },
     {
       "name": "Vancouver Island",
@@ -6308,7 +6342,8 @@
           "depth": "10-22m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Cold, current-fed Pacific water turns this British Columbia coastline into an invertebrate riot: Browning Wall is carpeted stem to stern in soft corals and anemones, wolf eels and giant Pacific octopus den in the rocks, and Steller sea lions buzz divers at Race Rocks. Big artificial reefs like HMCS Saskatchewan add wreck steel. Slack-window boat diving in a drysuit, at its clearest October through March, with Ogden Point offering an easy shore option."
     },
     {
       "name": "Red Sea (Egypt)",
@@ -6500,7 +6535,8 @@
           "depth": "5-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Few places pack this much diving into warm, clear, year-round water. Egypt's Red Sea runs from the Thistlegorm's cargo holds of trucks and motorcycles to the coral walls of Ras Mohammed, then out to the marine-park reefs of the Brothers, Daedalus, and Elphinstone, where oceanic whitetips and schooling hammerheads patrol strong drift. Dive it from shore, day boat, or liveaboard; sheltered bays suit beginners while the offshore reefs demand experience."
     },
     {
       "name": "Fiji",
@@ -6686,7 +6722,8 @@
           "depth": "5-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Tidal currents ripping through the Somosomo Strait feed the densest soft-coral gardens in the Pacific, and when the white corals on the Great White Wall open to feed, the whole reef seems to cascade. Beqa Lagoon counters with a famous baited shark dive that brings in big bull sharks, while Namena's Grand Central Station funnels barracuda and grey reefs past like commuters. Resort day boats and liveaboards cover it all; July through October is best."
     },
     {
       "name": "French Polynesia",
@@ -6872,7 +6909,8 @@
           "depth": "3-12m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "The Tuamotu atolls concentrate the drift diving of your life into their passes: ride the incoming tide through Rangiroa's Tiputa alongside a hundred grey reef sharks and resident dolphins, or hang at Fakarava South while the famous wall of sharks stacks overhead. Bora Bora adds a lagoon manta cleaning station for calmer days. The big passes reward divers comfortable in current, reached by resort day boats or liveaboard, June through October."
     },
     {
       "name": "Guadalcanal & Western Province",
@@ -7058,7 +7096,8 @@
           "depth": "5-15m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "The Solomon Islands wear their WWII history underwater: beached Japanese transports at Bonegi drop from shore-entry shallows to 55 meters, an intact B-17 bomber rests off Honiara, and Gizo's Toa Maru ranks among the Pacific's finest recreational wrecks. Out in the Western Province, reefs like Njari's Grand Central Station have logged 270-plus fish species on a single dive. Mild currents, mandarinfish macro, and empty sites make this a rewarding resort or liveaboard trip, April through November."
     },
     {
       "name": "Moorea",
@@ -7230,7 +7269,8 @@
           "depth": "3-15m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Just across the channel from Tahiti, Moorea keeps its diving relaxed: mild currents, sun-drenched coral canyons off Opunohu Bay, and lemon sharks that cruise in close at Tiki Point among blacktips and greys. Eagle rays file down lagoon corridors, turtles are everywhere, and from July through October humpback song carries through the water on nearly every dive. Easy day-boat sites in the 10-20 meter range suit newer divers, with the deep Rose Garden reserved for advanced ones."
     },
     {
       "name": "Poor Knights Islands",
@@ -7401,7 +7441,8 @@
           "depth": "10-25m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Two volcanic islands off New Zealand's Northland coast, the Poor Knights sit inside a strict marine reserve washed by a warm subtropical current. The diving happens in arches, tunnels and sea caves - Rikoriko is the world's largest by volume - where stingrays hover mid-water, blue maomao school in the light beams, and kelp-fringed walls crawl with nudibranchs. Boat-only day trips run year-round, best January through April, with sites from sheltered arches to pinnacles dropping past 45m."
     },
     {
       "name": "Apo Island & Dumaguete",
@@ -7593,7 +7634,8 @@
           "depth": "5-20m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "One base, two completely different dives: day boats cross from Dumaguete to Apo Island's protected coral gardens, where green turtles graze in real numbers and drifts like Coconut Point spin with schooling jacks, then return to Dauin's dark-sand muck slopes for frogfish, ghost pipefish and sunset mandarinfish. Currents at Apo run mild to moderate while the muck sites stay calm and shallow, which makes this stretch of the Philippines ideal for photographers and mixed-ability groups."
     },
     {
       "name": "Bunaken National Marine Park",
@@ -7771,7 +7813,8 @@
           "depth": "8-28m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "The walls at Bunaken drop sheer from a shallow reef crest into deep Sulawesi blue, and that vertical geometry defines the diving. Drifting along the Lekuan faces - locals call them the city of turtles - you pass green and hawksbill turtles at a rate that stops being remarkable by day two, while sea fans hide pygmy seahorses and visibility runs long. Day boats out of Manado reach everything, and the mild wall currents suit newer divers."
     },
     {
       "name": "Gili Islands & Lombok",
@@ -7949,7 +7992,8 @@
           "depth": "8-25m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Three small coral-fringed islets off Lombok's northwest coast, the Gilis deliver Indonesia at its most relaxed: warm, easy reefs where green and hawksbill turtles are all but guaranteed - Turtle Heaven stacks them on a single pinnacle. Short day-boat rides reach sloping reefs, the coral-crusted Bounty Wreck and gentle walls like Meno's, with drift and channel sites adding pace when the current runs. It is an ideal place to learn or ease back into diving."
     },
     {
       "name": "Malapascua Island",
@@ -8120,7 +8164,8 @@
           "depth": "5-15m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Pre-dawn boats leave this small island off Cebu for one reason: pelagic thresher sharks rising from the deep to cleaning stations on sunken shoals, a near-daily encounter found almost nowhere else. The threshers now gather at Kimud Shoal, while Monad - the original site - draws tiger sharks. Between dawn runs there is real variety: Gato Island's swim-through tunnel, the Dona Marilyn ferry wreck and sunset mandarinfish at Lighthouse. Early starts and deeper shoal dives favor comfortable, experienced divers."
     },
     {
       "name": "Similan Islands",
@@ -8312,7 +8357,8 @@
           "depth": "15-40m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Granite defines the Similans: huge smooth boulders tumble from white beaches to well past 40m, forming the swim-throughs and canyons of Elephant Head Rock on the exposed west, with gentle coral bommies and sand on the east. Liveaboards work the chain during the short open season, pushing north to Koh Bon's manta cleaning station and Richelieu Rock, a soft-coral pinnacle with Thailand's best whale shark odds. February to April brings the calmest Andaman seas and the biggest animals."
     },
     {
       "name": "Tubbataha Reefs Natural Park",
@@ -8490,7 +8536,8 @@
           "depth": "10-30m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Marooned in the middle of the Sulu Sea, Tubbataha's two atolls and Jessie Beazley Reef are reachable only by liveaboard during a short season peaking April to June. The reward is the Philippines at full strength: sheer walls draped in gorgonians, grey reef and whitetip sharks on nearly every dive, and mantas or hammerheads riding the flow at sites like Washing Machine. Strong oceanic currents make drift diving the norm, so this UNESCO park suits experienced divers."
     },
     {
       "name": "Lord Howe Island",
@@ -8662,7 +8709,8 @@
           "depth": "10-25m"
         }
       ],
-      "dive_sites_researched": "2026-07"
+      "dive_sites_researched": "2026-07",
+      "description": "Six hundred kilometers off the Australian mainland, Lord Howe grows the world's southernmost coral reef, and the crossover shows underwater: tropical corals and temperate species share sites with fish found nowhere else, like the doubleheader wrasse. Sheltered lagoon holes give easy 8m dives, the volcanic Admiralty Islands stack up pinnacles, canyons and caves, and boat runs out to Ball's Pyramid - the world's tallest sea stack - bring Galapagos whalers and hunting kingfish. December through May is prime."
     },
     {
       "name": "South West Rocks",
@@ -8827,7 +8875,8 @@
       "dive_sites_researched": "2026-07",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Grey_Nurse_Shark_at_Fish_Rock_Cave%2C_NSW.jpg/960px-Grey_Nurse_Shark_at_Fish_Rock_Cave%2C_NSW.jpg",
       "image_credit": "Photo: Photographer: Richard Ling &lt;wikipedia@rling.com&gt; (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "The drawcard at this New South Wales mid-north-coast town is a single rock with a 125m cave running clean through it. Divers enter Fish Rock's deep entrance, pass wobbegongs and bull rays in the dark, and exit the shallow end into gutters patrolled by critically endangered grey nurse sharks - sometimes twenty or thirty at once. Tidal currents and surge demand some experience, and grey nurse numbers peak May to December on straightforward day-boat runs."
     },
     {
       "name": "Nusa Penida",
@@ -8999,7 +9048,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/20-Indonesia-Bali_Nusa-Penida_Crystal-Bay_12_%28Mola-Mola_Sunfish3%29-APiazza.JPG/960px-20-Indonesia-Bali_Nusa-Penida_Crystal-Bay_12_%28Mola-Mola_Sunfish3%29-APiazza.JPG",
       "image_credit": "Photo: Andrepiazza (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Twenty minutes across the channel from Bali, Nusa Penida sits square in the Indonesian Throughflow, and its diving runs on that moving water: high-speed drifts along the north coast, reef mantas circling the south-coast cleaning stations all year, and - when cold upwellings arrive from July to October - oceanic sunfish rising to be cleaned at Crystal Bay. Currents shift fast and can pull downward, so dive it with sharp buoyancy and a guide who reads the water."
     },
     {
       "name": "Fuvahmulah",
@@ -9171,7 +9221,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Tiger_Shark_At_Tigerbeach_Bahamas_%28149044369%29.jpeg",
       "image_credit": "Photo: Marion Kraschl (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "A lone oceanic island in the Maldives' far south, Fuvahmulah has no sheltering atoll, just deep water on every side and the most reliable tiger shark diving on Earth. Named resident tigers patrol the shallow harbor plateau at arm's length, while drifts along the drop-offs deliver thresher shark cleaning stations, schooling hammerheads and oceanic mantas. Day boats run everything, and the exposed blue-water diving favors confident, current-comfortable divers."
     },
     {
       "name": "Layang Layang",
@@ -9343,7 +9394,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Layang-Layang_diving.jpg/960px-Layang-Layang_diving.jpg",
       "image_credit": "Photo: matthew lee (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Stranded in the South China Sea far off Borneo, Layang Layang is a tiny oceanic atoll whose walls fall away 2,000 m into open blue. Divers come in spring, when schooling scalloped hammerheads rise along sea-fan-draped drop-offs like Gorgonian Forest, joined by dogtooth tuna and passing mantas. Inside the lagoon the diving stays calm and easy; outside, current-swept walls reward experience. Everything runs from the atoll's single fly-in resort."
     },
     {
       "name": "Malpelo Island",
@@ -9515,7 +9567,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Atardecer_Isla_de_Malpelo_-_Colombia.jpg/960px-Atardecer_Isla_de_Malpelo_-_Colombia.jpg",
       "image_credit": "Photo: Jdmacarenoq (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Five hundred kilometers off Colombia's Pacific coast, Malpelo is a bare volcanic rock rising from a seamount patrolled by sharks in staggering numbers. Walls of 200-plus scalloped hammerheads stack up over cleaning stations like La Nevera, silkies swarm by the hundred, and cold-season dives can turn up the rarely seen smalltooth sand tiger. Reached only by liveaboard, its surge-scoured pinnacles and powerful currents demand reef hooks and serious drift experience."
     },
     {
       "name": "Yap",
@@ -9680,7 +9733,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Manta_ray_from_Yap.jpg",
       "image_credit": "Photo: Original uploader was Bartek.cieslak at pl.wikipedia (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Few places deliver mantas as reliably as Yap, a quiet Micronesian island where resident reef mantas queue at cleaning stations in the tidal channels year-round. Dives are timed to the tide as short drifts or hooked hangs at Mi'l and Goofnuw Channels, peaking during the December-to-April mating season. Between manta runs there are shark-lined caverns to thread and a dusk mandarinfish ritual on the rubble, all dived comfortably by day boat."
     },
     {
       "name": "Cenderawasih Bay",
@@ -9852,7 +9906,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IN.CB_100920_3064.jpg/960px-IN.CB_100920_3064.jpg",
       "image_credit": "Photo: Bird's Head Seascape / Jones/Shimlock / Secret Sea Visions (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Tucked into West Papua's northern coast, Cenderawasih Bay is the only place to scuba with resident whale sharks year-round, the giants hanging vertically beneath fishermen's bagan platforms to sip baitfish from the nets. The bay's near-enclosed geography keeps the water glassy and virtually currentless, so the shallow shark encounters, coral-clad WWII wrecks and endemic-rich reefs all dive effortlessly. Access is by liveaboard, and the calm conditions welcome any certification level."
     },
     {
       "name": "Jupiter",
@@ -10017,7 +10072,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Underwater_-_Jupiter%2C_Florida_%28159046153%29.jpg",
       "image_credit": "Photo: Clinton &amp; Charles Robertson from RAF Lakenheath, UK &amp; San Marcos, TX, USA &amp; UK (CC BY-SA 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "On Florida's Atlantic coast, Jupiter puts the Gulf Stream to work: nearly every dive is a one-to-two-knot drift over ledges and wrecks in 15-30 m of blue water. Winter draws great hammerheads and thick lemon shark aggregations to sites like Lemon Drop; late summer packs goliath groupers onto the Wreck Trek for their spawn. Day boats run it all, and the constant current makes this advanced-leaning big-animal diving."
     },
     {
       "name": "Protea Banks",
@@ -10182,7 +10238,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ragged-tooth_shark_during_winter_at_Aliwal_Shoal.jpg/960px-Ragged-tooth_shark_during_winter_at_Aliwal_Shoal.jpg",
       "image_credit": "Photo: Willemferguson2 (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Protea Banks starts where most reefs end: a deep offshore reef of caves, pinnacles and gullies lying 27-40 m down off South Africa's KwaZulu-Natal coast, dived as fast blue-water drifts with negative entries and open-water ascents. Zambezi (bull) sharks patrol year-round, wintering ragged-tooth sharks pack the caves, and summer adds tiger sharks and schooling hammerheads, with the sardine run streaming past in June and July. This is uncompromising, experienced-divers-only territory."
     },
     {
       "name": "Tofo",
@@ -10347,7 +10404,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Whale_shark_tofo_mozambique_2007.jpg/960px-Whale_shark_tofo_mozambique_2007.jpg",
       "image_credit": "Photo: jon hanson (CC BY-SA 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "A laid-back beach town on Mozambique's Inhambane coast, Tofo built its name on megafauna. Reef mantas hold court year-round at deep cleaning stations like Manta Reef and Giants Castle, whale sharks cruise offshore from October to March, and humpbacks migrate past between June and October. Dives launch by RIB through the surf; shallow inshore reefs suit newer divers, but the signature manta sites are deep drifts for experienced hands."
     },
     {
       "name": "Larnaca",
@@ -10512,7 +10570,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Zenobia_2003_1.jpg/960px-Zenobia_2003_1.jpg",
       "image_credit": "Photo: Jetlife2 (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "One wreck made Larnaca a pilgrimage: the Zenobia, a 172 m ferry that rolled onto her port side in 1980 and settled between 16 and 42 m, her cargo of articulated lorries still chained to the decks. Recreational divers tour the hull and twin propellers while technical teams thread the car decks, and the surrounding bay adds easier wrecks, shore entries and the sunlit caves of Cape Greco. Mild currents and warm, clear summers keep this Cyprus base busy from June through October."
     },
     {
       "name": "Kaş",
@@ -10684,7 +10743,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Akdeniz-_the_mediterranean-kaputa%C5%9F_beach_-_panoramio.jpg/960px-Akdeniz-_the_mediterranean-kaputa%C5%9F_beach_-_panoramio.jpg",
       "image_credit": "Photo: HALUK COMERTEL (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Set on Turkey's Lycian coast, Kaş packs 30-plus dive sites within minutes of its harbor, all in the famously clear water of the Turquoise Coast. History does the heavy lifting: an intact DC-3 Dakota rests on sand at around 25 m, a full-size Bronze Age Uluburun replica sits in a shallow bay, and ancient amphorae litter the reefs. Walls, caverns and the current-brushed Canyon add drama, with day boats serving everyone from new divers to seasoned wall hunters."
     },
     {
       "name": "Ustica",
@@ -10856,7 +10916,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ustica_seen_from_the_airplane.jpg/960px-Ustica_seen_from_the_airplane.jpg",
       "image_credit": "Photo: Berlinschneid (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "A volcanic speck in the Tyrrhenian Sea north of Sicily, Ustica became Italy's first marine protected area in 1986, and four decades of protection show underwater: crystal water, walls thick with gorgonians and sponges, and dusky groupers bold enough to follow you around. Lava rock carves the caves, arches and tunnels of the Scoglio del Medico pinnacle, while two archaeological trails let you hover over ancient anchors and amphorae. Shore and day-boat diving runs from sheltered beginner bays to current-brushed offshore seamounts."
     },
     {
       "name": "Vis Island",
@@ -11028,7 +11089,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Underwater_natural_arch_at_Vis_2020.jpg/960px-Underwater_natural_arch_at_Vis_2020.jpg",
       "image_credit": "Photo: Borut Furlan (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Croatia's farthest-flung inhabited island spent decades as a closed military zone, and Vis now rewards divers with one of the Adriatic's densest wreck collections: the B-17 Flying Fortress, near-intact on sand at 65-72m for technical divers, the 105m coal steamer Vassilios T., and the shallower, life-rich Teti. Between wrecks, day boats run to grouper-patrolled reefs and sun-shot sea caves like Bisevo's Blue Cave. Recreational divers eat well here; tec divers eat better."
     },
     {
       "name": "Chania (Crete)",
@@ -11200,7 +11262,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aerial_view_of_Chania_on_the_island_of_Crete%2C_Greece.jpg/960px-Aerial_view_of_Chania_on_the_island_of_Crete%2C_Greece.jpg",
       "image_credit": "Photo: dronepicr (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Western Crete anchors its diving in Chania, where day boats and easy shore entries work a coastline of clear Aegean water, caverns and drop-offs. The headline act is the Elephant Cave at Cape Drepano, a chamber walled with fused stalactites and stalagmites where Ice Age dwarf-elephant bones were found. Around it sit sheltered training reefs, the Lighthouse Wall and grouper-thick boulder slopes off Rodopou, a mix that suits new and experienced divers alike across a long June-to-October prime season."
     },
     {
       "name": "Bat Islands",
@@ -11370,7 +11433,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bull_shark_at_unnamed_reef_12-127.jpg/960px-Bull_shark_at_unnamed_reef_12-127.jpg",
       "image_credit": "Photo: Holobionics (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Bull sharks are the whole point of the Bat Islands (Islas Murcielago), a cluster of volcanic rocks off Costa Rica's Guanacaste coast reached by a committing 45km day-boat run from Playas del Coco. At the Big Scare, a dozen 2.5-3.5m bulls patrol pinnacles at 20-30m, with giant Pacific mantas, eagle-ray squadrons and walls of jacks for company. Strong current, surge and cool thermoclines make this advanced diving; bring a 5mm and your best buoyancy, June through October."
     },
     {
       "name": "Coiba",
@@ -11542,7 +11606,8 @@
       "dive_sites_researched": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kristallklares_Wasser_Coiba_Panama_%28152311725%29.jpeg/960px-Kristallklares_Wasser_Coiba_Panama_%28152311725%29.jpeg",
       "image_credit": "Photo: Dronepicr (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+      "image_source": "wikimedia",
+      "description": "Panama's UNESCO-listed Coiba National Park protects a swath of eastern Pacific where cool, nutrient-rich upwelling turns seamounts into pelagic magnets: schooling scalloped hammerheads (strongest March through July), resident whitetip reef sharks, and seasonal whale sharks and mantas. Expect negative entries onto current-swept pinnacles like Wahoo Rock, thermoclines that can dip to 16-20C, and blue-water ascents. Most diving runs as day trips or multi-day expeditions out of Santa Catalina, and it firmly favors experienced divers."
     }
   ]
 }
