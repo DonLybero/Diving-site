@@ -6346,199 +6346,6 @@
       "description": "Cold, current-fed Pacific water turns this British Columbia coastline into an invertebrate riot: Browning Wall is carpeted stem to stern in soft corals and anemones, wolf eels and giant Pacific octopus den in the rocks, and Steller sea lions buzz divers at Race Rocks. Big artificial reefs like HMCS Saskatchewan add wreck steel. Slack-window boat diving in a drysuit, at its clearest October through March, with Ogden Point offering an easy shore option."
     },
     {
-      "name": "Red Sea (Egypt)",
-      "country": "Egypt",
-      "region": "Red Sea / Middle East",
-      "water_type": "tropical",
-      "difficulty": "beginner-advanced",
-      "access": "shore/day-boat/liveaboard",
-      "monthly_temp_c": {
-        "Jan": 23,
-        "Feb": 22,
-        "Mar": 22,
-        "Apr": 24,
-        "May": 26,
-        "Jun": 28,
-        "Jul": 29,
-        "Aug": 30,
-        "Sep": 29,
-        "Oct": 27,
-        "Nov": 25,
-        "Dec": 24
-      },
-      "currents": "Sheltered bays mild; offshore marine parks (Brothers, Daedalus, Elphinstone) strong unpredictable drift; winter N winds can cancel exposed sites",
-      "best_months": "Mar-May & Sep-Nov",
-      "wetsuit": "3mm summer / 5-7mm winter",
-      "signature_species": [
-        "oceanic whitetip shark",
-        "scalloped hammerhead",
-        "whale shark",
-        "manta ray",
-        "spinner dolphin"
-      ],
-      "highlights": "Year-round reefs & wrecks; offshore shark reefs (Brothers/Daedalus/Elphinstone).",
-      "monthly": {
-        "Jan": {
-          "rating": "Good",
-          "marine_life": "oceanic whitetip sharks still patrolling the south with threshers possible while reef and wreck diving shines",
-          "conditions": "cool and crystal clear, twenty to forty metres, occasional north wind",
-          "visibility_m": 30
-        },
-        "Feb": {
-          "rating": "Good",
-          "marine_life": "oceanic whitetip sharks lingering in the south while reef and wreck itineraries take centre stage",
-          "conditions": "coldest water of the year with the clearest visibility, calm but windy",
-          "visibility_m": 24
-        },
-        "Mar": {
-          "rating": "Peak",
-          "marine_life": "mantas appearing as Big Fish season starts and early whale sharks showing late in the month",
-          "conditions": "warming water with twenty to forty metres of visibility",
-          "visibility_m": 30
-        },
-        "Apr": {
-          "rating": "Peak",
-          "marine_life": "mantas cruising the offshore reefs in Big Fish season while early whale sharks turn up",
-          "conditions": "warm and calm, an ideal shoulder window",
-          "visibility_m": 18
-        },
-        "May": {
-          "rating": "Peak",
-          "marine_life": "whale sharks building in number while hammerhead schooling begins over the offshore plateaus",
-          "conditions": "warm water and calm open-sea crossings",
-          "visibility_m": 18
-        },
-        "Jun": {
-          "rating": "Peak",
-          "marine_life": "whale shark encounters climbing toward their best with hammerheads building into proper schools",
-          "conditions": "warm calm seas at the onset of summer",
-          "visibility_m": 18
-        },
-        "Jul": {
-          "rating": "Good",
-          "marine_life": "hammerhead schooling over Daedalus and the Brothers while whale sharks still cruise the blue",
-          "conditions": "hottest air, calmest crossings and a slight plankton dip",
-          "visibility_m": 10
-        },
-        "Aug": {
-          "rating": "Good",
-          "marine_life": "hammerheads taper off the plateaus while lunar coral spawning lights up the reef at night",
-          "conditions": "calm seas with the warmest water, around thirty degrees in the shallows",
-          "visibility_m": 18
-        },
-        "Sep": {
-          "rating": "Peak",
-          "marine_life": "mantas gliding past as threshers begin to show and wrecks, reefs and pelagics all deliver",
-          "conditions": "warm calm seas, a favourite month among regulars",
-          "visibility_m": 18
-        },
-        "Oct": {
-          "rating": "Peak",
-          "marine_life": "oceanic whitetip and thresher building around the offshore reefs while mantas sweep the walls",
-          "conditions": "ideal water warmth with calm seas",
-          "visibility_m": 18
-        },
-        "Nov": {
-          "rating": "Peak",
-          "marine_life": "oceanic whitetip and thresher sharks thick around the Brothers while mantas cruise the reef walls",
-          "conditions": "cooling water through the prime shark month",
-          "visibility_m": 18
-        },
-        "Dec": {
-          "rating": "Good",
-          "marine_life": "threshers continue on the deep cleaning stations while oceanic whitetip sharks hold in the south",
-          "conditions": "mild winter with clear visibility and occasional wind",
-          "visibility_m": 24
-        }
-      },
-      "coordinates": {
-        "lat": 27.9,
-        "lng": 34.3
-      },
-      "current_strength": "Medium",
-      "slug": "red-sea-egypt",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Unterwasserwelt_im_Roten_Meer%2C_%C3%84gypten_DSCF4057WI.jpg/960px-Unterwasserwelt_im_Roten_Meer%2C_%C3%84gypten_DSCF4057WI.jpg",
-      "image_credit": "Photo: Kora27 (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia",
-      "current_note": "Sheltered north; strong drift at Brothers/Daedalus/Elphinstone",
-      "data_confidence": "medium",
-      "last_verified": "2026-07",
-      "dive_sites": [
-        {
-          "name": "SS Thistlegorm",
-          "type": "Wreck",
-          "level": "advanced",
-          "blurb": "WWII cargo wreck at ~30m with motorbikes, trucks and locomotives",
-          "depth": "16-32m"
-        },
-        {
-          "name": "Shark & Yolanda Reef (Ras Mohammed)",
-          "type": "Drift",
-          "level": "intermediate",
-          "blurb": "Twin coral towers on an 800m wall; snapper and barracuda schools",
-          "depth": "10-30m"
-        },
-        {
-          "name": "Elphinstone Reef",
-          "type": "Wall",
-          "level": "advanced",
-          "blurb": "Offshore ridge near Marsa Alam famed for oceanic whitetips",
-          "depth": "10-40m+"
-        },
-        {
-          "name": "Big Brother (Brothers Islands)",
-          "type": "Wall",
-          "level": "advanced",
-          "blurb": "Volcanic island walls with thresher and hammerhead sharks plus wrecks",
-          "depth": "10-40m+"
-        },
-        {
-          "name": "Daedalus Reef",
-          "type": "Wall",
-          "level": "advanced",
-          "blurb": "Remote marine-park reef; schooling hammerheads in strong current",
-          "depth": "10-40m"
-        },
-        {
-          "name": "Jackson Reef (Straits of Tiran)",
-          "type": "Drift",
-          "level": "intermediate",
-          "blurb": "Best-known of Tiran's four reefs; soft corals and pelagics",
-          "depth": "10-30m"
-        },
-        {
-          "name": "Blue Hole (Dahab)",
-          "type": "Shore",
-          "level": "advanced",
-          "blurb": "Iconic 100m+ sinkhole; rim dives recreational, the Arch is tec-only",
-          "depth": "rim 7-30m"
-        },
-        {
-          "name": "Giannis D (Abu Nuhas)",
-          "type": "Wreck",
-          "level": "intermediate",
-          "blurb": "Photogenic 1983 freighter wreck on 'Ships' Graveyard' reef",
-          "depth": "6-27m"
-        },
-        {
-          "name": "St. John's Reefs",
-          "type": "Reef",
-          "level": "intermediate",
-          "blurb": "Deep-south reef system of caves, tunnels and pristine coral",
-          "depth": "10-30m"
-        },
-        {
-          "name": "Sha'ab Samadai (Dolphin House)",
-          "type": "Reef",
-          "level": "beginner",
-          "blurb": "Sheltered Marsa Alam lagoon reef with resident spinner dolphins",
-          "depth": "5-20m"
-        }
-      ],
-      "dive_sites_researched": "2026-07",
-      "description": "Few places pack this much diving into warm, clear, year-round water. Egypt's Red Sea runs from the Thistlegorm's cargo holds of trucks and motorcycles to the coral walls of Ras Mohammed, then out to the marine-park reefs of the Brothers, Daedalus, and Elphinstone, where oceanic whitetips and schooling hammerheads patrol strong drift. Dive it from shore, day boat, or liveaboard; sheltered bays suit beginners while the offshore reefs demand experience."
-    },
-    {
       "name": "Fiji",
       "country": "Fiji",
       "region": "South Pacific",
@@ -14132,6 +13939,672 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Mnemba_Atoll.jpg/960px-Mnemba_Atoll.jpg",
       "image_credit": "Photo: I've Got It On Film! (CC BY 2.0) via Wikimedia Commons",
       "image_source": "wikimedia"
+    },
+    {
+      "name": "Dahab",
+      "country": "Egypt",
+      "region": "Red Sea / Egypt",
+      "coordinates": {
+        "lat": 28.4913,
+        "lng": 34.5136
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly (tec depth on tap)",
+      "access": "shore / day-boat",
+      "best_months": "Apr-Jun & Sep-Nov",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "resident reef fish, morays and blue-spotted rays; quiet, fishy reefs",
+          "conditions": "coolest water, occasional wind chop at exposed entries, clear Gulf of Aqaba viz",
+          "visibility_m": 20
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "healthy coral gardens, octopus and nudibranchs for slow macro dives",
+          "conditions": "cold-for-the-Red-Sea water, breezy days, otherwise calm shore entries",
+          "visibility_m": 20
+        },
+        "Mar": {
+          "rating": "Shoulder",
+          "marine_life": "reef life waking up; garden eels, lionfish and schooling anthias",
+          "conditions": "water at its coolest, wind easing, viz staying reliably clear",
+          "visibility_m": 20
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "anthias clouds thicken, turtles grazing the seagrass, first pelagics passing",
+          "conditions": "warming fast, flat mornings, comfortable multi-dive days",
+          "visibility_m": 22
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "busy reefs, unicornfish and fusilier schools, frogfish finds for sharp eyes",
+          "conditions": "warm, calm and settled — classic easy Dahab shore diving",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "full-summer reef activity, jacks and barracuda off the walls, turtles common",
+          "conditions": "flat glassy water, long days, excellent visibility",
+          "visibility_m": 25
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "pelagics closer inshore, dolphins occasionally cruise the Blue Hole",
+          "conditions": "hot topside, warm calm sea, viz climbing toward its best",
+          "visibility_m": 28
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "warmest water brings dense fish life and the odd reef shark sighting",
+          "conditions": "very hot on land, dead-calm water, peak 30m-plus visibility days",
+          "visibility_m": 30
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "reefs at their liveliest — trevally hunts, turtles, morays out in the open",
+          "conditions": "warm water lingering, calm seas, superb visibility",
+          "visibility_m": 30
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "abundant reef fish, rays on the sand, great macro on the house reefs",
+          "conditions": "ideal balance of warm water, mild air and clear, settled seas",
+          "visibility_m": 28
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "reefs still busy; octopus, seahorses in the seagrass, schooling snapper",
+          "conditions": "cooling gently, mostly calm with occasional breezy afternoons",
+          "visibility_m": 25
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "resident reef community, uncrowded sites, relaxed critter hunting",
+          "conditions": "cooler water and windier spells, but shore diving continues year-round",
+          "visibility_m": 22
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 22,
+        "Feb": 21,
+        "Mar": 21,
+        "Apr": 23,
+        "May": 25,
+        "Jun": 26,
+        "Jul": 27,
+        "Aug": 28,
+        "Sep": 28,
+        "Oct": 27,
+        "Nov": 25,
+        "Dec": 23
+      },
+      "highlights": "Walk-in Gulf of Aqaba diving at its most laid-back — the Blue Hole via El Bells, the Canyon's cathedral cracks, Lighthouse house-reef ease and a deep technical scene, all from the beach.",
+      "signature_species": [
+        "Napoleon wrasse",
+        "Blue-spotted ribbontail ray",
+        "Green turtle",
+        "Garden eels",
+        "Frogfish",
+        "Octopus"
+      ],
+      "current_strength": "Low",
+      "currents": "The Gulf of Aqaba is sheltered and tide-weak, so most Dahab sites sit in still or gently drifting water. Wind can add surface chop and a mild longshore push at exposed entries like the Blue Hole, but true current is rare.",
+      "current_note": "calm, near-currentless shore diving most days",
+      "wetsuit": "3mm in high summer (Jul-Sep); 5mm spring and autumn; 5-7mm with hood Dec-Mar",
+      "dive_sites": [
+        {
+          "name": "Blue Hole & El Bells",
+          "type": "Wall",
+          "depth": "7-30m",
+          "level": "intermediate",
+          "blurb": "The classic drop down the Bells chimney, along the outer wall and over the 7m saddle into the world's most famous sinkhole."
+        },
+        {
+          "name": "The Arch (Blue Hole)",
+          "type": "Cave",
+          "depth": "55-60m",
+          "level": "tec",
+          "blurb": "The infamous tunnel through the Blue Hole's wall at 55m — a serious, training-and-trimix-only technical dive."
+        },
+        {
+          "name": "The Canyon",
+          "type": "Cavern",
+          "depth": "12-30m",
+          "level": "intermediate",
+          "blurb": "A narrow crack in the reef plate that swallows divers into a fishbowl cavern lit by shafts of blue light."
+        },
+        {
+          "name": "Lighthouse Reef",
+          "type": "Reef",
+          "depth": "5-25m",
+          "level": "beginner",
+          "blurb": "Dahab's house reef in the middle of town — easy sloping coral, resident frogfish and seahorses, and the go-to night dive."
+        },
+        {
+          "name": "Eel Garden",
+          "type": "Reef",
+          "depth": "5-20m",
+          "level": "beginner",
+          "blurb": "A sandy amphitheatre where hundreds of garden eels sway in formation below a pretty coral entrance channel."
+        },
+        {
+          "name": "The Islands",
+          "type": "Reef",
+          "depth": "8-18m",
+          "level": "beginner",
+          "blurb": "A maze of hard-coral pinnacles and swim-through lagoons south of town — arguably Dahab's prettiest coral dive."
+        },
+        {
+          "name": "Gabr el Bint",
+          "type": "Wall",
+          "depth": "10-30m",
+          "level": "intermediate",
+          "blurb": "A remote fan-coral wall reached by boat or camel along the coast, rewarding the trek with pristine gorgonians."
+        }
+      ],
+      "description": "Dahab is the Red Sea at its most relaxed: a small Sinai town on the Gulf of Aqaba where nearly everything is dived from the beach. Gear up, wade in, and you're on the Canyon's glowing cavern, Lighthouse's critter-rich house reef or the Blue Hole via the Bells. Water stays calm and clear most of the year, winters run cooler, and a serious technical community pushes the deep lines. Ideal for low-stress repetitive diving, training and long stays.",
+      "slug": "dahab",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Hurghada & El Gouna",
+      "country": "Egypt",
+      "region": "Red Sea / Egypt",
+      "coordinates": {
+        "lat": 27.2579,
+        "lng": 33.8116
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly",
+      "access": "day-boat / liveaboard",
+      "best_months": "Apr-Jun & Sep-Nov",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "resident reef fish, moray eels, blue-spotted rays; quiet reefs and occasional dolphins in the lagoons",
+          "conditions": "coolest water, frequent northerly wind and choppy crossings; sheltered sites stay diveable and shallow viz can be superb",
+          "visibility_m": 20
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "reef fish dense on nearshore reefs, Napoleon wrasse, big morays; little pelagic action",
+          "conditions": "coldest month at 21-22C, windy with surface chop; outer reefs like Careless often blown out",
+          "visibility_m": 20
+        },
+        "Mar": {
+          "rating": "Good",
+          "marine_life": "reefs waking up, spinner dolphins returning to Shaab El Erg, eagle rays passing the walls",
+          "conditions": "water warming, winds easing but still gusty spells; clear water on calm days",
+          "visibility_m": 25
+        },
+        "Apr": {
+          "rating": "Peak",
+          "marine_life": "spinner dolphins reliable, turtles, schooling snapper and fusiliers thickening on the pinnacles",
+          "conditions": "calm, predictable seas and light wind; comfortable crossings to Abu Nuhas",
+          "visibility_m": 25
+        },
+        "May": {
+          "rating": "Peak",
+          "marine_life": "dolphins, grey reef and whitetip sharks patrolling Careless Reef, big jacks and barracuda",
+          "conditions": "flat seas, 25-26C water, excellent light; prime window for the wreck runs",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "reef sharks at the offshore pinnacles, tuna and trevally hunting, turtles nesting season",
+          "conditions": "warm settled summer sea, gentle breeze; long days ideal for two-tank wreck trips",
+          "visibility_m": 25
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "peak fish density on the reefs, occasional hammerhead in the blue off Careless and Umm Gamar",
+          "conditions": "hot topside, 28C water and mostly calm seas; some afternoon wind chop",
+          "visibility_m": 25
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "everything on the reef plus pelagics in deeper water; mild plankton haze feeds the food chain",
+          "conditions": "warmest water of the year at 28-29C; hot deck, easy diving, slightly softer viz",
+          "visibility_m": 20
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "sharks and jacks still active, dolphins daily, reef life at its densest after summer",
+          "conditions": "seas settle again, water still 28C, crowds thin; superb all-round conditions",
+          "visibility_m": 25
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "predators drawn in by baitfish, spinner dolphin pods, eagle rays over the plateaus",
+          "conditions": "calm seas, 27C water and some of the clearest viz of the year",
+          "visibility_m": 30
+        },
+        "Nov": {
+          "rating": "Peak",
+          "marine_life": "dolphins, Napoleon wrasse, hunting trevally; last of the warm-water pelagic action",
+          "conditions": "still 25C and mostly calm early month; wind builds late November",
+          "visibility_m": 30
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "reef life steady, dolphins sheltering in the lagoons; pelagics scarce",
+          "conditions": "cooling to 23C with windy days and winter chop; site choice shifts to sheltered reefs",
+          "visibility_m": 20
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 22,
+        "Feb": 21,
+        "Mar": 22,
+        "Apr": 23,
+        "May": 25,
+        "Jun": 27,
+        "Jul": 28,
+        "Aug": 29,
+        "Sep": 28,
+        "Oct": 27,
+        "Nov": 25,
+        "Dec": 23
+      },
+      "highlights": "Easy warm-water reef diving out of a big dive town, with the Giftun Island coral gardens, the four-wreck graveyard of Abu Nuhas and shark-patrolled offshore pinnacles all within day-boat range.",
+      "signature_species": [
+        "spinner dolphin",
+        "Napoleon wrasse",
+        "grey reef shark",
+        "giant moray",
+        "blue-spotted ribbontail ray",
+        "masked butterflyfish"
+      ],
+      "current_strength": "Moderate",
+      "currents": "Most Giftun-area reefs see gentle to moderate currents that suit relaxed drift dives. Exposed offshore pinnacles like Careless Reef and the northern tips of Umm Gamar can run stronger when the wind is up.",
+      "current_note": "mild on inshore reefs, stronger at exposed pinnacles",
+      "wetsuit": "3mm full in summer (Jun-Oct); 5mm in spring and autumn; 5-7mm with hood for 21-23C winter water (Dec-Mar)",
+      "dive_sites": [
+        {
+          "name": "Giannis D",
+          "type": "Wreck",
+          "depth": "6-27m",
+          "level": "intermediate",
+          "blurb": "Tilted Greek freighter on Abu Nuhas with an intact stern and a glassfish-filled engine room that makes one of the Red Sea's best easy penetrations."
+        },
+        {
+          "name": "Carnatic",
+          "type": "Wreck",
+          "depth": "17-27m",
+          "level": "intermediate",
+          "blurb": "An 1869 steam-sail ship whose exposed ribs are now sheathed in soft coral, the most atmospheric of the Abu Nuhas graveyard."
+        },
+        {
+          "name": "Chrisoula K",
+          "type": "Wreck",
+          "depth": "5-26m",
+          "level": "intermediate",
+          "blurb": "The 'tile wreck' of Abu Nuhas, a cargo ship still stacked with Italian floor tiles and riddled with swim-throughs."
+        },
+        {
+          "name": "Careless Reef",
+          "type": "Reef",
+          "depth": "14-40m",
+          "level": "advanced",
+          "blurb": "Twin pinnacles rising from open water an hour offshore, the area's most reliable spot for grey reef sharks and the odd hammerhead in the blue."
+        },
+        {
+          "name": "Umm Gamar",
+          "type": "Wall",
+          "depth": "10-30m",
+          "level": "intermediate",
+          "blurb": "Crescent island with a plateau of coral towers, a cavern swim-through at 28m and eagle rays cruising the drop-off."
+        },
+        {
+          "name": "Shaab El Erg (Dolphin House)",
+          "type": "Reef",
+          "depth": "5-22m",
+          "level": "beginner",
+          "blurb": "Horseshoe reef between Hurghada and El Gouna whose sheltered lagoon is a daytime rest stop for resident spinner dolphins."
+        },
+        {
+          "name": "Small Giftun",
+          "type": "Drift",
+          "depth": "10-30m",
+          "level": "intermediate",
+          "blurb": "Classic drift along a soft-coral wall on Giftun Island's east side, dense with fan corals, turtles and passing eagle rays."
+        }
+      ],
+      "description": "Hurghada is the Red Sea's workhorse dive hub, and it earns the traffic: warm water all year, 20-30m visibility, and day boats fanning out to the Giftun reefs, dolphin lagoons and the four-wreck graveyard at Abu Nuhas. Sheltered coral gardens make it a natural place to learn, while the Carnatic and Giannis D give wreck divers real substance. Winter brings wind and chop, so spring and autumn are the sweet spots.",
+      "slug": "hurghada-el-gouna",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Marsa Alam",
+      "country": "Egypt",
+      "region": "Red Sea / Egypt",
+      "coordinates": {
+        "lat": 25.07,
+        "lng": 34.89
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly bays to advanced offshore walls",
+      "access": "shore / day-boat / liveaboard",
+      "best_months": "Apr-May & Sep-Nov",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "Dugong and green turtles in the seagrass bays; hammerheads gathering at Daedalus for liveaboards",
+          "conditions": "Coolest water, windy with chop on offshore crossings; inshore viz at its annual peak",
+          "visibility_m": 30
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "Turtles and dugong inshore; big pelagic chances offshore for hardy divers",
+          "conditions": "Cool 22-23C water and brisk north winds; crystal winter visibility",
+          "visibility_m": 30
+        },
+        "Mar": {
+          "rating": "Good",
+          "marine_life": "Reef life waking up; turtles, napoleons and early manta sightings on outer reefs",
+          "conditions": "Winds easing, water still cool; long clear sightlines",
+          "visibility_m": 28
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "Spring pelagic pulse — oceanic whitetip and hammerhead encounters pick up offshore",
+          "conditions": "Warming, calmer seas open up Elphinstone and the far south",
+          "visibility_m": 25
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "Hammerheads schooling at Daedalus; spinner dolphins resident at Sataya and Samadai",
+          "conditions": "Calm, warm and comfortable — prime crossing weather",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Good",
+          "marine_life": "Dolphins, turtles and dense reef fish activity; mantas possible on outer walls",
+          "conditions": "Hot and settled, warm 27C water, viz softens slightly with plankton",
+          "visibility_m": 22
+        },
+        "Jul": {
+          "rating": "Good",
+          "marine_life": "Spinner dolphin pods at their most reliable; turtles nesting season inshore",
+          "conditions": "Very hot ashore, bathwater sea, flat mornings",
+          "visibility_m": 20
+        },
+        "Aug": {
+          "rating": "Good",
+          "marine_life": "Warmest water draws reef sharks, dolphins and rays; whitetips begin patrolling Elphinstone",
+          "conditions": "29C water and calm seas but the busiest reefs of the year",
+          "visibility_m": 20
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "Oceanic whitetips arriving at Elphinstone; dolphins, turtles and dugong all in play",
+          "conditions": "Warm water, mild wind, thinning crowds — the sweet spot begins",
+          "visibility_m": 25
+        },
+        "Oct": {
+          "rating": "Peak",
+          "marine_life": "Oceanic whitetip season in full swing on the offshore plateaus; hammerheads at Daedalus",
+          "conditions": "Warm 27-28C water, superb 30m+ visibility, settled seas",
+          "visibility_m": 30
+        },
+        "Nov": {
+          "rating": "Peak",
+          "marine_life": "Peak oceanic whitetip encounters at Elphinstone; dugong and turtles steady inshore",
+          "conditions": "Excellent viz, comfortable water, first north winds returning",
+          "visibility_m": 30
+        },
+        "Dec": {
+          "rating": "Good",
+          "marine_life": "Whitetips lingering offshore into early winter; seagrass bays busy with turtles",
+          "conditions": "Cooling water and breezier crossings; inshore diving stays easy and clear",
+          "visibility_m": 30
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 24,
+        "Feb": 23,
+        "Mar": 23,
+        "Apr": 24,
+        "May": 26,
+        "Jun": 27,
+        "Jul": 28,
+        "Aug": 29,
+        "Sep": 28,
+        "Oct": 28,
+        "Nov": 26,
+        "Dec": 25
+      },
+      "highlights": "Southern Red Sea base pairing easy fringing-reef shore diving and dugong seagrass bays with world-class pelagic walls — oceanic whitetips at Elphinstone from October to December, hammerheads at Daedalus and spinner dolphin pods at Sataya.",
+      "signature_species": [
+        "Oceanic whitetip shark",
+        "Scalloped hammerhead",
+        "Dugong",
+        "Green turtle",
+        "Spinner dolphin",
+        "Napoleon wrasse"
+      ],
+      "current_strength": "Moderate",
+      "currents": "Sheltered bays and house reefs sit in near-still water, but the offshore reefs are another game: Elphinstone and Daedalus run north-south currents that can exceed a knot, with occasional downcurrents off the plateau edges.",
+      "current_note": "calm inshore; strong, shifting drift on offshore pinnacles",
+      "wetsuit": "3mm full Jun-Sep; 5mm in spring and autumn; 7mm or hooded 5mm Dec-Mar",
+      "dive_sites": [
+        {
+          "name": "Elphinstone Reef",
+          "type": "Wall",
+          "depth": "15-40m",
+          "level": "advanced",
+          "blurb": "Open-sea finger reef whose north and south plateaus draw patrolling oceanic whitetip sharks from October to December."
+        },
+        {
+          "name": "Abu Dabbab",
+          "type": "Reef",
+          "depth": "5-18m",
+          "level": "beginner",
+          "blurb": "Sandy seagrass bay entered from the beach, famous for resident green turtles and rare dugong encounters."
+        },
+        {
+          "name": "Sha'ab Samadai (Dolphin House)",
+          "type": "Reef",
+          "depth": "5-20m",
+          "level": "beginner",
+          "blurb": "Horseshoe lagoon sheltering a resident spinner dolphin pod, with sunlit caverns threading the reef's south side."
+        },
+        {
+          "name": "Sataya (Dolphin Reef)",
+          "type": "Reef",
+          "depth": "5-25m",
+          "level": "intermediate",
+          "blurb": "Vast crescent reef in the deep south where big spinner dolphin pods rest inside the lagoon."
+        },
+        {
+          "name": "Daedalus Reef",
+          "type": "Wall",
+          "depth": "20-40m",
+          "level": "advanced",
+          "blurb": "Remote liveaboard-range pinnacle ringed by sheer walls, the Red Sea's most reliable stop for schooling scalloped hammerheads."
+        },
+        {
+          "name": "Marsa Shagra House Reef",
+          "type": "Reef",
+          "depth": "5-25m",
+          "level": "beginner",
+          "blurb": "Classic fringing-reef shore dive with twin entry channels and unhurried coral gardens divable on your own schedule."
+        }
+      ],
+      "description": "Marsa Alam is the quieter, wilder counterweight to Egypt's northern resorts: a long ribbon of fringing reef where you can shore dive straight off the sand, then boat out to serious pelagic theatre. Elphinstone's plateaus host oceanic whitetips from October to December, Abu Dabbab's seagrass shelters dugong and green turtles, and Daedalus delivers hammerheads in liveaboard range. It suits relaxed reef divers and shark-focused drift specialists alike — often on the same trip.",
+      "slug": "marsa-alam",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
+    },
+    {
+      "name": "Sharm El Sheikh",
+      "country": "Egypt",
+      "region": "Red Sea / Egypt",
+      "coordinates": {
+        "lat": 27.9158,
+        "lng": 34.33
+      },
+      "water_type": "tropical",
+      "difficulty": "beginner-friendly to advanced",
+      "access": "day-boat / shore",
+      "best_months": "Jun-Sep",
+      "monthly": {
+        "Jan": {
+          "rating": "Shoulder",
+          "marine_life": "reef sharks and eagle rays cruise the walls; dense anthias and reef fish year-round",
+          "conditions": "coolest water (22-23C) and windy days in the Straits; calm days bring superb 30m+ viz",
+          "visibility_m": 25
+        },
+        "Feb": {
+          "rating": "Shoulder",
+          "marine_life": "manta and eagle ray sightings pick up; reef life steady, few schooling events",
+          "conditions": "chilly water, occasional northerly blows cancel Tiran runs; clear blue water",
+          "visibility_m": 25
+        },
+        "Mar": {
+          "rating": "Shoulder",
+          "marine_life": "spring plankton pulses draw rays and the odd whale shark rumour; turtles active",
+          "conditions": "water warming from 22C; some plankton haze and breezy crossings",
+          "visibility_m": 22
+        },
+        "Apr": {
+          "rating": "Good",
+          "marine_life": "reef fish spawning begins, turtles and Napoleon wrasse reliable at Ras Mohammed",
+          "conditions": "settling seas, 23-24C water, viz cleaning up nicely",
+          "visibility_m": 25
+        },
+        "May": {
+          "rating": "Good",
+          "marine_life": "first snapper and batfish aggregations gather off Shark Reef; pelagics returning",
+          "conditions": "calm, warm (25C) and clear — a comfortable pre-peak window",
+          "visibility_m": 25
+        },
+        "Jun": {
+          "rating": "Peak",
+          "marine_life": "summer schooling season kicks off: bohar snapper, unicornfish and barracuda mass at Ras Mohammed",
+          "conditions": "flat seas, 27C water, excellent 30m visibility",
+          "visibility_m": 28
+        },
+        "Jul": {
+          "rating": "Peak",
+          "marine_life": "spawning aggregations at their densest — snapper walls, batfish, jacks; hammerheads off Jackson Reef",
+          "conditions": "hot, glassy summer conditions and the year's best visibility",
+          "visibility_m": 30
+        },
+        "Aug": {
+          "rating": "Peak",
+          "marine_life": "schooling fish still thick; scalloped hammerheads in the blue at Tiran",
+          "conditions": "warmest water (28-29C), calm crossings to Tiran and the Thistlegorm",
+          "visibility_m": 30
+        },
+        "Sep": {
+          "rating": "Peak",
+          "marine_life": "late-season schools linger, hammerhead chances remain, reef life in full colour",
+          "conditions": "warm 28C water, settled seas and thinner boat traffic",
+          "visibility_m": 28
+        },
+        "Oct": {
+          "rating": "Good",
+          "marine_life": "aggregations disperse but eagle rays, turtles and reef sharks are dependable",
+          "conditions": "superb autumn window — 27C water, calm and clear",
+          "visibility_m": 25
+        },
+        "Nov": {
+          "rating": "Good",
+          "marine_life": "healthy reef action, Napoleon wrasse and grey reef sharks on the points",
+          "conditions": "cooling to 25C, mostly calm with very clean water",
+          "visibility_m": 25
+        },
+        "Dec": {
+          "rating": "Shoulder",
+          "marine_life": "quieter blue water; anthias-covered walls and macro carry the diving",
+          "conditions": "24C dropping, occasional wind chop, winter clarity on calm days",
+          "visibility_m": 25
+        }
+      },
+      "monthly_temp_c": {
+        "Jan": 23,
+        "Feb": 22,
+        "Mar": 22,
+        "Apr": 24,
+        "May": 25,
+        "Jun": 27,
+        "Jul": 28,
+        "Aug": 29,
+        "Sep": 28,
+        "Oct": 27,
+        "Nov": 25,
+        "Dec": 24
+      },
+      "highlights": "Anthias-carpeted walls at Ras Mohammed, the summer spawning aggregations of snapper and barracuda off Shark and Yolanda reefs, drift dives across the four Tiran reefs and day trips to the SS Thistlegorm.",
+      "signature_species": [
+        "Twin-spot (bohar) snapper",
+        "Scalloped hammerhead",
+        "Napoleon wrasse",
+        "Sea goldie (anthias)",
+        "Circular batfish",
+        "Great barracuda"
+      ],
+      "current_strength": "Moderate",
+      "currents": "Tidal currents funnel through the Straits of Tiran and sweep the exposed corners of Ras Mohammed, so most signature dives are run as drifts. Sheltered local bays and house reefs stay gentle, which is why the area trains so many new divers.",
+      "current_note": "strong on Tiran and Ras Mohammed corners; sheltered bays stay calm",
+      "wetsuit": "3mm full Jun-Oct; 5mm in spring and autumn; 7mm (or 5mm + hooded vest) Dec-Mar at 22-23C",
+      "dive_sites": [
+        {
+          "name": "Shark & Yolanda Reef",
+          "type": "Wall",
+          "depth": "10-40m",
+          "level": "intermediate",
+          "blurb": "Twin pinnacles at the tip of Ras Mohammed where summer snapper and barracuda schools swirl above the scattered toilet-bowl cargo of the Yolanda."
+        },
+        {
+          "name": "SS Thistlegorm",
+          "type": "Wreck",
+          "depth": "16-32m",
+          "level": "advanced",
+          "blurb": "WWII supply ship whose holds are still packed with motorbikes, trucks and rifles — the Red Sea's most famous wreck, reached on early-start day boats."
+        },
+        {
+          "name": "Jackson Reef",
+          "type": "Drift",
+          "depth": "5-40m",
+          "level": "advanced",
+          "blurb": "Northernmost Tiran reef with a soft-coral 'garden' and summer scalloped hammerheads hanging off its exposed north face."
+        },
+        {
+          "name": "Thomas Reef",
+          "type": "Wall",
+          "depth": "12-35m",
+          "level": "advanced",
+          "blurb": "Smallest and prettiest of the Tiran four, ringed by soft corals and gorgonians, with a deep canyon that draws technical divers."
+        },
+        {
+          "name": "Ras Um Sid",
+          "type": "Wall",
+          "depth": "12-30m",
+          "level": "beginner",
+          "blurb": "Local headland wall famous for one of the Red Sea's densest gorgonian fan forests, diveable from shore or boat in most weather."
+        },
+        {
+          "name": "Jackfish Alley",
+          "type": "Drift",
+          "depth": "10-24m",
+          "level": "intermediate",
+          "blurb": "Sandy-alley drift inside Ras Mohammed with swim-through caves at the start and resting whitetips and jacks along the run."
+        }
+      ],
+      "description": "Sharm El Sheikh is the northern Red Sea's classic dive hub, where desert mountains drop into anthias-carpeted walls at Ras Mohammed and tidal drifts sweep the four reefs of the Tiran Strait. June to September brings the famous spawning aggregations — snapper, batfish and barracuda massing off Shark and Yolanda — while day boats reach the SS Thistlegorm. Diveable all twelve months, it pairs easy training bays with genuinely big-animal drift diving.",
+      "slug": "sharm-el-sheikh",
+      "data_confidence": "researched",
+      "last_verified": "2026-07",
+      "dive_sites_researched": true
     }
   ]
 }
