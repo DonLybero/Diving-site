@@ -311,6 +311,14 @@
   .dest-photo img{width:100%;height:100%;object-fit:cover}
   .artrow-thumb.dest-thumb{background:#dbe9ec}
   .artrow-thumb.dest-thumb img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
+  /* Marine thumb: fish icon sits behind, revealed only if the photo fails */
+  .marine-thumb{position:relative}
+  .marine-thumb .ico{position:absolute;font-size:34px;color:var(--muted);z-index:0}
+  .marine-thumb img{position:relative;z-index:1}
+  .marine-hero{margin:0 0 16px;border-radius:12px;overflow:hidden;background:#dbe9ec}
+  .marine-hero img{display:block;width:100%;height:300px;object-fit:cover}
+  .marine-hero figcaption{font-family:var(--mono);font-size:.6rem;color:var(--muted);padding:6px 10px;background:#f3f9f9}
+  @media(max-width:640px){.marine-hero img{height:200px}}
   .tipbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:14px 0;max-width:80ch}
   .tipbox ul{margin:8px 0 0;padding-left:20px;line-height:1.7;font-size:.9rem}
   .channels{margin:14px 0}
@@ -1605,13 +1613,25 @@ function marineWhereWhen(kws){
   return rows;
 }
 function openMarineArticle(slug){ MARINE_SLUG=slug; showTab('marine'); renderMarine(); window.scrollTo({top:0,behavior:'smooth'}); }
+/* Marine thumbnails/hero: show the baked photo, falling back to the fish icon
+   (which sits behind the image) if the URL ever fails to load. */
+function marineThumb(e){
+  return '<div class="artrow-thumb dest-thumb marine-thumb">'+
+    (e.image?'<img src="'+e.image+'" alt="'+escq(e.title)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+
+    '<i class="ico" data-ico="fish"></i></div>';
+}
+function marineHero(e){
+  if(!e.image) return '';
+  return '<figure class="marine-hero"><img src="'+e.image+'" alt="'+escq(e.title)+'" onerror="this.closest(\'figure\').style.display=\'none\'">'+
+    (e.image_credit?'<figcaption>'+e.image_credit+'</figcaption>':'')+'</figure>';
+}
 function renderMarine(){
   var body=document.getElementById('marineBody'); if(!body) return;
   if(!MARINE.length){ body.innerHTML='<div class="empty">Marine life guide could not load.</div>'; return; }
   if(!MARINE_SLUG){
     var rows=MARINE.map(function(e){
       return '<a class="artrow" href="#" onclick="openMarineArticle(\''+escq(e.slug)+'\');return false;">'+
-        '<div class="artrow-thumb"><i class="ico" data-ico="fish" style="font-size:34px;color:var(--muted)"></i></div>'+
+        marineThumb(e)+
         '<div><div class="kicker">Marine life</div><h4>'+e.title+'</h4><p>'+(e.hero_sub||'')+'</p></div></a>';
     }).join('');
     body.innerHTML='<div class="article" style="grid-column:1/-1">'+
@@ -1644,6 +1664,7 @@ function renderMarine(){
     }
     var tips=(e.tips&&e.tips.length)?'<div class="tipbox"><b>Good to know</b><ul>'+e.tips.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>':'';
     body.innerHTML='<div class="article" style="grid-column:1/-1">'+back+
+      marineHero(e)+
       '<h2 style="margin:6px 0 2px">'+e.title+'</h2><p class="sec-sub" style="margin-top:0">'+(e.hero_sub||'')+'</p>'+
       '<p class="gentry-review" style="max-width:80ch">'+e.intro+'</p>'+ww+beyond+tips+back+'</div>';
   }

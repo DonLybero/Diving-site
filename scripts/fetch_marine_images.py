@@ -1,0 +1,144 @@
+#!/usr/bin/env python3
+"""Bake one representative photo per marine-life encounter into marine-life.json.
+
+Source: Wikimedia Commons keyword search (freely licensed, no API key). Each
+encounter gets hand-tuned queries so we land on a strong, correctly-licensed
+landscape photo of the animal in the water rather than a map or a specimen shot.
+
+Writes onto each experience:
+  image         — ready-to-use image URL (~960px wide)
+  image_credit  — human-readable attribution string
+  image_source  — "wikimedia"
+
+Idempotent: skips experiences that already have `image` unless --force is passed.
+Runs on machines with internet (GitHub Actions) — this repo's sandbox is
+firewalled, so run it via .github/workflows/fetch-marine-images.yml.
+
+Usage: python3 scripts/fetch_marine_images.py [--force]
+"""
+import json, os, sys, re, time, urllib.parse, urllib.request
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(ROOT, "marine-life.json")
+FORCE = "--force" in sys.argv
+UA = "DiveSZNImageFetcher/1.0 (https://github.com/DonLybero/Diving-site; static-site image baker)"
+
+# File names that are clearly not what we want.
+BAD_HINT = re.compile(r"(locator|location|map|flag|coat_of_arms|logo|icon|diagram|"
+                      r"\.svg$|chart|seal|emblem|stamp|banknote|coin_|drawing|"
+                      r"illustration|painting|sketch|diagram|distribution|range_|"
+                      r"skeleton|jaw|teeth|specimen|museum|dissect|embryo|fossil|"
+                      r"anatomy|logo|sign_|graph)", re.I)
+
+# Titles that ARE what we want; used to rank hits (in the water beats a beach).
+GOOD_HINT = re.compile(r"(underwater|diver|diving|snorkel|school|shoal|baitball|"
+                       r"bait_ball|swimming|reef|ocean|sea|cage)", re.I)
+
+# Hand-tuned Commons search queries per encounter slug (best first).
+QUERIES = {
+    "whale-sharks":      ["Whale shark diving", "Rhincodon typus underwater",
+                          "Whale shark snorkeler", "Whale shark Ningaloo"],
+    "manta-rays":        ["Manta ray diving", "Manta birostris underwater",
+                          "Reef manta ray", "Manta ray cleaning station"],
+    "hammerhead-sharks": ["Scalloped hammerhead school", "Hammerhead shark underwater",
+                          "Sphyrna lewini", "Hammerhead sharks Galapagos"],
+    "thresher-sharks":   ["Thresher shark underwater", "Pelagic thresher shark",
+                          "Alopias pelagicus", "Thresher shark Malapascua"],
+    "mola-mola":         ["Mola mola diver", "Ocean sunfish underwater",
+                          "Mola mola Bali", "Ocean sunfish Mola"],
+    "sea-lions":         ["Sea lion underwater diver", "California sea lion underwater",
+                          "Sea lion snorkeling", "Sea lions swimming underwater"],
+    "sardine-run":       ["Sardine run baitball", "Sardine run South Africa",
+                          "Bait ball sardine", "Sardine run dolphins"],
+    "great-white":       ["Great white shark", "Carcharodon carcharias",
+                          "Great white shark cage diving", "White shark underwater"],
+    "orcas":             ["Orca underwater", "Killer whale Norway underwater",
+                          "Orcas swimming", "Orca pod ocean"],
+}
+
+
+def _get(url, tries=3):
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=25) as r:
+                return json.load(r)
+        except Exception as e:
+            if i == tries - 1:
+                print(f"    ! request failed ({e})")
+                return None
+            time.sleep(1.5 * (i + 1))
+    return None
+
+
+def strip_html(s):
+    return re.sub(r"<[^>]+>", "", s or "").strip()
+
+
+def _commons_pick(titles):
+    for i in range(0, len(titles), 10):
+        batch = "|".join(titles[i:i + 10])
+        info = ("https://commons.wikimedia.org/w/api.php?action=query&format=json"
+                "&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=960&titles="
+                + urllib.parse.quote(batch))
+        j = _get(info)
+        pages = (((j or {}).get("query") or {}).get("pages")) or {}
+        for page in pages.values():
+            ii = (page.get("imageinfo") or [{}])[0]
+            if ii.get("mime", "") not in ("image/jpeg", "image/png"):
+                continue
+            w, h = ii.get("width", 0), ii.get("height", 0)
+            if w < 800 or h < 450 or h > w * 1.1:      # need a usable landscape photo
+                continue
+            img = ii.get("thumburl") or ii.get("url")
+            if not img:
+                continue
+            meta = ii.get("extmetadata") or {}
+            artist = strip_html((meta.get("Artist") or {}).get("value", "")) or "Wikimedia Commons"
+            lic = strip_html((meta.get("LicenseShortName") or {}).get("value", ""))
+            credit = f"Photo: {artist}" + (f" ({lic})" if lic else "") + " via Wikimedia Commons"
+            return {"image": img, "image_credit": credit, "image_source": "wikimedia"}
+    return None
+
+
+def from_commons(slug, title):
+    queries = QUERIES.get(slug) or [title]
+    for q in queries:
+        url = ("https://commons.wikimedia.org/w/api.php?action=query&format=json"
+               "&list=search&srnamespace=6&srlimit=25&srsearch=" + urllib.parse.quote(q))
+        j = _get(url)
+        hits = (((j or {}).get("query") or {}).get("search")) or []
+        titles = [h["title"] for h in hits if not BAD_HINT.search(h.get("title", ""))]
+        titles.sort(key=lambda t: 0 if GOOD_HINT.search(t) else 1)
+        got = _commons_pick(titles)
+        if got:
+            print(f"    · via \"{q}\"")
+            return got
+    return None
+
+
+def main():
+    with open(DATA, encoding="utf-8") as f:
+        data = json.load(f)
+    exps = data.get("experiences", [])
+    print(f"{len(exps)} encounters · force: {FORCE}")
+    updated = 0
+    for e in exps:
+        name = e.get("title", e.get("slug", ""))
+        if e.get("image") and not FORCE:
+            continue
+        got = from_commons(e.get("slug", ""), name)
+        if got:
+            e.update(got)
+            updated += 1
+            print(f"  ✓ {name:<22} {got['image'][:70]}")
+        else:
+            print(f"  · {name:<22} no image found")
+        time.sleep(0.3)
+    with open(DATA, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"Done — {updated} encounter image(s) written to marine-life.json")
+
+
+if __name__ == "__main__":
+    main()

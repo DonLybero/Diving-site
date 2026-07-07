@@ -67,6 +67,12 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:24px 16px;l
 .artlist a{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;padding:16px 0;text-decoration:none;color:var(--ink)}
 .artlist .th{height:88px;border-radius:8px;background:#f4f8f8;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .artlist .th img{max-width:92%;max-height:92%;object-fit:contain}
+.artlist .th.photo{background:#dbe9ec}
+.artlist .th.photo img{max-width:none;max-height:none;width:100%;height:100%;object-fit:cover}
+.marine-hero{margin:0 0 18px;border-radius:12px;overflow:hidden;background:#dbe9ec}
+.marine-hero img{display:block;width:100%;height:320px;object-fit:cover}
+.marine-hero figcaption{font-family:var(--mono);font-size:.6rem;color:var(--muted);padding:6px 10px;background:#f3f9f9}
+@media(max-width:640px){.marine-hero img{height:210px}}
 .artlist h3{margin:2px 0 4px;font-size:1.2rem}.artlist p{margin:0;color:var(--muted);font-size:.86rem}
 .gentry{display:grid;grid-template-columns:230px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
 .gphoto{height:170px;border-radius:10px;background:#f4f8f8;display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -582,7 +588,13 @@ def marine_article(exp, dests, prefix="../"):
                   f'<div style="overflow:auto"><table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead>'
                   f'<tbody>{brows}</tbody></table></div>')
     tips = "".join(f"<li>{esc(t)}</li>" for t in exp.get("tips", []))
-    inner = (f'<p class="greview" style="max-width:78ch">{esc(exp["intro"])}</p>'
+    if exp.get("image"):
+        cap = f'<figcaption>{esc(exp["image_credit"])}</figcaption>' if exp.get("image_credit") else ""
+        hero_img = f'<figure class="marine-hero"><img src="{esc(exp["image"])}" alt="{esc(exp["title"])}">{cap}</figure>'
+    else:
+        hero_img = ""
+    inner = (hero_img
+             + f'<p class="greview" style="max-width:78ch">{esc(exp["intro"])}</p>'
              + table + beyond
              + (f'<div class="tipbox"><b>Good to know</b><ul>{tips}</ul></div>' if tips else "")
              + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>')
@@ -592,10 +604,14 @@ def marine_article(exp, dests, prefix="../"):
 
 def marine_index_page(prefix="../"):
     url = BASE + "marine-life/index.html"
-    rows = "".join(
-        f'<li><a href="{e["slug"]}.html"><div class="th"></div>'
-        f'<div><h3>{esc(e["title"])}</h3><p>{esc(e.get("hero_sub",""))}</p></div></a></li>'
-        for e in EXPERIENCES)
+    def _mrow(e):
+        if e.get("image"):
+            th = '<div class="th photo"><img src="%s" alt="" loading="lazy"></div>' % esc(e["image"])
+        else:
+            th = '<div class="th"></div>'
+        return ('<li><a href="%s.html">%s<div><h3>%s</h3><p>%s</p></div></a></li>'
+                % (e["slug"], th, esc(e["title"]), esc(e.get("hero_sub", ""))))
+    rows = "".join(_mrow(e) for e in EXPERIENCES)
     desc = ("Diving with the ocean's headline animals — whale sharks, manta rays, hammerheads, mola mola, "
             "sea lions and more — with the best destinations and seasons for each.")
     inner = (f'<p class="greview" style="max-width:80ch">The ocean&#8217;s headline encounters — what they are, and '
