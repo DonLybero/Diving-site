@@ -78,7 +78,10 @@
         "Hammerheads spook easily — control your bubbles, stay still, and let the school come to you.",
         "The big schools live on current-swept seamounts, so good drift and negative-entry skills matter.",
         "Dawn and the cooler upwelling months are usually when the numbers peak."
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28223125973%29.jpeg/960px-Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28223125973%29.jpeg",
+      "image_credit": "Photo: Kris Mikael Krister (CC BY 3.0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     },
     {
       "slug": "thresher-sharks",
@@ -256,7 +259,10 @@
         "Orcas are wild and unpredictable — encounters are never guaranteed and hinge on weather and prey.",
         "The good orca water is genuinely cold — a proper drysuit or thick hooded exposure kit is essential.",
         "Give them space and let them choose the interaction — it's their ocean."
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Kiska_Orcinus_orca_killer_whale_Marineland_Niagara_Falls_Canada_2022-08-15_2.13.30PM.jpg/960px-Kiska_Orcinus_orca_killer_whale_Marineland_Niagara_Falls_Canada_2022-08-15_2.13.30PM.jpg",
+      "image_credit": "Photo: A Streetcar Named Keanu (CC0) via Wikimedia Commons",
+      "image_source": "wikimedia"
     }
   ]
 }
