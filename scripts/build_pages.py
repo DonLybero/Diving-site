@@ -156,7 +156,9 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .dregion{margin:26px 0 8px}
 .dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
 .bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
-.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px 24px;margin-top:14px;align-items:start}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+.gbcol{min-width:0}
+.gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin:4px 0 2px}
 .gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
 .gbrow b{display:block;font-weight:600;font-size:.92rem}
 .gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
@@ -796,27 +798,32 @@ def gear_index_page(gear, prefix="../"):
         rows += (f'<li><a href="{slug}.html"><div class="th">{thumb}</div>'
                  f'<div><h3>{esc(cat.get("title") or ("Top " + cat["category"]))}</h3>'
                  f'<p>{esc(teaser)}</p></div></a></li>')
-    brands, seen = {}, set()
+    bsec = ""
     for cat in gear["categories"]:
+        brands, seen, n = {}, set(), 0
         for it in _cat_items(cat):
             if it["name"] in seen:
                 continue
             seen.add(it["name"])
+            n += 1
             lo = min((o["price_usd"] for o in it.get("options") or []), default=None)
-            brands.setdefault(brand_of(it["name"]), []).append((it, cat["category"], lo))
-    bsec = ""
-    for b in sorted(brands):
-        brows = ""
-        for it, catname, lo in sorted(brands[b], key=lambda t: t[0]["name"]):
-            img = it.get("image") or ""
-            th = (f'<span class="gbthumb"><img src="{prefix}{esc(img)}" alt="" loading="lazy"></span>'
-                  if img else '<span class="gbthumb"></span>')
-            frm = f" · from {fmtp(lo)}" if lo is not None else ""
-            brows += (f'<a class="gbrow" href="{gear_slug(it["name"])}.html">{th}'
-                      f'<span><b>{esc(it["name"])}</b><small>{esc(catname.rstrip("s"))}{frm}</small></span></a>')
-        bsec += (f'<section class="dregion"><h3><span>{esc(b)}</span>'
-                 f'<span class="bcount">{len(brands[b])} product{"" if len(brands[b]) == 1 else "s"}</span></h3>'
-                 f'<div class="gbgrid">{brows}</div></section>')
+            brands.setdefault(brand_of(it["name"]), []).append((it, lo))
+        cols = ""
+        for b in sorted(brands):
+            brows = ""
+            for it, lo in sorted(brands[b], key=lambda t: t[0]["name"]):
+                img = it.get("image") or ""
+                th = (f'<span class="gbthumb"><img src="{prefix}{esc(img)}" alt="" loading="lazy"></span>'
+                      if img else '<span class="gbthumb"></span>')
+                frm = f"from {fmtp(lo)}" if lo is not None else ""
+                brows += (f'<a class="gbrow" href="{gear_slug(it["name"])}.html">{th}'
+                          f'<span><b>{esc(it["name"])}</b><small>{frm}</small></span></a>')
+            cols += f'<div class="gbcol"><b class="gbrand">{esc(b)}</b>{brows}</div>'
+        gslug = gear_slug(cat["category"])
+        bsec += (f'<section class="dregion"><h3><span>{esc(cat["category"])}</span>'
+                 f'<span class="bcount">{n} product{"" if n == 1 else "s"} · '
+                 f'<a href="{gslug}.html" style="color:var(--accent)">guide &rarr;</a></span></h3>'
+                 f'<div class="gbgrid">{cols}</div></section>')
     desc = "DiveSZN scuba gear — every product under its brand, plus ranked buyer's guides for masks, fins, regulators, BCDs, dive computers and wetsuits."
     inner = (f'<p class="greview" style="max-width:80ch">{esc(gear.get("intro") or "")}</p>'
              f'{bsec}'

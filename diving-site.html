@@ -1018,8 +1018,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .bcountry a:hover{color:var(--accent)}
   .bthumb{flex:0 0 38px;width:38px;height:28px;border-radius:6px;overflow:hidden;background:#dbe9ec}
   .bthumb img{width:100%;height:100%;object-fit:cover;display:block}
-  /* gear-by-brand directory */
-  .gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px 24px;margin-top:14px;align-items:start}
+  /* gear directory: type -> brand -> products */
+  .gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+  .gbcol{min-width:0}
+  .gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:4px 0 2px}
   .gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
   .gbrow b{display:block;font-weight:600;font-size:.92rem}
   .gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
@@ -2735,26 +2737,27 @@ function brandOf(name){
   return name.split(' ')[0];
 }
 function gearBrandDir(){
-  var seen={}, brands={};
-  GEAR_GUIDE.categories.forEach(function(c){
+  return GEAR_GUIDE.categories.map(function(c){
+    var seen={}, brands={}, n=0;
     var all=(c.items||[]).slice();
     (c.thickness_groups||[]).forEach(function(gr){all=all.concat(gr.items||[]);});
     all.forEach(function(it){
-      if(seen[it.name])return; seen[it.name]=1;
+      if(seen[it.name])return; seen[it.name]=1; n++;
       var b=brandOf(it.name);
       var lo=null; (it.options||[]).forEach(function(o){if(lo===null||o.price_usd<lo)lo=o.price_usd;});
-      (brands[b]=brands[b]||[]).push({name:it.name,image:it.image,cat:c.category,lo:lo});
+      (brands[b]=brands[b]||[]).push({name:it.name,image:it.image,lo:lo});
     });
-  });
-  return Object.keys(brands).sort().map(function(b){
-    var rows=brands[b].sort(function(a,x){return a.name<x.name?-1:1;}).map(function(it){
-      var th=it.image?'<span class="gbthumb"><img src="'+it.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'"></span>':'<span class="gbthumb"></span>';
-      return '<a class="gbrow" href="gear/'+gearSlug(it.name)+'.html">'+th+
-        '<span><b>'+it.name+'</b><small>'+it.cat.replace(/s$/,'')+(it.lo!==null?' · from '+fmtPrice(it.lo):'')+'</small></span></a>';
+    var cols=Object.keys(brands).sort().map(function(b){
+      var rows=brands[b].sort(function(a,x){return a.name<x.name?-1:1;}).map(function(it){
+        var th=it.image?'<span class="gbthumb"><img src="'+it.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'"></span>':'<span class="gbthumb"></span>';
+        return '<a class="gbrow" href="gear/'+gearSlug(it.name)+'.html">'+th+
+          '<span><b>'+it.name+'</b><small>'+(it.lo!==null?'from '+fmtPrice(it.lo):'')+'</small></span></a>';
+      }).join('');
+      return '<div class="gbcol"><b class="gbrand">'+b+'</b>'+rows+'</div>';
     }).join('');
-    return '<section class="dregion"><h3><span>'+b+'</span>'+
-      '<span class="bcount">'+brands[b].length+' product'+(brands[b].length===1?'':'s')+'</span></h3>'+
-      '<div class="gbgrid">'+rows+'</div></section>';
+    return '<section class="dregion"><h3><span>'+c.category+'</span>'+
+      '<span class="bcount">'+n+' product'+(n===1?'':'s')+' · <a href="#" onclick="openGearArticle(\''+c.category+'\');return false;" style="color:var(--accent)">guide &rarr;</a></span></h3>'+
+      '<div class="gbgrid">'+cols+'</div></section>';
   }).join('');
 }
 function renderGear(){
