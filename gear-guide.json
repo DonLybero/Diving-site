@@ -536,7 +536,8 @@
       "Buckles": "Skirt-mounted push-button, fold flat for packing",
       "Weight": "About 190 g",
       "Colors": "Black, white, clear, blue, green skirt options"
-     }
+     },
+     "image": "assets/gear/studio/aqua-lung-plazma.jpg"
     },
     {
      "rank": 12,
@@ -567,7 +568,8 @@
       "Skirt": "Hypoallergenic silicone, medium-narrow fit",
       "Buckles": "Micrometric, skirt-mounted flexible tabs",
       "Colors": "Black, blue, white, mirrored-lens version"
-     }
+     },
+     "image": "assets/gear/studio/cressi-calibro.jpg"
     },
     {
      "rank": 13,
@@ -598,7 +600,8 @@
       "Skirt": "Soft silicone molded to the lens",
       "Fit": "Narrow to medium faces",
       "Buckles": "Skirt-mounted, fold-flat for packing"
-     }
+     },
+     "image": "assets/gear/studio/beuchat-maxlux-s.jpg"
     },
     {
      "rank": 14,
@@ -629,7 +632,8 @@
       "Volume": "Low",
       "Buckles": "Quick-release on stainless steel rollers",
       "Included": "Spare neoprene strap, rigid case with clip"
-     }
+     },
+     "image": "assets/gear/studio/apeks-vx1.jpg"
     },
     {
      "rank": 15,
@@ -660,7 +664,8 @@
       "Skirt": "Freedom Fit II silicone with ridged seal zones",
       "Strap": "Five-position quick-adjust buckles",
       "Prescription ready": "Yes, corrective lenses -1.0 to -8.0"
-     }
+     },
+     "image": "assets/gear/studio/tusa-paragon.jpg"
     },
     {
      "rank": 16,
@@ -691,7 +696,8 @@
       "Frame": "Rigid low-profile frame",
       "Buckles": "Quick-adjust swivel buckles",
       "Colors": "Black, white"
-     }
+     },
+     "image": "assets/gear/studio/hollis-m3.jpg"
     }
    ],
    "title": "Top Masks in 2026",
@@ -1085,7 +1091,8 @@
       "Stiffness options": "Regular Flex (yellow, blue); Firm Flex (black)",
       "Blade": "Spring-effect side rails, flexible spoon tip",
       "Straps": "Quick-adjust buckles; spring straps available"
-     }
+     },
+     "image": "assets/gear/studio/beuchat-powerjet.jpg"
     },
     {
      "rank": 12,
@@ -1117,7 +1124,8 @@
       "Strap": "Heavy-duty bungee with pull loop",
       "Sizes": "XS to XL",
       "Colors": "Black, White"
-     }
+     },
+     "image": "assets/gear/studio/scubapro-seawing-supernova.jpg"
     },
     {
      "rank": 13,
@@ -1148,7 +1156,8 @@
       "Straps": "Stainless steel spring straps included",
       "Foot pocket": "Oversized, fits rock boots and drysuit boots",
       "Sizes": "S to XXL"
-     }
+     },
+     "image": "assets/gear/studio/hollis-f1-bat-fin.jpg"
     }
    ],
    "title": "Top Fins in 2026",
@@ -1507,7 +1516,8 @@
       "Connection": "DIN 300 bar or yoke 232 bar",
       "Cold water": "Anti-icing design for water below 10 degrees C",
       "Origin": "Made in France, individually bench-tested"
-     }
+     },
+     "image": "assets/gear/studio/beuchat-vr-300.jpg"
     },
     {
      "rank": 12,
@@ -1538,7 +1548,8 @@
       "Ports": "2 HP (7/16\" UNF), 4 MP (3/8\" UNF)",
       "Weight": "905 g (DIN), 1041 g (yoke)",
       "Connection": "DIN or yoke, same price"
-     }
+     },
+     "image": "assets/gear/studio/apeks-xl4.jpg"
     },
     {
      "rank": 13,
@@ -1570,7 +1581,8 @@
       "Nitrox": "Up to 40% out of the box",
       "Service interval": "2 years or 300 dives",
       "Connection": "Yoke or DIN"
-     }
+     },
+     "image": "assets/gear/studio/atomic-aquatics-b2.jpg"
     },
     {
      "rank": 14,
@@ -1597,7 +1609,8 @@
       "Hose": "Braided flex hose",
       "Connection": "Yoke or DIN 232 bar versions",
       "Cold water rated": "Yes"
-     }
+     },
+     "image": "assets/gear/studio/zeagle-f8.jpg"
     }
    ],
    "title": "Top Regulators in 2026",
@@ -1970,7 +1983,8 @@
       "Dump valves": "3 pull dumps",
       "Lift": "Approx. 110-170 N by size",
       "Weight": "About 3.5 kg (size M)"
-     }
+     },
+     "image": "assets/gear/studio/mares-prestige-sls.jpg"
     },
     {
      "rank": 12,
@@ -2029,7 +2043,8 @@
       "Attachment points": "8 rings (6 aluminium)",
       "Backpack": "Rigid, foam-padded lumbar wrap",
       "Sizes": "XS to XL"
-     }
+     },
+     "image": "assets/gear/studio/beuchat-masterlift-x-air-comfort.jpg"
     },
     {
      "rank": 14,
@@ -2061,7 +2076,8 @@
       "Weight system": "Mechanically latching releasable pockets",
       "Inflator": "Sold separately (standard, SS1 or Ai power inflator)",
       "Sizes": "S, M, L, XL"
-     }
+     },
+     "image": "assets/gear/studio/atomic-aquatics-bc1.jpg"
     },
     {
      "rank": 15,
@@ -2088,7 +2104,8 @@
       "Backplate": "Lightweight aluminum alloy",
       "Harness": "Deluxe adjustable, quick-release buckles",
       "Tank compatibility": "Single cylinders up to 15 L, 140-240 mm diameter"
-     }
+     },
+     "image": "assets/gear/studio/xdeep-ghost-deluxe.jpg"
     },
     {
      "rank": 16,
@@ -2496,7 +2513,8 @@
       "Connectivity": "Bluetooth to DiverLog+ app",
       "Battery": "User-replaceable coin cell",
       "Depth rating": "100 m"
-     }
+     },
+     "image": "assets/gear/studio/aqualung-i470tc.jpg"
     },
     {
      "rank": 12,
@@ -2528,7 +2546,8 @@
       "Battery": "Rechargeable, about 30 h diving per charge",
       "Connectivity": "Bluetooth to Mares app",
       "Depth rating": "120 m"
-     }
+     },
+     "image": "assets/gear/studio/mares-sirius.jpg"
     },
     {
      "rank": 13,
@@ -2560,7 +2579,8 @@
       "Depth rating": "260 m",
       "Modes": "OC recreational, OC technical, CC bailout, gauge",
       "Build": "Titanium construction with armored casing"
-     }
+     },
+     "image": "assets/gear/studio/shearwater-perdix-3.jpg"
     },
     {
      "rank": 14,
@@ -2592,7 +2612,8 @@
       "Depth rating": "200 m",
       "Modes": "OC recreational, OC technical, CC bailout, gauge",
       "Weight": "120 g"
-     }
+     },
+     "image": "assets/gear/studio/shearwater-teric.jpg"
     },
     {
      "rank": 15,
@@ -2624,7 +2645,8 @@
       "Depth rating": "120 m",
       "Modes": "Air, nitrox (up to 3 gases), gauge",
       "Weight": "100 g"
-     }
+     },
+     "image": "assets/gear/studio/shearwater-tern-tx.jpg"
     },
     {
      "rank": 16,
@@ -2651,7 +2673,8 @@
       "Depth rating": "100 m",
       "Modes": "Single-gas, multi-gas (trimix), sidemount, gauge",
       "Extras": "Surface GPS with route tracking, integrated LED flashlight"
-     }
+     },
+     "image": "assets/gear/studio/suunto-nautic.jpg"
     },
     {
      "rank": 17,
@@ -2683,7 +2706,8 @@
       "Depth rating": "200 m (20 ATM)",
       "Modes": "Single-gas, multi-gas (nitrox, trimix), CCR, gauge",
       "Extras": "DiveView maps, surface GPS, diver-to-diver messaging, integrated dive light"
-     }
+     },
+     "image": "assets/gear/studio/garmin-descent-x50i.jpg"
     },
     {
      "rank": 18,
@@ -2715,7 +2739,8 @@
       "Depth rating": "300 m in gauge mode",
       "Air integration": "Optional Smart+ Pro wireless transmitter",
       "Connectivity": "Bluetooth LE log download (iOS, Android, PC/Mac)"
-     }
+     },
+     "image": "assets/gear/studio/scubapro-galileo-3-g3.jpg"
     }
    ],
    "title": "Top Dive Computers in 2026",
@@ -3054,7 +3079,8 @@
         "Water range": "25-29°C",
         "Cut": "Women's cut (men's version available)",
         "Sizes": "Women's XS-XL"
-       }
+       },
+       "image": "assets/gear/studio/waterproof-w30-2-5mm-women-s.jpg"
       }
      ]
     },
@@ -3359,7 +3385,8 @@
         "Entry": "Back zip with solo-reach leash",
         "Water range": "Warm water, about 24-29 degrees C",
         "Other versions": "5 mm overall, 7 mm hooded"
-       }
+       },
+       "image": "assets/gear/studio/beuchat-optima-2.jpg"
       },
       {
        "name": "Waterproof W5 3.5mm",
@@ -3390,7 +3417,8 @@
         "Water range": "21-27°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's S-3XL+, women's XS-XL+"
-       }
+       },
+       "image": "assets/gear/studio/waterproof-w5-3-5mm.jpg"
       },
       {
        "name": "Pinnacle Cruiser 3mm",
@@ -3421,7 +3449,8 @@
         "Water range": "22-28°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's XS-3XL, women's XS-XL"
-       }
+       },
+       "image": "assets/gear/studio/pinnacle-cruiser-3mm.jpg"
       }
      ]
     },
@@ -3731,7 +3760,8 @@
         "Stretch zones": "Flex System 2, Free Flex Zone shoulders",
         "Reinforcements": "Supratex 2 knees, Black Shield panels",
         "Entry": "Back zip with dorsal seal"
-       }
+       },
+       "image": "assets/gear/studio/beuchat-focea-comfort-6.jpg"
       },
       {
        "name": "Bare Velocity Ultra 2.0 5mm",
@@ -3762,7 +3792,8 @@
         "Water range": "16-24°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's S-3XL (plus short/tall), women's 4-16"
-       }
+       },
+       "image": "assets/gear/studio/bare-velocity-ultra-2-0-5mm.jpg"
       },
       {
        "name": "Fourth Element Xenos ARC 5mm",
@@ -3788,7 +3819,8 @@
         "Water range": "16-24°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's XS-XXXL, women's 6-18"
-       }
+       },
+       "image": "assets/gear/studio/fourth-element-xenos-arc-5mm.jpg"
       },
       {
        "name": "O'Neill Epic 4/3mm",
@@ -3814,7 +3846,8 @@
         "Water range": "15-21°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's S-3XL (plus tall), women's 4-14"
-       }
+       },
+       "image": "assets/gear/studio/o-neill-epic-4-3mm.jpg"
       }
      ]
     },
@@ -4125,7 +4158,8 @@
         "Water range": "8-16°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's S-5XL (plus short/tall), women's 4-16"
-       }
+       },
+       "image": "assets/gear/studio/henderson-aqua-lock-7mm.jpg"
       }
      ]
     }
