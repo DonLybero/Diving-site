@@ -1417,7 +1417,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 </div>
 
 <div class="hero-band" id="heroBand">
-  <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-dive-poster.jpg"></video>
+  <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="https://donlybero.github.io/Diving-site/assets/video/hero-dive-poster.jpg"></video>
   <div class="hbm hbm-coral"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <div class="hbm hbm-sage"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <div class="hbm hbm-lilac"><video muted autoplay loop playsinline preload="metadata"></video></div>
@@ -1972,7 +1972,7 @@ function seasonRibbon(d){
 /* Hero photo credit is tooltip-only (small info mark) — no visible photographer
    name on the main page while keeping CC attribution accessible. */
 var HERO_PICKS=["Fernando de Noronha","Sipadan Island","Maldives","Palau","Raja Ampat","Great Barrier Reef","Bonaire"];
-var CREW_IMG={src:'assets/crew.jpg', credit:''};
+var CREW_IMG={src:'https://donlybero.github.io/Diving-site/assets/crew.jpg', credit:''};
 function crewScroll(){
   var el=document.getElementById('crewSlide'); if(!el) return;
   var r=el.getBoundingClientRect(), vh=window.innerHeight||800;
@@ -1980,8 +1980,8 @@ function crewScroll(){
   p=Math.max(0,Math.min(1,p));
   el.style.setProperty('--cp',p.toFixed(3));
 }
-var HERO_VIDEO={webm:'assets/video/hero-dive.webm', mp4:'assets/video/hero-dive.mp4',
-  poster:'assets/video/hero-dive-poster.jpg', credit:'Video via Pexels'};
+var HERO_VIDEO={webm:'https://donlybero.github.io/Diving-site/assets/video/hero-dive.webm', mp4:'https://donlybero.github.io/Diving-site/assets/video/hero-dive.mp4',
+  poster:'https://donlybero.github.io/Diving-site/assets/video/hero-dive-poster.jpg', credit:'Video via Pexels'};
 function feedVideo(v){
   v.innerHTML='<source src="'+HERO_VIDEO.webm+'" type="video/webm">'+
               '<source src="'+HERO_VIDEO.mp4+'" type="video/mp4">';

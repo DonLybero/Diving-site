@@ -43,6 +43,12 @@ def _absolutize_images(node):
 if gear:
     _absolutize_images(gear)
 
+# The hero video, its poster and the crew photo are repo-relative in index.html;
+# rewrite them to the live site for the same reason as the gear photos.
+html = html.replace("'assets/video/", "'" + ASSET_BASE + "assets/video/")
+html = html.replace('poster="assets/video/', 'poster="' + ASSET_BASE + 'assets/video/')
+html = html.replace("'assets/crew.jpg'", "'" + ASSET_BASE + "assets/crew.jpg'")
+
 # 1) inline Leaflet CSS
 html = html.replace('<link rel="stylesheet" href="vendor/leaflet.css">',
                     '<style>\n'+lcss+'\n</style>')
