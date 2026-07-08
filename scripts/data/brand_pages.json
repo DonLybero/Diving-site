@@ -485,14 +485,14 @@
   "shopify": true
  },
  "Mares Sirius": {
-  "url": "https://www.mares.com/en/sirius-414145",
+  "url": "https://www.houseofscuba.com/products/mares-sirius-scuba-diving-wrist-computer",
   "colors_hint": [],
-  "shopify": false
+  "shopify": true
  },
  "Mares Prestige SLS": {
-  "url": "https://www.mares.com/en/prestige-sls-man-5",
+  "url": "https://www.houseofscuba.com/products/bcd232",
   "colors_hint": [],
-  "shopify": false
+  "shopify": true
  },
  "Cressi Ace": {
   "url": "https://cressiamerica.com/collections/back-inflation-bcds",
@@ -560,14 +560,14 @@
   "shopify": false
  },
  "Bare Velocity Ultra 2.0 5mm": {
-  "url": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/5mm-velocity-ultra-full-2-0/",
+  "url": "https://www.houseofscuba.com/products/wet339",
   "colors_hint": [],
   "shopify": true
  },
  "Henderson Aqua Lock 7mm": {
-  "url": "https://hendersonusa.com/aqualock-promo/",
+  "url": "https://www.houseofscuba.com/products/wet390",
   "colors_hint": [],
-  "shopify": false
+  "shopify": true
  },
  "Fourth Element Xenos ARC 5mm": {
   "url": "https://fourthelement.com/product/mens-xenos-arc-5mm-wetsuit/",
@@ -575,19 +575,19 @@
   "shopify": false
  },
  "Waterproof W5 3.5mm": {
-  "url": "https://waterproof-usa.com/products/wetsuits/w5/",
+  "url": "https://decadiving.com/products/waterproof-w5-mens-3-5mm-fullsuit",
   "colors_hint": [],
   "shopify": true
  },
  "Waterproof W30 2.5mm Women's": {
-  "url": "https://waterproof-usa.com/products/wetsuits/w30/",
+  "url": "https://divecatalog.com/products/waterproof-w30-fullsuit-2-5mm-womens",
   "colors_hint": [],
   "shopify": true
  },
  "Pinnacle Cruiser 3mm": {
-  "url": "http://www.pinnacleaquatics.com/cruiser",
+  "url": "https://www.wetsuitwearhouse.com/products/ws51mbk-3mm-mens-pinnacle-cruiser-wetsuit",
   "colors_hint": [],
-  "shopify": false
+  "shopify": true
  },
  "O'Neill Epic 4/3mm": {
   "url": "https://us.oneill.com/products/4212b-gr2-epic-4-3-bz-full",
@@ -595,9 +595,9 @@
   "shopify": true
  },
  "Scubapro Seawing Supernova": {
-  "url": "https://scubapro.johnsonoutdoors.com/us/shop/fins/seawing-supernova-fin",
+  "url": "https://www.houseofscuba.com/products/fin305",
   "colors_hint": [],
-  "shopify": false
+  "shopify": true
  },
  "Scubapro Galileo 3 (G3)": {
   "url": "https://scubapro.johnsonoutdoors.com/us/shop/computers/wrist-computers/galileo-3-g3-wrist-dive-computer",
@@ -645,12 +645,12 @@
   "shopify": false
  },
  "xDeep Ghost Deluxe": {
-  "url": "https://www.xdeep.eu/lightweight-traveler-scuba-bcd-ghost-bc-system-pr-51.html",
+  "url": "https://tecdivegear.com/products/xdeep-nx-ghost-deluxe-scuba-diving-bcd",
   "colors_hint": [],
-  "shopify": false
+  "shopify": true
  },
  "Sherwood Avid CQR-3": {
-  "url": "https://www.sherwoodscuba.com/products/buoyancy-compensators/products/~743-Avid",
+  "url": "https://www.houseofscuba.com/products/bcd124",
   "colors_hint": [],
   "shopify": true
  }
