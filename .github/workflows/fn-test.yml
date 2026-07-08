@@ -1,0 +1,77 @@
+name: Functional probe (click carousel arrows on live site)
+
+on:
+  push:
+    paths:
+      - '.github/fn-test-request'
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null
+          npm i playwright@1.49.0 >/dev/null
+          npx playwright install --with-deps chromium >/dev/null
+      - name: Probe
+        run: |
+          mkdir -p probe
+          cat > probe.mjs <<'EOP'
+          import { chromium } from 'playwright';
+          import fs from 'fs';
+          const b = await chromium.launch();
+          const out = [];
+          for (const w of [1920, 1440]) {
+            const pg = await b.newPage({viewport:{width:w, height:900}});
+            await pg.goto('https://donlybero.github.io/Diving-site/', {waitUntil:'networkidle', timeout:60000});
+            await pg.waitForTimeout(3500);
+            const r = await pg.evaluate(() => {
+              const res = {};
+              const c = document.getElementById('dcar');
+              const btn = document.querySelector('.dcar-arr.next');
+              res.hasBtn = !!btn; res.hasC = !!c;
+              if (btn) {
+                const bb = btn.getBoundingClientRect();
+                res.btnRect = {x: Math.round(bb.x), y: Math.round(bb.y), w: Math.round(bb.width), h: Math.round(bb.height)};
+                // scroll button into view first
+                btn.scrollIntoView({block:'center'});
+              }
+              return res;
+            });
+            await pg.waitForTimeout(600);
+            const r2 = await pg.evaluate(() => {
+              const btn = document.querySelector('.dcar-arr.next');
+              const bb = btn.getBoundingClientRect();
+              const el = document.elementFromPoint(bb.x + bb.width/2, bb.y + bb.height/2);
+              return {atPoint: el ? (el.className + ' <' + el.tagName + '>') : 'none',
+                      before: document.getElementById('dcar').scrollLeft};
+            });
+            try { await pg.click('.dcar-arr.next', {timeout: 3000}); } catch (e) { r2.clickError = e.message.slice(0,120); }
+            await pg.waitForTimeout(1200);
+            r2.after = await pg.evaluate(() => document.getElementById('dcar').scrollLeft);
+            r2.typeofStep = await pg.evaluate(() => typeof window.dcarStep);
+            out.push({w, ...r, ...r2});
+            await pg.close();
+          }
+          fs.writeFileSync('probe/result.json', JSON.stringify(out, null, 1));
+          console.log(JSON.stringify(out, null, 1));
+          await b.close();
+          EOP
+          node probe.mjs
+      - name: Push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan fn-test
+          git rm -rf --cached . >/dev/null
+          git add -f probe
+          git commit -m "Functional probe results"
+          git push -f origin fn-test
