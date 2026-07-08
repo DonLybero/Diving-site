@@ -199,7 +199,7 @@ def hero(cut):
     if not bbox:
         return None
     cut = cut.crop(bbox)
-    scale = min(W * 0.36 / cut.width, H * 0.74 / cut.height)
+    scale = min(W * 0.34 / cut.width, H * 0.62 / cut.height)
     main = cut.resize((max(1, int(cut.width * scale)), max(1, int(cut.height * scale))), Image.LANCZOS)
 
     canvas = Image.new("RGB", HERO, (243, 244, 245))
@@ -211,11 +211,11 @@ def hero(cut):
 
     ghost = main.resize((int(main.width * 0.82), int(main.height * 0.82)), Image.LANCZOS)
     g_alpha = ghost.split()[-1].point(lambda v: int(v * 0.14))
-    gy = (H - ghost.height) // 2 + 10
+    gy = (H - ghost.height) // 2 - int(H * 0.04)
     for gx in (int(W * 0.045) - ghost.width // 2, int(W * 0.955) - ghost.width // 2):
         canvas.paste(ghost.convert("RGB"), (gx, gy), g_alpha)
 
-    x, y = (W - main.width) // 2, (H - main.height) // 2 - 10
+    x, y = (W - main.width) // 2, (H - main.height) // 2 - int(H * 0.07)
     alpha = main.split()[-1]
     ambient = Image.new("L", HERO, 0)
     ambient.paste(alpha, (x, y + 28))

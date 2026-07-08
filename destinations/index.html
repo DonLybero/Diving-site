@@ -63,11 +63,17 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .honest li b{color:var(--ink)}
 .gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
 .gitem-kicker a{color:var(--accent);text-decoration:none}
-.gitem-photo{margin:10px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
-.gitem-photo img{display:block;width:100%;max-height:600px;object-fit:contain}
+.gitem-stage{position:relative;margin:10px 0 26px}
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+.gitem-photo img{display:block;width:100%;max-height:640px;object-fit:cover}
 .gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
-  border:1px solid var(--line);border-top:none;border-radius:0 0 16px 16px;padding:16px 22px;margin:0 0 26px;
-  box-shadow:0 14px 30px -22px rgba(13,60,70,.25)}
+  border:1px solid var(--line);border-radius:16px;padding:16px 22px;
+  position:absolute;left:18px;right:18px;bottom:18px;
+  box-shadow:0 18px 40px -20px rgba(13,60,70,.35)}
+@media(max-width:760px){
+  .gitem-banner{position:static;margin-top:-30px;left:auto;right:auto;width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+  .gitem-photo img{object-fit:contain}
+}
 .gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
 .gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
 .gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
