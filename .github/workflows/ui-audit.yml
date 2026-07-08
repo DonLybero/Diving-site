@@ -51,6 +51,26 @@ jobs:
             await pg.close();
             console.log('shot', label);
           }
+          async function probe(pg){
+            const data = await pg.evaluate(() => {
+              const out = {band: null, tiles: []};
+              const b = document.getElementById('heroBand');
+              if (b) { const r = b.getBoundingClientRect(); out.band = {w: r.width, h: r.height}; }
+              document.querySelectorAll('.hb-tile').forEach(t => {
+                const r = t.getBoundingClientRect();
+                const cs = getComputedStyle(t);
+                const v = t.querySelector('video');
+                const vr = v ? v.getBoundingClientRect() : null;
+                const vcs = v ? getComputedStyle(v) : null;
+                out.tiles.push({cls: t.className, rect: {x: r.x, y: r.y, w: r.width, h: r.height},
+                  cssW: cs.width, cssH: cs.height, anim: cs.animationName, transform: cs.transform,
+                  vid: vr ? {w: vr.width, h: vr.height, ready: v.readyState, err: v.error ? v.error.code : 0,
+                             posterShown: !v.currentTime} : null, vidCss: vcs ? {w: vcs.width, h: vcs.height} : null});
+              });
+              return out;
+            });
+            fs.writeFileSync('shots/tiles.json', JSON.stringify(data, null, 1));
+          }
           const views = [
             ['home', null],
             ['planner', async p=>{await p.click('#tab-planner'); await p.waitForTimeout(900);}],
@@ -71,6 +91,13 @@ jobs:
             ['marine-article', async p=>{await p.click('#tab-marine'); await p.waitForTimeout(500);
               await p.click('#view-marine .artrow'); await p.waitForTimeout(900);}],
           ];
+          {
+            const pg = await b.newPage({viewport:{width:1280, height:900}});
+            await pg.goto('http://localhost:8080/index.html');
+            await pg.waitForTimeout(3000);
+            await probe(pg);
+            await pg.close();
+          }
           for (const [name, steps] of views){
             await shoot(`d-${name}`, 1280, steps);
             await shoot(`m-${name}`, 390, steps);
