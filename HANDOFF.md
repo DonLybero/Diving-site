@@ -126,8 +126,12 @@ score = rating_base (Peak 100 / Good 72 / Shoulder 48 / Low 22; Closed excluded)
   photos (Wikimedia/Pexels, openly licensed, attribution kept in data), the
   Gear guide (researched picks, indicative prices, real retailer links, local
   images), the 12 monthly Destination articles (computed live from real data).
-- **SAMPLE:** Liveaboard Safaris listings only. (The old sample Reviews and
-  Dive Centres sections were **removed** 2026-07.)
+- **SAMPLE:** none left on the published site. The old sample Reviews,
+  Dive Centres and Liveaboard Safaris sections were **removed** 2026-07; the
+  Trip Planner tab is an honest "coming soon" placeholder until a real tool
+  ships. (Only sample strings left in code: the `GEAR` fallback array in
+  `index.html`, shown solely if `gear-guide.json` fails to load and labelled
+  "sample price" when it does.)
 
 ## 7. Monetization (wired, awaiting owner sign-ups)
 
@@ -216,11 +220,12 @@ brings the consent banner). Wiring is ready to add once the owner picks a tool
 and supplies the site token.
 
 ### Near-term engineering
-- Replace sample Liveaboard Safaris with researched listings (match the gear
-  guide's data standard) or clearly label as illustrative.
 - Quarterly gear-price refresh ritual (prices are indicative, drift over time).
 
 ### Mid-term product
+- Trip Planner tab: replace the "coming soon" placeholder with a real
+  end-to-end trip tool (it superseded the removed sample Safaris listings;
+  any listings it shows must match the gear guide's research standard).
 - Wetsuit-by-temperature recommender (data already has per-month temps +
   wetsuit field — pure front-end feature).
 - Destination comparison view (pick 2–3, compare months side by side).
