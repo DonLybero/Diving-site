@@ -1,0 +1,50 @@
+name: Fetch specific product photos (one-off fix)
+
+on:
+  push:
+    paths:
+      - '.github/photo-fix-request'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch product images via Shopify JSON
+        run: |
+          mkdir -p brandfix
+          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+          fetch_one() {
+            slug="$1"; url="$2"
+            echo "== $slug"
+            j=$(curl -sL --max-time 60 -A "$UA" -H "Accept: application/json" "${url}.json")
+            img=$(echo "$j" | python3 -c "
+          import json,sys
+          try:
+            d=json.load(sys.stdin)
+            imgs=d['product']['images']
+            imgs=[i for i in imgs if (i.get('width') or 0)>=500]
+            print(imgs[0]['src'] if imgs else '')
+          except Exception as e:
+            print('')
+          ")
+            echo "  img: $img"
+            [ -n "$img" ] && curl -sL --max-time 120 -A "$UA" -o "brandfix/${slug}.img" "$img" && file "brandfix/${slug}.img"
+          }
+          fetch_one cressi-ace "https://dipndive.com/products/cressi-ace-bcd"
+          fetch_one mares-prestige-sls "https://beachcitiescuba.com/products/mares-prestige-sls-bcd"
+          fetch_one o-neill-epic-4-3mm "https://us.oneill.com/products/4212b-gr2-epic-4-3-bz-full"
+          fetch_one waterproof-w30-2-5mm-women-s "https://floridadivecompany.com/products/waterproof-w30-womens-sport-series-fullsuit-2-5mm"
+          ls -la brandfix
+      - name: Push to orphan branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan brand-photos-fix
+          git rm -rf --cached . >/dev/null
+          git add -f brandfix
+          git commit -m "Product photo fixes (automated)"
+          git push -f origin brand-photos-fix
