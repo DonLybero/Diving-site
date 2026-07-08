@@ -124,6 +124,14 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .greview{color:#33565e;line-height:1.7;margin:0 0 10px}
 .lede{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.45;color:var(--ink);max-width:34ch;margin:14px 0;letter-spacing:-.01em}
 .lede::after{content:"";display:block;width:64px;height:3px;border-radius:2px;margin-top:16px;background:linear-gradient(90deg,var(--accent),transparent)}
+.gverdict{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin:26px 0 30px}
+@media(max-width:640px){.gverdict{grid-template-columns:1fr;gap:20px}}
+.gverdict h3{font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);border-top:1px solid var(--line);padding-top:12px;margin:0 0 10px;font-weight:600}
+.gverdict .gv-con h3{color:var(--muted)}
+.gverdict ul{margin:0;padding:0;list-style:none}
+.gverdict li{padding:8px 0;border-bottom:1px solid var(--line);font-size:.9rem;line-height:1.55;color:var(--ink)}
+.gverdict li:last-child{border-bottom:none}
 .gspecs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:0 0 12px}
 .gspecs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
 .gspecs dt{color:var(--muted);font-size:.6rem;text-transform:uppercase;letter-spacing:.5px;margin:0}
