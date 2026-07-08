@@ -3465,7 +3465,9 @@
    "dive_sites_researched": "2026-07",
    "description": "Far out in the open Pacific south of Baja California, the volcanic Revillagigedo islands are reached only by liveaboard, and their giant oceanic mantas rank among the friendliest anywhere, banking within arm's reach at El Boiler's cleaning station. Roca Partida's lone spire stacks whitetips on its ledges while hammerheads, silvertips, and curious bottlenose dolphins patrol midwater. Humpback song fills winter dives. Surge and current across exposed pinnacles keep this advanced territory; the season runs November through May.",
    "underwater": "These are open-Pacific dives on volcanic pinnacles with nothing but blue in every direction: you hold position in the surge at El Boiler while giant mantas bank overhead, or hang off Roca Partida, a lone twin-peaked spire with whitetips stacked on its ledges between 10 and 40 m. Water runs from 23°C with thermoclines in the cool months to 28°C late in the season, so the 5mm suit earns its keep, and in winter humpback song carries through entire dives.",
-   "encounters": "Giant oceanic mantas define Socorro, circling the cleaning stations and banking within arm's reach at El Boiler. Scalloped hammerheads school in the blue, silvertips, Galapagos and silky sharks cross The Canyon, and playful bottlenose dolphins seek divers out at Cabo Pearce. In the winter months humpbacks pass singing, and the first whale sharks appear when boats return in November."
+   "encounters": "Giant oceanic mantas define Socorro, circling the cleaning stations and banking within arm's reach at El Boiler. Scalloped hammerheads school in the blue, silvertips, Galapagos and silky sharks cross The Canyon, and playful bottlenose dolphins seek divers out at Cabo Pearce. In the winter months humpbacks pass singing, and the first whale sharks appear when boats return in November.",
+   "image_dest": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Declaratoria_Oficial_de_Patrimonio_Mundial_del_Archipi%C3%A9lago_de_Revillagigedo.jpg/960px-Declaratoria_Oficial_de_Patrimonio_Mundial_del_Archipi%C3%A9lago_de_Revillagigedo.jpg",
+   "image_dest_credit": "Photo: Presidencia de la República Mexicana (CC BY 2.0) via Wikimedia Commons"
   },
   {
    "name": "Sea of Cortez",
@@ -4225,7 +4227,9 @@
    "dive_sites_researched": "2026-07",
    "description": "Granite sets the Seychelles apart from anywhere else in the Indian Ocean: ancient boulders tumble off the beaches and continue underwater as sculpted reefs, swim-throughs and fish-wrapped pinnacles. Inner-island diving off Mahe and Praslin stays mild and beginner-friendly, with hawksbill turtles and reef sharks routine and whale sharks cruising through from August to November. The remote outer atolls, Aldabra among them, are liveaboard territory for divers chasing wilder, sharkier walls.",
    "underwater": "Granite gives these dives their shape: rounded boulders stack into swim-throughs and pinnacles, from Brissare Rocks at 8-16 m to the exposed drop-offs and caves of Trois Bancs at 40 m. Inner-island sites off Mahe stay mild and forgiving, with 26-30°C water and visibility that can stretch past 30 m in the calm transition months. Shark Bank's offshore plateau carries some current, the Ennerdale's tanker hull rests near 30 m, and L'Ilot comes alive after dark.",
-   "encounters": "Whale sharks are the headline, feeding on plankton blooms off the Amirantes in April and May and returning in force to northwest Mahe from August into November, when manta numbers climb too. Hawksbill turtles are dependable year-round — Ave Maria Rocks near La Digue is the reliable spot — with nesting through the northwest monsoon. Reef and nurse sharks, eagle rays and dense reef fish fill the granite between."
+   "encounters": "Whale sharks are the headline, feeding on plankton blooms off the Amirantes in April and May and returning in force to northwest Mahe from August into November, when manta numbers climb too. Hawksbill turtles are dependable year-round — Ave Maria Rocks near La Digue is the reliable spot — with nesting through the northwest monsoon. Reef and nurse sharks, eagle rays and dense reef fish fill the granite between.",
+   "image_dest": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Anse_Lazio_Praslin_4.jpg/960px-Anse_Lazio_Praslin_4.jpg",
+   "image_dest_credit": "Photo: Radosław Botev (CC BY 3.0 pl) via Wikimedia Commons"
   },
   {
    "name": "Aliwal Shoal",
@@ -4589,7 +4593,9 @@
    "image_source": "wikimedia",
    "description": "Australia's largest fringing reef hugs the Western Australian coast, its coral gardens starting a short swim off the beach. The diving runs mellow and animal-rich: manta rays circling the cleaning station at Gulliver's, reef sharks queuing over cabbage coral at Asho's Gap, green turtles napping in limestone swim-throughs. The Exmouth Navy Pier alone justifies the trip, its pylons crowded with wobbegongs and frogfish, and whale sharks gather along the reef from March to July.",
    "underwater": "Most of Ningaloo's diving sits shallow, 6 to 18 m over limestone craters, tunnels and cabbage-coral plateaus, with a gentle lagoon and only the tidal passes needing slack-water timing. You weave The Labyrinth's swim-throughs past napping green turtles, hang at Gulliver's cleaning station as mantas circle in, and pick frogfish and wobbegongs off the pylons of the Exmouth Navy Pier. Water runs 22°C in the austral winter to 29°C in summer, with visibility past 30 m on the calmest days.",
-   "encounters": "Whale sharks headline from March to July, drawn in by the coral spawn, and as their season fades humpback whales stream past the reef into October. Mantas and green turtles are the year-round constants, reef sharks queue over the cabbage coral at Asho's Gap, and the Muiron Islands add rays and the occasional dugong. Turtles nest on the beaches through the summer months."
+   "encounters": "Whale sharks headline from March to July, drawn in by the coral spawn, and as their season fades humpback whales stream past the reef into October. Mantas and green turtles are the year-round constants, reef sharks queue over the cabbage coral at Asho's Gap, and the Muiron Islands add rays and the occasional dugong. Turtles nest on the beaches through the summer months.",
+   "image_dest": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/00_1870_Ningaloo_Reef_-_Westaustralien.jpg/960px-00_1870_Ningaloo_Reef_-_Westaustralien.jpg",
+   "image_dest_credit": "Photo: W. Bulach (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
    "name": "Gozo & Malta",
@@ -5718,7 +5724,9 @@
    "dive_sites_researched": "2026-07",
    "description": "Nine volcanic Portuguese islands anchor the mid-Atlantic, and their diving happens in serious blue water. Offshore seamounts like Princess Alice Bank draw squadrons of mobula rays, Condor Bank stages blue and mako shark encounters, and visibility routinely tops 30 meters. Currents run strong out there, so the banks are boat trips for confident divers, though coastal wrecks and Terceira's anchor graveyard offer easier days. July through October is prime season.",
    "underwater": "This is blue-water diving: a long run offshore, a descent down the line with nothing but open Atlantic beneath you, and a seamount top materialising at 35-40 m in visibility that regularly hits 30 m. Currents push hard across Princess Alice and Condor Banks, so you hold the line and let the pelagics come to you. Water climbs from 17°C in winter to about 24°C in late summer; closer in, the Dori wreck at 9-20 m and Terceira's anchor-strewn seabed give calmer, shallower days.",
-   "encounters": "Summer is the show: blue sharks work the banks from July into September, makos join them at Condor, and squadrons of mobula rays school over Ambrósio and Princess Alice from late spring. Mola mola drift past the seamounts and dolphins often escort the boats out. Through winter the pelagics thin, leaving groupers and morays holding the volcanic ledges."
+   "encounters": "Summer is the show: blue sharks work the banks from July into September, makos join them at Condor, and squadrons of mobula rays school over Ambrósio and Princess Alice from late spring. Mola mola drift past the seamounts and dolphins often escort the boats out. Through winter the pelagics thin, leaving groupers and morays holding the volcanic ledges.",
+   "image_dest": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Caldeira_das_Sete_Cidades%2C_A%C3%A7ores_2.jpg/960px-Caldeira_das_Sete_Cidades%2C_A%C3%A7ores_2.jpg",
+   "image_dest_credit": "Photo: StephanieSilvaabreu (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
    "name": "Lundy Island",
@@ -8466,7 +8474,9 @@
    "dive_sites_researched": "2026-07",
    "description": "Marooned in the middle of the Sulu Sea, Tubbataha's two atolls and Jessie Beazley Reef are reachable only by liveaboard during a short season peaking April to June. The reward is the Philippines at full strength: sheer walls draped in gorgonians, grey reef and whitetip sharks on nearly every dive, and mantas or hammerheads riding the flow at sites like Washing Machine. Strong oceanic currents make drift diving the norm, so this UNESCO park suits experienced divers.",
    "underwater": "You dive Tubbataha from a live boat, drifting sheer walls that drop out of sight into the Sulu Sea, gorgonians fanning off faces like Amos Rock and current running on nearly every dive. The water is 28-30°C, and in the April-May heart of the short season visibility stretches past 30 m over the drop-offs. Sites shift character fast: a broad plateau where whitetips rest at Shark Airport, confused water at the aptly named Washing Machine, wreckage swarmed by snappers at Delsan.",
-   "encounters": "Grey reef and whitetip sharks are on nearly every dive — resting in ranks on Shark Airport's plateau, stacking in the current along the walls — while mantas glide past and jacks spin into tornadoes overhead. Washing Machine's unpredictable water can pull in hammerheads, whale sharks cruise the reef edges in the calm mid-season, and the Malayan Wreck adds nudibranchs and crustaceans for macro eyes."
+   "encounters": "Grey reef and whitetip sharks are on nearly every dive — resting in ranks on Shark Airport's plateau, stacking in the current along the walls — while mantas glide past and jacks spin into tornadoes overhead. Washing Machine's unpredictable water can pull in hammerheads, whale sharks cruise the reef edges in the calm mid-season, and the Malayan Wreck adds nudibranchs and crustaceans for macro eyes.",
+   "image_dest": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tubbataha_Reefs_Natural_Park-112047.jpg/960px-Tubbataha_Reefs_Natural_Park-112047.jpg",
+   "image_dest_credit": "Photo: Ron Van Oers (CC BY-SA 3.0 igo) via Wikimedia Commons"
   },
   {
    "name": "Lord Howe Island",
@@ -11580,7 +11590,9 @@
    "image_source": "wikimedia",
    "description": "Panama's UNESCO-listed Coiba National Park protects a swath of eastern Pacific where cool, nutrient-rich upwelling turns seamounts into pelagic magnets: schooling scalloped hammerheads (strongest March through July), resident whitetip reef sharks, and seasonal whale sharks and mantas. Expect negative entries onto current-swept pinnacles like Wahoo Rock, thermoclines that can dip to 16-20C, and blue-water ascents. Most diving runs as day trips or multi-day expeditions out of Santa Catalina, and it firmly favors experienced divers.",
    "underwater": "Expect working dives: negative entries onto current-swept seamounts like Wahoo Rock and Bajo Uno, shifting water over the coral-covered ridges, and blue-water ascents to finish. The surface may read 27-29°C, but thermoclines below 20 m can drop to 16-20°C — the reason a 5mm suit matters here. Visibility runs to 25 m in the dry season and turns greener when the plankton loads up. Gentler days exist too, among Iglesia's rock arches and swim-throughs or on the sloping reef at Frijoles.",
-   "encounters": "Cool upwelling makes this pelagic country: scalloped hammerheads school over the pinnacles from March into July, in their biggest numbers around the remote Contreras Islands, while whitetip reef sharks rest on the sand year-round. Whale sharks cruise through in the dry months, mantas and mobulas feed where the plankton thickens, jacks and barracuda ball up in walls, and Frijoles hides seahorses, frogfish and octopus."
+   "encounters": "Cool upwelling makes this pelagic country: scalloped hammerheads school over the pinnacles from March into July, in their biggest numbers around the remote Contreras Islands, while whitetip reef sharks rest on the sand year-round. Whale sharks cruise through in the dry months, mantas and mobulas feed where the plankton thickens, jacks and barracuda ball up in walls, and Frijoles hides seahorses, frogfish and octopus.",
+   "image_dest": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Coiba.JPG/960px-Coiba.JPG",
+   "image_dest_credit": "Photo: Seibert (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
    "name": "Aqaba",
@@ -12260,7 +12272,9 @@
    "image_credit": "Photo: Safa in la  but  uploaded by Mardetanha (CC BY-SA 3.0) via Wikimedia Commons",
    "image_source": "wikimedia",
    "underwater": "Most days you drift: drop in off Playa del Carmen, let the north-flowing Yucatán Current carry you over sponge-covered slopes, and surface to a waiting boat. The wrecks add teeth — the C-58 minesweeper, snapped in two by storms, opens into swim-throughs and can run strong flow — while the Cancún side stays gentle, its life-size statues standing in 8-10 m of calm water. The sea spans 26-29°C, and in winter you kneel on a 24 m sand flat as bull sharks circle within metres.",
-   "encounters": "The corridor runs on two shark clocks: pregnant bull sharks hold the deep sand off Playa del Carmen from November into March, and hundreds of whale sharks aggregate offshore in July and August, sometimes with mantas among them. Winter also stacks eagle rays on the wrecks and sailfish in the blue, while green and loggerhead turtles feed along Tortugas year-round and nurse sharks shelter under Los Arcos' overhangs."
+   "encounters": "The corridor runs on two shark clocks: pregnant bull sharks hold the deep sand off Playa del Carmen from November into March, and hundreds of whale sharks aggregate offshore in July and August, sometimes with mantas among them. Winter also stacks eagle rays on the wrecks and sailfish in the blue, while green and loggerhead turtles feed along Tortugas year-round and nurse sharks shelter under Los Arcos' overhangs.",
+   "image_dest": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Turquoise_water_in_Cancun%2C_Mexico.jpg/960px-Turquoise_water_in_Cancun%2C_Mexico.jpg",
+   "image_dest_credit": "Photo: Paxson Woelber (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
    "name": "Dubai & Fujairah",
