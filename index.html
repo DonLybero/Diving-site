@@ -78,6 +78,23 @@
   .hero-band video{width:100%;height:100%;object-fit:cover;display:block}
   .hero-band .photo-credit{position:absolute;right:10px;bottom:6px;font-size:.62rem;
        color:rgba(233,247,246,.55);font-family:var(--mono)}
+  /* floating collage tiles: zoomed, graded crops of the same clip, drifting
+     gently — page elements, so borders and sizes survive any viewport */
+  .hb-tile{position:absolute;width:21%;max-width:340px;min-width:150px;aspect-ratio:4/3;overflow:hidden;
+       border:5px solid #f6f8f8;box-shadow:0 22px 44px -20px rgba(3,23,31,.5);
+       animation:hbdrift 5.4s ease-in-out infinite alternate}
+  .hb-tile video{position:absolute;width:340%;left:-120%;top:-40%;
+       animation:hbzoom 7.4s ease-in-out infinite alternate}
+  .hb-bw{left:4.5%;top:14%}
+  .hb-bw video{filter:grayscale(1) contrast(1.35);left:-150%;top:-30%}
+  .hb-coral{right:4.5%;top:36%;animation-duration:6.6s;animation-delay:.8s}
+  .hb-coral video{filter:sepia(1) saturate(1.9) hue-rotate(-18deg) contrast(1.18) brightness(1.05);left:-190%;top:-60%}
+  .hb-sage{left:41%;top:50%;width:15%;animation-duration:7.2s;animation-delay:.4s}
+  .hb-sage video{filter:sepia(1) saturate(1.4) hue-rotate(95deg) contrast(1.22) brightness(1.04);left:-130%;top:-80%}
+  @keyframes hbdrift{from{transform:translateX(-13px)}to{transform:translateX(13px)}}
+  @keyframes hbzoom{from{transform:scale(1)}to{transform:scale(1.18)}}
+  @media(max-width:700px){.hb-sage{display:none}.hb-tile{border-width:3px}}
+  @media(prefers-reduced-motion:reduce){.hb-tile{animation:none}.hb-tile video{animation:none}}
   .hero{position:relative;overflow:hidden;text-align:center;padding:64px 18px 52px;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
   .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;
@@ -656,6 +673,9 @@
 
 <div class="hero-band" id="heroBand">
   <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-dive-poster.jpg"></video>
+  <div class="hb-tile hb-bw"><video muted autoplay loop playsinline preload="metadata"></video></div>
+  <div class="hb-tile hb-coral"><video muted autoplay loop playsinline preload="metadata"></video></div>
+  <div class="hb-tile hb-sage"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <span class="photo-credit" id="heroCredit"></span>
 </div>
 <header class="hero" id="hero">
@@ -959,9 +979,11 @@ function setHeroPhoto(){
   var v=document.getElementById('heroVideo');
   if(v){
     if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.querySelectorAll('#heroBand .hb-tile').forEach(function(t){t.remove();});
       v.remove();
     }else{
       v.addEventListener('error',function(){v.style.display='none';},true);
+      document.querySelectorAll('#heroBand .hb-tile video').forEach(function(tv){tv.src=HERO_VIDEO.src;});
       v.src=HERO_VIDEO.src;
       var vc=document.getElementById('heroCredit');
       if(HERO_VIDEO.credit){vc.textContent='\u24D8';vc.title=HERO_VIDEO.credit;vc.style.cursor='help';}
