@@ -82,13 +82,13 @@
      box grows and shrinks while drifting, like the reference hero */
   .hb-tile{position:absolute;overflow:hidden;will-change:transform}
   .hb-tile video{position:absolute;width:340%;left:-120%;top:-40%}
-  .hb-bw{left:5%;top:12%;width:22%;max-width:360px;min-width:150px;aspect-ratio:4/3;
+  .hb-bw{left:5%;top:12%;width:clamp(150px,22vw,360px);height:clamp(112px,16.5vw,270px);
        transform-origin:left top;animation:hbA 9s ease-in-out infinite alternate}
   .hb-bw video{filter:grayscale(1) contrast(1.35);left:-150%;top:-30%}
-  .hb-coral{right:5%;top:30%;width:19%;max-width:320px;min-width:140px;aspect-ratio:5/4;
+  .hb-coral{right:5%;top:30%;width:clamp(140px,19vw,320px);height:clamp(112px,15.2vw,256px);
        transform-origin:right center;animation:hbB 11s ease-in-out infinite alternate}
   .hb-coral video{filter:sepia(1) saturate(1.9) hue-rotate(-18deg) contrast(1.18) brightness(1.05);left:-190%;top:-60%}
-  .hb-sage{left:42%;top:46%;width:13%;max-width:230px;min-width:110px;aspect-ratio:1/1;
+  .hb-sage{left:42%;top:46%;width:clamp(110px,13vw,230px);height:clamp(110px,13vw,230px);
        transform-origin:center bottom;animation:hbC 13s ease-in-out infinite alternate}
   .hb-sage video{filter:sepia(1) saturate(1.4) hue-rotate(95deg) contrast(1.22) brightness(1.04);left:-130%;top:-80%}
   @keyframes hbA{from{transform:translateX(-16px) scale(.66)}to{transform:translateX(12px) scale(1.28)}}
