@@ -184,6 +184,14 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .greview{color:#33565e;line-height:1.7;margin:0 0 10px}
 .lede{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.45;color:var(--ink);max-width:34ch;margin:14px 0;letter-spacing:-.01em}
 .lede::after{content:"";display:block;width:64px;height:3px;border-radius:2px;margin-top:16px;background:linear-gradient(90deg,var(--accent),transparent)}
+.gverdict{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin:26px 0 30px}
+@media(max-width:640px){.gverdict{grid-template-columns:1fr;gap:20px}}
+.gverdict h3{font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);border-top:1px solid var(--line);padding-top:12px;margin:0 0 10px;font-weight:600}
+.gverdict .gv-con h3{color:var(--muted)}
+.gverdict ul{margin:0;padding:0;list-style:none}
+.gverdict li{padding:8px 0;border-bottom:1px solid var(--line);font-size:.9rem;line-height:1.55;color:var(--ink)}
+.gverdict li:last-child{border-bottom:none}
 .gspecs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:0 0 12px}
 .gspecs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
 .gspecs dt{color:var(--muted);font-size:.6rem;text-transform:uppercase;letter-spacing:.5px;margin:0}
@@ -682,10 +690,19 @@ def gear_item_page(cat, item, prefix="../"):
             frm = f' <small>from {fmtp(s_lo)}</small>' if s_lo is not None else ""
             lis += f'<li><a href="{gear_slug(s["name"])}.html">{esc(s["name"])}</a>{frm}</li>'
         related = f'<h2>Also in this guide</h2><ul class="grel">{lis}</ul>'
+    verdict = ""
+    if item.get("pros") or item.get("cons"):
+        pros_lis = "".join(f"<li>{esc(p)}</li>" for p in item.get("pros") or [])
+        cons_lis = "".join(f"<li>{esc(c)}</li>" for c in item.get("cons") or [])
+        verdict = ('<div class="gverdict">'
+                   + (f'<div class="gv-pro"><h3>Where it wins</h3><ul>{pros_lis}</ul></div>' if pros_lis else "")
+                   + (f'<div class="gv-con"><h3>Where it falls short</h3><ul>{cons_lis}</ul></div>' if cons_lis else "")
+                   + '</div>')
     inner = (f'<p class="meta gitem-kicker">{kicker}</p>'
              f'{stage_open}{photo}{banner}{stage_close}'
              f'<h2>What makes it good?</h2>'
              f'<p class="greview" style="max-width:80ch">{esc(review)}</p>'
+             f'{verdict}'
              f'{specs}{related}'
              f'<p class="meta"><a href="{cat_slug}.html">&larr; Back to {esc(cat_title)}</a></p>')
     desc = (item.get("blurb") or review)[:160]

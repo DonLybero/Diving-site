@@ -574,6 +574,14 @@
   .gentry .ptable{max-width:560px}
   .gentry>*{min-width:0}
   @media(max-width:700px){.gentry{grid-template-columns:minmax(0,1fr);gap:12px}}
+  /* verdict columns: hairline editorial pros/cons */
+  .gverdict{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:14px 0}
+  @media(max-width:640px){.gverdict{grid-template-columns:1fr;gap:14px}}
+  .gv-h{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);border-top:1px solid var(--line);padding-top:10px;margin:0 0 8px;font-weight:600}
+  .gv-h.gv-con{color:var(--muted)}
+  .gv-ul{margin:0;padding:0;list-style:none}
+  .gv-ul li{padding:7px 0;border-bottom:1px solid var(--line);font-size:.86rem;line-height:1.55}
+  .gv-ul li:last-child{border-bottom:none}
   .specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px;margin:0 0 12px;max-width:600px}
   .specs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
   .specs dt{color:var(--muted);font-size:.62rem;text-transform:uppercase;letter-spacing:.6px;margin:0}
@@ -1968,13 +1976,20 @@ function gearEntry(item,cat,idx){
   var specs=item.specs?'<dl class="specs">'+Object.keys(item.specs).map(function(k){
     return '<div><dt>'+k+'</dt><dd>'+item.specs[k]+'</dd></div>';
   }).join('')+'</dl>':'';
+  var verdict='';
+  if((item.pros&&item.pros.length)||(item.cons&&item.cons.length)){
+    verdict='<div class="gverdict">'+
+      (item.pros&&item.pros.length?'<div><h5 class="gv-h">Where it wins</h5><ul class="gv-ul">'+item.pros.map(function(p){return '<li>'+p+'</li>';}).join('')+'</ul></div>':'')+
+      (item.cons&&item.cons.length?'<div><h5 class="gv-h gv-con">Where it falls short</h5><ul class="gv-ul">'+item.cons.map(function(c){return '<li>'+c+'</li>';}).join('')+'</ul></div>':'')+
+      '</div>';
+  }
   var on=inCompare(item);
   var cmp='<button class="cmp-toggle'+(on?' on':'')+'" data-name="'+item.name.replace(/"/g,'&quot;')+'" '+
     'onclick="toggleCompare('+idx+')">'+(on?'&#10003; Added to compare':'&#8646; Compare')+'</button>';
   return '<div class="gentry">'+gearPhoto(item,cat)+
     '<div><h3>'+item.rank+'. '+item.name+'</h3>'+
     '<p class="gentry-review">'+(item.review||item.blurb)+'</p>'+
-    specs+buyBox(item)+cmp+
+    verdict+specs+buyBox(item)+cmp+
     '<p class="meta" style="margin-top:8px"><a href="gear/'+gearSlug(item.name)+'.html">Full page: photos, specs &amp; prices &rarr;</a></p>'+
     '</div></div>';
 }
