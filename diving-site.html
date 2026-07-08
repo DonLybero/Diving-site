@@ -996,11 +996,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   /* home sections: full-bleed editorial bands so the whole page reads like the
      hero + crew slide — alternating washes, centered serif heads, mono kickers */
   .hband{width:100vw;margin:0 0 0 calc(50% - 50vw);padding:clamp(64px,11vh,120px) 18px;
-       overflow:clip}   /* cards start their slide-in offset right; never let that widen the page */
+       overflow:clip;   /* cards start their slide-in offset right; never let that widen the page */
+       background:linear-gradient(180deg,#fbfefe,#eef6f5)}
+  .hband+.hband{border-top:1px solid var(--line)}  /* shared wash → hairlines carry the rhythm */
   .hband .hb-in{max-width:1180px;margin:0 auto}
-  .hband-mist{background:linear-gradient(180deg,#fbfefe,#eef6f5)}
-  .hband-sage{background:#e9f2e6}
-  .hband-lilac{background:#efeaf7}
   .hband-last{margin-bottom:-70px}   /* swallows .wrap's bottom padding so the band meets the footer */
   .home-kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
        color:#0e8c82;text-align:center;margin:0 0 18px}
@@ -1030,6 +1029,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
        border-bottom:1px solid var(--line-strong);padding-bottom:3px}
   .dcard:hover .dcap{border-color:var(--accent)}
   .dcard .dmeta{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:7px;letter-spacing:.04em}
+  /* gear variant: studio shots sit on white inside the same portrait frame */
+  .dcard-gear .dimg{background:#fff;border:1px solid var(--line)}
+  .dcard-gear .dimg img{object-fit:contain;padding:16px;box-sizing:border-box}
   .dcar-nav{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:30px}
   .dcar-nav button{background:none;border:none;color:var(--ink);cursor:pointer;font-size:1.05rem;
        padding:6px 10px;line-height:1;transition:color .2s}
@@ -2578,15 +2580,17 @@ function renderHome(){
   var pool=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:16});
   var seenC={}, topAug=[];
   pool.forEach(function(r){ if(topAug.length<8 && !seenC[r.country]){ seenC[r.country]=1; topAug.push(r); } });
-  var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.slice(0,3).map(function(c){
+  var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.map(function(c,i){
     var g=leadItem(c), lo=g.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;})[0];
-    return '<div class="feature" onclick="showTab(\'gear\')">'+
-      '<div class="gear-photo" style="height:180px">'+(g.image?'<img src="'+g.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
-      '<h4>'+g.name+'</h4><div class="score">from '+fmtPrice(lo.price_usd)+'</div>'+
-      '<div class="meta">#1 '+c.category.replace(/s$/,'')+' · best authorised price — '+lo.store+'</div></div>';
-  }):GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
-    return '<div class="feature" onclick="showTab(\'gear\')">'+gearIco(g)+'<h4>'+g.name+'</h4>'+
-      '<div class="score">from $'+lo[1]+'</div><div class="meta">sample price · via authorised dealers</div></div>';})).join('');
+    return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="showTab(\'gear\')">'+
+      '<div class="dimg">'+(g.image?'<img src="'+g.image+'" alt="'+esc(g.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
+      '<span class="dcap">'+g.name+'</span>'+
+      '<div class="dmeta"><span class="score" style="font-size:.68rem">from '+fmtPrice(lo.price_usd)+'</span> · #1 '+c.category.replace(/s$/,'')+' — '+lo.store+'</div>'+
+      '</div>';
+  }):GEAR.slice(0,6).map(function(g,i){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
+    return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="showTab(\'gear\')">'+
+      '<div class="dimg"></div><span class="dcap">'+g.name+'</span>'+
+      '<div class="dmeta"><span class="score" style="font-size:.68rem">from $'+lo[1]+'</span> · sample price · authorised dealers</div></div>';})).join('');
   var sitePrev=topAug.map(function(r,i){
     var dd=DivingCalendar.getDestination(DESTS,r.name)||{};
     return '<div class="dcard rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="openProfile(\''+esc(r.name)+'\')">'+
@@ -2605,7 +2609,7 @@ function renderHome(){
     '</div></div>';
   document.getElementById('view-home').innerHTML=
     crew+
-    '<section class="hband hband-mist rv"><div class="hb-in">'+
+    '<section class="hband rv"><div class="hb-in">'+
     '<div class="rotor"><hr class="r-line"><div class="r-word" id="rotorWord">Scored for '+MONTH_FULL[nowMonth]+', rechecked every season</div><hr class="r-line"></div>'+
     '<div class="dcar-wrap">'+
     '<div class="dcar-head">'+
@@ -2618,10 +2622,17 @@ function renderHome(){
     '<button onclick="dcarStep(1)" aria-label="Next">&#8594;</button></div></div>'+
     '</div>'+
     '</div></section>'+
-    '<section class="hband hband-sage rv"><div class="hb-in">'+
-    '<div class="home-kicker">The kit, without the grey market</div>'+
+    '<section class="hband rv"><div class="hb-in">'+
+    '<div class="dcar-wrap">'+
+    '<div class="dcar-head">'+
     '<div class="sec-head">Gear, at the right price</div>'+
-    '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p><div class="home-grid">'+bestGear+'</div>'+
+    '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p>'+
+    '</div>'+
+    '<div><div class="dcar" id="gcar">'+bestGear+'</div>'+
+    '<div class="dcar-nav"><button onclick="dcarStep(-1,\'gcar\')" aria-label="Previous">&#8592;</button>'+
+    '<div class="dcar-dots" id="gcarDots"></div>'+
+    '<button onclick="dcarStep(1,\'gcar\')" aria-label="Next">&#8594;</button></div></div>'+
+    '</div>'+
     '</div></section>'+
     // --- Methodology, demoted to an expander — credibility on demand, not in the way ---
     '<section class="hband rv"><div class="hb-in">'+
@@ -2652,7 +2663,7 @@ function renderHome(){
       'shifts year to year. <b style="color:var(--ink)">Data reviewed July 2026.</b> Always confirm current conditions with a local '+
       'dive centre before travelling.</p></details>'+
     '</div></section>'+
-    '<section class="hband hband-lilac hband-last rv"><div class="hb-in">'+
+    '<section class="hband hband-last rv"><div class="hb-in">'+
     '<div class="home-kicker">Why divers trust the scores</div>'+
     '<div class="trust">'+
       '<div><b>Independent by design</b><br><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
@@ -2664,6 +2675,7 @@ function renderHome(){
   initReveal();
   initRotor(nowMonth);
   initDcar();
+  initDcar('gcar','gcarDots');
   crewScroll();
   if(!window.__crewHooked){
     window.__crewHooked=1;
@@ -2687,13 +2699,13 @@ function initRotor(nowMonth){
     setTimeout(function(){ i=(i+1)%words.length; el.textContent=words[i]; el.classList.remove('out'); },720);
   },3600);
 }
-/* carousel arrows + progress dashes */
-function dcarStep(dir){
-  var c=document.getElementById('dcar');
+/* carousel arrows + progress dashes (id defaults to the destinations row) */
+function dcarStep(dir,id){
+  var c=document.getElementById(id||'dcar');
   if(c) c.scrollBy({left:dir*(c.clientWidth*0.7),behavior:'smooth'});
 }
-function initDcar(){
-  var c=document.getElementById('dcar'), dots=document.getElementById('dcarDots');
+function initDcar(id,dotsId){
+  var c=document.getElementById(id||'dcar'), dots=document.getElementById(dotsId||'dcarDots');
   if(!c||!dots) return;
   var n=c.children.length, marks=Math.min(n,8), html='';
   for(var i=0;i<marks;i++) html+='<span'+(i===0?' class="on"':'')+'></span>';
