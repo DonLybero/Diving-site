@@ -2757,7 +2757,19 @@ function initRotor(nowMonth){
 /* carousel arrows + progress dashes (id defaults to the destinations row) */
 function dcarStep(dir,id){
   var c=document.getElementById(id||'dcar');
-  if(c) c.scrollBy({left:dir*(c.clientWidth*0.7),behavior:'smooth'});
+  if(!c) return;
+  var dx=dir*(c.clientWidth*0.7);
+  // older WebKit silently ignores the scrollBy options object — fall back to
+  // a direct scrollLeft assignment (the CSS scroll-behavior keeps it smooth
+  // where the engine supports it)
+  if('scrollBehavior' in document.documentElement.style){
+    c.scrollBy({left:dx,behavior:'smooth'});
+  }else{
+    c.scrollLeft+=dx;
+  }
+  // belt and braces: if nothing moved shortly after, force the jump
+  var start=c.scrollLeft;
+  setTimeout(function(){ if(c.scrollLeft===start && dx!==0) c.scrollLeft=start+dx; },220);
 }
 function initDcar(id,dotsId){
   var c=document.getElementById(id||'dcar'), dots=document.getElementById(dotsId||'dcarDots');
