@@ -1918,7 +1918,11 @@ function setHeroPhoto(){
       v.remove();
     }else{
       v.addEventListener('error',function(){v.style.display='none';},true);
-      document.querySelectorAll('#heroBand .hb-tile video').forEach(function(tv){tv.src=HERO_VIDEO.src;});
+      document.querySelectorAll('#heroBand .hb-tile video').forEach(function(tv){
+        tv.poster='assets/video/hero-dive-poster.jpg';
+        tv.addEventListener('error',function(){var t=tv.closest('.hb-tile');if(t)t.style.display='none';},true);
+        tv.src=HERO_VIDEO.src;
+      });
       v.src=HERO_VIDEO.src;
       var vc=document.getElementById('heroCredit');
       if(HERO_VIDEO.credit){vc.textContent='\u24D8';vc.title=HERO_VIDEO.credit;vc.style.cursor='help';}
