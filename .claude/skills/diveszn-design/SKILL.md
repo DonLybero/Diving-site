@@ -22,8 +22,8 @@ contract.
 - Serif display faces for headings, monospace for data readouts (temps, viz,
   scores, kickers, uppercase micro-labels with letter-spacing), sans for body.
   This three-voice typography IS the brand — keep the roles pure.
-- The header band is a dedicated ad slot. Don't design anything that competes
-  with or crowds it.
+- The header is brand-only (the owner removed the ad slot in July 2026); keep
+  it slim and don't reintroduce ad placements without an owner decision.
 
 ## Layout & component language
 
