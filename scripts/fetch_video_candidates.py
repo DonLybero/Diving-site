@@ -10,7 +10,7 @@ import json, os, re, subprocess, time, urllib.parse, urllib.request
 
 UA = {"User-Agent": "DiveSZNVideoFetch/1.0 (https://github.com/DonLybero/Diving-site)"}
 OUT = "vidcands"
-MAX_BYTES = 60_000_000
+MAX_BYTES = 90_000_000
 QUERIES = [
     "scuba diver entry water",
     "scuba diver jumps boat",
@@ -61,7 +61,7 @@ def main():
         if n >= 8:
             break
         j = get("https://commons.wikimedia.org/w/api.php?action=query&format=json"
-                "&prop=imageinfo&iiprop=url|size|extmetadata|dimensions&titles="
+                "&prop=imageinfo&iiprop=url|size|extmetadata&titles="
                 + urllib.parse.quote(t))
         pages = (j or {}).get("query", {}).get("pages") or {}
         for p in pages.values():
@@ -69,8 +69,14 @@ def main():
             size = ii.get("size", 0)
             w = ii.get("width", 0)
             dur = ii.get("duration") or 0
-            if not ii.get("url") or size > MAX_BYTES or w < 640 or dur and (dur < 3 or dur > 90):
-                continue
+            if not ii.get("url"):
+                print(f"  reject(no url) {t[:60]}"); continue
+            if size > MAX_BYTES:
+                print(f"  reject(size {size//1_000_000}MB) {t[:60]}"); continue
+            if w and w < 480:
+                print(f"  reject(width {w}) {t[:60]}"); continue
+            if dur and (dur < 3 or dur > 180):
+                print(f"  reject(duration {dur}s) {t[:60]}"); continue
             meta = ii.get("extmetadata") or {}
             lic = strip_html((meta.get("LicenseShortName") or {}).get("value", ""))
             artist = strip_html((meta.get("Artist") or {}).get("value", "")) or "Wikimedia Commons"
