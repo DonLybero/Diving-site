@@ -744,7 +744,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   /* floating collage tiles — borderless graded crops that breathe: the whole
      box grows and shrinks while drifting, like the reference hero */
   .hb-tile{position:absolute;overflow:hidden;will-change:transform}
-  .hb-tile video{position:absolute;width:340%;left:-120%;top:-40%}
+  .hb-tile video{position:absolute;width:340%;height:340%;object-fit:cover;left:-120%;top:-40%}
   .hb-bw{left:5%;top:12%;width:clamp(150px,22vw,360px);height:clamp(112px,16.5vw,270px);
        transform-origin:left top;animation:hbA 9s ease-in-out infinite alternate}
   .hb-bw video{filter:grayscale(1) contrast(1.35);left:-150%;top:-30%}
