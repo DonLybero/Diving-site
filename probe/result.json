@@ -1,0 +1,34 @@
+[
+ {
+  "engine": "chromium",
+  "w": 1440,
+  "hasBtn": true,
+  "hasC": true,
+  "btnRect": {
+   "x": 1380,
+   "y": 2510,
+   "w": 46,
+   "h": 46
+  },
+  "atPoint": "dcar-arr next <BUTTON>",
+  "before": 0,
+  "after": 676,
+  "typeofStep": "function"
+ },
+ {
+  "engine": "webkit",
+  "w": 1440,
+  "hasBtn": true,
+  "hasC": true,
+  "btnRect": {
+   "x": 1380,
+   "y": 2510,
+   "w": 46,
+   "h": 46
+  },
+  "atPoint": "dcar-arr next <BUTTON>",
+  "before": 0,
+  "after": 676,
+  "typeofStep": "function"
+ }
+]
