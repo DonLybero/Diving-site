@@ -314,6 +314,20 @@
   .hero-note b{color:var(--ink)}
   /* one orchestrated reveal on Home: bands rise in as they enter the viewport */
   .rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+  /* crew slide: photo full-bleed, stat boxes slide in from the right as you
+     scroll (progress-driven via --cp, like the reference) */
+  .crew-slide{position:relative;height:clamp(320px,46vw,560px);overflow:hidden;margin:6px 0 46px;border-radius:16px}
+  .crew-photo{position:absolute;inset:0;background:#dbe9ec}
+  .crew-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .crew-stats{position:absolute;top:0;right:0;bottom:0;width:clamp(200px,34%,420px);
+       display:grid;grid-template-rows:1fr 1fr;transform:translateX(calc((1 - var(--cp,0))*112%))}
+  .crew-stat{padding:clamp(16px,2.4vw,30px);display:flex;flex-direction:column;justify-content:flex-start}
+  .crew-stat b{font-family:var(--mono);font-weight:600;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1;color:#10242a}
+  .crew-stat span{font-size:clamp(.72rem,1.1vw,.9rem);color:#22383d;margin-top:10px;max-width:24ch;line-height:1.5}
+  .crew-a{background:#d9c8f0}
+  .crew-b{background:#dcead9}
+  .crew-credit{position:absolute;left:10px;bottom:8px;font-family:var(--mono);font-size:.58rem;color:rgba(255,255,255,.75)}
+  @media(prefers-reduced-motion:reduce){.crew-stats{transform:none}}
   .rv-x{opacity:0;transform:translateX(72px);transition:opacity .65s ease,transform .65s ease}
   .rv-x.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.rv-x{opacity:1;transform:none;transition:none}}
@@ -668,6 +682,18 @@
   </div>
 </div>
 
+<div class="navwrap">
+  <div class="tabs">
+    <button id="tab-home" class="active" onclick="showTab('home')">Home</button>
+    <button id="tab-gear" onclick="showTab('gear')">Diving Gear</button>
+    <button id="tab-planner" onclick="showTab('planner')">Destinations</button>
+    <button id="tab-marine" onclick="MARINE_SLUG='';showTab('marine')">Marine Life</button>
+    <button id="tab-destinations" onclick="showTab('destinations')">Articles</button>
+    <button id="tab-trip" onclick="showTab('trip')">Trip Planner</button>
+    <button id="tab-search" onclick="showTab('search')">Search</button>
+  </div>
+</div>
+
 <div class="hero-band" id="heroBand">
   <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-dive-poster.jpg"></video>
   <div class="hbm hbm-coral"><video muted autoplay loop playsinline preload="metadata"></video></div>
@@ -684,18 +710,6 @@
     <a class="btn ghost" href="#" onclick="showTab('calendar');return false;">Browse the year calendar</a>
   </div>
 </header>
-
-<div class="navwrap">
-  <div class="tabs">
-    <button id="tab-home" class="active" onclick="showTab('home')">Home</button>
-    <button id="tab-gear" onclick="showTab('gear')">Diving Gear</button>
-    <button id="tab-planner" onclick="showTab('planner')">Destinations</button>
-    <button id="tab-marine" onclick="MARINE_SLUG='';showTab('marine')">Marine Life</button>
-    <button id="tab-destinations" onclick="showTab('destinations')">Articles</button>
-    <button id="tab-trip" onclick="showTab('trip')">Trip Planner</button>
-    <button id="tab-search" onclick="showTab('search')">Search</button>
-  </div>
-</div>
 
 <div class="wrap">
 
@@ -969,6 +983,14 @@ function seasonRibbon(d){
 /* Hero photo credit is tooltip-only (small info mark) — no visible photographer
    name on the main page while keeping CC attribution accessible. */
 var HERO_PICKS=["Fernando de Noronha","Sipadan Island","Maldives","Palau","Raja Ampat","Great Barrier Reef","Bonaire"];
+var CREW_IMG={src:'assets/crew.jpg', credit:''};
+function crewScroll(){
+  var el=document.getElementById('crewSlide'); if(!el) return;
+  var r=el.getBoundingClientRect(), vh=window.innerHeight||800;
+  var p=(vh - r.top - r.height*0.30)/(vh*0.5);
+  p=Math.max(0,Math.min(1,p));
+  el.style.setProperty('--cp',p.toFixed(3));
+}
 var HERO_VIDEO={webm:'assets/video/hero-dive.webm', mp4:'assets/video/hero-dive.mp4',
   poster:'assets/video/hero-dive-poster.jpg', credit:'Video via Pexels'};
 function feedVideo(v){
@@ -1029,6 +1051,7 @@ function showTab(t){
   });
   // The full-height hero anchors the landing/home view only; collapse it on working tabs.
   document.getElementById('hero').classList.toggle('hidden', t!=='home');
+  var hb=document.getElementById('heroBand'); if(hb) hb.classList.toggle('hidden', t!=='home');
   if(t==='gear'){ updateCmpBar(); } else { closeCompare(); var cb=document.getElementById('cmpBar'); if(cb)cb.classList.add('hidden'); }
   if(t==='marine'){ renderMarine(); }
   if(t==='planner'){ planEngage(sub||PLAN_SUB); }   // planner always opens engaged: top 3 for the Now period
@@ -1578,27 +1601,21 @@ function renderHome(){
       '<div class="row" style="margin:10px 18px 18px;align-items:center"><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+
       '<span style="margin-left:auto;color:var(--accent);font-weight:600;font-size:.82rem">Full guide →</span></div></div>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
-  var n1=topAug[0], n1d=n1?DivingCalendar.getDestination(DESTS,n1.name):null;
-  var numbersSlide='';
-  if(n1&&n1d&&n1d.image){
-    numbersSlide='<div class="slide rv" style="margin-top:26px">'+
-      '<div class="sec-head">What does the month&rsquo;s best look like?</div>'+
-      '<p class="sec-sub">'+n1.name+' leads '+MONTH_FULL[nowMonth]+'. The water, in numbers.</p>'+
-      '<div class="numbers-grid">'+
-      '<div class="numbers-photo" style="background-image:url(\''+n1d.image+'\')" onclick="openProfile(\''+esc(n1.name)+'\')">'+
-        '<div class="np-cap"><span>'+n1.country+' · '+badge(n1.rating).replace(/<[^>]*>/g,'')+' season</span><h4>'+n1.name+'</h4></div></div>'+
-      '<div class="numbers-stack">'+
-      '<div class="statsq rv-x" style="transition-delay:.15s"><b>'+(n1.water_temp_c!=null?n1.water_temp_c+'&deg;C':'&mdash;')+'</b><span>water this month</span></div>'+
-      '<div class="statsq rv-x" style="transition-delay:.32s"><b>'+(n1.visibility_m!=null?n1.visibility_m+'&nbsp;m':'&mdash;')+'</b><span>typical visibility</span></div>'+
-      '</div></div></div>';
-  }
+  var crew='<div class="crew-slide" id="crewSlide">'+
+    '<div class="crew-photo"><img src="'+CREW_IMG.src+'" alt="Divers preparing gear" '+
+    'onerror="document.getElementById(\'crewSlide\').style.display=\'none\'">'+
+    (CREW_IMG.credit?'<span class="crew-credit">'+CREW_IMG.credit+'</span>':'')+'</div>'+
+    '<div class="crew-stats">'+
+    '<div class="crew-stat crew-a"><b>996</b><span>destination-months scored, rechecked every season</span></div>'+
+    '<div class="crew-stat crew-b"><b>620</b><span>dive sites documented with depth, level and character</span></div>'+
+    '</div></div>';
   document.getElementById('view-home').innerHTML=
+    crew+
     '<div class="rv slide">'+
     '<div class="hero-note" style="margin:2px 0 26px">&#10003; Scoring live for <b>'+MONTH_FULL[nowMonth]+'</b> right now · independent, no sponsored rankings</div>'+
     '<div class="sec-head">Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</div>'+
     '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it.</p><div class="home-grid">'+sitePrev+'</div>'+
     '</div>'+
-    numbersSlide+
     '<div class="band rv">'+
     '<div class="sec-head">Gear, at the right price</div>'+
     '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p><div class="home-grid">'+bestGear+'</div>'+
@@ -1638,6 +1655,12 @@ function renderHome(){
     '</div>';
   fillDestCovers();
   initReveal();
+  crewScroll();
+  if(!window.__crewHooked){
+    window.__crewHooked=1;
+    window.addEventListener('scroll',crewScroll,{passive:true});
+    window.addEventListener('resize',crewScroll);
+  }
 }
 /* One orchestrated moment: home bands rise in on first approach, then stay.
    Failsafe reveals everything after 3s so nothing can be left invisible. */
