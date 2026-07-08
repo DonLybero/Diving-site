@@ -215,7 +215,7 @@ def topbar(prefix="../"):
 def footer_html(prefix="../"):
     return ('<footer>'
             '<div class="foot-mark">Dive<b>SZN</b></div>'
-            '<div class="foot-tag">Know the season before you book</div>'
+            '<div class="foot-tag">Your diving buddy</div>'
             '<div class="foot-nav">'
             f'<a href="{prefix}index.html">Destinations</a>'
             f'<a href="{prefix}destinations/index.html">Season guides</a>'

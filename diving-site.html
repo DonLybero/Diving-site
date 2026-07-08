@@ -733,8 +733,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   /* ---------- hero ---------- */
   /* full-width media band above the headline (video, photo fallback) */
-  .hero-band{position:relative;width:100%;height:clamp(210px,24vw,380px);overflow:hidden;
-       background:#06222b center/cover no-repeat;border-bottom:1px solid var(--line)}
+  .hero-band{position:relative;width:100%;height:max(240px,50vh);overflow:hidden;
+       background:#06222b center/cover no-repeat;border-bottom:1px solid var(--line);
+       animation:bandIntro 1.7s cubic-bezier(.65,.05,.35,1) 1.1s both}
+  /* first impression: the video owns the whole screen, then eases to half a page */
+  @keyframes bandIntro{from{height:calc(100vh - 64px)}to{height:max(240px,50vh)}}
+  .hero-band.settled{animation:none}
+  @media(prefers-reduced-motion:reduce){.hero-band{animation:none}}
   .hero-band video{width:100%;height:100%;object-fit:cover;display:block}
   .hero-band .photo-credit{position:absolute;right:10px;bottom:6px;font-size:.62rem;
        color:rgba(233,247,246,.55);font-family:var(--mono)}
@@ -1008,7 +1013,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .hband details.more{text-align:left}
   .rv-x{opacity:0;transform:translateX(72px);transition:opacity .65s ease,transform .65s ease}
   .rv-x.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.rv-x{opacity:1;transform:none;transition:none}}
+  .rv-l{opacity:0;transform:translateX(-72px);transition:opacity .65s ease,transform .65s ease}
+  .rv-l.in{opacity:1;transform:none}
+  /* suggestion cards slide in like the crew stat boxes (needs to outrank
+     .feature's own transition, which comes later in the sheet) */
+  .home-grid .rv-x,.home-grid .rv-l{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  @media(prefers-reduced-motion:reduce){.rv-x,.rv-l{opacity:1;transform:none;transition:none}}
   @media(min-width:821px){.slide{min-height:66vh;display:flex;flex-direction:column;justify-content:center}}
   /* "the month in numbers" slide: big photo + stat squares that slide in */
   .numbers-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:stretch}
@@ -1375,7 +1385,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <span class="photo-credit" id="heroCredit"></span>
 </div>
 <header class="hero" id="hero">
-  <span class="eyebrow">Never dive alone — your diving buddy</span>
   <h1>Know your trip lands on great diving — before you book.</h1>
   <p class="tagline">Every destination is scored for all twelve months on the things that make a dive: season, marine life, visibility and currents. Tell DiveSZN when you can travel, and see exactly where the water is at its best.</p>
 </header>
@@ -1957,6 +1966,9 @@ function setHeroPhoto(){
       if(HERO_VIDEO.credit){vc.textContent='\u24D8';vc.title=HERO_VIDEO.credit;vc.style.cursor='help';}
     }
   }
+  // the full-screen intro plays once per visit; pin the band at half page after
+  // so re-entering Home doesn't replay it (display:none restarts CSS animations)
+  setTimeout(function(){var b=document.getElementById('heroBand'); if(b)b.classList.add('settled');},3100);
   for(var i=0;i<HERO_PICKS.length;i++){
     var d=DivingCalendar.getDestination(DESTS,HERO_PICKS[i]);
     if(d&&d.image){
@@ -2536,7 +2548,7 @@ function renderHome(){
   }):GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
     return '<div class="feature" onclick="showTab(\'gear\')">'+gearIco(g)+'<h4>'+g.name+'</h4>'+
       '<div class="score">from $'+lo[1]+'</div><div class="meta">sample price · via authorised dealers</div></div>';})).join('');
-  var sitePrev=topAug.map(function(r,i){return '<div class="feature photo-card'+(i===0?' featured':'')+'" onclick="openProfile(\''+esc(r.name)+'\')">'+
+  var sitePrev=topAug.map(function(r,i){return '<div class="feature photo-card '+(i===0?'featured rv-l':'rv-x')+'" style="transition-delay:'+(i*160)+'ms" onclick="openProfile(\''+esc(r.name)+'\')">'+
       '<div class="cover" data-name="'+encodeURIComponent(r.name)+'" data-country="'+encodeURIComponent(r.country)+'">'+badge(r.rating)+'</div>'+
       '<h4>'+r.name+'</h4><div class="meta">'+r.country+'</div>'+
       '<p class="why" style="margin:8px 18px 0">'+whyNow(r.rating, r.highlight, r.visibility_m)+'</p>'+
@@ -2612,13 +2624,16 @@ function renderHome(){
 /* One orchestrated moment: home bands rise in on first approach, then stay.
    Failsafe reveals everything after 3s so nothing can be left invisible. */
 function initReveal(){
-  var els=[].slice.call(document.querySelectorAll('#view-home .rv, #view-home .rv-x'));
-  var all=function(){els.forEach(function(e){e.classList.add('in');});};
+  var els=[].slice.call(document.querySelectorAll('#view-home .rv, #view-home .rv-x, #view-home .rv-l'));
+  // once revealed, shed the reveal classes so card hover transitions stay snappy
+  var reveal=function(e){e.classList.add('in');
+    setTimeout(function(){e.classList.remove('rv','rv-x','rv-l','in');e.style.transitionDelay='';},1200);};
+  var all=function(){els.forEach(reveal);};
   if(!('IntersectionObserver' in window)||
      (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){all();return;}
-  els.forEach(function(e,i){e.style.transitionDelay=Math.min(i*90,270)+'ms';});
+  els.forEach(function(e,i){if(!e.style.transitionDelay)e.style.transitionDelay=Math.min(i*90,270)+'ms';});
   var io=new IntersectionObserver(function(ents){
-    ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    ents.forEach(function(en){if(en.isIntersecting){reveal(en.target);io.unobserve(en.target);}});
   },{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(e){io.observe(e);});
   setTimeout(all,3000);
@@ -3162,7 +3177,7 @@ loadData().then(function(res){
   DATA=j; DESTS=j.destinations;
   document.getElementById('foot').innerHTML=
     '<div class="foot-mark">Dive<b>SZN</b></div>'+
-    '<div class="foot-tag">Know the season before you book</div>'+
+    '<div class="foot-tag">Your diving buddy</div>'+
     '<div class="foot-nav">'+
     '<a href="destinations/index.html">Destination guides</a>'+
     '<a href="months/index.html">Best by month</a>'+
