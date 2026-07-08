@@ -332,7 +332,8 @@
   @media(prefers-reduced-motion:reduce){.crew-stats{transform:none}}
   /* home sections: full-bleed editorial bands so the whole page reads like the
      hero + crew slide — alternating washes, centered serif heads, mono kickers */
-  .hband{width:100vw;margin:0 0 0 calc(50% - 50vw);padding:clamp(64px,11vh,120px) 18px}
+  .hband{width:100vw;margin:0 0 0 calc(50% - 50vw);padding:clamp(64px,11vh,120px) 18px;
+       overflow:clip}   /* cards start their slide-in offset right; never let that widen the page */
   .hband .hb-in{max-width:1180px;margin:0 auto}
   .hband-mist{background:linear-gradient(180deg,#fbfefe,#eef6f5)}
   .hband-sage{background:#e9f2e6}
