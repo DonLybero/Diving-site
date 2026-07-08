@@ -16,9 +16,10 @@ contract.
 - Name **DiveSZN** ("dive season"). Wordmark: `Dive<b>SZN</b>`. Logo is a
   whale **fluke** — never helmets, bubbles-in-circles or generic waves.
 - **Light/white theme.** Teal ink (`--ink` deep blue-green) for text, teal
-  accents for interaction. **Coral is reserved strictly for prices and CTAs**
-  (buy buttons, booking links) — if it isn't asking for money or a click that
-  leads to money, it isn't coral.
+  accents for interaction. **Coral is reserved strictly for buy/booking CTAs**
+  (buttons and booking links). Prices are NOT coral (owner ruling, July 2026):
+  set them as quiet data — ink mono with tabular numerals (`.score`); a
+  best-price flag may use `--accent-deep`, never coral.
 - Serif display faces for headings, monospace for data readouts (temps, viz,
   scores, kickers, uppercase micro-labels with letter-spacing), sans for body.
   This three-voice typography IS the brand — keep the roles pure.

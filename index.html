@@ -191,7 +191,8 @@
   .cur-Low{color:#0b7d75}
   .cur-Medium{color:#a16207}
   .cur-Strong{color:#c2410c}
-  .score{font-size:.82rem;color:var(--coral);font-weight:700;font-family:var(--mono)}
+  .score{font-size:.82rem;color:var(--ink);font-weight:600;font-family:var(--mono);
+       letter-spacing:.02em;font-variant-numeric:tabular-nums}
   .hl{font-size:.9rem;margin-top:10px;color:var(--ink-soft);line-height:1.5}
   /* compact expandable dive-site list on destination cards */
   .sites{margin-top:9px;font-size:.78rem}
@@ -346,6 +347,20 @@
        color:var(--ink);letter-spacing:.01em;margin:20px 0;min-height:2.4em;
        display:flex;align-items:center;justify-content:center;transition:opacity .7s ease;opacity:1}
   .rotor .r-word.out{opacity:0}
+  /* methodology formula: pure type between hairlines — no chips, no boxes.
+     The sum takes the accountant's double rule: the print signal for "total". */
+  .method-eq{margin:10px auto 30px;max-width:840px;text-align:center}
+  .method-eq .r-line{width:52px;height:1px;background:var(--line-strong);border:none;margin:0 auto}
+  .formula{display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;
+       gap:16px clamp(12px,2.6vw,28px);margin:26px auto}
+  .f-term{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .f-name{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+       color:var(--ink-soft);white-space:nowrap}
+  .f-val{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:var(--muted);
+       font-variant-numeric:tabular-nums}
+  .f-op{font-family:var(--serif);font-size:1.05rem;line-height:1.2;color:var(--muted)}
+  .f-sum .f-name{color:var(--ink);font-weight:700;border-bottom:3px double var(--line-strong);padding-bottom:5px}
+  @media(max-width:480px){.f-name{letter-spacing:.13em;font-size:.66rem}.formula{gap:12px}}
   /* destination carousel: editorial left rail, portrait cards bleeding off the right edge */
   .dcar-wrap{display:grid;grid-template-columns:minmax(230px,300px) 1fr;gap:44px;align-items:start}
   .dcar-head{padding-top:26px}
@@ -588,7 +603,7 @@
   .ptable td{padding:10px 8px;border-bottom:1px solid var(--line)}
   .ptable .deal{font-family:var(--mono)}
   .ptable .price{font-family:var(--mono);text-align:right;color:#0b6b74}
-  .ptable tr.low .price{color:var(--coral);font-weight:800}
+  .ptable tr.low .price{color:var(--accent-deep);font-weight:700}
   .ptable tr.low .deal::after{content:" ◀ best authorised price";color:var(--peak);font-size:.66rem;font-family:var(--mono)}
   .ptable .btn{padding:8px 13px;font-size:.78rem}
   /* ---------- where-to-buy box ---------- */
@@ -596,7 +611,7 @@
   .buybox-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:11px}
   .buy-lead{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:12px}
   .buy-from{font-family:var(--serif);font-size:1.02rem;color:var(--ink)}
-  .buy-from b{color:var(--coral);font-family:var(--mono);font-weight:800}
+  .buy-from b{color:var(--ink);font-family:var(--mono);font-weight:700;font-variant-numeric:tabular-nums}
   .buy-live{font-size:.7rem;color:var(--muted)}
   .buy-btns{display:flex;flex-wrap:wrap;gap:8px}
   .cmp-toggle{margin-top:11px;background:#fff;border:1px solid var(--line-strong);border-radius:8px;padding:6px 13px;
@@ -623,7 +638,7 @@
        white-space:nowrap;position:sticky;left:0;background:#fff;z-index:1}
   .cmptable tr.diff td{background:rgba(255,122,89,.06)}
   .cmptable .cmp-name{font-family:var(--serif);font-weight:600;font-size:.98rem}
-  .cmptable .cmp-price{color:var(--coral);font-family:var(--mono);font-weight:800}
+  .cmptable .cmp-price{color:var(--ink);font-family:var(--mono);font-weight:700;font-variant-numeric:tabular-nums}
   .cmp-photo{height:110px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:8px}
   .cmp-photo img{max-width:92%;max-height:92%;object-fit:contain}
   /* ---------- destination gear cross-sell ---------- */
@@ -1704,11 +1719,18 @@ function renderHome(){
     '<div class="sec-head">How does the score work?</div>'+
     '<p class="sec-sub">One transparent score, the same for every destination, every month — so you compare like for like. '+
       '<a href="how-we-score.html">See the full method →</a></p>'+
-    '<div class="readout" style="font-size:.84rem;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px">'+
-      '<span class="badge b-Peak">Season rating</span><span>+</span>'+
-      '<span class="badge b-Shoulder">Marine-life bonus</span><span>+</span>'+
-      '<span class="badge b-Good">Visibility</span><span>=</span>'+
-      '<span class="score" style="font-size:1rem">Monthly score</span>'+
+    '<div class="method-eq">'+
+    '<hr class="r-line">'+
+    '<div class="formula">'+
+      '<span class="f-term"><span class="f-name">Season rating</span><span class="f-val">base 22&ndash;100</span></span>'+
+      '<span class="f-op">+</span>'+
+      '<span class="f-term"><span class="f-name">Marine-life bonus</span><span class="f-val">up to +25</span></span>'+
+      '<span class="f-op">+</span>'+
+      '<span class="f-term"><span class="f-name">Visibility</span><span class="f-val">up to +18</span></span>'+
+      '<span class="f-op">=</span>'+
+      '<span class="f-term f-sum"><span class="f-name">Monthly score</span><span class="f-val">out of 143</span></span>'+
+    '</div>'+
+    '<hr class="r-line">'+
     '</div>'+
     '<details class="more"><summary>What each part means</summary>'+
     '<div class="home-grid" style="margin-top:14px">'+
