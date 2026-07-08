@@ -1030,8 +1030,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   #view-home .dcar-head .sec-head{text-align:left;justify-content:flex-start;margin:0 0 16px;
        font-size:clamp(1.9rem,3vw,2.6rem);max-width:14ch}
   #view-home .dcar-head .sec-sub{text-align:left;margin:0;font-size:.96rem}
+  /* bleed exactly to the viewport edge: inside the grid, 50% would measure the
+     column (not the page) and overshoot — anchor the breakout to the band width */
   .dcar{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
-       margin-right:calc(50% - 50vw);padding:4px 18px 8px 4px;scroll-behavior:smooth}
+       margin-right:calc((min(1180px,100vw - 36px) - 100vw)/2);padding:4px 18px 8px 4px;scroll-behavior:smooth}
   .dcar::-webkit-scrollbar{display:none}
   .dcard{flex:0 0 clamp(220px,23vw,290px);cursor:pointer}
   .dcard .dimg{height:clamp(300px,34vw,420px);border-radius:10px;overflow:hidden;position:relative;
@@ -1057,7 +1059,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   @media(max-width:820px){
     .dcar-wrap{display:block}
     .dcar-head{padding:0 0 26px}
-    .dcar{margin-left:calc(50% - 50vw);padding-left:18px}
+    .dcar{margin-left:calc((min(1180px,100vw - 36px) - 100vw)/2);padding-left:18px}
   }
   #view-home .sec-head{justify-content:center;text-align:center;font-size:clamp(2.1rem,3.8vw,3.1rem);
        line-height:1.12;margin:0 auto 14px;max-width:24ch}

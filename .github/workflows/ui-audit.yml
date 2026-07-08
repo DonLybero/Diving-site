@@ -73,6 +73,10 @@ jobs:
           }
           const views = [
             ['home', null],
+            ['home-carousel-end', async p=>{await p.evaluate(()=>{
+              var c=document.getElementById('dcar'); if(c)c.scrollLeft=999999;
+              var g=document.getElementById('gcar'); if(g)g.scrollLeft=999999;});
+              await p.waitForTimeout(700);}],
             ['planner', async p=>{await p.click('#tab-planner'); await p.waitForTimeout(900);}],
             ['browse', async p=>{await p.click('#tab-planner'); await p.waitForTimeout(900);
               await p.evaluate(()=>{var r=document.querySelectorAll('#browseDir .bregion');
