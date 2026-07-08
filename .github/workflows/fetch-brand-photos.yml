@@ -1,0 +1,32 @@
+name: Fetch brand product photos (official pages)
+
+# Downloads official product photos + per-colour variant photos from the
+# manufacturers' product pages listed in scripts/data/brand_pages.json and
+# pushes them to the orphan branch brand-photos for review in the sandbox.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Fetch photos
+        run: python3 scripts/fetch_brand_photos.py
+
+      - name: Push to orphan branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan brand-photos
+          git rm -rf --cached . >/dev/null
+          git add -f brandshots
+          git commit -m "Brand product photos (automated fetch)"
+          git push -f origin brand-photos

@@ -1,0 +1,477 @@
+{
+ "Scubapro Synergy 2 Trufit": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/masks/synergy-2-trufit-dive-mask-w-comfort-strap",
+  "colors_hint": [
+   "Black/Silver",
+   "Black/Silver Mirrored",
+   "Black/Red",
+   "Clear/Blue-Silver"
+  ],
+  "shopify": false
+ },
+ "Scubapro Frameless": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/masks/frameless-dive-mask",
+  "colors_hint": [
+   "Black",
+   "White",
+   "Army Green"
+  ],
+  "shopify": false
+ },
+ "Scubapro Seawing Nova": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/fins/seawing-nova-fin",
+  "colors_hint": [
+   "Black",
+   "White",
+   "Blue",
+   "Yellow",
+   "Pink"
+  ],
+  "shopify": false
+ },
+ "Scubapro Jet Fin": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/fins/fins/jet-fin",
+  "colors_hint": [
+   "Black"
+  ],
+  "shopify": false
+ },
+ "Scubapro Go Sport": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/fins/go-sport-fin",
+  "colors_hint": [
+   "Black",
+   "Blue",
+   "Turquoise",
+   "White",
+   "Yellow"
+  ],
+  "shopify": false
+ },
+ "Scubapro MK25 EVO / S620 Ti": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/regulators/systems/mk25-evo-s620ti-dive-regulator-system",
+  "colors_hint": [
+   "Black",
+   "White"
+  ],
+  "shopify": false
+ },
+ "Scubapro MK19 EVO BT / G260 Carbon BT": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/regulators/systems/mk19-evo-bt-g260-carbon-bt-dive-regulator-system",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Scubapro Hydros Pro": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/bcds/hydros-pro-bcd-men",
+  "colors_hint": [
+   "Black",
+   "White"
+  ],
+  "shopify": false
+ },
+ "Scubapro Level": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/bcds/level-bcd",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "ScubaPro Sport Shorty 2mm": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/sport-shorty-men-2mm",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "ScubaPro Everflex Steamer 3/2mm": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/everflex-steamer-men-3-2mm-black-s",
+  "colors_hint": [
+   "Black",
+   "White",
+   "Camo Green"
+  ],
+  "shopify": false
+ },
+ "Scubapro Definition Steamer 3mm": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/definition-steamer-men-3mm",
+  "colors_hint": [
+   "Yellow/Black",
+   "Pink/Black"
+  ],
+  "shopify": false
+ },
+ "Scubapro Everflex Yulex 5/4mm": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/everflex-yulex-dive-steamer-men-5-4mm",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Scubapro Definition Steamer 5mm": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/definition-steamer-men-5mm",
+  "colors_hint": [
+   "Black/Blue",
+   "Black/Turquoise"
+  ],
+  "shopify": false
+ },
+ "Scubapro Everflex Steamer 7/5mm": {
+  "url": "https://scubapro.johnsonoutdoors.com/eu/en-gb/shop/dive-wear/wetsuits/everflex-steamer-7-5mm-men-0",
+  "colors_hint": [
+   "Black"
+  ],
+  "shopify": false
+ },
+ "Aqua Lung Reveal X2": {
+  "url": "https://us.aqualung.com/collections/diving-masks/products/reveal-x2-dive-mask",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqua Lung Storm": {
+  "url": "https://us.aqualung.com/products/storm-dive-fins",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqua Lung Leg3nd": {
+  "url": "https://us.aqualung.com/products/leg3nd-dive-regulator",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqua Lung Core Supreme": {
+  "url": "https://us.aqualung.com/products/core-supreme",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqua Lung Outlaw": {
+  "url": "https://us.aqualung.com/products/outlaw",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqua Lung Pro HD": {
+  "url": "https://us.aqualung.com/products/pro-hd-mens-dive-bcd",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqua Lung Aquaflex 3mm": {
+  "url": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-3mm",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqua Lung Aquaflex 5mm": {
+  "url": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-5mm",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqua Lung Aquaflex 7mm": {
+  "url": "https://us.aqualung.com/products/aquaflex-7mm-jumpsuit-men",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqualung i330R": {
+  "url": "https://us.aqualung.com/products/i330r-dive-computer",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqualung HydroFlex 3mm Shorty": {
+  "url": "https://us.aqualung.com/products/hydroflex-men-s-dive-shorty-3mm",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Apeks RK3": {
+  "url": "https://us.apeksdiving.com/products/rk3-dive-fins",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Apeks XTX50": {
+  "url": "https://us.apeksdiving.com/products/xtx50-dive-regulator",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Apeks MTX-RC": {
+  "url": "https://us.apeksdiving.com/products/mtx-rc-dive-regulator",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Apeks Exotec": {
+  "url": "https://us.apeksdiving.com/products/exotec-dive-bcd",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Apeks DSX": {
+  "url": "https://us.apeksdiving.com/products/dsx-dive-computer",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Mares X-Vision": {
+  "url": "https://www.mares.com/en_US/x-vision-411053",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Mares Avanti Quattro+": {
+  "url": "https://www.mares.com/en/avanti-quattro-18",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Mares Power Plana LT": {
+  "url": "https://www.mares.com/pl_PL/power-plana-lt-410052",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Mares Epic Adj 82X": {
+  "url": "https://www.mares.com/en/epic-82x-2",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Mares Dragon SLS": {
+  "url": "https://www.mares.com/en/dragon-sls-6",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Mares Puck Pro+": {
+  "url": "https://www.mares.com/en_US/puck-pro-10",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Cressi Big Eyes Evolution": {
+  "url": "https://store.cressi.com/products/big-eyes-evolution-mask",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Cressi F1 Frameless": {
+  "url": "https://store.cressi.com/products/f1-mask",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Cressi Frog Plus": {
+  "url": "https://store.cressi.com/products/frog-plus-fins",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Cressi Travelight": {
+  "url": "https://store.cressi.com/products/travelight-b-c-d",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Cressi Leonardo": {
+  "url": "https://store.cressi.com/products/leonardo-computer",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Cressi Lido 2mm Shorty (Women's)": {
+  "url": "https://store.cressi.com/products/lido-shorty-lady",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Cressi Lido 2mm Full Wetsuit": {
+  "url": "https://store.cressi.com/products/lido-wetsuit-man",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Cressi Morea 3mm": {
+  "url": "https://store.cressi.com/products/morea-wetsuit-man",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Cressi Castoro 5mm": {
+  "url": null,
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Cressi Fast 7mm": {
+  "url": "https://store.cressi.com/products/fast-7-mm-wetsuit-man",
+  "colors_hint": [
+   "Black/Blue"
+  ],
+  "shopify": true
+ },
+ "Bare 2mm Sport S-Flex Shorty": {
+  "url": "https://www.baresports.com/products/outlet/mens-clearance/2mm-sport-s-flex-shorty-mens/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Bare Reactive 3mm": {
+  "url": "https://www.baresports.com/products/mens-wetsuits/reactive/reactive-3mm/",
+  "colors_hint": [
+   "Black",
+   "Blue"
+  ],
+  "shopify": true
+ },
+ "Bare Evoke 3mm Women's": {
+  "url": "https://www.baresports.com/products/womens-wetsuits/evoke/3mm-evoke-full-wetsuit/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Bare Reactive 5mm": {
+  "url": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/reactive-5mm/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Bare Nixie Ultra 5mm Women's": {
+  "url": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/5mm-nixie-ultra/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "BARE Reactive 7mm": {
+  "url": "https://www.baresports.com/products/all-wetsuits/7mm-wetsuits/reactive-7mm/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "BARE Nixie Ultra 7mm": {
+  "url": "https://www.baresports.com/products/all-wetsuits/7mm-wetsuits/7mm-nixie-ultra/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Henderson Thermoprene Pro 3mm Front Zip Shorty": {
+  "url": "https://hendersonusa.com/product/thermoprene-pro-mens-front-zip-shorty/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Henderson Thermoprene Pro 3mm": {
+  "url": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
+  "colors_hint": [
+   "Black/Heather Gray"
+  ],
+  "shopify": false
+ },
+ "Henderson Thermoprene Pro 5mm": {
+  "url": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
+  "colors_hint": [
+   "Black/Heather Gray"
+  ],
+  "shopify": false
+ },
+ "Henderson Thermoprene Pro 7mm": {
+  "url": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
+  "colors_hint": [
+   "Black/Heather Gray"
+  ],
+  "shopify": false
+ },
+ "Henderson Greenprene 7mm": {
+  "url": "https://hendersonusa.com/product/mens-greenprene-back-zip-fullsuit/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Shearwater Peregrine": {
+  "url": "https://shearwater.com/products/peregrine",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Shearwater Perdix 2": {
+  "url": "https://shearwater.com/products/perdix-2",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Suunto Ocean": {
+  "url": "https://us.suunto.com/products/suunto-ocean-all-black",
+  "colors_hint": [
+   "All Black",
+   "Sand",
+   "Steel Black"
+  ],
+  "shopify": true
+ },
+ "Suunto Zoop Novo": {
+  "url": "https://us.suunto.com/products/suunto-zoop-novo-black",
+  "colors_hint": [
+   "Black",
+   "Blue",
+   "Lemon Yellow",
+   "Wildberry"
+  ],
+  "shopify": true
+ },
+ "Garmin Descent Mk3i": {
+  "url": "https://www.garmin.com/en-US/p/852159/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Garmin Descent G1": {
+  "url": "https://www.garmin.com/en-US/p/766516/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Sherwood SR2": {
+  "url": "https://www.sherwoodscuba.com/products/product?productId=4",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Hollis M1 Frameless": {
+  "url": "https://www.hollis.com/product/mask-m-1/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Hollis 500SE DC7": {
+  "url": "https://www.hollis.com/product-tag/500se-dc7/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Hollis LTS": {
+  "url": "https://www.hollis.com/product/hollis-light-travel-system/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Atomic Aquatics Venom Frameless": {
+  "url": "https://www.atomicaquatics.com/products/masks/venom-frameless/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Atomic Aquatics SubFrame": {
+  "url": "https://www.atomicaquatics.com/products/masks/subframe/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Atomic Aquatics SplitFin": {
+  "url": "https://www.atomicaquatics.com/products/fins/dive-fins-open-heel-splitfin-from-atomic-aquatics/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Atomic Aquatics T3": {
+  "url": "https://www.atomicaquatics.com/products/regulators/t3-regulator/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Fourth Element Proteus II 3mm": {
+  "url": "https://fourthelement.com/product/mens-proteus-ii-3mm/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Fourth Element Proteus II 5mm": {
+  "url": "https://fourthelement.com/product/mens-proteus-ii-5mm-diving-wetsuit/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Waterproof W7 7mm": {
+  "url": "https://waterproof.eu/products/wetsuits/w7/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Zeagle Ranger": {
+  "url": "https://www.zeagle.com/product/core-buoyancy/made-in-usa/ranger-bcd/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "TUSA Freedom Ceos M-212": {
+  "url": "https://tusa.com/us-en/TUSA/Masks/Freedom_Ceos",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "TUSA HyFlex Switch": {
+  "url": "https://tusa.com/us-en/TUSA/Fins/TUSA_HyFlex_Switch",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "xDeep Zeos 28": {
+  "url": "https://www.xdeep.eu/zeos-single-tank-bc-system-wing-pr-107.html",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "O'Neill Reactor-2 2mm Back Zip Springsuit": {
+  "url": "https://us.oneill.com/products/5041-a00-reactor-2-mm-back-zip-spring",
+  "colors_hint": [
+   "Black/Black",
+   "Black/Slate",
+   "Black/Graphite"
+  ],
+  "shopify": true
+ },
+ "Pinnacle Tempo XT 3mm Merino": {
+  "url": null,
+  "colors_hint": [],
+  "shopify": false
+ }
+}
