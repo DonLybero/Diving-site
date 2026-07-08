@@ -16,14 +16,13 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 5
 
 CANDIDATE_QUERIES = {
-    "crew": ["scuba divers preparing equipment boat", "divers gear check boat", "scuba diver donning equipment",
-             "divemaster briefing divers", "scuba diving equipment preparation", "divers on dive boat gear",
-             "buddy check scuba"],
+    "crew2": ["divers assembling scuba equipment", "scuba tank filling compressor", "dive briefing boat",
+              "scuba instructor equipment", "dive centre tanks", "divers boat tanks preparation",
+              "scuba diving course equipment"],
 }
 
-# titles the owner has already rejected (or junk series) — never re-offer
 EXCLUDE = {
-    "crew": __import__("re").compile(r"(navy|military|museum|statue|drawing|mannequin)", __import__("re").I),
+    "crew2": __import__("re").compile(r"(navy|military|army|museum|statue|drawing|mannequin|child|kid)", __import__("re").I),
 }
 
 
