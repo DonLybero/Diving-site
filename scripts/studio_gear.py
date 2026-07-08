@@ -273,8 +273,10 @@ def main():
                     h = hero(piece)
                     h.save(os.path.join(herodir, f"{base}--{cname.lower()}.jpg"), quality=88)
                     print(f"    split: {base} -> {cname}")
-                # default hero = first colour
+                # default hero AND list image = first colour (the group shot
+                # must never appear — a colour only shows when selected)
                 hero(parts[0]).save(os.path.join(herodir, base + ".jpg"), quality=88)
+                studio(parts[0]).save(os.path.join(DST, base + ".jpg"), quality=88)
         else:
             hero(cut).save(os.path.join(herodir, base + ".jpg"), quality=88)
         done.append(name)

@@ -676,7 +676,7 @@
 
   <section id="view-gear" class="hidden">
     <div class="controls">
-      <div class="field"><label>Buyer&rsquo;s guide</label><select id="gearCat"><option value="">Browse all gear by brand</option></select></div>
+      <div class="field"><label>Category</label><select id="gearCat"><option value="">All categories</option></select></div>
     </div>
     <div id="gearGrid" class="grid"></div>
   </section>
@@ -1099,7 +1099,7 @@ function initControls(){
   ['calSort','calShow'].forEach(function(id){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
-  document.getElementById('gearCat').addEventListener('change',renderGear);
+  document.getElementById('gearCat').addEventListener('change',function(){GEAR_ARTICLE='';renderGear();});
   // Any planner selection reveals the result views and refreshes the active one.
   ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
@@ -1307,7 +1307,7 @@ function gotoWetsuit(th){
   showTab('gear');
   var sel=document.getElementById('gearCat');
   renderGear();                                   // ensure category options exist
-  sel.value='Wetsuits'; GEAR_THICK=th; renderGear();
+  sel.value='Wetsuits'; GEAR_ARTICLE='Wetsuits'; GEAR_THICK=th; renderGear();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 // deep link e.g. #gear-wetsuits-5mm (used by the static destination SEO pages)
@@ -1320,7 +1320,7 @@ function handleHash(){
   if(parts[1]&&GEAR_GUIDE&&GEAR_GUIDE.categories){
     var slug=parts[1].toLowerCase();
     var cat=GEAR_GUIDE.categories.filter(function(c){return c.category.toLowerCase().replace(/[^a-z0-9]/g,'')===slug;})[0];
-    if(cat){ sel.value=cat.category; if(parts[2]) GEAR_THICK=parts[2]; renderGear(); }
+    if(cat){ sel.value=cat.category; GEAR_ARTICLE=cat.category; if(parts[2]) GEAR_THICK=parts[2]; renderGear(); }
   }
   window.scrollTo({top:0});
 }
@@ -1785,7 +1785,9 @@ function thickNav(c){
 }
 function openGearArticle(cat){
   showTab('gear');
-  var sel=document.getElementById('gearCat'); sel.value=cat; GEAR_THICK=null; renderGear();
+  GEAR_ARTICLE=cat||''; GEAR_THICK=null;
+  if(!cat) document.getElementById('gearCat').value='';
+  renderGear();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 /* Gear tab: every product listed under its brand (the ranked buyer's-guide
@@ -1801,8 +1803,9 @@ function brandOf(name){
   }
   return name.split(' ')[0];
 }
-function gearBrandDir(){
-  return GEAR_GUIDE.categories.map(function(c){
+var GEAR_ARTICLE='';   /* set only when a buyer's-guide article is opened from Articles */
+function gearBrandDir(onlyCat){
+  return GEAR_GUIDE.categories.filter(function(c){return !onlyCat||c.category===onlyCat;}).map(function(c){
     var seen={}, brands={}, n=0;
     var all=(c.items||[]).slice();
     (c.thickness_groups||[]).forEach(function(gr){all=all.concat(gr.items||[]);});
@@ -1829,19 +1832,19 @@ function renderGear(){
   var sel=document.getElementById('gearCat');
   if(!GEAR_GUIDE||!GEAR_GUIDE.categories){document.getElementById('gearGrid').innerHTML='<div class="empty">Gear guide could not load.</div>';return;}
   if(sel.options.length<=1) GEAR_GUIDE.categories.forEach(function(c){var o=document.createElement('option');o.value=c.category;o.textContent=c.category;sel.appendChild(o);});
-  var cat=sel.value, g=document.getElementById('gearGrid');
+  var cat=GEAR_ARTICLE, g=document.getElementById('gearGrid');
   function cmpScope(scope,items){ if(scope!==CMP_SCOPE){CMP=[];CMP_SCOPE=scope;} GEAR_VIEW={items:items||[]}; }
   if(!cat){
     cmpScope('',[]);
     g.innerHTML='<div class="article" style="grid-column:1/-1;margin-bottom:6px">'+
       '<p class="gentry-review" style="max-width:80ch;margin-top:0">'+(GEAR_GUIDE.intro||'')+
-      ' Every product has its own page — photos, prices and specs. The ranked buyer’s guides now live under <a href="#" onclick="showTab(\'destinations\');return false;">Articles</a>.</p>'+
-      gearBrandDir()+'</div>';
+      ' Every product has its own page — photos, prices and specs. The ranked buyer’s guides live under <a href="#" onclick="showTab(\'destinations\');return false;">Articles</a>.</p>'+
+      gearBrandDir(sel.value)+'</div>';
   }else{
     var c=GEAR_GUIDE.categories.filter(function(x){return x.category===cat;})[0];
     if(!c){g.innerHTML='';return;}
-    var head='<p class="meta"><a href="#" onclick="openGearArticle(\'\');return false;">← All buyer’s guides</a></p>';
-    var foot='<p class="meta" style="margin-top:16px"><a href="#" onclick="openGearArticle(\'\');return false;">← Back to all buyer’s guides</a></p>';
+    var head='<p class="meta"><a href="#" onclick="showTab(\'destinations\');return false;">← All articles</a> &nbsp;·&nbsp; <a href="#" onclick="openGearArticle(\'\');return false;">Browse gear by category →</a></p>';
+    var foot='<p class="meta" style="margin-top:16px"><a href="#" onclick="showTab(\'destinations\');return false;">← Back to all articles</a></p>';
     var affNote='<p class="aff-note">'+ico('current',12)+' Prices are indicative — check the live price at the retailer. We may earn a commission at no extra cost to you, and it never changes a ranking.</p>';
     if(c.thickness_groups){
       // one buyer's guide split into thickness pages, chosen with a pill nav
