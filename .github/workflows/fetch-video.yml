@@ -1,0 +1,31 @@
+name: Fetch diver-entry video candidates (Commons)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Install ffmpeg
+        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+
+      - name: Fetch candidates
+        run: python3 scripts/fetch_video_candidates.py
+
+      - name: Push to orphan branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan video-cands
+          git rm -rf --cached . >/dev/null
+          git add -f vidcands
+          git commit -m "Diver-entry video candidates (automated)"
+          git push -f origin video-cands

@@ -108,7 +108,7 @@ def studio(cut):
 
 
 HERO = (1680, 860)
-BANNER_BAND = 190          # bottom pixels kept free of product for the floating banner
+BANNER_BAND = 44           # small clear margin under the product
 
 # Group photos that show several colourways side by side: split into one
 # cutout per colour (components ordered left-to-right in the source photo).
