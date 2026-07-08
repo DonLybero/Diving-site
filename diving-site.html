@@ -1908,7 +1908,13 @@ function seasonRibbon(d){
 /* Hero photo credit is tooltip-only (small info mark) — no visible photographer
    name on the main page while keeping CC attribution accessible. */
 var HERO_PICKS=["Fernando de Noronha","Sipadan Island","Maldives","Palau","Raja Ampat","Great Barrier Reef","Bonaire"];
-var HERO_VIDEO={src:'assets/video/hero-dive.mp4', credit:'Video via Pexels'};
+var HERO_VIDEO={webm:'assets/video/hero-dive.webm', mp4:'assets/video/hero-dive.mp4',
+  poster:'assets/video/hero-dive-poster.jpg', credit:'Video via Pexels'};
+function feedVideo(v){
+  v.innerHTML='<source src="'+HERO_VIDEO.webm+'" type="video/webm">'+
+              '<source src="'+HERO_VIDEO.mp4+'" type="video/mp4">';
+  v.load(); var p=v.play(); if(p&&p.catch)p.catch(function(){});
+}
 function setHeroPhoto(){
   /* the band plays the dive-entry video; a destination photo paints beneath
      it as the fallback (video missing or reduced motion) */
@@ -1918,13 +1924,11 @@ function setHeroPhoto(){
       document.querySelectorAll('#heroBand .hb-tile').forEach(function(t){t.remove();});
       v.remove();
     }else{
-      v.addEventListener('error',function(){v.style.display='none';},true);
       document.querySelectorAll('#heroBand .hb-tile video').forEach(function(tv){
-        tv.poster='assets/video/hero-dive-poster.jpg';
-        tv.addEventListener('error',function(){var t=tv.closest('.hb-tile');if(t)t.style.display='none';},true);
-        tv.src=HERO_VIDEO.src;
+        tv.poster=HERO_VIDEO.poster;
+        feedVideo(tv);
       });
-      v.src=HERO_VIDEO.src;
+      feedVideo(v);
       var vc=document.getElementById('heroCredit');
       if(HERO_VIDEO.credit){vc.textContent='\u24D8';vc.title=HERO_VIDEO.credit;vc.style.cursor='help';}
     }
