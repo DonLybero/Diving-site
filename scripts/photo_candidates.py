@@ -16,17 +16,14 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 5
 
 CANDIDATE_QUERIES = {
-    "cenotes-of-yucatan-peninsula": ["Cenote Suytun", "Dos Ojos cenote", "Cenote Calavera",
-                                     "cave diver Mexico stalactites", "Cenote Azul", "Cenote Chac Mool",
-                                     "Cenote Zaci"],
-    "sardine-run": ["sardines school Moalboal", "bronze whaler shark sardines", "gannets diving underwater",
-                    "dolphins hunting sardines underwater", "bait ball Philippines", "sardine shoal Cebu"],
+    "crew": ["scuba divers preparing equipment boat", "divers gear check boat", "scuba diver donning equipment",
+             "divemaster briefing divers", "scuba diving equipment preparation", "divers on dive boat gear",
+             "buddy check scuba"],
 }
 
 # titles the owner has already rejected (or junk series) — never re-offer
 EXCLUDE = {
-    "cenotes-of-yucatan-peninsula": re.compile(r"(gran.?cenote|ik.?kil)", re.I),
-    "sardine-run": re.compile(r"(sardinops|drix|ifremer|delmoges|turtle)", re.I),
+    "crew": __import__("re").compile(r"(navy|military|museum|statue|drawing|mannequin)", __import__("re").I),
 }
 
 
