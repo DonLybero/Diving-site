@@ -86,18 +86,11 @@
   .hbm-coral video{filter:sepia(1) saturate(2) hue-rotate(-16deg) brightness(1.12) contrast(1.1)}
   .hbm-sage{left:0;top:0;bottom:0;width:22%;z-index:2;animation:hbmA 12s ease-in-out infinite alternate}
   .hbm-sage video{filter:sepia(1) saturate(1.15) hue-rotate(100deg) brightness(1.16) contrast(1.06)}
-  .hbm-blush{left:31%;top:0;width:15%;height:46%;z-index:3;animation:hbmD 8s ease-in-out infinite alternate}
-  .hbm-blush video{filter:sepia(1) saturate(1.7) hue-rotate(290deg) brightness(1.22) contrast(1.02)}
-  .hbm-dark{left:52%;top:8%;width:17%;height:84%;z-index:2;animation:hbmE 13s ease-in-out infinite alternate}
-  .hbm-dark video{filter:grayscale(1) contrast(1.55) brightness(.92)}
   .hbm-lilac{right:0;top:0;bottom:0;width:26%;z-index:1;animation:hbmC 10s ease-in-out infinite alternate}
   .hbm-lilac video{filter:sepia(1) saturate(1.35) hue-rotate(205deg) brightness(1.2) contrast(1.02)}
   @keyframes hbmA{from{width:14%}to{width:30%}}
   @keyframes hbmB{from{width:40%}to{width:24%}}
   @keyframes hbmC{from{width:17%}to{width:33%}}
-  @keyframes hbmD{from{width:11%;height:38%}to{width:19%;height:60%}}
-  @keyframes hbmE{from{width:22%;height:70%;top:14%}to{width:13%;height:92%;top:4%}}
-  @media(max-width:700px){.hbm-blush,.hbm-dark{display:none}}
   @media(prefers-reduced-motion:reduce){.hbm{animation:none}}
   .hero{position:relative;overflow:hidden;text-align:center;padding:64px 18px 52px;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
@@ -679,8 +672,6 @@
   <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-dive-poster.jpg"></video>
   <div class="hbm hbm-coral"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <div class="hbm hbm-sage"><video muted autoplay loop playsinline preload="metadata"></video></div>
-  <div class="hbm hbm-blush"><video muted autoplay loop playsinline preload="metadata"></video></div>
-  <div class="hbm hbm-dark"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <div class="hbm hbm-lilac"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <span class="photo-credit" id="heroCredit"></span>
 </div>
