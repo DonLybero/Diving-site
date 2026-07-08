@@ -65,6 +65,49 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .honest ul{list-style:none;margin:0;padding:0}
 .honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
 .honest li b{color:var(--ink)}
+.gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
+.gitem-kicker a{color:var(--accent);text-decoration:none}
+.gitem-stage{position:relative;margin:10px 0 26px}
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+.gitem-photo img{display:block;width:100%;max-height:640px;object-fit:cover}
+.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:16px 22px;
+  position:absolute;left:18px;right:18px;bottom:18px;
+  box-shadow:0 18px 40px -20px rgba(13,60,70,.35)}
+@media(max-width:760px){
+  .gitem-banner{position:static;margin-top:-30px;left:auto;right:auto;width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+  .gitem-photo img{object-fit:contain}
+}
+.gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
+.gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
+.gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
+.gitem-colors{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.csw{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;border:1px solid var(--line)}
+.csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.csw.on{border:2px solid var(--ink)}
+.csw:hover{border-color:var(--ink)}
+.grel{list-style:none;margin:8px 0 0;padding:0}
+.grel li{padding:8px 0;border-top:1px solid var(--line)}
+.grel a{color:var(--ink);text-decoration:none;font-weight:600}
+.grel a:hover{color:var(--accent)}
+.grel small{color:var(--muted);font-family:var(--mono)}
+.gitem-link{color:inherit;text-decoration:none}
+.gitem-link:hover{color:var(--accent)}
+.dregion{margin:26px 0 8px}
+.dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
+.bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+.gbcol{min-width:0}
+.gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin:4px 0 2px}
+.gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+.gbrow b{display:block;font-weight:600;font-size:.92rem}
+.gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+.gbrow:hover b{color:var(--accent)}
+.gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+.gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.gitem-photo img{max-height:340px}}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -116,7 +159,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
   <p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">Three small coral-fringed islets off Lombok&#x27;s northwest coast, the Gilis deliver Indonesia at its most relaxed: warm, easy reefs where green and hawksbill turtles are all but guaranteed - Turtle Heaven stacks them on a single pinnacle. Short day-boat rides reach sloping reefs, the coral-crusted Bounty Wreck and gentle walls like Meno&#x27;s, with drift and channel sites adding pace when the current runs. It is an ideal place to learn or ease back into diving.</p>
   <p style="max-width:78ch;line-height:1.65;color:#33565e">Gili Islands &amp; Lombok is at its best May-Sep, with May, Jun, Jul, Aug and Sep rating as peak season. Expect tropical water of 27–29°C (suit: 3mm), visibility up to ~32m, and medium currents — Lombok Strait drift common; training sites gentle. Divers here work 8 recognised sites — 2 reefs, 2 pinnacles, 1 wall, 1 wreck, 1 drift dive and 1 muck dive — ranging from Meno Wall (5-20m) for beginner divers up to Deep Turbo (18-32m), advanced territory.</p>
   <div class="prof-essays"><div class="prof-essay"><h2>What to expect down there</h2><p>Expect warm, unhurried diving: 27-29°C year-round in a 3mm suit, over sloping reefs and coral heads that rarely demand more than easy finning. When the Lombok Strait current runs, Halik&#x27;s ridges and canyons turn into a proper drift, and Deep Turbo drops you onto sea-fan-covered seamounts at 24-32 m with garden eels rippling over the sand. Han&#x27;s Reef swaps scenery for critter hunting on the rubble. The signature moment is a green turtle lifting off a coral head close enough to fill your mask.</p></div><div class="prof-essay"><h2>What you&#8217;ll encounter</h2><p>Green and hawksbill turtles are the constant, grazing, sleeping and queuing at cleaning stations at nearly every site. Whitetip reef sharks rest under ledges and patrol the deeper slopes, cuttlefish hover and flare over the rubble, and Han&#x27;s Reef delivers seahorses, frogfish, ribbon eels and octopus. The dry months from May to September bring the clearest water and the busiest reefs.</p></div></div>
-  <div class="best">&#127942; <b>Best months:</b> May, Jun, Jul, Aug, Sep &nbsp;·&nbsp; <b>Recommended window:</b> May-Sep</div>
+  <div class="best"><b>Best months:</b> May, Jun, Jul, Aug, Sep &nbsp;·&nbsp; <b>Recommended window:</b> May-Sep</div>
   <div class="kv">
     <div><span>Water type</span>tropical</div>
     <div><span>Difficulty</span>beginner</div>

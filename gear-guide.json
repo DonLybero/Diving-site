@@ -151,7 +151,7 @@
      "rank": 1,
      "name": "Atomic Aquatics Venom Frameless",
      "blurb": "A premium frameless mask built around ultra-clear glass that removes the green tint of standard lenses, so colours at depth stay true — a real advantage on coral and for photographers.",
-     "image": "assets/gear/atomic-aquatics-venom-frameless.jpg",
+     "image": "assets/gear/studio/atomic-aquatics-venom-frameless.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -182,7 +182,7 @@
      "rank": 2,
      "name": "Scubapro Synergy 2 Trufit",
      "blurb": "The skirt blends two silicone densities — supple where it touches your face, firmer where the mask needs structure — so it seals on a far wider range of faces than single-density masks.",
-     "image": "assets/gear/scubapro-synergy-2-trufit.jpg",
+     "image": "assets/gear/studio/scubapro-synergy-2-trufit.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -214,7 +214,7 @@
      "rank": 3,
      "name": "Cressi Big Eyes Evolution",
      "blurb": "Inverted teardrop lenses angle downward, adding real visibility toward your chest — gauges, inflator, camera — without tilting your head.",
-     "image": "assets/gear/cressi-big-eyes-evolution.jpg",
+     "image": "assets/gear/studio/cressi-big-eyes-evolution.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -240,13 +240,35 @@
       "Frame": "Framed",
       "Rx lenses": "Yes",
       "Weight": "160 g"
+     },
+     "colors": [
+      "Black / Black",
+      "Black / Black / Silver Mirrored lens",
+      "Black / Blue",
+      "Black / Yellow",
+      "Clear / Black",
+      "Clear / Blue",
+      "Clear / Pink",
+      "Clear / Red",
+      "Clear / Yellow"
+     ],
+     "color_images": {
+      "Black / Black": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-black.jpg",
+      "Black / Black / Silver Mirrored lens": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-black-silver-mirrored-lens.jpg",
+      "Black / Blue": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-blue.jpg",
+      "Black / Yellow": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-yellow.jpg",
+      "Clear / Black": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-black.jpg",
+      "Clear / Blue": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-blue.jpg",
+      "Clear / Pink": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-pink.jpg",
+      "Clear / Red": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-red.jpg",
+      "Clear / Yellow": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-yellow.jpg"
      }
     },
     {
      "rank": 4,
      "name": "Mares X-Vision",
      "blurb": "Oversized twin lenses in a slim frame give one of the widest fields of view of any two-lens mask.",
-     "image": "assets/gear/mares-x-vision.jpg",
+     "image": "assets/gear/studio/mares-x-vision.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -278,7 +300,7 @@
      "rank": 5,
      "name": "Aqua Lung Reveal X2",
      "blurb": "Buckles mounted on rotating cardanic joints let the strap find the natural angle of the back of your head, spreading pressure evenly — no hot spots after an hour underwater.",
-     "image": "assets/gear/aqua-lung-reveal-x2.jpg",
+     "image": "assets/gear/studio/aqua-lung-reveal-x2.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -309,7 +331,7 @@
      "rank": 6,
      "name": "TUSA Freedom Ceos M-212",
      "blurb": "TUSA's Freedom skirt varies its thickness and surface texture along the seal line — smooth where it needs grip, dimpled where the face flexes — and the result is a mask that stays sealed through smiling, talking into a regulator and equalising.",
-     "image": "assets/gear/tusa-freedom-ceos-m-212.jpg",
+     "image": "assets/gear/studio/tusa-freedom-ceos-m-212.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -341,7 +363,7 @@
      "rank": 7,
      "name": "Hollis M1 Frameless",
      "blurb": "A single-lens frameless with genuinely low internal volume: it clears with a puff and mask-equalises almost automatically, which is why it became a standard among technical divers.",
-     "image": "assets/gear/hollis-m1-frameless.jpg",
+     "image": "assets/gear/studio/hollis-m1-frameless.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -372,7 +394,7 @@
      "rank": 8,
      "name": "Scubapro Frameless",
      "blurb": "The design that proved a mask needs no frame: the skirt bonds directly to one large tempered lens, giving a wide view, low volume and a mask that packs completely flat.",
-     "image": "assets/gear/scubapro-frameless.jpg",
+     "image": "assets/gear/studio/scubapro-frameless.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -404,7 +426,7 @@
      "rank": 9,
      "name": "Atomic Aquatics SubFrame",
      "blurb": "Atomic solved the one weakness of frameless masks — the slow distortion of an unsupported skirt — by moulding a rigid skeleton inside the silicone, invisible from outside and immune to flex.",
-     "image": "assets/gear/atomic-aquatics-subframe.jpg",
+     "image": "assets/gear/studio/atomic-aquatics-subframe.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -435,7 +457,7 @@
      "rank": 10,
      "name": "Cressi F1 Frameless",
      "blurb": "The most affordable way into a frameless design: one wide tempered lens, a soft crystal-silicone skirt and a flat-folding profile.",
-     "image": "assets/gear/cressi-f1-frameless.jpg",
+     "image": "assets/gear/studio/cressi-f1-frameless.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -461,6 +483,28 @@
       "Frame": "Frameless",
       "Rx lenses": "No",
       "Weight": "200 g"
+     },
+     "colors": [
+      "Black",
+      "Black / Blue / Orange lens",
+      "Blue",
+      "Clear",
+      "Pink",
+      "Silver",
+      "Turquoise",
+      "White",
+      "Yellow"
+     ],
+     "color_images": {
+      "Black": "assets/gear/studio/hero/cressi-f1-frameless--black.jpg",
+      "Black / Blue / Orange lens": "assets/gear/studio/hero/cressi-f1-frameless--black-blue-orange-lens.jpg",
+      "Blue": "assets/gear/studio/hero/cressi-f1-frameless--blue.jpg",
+      "Clear": "assets/gear/studio/hero/cressi-f1-frameless--clear.jpg",
+      "Pink": "assets/gear/studio/hero/cressi-f1-frameless--pink.jpg",
+      "Silver": "assets/gear/studio/hero/cressi-f1-frameless--silver.jpg",
+      "Turquoise": "assets/gear/studio/hero/cressi-f1-frameless--turquoise.jpg",
+      "White": "assets/gear/studio/hero/cressi-f1-frameless--white.jpg",
+      "Yellow": "assets/gear/studio/hero/cressi-f1-frameless--yellow.jpg"
      }
     }
    ],
@@ -480,7 +524,7 @@
      "rank": 1,
      "name": "Mares Avanti Quattro+",
      "blurb": "Four longitudinal channels flex the blade into a scoop on every stroke, moving a large volume of water at a moderate kick rate — power that holds against current without shredding your calves.",
-     "image": "assets/gear/mares-avanti-quattro.jpg",
+     "image": "assets/gear/studio/mares-avanti-quattro.jpg",
      "options": [
       {
        "store": "DipNDive",
@@ -506,13 +550,29 @@
       "Strap": "Bungee",
       "Weight/fin": "~0.9kg (R)",
       "Best for": "All-round, currents"
+     },
+     "colors": [
+      "Blue",
+      "White",
+      "Lime",
+      "Pink",
+      "Black",
+      "Yellow"
+     ],
+     "color_images": {
+      "Blue": "assets/gear/studio/hero/mares-avanti-quattro--blue.jpg",
+      "White": "assets/gear/studio/hero/mares-avanti-quattro--white.jpg",
+      "Lime": "assets/gear/studio/hero/mares-avanti-quattro--lime.jpg",
+      "Pink": "assets/gear/studio/hero/mares-avanti-quattro--pink.jpg",
+      "Black": "assets/gear/studio/hero/mares-avanti-quattro--black.jpg",
+      "Yellow": "assets/gear/studio/hero/mares-avanti-quattro--yellow.jpg"
      }
     },
     {
      "rank": 2,
      "name": "Scubapro Seawing Nova",
      "blurb": "A hinged joint behind the foot pocket lets the whole blade pivot like a propeller, so the wing sweeps water through the full stroke instead of only at the tip — quick acceleration with a cadence that is gentle on knees and ankles.",
-     "image": "assets/gear/scubapro-seawing-nova.jpg",
+     "image": "assets/gear/studio/scubapro-seawing-nova.jpg",
      "options": [
       {
        "store": "LeisurePro",
@@ -544,7 +604,7 @@
      "rank": 3,
      "name": "Scubapro Jet Fin",
      "blurb": "Short, stiff, heavy and essentially unchanged for decades because the shape is right: vented rubber blades give precise frog kicks, back kicks and helicopter turns, which is why drysuit and doubles divers still default to them.",
-     "image": "assets/gear/scubapro-jet-fin.jpg",
+     "image": "assets/gear/studio/scubapro-jet-fin.jpg",
      "options": [
       {
        "store": "Divers Supply",
@@ -576,7 +636,7 @@
      "rank": 4,
      "name": "Apeks RK3",
      "blurb": "A modern take on the rubber paddle: a wider, shorter blade for manoeuvring precision in confined or silty spaces, vents that smooth the recovery stroke, and oversized spring straps you can grab in 5mm gloves.",
-     "image": "assets/gear/apeks-rk3.jpg",
+     "image": "assets/gear/studio/apeks-rk3.jpg",
      "options": [
       {
        "store": "Diveinn (Tradeinn)",
@@ -608,7 +668,7 @@
      "rank": 5,
      "name": "TUSA HyFlex Switch",
      "blurb": "The blade detaches from the foot pocket in seconds, so a full-size fin packs to half length in a dive bag — a travel solution no folding gimmick matches.",
-     "image": "assets/gear/tusa-hyflex-switch.jpg",
+     "image": "assets/gear/studio/tusa-hyflex-switch.jpg",
      "options": [
       {
        "store": "Walmart",
@@ -640,7 +700,7 @@
      "rank": 6,
      "name": "Scubapro Go Sport",
      "blurb": "Built for divers who fly: about 700 grams per fin, short enough for carry-on, with a self-adjusting bungee that fits over boots or bare feet.",
-     "image": "assets/gear/scubapro-go-sport.jpg",
+     "image": "assets/gear/studio/scubapro-go-sport.jpg",
      "options": [
       {
        "store": "Scuba.com",
@@ -704,7 +764,7 @@
      "rank": 8,
      "name": "Cressi Frog Plus",
      "blurb": "A no-nonsense paddle with side rails that channel water and a stiffness pitched for everyday reef diving.",
-     "image": "assets/gear/cressi-frog-plus.jpg",
+     "image": "assets/gear/studio/cressi-frog-plus.jpg",
      "options": [
       {
        "store": "Walmart",
@@ -730,13 +790,27 @@
       "Strap": "Buckle (bungee opt.)",
       "Weight/fin": "~0.9kg (M/L)",
       "Best for": "All-round value"
+     },
+     "colors": [
+      "Black / Pink",
+      "Black / Silver",
+      "Black / White",
+      "Black / Yellow",
+      "Blue / Silver"
+     ],
+     "color_images": {
+      "Black / Pink": "assets/gear/studio/hero/cressi-frog-plus--black-pink.jpg",
+      "Black / Silver": "assets/gear/studio/hero/cressi-frog-plus--black-silver.jpg",
+      "Black / White": "assets/gear/studio/hero/cressi-frog-plus--black-white.jpg",
+      "Black / Yellow": "assets/gear/studio/hero/cressi-frog-plus--black-yellow.jpg",
+      "Blue / Silver": "assets/gear/studio/hero/cressi-frog-plus--blue-silver.jpg"
      }
     },
     {
      "rank": 9,
      "name": "Aqua Lung Storm",
      "blurb": "A one-piece Monprene travel fin whose raised wing-tip edges keep water on the blade even with an imperfect kick — forgiving while your technique develops.",
-     "image": "assets/gear/aqua-lung-storm.png",
+     "image": "assets/gear/studio/aqua-lung-storm.jpg",
      "options": [
       {
        "store": "Amazon",
@@ -768,7 +842,7 @@
      "rank": 10,
      "name": "Mares Power Plana LT",
      "blurb": "The geometry of the classic tec rubber fin cast in a lighter compound: the short-blade frog-kick precision stays, while the weight drops enough to matter at airline check-in.",
-     "image": "assets/gear/mares-power-plana-lt.jpg",
+     "image": "assets/gear/studio/mares-power-plana-lt.jpg",
      "options": [
       {
        "store": "Diveinn (Tradeinn)",
@@ -813,7 +887,7 @@
      "rank": 1,
      "name": "Scubapro MK25 EVO / S620 Ti",
      "blurb": "The MK25 EVO first stage is an air-balanced flow-through piston that delivers a huge, unwavering volume of gas regardless of tank pressure or depth, with thermal insulation that lets a piston design work in cold water.",
-     "image": "assets/gear/scubapro-mk25-evo-s620-ti.jpg",
+     "image": "assets/gear/studio/scubapro-mk25-evo-s620-ti.jpg",
      "options": [
       {
        "store": "Divers Supply",
@@ -844,7 +918,7 @@
      "rank": 2,
      "name": "Atomic Aquatics T3",
      "blurb": "Every metal part that touches gas or water is titanium, so corrosion never starts — the reason this regulator is rated for three years or 300 dives between services, twice the usual interval.",
-     "image": "assets/gear/atomic-aquatics-t3.jpg",
+     "image": "assets/gear/studio/atomic-aquatics-t3.jpg",
      "options": [
       {
        "store": "Divers Supply",
@@ -876,7 +950,7 @@
      "rank": 3,
      "name": "Apeks XTX50",
      "blurb": "Paired with the over-balanced, environmentally sealed DST first stage, this is a reference cold-water regulator: the sealed diaphragm keeps water — and therefore freezing — out of the mechanism entirely.",
-     "image": "assets/gear/apeks-xtx50.jpg",
+     "image": "assets/gear/studio/apeks-xtx50.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -907,7 +981,7 @@
      "rank": 4,
      "name": "Aqua Lung Leg3nd",
      "blurb": "The over-balanced diaphragm first stage raises intermediate pressure faster than ambient as you descend, so the breathe feels easier deeper, not harder.",
-     "image": "assets/gear/aqua-lung-leg3nd.jpg",
+     "image": "assets/gear/studio/aqua-lung-leg3nd.jpg",
      "options": [
       {
        "store": "Divers Supply",
@@ -939,7 +1013,7 @@
      "rank": 5,
      "name": "Scubapro MK19 EVO BT / G260 Carbon BT",
      "blurb": "A dry-sealed diaphragm first stage in black-tech finish feeding the G260 — the large-diaphragm, metal-valve second stage that technical divers standardised on for deep, cold, long dives.",
-     "image": "assets/gear/scubapro-mk19-evo-bt-g260-carbon-bt.jpg",
+     "image": "assets/gear/studio/scubapro-mk19-evo-bt-g260-carbon-bt.jpg",
      "options": [
       {
        "store": "Scuba.com",
@@ -970,7 +1044,7 @@
      "rank": 6,
      "name": "Apeks MTX-RC",
      "blurb": "Developed from a military requirement for regulators that keep working below freezing: the first-stage endcap is over-moulded so ice cannot bridge its moving parts, and the all-metal second stage resists free-flow in water that stops other designs.",
-     "image": "assets/gear/apeks-mtx-rc.jpg",
+     "image": "assets/gear/studio/apeks-mtx-rc.jpg",
      "options": [
       {
        "store": "Amazon",
@@ -1002,7 +1076,7 @@
      "rank": 7,
      "name": "Mares Epic Adj 82X",
      "blurb": "The twin-DFC first stage maintains two independent dynamic flow circuits, so a buddy breathing hard off your octopus doesn't lean on your own supply.",
-     "image": "assets/gear/mares-epic-adj-82x.jpg",
+     "image": "assets/gear/studio/mares-epic-adj-82x.jpg",
      "options": [
       {
        "store": "Coral Sea Scuba",
@@ -1034,7 +1108,7 @@
      "rank": 8,
      "name": "Hollis 500SE DC7",
      "blurb": "The 500SE is a side-exhaust second stage: bubbles vent past your ear instead of across your field of view — photographers and videographers notice on the first dive.",
-     "image": "assets/gear/hollis-500se-dc7.jpg",
+     "image": "assets/gear/studio/hollis-500se-dc7.jpg",
      "options": [
       {
        "store": "Coral Sea Scuba",
@@ -1065,7 +1139,7 @@
      "rank": 9,
      "name": "Aqua Lung Core Supreme",
      "blurb": "The value benchmark: environmentally sealed diaphragm first stage, heat exchanger on the second, full cold-water certification — the complete safety feature set for roughly a third of flagship money.",
-     "image": "assets/gear/aqua-lung-core-supreme.png",
+     "image": "assets/gear/studio/aqua-lung-core-supreme.jpg",
      "options": [
       {
        "store": "Divers Supply",
@@ -1096,7 +1170,7 @@
      "rank": 10,
      "name": "Sherwood SR2",
      "blurb": "A balanced-piston first stage of famous mechanical simplicity — the dry-bleed system keeps the spring chamber sealed without extra diaphragms to service — matched to a balanced second stage with a dive/pre-dive switch.",
-     "image": "assets/gear/sherwood-sr2.jpg",
+     "image": "assets/gear/studio/sherwood-sr2.jpg",
      "options": [
       {
        "store": "Scuba.com",
@@ -1141,7 +1215,7 @@
      "rank": 1,
      "name": "Scubapro Hydros Pro",
      "blurb": "The harness is moulded Monprene gel rather than fabric: it shapes to your torso in the water, absorbs nothing (so it dries instantly and never sours), and is close to impossible to tear.",
-     "image": "assets/gear/scubapro-hydros-pro.jpg",
+     "image": "assets/gear/studio/scubapro-hydros-pro.jpg",
      "options": [
       {
        "store": "Amazon",
@@ -1173,7 +1247,7 @@
      "rank": 2,
      "name": "Aqua Lung Outlaw",
      "blurb": "A rethink of what a BCD must be: about 1.7kg, a minimalist back-inflate harness that rolls to the size of a towel, sized like clothing rather than endlessly adjusted.",
-     "image": "assets/gear/aqua-lung-outlaw.jpg",
+     "image": "assets/gear/studio/aqua-lung-outlaw.jpg",
      "options": [
       {
        "store": "Scuba.com",
@@ -1205,7 +1279,7 @@
      "rank": 3,
      "name": "Cressi Travelight",
      "blurb": "Full weight integration, a padded backplate that folds flat, tough 210-denier fabric and honest lift at roughly 2.6kg — your wetsuit weighs more.",
-     "image": "assets/gear/cressi-travelight.jpg",
+     "image": "assets/gear/studio/cressi-travelight.jpg",
      "options": [
       {
        "store": "Amazon",
@@ -1231,13 +1305,21 @@
       "Wt-integrated": "Yes",
       "Material": "210D nylon",
       "Travel": "Excellent"
+     },
+     "colors": [
+      "Black / Blue",
+      "Black / Pink"
+     ],
+     "color_images": {
+      "Black / Blue": "assets/gear/studio/hero/cressi-travelight--black-blue.jpg",
+      "Black / Pink": "assets/gear/studio/hero/cressi-travelight--black-pink.jpg"
      }
     },
     {
      "rank": 4,
      "name": "Mares Dragon SLS",
      "blurb": "The load-distributing harness works like a trekking backpack: tank weight rides on your hips through a padded waist frame instead of hanging off your shoulders — after a week of three-dive days the difference is unmistakable.",
-     "image": "assets/gear/mares-dragon-sls.jpg",
+     "image": "assets/gear/studio/mares-dragon-sls.jpg",
      "options": [
       {
        "store": "Lancaster Scuba",
@@ -1269,7 +1351,7 @@
      "rank": 5,
      "name": "Zeagle Ranger",
      "blurb": "Ballistic-nylon back-inflate with 20kg of lift, a rip-cord weight dump and a harness replaceable strap by strap — dived hard for thirty years because every part takes abuse and every part can be renewed.",
-     "image": "assets/gear/zeagle-ranger.png",
+     "image": "assets/gear/studio/zeagle-ranger.jpg",
      "options": [
       {
        "store": "Divers Supply",
@@ -1333,7 +1415,7 @@
      "rank": 7,
      "name": "Aqua Lung Pro HD",
      "blurb": "The workhorse of rental fleets worldwide — the strongest endorsement a BCD can earn, because operators only re-buy what survives.",
-     "image": "assets/gear/aqua-lung-pro-hd.jpg",
+     "image": "assets/gear/studio/aqua-lung-pro-hd.jpg",
      "options": [
       {
        "store": "Amazon",
@@ -1365,7 +1447,7 @@
      "rank": 8,
      "name": "Apeks Exotec",
      "blurb": "An exoskeleton rather than a vest: a rigid spine plate with articulated shoulder joints lets the rig move with your torso as you twist and reach, so the sensation in the water is closer to wearing nothing than wearing a jacket.",
-     "image": "assets/gear/apeks-exotec.jpg",
+     "image": "assets/gear/studio/apeks-exotec.jpg",
      "options": [
       {
        "store": "Diveinn (Tradeinn)",
@@ -1397,7 +1479,7 @@
      "rank": 9,
      "name": "xDeep Zeos 28",
      "blurb": "A true backplate-and-wing sold as one box: stainless-steel plate, 28lb donut wing and a continuous-webbing harness with just enough padding.",
-     "image": "assets/gear/xdeep-zeos-28.jpg",
+     "image": "assets/gear/studio/xdeep-zeos-28.jpg",
      "options": [
       {
        "store": "Diveinn (Tradeinn)",
@@ -1429,7 +1511,7 @@
      "rank": 10,
      "name": "Hollis LTS",
      "blurb": "The Light Travel System puts wing-style trim and full weight integration into a soft-structure rig that folds into a dive bag.",
-     "image": "assets/gear/hollis-lts.jpg",
+     "image": "assets/gear/studio/hollis-lts.jpg",
      "options": [
       {
        "store": "Diveinn (Scubastore)",
@@ -1474,7 +1556,7 @@
      "rank": 1,
      "name": "Shearwater Peregrine",
      "blurb": "A palm-sized colour screen readable across a boat deck, running full Bühlmann ZHL-16C with adjustable gradient factors — the same transparent decompression model as technical computers, in a simple recreational package.",
-     "image": "assets/gear/shearwater-peregrine.jpg",
+     "image": "assets/gear/studio/shearwater-peregrine.jpg",
      "options": [
       {
        "store": "Amazon",
@@ -1506,7 +1588,7 @@
      "rank": 2,
      "name": "Garmin Descent Mk3i",
      "blurb": "A complete dive computer inside a premium multisport watch: air integration with up to ten tanks via transceivers, AMOLED screen, 200m rating, and full mapping, training and health tracking between dives.",
-     "image": "assets/gear/garmin-descent-mk3i.png",
+     "image": "assets/gear/studio/garmin-descent-mk3i.jpg",
      "options": [
       {
        "store": "Divers Direct",
@@ -1538,7 +1620,7 @@
      "rank": 3,
      "name": "Shearwater Perdix 2",
      "blurb": "The technical benchmark: trimix, multi-gas switching, closed-circuit support and adjustable gradient factors behind a 2.2-inch screen that stays readable in silt.",
-     "image": "assets/gear/shearwater-perdix-2.jpg",
+     "image": "assets/gear/studio/shearwater-perdix-2.jpg",
      "options": [
       {
        "store": "Divers Supply",
@@ -1570,7 +1652,7 @@
      "rank": 4,
      "name": "Suunto Ocean",
      "blurb": "A full sports watch with GPS and wrist heart-rate that becomes a serious dive computer underwater: bright AMOLED screen, Bühlmann decompression with adjustable conservatism, and air integration via a tank pod.",
-     "image": "assets/gear/suunto-ocean.png",
+     "image": "assets/gear/studio/suunto-ocean.jpg",
      "options": [
       {
        "store": "Suunto",
@@ -1602,7 +1684,7 @@
      "rank": 5,
      "name": "Garmin Descent G1",
      "blurb": "The rugged button-operated sibling: 45 grams, solar-assisted charging that makes cables optional on a dive trip, a high-contrast monochrome display readable in direct sun, and the full dive feature set including multi-gas.",
-     "image": "assets/gear/garmin-descent-g1.jpg",
+     "image": "assets/gear/studio/garmin-descent-g1.jpg",
      "options": [
       {
        "store": "eBay",
@@ -1634,7 +1716,7 @@
      "rank": 6,
      "name": "Suunto Zoop Novo",
      "blurb": "Big segment digits, five buttons, a deliberately conservative decompression model that keeps new divers far from trouble, and a battery you change yourself with a coin.",
-     "image": "assets/gear/suunto-zoop-novo.png",
+     "image": "assets/gear/studio/suunto-zoop-novo.jpg",
      "options": [
       {
        "store": "Amazon",
@@ -1666,7 +1748,7 @@
      "rank": 7,
      "name": "Cressi Leonardo",
      "blurb": "One button, one clear screen, air and nitrox modes and a user-changeable battery: the least expensive credible dive computer from a major manufacturer, which is why it's on rental wrists on every continent.",
-     "image": "assets/gear/cressi-leonardo.jpg",
+     "image": "assets/gear/studio/cressi-leonardo.jpg",
      "options": [
       {
        "store": "eBay",
@@ -1692,13 +1774,29 @@
       "Battery": "User-changeable CR2430",
       "Depth rating": "120m",
       "Modes": "Air/Nitrox/Gauge"
+     },
+     "colors": [
+      "Black / Black",
+      "Black / Blue",
+      "Black / Grey",
+      "Black / Pink",
+      "Black / White",
+      "Black / Yellow"
+     ],
+     "color_images": {
+      "Black / Black": "assets/gear/studio/hero/cressi-leonardo--black-black.jpg",
+      "Black / Blue": "assets/gear/studio/hero/cressi-leonardo--black-blue.jpg",
+      "Black / Grey": "assets/gear/studio/hero/cressi-leonardo--black-grey.jpg",
+      "Black / Pink": "assets/gear/studio/hero/cressi-leonardo--black-pink.jpg",
+      "Black / White": "assets/gear/studio/hero/cressi-leonardo--black-white.jpg",
+      "Black / Yellow": "assets/gear/studio/hero/cressi-leonardo--black-yellow.jpg"
      }
     },
     {
      "rank": 8,
      "name": "Mares Puck Pro+",
      "blurb": "The puck format grown up: large digits, an intuitive two-button flow, nitrox to 99% with gas switching, and Bluetooth upload of your logbook to the phone app.",
-     "image": "assets/gear/mares-puck-pro.jpg",
+     "image": "assets/gear/studio/mares-puck-pro.jpg",
      "options": [
       {
        "store": "Amazon",
@@ -1730,7 +1828,7 @@
      "rank": 9,
      "name": "Aqualung i330R",
      "blurb": "A crisp colour screen and a USB-rechargeable battery at an entry price — legibility that used to cost three times as much.",
-     "image": "assets/gear/aqualung-i330r.jpg",
+     "image": "assets/gear/studio/aqualung-i330r.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -1762,7 +1860,7 @@
      "rank": 10,
      "name": "Apeks DSX",
      "blurb": "A technical instrument through and through: full trimix and closed-circuit support, four customisable dive views, air integration via transmitters, and a vibration alert you feel through a hood when audible alarms disappear.",
-     "image": "assets/gear/apeks-dsx.jpg",
+     "image": "assets/gear/studio/apeks-dsx.jpg",
      "options": [
       {
        "store": "Diveinn",
@@ -1823,7 +1921,7 @@
        "name": "O'Neill Reactor-2 2mm Back Zip Springsuit",
        "blurb": "A stretchy, bombproof warm-water shorty that shrugs off boat decks and tank abrasion.",
        "review": "The Reactor-2 is a 2mm short-sleeve, short-leg springsuit built from super-stretch UltraFlex neoprene, so it pulls on fast and never binds a diver reaching for valves or camera gear. Coverage over the core plus the smoothskin chest and back panel gives a light thermal edge and a buffer between your spine and the tank, while leaving arms and lower legs free for hot tropical water. The back-zip entry with a long pull leash makes it one of the easiest thin suits to self-don on a rocking dive boat.",
-       "image": "assets/gear/o-neill-reactor-2.jpg",
+       "image": "assets/gear/studio/o-neill-reactor-2.jpg",
        "specs": {
         "Thickness": "2mm shorty",
         "Material": "UltraFlex super-stretch neoprene",
@@ -1856,7 +1954,7 @@
        "name": "ScubaPro Sport Shorty 2mm",
        "blurb": "Buttery-soft 2mm neoprene cut specifically for the shoulder mobility divers need.",
        "review": "Purpose-built for scuba, the Sport Shorty uses very soft 2mm neoprene with an inside-and-outside polyester lining that dries quickly and feels comfortable against skin over long tropical days. Its triathlon-style cut opens up range of motion through the shoulders and armpits, so nothing fights you when you're finning or working a reel. It is the ideal grab-and-go warm-water layer, adding a touch of core warmth and sun and sting protection without the bulk of a full suit.",
-       "image": "assets/gear/scubapro-sport-shorty-2mm.jpg",
+       "image": "assets/gear/studio/scubapro-sport-shorty-2mm.jpg",
        "specs": {
         "Thickness": "2mm shorty",
         "Material": "Super-soft 2mm neoprene",
@@ -1889,7 +1987,7 @@
        "name": "Cressi Lido 2mm Shorty (Women's)",
        "blurb": "An anatomically cut women's 2mm shorty that's light, flattering and easy to travel with.",
        "review": "The Lido Shorty Lady is a hoodless 2mm one-piece shaped for a woman's anatomy, giving a snug, no-bunching fit that thin unisex suits rarely deliver. The double-lined super-stretch neoprene and a front YKK zip make it quick to pull on and off between dives, and the neoprene-hemmed sleeves and legs resist chafe. For very warm tropical water it's the standout budget pick, adding sun, sting and light abrasion protection with barely-there thermal load.",
-       "image": "assets/gear/cressi-lido-2mm-shorty-women-s.jpg",
+       "image": "assets/gear/studio/cressi-lido-2mm-shorty-women-s.jpg",
        "specs": {
         "Thickness": "2mm shorty",
         "Material": "Double-lined super-stretch nylon-2 neoprene",
@@ -1915,14 +2013,22 @@
          "price_usd": 69.95,
          "url": "https://www.scuba.com/p-csbswl/cressi-2mm-lido-womens-shorty-wetsuit"
         }
-       ]
+       ],
+       "colors": [
+        "Black / Aquamarine",
+        "Black / Lilac"
+       ],
+       "color_images": {
+        "Black / Aquamarine": "assets/gear/studio/hero/cressi-lido-2mm-shorty-women-s--black-aquamarine.jpg",
+        "Black / Lilac": "assets/gear/studio/hero/cressi-lido-2mm-shorty-women-s--black-lilac.jpg"
+       }
       },
       {
        "rank": 4,
        "name": "Bare 2mm Sport S-Flex Shorty",
        "blurb": "Feather-light stretch neoprene at a price that makes it the easy warm-water carry-on.",
        "review": "Bare's Sport S-Flex Shorty pairs 2mm neoprene with the brand's S-Flex stretch panels, so it moves with you and packs down small for tropical travel. Short arms and legs vent heat while the torso panel keeps your core comfortable and shields your back from the tank and BCD. It's an unfussy, well-priced shorty for divers who just want light coverage against sun, coral scrapes and stinging plankton in bathwater-warm seas.",
-       "image": "assets/gear/bare-2mm-sport-s-flex-shorty.jpg",
+       "image": "assets/gear/studio/bare-2mm-sport-s-flex-shorty.jpg",
        "specs": {
         "Thickness": "2mm shorty",
         "Material": "S-Flex stretch neoprene",
@@ -1948,14 +2054,22 @@
          "price_usd": 79.95,
          "url": "https://www.wetsuitwearhouse.com/collections/bare-wetsuits-drysuits"
         }
-       ]
+       ],
+       "colors": [
+        "Red",
+        "Blue"
+       ],
+       "color_images": {
+        "Red": "assets/gear/studio/hero/bare-2mm-sport-s-flex-shorty--red.jpg",
+        "Blue": "assets/gear/studio/hero/bare-2mm-sport-s-flex-shorty--blue.jpg"
+       }
       },
       {
        "rank": 5,
        "name": "Henderson Thermoprene Pro 3mm Front Zip Shorty",
        "blurb": "A front-zip 3mm shorty with 250% stretch neoprene that donns almost like a jacket.",
        "review": "The Thermoprene Pro shorty is built from Henderson's high-stretch neoprene that flexes up to 250%, and its front-zip entry makes it far easier to get into than a back-zip when you're solo on a boat. At a nominal 3mm it sits at the warmer end of tropical suits, so it's the pick for divers who chill easily, early-morning entries, or repetitive dive days in 27-28°C water. Glued and blind-stitched seams keep flushing low, and it doubles as a top layer over a jumpsuit if the water turns cooler.",
-       "image": "assets/gear/henderson-thermoprene.jpg",
+       "image": "assets/gear/studio/henderson-thermoprene.jpg",
        "specs": {
         "Thickness": "3mm shorty",
         "Material": "Thermoprene Pro 250% stretch neoprene",
@@ -1988,7 +2102,7 @@
        "name": "Aqualung HydroFlex 3mm Shorty",
        "blurb": "Eco-minded, PAH-free stretch neoprene shorty tuned for warm-water scuba comfort.",
        "review": "The HydroFlex shorty is made from non-petroleum-based, PAH-free neoprene that stretches up to 250%, giving a soft, unrestrictive fit for reef diving. Flatlock stitching lies flat against the skin and a V-shaped collar reduces neck chafe, while the short cut keeps you from overheating in tropical water. It's a smart choice for the diver who wants a warm-water shorty with a lighter environmental footprint without sacrificing flex or coverage.",
-       "image": "assets/gear/aqualung-hydroflex-3mm-shorty.jpg",
+       "image": "assets/gear/studio/aqualung-hydroflex-3mm-shorty.jpg",
        "specs": {
         "Thickness": "3mm shorty",
         "Material": "Non-petroleum PAH-free super-stretch neoprene",
@@ -2054,7 +2168,7 @@
        "name": "Cressi Lido 2mm Full Wetsuit",
        "blurb": "Full arm-and-leg 2mm coverage that's still cool enough for the warmest reefs.",
        "review": "The Lido full suit takes Cressi's flexible nylon-2 neoprene into a lightweight 2mm steamer, giving head-to-toe sun and sting protection for divers who burn or react to jellyfish yet find a 3mm too warm. The front YKK zip is easy to manage solo, and the thin, stretchy build travels light and dries fast between dives. It's an affordable full-coverage option for very warm tropical water where a shorty leaves too much skin exposed.",
-       "image": "assets/gear/cressi-lido-2mm-full-wetsuit.jpg",
+       "image": "assets/gear/studio/cressi-lido-2mm-full-wetsuit.jpg",
        "specs": {
         "Thickness": "2mm full suit",
         "Material": "Flexible nylon-2 neoprene",
@@ -2102,7 +2216,7 @@
        "name": "Fourth Element Proteus II 3mm",
        "blurb": "The benchmark tropical dive suit: warmer, stretchier and tougher than almost anything else at 3mm.",
        "review": "The Proteus II is a purpose-built scuba wetsuit that pairs a plush thermal fleece lining with high-stretch neoprene, so it swims warm for its thickness while staying easy to move in on multi-dive days. Glued and blind-stitched seams, reinforced knee pads and abrasion panels give it liveaboard-grade durability, and the anatomical cut hugs the torso to cut down on flushing. It is a premium pick for divers who want one high-performance suit for years of warm-water travel.",
-       "image": "assets/gear/fourth-element-proteus-ii.jpg",
+       "image": "assets/gear/studio/fourth-element-proteus-ii.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "High-stretch neoprene with thermal fleece lining",
@@ -2135,7 +2249,7 @@
        "name": "Scubapro Definition Steamer 3mm",
        "blurb": "One of the few suits engineered purely for divers, with an infrared fleece lining that punches above its 3mm rating.",
        "review": "Built on Scubapro's Body Map System, the Definition Steamer uses a 3D cut and targeted material inserts so it fits close and stretches where a diver needs it. The infrared fleece interior reflects body heat back to the skin for extra warmth, while the limestone-based X-Foam neoprene is light, buoyancy-friendly and hard-wearing. It is a smart middle-ground choice for warm-water divers who want dive-specific features without a top-tier price.",
-       "image": "assets/gear/scubapro-definition-steamer-3mm.jpg",
+       "image": "assets/gear/studio/scubapro-definition-steamer-3mm.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "X-Foam limestone neoprene, N2S construction",
@@ -2168,7 +2282,7 @@
        "name": "Bare Reactive 3mm",
        "blurb": "A stitch-free, graphene-lined suit that turns your own body heat into extra warmth with almost no seam leakage.",
        "review": "The Reactive is one of the first dive suits built with no stitched seams, using Bare's No Stitch Technology to tape the seams inside and out and virtually eliminate flushing. Its Graphene Omnired lining weaves thermo-reactive minerals into the fabric to convert body heat back into warmth, and seamless underarms plus a long back zip make it comfortable and easy to don. It is an excellent choice for divers chasing maximum warmth and comfort from a slim tropical suit.",
-       "image": "assets/gear/bare-reactive.jpg",
+       "image": "assets/gear/studio/bare-reactive.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Ultra-stretch neoprene with Graphene Omnired lining",
@@ -2201,7 +2315,7 @@
        "name": "Henderson Thermoprene Pro 3mm",
        "blurb": "A front-zip workhorse with 250% stretch that pulls on easily and seals out flushing.",
        "review": "The Thermoprene Pro uses a high-stretch neoprene rated to 250% elongation, so it slides on and moves with you far better than a standard suit while its double-glued, blind-stitched seams keep water out. The front-zip full suit is easy to don and doff solo and seals cleanly across the chest, and Henderson's build quality makes it a durable, do-everything tropical option. It is a dependable pick for divers who want an easy-entry suit that stays comfortable across a full dive day.",
-       "image": "assets/gear/henderson-thermoprene.jpg",
+       "image": "assets/gear/studio/henderson-thermoprene.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Thermoprene Pro neoprene (250% stretch)",
@@ -2234,7 +2348,7 @@
        "name": "Cressi Morea 3mm",
        "blurb": "The honest value pick for pure warm-water diving: solid warmth and stretch without the premium markup.",
        "review": "The Morea combines rubberised neoprene across the chest for warmth with Ultraspan neoprene in the arms and legs for easy donning and free movement, all in a one-piece back-zip design. Anatomical cuts and molded knee protection give it a good fit and real durability against reef abrasion, and a quality YKK zipper keeps the closure reliable. For divers who only hit tropical water, it delivers most of what the pricey suits do at a fraction of the cost.",
-       "image": "assets/gear/cressi-morea-3mm.jpg",
+       "image": "assets/gear/studio/cressi-morea-3mm.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Premium neoprene with Ultraspan arms and legs",
@@ -2267,7 +2381,7 @@
        "name": "Pinnacle Tempo XT 3mm Merino",
        "blurb": "A merino-lined 3mm that dives noticeably warmer than its thickness and costs less than its rivals.",
        "review": "The Tempo XT lines high-stretch elastiprene neoprene with natural merino wool, which Pinnacle credits with adding up to 35% more insulating power, so it feels cozy well into cooler tropical water. A 10mm spine flap and smoothskin seals behind the rear zip cut flushing, while ankle zips make it quick to get on and off. It is a standout value for divers who want extra warmth and comfort from a slim suit without paying flagship money.",
-       "image": "assets/gear/pinnacle-tempo-xt-3mm-merino.jpg",
+       "image": "assets/gear/studio/pinnacle-tempo-xt-3mm-merino.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Elastiprene neoprene with merino wool lining",
@@ -2300,7 +2414,7 @@
        "name": "Aqua Lung Aquaflex 3mm",
        "blurb": "Four-way stretch neoprene with liquid-sealed seams for a comfortable, leak-resistant tropical fit.",
        "review": "The Aquaflex is built from four-way stretch neoprene that moves freely and hugs the body, with liquid rubber-sealed seams that boost both warmth and durability against wear. Dive-specific touches like reinforced knees and a smooth, close chest seal make it a comfortable all-day suit for reef and liveaboard trips. It is a well-rounded mid-range choice for divers who prioritise stretch and comfort in warm water.",
-       "image": "assets/gear/aqua-lung-aquaflex.jpg",
+       "image": "assets/gear/studio/aqua-lung-aquaflex.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Four-way stretch neoprene",
@@ -2333,7 +2447,7 @@
        "name": "Bare Evoke 3mm Women's",
        "blurb": "A women's-specific suit shaped by an all-female design team, with infrared lining for extra warmth.",
        "review": "The Evoke is cut specifically for the female form for a close, flush-reducing fit, and its Omnired infrared lining is designed to boost circulation and body warmth on longer dives. Nylon-2 neoprene with glued and stitched seams and a back zip keeps it comfortable and durable across reef and liveaboard conditions. It is the standout women's pick for divers who want a warm, well-fitted 3mm suit for tropical travel.",
-       "image": "assets/gear/bare-evoke-women-s.jpg",
+       "image": "assets/gear/studio/bare-evoke-women-s.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Nylon-2 neoprene with Omnired infrared lining",
@@ -2414,7 +2528,7 @@
        "name": "Fourth Element Proteus II 5mm",
        "blurb": "The benchmark for warmth in a full-stretch diving suit.",
        "review": "The Proteus II is widely regarded as one of the warmest 5mm suits you can buy, thanks to a plush thermal lining, a Hydrolock inner neck seal and Glideskin wrist seals that together choke off flushing. It is cut from stretchy neoprene that gives excellent range of motion while keeping a snug, water-tight fit, and the recycled linings reflect the brand's sustainability focus. Divers choose it for prolonged dives in water around 19°C and up where they want maximum comfort and minimal heat loss.",
-       "image": "assets/gear/fourth-element-proteus-ii.jpg",
+       "image": "assets/gear/studio/fourth-element-proteus-ii.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "Stretch neoprene with recycled thermal lining",
@@ -2480,7 +2594,7 @@
        "name": "Henderson Thermoprene Pro 5mm",
        "blurb": "A do-everything 5mm workhorse backed by a 10-year seam warranty.",
        "review": "The Thermoprene Pro uses Henderson's 250%-stretch neoprene, a big jump over the original, so it pulls on easily and flexes through the full diving range. Seams are minimised, then double-glued and blind-stitched, and a back zip with a leashed pull tab keeps donning simple even solo. Made and warrantied in the USA for a decade, it is the reliable, good-value choice for divers who want durability and warmth without a premium price.",
-       "image": "assets/gear/henderson-thermoprene.jpg",
+       "image": "assets/gear/studio/henderson-thermoprene.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "Thermoprene Pro 250%-stretch neoprene",
@@ -2513,7 +2627,7 @@
        "name": "Aqua Lung Aquaflex 5mm",
        "blurb": "Four-way stretch and Canadian-style seals for stretch, comfort and warmth.",
        "review": "The Aquaflex is a long-standing favourite built from four-way stretch neoprene that balances easy movement with solid thermal protection in cooler temperate water. On the 5mm it adds Canadian seals at the wrists and ankles to limit water entry, plus abrasion pads and a comfortable collar for long dives. It is a dependable mid-range suit for divers who want proven warmth and fit without stepping up to flagship money.",
-       "image": "assets/gear/aqua-lung-aquaflex.jpg",
+       "image": "assets/gear/studio/aqua-lung-aquaflex.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "Four-way stretch neoprene",
@@ -2546,7 +2660,7 @@
        "name": "Cressi Castoro 5mm",
        "blurb": "Italian-engineered double-lined warmth at an unbeatable entry price.",
        "review": "The Castoro is a rugged 5mm double-lined one-piece with a strong YKK back zip and Aquastop under-zip baffle to cut water infiltration. Smooth-neoprene Aquastop seals at the wrists and ankles, pre-shaped legs and anti-wear inserts on the knees and shins make it comfortable to kick and hard to wear out. For divers wanting a warm, durable temperate-water suit on a tight budget, it is one of the best values on the market.",
-       "image": "assets/gear/cressi-castoro-5mm.jpg",
+       "image": "assets/gear/studio/cressi-castoro-5mm.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "Double-lined Nylon II neoprene",
@@ -2579,7 +2693,7 @@
        "name": "Bare Nixie Ultra 5mm Women's",
        "blurb": "A women's-specific 5mm with graphene warmth cut for a true female fit.",
        "review": "The Nixie Ultra is engineered on a women's-specific pattern, so it fits through the torso, hips and shoulders far better than a unisex suit for less flushing and more comfort. It shares Bare's full-stretch neoprene and OMNIRED graphene lining that reflects body heat back as infrared warmth, with a redesigned collar and ankle zips that make it easy to don and doff. It is the standout choice for women diving temperate and subtropical water who want premium warmth and mobility.",
-       "image": "assets/gear/bare-nixie-ultra-5mm-women-s.png",
+       "image": "assets/gear/studio/bare-nixie-ultra-5mm-women-s.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "Full-stretch limestone neoprene",
@@ -2612,7 +2726,7 @@
        "name": "Scubapro Definition Steamer 5mm",
        "blurb": "A body-mapped 5mm that fits like a glove and insulates like a flagship.",
        "review": "The Definition Steamer is cut with Scubapro's Body Map System, using 3D tailoring and stretch panels so it hugs the body and cuts internal water movement that steals heat. An Ultraspan chest panel and Stretchtec fabric add mobility, while petroleum-free X-Foam neoprene delivers efficient heat retention rated for a Class B temperate range. Reinforced shoulder, elbow and knee pads and double-zippered seals make it a warm, hard-wearing pick for divers who want a tailored high-end fit.",
-       "image": "assets/gear/scubapro-definition-steamer-5mm.jpg",
+       "image": "assets/gear/studio/scubapro-definition-steamer-5mm.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "X-Foam limestone neoprene with Ultraspan and Stretchtec panels",
@@ -2660,7 +2774,7 @@
        "name": "Henderson Thermoprene Pro 7mm",
        "blurb": "The default-choice cold-water suit: 250% super-stretch neoprene that dives above its price bracket.",
        "review": "The Thermoprene Pro is a full 7mm one-piece built from ultra-flexible neoprene that stretches to roughly 250%, so it seals close to the body without fighting you when you kit up. Glued-and-blindstitched seams keep flushing low, the back zip runs on a long leash for easy solo donning, and glideskin collar and cuff seals trim the trickle of cold water. It is the suit most divers land on for temperate and cold seas because it balances warmth, mobility and durability without a premium price.",
-       "image": "assets/gear/henderson-thermoprene.jpg",
+       "image": "assets/gear/studio/henderson-thermoprene.jpg",
        "specs": {
         "Thickness": "7mm",
         "Material": "Thermoprene Pro super-stretch neoprene (up to 250% stretch)",
@@ -2726,7 +2840,7 @@
        "name": "Waterproof W7 7mm",
        "blurb": "A semi-dry-grade 7mm loaded with seals, pockets and Kevlar knees for divers who want a suit that lasts.",
        "review": "The W7 is a heavily engineered 7mm full suit that borrows semi-dry thinking: 4-way stretch neoprene keeps it supple while a spine WaterDam and sealed wrist and ankle zips choke off the cold flush that plagues plain wetsuits. It adds practical touches divers actually use, including thigh cargo pockets and Kevlar-reinforced kneepads that shrug off wreck and boat abrasion. Choose it if you dive hard in genuinely cold water and want a durable, well-sealed suit that closes much of the gap to a semi-dry.",
-       "image": "assets/gear/waterproof-w7-7mm.png",
+       "image": "assets/gear/studio/waterproof-w7-7mm.jpg",
        "specs": {
         "Thickness": "7mm",
         "Material": "4-way stretch neoprene",
@@ -2759,7 +2873,7 @@
        "name": "Scubapro Everflex Steamer 7/5mm",
        "blurb": "A body-mapped 7/5 steamer that keeps thick warmth over the core and thinner stretch where you move.",
        "review": "The Everflex Steamer runs 7mm over the torso and 5mm at the limbs, a body-mapped layout that concentrates warmth on your core while freeing the arms and legs for easy finning and reaching. Its Diamond Span inner lining drains and channels water, seams are double-blindstitched outside and single inside to cut flushing, and the trim panel count keeps range of motion high. It is a strong pick for cold temperate seas where a diver wants real 7mm warmth without the stiffness of a uniform-thickness suit.",
-       "image": "assets/gear/scubapro-everflex-steamer-7-5mm.jpg",
+       "image": "assets/gear/studio/scubapro-everflex-steamer-7-5mm.jpg",
        "specs": {
         "Thickness": "7/5mm (7mm core, 5mm limbs)",
         "Material": "X-Foam neoprene",
@@ -2792,7 +2906,7 @@
        "name": "Aqua Lung Aquaflex 7mm",
        "blurb": "A supple 4-way-stretch 7mm with dedicated neck and wrist seals that punch above its mid-range price.",
        "review": "The Aquaflex is a 7mm full suit cut from soft 4-way stretch neoprene, so it hugs the body and stays easy to pull on despite the thickness. Seals at the neck and wrists limit the cold flush that thick suits often suffer, while reinforced kneepads and a back-zip entry keep it practical for regular cold-water use. It seals well and holds up dive after dive without stretching the budget.",
-       "image": "assets/gear/aqua-lung-aquaflex.jpg",
+       "image": "assets/gear/studio/aqua-lung-aquaflex.jpg",
        "specs": {
         "Thickness": "7mm",
         "Material": "4-way stretch neoprene",
@@ -2825,7 +2939,7 @@
        "name": "Cressi Fast 7mm",
        "blurb": "A budget-friendly one-piece 7mm that delivers honest cold-water warmth without the premium markup.",
        "review": "The Fast is a straightforward 7mm monopiece built from high-stretch neoprene with a smooth-skin chest and back panel that blocks wind chill on the surface interval and cuts water flow underneath. Glued-and-sewn seams, a back-zip entry and reinforced knees keep it durable, and the fit is trim enough to hold warmth on temperate and cold dives. It is the value pick of the group, a solid choice for a diver who wants real 7mm protection at an entry-level price.",
-       "image": "assets/gear/cressi-fast.jpg",
+       "image": "assets/gear/studio/cressi-fast.jpg",
        "specs": {
         "Thickness": "7mm",
         "Material": "High-stretch neoprene with smooth-skin chest and back panels",
@@ -2858,7 +2972,7 @@
        "name": "BARE Nixie Ultra 7mm",
        "blurb": "A women's-specific cold-water 7mm designed around the female form, with infrared lining for real warmth.",
        "review": "The Nixie Ultra is BARE's flagship women's 7mm, cut on a female-specific pattern so it seals along the back, waist and legs without the bunching that unisex suits leave. It pairs progressive full-stretch neoprene with Omnired infrared lining that reflects body heat back to the core, and a collar-zip donning system makes a thick suit far easier to get into. It is the standout choice for women diving cold water who want a suit that actually fits and keeps them genuinely warm on long dives.",
-       "image": "assets/gear/bare-nixie-ultra-7mm.jpg",
+       "image": "assets/gear/studio/bare-nixie-ultra-7mm.jpg",
        "specs": {
         "Thickness": "7mm",
         "Material": "Progressive full-stretch Nylon-2 neoprene",
@@ -2891,7 +3005,7 @@
        "name": "Henderson Greenprene 7mm",
        "blurb": "A neoprene-free 7mm built from plant-based foam for divers who want cold-water warmth with a lighter footprint.",
        "review": "The Greenprene is a 7mm full suit made from a limestone-and-petroleum-free insulating foam derived from natural sources such as sugar cane, plant oils and oyster shells, giving warm, buoyant insulation without conventional neoprene. It keeps the practical Henderson touches divers expect, with glued-and-sewn seams for durability and a back-zip entry with pull leash, and carries a long warranty. Choose it if you want dependable cold-water warmth from a more sustainable material and value ruggedness over ultimate stretch.",
-       "image": "assets/gear/henderson-greenprene-7mm.jpg",
+       "image": "assets/gear/studio/henderson-greenprene-7mm.jpg",
        "specs": {
         "Thickness": "7mm",
         "Material": "Greenprene bio-based insulating foam (neoprene-free)",

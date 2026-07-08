@@ -65,6 +65,49 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .honest ul{list-style:none;margin:0;padding:0}
 .honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
 .honest li b{color:var(--ink)}
+.gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
+.gitem-kicker a{color:var(--accent);text-decoration:none}
+.gitem-stage{position:relative;margin:10px 0 26px}
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+.gitem-photo img{display:block;width:100%;max-height:640px;object-fit:cover}
+.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:16px 22px;
+  position:absolute;left:18px;right:18px;bottom:18px;
+  box-shadow:0 18px 40px -20px rgba(13,60,70,.35)}
+@media(max-width:760px){
+  .gitem-banner{position:static;margin-top:-30px;left:auto;right:auto;width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+  .gitem-photo img{object-fit:contain}
+}
+.gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
+.gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
+.gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
+.gitem-colors{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.csw{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;border:1px solid var(--line)}
+.csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.csw.on{border:2px solid var(--ink)}
+.csw:hover{border-color:var(--ink)}
+.grel{list-style:none;margin:8px 0 0;padding:0}
+.grel li{padding:8px 0;border-top:1px solid var(--line)}
+.grel a{color:var(--ink);text-decoration:none;font-weight:600}
+.grel a:hover{color:var(--accent)}
+.grel small{color:var(--muted);font-family:var(--mono)}
+.gitem-link{color:inherit;text-decoration:none}
+.gitem-link:hover{color:var(--accent)}
+.dregion{margin:26px 0 8px}
+.dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
+.bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+.gbcol{min-width:0}
+.gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin:4px 0 2px}
+.gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+.gbrow b{display:block;font-weight:600;font-size:.92rem}
+.gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+.gbrow:hover b{color:var(--accent)}
+.gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+.gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.gitem-photo img{max-height:340px}}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -116,7 +159,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
   <p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">Granite sets the Seychelles apart from anywhere else in the Indian Ocean: ancient boulders tumble off the beaches and continue underwater as sculpted reefs, swim-throughs and fish-wrapped pinnacles. Inner-island diving off Mahe and Praslin stays mild and beginner-friendly, with hawksbill turtles and reef sharks routine and whale sharks cruising through from August to November. The remote outer atolls, Aldabra among them, are liveaboard territory for divers chasing wilder, sharkier walls.</p>
   <p style="max-width:78ch;line-height:1.65;color:#33565e">Seychelles is at its best Apr-May &amp; Oct-Nov, with Apr, May, Oct and Nov rating as peak season. Expect tropical water of 26–30°C (suit: 3mm), visibility up to ~32m, and medium currents — Granite sites mild-moderate; current at Shark Bank/Brissare. Divers here work 8 recognised sites — 3 reefs, 2 pinnacles, 2 wrecks and 1 drift dive — ranging from Brissare Rocks (8-16m) for beginner divers up to Aldabra Atoll (10-30m), advanced territory.</p>
   <div class="prof-essays"><div class="prof-essay"><h2>What to expect down there</h2><p>Granite gives these dives their shape: rounded boulders stack into swim-throughs and pinnacles, from Brissare Rocks at 8-16 m to the exposed drop-offs and caves of Trois Bancs at 40 m. Inner-island sites off Mahe stay mild and forgiving, with 26-30°C water and visibility that can stretch past 30 m in the calm transition months. Shark Bank&#x27;s offshore plateau carries some current, the Ennerdale&#x27;s tanker hull rests near 30 m, and L&#x27;Ilot comes alive after dark.</p></div><div class="prof-essay"><h2>What you&#8217;ll encounter</h2><p>Whale sharks are the headline, feeding on plankton blooms off the Amirantes in April and May and returning in force to northwest Mahe from August into November, when manta numbers climb too. Hawksbill turtles are dependable year-round — Ave Maria Rocks near La Digue is the reliable spot — with nesting through the northwest monsoon. Reef and nurse sharks, eagle rays and dense reef fish fill the granite between.</p></div></div>
-  <div class="best">&#127942; <b>Best months:</b> Apr, May, Oct, Nov &nbsp;·&nbsp; <b>Recommended window:</b> Apr-May &amp; Oct-Nov</div>
+  <div class="best"><b>Best months:</b> Apr, May, Oct, Nov &nbsp;·&nbsp; <b>Recommended window:</b> Apr-May &amp; Oct-Nov</div>
   <div class="kv">
     <div><span>Water type</span>tropical</div>
     <div><span>Difficulty</span>beginner</div>

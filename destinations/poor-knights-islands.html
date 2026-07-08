@@ -65,6 +65,49 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .honest ul{list-style:none;margin:0;padding:0}
 .honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
 .honest li b{color:var(--ink)}
+.gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
+.gitem-kicker a{color:var(--accent);text-decoration:none}
+.gitem-stage{position:relative;margin:10px 0 26px}
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+.gitem-photo img{display:block;width:100%;max-height:640px;object-fit:cover}
+.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:16px 22px;
+  position:absolute;left:18px;right:18px;bottom:18px;
+  box-shadow:0 18px 40px -20px rgba(13,60,70,.35)}
+@media(max-width:760px){
+  .gitem-banner{position:static;margin-top:-30px;left:auto;right:auto;width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+  .gitem-photo img{object-fit:contain}
+}
+.gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
+.gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
+.gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
+.gitem-colors{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.csw{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;border:1px solid var(--line)}
+.csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.csw.on{border:2px solid var(--ink)}
+.csw:hover{border-color:var(--ink)}
+.grel{list-style:none;margin:8px 0 0;padding:0}
+.grel li{padding:8px 0;border-top:1px solid var(--line)}
+.grel a{color:var(--ink);text-decoration:none;font-weight:600}
+.grel a:hover{color:var(--accent)}
+.grel small{color:var(--muted);font-family:var(--mono)}
+.gitem-link{color:inherit;text-decoration:none}
+.gitem-link:hover{color:var(--accent)}
+.dregion{margin:26px 0 8px}
+.dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
+.bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+.gbcol{min-width:0}
+.gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin:4px 0 2px}
+.gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+.gbrow b{display:block;font-weight:600;font-size:.92rem}
+.gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+.gbrow:hover b{color:var(--accent)}
+.gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+.gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.gitem-photo img{max-height:340px}}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -116,7 +159,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
   <p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">Two volcanic islands off New Zealand&#x27;s Northland coast, the Poor Knights sit inside a strict marine reserve washed by a warm subtropical current. The diving happens in arches, tunnels and sea caves - Rikoriko is the world&#x27;s largest by volume - where stingrays hover mid-water, blue maomao school in the light beams, and kelp-fringed walls crawl with nudibranchs. Boat-only day trips run year-round, best January through April, with sites from sheltered arches to pinnacles dropping past 45m.</p>
   <p style="max-width:78ch;line-height:1.65;color:#33565e">Poor Knights Islands is at its best Jan-Apr (NZ summer/autumn), with Jan, Feb, Mar, Apr and Dec rating as peak season. Expect saltwater of 15–22°C (suit: 7mm wetsuit), visibility up to ~28m, and medium currents — Arches/headlands can run strong; most sites moderate. Divers here work 7 recognised sites — 4 archs, 1 cave, 1 pinnacle and 1 reef — ranging from Rikoriko Cave (5-20m) for beginner divers up to Landing Bay Pinnacle (6-45m), advanced territory.</p>
   <div class="prof-essays"><div class="prof-essay"><h2>What to expect down there</h2><p>Volcanic rock does the work: you fin through arches and tunnels where the light goes cathedral-blue, drop into the huge dome of Rikoriko Cave, and follow walls that fall from kelp into sponge-crusted rock. Northern Arch is the test piece, a vertical slot to 38 m where you hang in open water among the rays as current pushes through. Summer brings 21-22°C water and visibility near 30 m; by late winter it is down to 15°C and a thick suit.</p></div><div class="prof-essay"><h2>What you&#8217;ll encounter</h2><p>Stingrays are the signature, gathering in the arches through the summer months while kingfish charge the demoiselle schools and mola mola drift past the pinnacles. Winter compensates in miniature and in kind: nudibranchs bloom across the walls, morays stay out hunting, and bronze whaler sharks aggregate at Cream Garden. Snapper and subtropical reef fish hold the sheltered arches all year.</p></div></div>
-  <div class="best">&#127942; <b>Best months:</b> Jan, Feb, Mar, Apr, Dec &nbsp;·&nbsp; <b>Recommended window:</b> Jan-Apr (NZ summer/autumn)</div>
+  <div class="best"><b>Best months:</b> Jan, Feb, Mar, Apr, Dec &nbsp;·&nbsp; <b>Recommended window:</b> Jan-Apr (NZ summer/autumn)</div>
   <div class="kv">
     <div><span>Water type</span>saltwater</div>
     <div><span>Difficulty</span>intermediate</div>

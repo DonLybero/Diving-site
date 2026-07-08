@@ -65,6 +65,49 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .honest ul{list-style:none;margin:0;padding:0}
 .honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
 .honest li b{color:var(--ink)}
+.gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
+.gitem-kicker a{color:var(--accent);text-decoration:none}
+.gitem-stage{position:relative;margin:10px 0 26px}
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+.gitem-photo img{display:block;width:100%;max-height:640px;object-fit:cover}
+.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:16px 22px;
+  position:absolute;left:18px;right:18px;bottom:18px;
+  box-shadow:0 18px 40px -20px rgba(13,60,70,.35)}
+@media(max-width:760px){
+  .gitem-banner{position:static;margin-top:-30px;left:auto;right:auto;width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+  .gitem-photo img{object-fit:contain}
+}
+.gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
+.gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
+.gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
+.gitem-colors{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.csw{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;border:1px solid var(--line)}
+.csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.csw.on{border:2px solid var(--ink)}
+.csw:hover{border-color:var(--ink)}
+.grel{list-style:none;margin:8px 0 0;padding:0}
+.grel li{padding:8px 0;border-top:1px solid var(--line)}
+.grel a{color:var(--ink);text-decoration:none;font-weight:600}
+.grel a:hover{color:var(--accent)}
+.grel small{color:var(--muted);font-family:var(--mono)}
+.gitem-link{color:inherit;text-decoration:none}
+.gitem-link:hover{color:var(--accent)}
+.dregion{margin:26px 0 8px}
+.dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
+.bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+.gbcol{min-width:0}
+.gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin:4px 0 2px}
+.gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+.gbrow b{display:block;font-weight:600;font-size:.92rem}
+.gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+.gbrow:hover b{color:var(--accent)}
+.gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+.gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.gitem-photo img{max-height:340px}}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -116,7 +159,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
   <p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">A fossilized dune ridge a few kilometers off South Africa&#x27;s KwaZulu-Natal coast, Aliwal Shoal delivers raw big-animal diving that begins with a surf launch through the breakers. From June to November, ragged-tooth sharks crowd its amphitheaters and sandy gullies; baited dives pull in blacktips and tiger sharks, and the winter sardine run can erupt into bait-ball chaos. Currents, surge and bouncing RIB rides make this one for divers who like their adrenaline unfiltered.</p>
   <p style="max-width:78ch;line-height:1.65;color:#33565e">Aliwal Shoal is at its best Jun-Jul (sardine run), Jun-Nov (raggies), with Jun and Jul rating as peak season. Expect subtropical water of 21–27°C (suit: 5-7mm), visibility up to ~24m, and medium currents — Moderate-to-strong drift and surge. Divers here work 9 recognised sites — 5 reefs, 2 wrecks, 1 wall and 1 shark dive — ranging from Raggie&#x27;s Cave (14-16m) for beginner divers up to Aliwal Baited Shark Dive (5-15m), advanced territory.</p>
   <div class="prof-essays"><div class="prof-essay"><h2>What to expect down there</h2><p>The Cathedral is the set piece: a 27 m amphitheatre in the fossilised reef where ragged-tooth sharks hang almost still, unbothered, through the winter. Water swings from a summer 27°C to a raw 21°C in July, viz a workable 16 to 24 m. The baited dive is a different animal - open water, blacktips wheeling in close and the odd tiger sliding through. The Produce and Nebo wrecks add rusting steel around 30 m for those wanting structure.</p></div><div class="prof-essay"><h2>What you&#8217;ll encounter</h2><p>Ragged-tooth sharks are the residents from winter into spring, packing the caves and gullies. The baited dives bring blacktips in numbers and, in the warmer months, tiger sharks. Then there&#x27;s the sardine run: through June and July the cold water erupts into bait balls, with dolphins, blacktips and passing humpback whales tearing through the chaos.</p></div></div>
-  <div class="best">&#127942; <b>Best months:</b> Jun, Jul &nbsp;·&nbsp; <b>Recommended window:</b> Jun-Jul (sardine run), Jun-Nov (raggies)</div>
+  <div class="best"><b>Best months:</b> Jun, Jul &nbsp;·&nbsp; <b>Recommended window:</b> Jun-Jul (sardine run), Jun-Nov (raggies)</div>
   <div class="kv">
     <div><span>Water type</span>subtropical</div>
     <div><span>Difficulty</span>intermediate</div>

@@ -65,6 +65,49 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .honest ul{list-style:none;margin:0;padding:0}
 .honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
 .honest li b{color:var(--ink)}
+.gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
+.gitem-kicker a{color:var(--accent);text-decoration:none}
+.gitem-stage{position:relative;margin:10px 0 26px}
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+.gitem-photo img{display:block;width:100%;max-height:640px;object-fit:cover}
+.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:16px 22px;
+  position:absolute;left:18px;right:18px;bottom:18px;
+  box-shadow:0 18px 40px -20px rgba(13,60,70,.35)}
+@media(max-width:760px){
+  .gitem-banner{position:static;margin-top:-30px;left:auto;right:auto;width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+  .gitem-photo img{object-fit:contain}
+}
+.gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
+.gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
+.gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
+.gitem-colors{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.csw{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;border:1px solid var(--line)}
+.csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.csw.on{border:2px solid var(--ink)}
+.csw:hover{border-color:var(--ink)}
+.grel{list-style:none;margin:8px 0 0;padding:0}
+.grel li{padding:8px 0;border-top:1px solid var(--line)}
+.grel a{color:var(--ink);text-decoration:none;font-weight:600}
+.grel a:hover{color:var(--accent)}
+.grel small{color:var(--muted);font-family:var(--mono)}
+.gitem-link{color:inherit;text-decoration:none}
+.gitem-link:hover{color:var(--accent)}
+.dregion{margin:26px 0 8px}
+.dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
+.bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+.gbcol{min-width:0}
+.gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin:4px 0 2px}
+.gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+.gbrow b{display:block;font-weight:600;font-size:.92rem}
+.gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+.gbrow:hover b{color:var(--accent)}
+.gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+.gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.gitem-photo img{max-height:340px}}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -116,7 +159,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
   <p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">Croatia&#x27;s farthest-flung inhabited island spent decades as a closed military zone, and Vis now rewards divers with one of the Adriatic&#x27;s densest wreck collections: the B-17 Flying Fortress, near-intact on sand at 65-72m for technical divers, the 105m coal steamer Vassilios T., and the shallower, life-rich Teti. Between wrecks, day boats run to grouper-patrolled reefs and sun-shot sea caves like Bisevo&#x27;s Blue Cave. Recreational divers eat well here; tec divers eat better.</p>
   <p style="max-width:78ch;line-height:1.65;color:#33565e">Vis Island is at its best May-Oct, with Jun, Jul, Aug and Sep rating as peak season. Expect temperate saltwater of 13–25°C (suit: 5mm), visibility up to ~30m, and mild currents — Sheltered reefs and inshore wrecks are usually slack; deeper offshore wrecks and exposed points can run when wind and tide align, so plan drops around slack water. Divers here work 7 recognised sites — 4 wrecks, 2 caves and 1 reef — ranging from B-17 Flying Fortress (65-72m) for technical divers up to B-24 Liberator (38-40m), advanced territory.</p>
   <div class="prof-essays"><div class="prof-essay"><h2>What to expect down there</h2><p>Wreck depth sets the day&#x27;s ambition: the Teti&#x27;s broken plating starts at 10 m with congers coiled inside, the coal-laden Vassilios T. takes several dives to cover between 20 and 55 m, and the B-17 waits at 65-72 m for technical teams. Between wreck days, Stoncica&#x27;s gorgonian-dressed drop-off and the sun-shafted chambers of the Blue and Green caves give lighter dives. Summer water reaches 25°C with 30 m visibility and mostly slack conditions inshore; spring and autumn call for a 5mm suit.</p></div><div class="prof-essay"><h2>What you&#8217;ll encounter</h2><p>This is Mediterranean life rather than tropical spectacle: dusky grouper holding territory on the reefs and wrecks, conger and moray eels in the shadows, European lobster in the cracks, and scorpionfish and octopus posted among the rocks. Activity peaks in the warm months from June to September, when every site shows its fullest cast; by winter the cold reefs turn slow and quiet.</p></div></div>
-  <div class="best">&#127942; <b>Best months:</b> Jun, Jul, Aug, Sep &nbsp;·&nbsp; <b>Recommended window:</b> May-Oct</div>
+  <div class="best"><b>Best months:</b> Jun, Jul, Aug, Sep &nbsp;·&nbsp; <b>Recommended window:</b> May-Oct</div>
   <div class="kv">
     <div><span>Water type</span>temperate saltwater</div>
     <div><span>Difficulty</span>intermediate</div>

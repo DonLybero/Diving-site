@@ -123,6 +123,49 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .honest ul{list-style:none;margin:0;padding:0}
 .honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
 .honest li b{color:var(--ink)}
+.gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
+.gitem-kicker a{color:var(--accent);text-decoration:none}
+.gitem-stage{position:relative;margin:10px 0 26px}
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+.gitem-photo img{display:block;width:100%;max-height:640px;object-fit:cover}
+.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:16px 22px;
+  position:absolute;left:18px;right:18px;bottom:18px;
+  box-shadow:0 18px 40px -20px rgba(13,60,70,.35)}
+@media(max-width:760px){
+  .gitem-banner{position:static;margin-top:-30px;left:auto;right:auto;width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+  .gitem-photo img{object-fit:contain}
+}
+.gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
+.gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
+.gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
+.gitem-colors{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.csw{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;border:1px solid var(--line)}
+.csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.csw.on{border:2px solid var(--ink)}
+.csw:hover{border-color:var(--ink)}
+.grel{list-style:none;margin:8px 0 0;padding:0}
+.grel li{padding:8px 0;border-top:1px solid var(--line)}
+.grel a{color:var(--ink);text-decoration:none;font-weight:600}
+.grel a:hover{color:var(--accent)}
+.grel small{color:var(--muted);font-family:var(--mono)}
+.gitem-link{color:inherit;text-decoration:none}
+.gitem-link:hover{color:var(--accent)}
+.dregion{margin:26px 0 8px}
+.dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
+.bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+.gbcol{min-width:0}
+.gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin:4px 0 2px}
+.gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+.gbrow b{display:block;font-weight:600;font-size:.92rem}
+.gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+.gbrow:hover b{color:var(--accent)}
+.gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+.gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.gitem-photo img{max-height:340px}}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -457,7 +500,7 @@ def page(d):
   {f'<p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">{esc(d["description"])}</p>' if d.get("description") else ""}
   <p style="max-width:78ch;line-height:1.65;color:#33565e">{esc(dest_intro(d))}</p>
   {essays_block(d)}
-  <div class="best">&#127942; <b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
+  <div class="best"><b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
   <div class="kv">
     <div><span>Water type</span>{esc(d["water_type"])}</div>
     <div><span>Difficulty</span>{esc(d["difficulty"])}</div>
@@ -540,6 +583,130 @@ def buy_box(item):
             f'<span class="buy-live">indicative — check the live price at the retailer</span></div>'
             f'<div class="pack-ctas">{btns}</div></div>')
 
+
+COLOR_HEX = {"black": "#16181a", "white": "#f4f4f2", "blue": "#2563eb", "lime": "#a3e635",
+             "pink": "#ec4899", "yellow": "#facc15", "red": "#dc2626", "orange": "#ea580c",
+             "green": "#16a34a", "grey": "#9ca3af", "gray": "#9ca3af", "silver": "#c9ced3",
+             "purple": "#7c3aed", "turquoise": "#14b8a6", "navy": "#1e3a5f",
+             "clear": "#e8edef", "aquamarine": "#7fd4c9", "lilac": "#b79bd6", "blk": "#16181a"}
+
+
+def product_ld(item):
+    opts = item.get("options") or []
+    if not opts:
+        return None
+    prices = [o["price_usd"] for o in opts]
+    node = {"@type": "Product", "name": item["name"],
+            "offers": {"@type": "AggregateOffer", "priceCurrency": "USD",
+                       "lowPrice": min(prices), "highPrice": max(prices), "offerCount": len(opts),
+                       "offers": [{"@type": "Offer", "price": o["price_usd"], "priceCurrency": "USD",
+                                   "url": o.get("url", ""),
+                                   "seller": {"@type": "Organization", "name": o.get("store", "")}}
+                                  for o in opts]}}
+    blurb = item.get("review") or item.get("blurb")
+    if blurb:
+        node["description"] = blurb
+    img = item.get("image") or ""
+    if img:
+        node["image"] = img if img.startswith("http") else BASE + img
+    return node
+
+
+def gear_item_page(cat, item, prefix="../"):
+    """Orbea-style product page: studio photo, buy/colour banner, review, specs."""
+    slug = gear_slug(item["name"])
+    url = BASE + "gear/" + slug + ".html"
+    cat_slug = gear_slug(cat["category"])
+    cat_title = cat.get("title") or ("Top " + cat["category"])
+    img = item.get("image") or ""
+    base = os.path.splitext(os.path.basename(img))[0] if img else ""
+    hero_path = f"assets/gear/studio/hero/{base}.jpg"
+    if not os.path.exists(os.path.join(ROOT, hero_path)):
+        hero_path = img
+    cimgs = item.get("color_images") or {}
+    colors = item.get("colors") or []
+    first = colors[0] if colors and cimgs.get(colors[0]) else None
+    hero_src = cimgs.get(first, hero_path) if first else hero_path
+    photo = (f'<figure class="gitem-photo"><img id="gimg" src="{prefix}{esc(hero_src)}" '
+             f'alt="{esc(item["name"])}"></figure>' if hero_src else "")
+    stage_open = '<div class="gitem-stage">' if hero_src else ""
+    stage_close = "</div>" if hero_src else ""
+    offers = order_offers(item.get("options"))
+    lo = min((o["price_usd"] for o in item.get("options") or []), default=None)
+    btns = "".join(
+        f'<a class="pack-cta{"" if i == 0 else " ghost"}" href="{esc(o["url"])}" target="_blank" '
+        f'rel="noopener sponsored">{esc(o["store"])} · {fmtp(o["price_usd"])}</a>'
+        for i, o in enumerate(offers[:3]))
+    def swatch_bg(cname):
+        toks = [t.strip().lower() for t in re.split(r"[/+]", cname) if t.strip()]
+        toks = [t for t in toks if "lens" not in t and "mirror" not in t] or [t.strip().lower() for t in re.split(r"[/+]", cname)]
+        hx = [COLOR_HEX[t] for t in toks[:2] if t in COLOR_HEX]
+        if not hx:
+            hx = ["#8899a0"]
+        if len(hx) == 1:
+            return f"background:{hx[0]}"
+        return f"background:linear-gradient(135deg,{hx[0]} 50%,{hx[1]} 50%)"
+    swatches, cjs = "", ""
+    if colors:
+        dots = ""
+        for i, c in enumerate(colors):
+            act = " on" if (cimgs and i == 0) else ""
+            click = f' onclick="pickC(this,\'{esc(c)}\')" role="button" tabindex="0"' if cimgs.get(c) else ""
+            dots += (f'<span class="csw{act}" title="{esc(c)}"{click}>'
+                     f'<i style="{swatch_bg(c)}"></i></span>')
+        swatches = f'<div class="gitem-colors">{dots}</div>'
+        if cimgs:
+            cmap = {c: prefix + p for c, p in cimgs.items()}
+            cjs = ('<script>var GIMG=' + json.dumps(cmap, ensure_ascii=False) + ';'
+                   'function pickC(el,c){var i=document.getElementById("gimg");'
+                   'if(GIMG[c]){i.src=GIMG[c];}'
+                   'var s=document.querySelectorAll(".csw");'
+                   'for(var k=0;k<s.length;k++)s[k].className="csw";'
+                   'el.className="csw on";}</script>')
+    banner = (f'<div class="gitem-banner">'
+              f'<div class="gitem-id"><b>{esc(item["name"])}</b>'
+              f'<span class="gitem-price">{f"from <b>{fmtp(lo)}</b>" if lo is not None else ""}</span>'
+              f'<small>indicative — the retailer shows the live price</small></div>'
+              f'{swatches}'
+              f'<div class="pack-ctas">{btns}</div></div>{cjs}')
+    rank = item.get("rank")
+    kicker = f'#{rank} in <a href="{cat_slug}.html">{esc(cat_title)}</a>' if rank else f'<a href="{cat_slug}.html">{esc(cat_title)}</a>'
+    review = item.get("review") or item.get("blurb") or ""
+    specs = ""
+    if item.get("specs"):
+        specs = ('<h2>Specs</h2><dl class="gspecs">'
+                 + "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in item["specs"].items())
+                 + "</dl>")
+    siblings = [i for i in _cat_items(cat) if i["name"] != item["name"]][:4]
+    related = ""
+    if siblings:
+        lis = ""
+        for s in siblings:
+            s_lo = min((o["price_usd"] for o in s.get("options") or []), default=None)
+            frm = f' <small>from {fmtp(s_lo)}</small>' if s_lo is not None else ""
+            lis += f'<li><a href="{gear_slug(s["name"])}.html">{esc(s["name"])}</a>{frm}</li>'
+        related = f'<h2>Also in this guide</h2><ul class="grel">{lis}</ul>'
+    inner = (f'<p class="meta gitem-kicker">{kicker}</p>'
+             f'{stage_open}{photo}{banner}{stage_close}'
+             f'<h2>What makes it good?</h2>'
+             f'<p class="greview" style="max-width:80ch">{esc(review)}</p>'
+             f'{specs}{related}'
+             f'<p class="meta"><a href="{cat_slug}.html">&larr; Back to {esc(cat_title)}</a></p>')
+    desc = (item.get("blurb") or review)[:160]
+    ld = graph_ld({"@type": "WebPage", "name": item["name"], "url": url, "description": desc},
+                  crumbs([("Home", BASE), ("Gear guides", BASE + "gear/index.html"),
+                          (cat_title, BASE + "gear/" + cat_slug + ".html"), (item["name"], url)]),
+                  product_ld(item))
+    return content_shell(f'{item["name"]} Review & Best Price | DiveSZN', desc, url, prefix,
+                         item.get("blurb") or "", inner, ld)
+
+
+def _cat_items(cat):
+    items = list(cat.get("items") or [])
+    for g in cat.get("thickness_groups") or []:
+        items += g.get("items") or []
+    return items
+
 def gear_entry(item, prefix):
     img = item.get("image") or ""
     imgtag = f'<img src="{prefix}{esc(img)}" alt="{esc(item["name"])}" loading="lazy">' if img else ""
@@ -548,9 +715,11 @@ def gear_entry(item, prefix):
         specs = ('<dl class="gspecs">'
                  + "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in item["specs"].items())
                  + "</dl>")
-    return (f'<div class="gentry"><div class="gphoto">{imgtag}</div>'
-            f'<div><h3>{item.get("rank", "")}. {esc(item["name"])}</h3>'
-            f'<p class="greview">{esc(item.get("review") or item.get("blurb"))}</p>{specs}{buy_box(item)}</div></div>')
+    slug = gear_slug(item["name"])
+    return (f'<div class="gentry"><div class="gphoto"><a href="{slug}.html">{imgtag}</a></div>'
+            f'<div><h3>{item.get("rank", "")}. <a class="gitem-link" href="{slug}.html">{esc(item["name"])}</a></h3>'
+            f'<p class="greview">{esc(item.get("review") or item.get("blurb"))}</p>{specs}{buy_box(item)}'
+            f'<p class="meta" style="margin-top:8px"><a href="{slug}.html">Full page: photos, specs &amp; prices &rarr;</a></p></div></div>')
 
 def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None):
     ldtag = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>' if ld else ""
@@ -596,33 +765,26 @@ def gear_page(cat, prefix="../"):
         parts += [gear_entry(it, prefix) for it in cat["items"]]
     parts.append(f'<p class="meta"><a href="index.html">&larr; All gear buyer&#8217;s guides</a></p>')
     desc = (intro or f'The best {cat["category"].lower()} for scuba diving in 2026.')[:160]
-    def _product_ld(item):
-        opts = item.get("options") or []
-        if not opts:
-            return None
-        prices = [o["price_usd"] for o in opts]
-        node = {"@type": "Product", "name": item["name"],
-                "offers": {"@type": "AggregateOffer", "priceCurrency": "USD",
-                           "lowPrice": min(prices), "highPrice": max(prices), "offerCount": len(opts),
-                           "offers": [{"@type": "Offer", "price": o["price_usd"], "priceCurrency": "USD",
-                                       "url": o.get("url", ""),
-                                       "seller": {"@type": "Organization", "name": o.get("store", "")}}
-                                      for o in opts]}}
-        blurb = item.get("review") or item.get("blurb")
-        if blurb:
-            node["description"] = blurb
-        img = item.get("image") or ""
-        if img:
-            node["image"] = img if img.startswith("http") else BASE + img
-        return node
-    items = list(cat.get("items") or [])
-    for g in cat.get("thickness_groups") or []:
-        items += g.get("items") or []
+    items = _cat_items(cat)
     coll = {"@type": "CollectionPage", "name": cat.get("title"), "description": desc, "url": url}
     bc = crumbs([("Home", BASE), ("Gear guides", BASE + "gear/index.html"),
                  (cat.get("title") or cat["category"], url)])
-    ld = graph_ld(coll, bc, *[_product_ld(i) for i in items])
+    ld = graph_ld(coll, bc, *[product_ld(i) for i in items])
     return content_shell(title, desc, url, prefix, None, "".join(parts), ld)
+
+BRAND_NAMES = ["Apeks", "Aqua Lung", "Aqualung", "Atomic Aquatics", "BARE", "Bare", "Cressi",
+               "Fourth Element", "Garmin", "Henderson", "Hollis", "Mares", "O'Neill", "Pinnacle",
+               "ScubaPro", "Scubapro", "Shearwater", "Sherwood", "Suunto", "TUSA", "Waterproof",
+               "xDeep", "Zeagle"]
+BRAND_LABEL = {"Aqualung": "Aqua Lung", "ScubaPro": "Scubapro", "BARE": "Bare"}
+
+
+def brand_of(name):
+    for b in BRAND_NAMES:
+        if name.lower().startswith(b.lower()):
+            return BRAND_LABEL.get(b, b)
+    return name.split()[0]
+
 
 def gear_index_page(gear, prefix="../"):
     url = BASE + "gear/index.html"
@@ -636,9 +798,36 @@ def gear_index_page(gear, prefix="../"):
         rows += (f'<li><a href="{slug}.html"><div class="th">{thumb}</div>'
                  f'<div><h3>{esc(cat.get("title") or ("Top " + cat["category"]))}</h3>'
                  f'<p>{esc(teaser)}</p></div></a></li>')
-    desc = "DiveSZN scuba gear buyer's guides — the best masks, fins, regulators, BCDs, dive computers and wetsuits, with specs and where to buy."
+    bsec = ""
+    for cat in gear["categories"]:
+        brands, seen, n = {}, set(), 0
+        for it in _cat_items(cat):
+            if it["name"] in seen:
+                continue
+            seen.add(it["name"])
+            n += 1
+            lo = min((o["price_usd"] for o in it.get("options") or []), default=None)
+            brands.setdefault(brand_of(it["name"]), []).append((it, lo))
+        cols = ""
+        for b in sorted(brands):
+            brows = ""
+            for it, lo in sorted(brands[b], key=lambda t: t[0]["name"]):
+                img = it.get("image") or ""
+                th = (f'<span class="gbthumb"><img src="{prefix}{esc(img)}" alt="" loading="lazy"></span>'
+                      if img else '<span class="gbthumb"></span>')
+                frm = f"from {fmtp(lo)}" if lo is not None else ""
+                brows += (f'<a class="gbrow" href="{gear_slug(it["name"])}.html">{th}'
+                          f'<span><b>{esc(it["name"])}</b><small>{frm}</small></span></a>')
+            cols += f'<div class="gbcol"><b class="gbrand">{esc(b)}</b>{brows}</div>'
+        gslug = gear_slug(cat["category"])
+        bsec += (f'<section class="dregion"><h3><span>{esc(cat["category"])}</span>'
+                 f'<span class="bcount">{n} product{"" if n == 1 else "s"} · '
+                 f'<a href="{gslug}.html" style="color:var(--accent)">guide &rarr;</a></span></h3>'
+                 f'<div class="gbgrid">{cols}</div></section>')
+    desc = "DiveSZN scuba gear — every product under its brand, plus ranked buyer's guides for masks, fins, regulators, BCDs, dive computers and wetsuits."
     inner = (f'<p class="greview" style="max-width:80ch">{esc(gear.get("intro") or "")}</p>'
-             f'<h2>Buyer&#8217;s guides</h2><ul class="artlist">{rows}</ul>'
+             f'{bsec}'
+             f'<h2 style="margin-top:40px">The buyer&#8217;s guides (articles)</h2><ul class="artlist">{rows}</ul>'
              f'<a class="cta" href="../index.html#gear">Open the interactive gear guide &rarr;</a>')
     ld = graph_ld({"@type": "CollectionPage", "name": "DiveSZN gear buyer's guides",
                    "description": desc, "url": url},
@@ -943,10 +1132,18 @@ def main():
     geardir = os.path.join(ROOT, "gear")
     os.makedirs(geardir, exist_ok=True)
     gear_slugs = []
+    item_slugs = []
     for cat in gear["categories"]:
         slug = gear_slug(cat["category"]); gear_slugs.append(slug)
         with open(os.path.join(geardir, slug + ".html"), "w", encoding="utf-8") as f:
             f.write(gear_page(cat))
+        for item in _cat_items(cat):
+            islug = gear_slug(item["name"])
+            if islug in item_slugs:
+                continue
+            item_slugs.append(islug)
+            with open(os.path.join(geardir, islug + ".html"), "w", encoding="utf-8") as f:
+                f.write(gear_item_page(cat, item))
     with open(os.path.join(geardir, "index.html"), "w", encoding="utf-8") as f:
         f.write(gear_index_page(gear))
 
@@ -1002,6 +1199,7 @@ def main():
              BASE + "destinations/index.html", BASE + "gear/index.html", BASE + "months/index.html"]
             + [BASE + "months/" + MONTH_FULL[m].lower() + ".html" for m in MONTHS]
             + [BASE + "gear/" + s + ".html" for s in gear_slugs]
+            + [BASE + "gear/" + s + ".html" for s in item_slugs]
             + [BASE + "marine-life/index.html"]
             + [BASE + "marine-life/" + e["slug"] + ".html" for e in EXPERIENCES]
             + [BASE + "destinations/" + d["slug"] + ".html" for d in dests])

@@ -355,6 +355,16 @@
   .bcountry a:hover{color:var(--accent)}
   .bthumb{flex:0 0 38px;width:38px;height:28px;border-radius:6px;overflow:hidden;background:#dbe9ec}
   .bthumb img{width:100%;height:100%;object-fit:cover;display:block}
+  /* gear directory: type -> brand -> products */
+  .gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+  .gbcol{min-width:0}
+  .gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:4px 0 2px}
+  .gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+  .gbrow b{display:block;font-weight:600;font-size:.92rem}
+  .gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+  .gbrow:hover b{color:var(--accent)}
+  .gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+  .gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
   .pack-alt{align-self:center;font-size:.8rem;color:var(--accent);text-decoration:none;font-weight:600;margin-left:4px}
   .pack-alt:hover{text-decoration:underline}
   /* equal-height fact tiles on the profile */
@@ -653,7 +663,7 @@
   <!-- DIVE SITES -->
   <!-- GEAR -->
   <section id="view-trip" class="hidden">
-    <div class="sec-head"><i class="ico" data-ico="calendar"></i>Trip Planner</div>
+    <div class="sec-head">Trip Planner</div>
     <p class="sec-sub">Something new is being built here.</p>
     <div class="article" style="max-width:640px;margin:26px auto;text-align:center;padding:44px 30px">
       <div style="font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px">Coming soon</div>
@@ -666,7 +676,7 @@
 
   <section id="view-gear" class="hidden">
     <div class="controls">
-      <div class="field"><label>Category</label><select id="gearCat"><option value="">All gear</option></select></div>
+      <div class="field"><label>Category</label><select id="gearCat"><option value="">All categories</option></select></div>
     </div>
     <div id="gearGrid" class="grid"></div>
   </section>
@@ -696,7 +706,7 @@
 
   <!-- DIVE PLANNER — one progressive page: filters first, then results as cards / map / year calendar -->
   <section id="view-planner" class="hidden">
-    <div class="sec-head"><i class="ico" data-ico="compass"></i>Destinations</div>
+    <div class="sec-head">Destinations</div>
     <p class="sec-sub">Browse the whole world below — every region, country and destination —
       or use the filter to jump straight to ranked matches for your dates.</p>
 
@@ -1089,7 +1099,7 @@ function initControls(){
   ['calSort','calShow'].forEach(function(id){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
-  document.getElementById('gearCat').addEventListener('change',renderGear);
+  document.getElementById('gearCat').addEventListener('change',function(){GEAR_ARTICLE='';renderGear();});
   // Any planner selection reveals the result views and refreshes the active one.
   ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
@@ -1297,7 +1307,7 @@ function gotoWetsuit(th){
   showTab('gear');
   var sel=document.getElementById('gearCat');
   renderGear();                                   // ensure category options exist
-  sel.value='Wetsuits'; GEAR_THICK=th; renderGear();
+  sel.value='Wetsuits'; GEAR_ARTICLE='Wetsuits'; GEAR_THICK=th; renderGear();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 // deep link e.g. #gear-wetsuits-5mm (used by the static destination SEO pages)
@@ -1310,7 +1320,7 @@ function handleHash(){
   if(parts[1]&&GEAR_GUIDE&&GEAR_GUIDE.categories){
     var slug=parts[1].toLowerCase();
     var cat=GEAR_GUIDE.categories.filter(function(c){return c.category.toLowerCase().replace(/[^a-z0-9]/g,'')===slug;})[0];
-    if(cat){ sel.value=cat.category; if(parts[2]) GEAR_THICK=parts[2]; renderGear(); }
+    if(cat){ sel.value=cat.category; GEAR_ARTICLE=cat.category; if(parts[2]) GEAR_THICK=parts[2]; renderGear(); }
   }
   window.scrollTo({top:0});
 }
@@ -1331,7 +1341,7 @@ function packBox(d){
   }else{
     return '';                                     // no clear recommendation → skip
   }
-  return '<div class="packbox"><div class="pack-head">'+ico('tank',14)+' What to pack here</div>'+
+  return '<div class="packbox"><div class="pack-head">What to pack here</div>'+
     '<p class="pack-body">'+body+'</p><div class="pack-ctas">'+cta+'</div></div>';
 }
 
@@ -1374,7 +1384,7 @@ function stayBox(d){
     : (live? 'Dive boats leave early — stay within a short ride of the jetty, or see it all from a liveaboard.'
            : 'Dive boats leave early — stay within a short ride of the jetty.');
   var ctas=boardOnly?(board+book):(book+board);
-  return '<div class="staybox"><div class="stay-head">'+ico('home',14)+' Where to stay</div>'+
+  return '<div class="staybox"><div class="stay-head">Where to stay</div>'+
     '<p class="pack-body">'+body+'</p><div class="pack-ctas">'+ctas+'</div></div>';
 }
 /* Purnatur-style radical transparency: what we can't promise, as a proud
@@ -1413,7 +1423,7 @@ function openProfile(name){
       '<td>'+(x.blurb||'')+'</td></tr>';
   }).join('');
   var sitesBlock = siteRows ?
-    '<h3 style="margin:22px 0 2px">'+ico('map',15)+' Recognised dive sites ('+d.dive_sites.length+')</h3>'+
+    '<h3 style="margin:22px 0 2px">Recognised dive sites ('+d.dive_sites.length+')</h3>'+
     '<p class="meta" style="margin:2px 0 6px">Depths are typical published ranges — always confirm with your operator.</p>'+
     '<table class="sitestable"><thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it’s known</th></tr></thead>'+
     '<tbody>'+siteRows+'</tbody></table>' : '';
@@ -1421,8 +1431,8 @@ function openProfile(name){
   var hero=d.image?'<figure class="prof-hero"><img src="'+d.image+'" alt="Diving at '+d.name.replace(/"/g,'&quot;')+'" loading="lazy" onerror="this.parentNode.style.display=\'none\'">'+
     (d.image_credit?'<figcaption>'+d.image_credit+'</figcaption>':'')+'</figure>':'';
   var essays=(d.underwater||d.encounters)?'<div class="prof-essays">'+
-    (d.underwater?'<div class="prof-essay"><h3>'+ico('compass',15)+' What to expect down there</h3><p>'+d.underwater+'</p></div>':'')+
-    (d.encounters?'<div class="prof-essay"><h3>'+ico('fish',15)+' What you\'ll encounter</h3><p>'+d.encounters+'</p></div>':'')+
+    (d.underwater?'<div class="prof-essay"><h3>What to expect down there</h3><p>'+d.underwater+'</p></div>':'')+
+    (d.encounters?'<div class="prof-essay"><h3>What you\'ll encounter</h3><p>'+d.encounters+'</p></div>':'')+
     '</div>':'';
   document.getElementById('profile').innerHTML=
     hero+
@@ -1430,10 +1440,10 @@ function openProfile(name){
     (d.description?'<p style="max-width:78ch;line-height:1.7;color:#33565e;margin:0 0 10px;font-size:1.02rem">'+d.description+'</p>':'')+
     '<p style="max-width:78ch;line-height:1.65;color:#33565e;margin:0 0 16px">'+destIntro(d,s)+'</p>'+
     essays+
-    '<div class="best">'+ico('trophy',15)+' <b>Best months:</b> '+(s.byRating.Peak.join(', ')||'—')+
+    '<div class="best"><b>Best months:</b> '+(s.byRating.Peak.join(', ')||'—')+
       ' &nbsp;·&nbsp; <b>Top month:</b> '+best+
       ' &nbsp;·&nbsp; <b>Recommended window:</b> '+d.best_months+'</div>'+
-    '<h3 style="margin:18px 0 6px">'+ico('calendar',15)+' When should you dive '+d.name+'?</h3>'+
+    '<h3 style="margin:18px 0 6px">When should you dive '+d.name+'?</h3>'+
     seasonRibbon(d)+
     '<details class="more" style="margin-top:10px;margin-bottom:14px"><summary>Full month-by-month detail</summary>'+
     '<table style="margin-top:10px"><thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions / visibility</th></tr></thead>'+
@@ -1506,16 +1516,16 @@ function renderHome(){
   document.getElementById('view-home').innerHTML=
     '<div class="rv">'+
     '<div class="hero-note" style="margin:2px 0 26px">&#10003; Scoring live for <b>'+MONTH_FULL[nowMonth]+'</b> right now · independent, no sponsored rankings</div>'+
-    '<div class="sec-head">'+ico('fish')+'Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</div>'+
+    '<div class="sec-head">Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</div>'+
     '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it.</p><div class="home-grid">'+sitePrev+'</div>'+
     '</div>'+
     '<div class="band rv">'+
-    '<div class="sec-head">'+ico('tank')+'Gear, at the right price</div>'+
+    '<div class="sec-head">Gear, at the right price</div>'+
     '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p><div class="home-grid">'+bestGear+'</div>'+
     '</div>'+
     // --- Methodology, demoted to an expander — credibility on demand, not in the way ---
     '<div class="rv">'+
-    '<div class="sec-head" style="margin-top:8px">'+ico('ruler')+'How does the score work?</div>'+
+    '<div class="sec-head" style="margin-top:8px">How does the score work?</div>'+
     '<p class="sec-sub">One transparent score, the same for every destination, every month — so you compare like for like. '+
       '<a href="how-we-score.html">See the full method →</a></p>'+
     '<div class="readout" style="font-size:.84rem;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px">'+
@@ -1702,6 +1712,7 @@ function buyBox(item){
     '<span class="buy-live">indicative — check the live price at the retailer</span></div>'+
     '<div class="buy-btns">'+btns+'</div></div>';
 }
+function gearSlug(name){return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
 function gearEntry(item,cat,idx){
   var specs=item.specs?'<dl class="specs">'+Object.keys(item.specs).map(function(k){
     return '<div><dt>'+k+'</dt><dd>'+item.specs[k]+'</dd></div>';
@@ -1712,7 +1723,9 @@ function gearEntry(item,cat,idx){
   return '<div class="gentry">'+gearPhoto(item,cat)+
     '<div><h3>'+item.rank+'. '+item.name+'</h3>'+
     '<p class="gentry-review">'+(item.review||item.blurb)+'</p>'+
-    specs+buyBox(item)+cmp+'</div></div>';
+    specs+buyBox(item)+cmp+
+    '<p class="meta" style="margin-top:8px"><a href="gear/'+gearSlug(item.name)+'.html">Full page: photos, specs &amp; prices &rarr;</a></p>'+
+    '</div></div>';
 }
 
 /* ---------- gear comparison (within one category page) ---------- */
@@ -1771,39 +1784,67 @@ function thickNav(c){
   }).join('')+'</div>';
 }
 function openGearArticle(cat){
-  var sel=document.getElementById('gearCat'); sel.value=cat; GEAR_THICK=null; renderGear();
+  showTab('gear');
+  GEAR_ARTICLE=cat||''; GEAR_THICK=null;
+  if(!cat) document.getElementById('gearCat').value='';
+  renderGear();
   window.scrollTo({top:0,behavior:'smooth'});
+}
+/* Gear tab: every product listed under its brand (the ranked buyer's-guide
+   articles live in the Articles tab; each row links to the product's page). */
+var GEAR_BRANDS=['Apeks','Aqua Lung','Aqualung','Atomic Aquatics','BARE','Bare','Cressi','Fourth Element',
+  'Garmin','Henderson','Hollis','Mares',"O'Neill",'Pinnacle','ScubaPro','Scubapro','Shearwater','Sherwood',
+  'Suunto','TUSA','Waterproof','xDeep','Zeagle'];
+var BRAND_LABEL={'Aqualung':'Aqua Lung','ScubaPro':'Scubapro','BARE':'Bare'};
+function brandOf(name){
+  for(var i=0;i<GEAR_BRANDS.length;i++){
+    if(name.toLowerCase().indexOf(GEAR_BRANDS[i].toLowerCase())===0)
+      return BRAND_LABEL[GEAR_BRANDS[i]]||GEAR_BRANDS[i];
+  }
+  return name.split(' ')[0];
+}
+var GEAR_ARTICLE='';   /* set only when a buyer's-guide article is opened from Articles */
+function gearBrandDir(onlyCat){
+  return GEAR_GUIDE.categories.filter(function(c){return !onlyCat||c.category===onlyCat;}).map(function(c){
+    var seen={}, brands={}, n=0;
+    var all=(c.items||[]).slice();
+    (c.thickness_groups||[]).forEach(function(gr){all=all.concat(gr.items||[]);});
+    all.forEach(function(it){
+      if(seen[it.name])return; seen[it.name]=1; n++;
+      var b=brandOf(it.name);
+      var lo=null; (it.options||[]).forEach(function(o){if(lo===null||o.price_usd<lo)lo=o.price_usd;});
+      (brands[b]=brands[b]||[]).push({name:it.name,image:it.image,lo:lo});
+    });
+    var cols=Object.keys(brands).sort().map(function(b){
+      var rows=brands[b].sort(function(a,x){return a.name<x.name?-1:1;}).map(function(it){
+        var th=it.image?'<span class="gbthumb"><img src="'+it.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'"></span>':'<span class="gbthumb"></span>';
+        return '<a class="gbrow" href="gear/'+gearSlug(it.name)+'.html">'+th+
+          '<span><b>'+it.name+'</b><small>'+(it.lo!==null?'from '+fmtPrice(it.lo):'')+'</small></span></a>';
+      }).join('');
+      return '<div class="gbcol"><b class="gbrand">'+b+'</b>'+rows+'</div>';
+    }).join('');
+    return '<section class="dregion"><h3><span>'+c.category+'</span>'+
+      '<span class="bcount">'+n+' product'+(n===1?'':'s')+' · <a href="#" onclick="openGearArticle(\''+c.category+'\');return false;" style="color:var(--accent)">guide &rarr;</a></span></h3>'+
+      '<div class="gbgrid">'+cols+'</div></section>';
+  }).join('');
 }
 function renderGear(){
   var sel=document.getElementById('gearCat');
   if(!GEAR_GUIDE||!GEAR_GUIDE.categories){document.getElementById('gearGrid').innerHTML='<div class="empty">Gear guide could not load.</div>';return;}
   if(sel.options.length<=1) GEAR_GUIDE.categories.forEach(function(c){var o=document.createElement('option');o.value=c.category;o.textContent=c.category;sel.appendChild(o);});
-  var cat=sel.value, g=document.getElementById('gearGrid');
+  var cat=GEAR_ARTICLE, g=document.getElementById('gearGrid');
   function cmpScope(scope,items){ if(scope!==CMP_SCOPE){CMP=[];CMP_SCOPE=scope;} GEAR_VIEW={items:items||[]}; }
   if(!cat){
     cmpScope('',[]);
-    // Article index: magazine-style list of buyer's guides
-    var rows=GEAR_GUIDE.categories.map(function(c){
-      var teaser=(c.article_intro||'').split('. ').slice(0,2).join('. ')+'.';
-      var lead=leadItem(c);
-      var iconSvg='<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[CAT_ICON[c.category]]||ICONS.tank)+'</svg></div>';
-      var thumb=lead.image?'<img src="'+lead.image+'" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\''+
-        iconSvg.replace(/'/g,"\\'").replace(/"/g,'&quot;')+'\'">':iconSvg;
-      return '<a class="artrow" href="#" onclick="openGearArticle(\''+c.category+'\');return false;">'+
-        '<div class="artrow-thumb">'+thumb+'</div>'+
-        '<div><div class="kicker">Gear · '+c.category+'</div>'+
-        '<h4>'+(c.title||('Top 10 '+c.category))+'</h4>'+
-        '<p>'+teaser+'</p></div></a>';
-    }).join('');
     g.innerHTML='<div class="article" style="grid-column:1/-1;margin-bottom:6px">'+
-      '<p class="gentry-review" style="max-width:80ch;margin-top:0">'+(GEAR_GUIDE.intro||'')+'</p>'+
-      '<h3 class="artlist-head">Recent articles</h3>'+
-      rows+'</div>';
+      '<p class="gentry-review" style="max-width:80ch;margin-top:0">'+(GEAR_GUIDE.intro||'')+
+      ' Every product has its own page — photos, prices and specs. The ranked buyer’s guides live under <a href="#" onclick="showTab(\'destinations\');return false;">Articles</a>.</p>'+
+      gearBrandDir(sel.value)+'</div>';
   }else{
     var c=GEAR_GUIDE.categories.filter(function(x){return x.category===cat;})[0];
     if(!c){g.innerHTML='';return;}
-    var head='<p class="meta"><a href="#" onclick="openGearArticle(\'\');return false;">← All buyer’s guides</a></p>';
-    var foot='<p class="meta" style="margin-top:16px"><a href="#" onclick="openGearArticle(\'\');return false;">← Back to all buyer’s guides</a></p>';
+    var head='<p class="meta"><a href="#" onclick="showTab(\'destinations\');return false;">← All articles</a> &nbsp;·&nbsp; <a href="#" onclick="openGearArticle(\'\');return false;">Browse gear by category →</a></p>';
+    var foot='<p class="meta" style="margin-top:16px"><a href="#" onclick="showTab(\'destinations\');return false;">← Back to all articles</a></p>';
     var affNote='<p class="aff-note">'+ico('current',12)+' Prices are indicative — check the live price at the retailer. We may earn a commission at no extra cost to you, and it never changes a ranking.</p>';
     if(c.thickness_groups){
       // one buyer's guide split into thickness pages, chosen with a pill nav
@@ -1954,7 +1995,7 @@ function renderMarine(){
         '<div><h4>'+e.title+'</h4><p>'+(e.hero_sub||'')+'</p></div></a>';
     }).join('');
     body.innerHTML='<div class="article" style="grid-column:1/-1">'+
-      '<div class="sec-head">'+ico('fish',20)+' Marine life</div>'+
+      '<div class="sec-head">Marine life</div>'+
       '<p class="sec-sub">The ocean’s headline encounters — what they are, and, pulled live from our seasonal data, exactly where and when to dive them.</p>'+
       '<h3 class="artlist-head">Encounters</h3>'+rows+'</div>';
   }else{
@@ -1963,7 +2004,7 @@ function renderMarine(){
     var back='<p class="meta"><a href="#" onclick="MARINE_SLUG=\'\';renderMarine();window.scrollTo(0,0);return false;">← All marine life</a></p>';
     var rows=marineWhereWhen(e.keywords), ww;
     if(rows.length){
-      ww='<h3 style="margin-top:22px">'+ico('map',15)+' Where &amp; when to dive it</h3>'+
+      ww='<h3 style="margin-top:22px">Where &amp; when to dive it</h3>'+
         '<p class="meta">Pulled live from our seasonal data — the destinations where '+e.short+' shows in the water, and the months to catch it.</p>'+
         '<table><thead><tr><th>Destination</th><th>Best months</th></tr></thead><tbody>'+
         rows.map(function(r){
@@ -1977,12 +2018,12 @@ function renderMarine(){
           '<div class="meta">'+r.d.country+(r.now===0?' · <b style=\"color:var(--peak,#16a34a)\">in season now</b>':'')+'</div></td>'+
           '<td><div class="mini-ribbon">'+mini+'</div></td></tr>';}).join('')+'</tbody></table>';
     }else{
-      ww='<h3 style="margin-top:22px">'+ico('map',15)+' Where &amp; when to dive it</h3>'+
+      ww='<h3 style="margin-top:22px">Where &amp; when to dive it</h3>'+
         '<p style="color:#33565e;max-width:80ch">'+(e.no_data||'This is an opportunistic encounter — none of our current destinations has a fixed season for it yet.')+'</p>';
     }
     var beyond='';
     if(e.beyond_scuba&&e.beyond_scuba.length){
-      beyond='<h3 style="margin-top:22px">'+ico('compass',15)+' Beyond scuba — snorkel &amp; cage encounters</h3>'+
+      beyond='<h3 style="margin-top:22px">Beyond scuba — snorkel &amp; cage encounters</h3>'+
         '<p style="color:#33565e;max-width:80ch">'+(e.beyond_intro||'Some of the best encounters with this animal are not on scuba — they run as snorkel or cage-diving trips.')+'</p>'+
         '<table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead><tbody>'+
         e.beyond_scuba.map(function(b){return '<tr><td><b>'+b.name+'</b><div class="meta">'+b.country+' · '+b.mode+'</div></td>'+
@@ -2020,10 +2061,21 @@ function renderDestinations(month){
         '<h4>Where to Dive in '+MONTH_FULL[m]+'</h4>'+
         '<p>'+teaser+'</p></div></a>';
     }).join('');
+    var gearRows=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.map(function(c){
+      var teaser=(c.article_intro||'').split('. ').slice(0,2).join('. ')+'.';
+      var lead=leadItem(c);
+      var thumb=lead.image?'<img src="'+lead.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'';
+      return '<a class="artrow" href="#" onclick="openGearArticle(\''+c.category+'\');return false;">'+
+        '<div class="artrow-thumb">'+thumb+'</div>'+
+        '<div><div class="kicker">Article · Gear</div>'+
+        '<h4>'+(c.title||('Top 10 '+c.category))+'</h4>'+
+        '<p>'+teaser+'</p></div></a>';
+    }).join(''):'');
     g.innerHTML='<div class="article">'+
-      '<div class="sec-head">'+ico('trophy')+'Articles</div>'+
-      '<p class="sec-sub" style="text-align:left;margin:0 0 4px;max-width:80ch">One guide per month of the year, led by the month you are in now. Each ranks the regions and destinations where that month truly delivers, so your vacation dates pick the spot.</p>'+
-      '<h3 class="artlist-head">Recent articles</h3>'+rows+'</div>';
+      '<div class="sec-head">Articles</div>'+
+      '<p class="sec-sub" style="text-align:left;margin:0 0 4px;max-width:80ch">One destination guide per month of the year, led by the month you are in now — plus the ranked gear buyer’s guides.</p>'+
+      '<h3 class="artlist-head">Where to dive, month by month</h3>'+rows+
+      '<h3 class="artlist-head" style="margin-top:30px">Gear buyer’s guides</h3>'+gearRows+'</div>';
   }else{
     var full=MONTH_FULL[month];
     var mi=DivingCalendar.MONTHS.indexOf(month);

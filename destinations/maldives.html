@@ -65,6 +65,49 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .honest ul{list-style:none;margin:0;padding:0}
 .honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
 .honest li b{color:var(--ink)}
+.gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
+.gitem-kicker a{color:var(--accent);text-decoration:none}
+.gitem-stage{position:relative;margin:10px 0 26px}
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+.gitem-photo img{display:block;width:100%;max-height:640px;object-fit:cover}
+.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:16px 22px;
+  position:absolute;left:18px;right:18px;bottom:18px;
+  box-shadow:0 18px 40px -20px rgba(13,60,70,.35)}
+@media(max-width:760px){
+  .gitem-banner{position:static;margin-top:-30px;left:auto;right:auto;width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+  .gitem-photo img{object-fit:contain}
+}
+.gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
+.gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
+.gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
+.gitem-colors{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.csw{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;border:1px solid var(--line)}
+.csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.csw.on{border:2px solid var(--ink)}
+.csw:hover{border-color:var(--ink)}
+.grel{list-style:none;margin:8px 0 0;padding:0}
+.grel li{padding:8px 0;border-top:1px solid var(--line)}
+.grel a{color:var(--ink);text-decoration:none;font-weight:600}
+.grel a:hover{color:var(--accent)}
+.grel small{color:var(--muted);font-family:var(--mono)}
+.gitem-link{color:inherit;text-decoration:none}
+.gitem-link:hover{color:var(--accent)}
+.dregion{margin:26px 0 8px}
+.dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
+.bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
+.gbcol{min-width:0}
+.gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin:4px 0 2px}
+.gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+.gbrow b{display:block;font-weight:600;font-size:.92rem}
+.gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+.gbrow:hover b{color:var(--accent)}
+.gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+.gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.gitem-photo img{max-height:340px}}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
 .hero.plain h1{color:#fff}.hero.plain p{color:#d7f0ec}
@@ -116,7 +159,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
   <p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">Scattered across 26 atolls in the Indian Ocean, the Maldives runs on current. Monsoon-driven flow funnels through channel mouths and over isolated thilas, stacking grey reef sharks, eagle rays and schooling snapper wherever it pushes hardest. December to April brings the clearest water; May to November shifts mantas and whale sharks to the plankton-rich eastern atolls. Liveaboards cover the most ground, resorts add house-reef ease, and solid drift skills pay off everywhere.</p>
   <p style="max-width:78ch;line-height:1.65;color:#33565e">Maldives is at its best Dec-Apr (clear water) / May-Nov (mantas &amp; whale sharks), with Jan, Feb, Mar, Apr, Jul, Aug, Sep, Oct and Dec rating as peak season. Expect tropical water of 28–30°C (suit: 3mm), visibility up to ~35m, and medium currents — Tidal channel currents, manageable drift; strong at kandus. Divers here work 10 recognised sites — 3 thilas, 2 shark dives, 1 manta dive, 1 reef, 1 channel, 1 pinnacle and 1 drift dive — ranging from Banana Reef (5-30m) for beginner divers up to Fuvahmulah (Tiger Zoo) (15-40m), advanced territory.</p>
   <div class="prof-essays"><div class="prof-essay"><h2>What to expect down there</h2><p>You dive the flow, not just the reef: drop at a kandu mouth on an incoming tide, hook in at the corner, and let the blue deliver sharks and eagle rays to you. Thilas like Maaya and Kandooma rise mid-atoll into the current, flanks packed with snapper, while Fotteyo&#x27;s caves and overhangs offer shelter between blasts. The water holds 28-30°C year-round; visibility swings from 30-40 m in northeast-monsoon calm to barely 10 m when southwest-monsoon plankton thickens the water.</p></div><div class="prof-essay"><h2>What you&#8217;ll encounter</h2><p>Grey reef sharks are the baseline, holding station in nearly every channel. In the northeast monsoon, hammerheads rise at dawn off Rasdhoo; when the southwest monsoon greens the water, mantas gather at Hanifaru Bay in the hundreds and whale sharks feed off South Ari. Tiger sharks patrol Fuvahmulah in every month, and dozens of nurse sharks mob the Alimatha night dive.</p></div></div>
-  <div class="best">&#127942; <b>Best months:</b> Jan, Feb, Mar, Apr, Jul, Aug, Sep, Oct, Dec &nbsp;·&nbsp; <b>Recommended window:</b> Dec-Apr (clear water) / May-Nov (mantas &amp; whale sharks)</div>
+  <div class="best"><b>Best months:</b> Jan, Feb, Mar, Apr, Jul, Aug, Sep, Oct, Dec &nbsp;·&nbsp; <b>Recommended window:</b> Dec-Apr (clear water) / May-Nov (mantas &amp; whale sharks)</div>
   <div class="kv">
     <div><span>Water type</span>tropical</div>
     <div><span>Difficulty</span>beginner-intermediate</div>
