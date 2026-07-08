@@ -509,10 +509,20 @@
      },
      "colors": [
       "Blue",
+      "White",
       "Lime",
       "Pink",
+      "Black",
       "Yellow"
-     ]
+     ],
+     "color_images": {
+      "Blue": "assets/gear/studio/hero/mares-avanti-quattro--blue.jpg",
+      "White": "assets/gear/studio/hero/mares-avanti-quattro--white.jpg",
+      "Lime": "assets/gear/studio/hero/mares-avanti-quattro--lime.jpg",
+      "Pink": "assets/gear/studio/hero/mares-avanti-quattro--pink.jpg",
+      "Black": "assets/gear/studio/hero/mares-avanti-quattro--black.jpg",
+      "Yellow": "assets/gear/studio/hero/mares-avanti-quattro--yellow.jpg"
+     }
     },
     {
      "rank": 2,
@@ -1954,7 +1964,15 @@
          "price_usd": 79.95,
          "url": "https://www.wetsuitwearhouse.com/collections/bare-wetsuits-drysuits"
         }
-       ]
+       ],
+       "colors": [
+        "Red",
+        "Blue"
+       ],
+       "color_images": {
+        "Red": "assets/gear/studio/hero/bare-2mm-sport-s-flex-shorty--red.jpg",
+        "Blue": "assets/gear/studio/hero/bare-2mm-sport-s-flex-shorty--blue.jpg"
+       }
       },
       {
        "rank": 5,

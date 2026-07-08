@@ -107,6 +107,128 @@ def studio(cut):
     return canvas
 
 
+HERO = (1680, 760)
+
+# Group photos that show several colourways side by side: split into one
+# cutout per colour (components ordered left-to-right in the source photo).
+SPLITS = {
+    "mares-avanti-quattro": ["Blue", "White", "Lime", "Pink", "Black", "Yellow"],
+    "bare-2mm-sport-s-flex-shorty": ["Red", "Blue"],
+}
+
+
+def components_cc(cut, k):
+    """Connected-component split (8-connectivity); small fragments (straps,
+    buckles) merge into the nearest big component. None if count != k."""
+    import numpy as np, collections
+    a = (np.array(cut.split()[-1]) > 40).astype(np.uint8)
+    H, W = a.shape
+    lab = np.zeros_like(a, dtype=np.int32)
+    cur = 0
+    for sy in range(H):
+        for sx in range(W):
+            if a[sy, sx] and not lab[sy, sx]:
+                cur += 1
+                q = collections.deque([(sy, sx)]); lab[sy, sx] = cur
+                while q:
+                    y, x = q.popleft()
+                    for ny in (y - 1, y, y + 1):
+                        for nx in (x - 1, x, x + 1):
+                            if 0 <= ny < H and 0 <= nx < W and a[ny, nx] and not lab[ny, nx]:
+                                lab[ny, nx] = cur; q.append((ny, nx))
+    total = int(a.sum())
+    cents, sizes = {}, {}
+    for i in range(1, cur + 1):
+        m = lab == i
+        sizes[i] = int(m.sum())
+        ys, xs = np.where(m)
+        cents[i] = (float(xs.mean()), float(ys.mean()))
+    big = [i for i in sizes if sizes[i] >= total * 0.04]
+    if len(big) != k:
+        return None
+    owner = {}
+    for i in sizes:
+        if i in big:
+            owner[i] = i
+        else:
+            owner[i] = min(big, key=lambda b: (cents[b][0] - cents[i][0]) ** 2 + (cents[b][1] - cents[i][1]) ** 2)
+    pieces = []
+    for b in sorted(big, key=lambda b: cents[b][0]):
+        m = np.isin(lab, [i for i in owner if owner[i] == b])
+        ys, xs = np.where(m)
+        piece = cut.crop((int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)).copy()
+        pm = Image.fromarray((m[ys.min():ys.max() + 1, xs.min():xs.max() + 1] * 255).astype("uint8"))
+        al = Image.composite(piece.split()[-1], Image.new("L", piece.size, 0), pm)
+        piece.putalpha(al)
+        pieces.append(piece)
+    return pieces
+
+
+def components(cut, k):
+    """Split an RGBA group cutout into k left-to-right pieces by cutting at
+    the k-1 emptiest vertical seams (column alpha valleys)."""
+    import numpy as np
+    a = np.array(cut.split()[-1]).astype(np.float64)
+    col = a.sum(axis=0)
+    W = len(col)
+    n_seams = k - 1
+    seams = []
+    lo, hi = int(W * 0.08), int(W * 0.92)
+    order = np.argsort(col[lo:hi]) + lo
+    min_gap = W // (k * 2)
+    for x in order:
+        if all(abs(x - s) >= min_gap for s in seams):
+            seams.append(int(x))
+            if len(seams) == n_seams:
+                break
+    seams.sort()
+    edges = [0] + seams + [W]
+    parts = []
+    for i in range(k):
+        piece = cut.crop((edges[i], 0, edges[i + 1], cut.height))
+        if piece.getbbox():
+            parts.append(piece.crop(piece.getbbox()))
+    return parts
+
+
+def hero(cut):
+    """Orbea-style hero: main product centred with shadows, flanked by two
+    faded ghost 'shades' of itself cropped at the canvas edges."""
+    W, H = HERO
+    bbox = cut.getbbox()
+    if not bbox:
+        return None
+    cut = cut.crop(bbox)
+    scale = min(W * 0.36 / cut.width, H * 0.74 / cut.height)
+    main = cut.resize((max(1, int(cut.width * scale)), max(1, int(cut.height * scale))), Image.LANCZOS)
+
+    canvas = Image.new("RGB", HERO, (243, 244, 245))
+    grad = Image.new("L", (1, H))
+    for y in range(H):
+        grad.putpixel((0, y), int(255 * y / H))
+    grad = grad.resize(HERO)
+    canvas = Image.composite(Image.new("RGB", HERO, (233, 235, 237)), canvas, grad)
+
+    ghost = main.resize((int(main.width * 0.82), int(main.height * 0.82)), Image.LANCZOS)
+    g_alpha = ghost.split()[-1].point(lambda v: int(v * 0.14))
+    gy = (H - ghost.height) // 2 + 10
+    for gx in (int(W * 0.045) - ghost.width // 2, int(W * 0.955) - ghost.width // 2):
+        canvas.paste(ghost.convert("RGB"), (gx, gy), g_alpha)
+
+    x, y = (W - main.width) // 2, (H - main.height) // 2 - 10
+    alpha = main.split()[-1]
+    ambient = Image.new("L", HERO, 0)
+    ambient.paste(alpha, (x, y + 28))
+    ambient = ambient.filter(ImageFilter.GaussianBlur(30)).point(lambda v: int(v * 0.20))
+    canvas.paste(Image.new("RGB", HERO, (24, 42, 48)), (0, 0), ambient)
+    contact = Image.new("L", HERO, 0)
+    contact.paste(alpha, (x, y + 12))
+    contact = contact.filter(ImageFilter.GaussianBlur(7)).point(lambda v: int(v * 0.30))
+    canvas.paste(Image.new("RGB", HERO, (14, 28, 33)), (0, 0), contact)
+    canvas.paste(main, (x, y), main)
+    return canvas
+
+
 def main():
     only = None
     if "--only" in sys.argv:
@@ -133,8 +255,25 @@ def main():
         if comp is None:
             failed.append(name)
             continue
-        out = os.path.join(DST, os.path.splitext(name)[0] + ".jpg")
-        comp.save(out, quality=88)
+        base = os.path.splitext(name)[0]
+        comp.save(os.path.join(DST, base + ".jpg"), quality=88)
+        herodir = os.path.join(DST, "hero")
+        os.makedirs(herodir, exist_ok=True)
+        if base in SPLITS:
+            names_ = SPLITS[base]
+            parts = components_cc(cut, len(names_)) or components(cut, len(names_))
+            if len(parts) != len(names_):
+                print(f"  ! split {base}: expected {len(names_)} parts, got {len(parts)} — no split")
+                hero(cut).save(os.path.join(herodir, base + ".jpg"), quality=88)
+            else:
+                for cname, piece in zip(names_, parts):
+                    h = hero(piece)
+                    h.save(os.path.join(herodir, f"{base}--{cname.lower()}.jpg"), quality=88)
+                    print(f"    split: {base} -> {cname}")
+                # default hero = first colour
+                hero(parts[0]).save(os.path.join(herodir, base + ".jpg"), quality=88)
+        else:
+            hero(cut).save(os.path.join(herodir, base + ".jpg"), quality=88)
         done.append(name)
     print(f"studio: {len(done)} done · {len(skipped)} skipped (SKIP list) · {len(failed)} no uniform light bg")
     for n in skipped:

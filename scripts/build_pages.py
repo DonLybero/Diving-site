@@ -127,14 +127,19 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .gitem-kicker a{color:var(--accent);text-decoration:none}
 .gitem-photo{margin:10px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
 .gitem-photo img{display:block;width:100%;max-height:600px;object-fit:contain}
-.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;background:var(--panel);
-  border:1px solid var(--line);border-top:none;border-radius:0 0 16px 16px;padding:16px 20px;margin:0 0 26px}
-.gitem-price{font-family:var(--mono);font-size:.95rem;color:var(--ink)}
-.gitem-price b{color:var(--coral);font-size:1.25rem}
-.gitem-price small{display:block;color:var(--muted);font-size:.66rem;margin-top:2px}
-.gitem-colors{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.cdot{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--ink)}
-.cdot i{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.18);display:inline-block}
+.gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
+  border:1px solid var(--line);border-top:none;border-radius:0 0 16px 16px;padding:16px 22px;margin:0 0 26px;
+  box-shadow:0 14px 30px -22px rgba(13,60,70,.25)}
+.gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
+.gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.gitem-price b{color:var(--coral);font-size:1.15rem;font-family:var(--mono);display:inline}
+.gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
+.gitem-colors{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.csw{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;border:1px solid var(--line)}
+.csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.csw.on{border:2px solid var(--ink)}
+.csw:hover{border-color:var(--ink)}
 .grel{list-style:none;margin:8px 0 0;padding:0}
 .grel li{padding:8px 0;border-top:1px solid var(--line)}
 .grel a{color:var(--ink);text-decoration:none;font-weight:600}
@@ -595,23 +600,46 @@ def gear_item_page(cat, item, prefix="../"):
     cat_slug = gear_slug(cat["category"])
     cat_title = cat.get("title") or ("Top " + cat["category"])
     img = item.get("image") or ""
-    photo = (f'<figure class="gitem-photo"><img src="{prefix}{esc(img)}" alt="{esc(item["name"])}"></figure>'
-             if img else "")
+    base = os.path.splitext(os.path.basename(img))[0] if img else ""
+    hero_path = f"assets/gear/studio/hero/{base}.jpg"
+    if not os.path.exists(os.path.join(ROOT, hero_path)):
+        hero_path = img
+    cimgs = item.get("color_images") or {}
+    colors = item.get("colors") or []
+    first = colors[0] if colors and cimgs.get(colors[0]) else None
+    hero_src = cimgs.get(first, hero_path) if first else hero_path
+    photo = (f'<figure class="gitem-photo"><img id="gimg" src="{prefix}{esc(hero_src)}" '
+             f'alt="{esc(item["name"])}"></figure>' if hero_src else "")
     offers = order_offers(item.get("options"))
     lo = min((o["price_usd"] for o in item.get("options") or []), default=None)
     btns = "".join(
         f'<a class="pack-cta{"" if i == 0 else " ghost"}" href="{esc(o["url"])}" target="_blank" '
         f'rel="noopener sponsored">{esc(o["store"])} · {fmtp(o["price_usd"])}</a>'
         for i, o in enumerate(offers[:3]))
-    colors = ""
-    if item.get("colors"):
-        dots = "".join(f'<span class="cdot" title="{esc(c)}"><i style="background:{COLOR_HEX.get(c.lower(), "#889")}"></i>{esc(c)}</span>'
-                       for c in item["colors"])
-        colors = f'<div class="gitem-colors"><span class="buy-lead">Colours</span>{dots}</div>'
+    swatches, cjs = "", ""
+    if colors:
+        dots = ""
+        for i, c in enumerate(colors):
+            hexc = COLOR_HEX.get(c.lower(), "#8899a0")
+            act = " on" if (cimgs and i == 0) else ""
+            click = f' onclick="pickC(this,\'{esc(c)}\')" role="button" tabindex="0"' if cimgs.get(c) else ""
+            dots += (f'<span class="csw{act}" title="{esc(c)}"{click}>'
+                     f'<i style="background:{hexc}"></i></span>')
+        swatches = f'<div class="gitem-colors">{dots}</div>'
+        if cimgs:
+            cmap = {c: prefix + p for c, p in cimgs.items()}
+            cjs = ('<script>var GIMG=' + json.dumps(cmap, ensure_ascii=False) + ';'
+                   'function pickC(el,c){var i=document.getElementById("gimg");'
+                   'if(GIMG[c]){i.src=GIMG[c];}'
+                   'var s=document.querySelectorAll(".csw");'
+                   'for(var k=0;k<s.length;k++)s[k].className="csw";'
+                   'el.className="csw on";}</script>')
     banner = (f'<div class="gitem-banner">'
-              f'<div class="gitem-price">{f"from <b>{fmtp(lo)}</b>" if lo is not None else ""}'
+              f'<div class="gitem-id"><b>{esc(item["name"])}</b>'
+              f'<span class="gitem-price">{f"from <b>{fmtp(lo)}</b>" if lo is not None else ""}</span>'
               f'<small>indicative — the retailer shows the live price</small></div>'
-              f'<div class="pack-ctas">{btns}</div>{colors}</div>')
+              f'{swatches}'
+              f'<div class="pack-ctas">{btns}</div></div>{cjs}')
     rank = item.get("rank")
     kicker = f'#{rank} in <a href="{cat_slug}.html">{esc(cat_title)}</a>' if rank else f'<a href="{cat_slug}.html">{esc(cat_title)}</a>'
     review = item.get("review") or item.get("blurb") or ""
