@@ -72,7 +72,13 @@
   @media(min-width:760px){.topbar .cta{display:inline-flex}}
 
   /* ---------- hero ---------- */
-  .hero{position:relative;overflow:hidden;text-align:center;padding:92px 18px 52px;
+  /* full-width media band above the headline (video, photo fallback) */
+  .hero-band{position:relative;width:100%;height:clamp(210px,24vw,380px);overflow:hidden;
+       background:#06222b center/cover no-repeat;border-bottom:1px solid var(--line)}
+  .hero-band video{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-band .photo-credit{position:absolute;right:10px;bottom:6px;font-size:.62rem;
+       color:rgba(233,247,246,.55);font-family:var(--mono)}
+  .hero{position:relative;overflow:hidden;text-align:center;padding:64px 18px 52px;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
   .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;
         background:linear-gradient(180deg,transparent,rgba(2,18,26,.0)),
@@ -632,15 +638,18 @@
   </div>
 </div>
 
+<div class="hero-band" id="heroBand">
+  <video id="heroVideo" autoplay muted loop playsinline preload="metadata"></video>
+  <span class="photo-credit" id="heroCredit"></span>
+</div>
 <header class="hero" id="hero">
   <span class="eyebrow">Never dive alone — your diving buddy</span>
   <h1>Know your trip lands on great diving — before you book.</h1>
   <p class="tagline">Every destination is scored for all twelve months on the things that make a dive: season, marine life, visibility and currents. Tell DiveSZN when you can travel, and see exactly where the water is at its best.</p>
   <div class="hero-cta">
-    <a class="btn" href="#" onclick="showTab('planner');return false;"><i class="ico" data-ico="compass"></i>Plan by your dates →</a>
+    <a class="btn" href="#" onclick="showTab('planner');return false;">Plan by your dates →</a>
     <a class="btn ghost" href="#" onclick="showTab('calendar');return false;">Browse the year calendar</a>
   </div>
-  <span class="photo-credit" id="heroCredit"></span>
 </header>
 
 <div class="navwrap">
@@ -927,20 +936,33 @@ function seasonRibbon(d){
 /* Hero photo credit is tooltip-only (small info mark) — no visible photographer
    name on the main page while keeping CC attribution accessible. */
 var HERO_PICKS=["Fernando de Noronha","Sipadan Island","Maldives","Palau","Raja Ampat","Great Barrier Reef","Bonaire"];
+var HERO_VIDEO={src:'assets/video/hero-dive.mp4', credit:''};
 function setHeroPhoto(){
+  /* the band plays the dive-entry video; a destination photo paints beneath
+     it as the fallback (video missing or reduced motion) */
+  var v=document.getElementById('heroVideo');
+  if(v){
+    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      v.remove();
+    }else{
+      v.addEventListener('error',function(){v.style.display='none';},true);
+      v.src=HERO_VIDEO.src;
+      var vc=document.getElementById('heroCredit');
+      if(HERO_VIDEO.credit){vc.textContent='\u24D8';vc.title=HERO_VIDEO.credit;vc.style.cursor='help';}
+    }
+  }
   for(var i=0;i<HERO_PICKS.length;i++){
     var d=DivingCalendar.getDestination(DESTS,HERO_PICKS[i]);
     if(d&&d.image){
       (function(dd){
         var img=new Image();
         img.onload=function(){
-          var h=document.getElementById('hero');
-          h.style.backgroundImage='linear-gradient(180deg,rgba(4,26,34,.62) 0%,rgba(4,26,34,.55) 45%,rgba(3,23,31,.92) 100%),url("'+dd.image+'")';
-          h.classList.add('has-photo');
+          var h=document.getElementById('heroBand');
+          h.style.backgroundImage='url("'+dd.image+'")';
           var cred=document.getElementById('heroCredit');
-          if(dd.image_credit && !/CC0|Public domain/i.test(dd.image_credit)){
+          if(!cred.textContent&&dd.image_credit && !/CC0|Public domain/i.test(dd.image_credit)){
             cred.textContent='\u24D8'; cred.title=dd.name+' · '+dd.image_credit; cred.style.cursor='help';
-          } else { cred.textContent=''; }
+          }
         };
         img.src=dd.image;
       })(d);
