@@ -153,6 +153,16 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .grel small{color:var(--muted);font-family:var(--mono)}
 .gitem-link{color:inherit;text-decoration:none}
 .gitem-link:hover{color:var(--accent)}
+.dregion{margin:26px 0 8px}
+.dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong,#bcd7d9)}
+.bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
+.gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px 24px;margin-top:14px;align-items:start}
+.gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
+.gbrow b{display:block;font-weight:600;font-size:.92rem}
+.gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
+.gbrow:hover b{color:var(--accent)}
+.gbthumb{flex:0 0 74px;width:74px;height:52px;border-radius:8px;overflow:hidden;background:#f4f5f6;border:1px solid var(--line)}
+.gbthumb img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:640px){.gitem-photo img{max-height:340px}}
 .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#0b7d75;margin-bottom:6px}
 .hero.plain{background:linear-gradient(135deg,#0e2f37,#0b7d75);padding:48px 18px 34px}
@@ -760,6 +770,20 @@ def gear_page(cat, prefix="../"):
     ld = graph_ld(coll, bc, *[product_ld(i) for i in items])
     return content_shell(title, desc, url, prefix, None, "".join(parts), ld)
 
+BRAND_NAMES = ["Apeks", "Aqua Lung", "Aqualung", "Atomic Aquatics", "BARE", "Bare", "Cressi",
+               "Fourth Element", "Garmin", "Henderson", "Hollis", "Mares", "O'Neill", "Pinnacle",
+               "ScubaPro", "Scubapro", "Shearwater", "Sherwood", "Suunto", "TUSA", "Waterproof",
+               "xDeep", "Zeagle"]
+BRAND_LABEL = {"Aqualung": "Aqua Lung", "ScubaPro": "Scubapro", "BARE": "Bare"}
+
+
+def brand_of(name):
+    for b in BRAND_NAMES:
+        if name.lower().startswith(b.lower()):
+            return BRAND_LABEL.get(b, b)
+    return name.split()[0]
+
+
 def gear_index_page(gear, prefix="../"):
     url = BASE + "gear/index.html"
     rows = ""
@@ -772,9 +796,31 @@ def gear_index_page(gear, prefix="../"):
         rows += (f'<li><a href="{slug}.html"><div class="th">{thumb}</div>'
                  f'<div><h3>{esc(cat.get("title") or ("Top " + cat["category"]))}</h3>'
                  f'<p>{esc(teaser)}</p></div></a></li>')
-    desc = "DiveSZN scuba gear buyer's guides — the best masks, fins, regulators, BCDs, dive computers and wetsuits, with specs and where to buy."
+    brands, seen = {}, set()
+    for cat in gear["categories"]:
+        for it in _cat_items(cat):
+            if it["name"] in seen:
+                continue
+            seen.add(it["name"])
+            lo = min((o["price_usd"] for o in it.get("options") or []), default=None)
+            brands.setdefault(brand_of(it["name"]), []).append((it, cat["category"], lo))
+    bsec = ""
+    for b in sorted(brands):
+        brows = ""
+        for it, catname, lo in sorted(brands[b], key=lambda t: t[0]["name"]):
+            img = it.get("image") or ""
+            th = (f'<span class="gbthumb"><img src="{prefix}{esc(img)}" alt="" loading="lazy"></span>'
+                  if img else '<span class="gbthumb"></span>')
+            frm = f" · from {fmtp(lo)}" if lo is not None else ""
+            brows += (f'<a class="gbrow" href="{gear_slug(it["name"])}.html">{th}'
+                      f'<span><b>{esc(it["name"])}</b><small>{esc(catname.rstrip("s"))}{frm}</small></span></a>')
+        bsec += (f'<section class="dregion"><h3><span>{esc(b)}</span>'
+                 f'<span class="bcount">{len(brands[b])} product{"" if len(brands[b]) == 1 else "s"}</span></h3>'
+                 f'<div class="gbgrid">{brows}</div></section>')
+    desc = "DiveSZN scuba gear — every product under its brand, plus ranked buyer's guides for masks, fins, regulators, BCDs, dive computers and wetsuits."
     inner = (f'<p class="greview" style="max-width:80ch">{esc(gear.get("intro") or "")}</p>'
-             f'<h2>Buyer&#8217;s guides</h2><ul class="artlist">{rows}</ul>'
+             f'{bsec}'
+             f'<h2 style="margin-top:40px">The buyer&#8217;s guides (articles)</h2><ul class="artlist">{rows}</ul>'
              f'<a class="cta" href="../index.html#gear">Open the interactive gear guide &rarr;</a>')
     ld = graph_ld({"@type": "CollectionPage", "name": "DiveSZN gear buyer's guides",
                    "description": desc, "url": url},

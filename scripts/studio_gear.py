@@ -107,7 +107,8 @@ def studio(cut):
     return canvas
 
 
-HERO = (1680, 760)
+HERO = (1680, 860)
+BANNER_BAND = 190          # bottom pixels kept free of product for the floating banner
 
 # Group photos that show several colourways side by side: split into one
 # cutout per colour (components ordered left-to-right in the source photo).
@@ -195,11 +196,12 @@ def hero(cut):
     """Orbea-style hero: main product centred with shadows, flanked by two
     faded ghost 'shades' of itself cropped at the canvas edges."""
     W, H = HERO
+    usable = H - BANNER_BAND
     bbox = cut.getbbox()
     if not bbox:
         return None
     cut = cut.crop(bbox)
-    scale = min(W * 0.34 / cut.width, H * 0.62 / cut.height)
+    scale = min(W * 0.34 / cut.width, usable * 0.80 / cut.height)
     main = cut.resize((max(1, int(cut.width * scale)), max(1, int(cut.height * scale))), Image.LANCZOS)
 
     canvas = Image.new("RGB", HERO, (243, 244, 245))
@@ -209,13 +211,14 @@ def hero(cut):
     grad = grad.resize(HERO)
     canvas = Image.composite(Image.new("RGB", HERO, (233, 235, 237)), canvas, grad)
 
+    usable = H - BANNER_BAND
     ghost = main.resize((int(main.width * 0.82), int(main.height * 0.82)), Image.LANCZOS)
     g_alpha = ghost.split()[-1].point(lambda v: int(v * 0.14))
-    gy = (H - ghost.height) // 2 - int(H * 0.04)
+    gy = (usable - ghost.height) // 2
     for gx in (int(W * 0.045) - ghost.width // 2, int(W * 0.955) - ghost.width // 2):
         canvas.paste(ghost.convert("RGB"), (gx, gy), g_alpha)
 
-    x, y = (W - main.width) // 2, (H - main.height) // 2 - int(H * 0.07)
+    x, y = (W - main.width) // 2, (usable - main.height) // 2
     alpha = main.split()[-1]
     ambient = Image.new("L", HERO, 0)
     ambient.paste(alpha, (x, y + 28))
