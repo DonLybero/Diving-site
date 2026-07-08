@@ -89,8 +89,8 @@
   @keyframes hbmB{from{width:40%}to{width:24%}}
   @keyframes hbmC{from{width:17%}to{width:33%}}
   @media(prefers-reduced-motion:reduce){.hbm{animation:none}}
-  .hero{position:relative;overflow:hidden;text-align:center;padding:64px 18px 0;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:52vh;
+  .hero{position:relative;overflow:hidden;text-align:center;padding:clamp(56px,9vh,110px) 18px;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:78vh;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
   .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;
         background:linear-gradient(180deg,transparent,rgba(2,18,26,.0)),
@@ -311,7 +311,7 @@
   /* crew slide: photo full-bleed, stat boxes slide in from the right as you
      scroll (progress-driven via --cp, like the reference) */
   .crew-slide{position:relative;height:clamp(560px,calc(100vh - 64px),1040px);overflow:hidden;
-       width:100vw;margin:-30px 0 46px calc(50% - 50vw);border-radius:0}
+       width:100vw;margin:-30px 0 0 calc(50% - 50vw);border-radius:0}
   /* the near-native aspect keeps the photo wide rather than cropped-in */
   @media(max-width:640px){.crew-slide{height:clamp(340px,96vw,560px)}}
   .crew-photo{position:absolute;inset:0;background:#dbe9ec}
@@ -325,6 +325,24 @@
   .crew-b{background:#dcead9}
   .crew-credit{position:absolute;left:10px;bottom:8px;font-family:var(--mono);font-size:.58rem;color:rgba(255,255,255,.75)}
   @media(prefers-reduced-motion:reduce){.crew-stats{transform:none}}
+  /* home sections: full-bleed editorial bands so the whole page reads like the
+     hero + crew slide — alternating washes, centered serif heads, mono kickers */
+  .hband{width:100vw;margin:0 0 0 calc(50% - 50vw);padding:clamp(64px,11vh,120px) 18px}
+  .hband .hb-in{max-width:1180px;margin:0 auto}
+  .hband-mist{background:linear-gradient(180deg,#fbfefe,#eef6f5)}
+  .hband-sage{background:#e9f2e6}
+  .hband-lilac{background:#efeaf7}
+  .hband-last{margin-bottom:-70px}   /* swallows .wrap's bottom padding so the band meets the footer */
+  .home-kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+       color:#0e8c82;text-align:center;margin:0 0 18px}
+  #view-home .sec-head{justify-content:center;text-align:center;font-size:clamp(2.1rem,3.8vw,3.1rem);
+       line-height:1.12;margin:0 auto 14px;max-width:24ch}
+  #view-home .sec-sub{text-align:center;margin:0 auto 44px;font-size:1.04rem;max-width:60ch}
+  #view-home .home-grid{gap:22px;text-align:left}
+  #view-home .feature .cover{height:240px}
+  #view-home .trust{margin:0}
+  #view-home .trust div{background:rgba(255,255,255,.72);text-align:left}
+  .hband details.more{text-align:left}
   .rv-x{opacity:0;transform:translateX(72px);transition:opacity .65s ease,transform .65s ease}
   .rv-x.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.rv-x{opacity:1;transform:none;transition:none}}
@@ -647,7 +665,7 @@
   /* ---------- featured card ---------- */
   @media(min-width:760px){
     .home-grid .featured{grid-column:span 2}
-    .home-grid .featured .cover{height:220px}
+    .home-grid .featured .cover{height:320px}
   }
   /* ---------- planner progressive disclosure ---------- */
   .plan-intro{text-align:center;padding:44px 18px;border:1px dashed rgba(14,156,146,.35);border-radius:16px;
@@ -1577,7 +1595,7 @@ function renderHome(){
   var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.slice(0,3).map(function(c){
     var g=leadItem(c), lo=g.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;})[0];
     return '<div class="feature" onclick="showTab(\'gear\')">'+
-      '<div class="gear-photo" style="height:120px">'+(g.image?'<img src="'+g.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
+      '<div class="gear-photo" style="height:180px">'+(g.image?'<img src="'+g.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<h4>'+g.name+'</h4><div class="score">from '+fmtPrice(lo.price_usd)+'</div>'+
       '<div class="meta">#1 '+c.category.replace(/s$/,'')+' · best authorised price — '+lo.store+'</div></div>';
   }):GEAR.slice(0,3).map(function(g){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
@@ -1600,18 +1618,20 @@ function renderHome(){
     '</div></div>';
   document.getElementById('view-home').innerHTML=
     crew+
-    '<div class="rv slide">'+
-    '<div class="hero-note" style="margin:2px 0 26px">&#10003; Scoring live for <b>'+MONTH_FULL[nowMonth]+'</b> right now · independent, no sponsored rankings</div>'+
+    '<section class="hband hband-mist rv"><div class="hb-in">'+
+    '<div class="home-kicker">&#10003; Scoring live for '+MONTH_FULL[nowMonth]+' &middot; independent &middot; no sponsored rankings</div>'+
     '<div class="sec-head">Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</div>'+
     '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it.</p><div class="home-grid">'+sitePrev+'</div>'+
-    '</div>'+
-    '<div class="band rv">'+
+    '</div></section>'+
+    '<section class="hband hband-sage rv"><div class="hb-in">'+
+    '<div class="home-kicker">The kit, without the grey market</div>'+
     '<div class="sec-head">Gear, at the right price</div>'+
     '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p><div class="home-grid">'+bestGear+'</div>'+
-    '</div>'+
+    '</div></section>'+
     // --- Methodology, demoted to an expander — credibility on demand, not in the way ---
-    '<div class="rv">'+
-    '<div class="sec-head" style="margin-top:8px">How does the score work?</div>'+
+    '<section class="hband rv"><div class="hb-in">'+
+    '<div class="home-kicker">The method behind every number</div>'+
+    '<div class="sec-head">How does the score work?</div>'+
     '<p class="sec-sub">One transparent score, the same for every destination, every month — so you compare like for like. '+
       '<a href="how-we-score.html">See the full method →</a></p>'+
     '<div class="readout" style="font-size:.84rem;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px">'+
@@ -1636,12 +1656,15 @@ function renderHome(){
       'calendars and ocean sea-temperature datasets; water temperatures are typical monthly ranges (±1°C) and marine-life timing '+
       'shifts year to year. <b style="color:var(--ink)">Data reviewed July 2026.</b> Always confirm current conditions with a local '+
       'dive centre before travelling.</p></details>'+
-    '</div>'+
-    '<div class="trust rv">'+
+    '</div></section>'+
+    '<section class="hband hband-lilac hband-last rv"><div class="hb-in">'+
+    '<div class="home-kicker">Why divers trust the scores</div>'+
+    '<div class="trust">'+
       '<div><b>Independent by design</b><br><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
       '<div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
       '<div><b>Safety first</b><br><span class="meta">Every dive-site page lists difficulty, currents and the nearest recompression chamber.</span></div>'+
-    '</div>';
+    '</div>'+
+    '</div></section>';
   fillDestCovers();
   initReveal();
   crewScroll();
