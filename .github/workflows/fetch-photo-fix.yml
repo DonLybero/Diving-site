@@ -21,9 +21,9 @@ jobs:
           UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36",
                 "Accept": "application/json"}
           TARGETS = {
-            "cressi-ace": "https://dipndive.com/products/cressi-ace-bcd",
+            "cressi-ace": "https://lancasterscuba.com/products/crbcace",
             "mares-prestige-sls": "https://beachcitiescuba.com/products/mares-prestige-sls-bcd",
-            "o-neill-epic-4-3mm": "https://us.oneill.com/products/4212b-gr2-epic-4-3-bz-full",
+            "o-neill-epic-4-3mm": "https://www.cleanlinesurf.com/products/oneill-epic-4-3-back-zip-wetsuit-4212",
             "waterproof-w30-2-5mm-women-s": "https://floridadivecompany.com/products/waterproof-w30-womens-sport-series-fullsuit-2-5mm",
           }
           for slug, page in TARGETS.items():
