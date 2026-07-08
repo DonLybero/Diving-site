@@ -80,11 +80,8 @@
        color:rgba(233,247,246,.55);font-family:var(--mono)}
   /* hero mosaic — the whole band is graded blocks that resize like windows
      over a pale ghost base, faithful to the reference recording */
-  .hero-band>#heroVideo{filter:grayscale(1) brightness(1.42) contrast(1.02)}
   .hbm{position:absolute;overflow:hidden}
   .hbm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hbm-tag{position:absolute;left:12px;bottom:12px;background:#fff;color:#0c3d46;font-family:var(--mono);
-       font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;white-space:nowrap;z-index:2}
   .hbm-coral{left:9%;top:0;bottom:0;width:34%;z-index:1;animation:hbmB 9s ease-in-out infinite alternate}
   .hbm-coral video{filter:sepia(1) saturate(2) hue-rotate(-16deg) brightness(1.12) contrast(1.1)}
   .hbm-sage{left:0;top:0;bottom:0;width:22%;z-index:2;animation:hbmA 12s ease-in-out infinite alternate}
@@ -100,7 +97,7 @@
   @keyframes hbmC{from{width:17%}to{width:33%}}
   @keyframes hbmD{from{width:11%;height:38%}to{width:19%;height:60%}}
   @keyframes hbmE{from{width:22%;height:70%;top:14%}to{width:13%;height:92%;top:4%}}
-  @media(max-width:700px){.hbm-blush,.hbm-dark{display:none}.hbm-tag{font-size:.48rem}}
+  @media(max-width:700px){.hbm-blush,.hbm-dark{display:none}}
   @media(prefers-reduced-motion:reduce){.hbm{animation:none}}
   .hero{position:relative;overflow:hidden;text-align:center;padding:64px 18px 52px;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
@@ -681,9 +678,9 @@
 <div class="hero-band" id="heroBand">
   <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-dive-poster.jpg"></video>
   <div class="hbm hbm-coral"><video muted autoplay loop playsinline preload="metadata"></video></div>
-  <div class="hbm hbm-sage"><video muted autoplay loop playsinline preload="metadata"></video><span class="hbm-tag">Peak season</span></div>
-  <div class="hbm hbm-blush"><video muted autoplay loop playsinline preload="metadata"></video><span class="hbm-tag">Visibility 30 m</span></div>
-  <div class="hbm hbm-dark"><video muted autoplay loop playsinline preload="metadata"></video><span class="hbm-tag">DiveSZN</span></div>
+  <div class="hbm hbm-sage"><video muted autoplay loop playsinline preload="metadata"></video></div>
+  <div class="hbm hbm-blush"><video muted autoplay loop playsinline preload="metadata"></video></div>
+  <div class="hbm hbm-dark"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <div class="hbm hbm-lilac"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <span class="photo-credit" id="heroCredit"></span>
 </div>
