@@ -1043,10 +1043,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
        border-bottom:1px solid var(--line-strong);padding-bottom:3px}
   .dcard:hover .dcap{border-color:var(--accent)}
   .dcard .dmeta{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:7px;letter-spacing:.04em}
-  /* gear variant: the tile matches the studio canvas (#f8f9fb) so photo and
-     frame read as one seamless grey surface */
-  .dcard-gear .dimg{background:#f8f9fb;border:1px solid var(--line)}
-  .dcard-gear .dimg img{object-fit:contain;padding:16px;box-sizing:border-box}
+  /* gear variant: one seamless grey rectangle — the tile is #e9eaec and the
+     photos' #f8f9fb studio canvas is pulled to exactly that grey (248×.94≈233) */
+  .dcard-gear .dimg{background:#e9eaec;border:1px solid var(--line)}
+  .dcard-gear .dimg img{object-fit:contain;padding:16px;box-sizing:border-box;filter:brightness(.94)}
   .dcar-nav{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:30px}
   .dcar-nav button{background:none;border:none;color:var(--ink);cursor:pointer;font-size:1.05rem;
        padding:6px 10px;line-height:1;transition:color .2s}
@@ -2599,7 +2599,7 @@ function renderHome(){
   pool.forEach(function(r){ if(topAug.length<8 && !seenC[r.country]){ seenC[r.country]=1; topAug.push(r); } });
   var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.map(function(c,i){
     var g=leadItem(c), lo=g.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;})[0];
-    return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="showTab(\'gear\')">'+
+    return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="location.href=\'gear/'+gearSlug(g.name)+'.html\'">'+
       '<div class="dimg">'+(g.image?'<img src="'+g.image+'" alt="'+esc(g.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<span class="dcap">'+g.name+'</span>'+
       '<div class="dmeta"><span class="score" style="font-size:.68rem">from '+fmtPrice(lo.price_usd)+'</span> · #1 '+c.category.replace(/s$/,'')+' — '+lo.store+'</div>'+
