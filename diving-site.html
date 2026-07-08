@@ -963,6 +963,24 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .hero-note b{color:var(--ink)}
   /* one orchestrated reveal on Home: bands rise in as they enter the viewport */
   .rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+  .rv-x{opacity:0;transform:translateX(72px);transition:opacity .65s ease,transform .65s ease}
+  .rv-x.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.rv-x{opacity:1;transform:none;transition:none}}
+  @media(min-width:821px){.slide{min-height:66vh;display:flex;flex-direction:column;justify-content:center}}
+  /* "the month in numbers" slide: big photo + stat squares that slide in */
+  .numbers-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:stretch}
+  .numbers-photo{border-radius:16px;overflow:hidden;min-height:400px;background-size:cover;background-position:center;
+    position:relative;cursor:pointer;border:1px solid var(--line)}
+  .numbers-photo .np-cap{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;
+    background:linear-gradient(180deg,transparent,rgba(3,23,31,.78));color:#fff}
+  .numbers-photo .np-cap h4{margin:0;font-family:var(--serif);font-size:1.5rem}
+  .numbers-photo .np-cap span{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#bfe9e4}
+  .numbers-stack{display:grid;gap:18px;grid-template-rows:1fr 1fr}
+  .statsq{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:16px;
+    display:flex;flex-direction:column;justify-content:center;padding:24px 26px}
+  .statsq b{font-family:var(--mono);font-weight:500;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;color:var(--ink)}
+  .statsq span{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  @media(max-width:820px){.numbers-grid{grid-template-columns:1fr}.numbers-photo{min-height:240px}.numbers-stack{grid-template-rows:none;grid-template-columns:1fr 1fr}}
   .rv.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
   /* editorial pull-quote lede: the month's thesis, set large */
@@ -2468,12 +2486,27 @@ function renderHome(){
       '<div class="row" style="margin:10px 18px 18px;align-items:center"><span class="chip temp">'+tempStr(r.water_temp_c)+'</span>'+curChip(r.current_strength)+
       '<span style="margin-left:auto;color:var(--accent);font-weight:600;font-size:.82rem">Full guide →</span></div></div>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
+  var n1=topAug[0], n1d=n1?DivingCalendar.getDestination(DESTS,n1.name):null;
+  var numbersSlide='';
+  if(n1&&n1d&&n1d.image){
+    numbersSlide='<div class="slide rv" style="margin-top:26px">'+
+      '<div class="sec-head">What does the month&rsquo;s best look like?</div>'+
+      '<p class="sec-sub">'+n1.name+' leads '+MONTH_FULL[nowMonth]+'. The water, in numbers.</p>'+
+      '<div class="numbers-grid">'+
+      '<div class="numbers-photo" style="background-image:url(\''+n1d.image+'\')" onclick="openProfile(\''+esc(n1.name)+'\')">'+
+        '<div class="np-cap"><span>'+n1.country+' · '+badge(n1.rating).replace(/<[^>]*>/g,'')+' season</span><h4>'+n1.name+'</h4></div></div>'+
+      '<div class="numbers-stack">'+
+      '<div class="statsq rv-x" style="transition-delay:.15s"><b>'+(n1.water_temp_c!=null?n1.water_temp_c+'&deg;C':'&mdash;')+'</b><span>water this month</span></div>'+
+      '<div class="statsq rv-x" style="transition-delay:.32s"><b>'+(n1.visibility_m!=null?n1.visibility_m+'&nbsp;m':'&mdash;')+'</b><span>typical visibility</span></div>'+
+      '</div></div></div>';
+  }
   document.getElementById('view-home').innerHTML=
-    '<div class="rv">'+
+    '<div class="rv slide">'+
     '<div class="hero-note" style="margin:2px 0 26px">&#10003; Scoring live for <b>'+MONTH_FULL[nowMonth]+'</b> right now · independent, no sponsored rankings</div>'+
     '<div class="sec-head">Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</div>'+
     '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it.</p><div class="home-grid">'+sitePrev+'</div>'+
     '</div>'+
+    numbersSlide+
     '<div class="band rv">'+
     '<div class="sec-head">Gear, at the right price</div>'+
     '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p><div class="home-grid">'+bestGear+'</div>'+
@@ -2517,7 +2550,7 @@ function renderHome(){
 /* One orchestrated moment: home bands rise in on first approach, then stay.
    Failsafe reveals everything after 3s so nothing can be left invisible. */
 function initReveal(){
-  var els=[].slice.call(document.querySelectorAll('#view-home .rv'));
+  var els=[].slice.call(document.querySelectorAll('#view-home .rv, #view-home .rv-x'));
   var all=function(){els.forEach(function(e){e.classList.add('in');});};
   if(!('IntersectionObserver' in window)||
      (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){all();return;}
