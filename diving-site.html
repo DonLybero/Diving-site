@@ -699,7 +699,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     --r:18px; --r-sm:12px;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;overflow-x:clip}   /* 100vw full-bleed bands overhang by the scrollbar width; clip keeps sticky working */
   body{margin:0;font-family:var(--sans);color:var(--ink);min-height:100vh;line-height:1.5;
        -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
        background:
