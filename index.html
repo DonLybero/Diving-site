@@ -393,6 +393,13 @@
   .dcar-dots{display:flex;gap:9px}
   .dcar-dots span{width:24px;height:2px;background:var(--ink);opacity:.18;transition:opacity .3s}
   .dcar-dots span.on{opacity:.85}
+  /* mobile: the full-width dash row squeezed the arrows into the screen edges */
+  @media(max-width:640px){
+    .dcar-nav{gap:10px;padding:0 16px}
+    .dcar-nav button{padding:6px 8px}
+    .dcar-dots{gap:5px}
+    .dcar-dots span{width:13px}
+  }
   @media(max-width:820px){
     .dcar-wrap{display:block}
     .dcar-head{padding:0 0 26px}
