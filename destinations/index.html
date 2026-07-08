@@ -64,12 +64,17 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
 .gitem-kicker a{color:var(--accent);text-decoration:none}
 .gitem-stage{margin:10px 0 26px}
-.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+/* the photo card carries a studio-toned band below the product (its bg matches
+   the hero canvas bottom), and the white banner floats ON that band — on the
+   photo, under the gear, with the photo background behind it (owner spec) */
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+  background:#e9ebed;padding-bottom:22px}
 .gitem-photo img{display:block;width:100%;height:auto}
 .gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
-  border:1px solid var(--line);border-radius:16px;padding:16px 22px;margin-top:16px;
+  border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:-30px 22px 0;position:relative;
   box-shadow:0 18px 36px -24px rgba(13,60,70,.3)}
-@media(max-width:760px){.gitem-photo img{object-fit:contain}}
+@media(max-width:760px){.gitem-photo img{object-fit:contain}
+  .gitem-banner{margin:-16px 12px 0;padding:14px 16px}}
 .gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
 .gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
 .gitem-price b{color:var(--ink);font-size:1.15rem;font-family:var(--mono);font-variant-numeric:tabular-nums;display:inline}
