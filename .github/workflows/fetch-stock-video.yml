@@ -1,0 +1,102 @@
+name: Fetch stock diver-entry video candidates (Pexels)
+
+# Browses Pexels video search in headless Chromium, downloads the top
+# candidates via the public download endpoint, extracts preview frames and
+# pushes everything to the orphan branch video-cands for sandbox review.
+# Pexels license: free to use, no attribution required.
+
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "Search query"
+        required: false
+        default: "scuba diver jumping water"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright + ffmpeg
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg >/dev/null
+          npm init -y >/dev/null
+          npm i playwright@1.49.0 >/dev/null
+          npx playwright install --with-deps chromium >/dev/null
+
+      - name: Scrape and download
+        env:
+          QUERY: ${{ inputs.query }}
+        run: |
+          mkdir -p vidcands
+          cat > scrape.mjs <<'EOF'
+          import { chromium } from 'playwright';
+          import fs from 'fs';
+          const q = encodeURIComponent(process.env.QUERY || 'scuba diver jumping water');
+          const b = await chromium.launch();
+          const pg = await b.newPage({userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36'});
+          await pg.goto(`https://www.pexels.com/search/videos/${q}/`, {waitUntil: 'domcontentloaded', timeout: 60000});
+          await pg.waitForTimeout(4000);
+          for (let y = 0; y < 4000; y += 800) { await pg.evaluate(v => window.scrollTo(0, v), y); await pg.waitForTimeout(400); }
+          const links = await pg.evaluate(() =>
+            Array.from(document.querySelectorAll('a[href*="/video/"]'))
+              .map(a => a.getAttribute('href'))
+              .filter(h => /\/video\/[a-z0-9-]*\d{6,}\/?$/.test(h || '')));
+          await b.close();
+          const ids = [], pages = [];
+          for (const h of links) {
+            const m = (h.match(/(\d{6,})\/?$/) || [])[1];
+            if (m && !ids.includes(m)) { ids.push(m); pages.push(h.startsWith('http') ? h : 'https://www.pexels.com' + h); }
+            if (ids.length >= 8) break;
+          }
+          fs.writeFileSync('vidcands/pages.json', JSON.stringify({ids, pages}, null, 1));
+          console.log('found', ids.length, 'video ids:', ids.join(', '));
+          EOF
+          node scrape.mjs
+          python3 - <<'EOF'
+          import json, subprocess, urllib.request, os, time
+          d = json.load(open('vidcands/pages.json'))
+          man = []
+          for i, (vid, page) in enumerate(zip(d['ids'], d['pages']), 1):
+              url = f'https://www.pexels.com/download/video/{vid}/'
+              try:
+                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/131.0 Safari/537.36'})
+                  with urllib.request.urlopen(req, timeout=120) as r:
+                      blob = r.read()
+              except Exception as e:
+                  print(f'  ! {vid}: {e}'); continue
+              if len(blob) < 100_000:
+                  print(f'  ! {vid}: too small'); continue
+              path = f'vidcands/{i}.mp4'
+              open(path, 'wb').write(blob)
+              probe = subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',path],capture_output=True,text=True)
+              dur = float((probe.stdout or '8').strip() or 8)
+              for k, frac in ((1,.12),(2,.45),(3,.8)):
+                  subprocess.run(['ffmpeg','-y','-loglevel','error','-ss',str(dur*frac),'-i',path,'-frames:v','1','-vf','scale=640:-2',f'vidcands/{i}_f{k}.jpg'],check=False)
+              man.append({'n':i,'id':vid,'page':page,'bytes':len(blob),'duration':dur})
+              print(f'  #{i} pexels {vid} · {len(blob)//1_000_000}MB · {dur:.1f}s')
+              time.sleep(1)
+          json.dump(man, open('vidcands/manifest.json','w'), indent=1)
+          print('done', len(man))
+          EOF
+
+      - name: Push to orphan branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan video-cands
+          git rm -rf --cached . >/dev/null
+          git add -f vidcands
+          git commit -m "Stock video candidates (automated)"
+          git push -f origin video-cands
