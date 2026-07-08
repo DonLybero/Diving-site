@@ -16,52 +16,51 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 5
 
 CANDIDATE_QUERIES = {
-    "azores": ["Azores coastline landscape", "Sao Miguel Azores landscape", "Pico island Azores"],
-    "bahamas": ["Exuma Bahamas aerial", "Bahamas beach aerial", "Nassau Bahamas coast"],
-    "bay-islands": ["Roatan aerial", "West Bay Beach Roatan", "Bay Islands Honduras"],
-    "cancun-playa-del-carmen": ["Cancun beach aerial", "Playa del Carmen beach", "Cancun hotel zone aerial"],
-    "cocos-island": ["Isla del Coco", "Cocos Island Costa Rica landscape", "Cocos Island waterfall"],
-    "coiba": ["Coiba island Panama", "Coiba National Park", "Coiba beach"],
-    "fernando-de-noronha": ["Fernando de Noronha beach", "Morro Dois Irmaos Noronha", "Fernando de Noronha aerial"],
-    "fiji": ["Fiji islands aerial", "Yasawa islands Fiji", "Fiji beach palm trees"],
-    "french-polynesia": ["Bora Bora aerial lagoon", "Rangiroa atoll", "French Polynesia island aerial"],
-    "fuvahmulah": ["Fuvahmulah island", "Fuvahmulah aerial", "Fuvahmulah Maldives beach"],
-    "galapagos-islands": ["Bartolome island Galapagos", "Galapagos islands landscape", "Galapagos coastline"],
-    "great-barrier-reef": ["Great Barrier Reef aerial", "Heart Reef Australia", "Great Barrier Reef island aerial"],
-    "great-blue-hole": ["Great Blue Hole aerial", "Great Blue Hole Belize", "Lighthouse Reef atoll Belize"],
-    "jupiter": ["Jupiter Inlet Lighthouse", "Jupiter Florida beach", "Jupiter Inlet aerial"],
-    "koh-tao": ["Koh Tao viewpoint", "Koh Tao beach Thailand", "Koh Tao aerial"],
-    "komodo-national-park": ["Padar island viewpoint", "Komodo island landscape", "Komodo National Park hills"],
-    "layang-layang": ["Layang-Layang atoll", "Layang Layang Malaysia", "Swallow Reef"],
-    "malapascua-island": ["Malapascua island beach", "Malapascua Philippines", "Malapascua bounty beach"],
-    "maldives": ["Maldives atoll aerial", "Maldives island aerial", "Maldives beach island"],
-    "malpelo-island": ["Malpelo island", "Isla Malpelo Colombia", "Malpelo rock"],
-    "marsa-alam": ["Marsa Alam beach", "Marsa Alam coast Egypt", "Abu Dabbab beach"],
-    "maui-kona": ["Maui coastline aerial", "Kona Hawaii coastline", "Maui beach landscape"],
-    "mauritius": ["Le Morne Mauritius", "Mauritius aerial lagoon", "Mauritius beach landscape"],
-    "muscat-daymaniyat-islands": ["Daymaniyat Islands Oman", "Muscat corniche", "Muscat coastline Oman"],
-    "ningaloo-reef": ["Ningaloo coast aerial", "Turquoise Bay Exmouth", "Cape Range National Park coast"],
-    "nusa-penida": ["Kelingking Beach Nusa Penida", "Nusa Penida cliffs", "Crystal Bay Nusa Penida"],
-    "palau": ["Rock Islands Palau aerial", "Seventy Islands Palau", "Palau islands lagoon"],
-    "phuket": ["Phang Nga Bay Thailand", "Phuket beach aerial", "Phuket viewpoint"],
-    "poor-knights-islands": ["Poor Knights Islands", "Poor Knights Islands New Zealand", "Tutukaka coast"],
-    "protea-banks": ["Margate beach South Africa", "KwaZulu-Natal south coast", "Shelly Beach KwaZulu-Natal"],
-    "raja-ampat": ["Wayag Raja Ampat", "Pianemo Raja Ampat viewpoint", "Raja Ampat islands aerial"],
-    "sea-of-cortez": ["Espiritu Santo island Baja", "Sea of Cortez coastline", "Baja California Sur coast"],
-    "seychelles": ["Anse Source d'Argent", "La Digue Seychelles beach", "Seychelles granite beach"],
-    "sharm-el-sheikh": ["Sharm El Sheikh coastline", "Naama Bay Sharm El Sheikh", "Ras Mohammed peninsula"],
-    "similan-islands": ["Similan Islands beach", "Similan Islands sail rock viewpoint", "Similan Islands Thailand"],
-    "sipadan-island": ["Sipadan island aerial", "Pulau Sipadan", "Sipadan beach"],
-    "socorro-island": ["Socorro Island", "Revillagigedo Islands", "San Benedicto island"],
-    "tofo": ["Tofo beach Mozambique", "Praia do Tofo", "Inhambane coastline"],
-    "tubbataha-reefs-natural-park": ["Tubbataha reef aerial", "Tubbataha lighthouse islet", "Sulu Sea reef aerial"],
-    "utila": ["Utila island Honduras", "Utila beach", "Utila aerial"],
-    "whitsunday-islands": ["Whitehaven Beach aerial", "Hill Inlet Whitsundays", "Whitsunday Islands aerial"],
-    "yap": ["Yap island Micronesia", "Yap coastline", "Colonia Yap"],
-    "zanzibar": ["Nungwi beach Zanzibar", "Zanzibar beach dhow", "Stone Town Zanzibar waterfront"],
+    "azores": ["Sete Cidades lake", "Vila Franca islet", "Azores cliffs coast", "Sao Miguel coast"],
+    "bahamas": ["Exuma sandbar", "Eleuthera beach Bahamas", "Bahamas turquoise aerial island", "Harbour Island Bahamas"],
+    "bay-islands": ["Roatan West Bay beach", "Roatan beach palm", "Guanaja island", "Honduras Caribbean beach"],
+    "cancun-playa-del-carmen": ["Cancun beach turquoise", "Playa del Carmen shore", "Isla Mujeres beach", "Riviera Maya coastline"],
+    "coiba": ["Coiba", "Coiba island beach Panama", "Santa Catalina Panama coast", "Panama Pacific island"],
+    "fiji": ["Mamanuca Islands", "Taveuni Fiji coast", "Fiji beach island palm", "Viti Levu coast"],
+    "layang-layang": ["Layang-Layang", "Swallow Reef Layang", "Spratly Islands atoll", "atoll airstrip aerial"],
+    "malapascua-island": ["Malapascua", "Logon Beach Malapascua", "Malapascua Cebu Philippines", "Visayas island beach"],
+    "marsa-alam": ["Marsa Alam", "Port Ghalib marina", "Abu Dabbab", "Red Sea coast Egypt south"],
+    "muscat-daymaniyat-islands": ["Daymaniyat", "Mutrah corniche Muscat", "Muscat coastline", "Oman islands sea"],
+    "ningaloo-reef": ["Ningaloo", "Coral Bay Western Australia", "Exmouth Cape Range", "Ningaloo coast beach"],
+    "protea-banks": ["Margate KwaZulu-Natal", "Uvongo beach", "Port Shepstone", "KwaZulu-Natal coast beach"],
+    "seychelles": ["Anse Lazio Praslin", "Mahe Seychelles coast", "Seychelles islands aerial", "Anse Intendance"],
+    "sharm-el-sheikh": ["Sharm el-Sheikh marina", "Sharm el-Sheikh bay", "Naama Bay", "Sinai coast Sharm"],
+    "sipadan-island": ["Sipadan", "Semporna islands", "Mabul island Malaysia", "Celebes Sea island"],
+    "socorro-island": ["Socorro Island Mexico", "Isla Socorro", "Revillagigedo Islands", "San Benedicto volcano"],
+    "tofo": ["Tofo Mozambique", "Praia do Tofo beach", "Inhambane dunes coast", "Mozambique beach dunes"],
+    "tubbataha-reefs-natural-park": ["Tubbataha", "Tubbataha ranger station", "Sulu Sea atoll aerial", "Philippines reef aerial islet"],
+    "utila": ["Utila town Honduras", "Utila harbour", "Utila island dock", "Honduras island village"],
+    "yap": ["Yap Micronesia", "Colonia Yap", "Yap island beach", "Micronesia island coast"],
 }
 
 EXCLUDE = {}
+OFFERED = {
+    "azores": ["File:Vista de Furnas, isla de San Miguel, Azores, Portugal, 2020-07-29, DD 82-90 PAN.jpg", "File:S\u00e3o Miguel, Azores ESA399763.jpg", "File:Landscape of Sao Miguel island - Azores - panoramio.jpg", "File:Landscape of Sao Miguel island - Azores - panoramio (2).jpg", "File:Landscape of Sao Miguel island - Azores - panoramio (3).jpg"],
+    "bahamas": ["File:Bahamas 1989 (591) Great Exuma (24986096444).jpg", "File:Bahamas 1989 (589) Great Exuma (25497769082).jpg", "File:Bahamas 1989 (588) Great Exuma (25474038752).jpg", "File:Bahamas 1989 (592) Exuma (25249275789).jpg", "File:Bahamas 1989 (757) Exuma Islands (26229646886).jpg"],
+    "bay-islands": ["File:Aerial view of West End, Roatan.jpg", "File:Aerial view of Coxen Hole, Roatan.jpg", "File:Roatan looking north towards West End.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-g.jpg"],
+    "cancun-playa-del-carmen": ["File:Cancun beach aerial - Luftbild (19853282239).jpg", "File:Cancun beach aerial - Luftbild (19853298089).jpg", "File:Cancun beach aerial - Luftbild (18632391933).jpg", "File:Cancun beach aerial - Luftbild (18632395003).jpg", "File:Aerial cancun beach - Luftbild (20045211881).jpg"],
+    "coiba": ["File:Coiba and Jicar\u00f3n Island.jpg", "File:Coiba National Park, Panama (View from Isla Coiba) (8371374375).jpg", "File:Coiba Panama (152311733).jpeg", "File:Isla de Coiba - Granite de Oro - Pacific Ocean Islands off Panama - panoramio (28).jpg", "File:A police officer goes ashore pickaback, Coiba Island, 1956 (8231825221).jpg"],
+    "fiji": ["File:Denarau Island, Fiji, 2013 (4).jpg", "File:(Aerial view within Lau Islands, Fiji) - DPLA - 989763b50815d9f178c4fa35d37db744.jpg", "File:(Aerial view of island coastline within Lau Islands, Fiji) - DPLA - f5061f4c9d9bfc4e84d472836007c77c.jpg", "File:(Aerial view within Lau Islands, Fiji) - DPLA - 12024e0c8e93db30dd2768949350d564.jpg", "File:(Aerial view of island coastline within Lau Islands, Fiji) - DPLA - 8b343058f67792ba5d0f985d9f943a5b.jpg"],
+    "layang-layang": ["File:Swallow Reef10.jpg", "File:Swallow Reef, Spratly Islands.png", "File:Swallow Reef2.jpg", "File:Swallow Reef sea3.jpg", "File:Swallow Reef sea4.jpg"],
+    "malapascua-island": ["File:Malapascua (island), Tropical beach, Philippines.jpg", "File:Malapascua Island, Tropical sunset on the beach 2, Philippines.jpg", "File:Malapascua Island, Sunset on the beach 2, Philippines.jpg", "File:Malapascua (island), Bounty Beach, Philippines.jpg", "File:Malapascua (island), Palm trees on the sandy beach, Philippines.jpg"],
+    "marsa-alam": ["File:Marsa Alam R02.jpg", "File:Marsa Alam R05.jpg", "File:Marsa Alam R08.jpg", "File:\u00c4gypten, Marsa Alam 2H1A1738WI.jpg", "File:Sonnenuntergang in Marsa Alam 2H1A2138WI.jpg"],
+    "muscat-daymaniyat-islands": ["File:Dimaniyat Islands 2.jpg", "File:Cherna ar\u00e1biga (Cephalopholis hemistiktos), islas Ad Dimaniyat, Om\u00e1n, 2024-08-13, DD 17.jpg", "File:Pez erizo moteado (Diodon hystrix), islas Ad Dimaniyat, Om\u00e1n, 2024-08-15, DD 76.jpg", "File:Apog\u00f3nido (Ostorhinchus aureus), islas Ad Dimaniyat, Om\u00e1n, 2024-08-15, DD 05.jpg", "File:Beach in Al Dimaniyyat Islands Nature Reserve in Oman (53697748816).jpg"],
+    "ningaloo-reef": ["File:Tsitsikamma National Park (ZA), Kanus an der K\u00fcste -- 2024 -- 1990.jpg", "File:Cape Town (ZA), Cape Peninsula National Park, Cape of Good Hope -- 2024 -- 3276.jpg", "File:Cape Town (ZA), Cape Peninsula National Park, Cape of Good Hope -- 2024 -- 3305.jpg", "File:Tsitsikamma National Park (ZA), K\u00fcste -- 2024 -- 1971.jpg", "File:Tsitsikamma National Park (ZA), K\u00fcste -- 2024 -- 2065.jpg"],
+    "protea-banks": ["File:Margate, South Africa.jpg", "File:Uvongo Beach, KZN.jpg", "File:View from flat 21 Rondevoux, for holiday rental, -27 039 312 2242 www.margateholidays.com-Margate-rondevoux-21 - panoramio.jpg", "File:Coelacanth off Pumula on the KwaZulu-Natal South Coast, South Africa, on 22 November 2019.png", "File:Uvongo, KZN.jpg"],
+    "seychelles": ["File:Anse Source d'Argent 2-La Digue.jpg", "File:Anse Source d'Argent - La Digue - Seychelles - 04.jpg", "File:Anse Source d'Argent - La Digue - Seychelles - 10.jpg", "File:Anse Source d'Argent - La Digue - Seychelles - 03.jpg", "File:Anse Source d'Argent - La Digue - Seychelles - 02.jpg"],
+    "sharm-el-sheikh": ["File:Sharm El-Sheikh, Egypt ESA24580842.jpeg", "File:\u041d\u0430\u0431\u043a.jpg", "File:Naama Bay R01.jpg", "File:Sharm el-Sheikh - Naama bay.jpg", "File:Sharm el Sheikh Naama Bay - panoramio (10).jpg"],
+    "sipadan-island": ["File:Sipadan Island.jpg", "File:Sipadan Island Sabah Malaysia.jpg", "File:Sipadan Kapalai Malezya 2.JPG", "File:Beneath Sipadan Island.jpeg", "File:Pulau Sipadan.jpg"],
+    "socorro-island": ["File:Socorro Island, satellite image.png", "File:Socorro Island.jpg", "File:ISLA SOCORRO - panoramio.jpg", "File:NASA-Socorro-Island.jpg", "File:Iglesia Nuestra Se\u00f1ora del Socorro - Tejeda.jpg"],
+    "tofo": ["File:Praia do Tofo Moz view 2008.jpg", "File:Tofo Market taken from Tofo Beach.JPG", "File:Tofo - Flickr - Martijn.Munneke (1).jpg", "File:Tofo - Flickr - Martijn.Munneke.jpg", "File:Tofo (6331294533).jpg"],
+    "tubbataha-reefs-natural-park": [],
+    "utila": ["File:Utila beach.jpg", "File:Utila Hondoras beach.jpg", "File:Typical Traffic Jam.jpg", "File:Road Near Munchies, Utila, Honduras.jpg", "File:Utila, Islas de la Bah\u00eda.jpg"],
+    "yap": ["File:Yap Trying on Clothing.jpg", "File:US patrol boats, from Guam, visit Yap, Micronesia - 190703-N-LN093-1116.jpg", "File:Pacific Partnership 2024-2 Band Performs at Gilman Elementary School in Yap, Federated States of Micronesia (8643664).jpg", "File:Pacific Partnership 2024-2 Band Performs at Gilman Elementary School in Yap, Federated States of Micronesia (8643667).jpg", "File:Pacific Partnership 2024-2 Band Performs at Gilman Elementary School in Yap, Federated States of Micronesia (8643669).jpg"],
+}
 TOPSIDE_EXCLUDE = __import__("re").compile(
     r"(scuba|diver|diving|underwater|snorkel|coral|shark|manta|\bray\b|turtle|wreck|nudibranch|moray|barracuda|aquarium|jellyfish|dolphin|whale|seal\b|fish\b)", __import__("re").I)
 
@@ -129,7 +128,7 @@ def main():
                 break
             titles = [t for t in search_files(q) if t not in seen]
             ex = EXCLUDE.get(slug) or TOPSIDE_EXCLUDE
-            titles = [t for t in titles if not ex.search(t)]
+            titles = [t for t in titles if not ex.search(t) and t not in set(OFFERED.get(slug, []))]
             info = file_info(titles[:12])
             for t in titles:
                 if t not in info or len(picked) >= PER_DEST:
