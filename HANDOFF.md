@@ -79,6 +79,7 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
 | `.github/workflows/deploy-pages.yml` | Deploys repo root to Pages on push to `main`; also manual `workflow_dispatch`. |
 | `.github/workflows/fetch-images.yml` | Destination photos from Wikimedia/Pexels (runs on Actions runners — they have internet). |
 | `.github/workflows/fetch-gear-images.yml` | Gear product images from retailer og:image, localized into `assets/gear/`. |
+| `.github/workflows/check-buy-links.yml` | Monthly report-only health check of every gear-guide buy link (`scripts/check_buy_links.py`); dead/redirected links in the run summary + JSON artifact. |
 
 ### Key JS structures inside `index.html`
 - `AFFILIATE` config + `affLink()` — affiliate wiring (§7).
@@ -215,8 +216,6 @@ brings the consent banner). Wiring is ready to add once the owner picks a tool
 and supplies the site token.
 
 ### Near-term engineering
-- Buy-link health workflow: periodically verify the 180 retailer URLs still
-  resolve (reuse the fetch-gear-images workflow pattern); flag dead links.
 - Replace sample Liveaboard Safaris with researched listings (match the gear
   guide's data standard) or clearly label as illustrative.
 - Quarterly gear-price refresh ritual (prices are indicative, drift over time).
