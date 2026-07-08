@@ -386,23 +386,10 @@
      photos' #f8f9fb studio canvas is pulled to exactly that grey (248×.94≈233) */
   .dcard-gear .dimg{background:#e9eaec;border:1px solid var(--line)}
   .dcard-gear .dimg img{object-fit:contain;padding:16px;box-sizing:border-box;filter:brightness(.94)}
-  /* arrows ride ON the card row — right one at the viewport edge where the
-     bleeding card gets cut, so the affordance sits exactly where the eye asks */
-  .dcar-box{position:relative}
-  .dcar-arr{position:absolute;z-index:5;top:calc(clamp(300px,34vw,420px)/2 + 4px);transform:translateY(-50%);
-       width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.95);border:1px solid var(--line-strong);
-       color:var(--ink);font-size:1.05rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
-       box-shadow:0 12px 28px -12px rgba(13,60,70,.5);transition:color .2s,border-color .2s}
-  .dcar-arr:hover{color:#0b7d75;border-color:var(--accent)}
-  .dcar-arr.prev{left:-14px}
-  .dcar-arr.next{right:calc((min(1180px,100vw - 36px) - 100vw)/2 + 14px)}
-  @media(max-width:820px){
-    .dcar-arr.prev{left:calc((min(1180px,100vw - 36px) - 100vw)/2 + 10px)}
-    .dcar-arr.next{right:calc((min(1180px,100vw - 36px) - 100vw)/2 + 10px)}
-  }
-  .dcar-nav{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:30px}
-  .dcar-nav button{background:none;border:none;color:var(--ink);cursor:pointer;font-size:1.05rem;
-       padding:6px 10px;line-height:1;transition:color .2s}
+  .dcar-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:30px}
+  .dcar-nav button{background:#fff;border:1px solid var(--line-strong);border-radius:50%;width:40px;height:40px;
+       color:var(--ink);cursor:pointer;font-size:1rem;line-height:1;display:flex;align-items:center;justify-content:center;
+       flex:none;box-shadow:0 8px 20px -10px rgba(13,60,70,.35);transition:color .2s,border-color .2s}
   .dcar-nav button:hover{color:#0e8c82}
   .dcar-dots{display:flex;gap:9px}
   .dcar-dots span{width:24px;height:2px;background:var(--ink);opacity:.18;transition:opacity .3s}
@@ -1730,9 +1717,9 @@ function renderHome(){
     '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it. Independent, no sponsored rankings.</p>'+
     '</div>'+
     '<div class="dcar-box"><div class="dcar" id="dcar">'+sitePrev+'</div>'+
-    '<button class="dcar-arr prev" onclick="dcarStep(-1)" aria-label="Previous">&#8592;</button>'+
-    '<button class="dcar-arr next" onclick="dcarStep(1)" aria-label="Next">&#8594;</button>'+
-    '<div class="dcar-nav"><div class="dcar-dots" id="dcarDots"></div></div></div>'+
+    '<div class="dcar-nav"><button onclick="dcarStep(-1)" aria-label="Previous">&#8592;</button>'+
+    '<div class="dcar-dots" id="dcarDots"></div>'+
+    '<button onclick="dcarStep(1)" aria-label="Next">&#8594;</button></div></div>'+
     '</div>'+
     '</div></section>'+
     '<section class="hband rv"><div class="hb-in">'+
@@ -1742,9 +1729,9 @@ function renderHome(){
     '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p>'+
     '</div>'+
     '<div class="dcar-box"><div class="dcar" id="gcar">'+bestGear+'</div>'+
-    '<button class="dcar-arr prev" onclick="dcarStep(-1,\'gcar\')" aria-label="Previous">&#8592;</button>'+
-    '<button class="dcar-arr next" onclick="dcarStep(1,\'gcar\')" aria-label="Next">&#8594;</button>'+
-    '<div class="dcar-nav"><div class="dcar-dots" id="gcarDots"></div></div></div>'+
+    '<div class="dcar-nav"><button onclick="dcarStep(-1,\'gcar\')" aria-label="Previous">&#8592;</button>'+
+    '<div class="dcar-dots" id="gcarDots"></div>'+
+    '<button onclick="dcarStep(1,\'gcar\')" aria-label="Next">&#8594;</button></div></div>'+
     '</div>'+
     '</div></section>'+
     // --- Methodology, demoted to an expander — credibility on demand, not in the way ---
