@@ -639,7 +639,7 @@
 </div>
 
 <div class="hero-band" id="heroBand">
-  <video id="heroVideo" autoplay muted loop playsinline preload="metadata"></video>
+  <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-dive-poster.jpg"></video>
   <span class="photo-credit" id="heroCredit"></span>
 </div>
 <header class="hero" id="hero">
@@ -936,7 +936,7 @@ function seasonRibbon(d){
 /* Hero photo credit is tooltip-only (small info mark) — no visible photographer
    name on the main page while keeping CC attribution accessible. */
 var HERO_PICKS=["Fernando de Noronha","Sipadan Island","Maldives","Palau","Raja Ampat","Great Barrier Reef","Bonaire"];
-var HERO_VIDEO={src:'assets/video/hero-dive.mp4', credit:''};
+var HERO_VIDEO={src:'assets/video/hero-dive.mp4', credit:'Video: U.S. Navy (CC BY 3.0) via Wikimedia Commons'};
 function setHeroPhoto(){
   /* the band plays the dive-entry video; a destination photo paints beneath
      it as the fallback (video missing or reduced motion) */
