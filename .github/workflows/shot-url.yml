@@ -43,7 +43,7 @@ jobs:
           fs.mkdirSync('shots', {recursive: true});
           const url = process.env.TARGET;
           const b = await chromium.launch();
-          for (const [label, w] of [['desktop', 1440], ['mobile', 390]]) {
+          for (const [label, w] of [['wide', 1920], ['desktop', 1440], ['mobile', 390]]) {
             const pg = await b.newPage({viewport:{width:w, height:900},
               userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36'});
             try {
