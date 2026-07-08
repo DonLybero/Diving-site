@@ -22,9 +22,6 @@ jobs:
                 "Accept": "application/json"}
           TARGETS = {
             "cressi-ace": "https://lancasterscuba.com/products/crbcace",
-            "mares-prestige-sls": "https://beachcitiescuba.com/products/mares-prestige-sls-bcd",
-            "o-neill-epic-4-3mm": "https://www.cleanlinesurf.com/products/oneill-epic-4-3-back-zip-wetsuit-4212",
-            "waterproof-w30-2-5mm-women-s": "https://floridadivecompany.com/products/waterproof-w30-womens-sport-series-fullsuit-2-5mm",
           }
           for slug, page in TARGETS.items():
               try:
@@ -34,6 +31,9 @@ jobs:
                   imgs = [i for i in d["product"]["images"] if (i.get("width") or 0) >= 500]
                   if not imgs:
                       print(slug, "NO IMAGES >=500px"); continue
+                  # widest full-product view: largest area, squarest aspect
+                  imgs.sort(key=lambda i: (-(i.get("width",0)*i.get("height",0)),
+                                           abs((i.get("width",1)/max(1,i.get("height",1)))-1)))
                   src = imgs[0]["src"]
                   print(slug, "->", src[:110])
                   req2 = urllib.request.Request(src, headers=UA)
