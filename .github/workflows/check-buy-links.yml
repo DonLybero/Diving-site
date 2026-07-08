@@ -1,0 +1,45 @@
+name: Check buy links
+
+# Health-checks every retailer buy link in gear-guide.json (see
+# scripts/check_buy_links.py). Runs on GitHub's runners (which have
+# internet — the dev sandbox does not). Report-only: dead links show up
+# in the run summary and the JSON report artifact, the run stays green.
+
+on:
+  schedule:
+    - cron: "17 5 2 * *" # monthly, 2nd at 05:17 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/buy-link-check-request'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-buy-links
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout deploy branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check buy links
+        run: python3 scripts/check_buy_links.py --out buy-link-report.json
+
+      - name: Upload JSON report
+        uses: actions/upload-artifact@v4
+        with:
+          name: buy-link-report
+          path: buy-link-report.json
+          retention-days: 90

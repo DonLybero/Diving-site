@@ -39,9 +39,10 @@ single-file build stays in sync, then commit. Pushing deploys automatically.
   never name third parties in site copy (PADI, magazines, testers…); no
   aphorism intros; taglines never cite destination counts; specs never say
   "Both" — spell options out. Full list in HANDOFF.md §3.
-- Safaris is the only remaining **sample data**; the calendar/dive-site data,
-  destination photos, monthly articles and the Gear guide (`gear-guide.json`,
-  indicative prices + real retailer links) are **real and researched**.
+- Everything published is **real and researched** — calendar/dive-site data,
+  destination photos, monthly articles, the Gear guide (`gear-guide.json`,
+  indicative prices + real retailer links). No sample sections remain (the
+  Trip Planner tab is a "coming soon" placeholder; see HANDOFF §6).
 - Every finished change gets merged to `main` (auto-deploys); verify on
   desktop AND ~390px mobile viewports before merging.
 - Verify UI changes by serving locally (`python3 -m http.server`) — `index.html`
