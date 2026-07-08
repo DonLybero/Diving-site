@@ -1676,7 +1676,7 @@ function renderHome(){
   var sitePrev=topAug.map(function(r,i){
     var dd=DivingCalendar.getDestination(DESTS,r.name)||{};
     return '<div class="dcard rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="openProfile(\''+esc(r.name)+'\')">'+
-      '<div class="dimg">'+(dd.image?'<img src="'+dd.image+'" alt="'+esc(r.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+badge(r.rating)+'</div>'+
+      '<div class="dimg">'+((dd.image_dest||dd.image)?'<img src="'+(dd.image_dest||dd.image)+'" alt="'+esc(r.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<span class="dcap">'+r.name+' · '+r.country+'</span>'+
       '<div class="dmeta">'+tempStr(r.water_temp_c)+' water · '+(r.visibility_m?r.visibility_m+' m viz':r.rating.toLowerCase()+' season')+'</div>'+
       '</div>';}).join('');

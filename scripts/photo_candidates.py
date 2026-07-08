@@ -16,14 +16,54 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 5
 
 CANDIDATE_QUERIES = {
-    "crew2": ["divers assembling scuba equipment", "scuba tank filling compressor", "dive briefing boat",
-              "scuba instructor equipment", "dive centre tanks", "divers boat tanks preparation",
-              "scuba diving course equipment"],
+    "azores": ["Azores coastline landscape", "Sao Miguel Azores landscape", "Pico island Azores"],
+    "bahamas": ["Exuma Bahamas aerial", "Bahamas beach aerial", "Nassau Bahamas coast"],
+    "bay-islands": ["Roatan aerial", "West Bay Beach Roatan", "Bay Islands Honduras"],
+    "cancun-playa-del-carmen": ["Cancun beach aerial", "Playa del Carmen beach", "Cancun hotel zone aerial"],
+    "cocos-island": ["Isla del Coco", "Cocos Island Costa Rica landscape", "Cocos Island waterfall"],
+    "coiba": ["Coiba island Panama", "Coiba National Park", "Coiba beach"],
+    "fernando-de-noronha": ["Fernando de Noronha beach", "Morro Dois Irmaos Noronha", "Fernando de Noronha aerial"],
+    "fiji": ["Fiji islands aerial", "Yasawa islands Fiji", "Fiji beach palm trees"],
+    "french-polynesia": ["Bora Bora aerial lagoon", "Rangiroa atoll", "French Polynesia island aerial"],
+    "fuvahmulah": ["Fuvahmulah island", "Fuvahmulah aerial", "Fuvahmulah Maldives beach"],
+    "galapagos-islands": ["Bartolome island Galapagos", "Galapagos islands landscape", "Galapagos coastline"],
+    "great-barrier-reef": ["Great Barrier Reef aerial", "Heart Reef Australia", "Great Barrier Reef island aerial"],
+    "great-blue-hole": ["Great Blue Hole aerial", "Great Blue Hole Belize", "Lighthouse Reef atoll Belize"],
+    "jupiter": ["Jupiter Inlet Lighthouse", "Jupiter Florida beach", "Jupiter Inlet aerial"],
+    "koh-tao": ["Koh Tao viewpoint", "Koh Tao beach Thailand", "Koh Tao aerial"],
+    "komodo-national-park": ["Padar island viewpoint", "Komodo island landscape", "Komodo National Park hills"],
+    "layang-layang": ["Layang-Layang atoll", "Layang Layang Malaysia", "Swallow Reef"],
+    "malapascua-island": ["Malapascua island beach", "Malapascua Philippines", "Malapascua bounty beach"],
+    "maldives": ["Maldives atoll aerial", "Maldives island aerial", "Maldives beach island"],
+    "malpelo-island": ["Malpelo island", "Isla Malpelo Colombia", "Malpelo rock"],
+    "marsa-alam": ["Marsa Alam beach", "Marsa Alam coast Egypt", "Abu Dabbab beach"],
+    "maui-kona": ["Maui coastline aerial", "Kona Hawaii coastline", "Maui beach landscape"],
+    "mauritius": ["Le Morne Mauritius", "Mauritius aerial lagoon", "Mauritius beach landscape"],
+    "muscat-daymaniyat-islands": ["Daymaniyat Islands Oman", "Muscat corniche", "Muscat coastline Oman"],
+    "ningaloo-reef": ["Ningaloo coast aerial", "Turquoise Bay Exmouth", "Cape Range National Park coast"],
+    "nusa-penida": ["Kelingking Beach Nusa Penida", "Nusa Penida cliffs", "Crystal Bay Nusa Penida"],
+    "palau": ["Rock Islands Palau aerial", "Seventy Islands Palau", "Palau islands lagoon"],
+    "phuket": ["Phang Nga Bay Thailand", "Phuket beach aerial", "Phuket viewpoint"],
+    "poor-knights-islands": ["Poor Knights Islands", "Poor Knights Islands New Zealand", "Tutukaka coast"],
+    "protea-banks": ["Margate beach South Africa", "KwaZulu-Natal south coast", "Shelly Beach KwaZulu-Natal"],
+    "raja-ampat": ["Wayag Raja Ampat", "Pianemo Raja Ampat viewpoint", "Raja Ampat islands aerial"],
+    "sea-of-cortez": ["Espiritu Santo island Baja", "Sea of Cortez coastline", "Baja California Sur coast"],
+    "seychelles": ["Anse Source d'Argent", "La Digue Seychelles beach", "Seychelles granite beach"],
+    "sharm-el-sheikh": ["Sharm El Sheikh coastline", "Naama Bay Sharm El Sheikh", "Ras Mohammed peninsula"],
+    "similan-islands": ["Similan Islands beach", "Similan Islands sail rock viewpoint", "Similan Islands Thailand"],
+    "sipadan-island": ["Sipadan island aerial", "Pulau Sipadan", "Sipadan beach"],
+    "socorro-island": ["Socorro Island", "Revillagigedo Islands", "San Benedicto island"],
+    "tofo": ["Tofo beach Mozambique", "Praia do Tofo", "Inhambane coastline"],
+    "tubbataha-reefs-natural-park": ["Tubbataha reef aerial", "Tubbataha lighthouse islet", "Sulu Sea reef aerial"],
+    "utila": ["Utila island Honduras", "Utila beach", "Utila aerial"],
+    "whitsunday-islands": ["Whitehaven Beach aerial", "Hill Inlet Whitsundays", "Whitsunday Islands aerial"],
+    "yap": ["Yap island Micronesia", "Yap coastline", "Colonia Yap"],
+    "zanzibar": ["Nungwi beach Zanzibar", "Zanzibar beach dhow", "Stone Town Zanzibar waterfront"],
 }
 
-EXCLUDE = {
-    "crew2": __import__("re").compile(r"(navy|military|army|museum|statue|drawing|mannequin|child|kid)", __import__("re").I),
-}
+EXCLUDE = {}
+TOPSIDE_EXCLUDE = __import__("re").compile(
+    r"(scuba|diver|diving|underwater|snorkel|coral|shark|manta|\bray\b|turtle|wreck|nudibranch|moray|barracuda|aquarium|jellyfish|dolphin|whale|seal\b|fish\b)", __import__("re").I)
 
 
 def search_files(q, limit=20):
@@ -88,9 +128,8 @@ def main():
             if len(picked) >= PER_DEST:
                 break
             titles = [t for t in search_files(q) if t not in seen]
-            ex = EXCLUDE.get(slug)
-            if ex:
-                titles = [t for t in titles if not ex.search(t)]
+            ex = EXCLUDE.get(slug) or TOPSIDE_EXCLUDE
+            titles = [t for t in titles if not ex.search(t)]
             info = file_info(titles[:12])
             for t in titles:
                 if t not in info or len(picked) >= PER_DEST:

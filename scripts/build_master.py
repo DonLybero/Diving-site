@@ -198,7 +198,8 @@ if os.path.exists(_prev_path):
         if not p:
             continue
         if p.get("image"):
-            for k in ("image", "image_credit", "image_source"):
+            for k in ("image", "image_credit", "image_source",
+                      "image_dest", "image_dest_credit"):
                 if p.get(k) is not None:
                     r[k] = p[k]
             kept += 1
