@@ -195,7 +195,11 @@
       "Red/Black"
      ],
      "color_source": "https://www.atomicaquatics.com/products/masks/venom-frameless/",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Gray/Black": "assets/gear/studio/hero/atomic-aquatics-venom-frameless--gray-black.jpg",
+      "Red/Black": "assets/gear/studio/hero/atomic-aquatics-venom-frameless--red-black.jpg"
+     }
     },
     {
      "rank": 2,
@@ -248,7 +252,10 @@
       "Clear/Blue-Silver"
      ],
      "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/masks/synergy-2-trufit-dive-mask-w-comfort-strap",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Black/Silver": "assets/gear/studio/hero/scubapro-synergy-2-trufit--black-silver.jpg"
+     }
     },
     {
      "rank": 3,
@@ -585,7 +592,10 @@
       "Army Green"
      ],
      "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/masks/frameless-dive-mask",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/scubapro-frameless--black.jpg"
+     }
     },
     {
      "rank": 9,
@@ -645,7 +655,19 @@
       "Clear/Purple"
      ],
      "color_source": "https://divecatalog.com/products/atomic-aquatics-subframe-mask",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black/Black": "assets/gear/studio/hero/atomic-aquatics-subframe--black-black.jpg",
+      "Black/Red": "assets/gear/studio/hero/atomic-aquatics-subframe--black-red.jpg",
+      "Black/Royal Blue": "assets/gear/studio/hero/atomic-aquatics-subframe--black-royal-blue.jpg",
+      "Black/Aqua": "assets/gear/studio/hero/atomic-aquatics-subframe--black-aqua.jpg",
+      "Black/Pink": "assets/gear/studio/hero/atomic-aquatics-subframe--black-pink.jpg",
+      "Black/Purple": "assets/gear/studio/hero/atomic-aquatics-subframe--black-purple.jpg",
+      "Clear/Black": "assets/gear/studio/hero/atomic-aquatics-subframe--clear-black.jpg",
+      "Clear/Blue": "assets/gear/studio/hero/atomic-aquatics-subframe--clear-blue.jpg",
+      "Clear/Pink": "assets/gear/studio/hero/atomic-aquatics-subframe--clear-pink.jpg",
+      "Clear/Purple": "assets/gear/studio/hero/atomic-aquatics-subframe--clear-purple.jpg"
+     }
     },
     {
      "rank": 10,
@@ -773,7 +795,10 @@
       "Transparent/Pink"
      ],
      "color_source": "https://us.aqualung.com/products/plazma-dive-mask",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Orange/Transparent": "assets/gear/studio/hero/aqua-lung-plazma--orange-transparent.jpg"
+     }
     },
     {
      "rank": 12,
@@ -830,7 +855,13 @@
       "White/Pink"
      ],
      "color_source": "https://store.cressi.com/products/calibro-mask",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/cressi-calibro--black.jpg",
+      "Black/Blue": "assets/gear/studio/hero/cressi-calibro--black-blue.jpg",
+      "Green": "assets/gear/studio/hero/cressi-calibro--green.jpg",
+      "White/Pink": "assets/gear/studio/hero/cressi-calibro--white-pink.jpg"
+     }
     },
     {
      "rank": 13,
@@ -1006,7 +1037,16 @@
       "White/White"
      ],
      "color_source": "https://www.houseofscuba.com/products/msk366",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black/Black": "assets/gear/studio/hero/tusa-paragon--black-black.jpg",
+      "Black/Energy Green": "assets/gear/studio/hero/tusa-paragon--black-energy-green.jpg",
+      "Black/Energy Orange": "assets/gear/studio/hero/tusa-paragon--black-energy-orange.jpg",
+      "Black/Fishtail Blue": "assets/gear/studio/hero/tusa-paragon--black-fishtail-blue.jpg",
+      "Black/Flash Yellow": "assets/gear/studio/hero/tusa-paragon--black-flash-yellow.jpg",
+      "Black/Rose Pink": "assets/gear/studio/hero/tusa-paragon--black-rose-pink.jpg",
+      "White/White": "assets/gear/studio/hero/tusa-paragon--white-white.jpg"
+     }
     },
     {
      "rank": 16,
@@ -1059,7 +1099,10 @@
       "White"
      ],
      "color_source": "https://www.hollis.com/product/m3-mask-black/",
-     "color_platform": "woocommerce"
+     "color_platform": "woocommerce",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/hollis-m3--black.jpg"
+     }
     }
    ],
    "title": "Top Masks in 2026",
@@ -1194,7 +1237,10 @@
       "Pink"
      ],
      "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/seawing-nova-fin",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/scubapro-seawing-nova--black.jpg"
+     }
     },
     {
      "rank": 3,
@@ -1252,7 +1298,10 @@
       "Green Camo"
      ],
      "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/jet-fin-w-spring-heel-strap",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/scubapro-jet-fin--black.jpg"
+     }
     },
     {
      "rank": 4,
@@ -1306,7 +1355,10 @@
       "Yellow"
      ],
      "color_source": "https://us.apeksdiving.com/products/rk3-dive-fins",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/apeks-rk3--black.jpg"
+     }
     },
     {
      "rank": 5,
@@ -1364,7 +1416,14 @@
       "White"
      ],
      "color_source": "https://dipndive.com/products/tusa-sf0104-hyflex-switch-fins",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/tusa-hyflex-switch--black.jpg",
+      "Fishtail Blue": "assets/gear/studio/hero/tusa-hyflex-switch--fishtail-blue.jpg",
+      "Flash Yellow": "assets/gear/studio/hero/tusa-hyflex-switch--flash-yellow.jpg",
+      "Metallic Dark Red": "assets/gear/studio/hero/tusa-hyflex-switch--metallic-dark-red.jpg",
+      "White": "assets/gear/studio/hero/tusa-hyflex-switch--white.jpg"
+     }
     },
     {
      "rank": 6,
@@ -1422,7 +1481,10 @@
       "Yellow"
      ],
      "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/go-sport-fin",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/scubapro-go-sport--black.jpg"
+     }
     },
     {
      "rank": 7,
@@ -1482,7 +1544,12 @@
       "Smoke"
      ],
      "color_source": "https://santabarbaraaquatics.com/products/atomic-aquatics-open-heel-split-fins",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Red": "assets/gear/studio/hero/atomic-aquatics-splitfin--red.jpg",
+      "Purple": "assets/gear/studio/hero/atomic-aquatics-splitfin--purple.jpg",
+      "Smoke": "assets/gear/studio/hero/atomic-aquatics-splitfin--smoke.jpg"
+     }
     },
     {
      "rank": 8,
@@ -1879,7 +1946,10 @@
       "White"
      ],
      "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/regulators/systems",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "White": "assets/gear/studio/hero/scubapro-mk25-evo-s620-ti--white.jpg"
+     }
     },
     {
      "rank": 2,
@@ -2478,7 +2548,16 @@
       "Purple"
      ],
      "color_source": "https://www.otadiving.com/products/atomic-aquatics-b2-color-kit",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/atomic-aquatics-b2--black.jpg",
+      "Red": "assets/gear/studio/hero/atomic-aquatics-b2--red.jpg",
+      "Royal Blue": "assets/gear/studio/hero/atomic-aquatics-b2--royal-blue.jpg",
+      "Aqua": "assets/gear/studio/hero/atomic-aquatics-b2--aqua.jpg",
+      "Yellow": "assets/gear/studio/hero/atomic-aquatics-b2--yellow.jpg",
+      "Pink": "assets/gear/studio/hero/atomic-aquatics-b2--pink.jpg",
+      "Purple": "assets/gear/studio/hero/atomic-aquatics-b2--purple.jpg"
+     }
     },
     {
      "rank": 14,
@@ -2533,7 +2612,15 @@
       "Red"
      ],
      "color_source": "https://www.zeagle.com/product/accessories/airway-accessories/f8-color-kit/",
-     "color_platform": "woocommerce"
+     "color_platform": "woocommerce",
+     "color_images": {
+      "Aqua": "assets/gear/studio/hero/zeagle-f8--aqua.jpg",
+      "Black": "assets/gear/studio/hero/zeagle-f8--black.jpg",
+      "Blue": "assets/gear/studio/hero/zeagle-f8--blue.jpg",
+      "Pink": "assets/gear/studio/hero/zeagle-f8--pink.jpg",
+      "Purple": "assets/gear/studio/hero/zeagle-f8--purple.jpg",
+      "Red": "assets/gear/studio/hero/zeagle-f8--red.jpg"
+     }
     }
    ],
    "title": "Top Regulators in 2026",
@@ -2966,7 +3053,10 @@
       "Black/Orange"
      ],
      "color_source": "https://us.apeksdiving.com/products/exotec-dive-bcd",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black/Grey": "assets/gear/studio/hero/apeks-exotec--black-grey.jpg"
+     }
     },
     {
      "rank": 9,
@@ -3028,7 +3118,15 @@
       "Multicam"
      ],
      "color_source": "https://tecdivegear.com/products/color-xdeep-zeos-deluxe-scuba-diving-bcd",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "White": "assets/gear/studio/hero/xdeep-zeos-28--white.jpg",
+      "Blue": "assets/gear/studio/hero/xdeep-zeos-28--blue.jpg",
+      "Lime": "assets/gear/studio/hero/xdeep-zeos-28--lime.jpg",
+      "Red": "assets/gear/studio/hero/xdeep-zeos-28--red.jpg",
+      "Yellow": "assets/gear/studio/hero/xdeep-zeos-28--yellow.jpg",
+      "Sea": "assets/gear/studio/hero/xdeep-zeos-28--sea.jpg"
+     }
     },
     {
      "rank": 10,
@@ -3130,7 +3228,10 @@
       "White/Black"
      ],
      "color_source": "https://athensscubapark.com/shop-products/ols/products/mares-prestige-sls-bcd",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Blue": "assets/gear/studio/hero/mares-prestige-sls--blue.jpg"
+     }
     },
     {
      "rank": 12,
@@ -3280,7 +3381,11 @@
       "Red"
      ],
      "color_source": "https://www.atomicaquatics.com/products/bcd/bc1/",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/atomic-aquatics-bc1--black.jpg",
+      "Red": "assets/gear/studio/hero/atomic-aquatics-bc1--red.jpg"
+     }
     },
     {
      "rank": 15,
@@ -3440,7 +3545,10 @@
       "Gray (Adventures Edition Dark)"
      ],
      "color_source": "https://www.divegearexpress.com/computers/shearwater-peregrine-category",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "White (Adventures Edition Light)": "assets/gear/studio/hero/shearwater-peregrine--white-adventures-edition-light.jpg"
+     }
     },
     {
      "rank": 2,
@@ -3549,7 +3657,10 @@
       "Ti Silver"
      ],
      "color_source": "https://shearwater.com/products/perdix-2",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Ti Silver": "assets/gear/studio/hero/shearwater-perdix-2--ti-silver.jpg"
+     }
     },
     {
      "rank": 4,
@@ -3604,7 +3715,11 @@
       "Sand"
      ],
      "color_source": "https://us.suunto.com/products/suunto-ocean-all-black",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "All Black": "assets/gear/studio/hero/suunto-ocean--all-black.jpg",
+      "Sand": "assets/gear/studio/hero/suunto-ocean--sand.jpg"
+     }
     },
     {
      "rank": 5,
@@ -4032,7 +4147,11 @@
       "Black/Silver"
      ],
      "color_source": "https://www.scuba.com/p-mrssrwc/mares-sirius-wrist-computer",
-     "color_platform": "other"
+     "color_platform": "other",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/mares-sirius--black.jpg",
+      "Black/Silver": "assets/gear/studio/hero/mares-sirius--black-silver.jpg"
+     }
     },
     {
      "rank": 13,
@@ -4088,7 +4207,11 @@
       "Silver"
      ],
      "color_source": "https://shearwater.com/products/perdix-3",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/shearwater-perdix-3--black.jpg",
+      "Silver": "assets/gear/studio/hero/shearwater-perdix-3--silver.jpg"
+     }
     },
     {
      "rank": 14,
@@ -4145,7 +4268,11 @@
       "Silver"
      ],
      "color_source": "https://shearwater.com/products/teric",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Blue": "assets/gear/studio/hero/shearwater-teric--blue.jpg",
+      "Silver": "assets/gear/studio/hero/shearwater-teric--silver.jpg"
+     }
     },
     {
      "rank": 15,
@@ -4202,7 +4329,10 @@
       "Pink"
      ],
      "color_source": "https://shearwater.com/products/tern-tx",
-     "color_platform": "shopify"
+     "color_platform": "shopify",
+     "color_images": {
+      "Black": "assets/gear/studio/hero/shearwater-tern-tx--black.jpg"
+     }
     },
     {
      "rank": 16,
@@ -4815,7 +4945,10 @@
         "Black/Aquamarine"
        ],
        "color_source": "https://store.cressi.com/products/lido-wetsuit-man",
-       "color_platform": "shopify"
+       "color_platform": "shopify",
+       "color_images": {
+        "Black/Blue": "assets/gear/studio/hero/cressi-lido-2mm-full-wetsuit--black-blue.jpg"
+       }
       },
       {
        "name": "Waterproof W30 2.5mm Women's",
@@ -5090,7 +5223,10 @@
         "Black/Blue"
        ],
        "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce"
+       "color_platform": "woocommerce",
+       "color_images": {
+        "Black": "assets/gear/studio/hero/henderson-thermoprene--black.jpg"
+       }
       },
       {
        "rank": 5,
@@ -5142,7 +5278,10 @@
         "Black/Blue"
        ],
        "color_source": "https://cressiamerica.com/products/morea-wetsuit-man",
-       "color_platform": "shopify"
+       "color_platform": "shopify",
+       "color_images": {
+        "Black/Blue": "assets/gear/studio/hero/cressi-morea-3mm--black-blue.jpg"
+       }
       },
       {
        "rank": 6,
@@ -5296,7 +5435,11 @@
         "Aqua"
        ],
        "color_source": "https://www.baresports.com/products/womens-wetsuits/evoke/3mm-evoke-21/",
-       "color_platform": "woocommerce"
+       "color_platform": "woocommerce",
+       "color_images": {
+        "Black": "assets/gear/studio/hero/bare-evoke-women-s--black.jpg",
+        "Aqua": "assets/gear/studio/hero/bare-evoke-women-s--aqua.jpg"
+       }
       },
       {
        "name": "Beuchat Optima 2",
@@ -5505,7 +5648,10 @@
         "Black"
        ],
        "color_source": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/reactive-5mm/",
-       "color_platform": "woocommerce"
+       "color_platform": "woocommerce",
+       "color_images": {
+        "Black": "assets/gear/studio/hero/bare-reactive--black.jpg"
+       }
       },
       {
        "rank": 2,
@@ -5667,7 +5813,10 @@
         "Black"
        ],
        "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce"
+       "color_platform": "woocommerce",
+       "color_images": {
+        "Black": "assets/gear/studio/hero/henderson-thermoprene--black.jpg"
+       }
       },
       {
        "rank": 5,
@@ -5976,7 +6125,11 @@
         "Lava"
        ],
        "color_source": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/5mm-velocity-ultra-full-2-0/",
-       "color_platform": "woocommerce"
+       "color_platform": "woocommerce",
+       "color_images": {
+        "Black": "assets/gear/studio/hero/bare-velocity-ultra-2-0-5mm--black.jpg",
+        "Blue": "assets/gear/studio/hero/bare-velocity-ultra-2-0-5mm--blue.jpg"
+       }
       },
       {
        "name": "Fourth Element Xenos ARC 5mm",
@@ -6140,7 +6293,11 @@
         "Black/Heather Blue"
        ],
        "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce"
+       "color_platform": "woocommerce",
+       "color_images": {
+        "Black/Heather Gray": "assets/gear/studio/hero/henderson-thermoprene--black-heather-gray.jpg",
+        "Black/Heather Blue": "assets/gear/studio/hero/henderson-thermoprene--black-heather-blue.jpg"
+       }
       },
       {
        "rank": 2,
@@ -6194,7 +6351,11 @@
         "Blue"
        ],
        "color_source": "https://divecenter.com/bare-reactive-7mm-mens-wetsuit-2-colors/",
-       "color_platform": "other"
+       "color_platform": "other",
+       "color_images": {
+        "Black": "assets/gear/studio/hero/bare-reactive--black.jpg",
+        "Blue": "assets/gear/studio/hero/bare-reactive--blue.jpg"
+       }
       },
       {
        "rank": 3,
@@ -6446,7 +6607,11 @@
         "Grey Heather"
        ],
        "color_source": "https://www.baresports.com/products/all-wetsuits/7mm-wetsuits/7mm-nixie-ultra/",
-       "color_platform": "woocommerce"
+       "color_platform": "woocommerce",
+       "color_images": {
+        "Black": "assets/gear/studio/hero/bare-nixie-ultra-7mm--black.jpg",
+        "Grey Heather": "assets/gear/studio/hero/bare-nixie-ultra-7mm--grey-heather.jpg"
+       }
       },
       {
        "rank": 8,
