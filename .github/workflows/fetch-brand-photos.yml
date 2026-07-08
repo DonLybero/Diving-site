@@ -6,6 +6,9 @@ name: Fetch brand product photos (official pages)
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/photo-fetch-request'
 
 permissions:
   contents: write

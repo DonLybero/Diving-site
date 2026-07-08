@@ -6,6 +6,9 @@ name: UI audit (screenshot the app for visual review)
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/audit-request'
 
 permissions:
   contents: write
