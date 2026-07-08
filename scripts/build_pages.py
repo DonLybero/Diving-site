@@ -126,12 +126,17 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
 .gitem-kicker a{color:var(--accent);text-decoration:none}
 .gitem-stage{margin:10px 0 26px}
-.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#f4f5f6}
+/* the photo card carries a studio-toned band below the product (its bg matches
+   the hero canvas bottom), and the white banner floats ON that band — on the
+   photo, under the gear, with the photo background behind it (owner spec) */
+.gitem-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+  background:#e9ebed;padding-bottom:22px}
 .gitem-photo img{display:block;width:100%;height:auto}
 .gitem-banner{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;background:#fff;
-  border:1px solid var(--line);border-radius:16px;padding:16px 22px;margin-top:16px;
+  border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:-30px 22px 0;position:relative;
   box-shadow:0 18px 36px -24px rgba(13,60,70,.3)}
-@media(max-width:760px){.gitem-photo img{object-fit:contain}}
+@media(max-width:760px){.gitem-photo img{object-fit:contain}
+  .gitem-banner{margin:-16px 12px 0;padding:14px 16px}}
 .gitem-id b{font-family:var(--serif);font-size:1.15rem;display:block}
 .gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
 .gitem-price b{color:var(--ink);font-size:1.15rem;font-family:var(--mono);font-variant-numeric:tabular-nums;display:inline}
@@ -673,6 +678,11 @@ def gear_item_page(cat, item, prefix="../"):
               f'<small>indicative — the retailer shows the live price</small></div>'
               f'{swatches}'
               f'<div class="pack-ctas">{btns}</div></div>{cjs}')
+    # the banner sits INSIDE the photo card (owner spec: on the photo, bottom
+    # side, with the studio background behind and below it — never a separate
+    # card under the photo); with no photo it degrades to the plain banner
+    photo_with_banner = (photo.replace("</figure>", banner + "</figure>")
+                         if photo else banner)
     rank = item.get("rank")
     kicker = f'#{rank} in <a href="{cat_slug}.html">{esc(cat_title)}</a>' if rank else f'<a href="{cat_slug}.html">{esc(cat_title)}</a>'
     review = item.get("review") or item.get("blurb") or ""
@@ -699,7 +709,7 @@ def gear_item_page(cat, item, prefix="../"):
                    + (f'<div class="gv-con"><h3>Where it falls short</h3><ul>{cons_lis}</ul></div>' if cons_lis else "")
                    + '</div>')
     inner = (f'<p class="meta gitem-kicker">{kicker}</p>'
-             f'{stage_open}{photo}{banner}{stage_close}'
+             f'{stage_open}{photo_with_banner}{stage_close}'
              f'<h2>What makes it good?</h2>'
              f'<p class="greview" style="max-width:80ch">{esc(review)}</p>'
              f'{verdict}'
