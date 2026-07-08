@@ -689,7 +689,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     --bg:#f4f9f9; --bg2:#e8f1f2; --panel:#ffffff; --panel2:#f2f8f8;
     --ink:#0e2f37; --ink-soft:#33565e; --muted:#61838a;
     --peak:#22c197; --good:#36b6e8; --shoulder:#f0c046; --low:#fb8a4a; --closed:#5b7078;
-    --accent:#0e9c92; --accent-deep:#0b7d75; --aqua2:#179e98; --coral:#ff7a59; --coral-deep:#e85d3c;
+    --accent:#0e9c92; --accent-deep:#0b7d75; --aqua2:#179e98; --cta:#0b7d75; --cta-deep:#06333c;
     --line:rgba(13,80,90,.14); --line-strong:rgba(13,80,90,.28);
     --glass:rgba(255,255,255,.72); --glass-2:rgba(255,255,255,.9);
     --shadow:0 18px 40px -18px rgba(13,60,70,.16); --shadow-glow:0 0 0 1px rgba(14,156,146,.16),0 22px 48px -20px rgba(13,60,70,.22);
@@ -704,7 +704,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
        -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
        background:
         radial-gradient(1200px 700px at 12% -8%,rgba(47,224,214,.14),transparent 55%),
-        radial-gradient(1000px 620px at 92% 4%,rgba(255,122,89,.08),transparent 52%),
+        radial-gradient(1000px 620px at 92% 4%,rgba(14,156,146,.06),transparent 52%),
         linear-gradient(180deg,#ffffff 0%,#f4f9f9 36%,#e9f2f3 100%);
        background-attachment:fixed}
   h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.15}
@@ -796,7 +796,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .rsel-row>span small{color:var(--muted);font-weight:400;margin-left:6px}
   .rsel-row:hover{background:rgba(14,156,146,.07)}
   .rsel-arrow{padding:9px 12px;cursor:pointer;color:var(--muted);font-size:.8rem;transition:transform .15s;user-select:none}
-  .rsel-arrow.open{transform:rotate(90deg);color:var(--accent)}
+  .rsel-arrow.open{transform:rotate(90deg);color:var(--ink)}
   .rsel-kids{border-left:2px solid var(--line);margin:0 0 4px 14px;padding-left:4px}
   .rsel-kids a{display:block;padding:6px 10px;border-radius:7px;font-size:.84rem;color:var(--ink);cursor:pointer}
   .rsel-kids a small{color:var(--muted)}
@@ -861,7 +861,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .sites{margin-top:9px;font-size:.78rem}
   .sites summary{cursor:pointer;color:var(--accent);list-style:none;display:inline-flex;align-items:center;gap:5px;font-weight:600}
   .sites summary::-webkit-details-marker{display:none}
-  .sites summary::after{content:'▾';font-size:.7em;transition:transform .15s}
+  .sites summary::after{content:'▾';font-size:.7em;color:var(--muted);transition:transform .15s}
   .sites[open] summary::after{transform:rotate(180deg)}
   .sites ul{margin:7px 0 0;padding:0;list-style:none}
   .sites li{padding:4px 0;border-top:1px dashed var(--line);line-height:1.45}
@@ -950,11 +950,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .foot-nav a:hover{color:var(--accent)}
 
   /* ---------- buttons ---------- */
-  .btn{background:linear-gradient(135deg,var(--coral),var(--coral-deep));color:#fff;border:none;border-radius:10px;
+  .btn{background:linear-gradient(135deg,var(--cta),var(--cta-deep));color:#eafaf8;border:none;border-radius:10px;
        padding:11px 18px;font-weight:700;font-size:.85rem;cursor:pointer;font-family:var(--sans);text-decoration:none;
        display:inline-flex;align-items:center;gap:6px;transition:transform .15s,box-shadow .15s;
-       box-shadow:0 8px 20px -8px rgba(255,122,89,.6)}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(255,122,89,.7);color:#fff}
+       box-shadow:0 8px 20px -8px rgba(6,51,60,.55)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(11,125,117,.6);color:#fff}
   .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--line-strong);box-shadow:none}
   .btn.ghost:hover{background:rgba(47,224,214,.1);border-color:var(--accent);color:var(--accent);box-shadow:none}
 
@@ -1119,8 +1119,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   details.more>summary{cursor:pointer;font-size:.82rem;font-weight:600;color:var(--accent);list-style:none;padding:6px 0;display:inline-flex;align-items:center;gap:6px}
   details.more>summary:hover{text-decoration:underline}
   details.more>summary::-webkit-details-marker{display:none}
-  details.more>summary::before{content:"▸";font-size:.7rem;transition:transform .15s ease}
-  details.more[open]>summary::before{transform:rotate(90deg)}
+  details.more>summary::before{content:"+";font-family:var(--mono);font-size:.85rem;line-height:1;transition:transform .15s ease}
+  details.more[open]>summary::before{transform:rotate(45deg)}
   /* Contextual CTA row on result cards */
   .card-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:12px 20px 4px;padding-top:10px;border-top:1px solid var(--line);font-size:.82rem}
   .card-cta a{text-decoration:none;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:4px}
@@ -1216,7 +1216,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .gear-photo{height:180px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:10px;overflow:hidden;position:relative}
   .gear-photo img{max-width:92%;max-height:92%;object-fit:contain}
   .gear-photo .gear-ico{position:static;margin:0}
-  .gear-rank{position:absolute;top:8px;left:8px;background:var(--coral);color:#2a0f06;font-family:var(--mono);font-weight:800;border-radius:8px;padding:2px 9px;font-size:.8rem;z-index:1}
+  .gear-rank{position:absolute;top:8px;left:8px;background:var(--ink);color:#e9f7f5;font-family:var(--mono);font-weight:800;border-radius:8px;padding:2px 9px;font-size:.8rem;z-index:1}
   /* magazine-style article list (index of buyer's guides) */
   .artlist-head{font-family:var(--serif);font-size:1.6rem;margin:26px 0 2px;padding-bottom:10px;border-bottom:2px solid var(--accent)}
   .artrow{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);align-items:center}
@@ -1268,7 +1268,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .ptable .deal{font-family:var(--mono)}
   .ptable .price{font-family:var(--mono);text-align:right;color:#0b6b74}
   .ptable tr.low .price{color:var(--accent-deep);font-weight:700}
-  .ptable tr.low .deal::after{content:" ◀ best authorised price";color:var(--peak);font-size:.66rem;font-family:var(--mono)}
+  .ptable tr.low .deal::after{content:"best authorised price";display:block;width:max-content;margin-top:4px;padding-top:3px;
+       border-top:1px solid var(--line-strong);font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;
+       text-transform:uppercase;color:var(--accent-deep)}
   .ptable .btn{padding:8px 13px;font-size:.78rem}
   /* ---------- where-to-buy box ---------- */
   .buybox{background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-top:12px}
@@ -1300,23 +1302,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .cmptable th,.cmptable td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;font-size:.86rem}
   .cmptable .rowlab{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
        white-space:nowrap;position:sticky;left:0;background:#fff;z-index:1}
-  .cmptable tr.diff td{background:rgba(255,122,89,.06)}
+  .cmptable tr.diff td{background:rgba(14,156,146,.06)}
   .cmptable .cmp-name{font-family:var(--serif);font-weight:600;font-size:.98rem}
   .cmptable .cmp-price{color:var(--ink);font-family:var(--mono);font-weight:700;font-variant-numeric:tabular-nums}
   .cmp-photo{height:110px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:8px}
   .cmp-photo img{max-width:92%;max-height:92%;object-fit:contain}
   /* ---------- destination gear cross-sell ---------- */
-  .packbox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--coral);
+  .packbox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
        border-radius:12px;padding:14px 16px;margin:18px 0}
   .pack-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);
        display:flex;align-items:center;gap:6px;margin-bottom:6px}
   .pack-body{margin:0 0 11px;color:var(--ink-soft);font-size:.92rem;line-height:1.6}
   .pack-ctas{display:flex;flex-wrap:wrap;gap:8px}
-  .pack-cta{background:linear-gradient(135deg,var(--coral),var(--coral-deep));color:#fff;border:none;border-radius:9px;
+  .pack-cta{background:linear-gradient(135deg,var(--cta),var(--cta-deep));color:#eafaf8;border:none;border-radius:9px;
        padding:9px 15px;font-size:.83rem;font-weight:600;cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block}
   .pack-cta:hover{filter:brightness(1.06)}
-  .pack-cta.ghost{background:#fff;color:var(--coral-deep);border:1px solid var(--line-strong)}
-  .pack-cta.ghost:hover{border-color:var(--coral);filter:none}
+  .pack-cta.ghost{background:#fff;color:var(--accent-deep);border:1px solid var(--line-strong)}
+  .pack-cta.ghost:hover{border-color:var(--accent);filter:none}
   .staybox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
        border-radius:12px;padding:14px 16px;margin:18px 0}
   .stay-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);
@@ -1343,7 +1345,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     .ptable td{display:block;padding:0;border:none}
     .ptable td:last-child{grid-column:1/-1;margin-top:7px}
     .ptable .btn{display:block;text-align:center}
-    .ptable tr.low .deal::after{display:inline-block}
+    .ptable tr.low .deal::after{display:block}
     .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
     #profile table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
     #profile th,#profile td{min-width:72px}
@@ -1361,7 +1363,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .article{max-width:800px;margin:0 auto;font-size:1.02rem;line-height:1.75}
   .article h3{font-size:1.6rem;margin:24px 0 8px}
   .article p{color:var(--ink-soft)}
-  .pick{background:var(--glass);border:1px solid var(--line);border-left:3px solid var(--coral);border-radius:var(--r-sm);
+  .pick{background:var(--glass);border:1px solid var(--line);border-left:3px solid var(--accent-deep);border-radius:var(--r-sm);
        padding:16px 18px;margin:14px 0;transition:transform .18s,box-shadow .18s}
   .pick:hover{transform:translateX(3px);box-shadow:var(--shadow)}
   .pick h4{margin:0 0 5px;font-family:var(--serif);font-size:1.1rem}
@@ -3303,7 +3305,7 @@ loadData().then(function(res){
     '<a href="how-we-score.html">How we score</a>'+
     '<a href="about.html">About</a>'+
     '<a href="privacy.html">Privacy</a></div>'+
-    '<div style="margin-top:10px">score = conditions rating + sea-life bonus + visibility · ratings: Peak ▸ Good ▸ Shoulder ▸ Low ▸ Closed</div>'+
+    '<div style="margin-top:10px">score = conditions rating + sea-life bonus + visibility · ratings, best first: Peak · Good · Shoulder · Low · Closed</div>'+
     '<div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources; '+
     'water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles. '+
     'Always confirm current conditions with a local dive centre before travelling.</div>'+
