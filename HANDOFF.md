@@ -219,8 +219,6 @@ and supplies the site token.
   resolve (reuse the fetch-gear-images workflow pattern); flag dead links.
 - Replace sample Liveaboard Safaris with researched listings (match the gear
   guide's data standard) or clearly label as illustrative.
-- Prune leftovers: `map-A-osm-tiles.html`, `map-B-vector-offline.html`,
-  `diving-calendar-24-periods.md`.
 - Quarterly gear-price refresh ritual (prices are indicative, drift over time).
 
 ### Mid-term product
