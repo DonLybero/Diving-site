@@ -79,6 +79,7 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
 | `.github/workflows/deploy-pages.yml` | Deploys repo root to Pages on push to `main`; also manual `workflow_dispatch`. |
 | `.github/workflows/fetch-images.yml` | Destination photos from Wikimedia/Pexels (runs on Actions runners — they have internet). |
 | `.github/workflows/fetch-gear-images.yml` | Gear product images from retailer og:image, localized into `assets/gear/`. |
+| `.github/workflows/check-buy-links.yml` | Monthly report-only health check of every gear-guide buy link (`scripts/check_buy_links.py`); dead/redirected links in the run summary + JSON artifact. |
 
 ### Key JS structures inside `index.html`
 - `AFFILIATE` config + `affLink()` — affiliate wiring (§7).
@@ -125,8 +126,12 @@ score = rating_base (Peak 100 / Good 72 / Shoulder 48 / Low 22; Closed excluded)
   photos (Wikimedia/Pexels, openly licensed, attribution kept in data), the
   Gear guide (researched picks, indicative prices, real retailer links, local
   images), the 12 monthly Destination articles (computed live from real data).
-- **SAMPLE:** Liveaboard Safaris listings only. (The old sample Reviews and
-  Dive Centres sections were **removed** 2026-07.)
+- **SAMPLE:** none left on the published site. The old sample Reviews,
+  Dive Centres and Liveaboard Safaris sections were **removed** 2026-07; the
+  Trip Planner tab is an honest "coming soon" placeholder until a real tool
+  ships. (Only sample strings left in code: the `GEAR` fallback array in
+  `index.html`, shown solely if `gear-guide.json` fails to load and labelled
+  "sample price" when it does.)
 
 ## 7. Monetization (wired, awaiting owner sign-ups)
 
@@ -215,15 +220,12 @@ brings the consent banner). Wiring is ready to add once the owner picks a tool
 and supplies the site token.
 
 ### Near-term engineering
-- Buy-link health workflow: periodically verify the 180 retailer URLs still
-  resolve (reuse the fetch-gear-images workflow pattern); flag dead links.
-- Replace sample Liveaboard Safaris with researched listings (match the gear
-  guide's data standard) or clearly label as illustrative.
-- Prune leftovers: `map-A-osm-tiles.html`, `map-B-vector-offline.html`,
-  `diving-calendar-24-periods.md`.
 - Quarterly gear-price refresh ritual (prices are indicative, drift over time).
 
 ### Mid-term product
+- Trip Planner tab: replace the "coming soon" placeholder with a real
+  end-to-end trip tool (it superseded the removed sample Safaris listings;
+  any listings it shows must match the gear guide's research standard).
 - Wetsuit-by-temperature recommender (data already has per-month temps +
   wetsuit field — pure front-end feature).
 - Destination comparison view (pick 2–3, compare months side by side).

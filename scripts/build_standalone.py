@@ -62,10 +62,6 @@ html = html.replace('<script src="vendor/leaflet.js"></script>',
 html = html.replace('<script src="diving-calendar.js"></script>',
                     '<script>\n' + engine + '\n</script>')
 
-# the standalone map link points back to the (served) tile page; note it needs the server build
-html = html.replace('<a href="map-A-osm-tiles.html">Open the OpenStreetMap-tiles version →</a>',
-                    '<span style="opacity:.6">(street-tile map available in the full hosted site)</span>')
-
 out = os.path.join(OUT, "diving-site.html")
 with open(out, "w", encoding="utf-8") as f:
     f.write(html)
