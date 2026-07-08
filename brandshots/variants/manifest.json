@@ -1,0 +1,983 @@
+{
+ "Atomic Aquatics Venom Frameless": {
+  "colors": {
+   "Gray/Black": {
+    "file": "variants/atomic-aquatics-venom-frameless--gray-black.jpg",
+    "strategy": "woo",
+    "src": "https://www.atomicaquatics.com/wp-content/uploads/sites/4/2020/05/04-0160-00_1-5.jpg"
+   },
+   "Red/Black": {
+    "file": "variants/atomic-aquatics-venom-frameless--red-black.jpg",
+    "strategy": "woo",
+    "src": "https://www.atomicaquatics.com/wp-content/uploads/sites/4/2020/05/04-0165-00_1-5.jpg"
+   }
+  },
+  "missing": []
+ },
+ "Scubapro Synergy 2 Trufit": {
+  "colors": {
+   "Black/Silver": {
+    "file": "variants/scubapro-synergy-2-trufit--black-silver.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/s073i2ltoi/webp/SP_24839130_Synergy2_Black_Silver_01.webp?w=640"
+   }
+  },
+  "missing": [
+   "Clear/Blue-Silver",
+   "Black/Silver Mirrored",
+   "Black/Red"
+  ]
+ },
+ "Mares X-Vision": {
+  "colors": {},
+  "missing": [
+   "Black/Black",
+   "White/Black",
+   "Lime/Black",
+   "Yellow/Black"
+  ]
+ },
+ "Aqua Lung Reveal X2": {
+  "colors": {},
+  "missing": [
+   "Black/Black",
+   "Black/Yellow",
+   "Black/Orange",
+   "White/Blue"
+  ]
+ },
+ "TUSA Freedom Ceos M-212": {
+  "colors": {
+   "Black/Fishtail Blue": {
+    "file": "variants/tusa-freedom-ceos-m-212--black-fishtail-blue.png",
+    "strategy": "woo",
+    "src": "https://tusa.com/wp-content/uploads/2024/09/M212_Transparent.png"
+   }
+  },
+  "missing": [
+   "Black/Black",
+   "Black/Flash Yellow",
+   "Black/Hot Pink",
+   "Black/Metallic Dark Red",
+   "Black/Metallic Silver",
+   "Black/Ocean Green"
+  ]
+ },
+ "Scubapro Frameless": {
+  "colors": {
+   "Black": {
+    "file": "variants/scubapro-frameless--black.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/2uu57idqkz/webp/SP_-24350110_Frameless_Mask_1.webp?w=640"
+   }
+  },
+  "missing": [
+   "White",
+   "Army Green"
+  ]
+ },
+ "Atomic Aquatics SubFrame": {
+  "colors": {
+   "Black/Red": {
+    "file": "variants/atomic-aquatics-subframe--black-red.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-blackred-10.jpg?v=1767917102"
+   },
+   "Black/Black": {
+    "file": "variants/atomic-aquatics-subframe--black-black.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-blackblack-7.jpg?v=1767900627"
+   },
+   "Black/Aqua": {
+    "file": "variants/atomic-aquatics-subframe--black-aqua.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-blackaqua-11.jpg?v=1761609348"
+   },
+   "Black/Royal Blue": {
+    "file": "variants/atomic-aquatics-subframe--black-royal-blue.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-blackroyal-blue-12.jpg?v=1761609348"
+   },
+   "Black/Pink": {
+    "file": "variants/atomic-aquatics-subframe--black-pink.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-blackpink-13.jpg?v=1761609348"
+   },
+   "Black/Purple": {
+    "file": "variants/atomic-aquatics-subframe--black-purple.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-blackpurple-14.jpg?v=1761609348"
+   },
+   "Clear/Black": {
+    "file": "variants/atomic-aquatics-subframe--clear-black.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-clearblack.jpg?v=1767900627"
+   },
+   "Clear/Blue": {
+    "file": "variants/atomic-aquatics-subframe--clear-blue.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-clearblue-2.jpg?v=1767900627"
+   },
+   "Clear/Pink": {
+    "file": "variants/atomic-aquatics-subframe--clear-pink.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-clearpink-5.jpg?v=1767900627"
+   },
+   "Clear/Purple": {
+    "file": "variants/atomic-aquatics-subframe--clear-purple.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0065/3810/0851/products/atomic-aquatics-subframe-mask-clearpurple-6.jpg?v=1767900627"
+   }
+  },
+  "missing": []
+ },
+ "Aqua Lung Plazma": {
+  "colors": {
+   "Orange/Transparent": {
+    "file": "variants/aqua-lung-plazma--orange-transparent.jpg",
+    "strategy": "alt",
+    "src": "https://us.aqualung.com/cdn/shop/files/20Transparent_1.jpg?v=1767956204&width=500"
+   }
+  },
+  "missing": [
+   "Black/White",
+   "Blue/White",
+   "Navy Blue/Sand",
+   "Petrol/Petrol",
+   "Transparent/Black",
+   "Transparent/Pink"
+  ]
+ },
+ "Cressi Calibro": {
+  "colors": {
+   "Black": {
+    "file": "variants/cressi-calibro--black.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0272/0183/0982/files/Calibro__black-black-spectra__01__WEB.jpg?v=1747404744"
+   },
+   "White/Pink": {
+    "file": "variants/cressi-calibro--white-pink.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0272/0183/0982/files/Calibro__white-pink__DS424030_01__WEB.jpg?v=1747404744"
+   },
+   "Green": {
+    "file": "variants/cressi-calibro--green.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0272/0183/0982/files/Calibro__green-green__DS429850_01__WEB.jpg?v=1747404744"
+   },
+   "Black/Blue": {
+    "file": "variants/cressi-calibro--black-blue.jpg",
+    "strategy": "alt",
+    "src": "https://store.cressi.com/cdn/shop/files/Calibro__blue_metal__DS425550_01__WEB.jpg?v=1747404744&amp;width=2000"
+   }
+  },
+  "missing": [
+   "Blue Metal"
+  ]
+ },
+ "Beuchat Maxlux S": {
+  "colors": {},
+  "missing": [
+   "Black",
+   "White",
+   "Blue",
+   "Ultra Blue",
+   "Red",
+   "Orange",
+   "Green",
+   "Fluo Green",
+   "Fluo Yellow",
+   "Fluo Pink",
+   "Raspberry",
+   "Brown",
+   "Green Water",
+   "Warm Grey"
+  ]
+ },
+ "Apeks VX1": {
+  "colors": {},
+  "missing": [
+   "Black",
+   "White"
+  ]
+ },
+ "TUSA Paragon": {
+  "colors": {
+   "Black/Black": {
+    "file": "variants/tusa-paragon--black-black.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0551/8839/0071/products/msk366_blk.jpg?v=1631582625"
+   },
+   "Black/Fishtail Blue": {
+    "file": "variants/tusa-paragon--black-fishtail-blue.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0283/6108/products/Tusa-Paragon-Mask-fishtail-blue.jpg?v=1672040008"
+   },
+   "Black/Flash Yellow": {
+    "file": "variants/tusa-paragon--black-flash-yellow.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0283/6108/products/Tusa-Paragon-Mask-flash-yellow.jpg?v=1672040012"
+   },
+   "White/White": {
+    "file": "variants/tusa-paragon--white-white.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0283/6108/products/Tusa-Paragon-Mask-white.jpg?v=1672040020"
+   },
+   "Black/Energy Orange": {
+    "file": "variants/tusa-paragon--black-energy-orange.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0283/6108/products/Tusa-Paragon-Mask-energy-orange.jpg?v=1672040024"
+   },
+   "Black/Rose Pink": {
+    "file": "variants/tusa-paragon--black-rose-pink.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0283/6108/products/Tusa-Paragon-Mask-rose-pink.jpg?v=1672040028"
+   },
+   "Black/Energy Green": {
+    "file": "variants/tusa-paragon--black-energy-green.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0283/6108/products/Tusa-Paragon-Mask-energy-green.jpg?v=1672040032"
+   }
+  },
+  "missing": [
+   "Black/Metallic Dark Red"
+  ]
+ },
+ "Hollis M3": {
+  "colors": {
+   "Black": {
+    "file": "variants/hollis-m3--black.jpg",
+    "strategy": "alt",
+    "src": "https://www.hollis.com/wp-content/uploads/sites/5/2020/05/Hollis_M3-mask_black_front_web.jpg"
+   }
+  },
+  "missing": [
+   "White"
+  ]
+ },
+ "Scubapro Seawing Nova": {
+  "colors": {
+   "Black": {
+    "file": "variants/scubapro-seawing-nova--black.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/sl47fmcabh/webp/SP_25731X00_SeawingNova_01.webp?w=640"
+   }
+  },
+  "missing": [
+   "White",
+   "Blue",
+   "Pink",
+   "Yellow",
+   "Turquoise"
+  ]
+ },
+ "Scubapro Jet Fin": {
+  "colors": {
+   "Black": {
+    "file": "variants/scubapro-jet-fin--black.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/setunzdser/webp/SP_25365300_Jet_Fin_01.webp?w=640"
+   }
+  },
+  "missing": [
+   "Yellow",
+   "Green Camo",
+   "Green",
+   "White",
+   "Pink",
+   "Red"
+  ]
+ },
+ "Apeks RK3": {
+  "colors": {
+   "Black": {
+    "file": "variants/apeks-rk3--black.jpg",
+    "strategy": "alt",
+    "src": "https://us.apeksdiving.com/cdn/shop/files/FA248_Black_1.jpg?v=1768311131&width=500"
+   }
+  },
+  "missing": [
+   "White",
+   "Yellow"
+  ]
+ },
+ "TUSA HyFlex Switch": {
+  "colors": {
+   "White": {
+    "file": "variants/tusa-hyflex-switch--white.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0538/4028/1792/products/7407136835b9ae5fe07e88.jpg?v=1614974982"
+   },
+   "Black": {
+    "file": "variants/tusa-hyflex-switch--black.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0538/4028/1792/products/21236307005b9ae5fee0385.jpg?v=1614974988"
+   },
+   "Metallic Dark Red": {
+    "file": "variants/tusa-hyflex-switch--metallic-dark-red.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0538/4028/1792/products/17524463265b9ae5fa2e985.jpg?v=1762527688"
+   },
+   "Fishtail Blue": {
+    "file": "variants/tusa-hyflex-switch--fishtail-blue.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0538/4028/1792/products/13560714955b9ae5fe949a7.jpg?v=1614974986"
+   },
+   "Flash Yellow": {
+    "file": "variants/tusa-hyflex-switch--flash-yellow.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0538/4028/1792/products/17458965265b9ae5fe4e479.jpg?v=1614974984"
+   }
+  },
+  "missing": [
+   "Rose Pink"
+  ]
+ },
+ "Scubapro Go Sport": {
+  "colors": {
+   "Black": {
+    "file": "variants/scubapro-go-sport--black.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/29e0zr70ge/webp/SP_25761X00_GO_Sport_Fin_1.webp?w=640"
+   }
+  },
+  "missing": [
+   "White",
+   "Blue",
+   "Turquoise",
+   "Yellow"
+  ]
+ },
+ "Atomic Aquatics SplitFin": {
+  "colors": {
+   "Blue": {
+    "file": "variants/atomic-aquatics-splitfin--blue.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0692/6024/7315/products/9be840ad09facef41a61d9a14e537f9e38b41a2d3cac803f859548c89910fff0.jpg?v=1760106630"
+   },
+   "Pink": {
+    "file": "variants/atomic-aquatics-splitfin--pink.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0692/6024/7315/files/139f1b2261ba021a9351109b8cdc77560cb6aa7c3a2769b9926c969ec2bf1bf9.jpg?v=1760106630"
+   },
+   "Purple": {
+    "file": "variants/atomic-aquatics-splitfin--purple.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0692/6024/7315/files/2f2ba73aeff6a0ffbe8ca4bc4017f4caffee2ec60c740d0dc969c92f596c2e40.jpg?v=1760106630"
+   },
+   "Red": {
+    "file": "variants/atomic-aquatics-splitfin--red.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0692/6024/7315/files/71a440bb1e03b9fb5805be073c27b55c8fc5149761a214167d6a0336c32771e3.jpg?v=1760106630"
+   },
+   "Royal Blue": {
+    "file": "variants/atomic-aquatics-splitfin--royal-blue.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0692/6024/7315/files/72b90c4ef724e62d7c3a29390f0fc9b0ce0ac8bf4f3aef029df8ddfb51eb3003.jpg?v=1760106630"
+   },
+   "Silver": {
+    "file": "variants/atomic-aquatics-splitfin--silver.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0692/6024/7315/files/c5ca95c53361fc98246c99a7f1fd2c248a6c08b9e2e54e608d8c3d404990fe4b.jpg?v=1776741439"
+   },
+   "Smoke": {
+    "file": "variants/atomic-aquatics-splitfin--smoke.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0692/6024/7315/products/46141e9c472122eb1491f590741c55580b7e2faeb69379ebc0dc1f0f8a4da4cb.jpg?v=1776741439"
+   },
+   "Yellow": {
+    "file": "variants/atomic-aquatics-splitfin--yellow.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0692/6024/7315/files/4969ac45f7c1504d31ec05ee720c2e77f5ecee553620d711f0919886ad31b767.jpg?v=1760106630"
+   }
+  },
+  "missing": []
+ },
+ "Aqua Lung Storm": {
+  "colors": {
+   "White": {
+    "file": "variants/aqua-lung-storm--white.jpg",
+    "strategy": "alt",
+    "src": "https://us.aqualung.com/cdn/shop/files/20White_1_48329489-4ad7-4ac1-96b3-c6b172d009fd.jpg?v=1767956453&width=500"
+   }
+  },
+  "missing": [
+   "Black",
+   "Yellow",
+   "Navy Blue",
+   "Petrol",
+   "Glacier",
+   "Dark Olive",
+   "Raspberry",
+   "Tropic"
+  ]
+ },
+ "Mares Power Plana LT": {
+  "colors": {},
+  "missing": [
+   "Black",
+   "White",
+   "Orange"
+  ]
+ },
+ "Beuchat Powerjet": {
+  "colors": {},
+  "missing": [
+   "Black",
+   "Blue",
+   "Yellow"
+  ]
+ },
+ "Scubapro Seawing Supernova": {
+  "colors": {},
+  "missing": [
+   "Black",
+   "White"
+  ]
+ },
+ "Scubapro MK25 EVO / S620 Ti": {
+  "colors": {
+   "White": {
+    "file": "variants/scubapro-mk25-evo-s620-ti--white.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/qps8ho58oy/webp/SP_12620010_MK25_INT_S620-Ti_White_01.webp?w=140"
+   }
+  },
+  "missing": [
+   "Black"
+  ]
+ },
+ "Atomic Aquatics B2": {
+  "colors": {
+   "Purple": {
+    "file": "variants/atomic-aquatics-b2--purple.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/1269/1371/products/ATMCKB2PR.jpg?v=1618097095"
+   },
+   "Red": {
+    "file": "variants/atomic-aquatics-b2--red.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/1269/1371/products/ATMCKB2RD.jpg?v=1618097094"
+   },
+   "Yellow": {
+    "file": "variants/atomic-aquatics-b2--yellow.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/1269/1371/products/ATMCKB2YL.jpg?v=1618097095"
+   },
+   "Pink": {
+    "file": "variants/atomic-aquatics-b2--pink.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/1269/1371/products/ATMCKB2PK.jpg?v=1618097095"
+   },
+   "Royal Blue": {
+    "file": "variants/atomic-aquatics-b2--royal-blue.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/1269/1371/products/ATMCKB2RB.jpg?v=1618097096"
+   },
+   "Aqua": {
+    "file": "variants/atomic-aquatics-b2--aqua.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/1269/1371/products/ATMCKB2AQ.jpg?v=1618097096"
+   },
+   "Black": {
+    "file": "variants/atomic-aquatics-b2--black.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/1269/1371/products/ATMCKB2BK.jpg?v=1618097096"
+   }
+  },
+  "missing": [
+   "Gray"
+  ]
+ },
+ "Zeagle F8": {
+  "colors": {
+   "Black": {
+    "file": "variants/zeagle-f8--black.jpg",
+    "strategy": "woo",
+    "src": "https://www.zeagle.com/wp-content/uploads/sites/3/2021/04/F8-colorKit-black.jpg"
+   },
+   "Blue": {
+    "file": "variants/zeagle-f8--blue.jpg",
+    "strategy": "woo",
+    "src": "https://www.zeagle.com/wp-content/uploads/sites/3/2021/04/F8-colorKit-blue.jpg"
+   },
+   "Pink": {
+    "file": "variants/zeagle-f8--pink.jpg",
+    "strategy": "woo",
+    "src": "https://www.zeagle.com/wp-content/uploads/sites/3/2021/04/F8-colorKit-pink.jpg"
+   },
+   "Purple": {
+    "file": "variants/zeagle-f8--purple.jpg",
+    "strategy": "woo",
+    "src": "https://www.zeagle.com/wp-content/uploads/sites/3/2021/04/F8-colorKit-purple.jpg"
+   },
+   "Red": {
+    "file": "variants/zeagle-f8--red.jpg",
+    "strategy": "woo",
+    "src": "https://www.zeagle.com/wp-content/uploads/sites/3/2021/04/F8-colorKit-Red.jpg"
+   },
+   "Aqua": {
+    "file": "variants/zeagle-f8--aqua.jpg",
+    "strategy": "alt",
+    "src": "https://www.zeagle.com/wp-content/uploads/sites/3/2021/04/F8-colorKit-aqua-600x600.jpg"
+   }
+  },
+  "missing": []
+ },
+ "Scubapro Hydros Pro": {
+  "colors": {
+   "Black": {
+    "file": "variants/scubapro-hydros-pro--black.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/l5nggazibq/webp/SP_21745100_Hydros_Color_Kit_01.webp?w=640"
+   },
+   "Olive Green": {
+    "file": "variants/scubapro-hydros-pro--olive-green.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/p1s6fxfurw/webp/SP_21745010_Hydros_Color_Kit_01.webp?w=140"
+   }
+  },
+  "missing": [
+   "White",
+   "Blue",
+   "Yellow",
+   "Pink",
+   "Purple",
+   "Orange",
+   "Turquoise"
+  ]
+ },
+ "Apeks Exotec": {
+  "colors": {
+   "Black/Grey": {
+    "file": "variants/apeks-exotec--black-grey.jpg",
+    "strategy": "alt",
+    "src": "https://us.apeksdiving.com/cdn/shop/files/20Grey_1_331470b8-aa69-4adb-baca-6982440de986.jpg?v=1768311008&width=500"
+   }
+  },
+  "missing": [
+   "Black/Orange"
+  ]
+ },
+ "xDeep Zeos 28": {
+  "colors": {
+   "Blue": {
+    "file": "variants/xdeep-zeos-28--blue.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0852/8111/2384/files/bluecolorzeosdeluxexdeep.jpg?v=1736291778"
+   },
+   "White": {
+    "file": "variants/xdeep-zeos-28--white.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0852/8111/2384/files/whitecolorzeosdeluxexdeep.jpg?v=1736291778"
+   },
+   "Lime": {
+    "file": "variants/xdeep-zeos-28--lime.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0852/8111/2384/files/limecolorzeosdeluxexdeep.jpg?v=1736291778"
+   },
+   "Red": {
+    "file": "variants/xdeep-zeos-28--red.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0852/8111/2384/files/redcolorzeosdeluxexdeep.jpg?v=1736291778"
+   },
+   "Yellow": {
+    "file": "variants/xdeep-zeos-28--yellow.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0852/8111/2384/files/yellowcolorzeosdeluxexdeep.jpg?v=1736291778"
+   },
+   "Sea": {
+    "file": "variants/xdeep-zeos-28--sea.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0852/8111/2384/files/seacolorzeosdeluxexdeep.jpg?v=1736001593"
+   }
+  },
+  "missing": [
+   "Black",
+   "Dark Grey",
+   "Light Grey",
+   "Multicam"
+  ]
+ },
+ "Mares Prestige SLS": {
+  "colors": {
+   "Blue": {
+    "file": "variants/mares-prestige-sls--blue.png",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/1193/9448/products/MaresPrestigeSLSBCD_Blue.png?v=1668023570"
+   }
+  },
+  "missing": [
+   "Black/Silver",
+   "White/Black"
+  ]
+ },
+ "Atomic Aquatics BC1": {
+  "colors": {
+   "Black": {
+    "file": "variants/atomic-aquatics-bc1--black.jpg",
+    "strategy": "woo",
+    "src": "https://www.atomicaquatics.com/wp-content/uploads/sites/4/2020/05/99-2000-XL_1-6.jpg"
+   },
+   "Red": {
+    "file": "variants/atomic-aquatics-bc1--red.jpg",
+    "strategy": "woo",
+    "src": "https://www.atomicaquatics.com/wp-content/uploads/sites/4/2020/05/99-1000-LG_1-13.jpg"
+   }
+  },
+  "missing": []
+ },
+ "Shearwater Peregrine": {
+  "colors": {
+   "White (Adventures Edition Light)": {
+    "file": "variants/shearwater-peregrine--white-adventures-edition-light.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/Peregrine_Front_LIGHT-0M-EN.png?v=1770234228&width=1200"
+   }
+  },
+  "missing": [
+   "Black (Original)",
+   "Gray (Adventures Edition Dark)"
+  ]
+ },
+ "Garmin Descent Mk3i": {
+  "colors": {},
+  "missing": [
+   "Carbon Gray DLC Titanium with Black Silicone Band",
+   "Bronze PVD Titanium with French Gray Silicone Band"
+  ]
+ },
+ "Shearwater Perdix 2": {
+  "colors": {
+   "Ti Silver": {
+    "file": "variants/shearwater-perdix-2--ti-silver.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/Perdix_2_ti_swatch_1200x1200_324108aa-92f3-4777-972c-26b060cd72b1.png?v=1760719202&width=1200"
+   },
+   "Ti Black": {
+    "file": "variants/shearwater-perdix-2--ti-black.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/Perdix2_Ti_Black_Side_View_85ecf0a8-4914-45e1-b41f-1f91d770d07f.png?v=1760719202&width=1200"
+   }
+  },
+  "missing": []
+ },
+ "Suunto Ocean": {
+  "colors": {
+   "All Black": {
+    "file": "variants/suunto-ocean--all-black.png",
+    "strategy": "alt",
+    "src": "https://us.suunto.com/cdn/shop/files/image1_6afcde1b-eeab-42ec-bafd-414bf72faaeb.png?v=1778248839&width=30"
+   },
+   "Sand": {
+    "file": "variants/suunto-ocean--sand.png",
+    "strategy": "alt",
+    "src": "https://us.suunto.com/cdn/shop/files/SUUNTO_Ocean_shop_assets_1080x1080_01_Product_Sand-removebg-preview.png?v=1778244352&width=30"
+   },
+   "Steel Black": {
+    "file": "variants/suunto-ocean--steel-black.png",
+    "strategy": "alt",
+    "src": "https://us.suunto.com/cdn/shop/files/ss050558000-suunto_eon_steel_black_front_view-airnitrox_1.png?v=1778229936&width=30"
+   }
+  },
+  "missing": []
+ },
+ "Garmin Descent G1": {
+  "colors": {},
+  "missing": [
+   "Slate Gray",
+   "Powder Gray"
+  ]
+ },
+ "Suunto Zoop Novo": {
+  "colors": {
+   "Black": {
+    "file": "variants/suunto-zoop-novo--black.png",
+    "strategy": "alt",
+    "src": "https://us.suunto.com/cdn/shop/files/image1_6afcde1b-eeab-42ec-bafd-414bf72faaeb.png?v=1778248839&width=30"
+   },
+   "Aqua Blue": {
+    "file": "variants/suunto-zoop-novo--aqua-blue.png",
+    "strategy": "alt",
+    "src": "https://us.suunto.com/cdn/shop/files/lQLPJxEbEKZGWY_NA4TNA4SwisCcJKlMOoIH-tkSQwmbAA_900_900.png?v=1778247735&width=30"
+   }
+  },
+  "missing": [
+   "Lemon Yellow",
+   "Wildberry"
+  ]
+ },
+ "Mares Sirius": {
+  "colors": {
+   "Black": {
+    "file": "variants/mares-sirius--black.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0551/8839/0071/products/439501.jpg?v=1667257051"
+   },
+   "Black/Silver": {
+    "file": "variants/mares-sirius--black-silver.jpg",
+    "strategy": "shopify",
+    "src": "https://cdn.shopify.com/s/files/1/0551/8839/0071/files/com358_sirius-black-silver.jpg?v=1695415834"
+   }
+  },
+  "missing": []
+ },
+ "Shearwater Perdix 3": {
+  "colors": {
+   "Black": {
+    "file": "variants/shearwater-perdix-3--black.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/13501-01_Perdix3_Black_18.2mAIR.png?v=1782753772&width=2400"
+   },
+   "Silver": {
+    "file": "variants/shearwater-perdix-3--silver.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/13501-02_Perdix3_Silver_18.2mAIR.png?v=1782753924&width=2400"
+   }
+  },
+  "missing": []
+ },
+ "Shearwater Teric": {
+  "colors": {
+   "Black": {
+    "file": "variants/shearwater-teric--black.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/Teric-Front-OC-REC-Bronze-Remora-Band-Black-EN1.png?v=1782765894&width=900"
+   },
+   "Blue": {
+    "file": "variants/shearwater-teric--blue.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/Teric_Front_Descent_Air_Blue_EN_1000x1000_e48b457f-2ff3-40b9-8b88-7270421f5e72.png?v=1768598372&width=1000"
+   },
+   "Silver": {
+    "file": "variants/shearwater-teric--silver.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/Teric_Front_Descent_Air_Silver_69c5bb28-d242-479a-99de-ac98c7e399c1.png?v=1768598372&width=1000"
+   }
+  },
+  "missing": []
+ },
+ "Shearwater Tern TX": {
+  "colors": {
+   "Black": {
+    "file": "variants/shearwater-tern-tx--black.png",
+    "strategy": "alt",
+    "src": "https://shearwater.com/cdn/shop/files/Tern-TX-Front-Air-0M-Surface-Black-Standard_c63d1627-c392-4708-8d5e-ab8757a4733e.png?v=1760719165&width=1800"
+   }
+  },
+  "missing": [
+   "Gray",
+   "Navy",
+   "Orange",
+   "Pink"
+  ]
+ },
+ "O'Neill Reactor-2 2mm Back Zip Springsuit": {
+  "colors": {},
+  "missing": [
+   "Black/Black",
+   "Black/Graphite",
+   "Black/Slate",
+   "Black/Ocean"
+  ]
+ },
+ "Aqualung HydroFlex 3mm Shorty": {
+  "colors": {},
+  "missing": [
+   "Black/Blue",
+   "Black/Grey",
+   "Camo Black/White"
+  ]
+ },
+ "ScubaPro Everflex Steamer 3/2mm": {
+  "colors": {},
+  "missing": [
+   "White",
+   "Black"
+  ]
+ },
+ "Cressi Lido 2mm Full Wetsuit": {
+  "colors": {
+   "Black/Blue": {
+    "file": "variants/cressi-lido-2mm-full-wetsuit--black-blue.jpg",
+    "strategy": "alt",
+    "src": "https://store.cressi.com/cdn/shop/files/Comfort_5mm_Man__blue__LS507400_02__WEB.jpg?v=1746715828&amp;width=897"
+   }
+  },
+  "missing": [
+   "Black/Aquamarine"
+  ]
+ },
+ "Scubapro Definition Steamer 3mm": {
+  "colors": {},
+  "missing": [
+   "Yellow/Black"
+  ]
+ },
+ "Bare Reactive 3mm": {
+  "colors": {
+   "Black": {
+    "file": "variants/bare-reactive--black.jpg",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2021/06/BARE_Reactive2.0_3MM_Blue_01.jpg"
+   }
+  },
+  "missing": [
+   "Blue"
+  ]
+ },
+ "Henderson Thermoprene Pro 3mm": {
+  "colors": {
+   "Black": {
+    "file": "variants/henderson-thermoprene--black.jpg",
+    "strategy": "woo",
+    "src": "https://hendersonusa.com/wp-content/uploads/Mens_Thermoprene_PRO_01_full.jpg"
+   }
+  },
+  "missing": [
+   "Black/Blue"
+  ]
+ },
+ "Cressi Morea 3mm": {
+  "colors": {
+   "Black/Blue": {
+    "file": "variants/cressi-morea-3mm--black-blue.jpg",
+    "strategy": "alt",
+    "src": "https://store.cressi.com/cdn/shop/files/Wetsuit_Surface_Monopiece_Morea_Black_Blue_Man_3mm_Main_Front__WEB.jpg?v=1746775873&amp;width=786"
+   }
+  },
+  "missing": []
+ },
+ "Bare Evoke 3mm Women's": {
+  "colors": {
+   "Aqua": {
+    "file": "variants/bare-evoke-women-s--aqua.jpg",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2021/10/Evoke5mmAqua_02.jpg"
+   },
+   "Black": {
+    "file": "variants/bare-evoke-women-s--black.jpg",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2021/10/Evoke_3mmBlack.jpg"
+   }
+  },
+  "missing": []
+ },
+ "Bare Reactive 5mm": {
+  "colors": {
+   "Black": {
+    "file": "variants/bare-reactive--black.jpg",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2021/11/BARE_Reactive2.0_5MM_Blue_01.jpg"
+   }
+  },
+  "missing": []
+ },
+ "Fourth Element Proteus II 5mm": {
+  "colors": {},
+  "missing": [
+   "Black"
+  ]
+ },
+ "Scubapro Everflex Yulex 5/4mm": {
+  "colors": {
+   "Black": {
+    "file": "variants/scubapro-everflex-yulex-steamer--black.webp",
+    "strategy": "alt",
+    "src": "https://johnsonoutdoors.widen.net/content/nqgfacx71r/webp/SP_637XXXX0_Everflex_Yulex_Steamer_95843.webp?w=640"
+   }
+  },
+  "missing": []
+ },
+ "Henderson Thermoprene Pro 5mm": {
+  "colors": {
+   "Black": {
+    "file": "variants/henderson-thermoprene--black.jpg",
+    "strategy": "woo",
+    "src": "https://hendersonusa.com/wp-content/uploads/Mens_Thermoprene_PRO_01_full.jpg"
+   }
+  },
+  "missing": []
+ },
+ "Aqua Lung Aquaflex 5mm": {
+  "colors": {},
+  "missing": [
+   "Black/Charcoal"
+  ]
+ },
+ "Bare Velocity Ultra 2.0 5mm": {
+  "colors": {
+   "Black": {
+    "file": "variants/bare-velocity-ultra-2-0-5mm--black.png",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2025/04/002183BLK-5mm-Velocity-Ultra-2.0-Semi-Dry_Black_Front-View_web.png"
+   },
+   "Blue": {
+    "file": "variants/bare-velocity-ultra-2-0-5mm--blue.png",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2025/04/002183BLU-5mm-Velocity-Ultra-2.0-Semi-Dry_Blue_Front-View_web.png"
+   }
+  },
+  "missing": [
+   "Lava"
+  ]
+ },
+ "O'Neill Epic 4/3mm": {
+  "colors": {
+   "Black/Black": {
+    "file": "variants/o-neill-epic-4-3mm--black-black.png",
+    "strategy": "alt",
+    "src": "https://us.oneill.com/cdn/shop/files/ONEILL_LOGO2_01_2.png?crop=center&amp;height=2500&amp;v=1751316637&amp;width=2500"
+   }
+  },
+  "missing": [
+   "Graphite Black",
+   "Grey II"
+  ]
+ },
+ "Henderson Thermoprene Pro 7mm": {
+  "colors": {
+   "Black/Heather Gray": {
+    "file": "variants/henderson-thermoprene--black-heather-gray.jpg",
+    "strategy": "woo",
+    "src": "https://hendersonusa.com/wp-content/uploads/Mens_Thermoprene_PRO_01_full.jpg"
+   },
+   "Black/Heather Blue": {
+    "file": "variants/henderson-thermoprene--black-heather-blue.jpg",
+    "strategy": "woo",
+    "src": "https://hendersonusa.com/wp-content/uploads/Mens_Thermoprene_PRO_46_full.jpg"
+   }
+  },
+  "missing": []
+ },
+ "BARE Reactive 7mm": {
+  "colors": {
+   "Black": {
+    "file": "variants/bare-reactive--black.jpg",
+    "strategy": "alt",
+    "src": "https://cdn11.bigcommerce.com/s-xjhuewfeqf/images/stencil/338x338/products/12503/59157/BARE_Reactive2.0_3MM_Black_02__46603.1733790276.jpg?c=2"
+   },
+   "Blue": {
+    "file": "variants/bare-reactive--blue.jpg",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2021/06/BARE_Reactive2.0_7MM_Black_01.jpg"
+   }
+  },
+  "missing": []
+ },
+ "BARE Nixie Ultra 7mm": {
+  "colors": {
+   "Black": {
+    "file": "variants/bare-nixie-ultra-7mm--black.png",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2019/10/NixieUltra_Aqua_0-1.png"
+   },
+   "Grey Heather": {
+    "file": "variants/bare-nixie-ultra-7mm--grey-heather.png",
+    "strategy": "woo",
+    "src": "https://www.baresports.com/wp-content/uploads/sites/7/2019/10/NixieUltra_Pink_0.png"
+   }
+  },
+  "missing": []
+ }
+}
