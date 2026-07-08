@@ -78,24 +78,30 @@
   .hero-band video{width:100%;height:100%;object-fit:cover;display:block}
   .hero-band .photo-credit{position:absolute;right:10px;bottom:6px;font-size:.62rem;
        color:rgba(233,247,246,.55);font-family:var(--mono)}
-  /* floating collage tiles — borderless graded crops that breathe: the whole
-     box grows and shrinks while drifting, like the reference hero */
-  .hb-tile{position:absolute;overflow:hidden;will-change:transform}
-  .hb-tile video{position:absolute;width:340%;height:340%;object-fit:cover;left:-120%;top:-40%}
-  .hb-bw{left:5%;top:12%;width:clamp(150px,22vw,360px);height:clamp(112px,16.5vw,270px);
-       transform-origin:left top;animation:hbA 9s ease-in-out infinite alternate}
-  .hb-bw video{filter:grayscale(1) contrast(1.35);left:-150%;top:-30%}
-  .hb-coral{right:5%;top:30%;width:clamp(140px,19vw,320px);height:clamp(112px,15.2vw,256px);
-       transform-origin:right center;animation:hbB 11s ease-in-out infinite alternate}
-  .hb-coral video{filter:sepia(1) saturate(1.9) hue-rotate(-18deg) contrast(1.18) brightness(1.05);left:-190%;top:-60%}
-  .hb-sage{left:42%;top:46%;width:clamp(110px,13vw,230px);height:clamp(110px,13vw,230px);
-       transform-origin:center bottom;animation:hbC 13s ease-in-out infinite alternate}
-  .hb-sage video{filter:sepia(1) saturate(1.4) hue-rotate(95deg) contrast(1.22) brightness(1.04);left:-130%;top:-80%}
-  @keyframes hbA{from{transform:translateX(-16px) scale(.66)}to{transform:translateX(12px) scale(1.28)}}
-  @keyframes hbB{from{transform:translateX(14px) scale(1.3)}to{transform:translateX(-18px) scale(.72)}}
-  @keyframes hbC{from{transform:translateX(-10px) scale(.85)}to{transform:translateX(16px) scale(1.45)}}
-  @media(max-width:700px){.hb-sage{display:none}}
-  @media(prefers-reduced-motion:reduce){.hb-tile{animation:none}}
+  /* hero mosaic — the whole band is graded blocks that resize like windows
+     over a pale ghost base, faithful to the reference recording */
+  .hero-band>#heroVideo{filter:grayscale(1) brightness(1.42) contrast(1.02)}
+  .hbm{position:absolute;overflow:hidden}
+  .hbm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hbm-tag{position:absolute;left:12px;bottom:12px;background:#fff;color:#0c3d46;font-family:var(--mono);
+       font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;white-space:nowrap;z-index:2}
+  .hbm-coral{left:9%;top:0;bottom:0;width:34%;z-index:1;animation:hbmB 9s ease-in-out infinite alternate}
+  .hbm-coral video{filter:sepia(1) saturate(2) hue-rotate(-16deg) brightness(1.12) contrast(1.1)}
+  .hbm-sage{left:0;top:0;bottom:0;width:22%;z-index:2;animation:hbmA 12s ease-in-out infinite alternate}
+  .hbm-sage video{filter:sepia(1) saturate(1.15) hue-rotate(100deg) brightness(1.16) contrast(1.06)}
+  .hbm-blush{left:31%;top:0;width:15%;height:46%;z-index:3;animation:hbmD 8s ease-in-out infinite alternate}
+  .hbm-blush video{filter:sepia(1) saturate(1.7) hue-rotate(290deg) brightness(1.22) contrast(1.02)}
+  .hbm-dark{left:52%;top:8%;width:17%;height:84%;z-index:2;animation:hbmE 13s ease-in-out infinite alternate}
+  .hbm-dark video{filter:grayscale(1) contrast(1.55) brightness(.92)}
+  .hbm-lilac{right:0;top:0;bottom:0;width:26%;z-index:1;animation:hbmC 10s ease-in-out infinite alternate}
+  .hbm-lilac video{filter:sepia(1) saturate(1.35) hue-rotate(205deg) brightness(1.2) contrast(1.02)}
+  @keyframes hbmA{from{width:14%}to{width:30%}}
+  @keyframes hbmB{from{width:40%}to{width:24%}}
+  @keyframes hbmC{from{width:17%}to{width:33%}}
+  @keyframes hbmD{from{width:11%;height:38%}to{width:19%;height:60%}}
+  @keyframes hbmE{from{width:22%;height:70%;top:14%}to{width:13%;height:92%;top:4%}}
+  @media(max-width:700px){.hbm-blush,.hbm-dark{display:none}.hbm-tag{font-size:.48rem}}
+  @media(prefers-reduced-motion:reduce){.hbm{animation:none}}
   .hero{position:relative;overflow:hidden;text-align:center;padding:64px 18px 52px;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
   .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;
@@ -674,9 +680,11 @@
 
 <div class="hero-band" id="heroBand">
   <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-dive-poster.jpg"></video>
-  <div class="hb-tile hb-bw"><video muted autoplay loop playsinline preload="metadata"></video></div>
-  <div class="hb-tile hb-coral"><video muted autoplay loop playsinline preload="metadata"></video></div>
-  <div class="hb-tile hb-sage"><video muted autoplay loop playsinline preload="metadata"></video></div>
+  <div class="hbm hbm-coral"><video muted autoplay loop playsinline preload="metadata"></video></div>
+  <div class="hbm hbm-sage"><video muted autoplay loop playsinline preload="metadata"></video><span class="hbm-tag">Peak season</span></div>
+  <div class="hbm hbm-blush"><video muted autoplay loop playsinline preload="metadata"></video><span class="hbm-tag">Visibility 30 m</span></div>
+  <div class="hbm hbm-dark"><video muted autoplay loop playsinline preload="metadata"></video><span class="hbm-tag">DiveSZN</span></div>
+  <div class="hbm hbm-lilac"><video muted autoplay loop playsinline preload="metadata"></video></div>
   <span class="photo-credit" id="heroCredit"></span>
 </div>
 <header class="hero" id="hero">
@@ -986,10 +994,10 @@ function setHeroPhoto(){
   var v=document.getElementById('heroVideo');
   if(v){
     if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-      document.querySelectorAll('#heroBand .hb-tile').forEach(function(t){t.remove();});
+      document.querySelectorAll('#heroBand .hbm').forEach(function(t){t.remove();});
       v.remove();
     }else{
-      document.querySelectorAll('#heroBand .hb-tile video').forEach(function(tv){
+      document.querySelectorAll('#heroBand .hbm video').forEach(function(tv){
         tv.poster=HERO_VIDEO.poster;
         feedVideo(tv);
       });
