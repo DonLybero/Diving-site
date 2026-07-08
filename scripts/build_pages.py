@@ -575,7 +575,8 @@ def buy_box(item):
 COLOR_HEX = {"black": "#16181a", "white": "#f4f4f2", "blue": "#2563eb", "lime": "#a3e635",
              "pink": "#ec4899", "yellow": "#facc15", "red": "#dc2626", "orange": "#ea580c",
              "green": "#16a34a", "grey": "#9ca3af", "gray": "#9ca3af", "silver": "#c9ced3",
-             "purple": "#7c3aed", "turquoise": "#14b8a6", "navy": "#1e3a5f"}
+             "purple": "#7c3aed", "turquoise": "#14b8a6", "navy": "#1e3a5f",
+             "clear": "#e8edef", "aquamarine": "#7fd4c9", "lilac": "#b79bd6", "blk": "#16181a"}
 
 
 def product_ld(item):
@@ -624,15 +625,23 @@ def gear_item_page(cat, item, prefix="../"):
         f'<a class="pack-cta{"" if i == 0 else " ghost"}" href="{esc(o["url"])}" target="_blank" '
         f'rel="noopener sponsored">{esc(o["store"])} · {fmtp(o["price_usd"])}</a>'
         for i, o in enumerate(offers[:3]))
+    def swatch_bg(cname):
+        toks = [t.strip().lower() for t in re.split(r"[/+]", cname) if t.strip()]
+        toks = [t for t in toks if "lens" not in t and "mirror" not in t] or [t.strip().lower() for t in re.split(r"[/+]", cname)]
+        hx = [COLOR_HEX[t] for t in toks[:2] if t in COLOR_HEX]
+        if not hx:
+            hx = ["#8899a0"]
+        if len(hx) == 1:
+            return f"background:{hx[0]}"
+        return f"background:linear-gradient(135deg,{hx[0]} 50%,{hx[1]} 50%)"
     swatches, cjs = "", ""
     if colors:
         dots = ""
         for i, c in enumerate(colors):
-            hexc = COLOR_HEX.get(c.lower(), "#8899a0")
             act = " on" if (cimgs and i == 0) else ""
             click = f' onclick="pickC(this,\'{esc(c)}\')" role="button" tabindex="0"' if cimgs.get(c) else ""
             dots += (f'<span class="csw{act}" title="{esc(c)}"{click}>'
-                     f'<i style="background:{hexc}"></i></span>')
+                     f'<i style="{swatch_bg(c)}"></i></span>')
         swatches = f'<div class="gitem-colors">{dots}</div>'
         if cimgs:
             cmap = {c: prefix + p for c, p in cimgs.items()}

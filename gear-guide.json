@@ -240,6 +240,28 @@
       "Frame": "Framed",
       "Rx lenses": "Yes",
       "Weight": "160 g"
+     },
+     "colors": [
+      "Black / Black",
+      "Black / Black / Silver Mirrored lens",
+      "Black / Blue",
+      "Black / Yellow",
+      "Clear / Black",
+      "Clear / Blue",
+      "Clear / Pink",
+      "Clear / Red",
+      "Clear / Yellow"
+     ],
+     "color_images": {
+      "Black / Black": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-black.jpg",
+      "Black / Black / Silver Mirrored lens": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-black-silver-mirrored-lens.jpg",
+      "Black / Blue": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-blue.jpg",
+      "Black / Yellow": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-yellow.jpg",
+      "Clear / Black": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-black.jpg",
+      "Clear / Blue": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-blue.jpg",
+      "Clear / Pink": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-pink.jpg",
+      "Clear / Red": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-red.jpg",
+      "Clear / Yellow": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-yellow.jpg"
      }
     },
     {
@@ -461,6 +483,28 @@
       "Frame": "Frameless",
       "Rx lenses": "No",
       "Weight": "200 g"
+     },
+     "colors": [
+      "Black",
+      "Black / Blue / Orange lens",
+      "Blue",
+      "Clear",
+      "Pink",
+      "Silver",
+      "Turquoise",
+      "White",
+      "Yellow"
+     ],
+     "color_images": {
+      "Black": "assets/gear/studio/hero/cressi-f1-frameless--black.jpg",
+      "Black / Blue / Orange lens": "assets/gear/studio/hero/cressi-f1-frameless--black-blue-orange-lens.jpg",
+      "Blue": "assets/gear/studio/hero/cressi-f1-frameless--blue.jpg",
+      "Clear": "assets/gear/studio/hero/cressi-f1-frameless--clear.jpg",
+      "Pink": "assets/gear/studio/hero/cressi-f1-frameless--pink.jpg",
+      "Silver": "assets/gear/studio/hero/cressi-f1-frameless--silver.jpg",
+      "Turquoise": "assets/gear/studio/hero/cressi-f1-frameless--turquoise.jpg",
+      "White": "assets/gear/studio/hero/cressi-f1-frameless--white.jpg",
+      "Yellow": "assets/gear/studio/hero/cressi-f1-frameless--yellow.jpg"
      }
     }
    ],
@@ -746,6 +790,20 @@
       "Strap": "Buckle (bungee opt.)",
       "Weight/fin": "~0.9kg (M/L)",
       "Best for": "All-round value"
+     },
+     "colors": [
+      "Black / Pink",
+      "Black / Silver",
+      "Black / White",
+      "Black / Yellow",
+      "Blue / Silver"
+     ],
+     "color_images": {
+      "Black / Pink": "assets/gear/studio/hero/cressi-frog-plus--black-pink.jpg",
+      "Black / Silver": "assets/gear/studio/hero/cressi-frog-plus--black-silver.jpg",
+      "Black / White": "assets/gear/studio/hero/cressi-frog-plus--black-white.jpg",
+      "Black / Yellow": "assets/gear/studio/hero/cressi-frog-plus--black-yellow.jpg",
+      "Blue / Silver": "assets/gear/studio/hero/cressi-frog-plus--blue-silver.jpg"
      }
     },
     {
@@ -1247,6 +1305,14 @@
       "Wt-integrated": "Yes",
       "Material": "210D nylon",
       "Travel": "Excellent"
+     },
+     "colors": [
+      "Black / Blue",
+      "Black / Pink"
+     ],
+     "color_images": {
+      "Black / Blue": "assets/gear/studio/hero/cressi-travelight--black-blue.jpg",
+      "Black / Pink": "assets/gear/studio/hero/cressi-travelight--black-pink.jpg"
      }
     },
     {
@@ -1522,7 +1588,7 @@
      "rank": 2,
      "name": "Garmin Descent Mk3i",
      "blurb": "A complete dive computer inside a premium multisport watch: air integration with up to ten tanks via transceivers, AMOLED screen, 200m rating, and full mapping, training and health tracking between dives.",
-     "image": "assets/gear/garmin-descent-mk3i.png",
+     "image": "assets/gear/studio/garmin-descent-mk3i.jpg",
      "options": [
       {
        "store": "Divers Direct",
@@ -1618,7 +1684,7 @@
      "rank": 5,
      "name": "Garmin Descent G1",
      "blurb": "The rugged button-operated sibling: 45 grams, solar-assisted charging that makes cables optional on a dive trip, a high-contrast monochrome display readable in direct sun, and the full dive feature set including multi-gas.",
-     "image": "assets/gear/garmin-descent-g1.jpg",
+     "image": "assets/gear/studio/garmin-descent-g1.jpg",
      "options": [
       {
        "store": "eBay",
@@ -1708,6 +1774,22 @@
       "Battery": "User-changeable CR2430",
       "Depth rating": "120m",
       "Modes": "Air/Nitrox/Gauge"
+     },
+     "colors": [
+      "Black / Black",
+      "Black / Blue",
+      "Black / Grey",
+      "Black / Pink",
+      "Black / White",
+      "Black / Yellow"
+     ],
+     "color_images": {
+      "Black / Black": "assets/gear/studio/hero/cressi-leonardo--black-black.jpg",
+      "Black / Blue": "assets/gear/studio/hero/cressi-leonardo--black-blue.jpg",
+      "Black / Grey": "assets/gear/studio/hero/cressi-leonardo--black-grey.jpg",
+      "Black / Pink": "assets/gear/studio/hero/cressi-leonardo--black-pink.jpg",
+      "Black / White": "assets/gear/studio/hero/cressi-leonardo--black-white.jpg",
+      "Black / Yellow": "assets/gear/studio/hero/cressi-leonardo--black-yellow.jpg"
      }
     },
     {
@@ -1839,7 +1921,7 @@
        "name": "O'Neill Reactor-2 2mm Back Zip Springsuit",
        "blurb": "A stretchy, bombproof warm-water shorty that shrugs off boat decks and tank abrasion.",
        "review": "The Reactor-2 is a 2mm short-sleeve, short-leg springsuit built from super-stretch UltraFlex neoprene, so it pulls on fast and never binds a diver reaching for valves or camera gear. Coverage over the core plus the smoothskin chest and back panel gives a light thermal edge and a buffer between your spine and the tank, while leaving arms and lower legs free for hot tropical water. The back-zip entry with a long pull leash makes it one of the easiest thin suits to self-don on a rocking dive boat.",
-       "image": "assets/gear/o-neill-reactor-2.jpg",
+       "image": "assets/gear/studio/o-neill-reactor-2.jpg",
        "specs": {
         "Thickness": "2mm shorty",
         "Material": "UltraFlex super-stretch neoprene",
@@ -1931,7 +2013,15 @@
          "price_usd": 69.95,
          "url": "https://www.scuba.com/p-csbswl/cressi-2mm-lido-womens-shorty-wetsuit"
         }
-       ]
+       ],
+       "colors": [
+        "Black / Aquamarine",
+        "Black / Lilac"
+       ],
+       "color_images": {
+        "Black / Aquamarine": "assets/gear/studio/hero/cressi-lido-2mm-shorty-women-s--black-aquamarine.jpg",
+        "Black / Lilac": "assets/gear/studio/hero/cressi-lido-2mm-shorty-women-s--black-lilac.jpg"
+       }
       },
       {
        "rank": 4,
@@ -2126,7 +2216,7 @@
        "name": "Fourth Element Proteus II 3mm",
        "blurb": "The benchmark tropical dive suit: warmer, stretchier and tougher than almost anything else at 3mm.",
        "review": "The Proteus II is a purpose-built scuba wetsuit that pairs a plush thermal fleece lining with high-stretch neoprene, so it swims warm for its thickness while staying easy to move in on multi-dive days. Glued and blind-stitched seams, reinforced knee pads and abrasion panels give it liveaboard-grade durability, and the anatomical cut hugs the torso to cut down on flushing. It is a premium pick for divers who want one high-performance suit for years of warm-water travel.",
-       "image": "assets/gear/fourth-element-proteus-ii.jpg",
+       "image": "assets/gear/studio/fourth-element-proteus-ii.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "High-stretch neoprene with thermal fleece lining",
@@ -2192,7 +2282,7 @@
        "name": "Bare Reactive 3mm",
        "blurb": "A stitch-free, graphene-lined suit that turns your own body heat into extra warmth with almost no seam leakage.",
        "review": "The Reactive is one of the first dive suits built with no stitched seams, using Bare's No Stitch Technology to tape the seams inside and out and virtually eliminate flushing. Its Graphene Omnired lining weaves thermo-reactive minerals into the fabric to convert body heat back into warmth, and seamless underarms plus a long back zip make it comfortable and easy to don. It is an excellent choice for divers chasing maximum warmth and comfort from a slim tropical suit.",
-       "image": "assets/gear/bare-reactive.jpg",
+       "image": "assets/gear/studio/bare-reactive.jpg",
        "specs": {
         "Thickness": "3mm",
         "Material": "Ultra-stretch neoprene with Graphene Omnired lining",
@@ -2438,7 +2528,7 @@
        "name": "Fourth Element Proteus II 5mm",
        "blurb": "The benchmark for warmth in a full-stretch diving suit.",
        "review": "The Proteus II is widely regarded as one of the warmest 5mm suits you can buy, thanks to a plush thermal lining, a Hydrolock inner neck seal and Glideskin wrist seals that together choke off flushing. It is cut from stretchy neoprene that gives excellent range of motion while keeping a snug, water-tight fit, and the recycled linings reflect the brand's sustainability focus. Divers choose it for prolonged dives in water around 19°C and up where they want maximum comfort and minimal heat loss.",
-       "image": "assets/gear/fourth-element-proteus-ii.jpg",
+       "image": "assets/gear/studio/fourth-element-proteus-ii.jpg",
        "specs": {
         "Thickness": "5mm",
         "Material": "Stretch neoprene with recycled thermal lining",
