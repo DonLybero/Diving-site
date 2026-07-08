@@ -1,0 +1,44 @@
+name: Fetch a URL to a branch
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL to download"
+        required: true
+      name:
+        description: "Output file name"
+        required: false
+        default: "out.bin"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        env:
+          U: ${{ inputs.url }}
+          N: ${{ inputs.name }}
+        run: |
+          mkdir -p urlfetch
+          code=$(curl -sL --max-time 300 \
+            -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36" \
+            -H "Accept: */*" -H "Referer: https://www.pexels.com/" \
+            -o "urlfetch/$N" -w "%{http_code}" "$U")
+          echo "HTTP $code"
+          ls -la urlfetch
+          file "urlfetch/$N" || true
+          head -c 300 "urlfetch/$N" | strings | head -5 || true
+      - name: Push to orphan branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan url-fetch
+          git rm -rf --cached . >/dev/null
+          git add -f urlfetch
+          git commit -m "URL fetch (automated)"
+          git push -f origin url-fetch
