@@ -473,5 +473,185 @@
   "url": null,
   "colors_hint": [],
   "shopify": false
+ },
+ "Aqua Lung Plazma": {
+  "url": "https://us.aqualung.com/products/plazma-dive-mask",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Aqualung i470TC": {
+  "url": "https://us.aqualung.com/products/i470tc-dive-computer",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Mares Sirius": {
+  "url": "https://www.mares.com/en/sirius-414145",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Mares Prestige SLS": {
+  "url": "https://www.mares.com/en/prestige-sls-man-5",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Cressi Ace": {
+  "url": "https://cressiamerica.com/collections/back-inflation-bcds",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Cressi Calibro": {
+  "url": "https://cressiamerica.com/products/calibro-mask",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Beuchat Maxlux S": {
+  "url": "https://www.beuchat-sports.com/gb/products/149-maxlux-s.html",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Beuchat Powerjet": {
+  "url": "https://www.beuchat-sports.com/gb/products/197-powerjet-avec-sangles-a-ressorts.html",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Beuchat VR 300": {
+  "url": "https://www.beuchat-diving.com/gb/products/478-vr-300.html",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Beuchat Masterlift X-Air Comfort": {
+  "url": "https://www.beuchat-sports.com/gb/products/143-masterlift-x-air-comfort.html",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Beuchat Focea Comfort 6": {
+  "url": "https://www.beuchat-diving.com/gb/products/376-focea-comfort-5-homme-monopiece-col.html",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Beuchat Optima 2": {
+  "url": "https://www.beuchat-sports.com/gb/wetsuits-diving/753-optima-2-3278555355013.html",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Shearwater Perdix 3": {
+  "url": "https://shearwater.com/products/perdix-3",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Shearwater Teric": {
+  "url": "https://shearwater.com/products/teric",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Shearwater Tern TX": {
+  "url": "https://shearwater.com/products/tern-tx",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Suunto Nautic": {
+  "url": "https://www.suunto.com/Products/dive-computers-and-instruments/suunto-nautic/suunto-nautic-elastic-textile/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Garmin Descent X50i": {
+  "url": "https://www.garmin.com/en-US/p/985238/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Bare Velocity Ultra 2.0 5mm": {
+  "url": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/5mm-velocity-ultra-full-2-0/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Henderson Aqua Lock 7mm": {
+  "url": "https://hendersonusa.com/aqualock-promo/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Fourth Element Xenos ARC 5mm": {
+  "url": "https://fourthelement.com/product/mens-xenos-arc-5mm-wetsuit/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Waterproof W5 3.5mm": {
+  "url": "https://waterproof-usa.com/products/wetsuits/w5/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Waterproof W30 2.5mm Women's": {
+  "url": "https://waterproof-usa.com/products/wetsuits/w30/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Pinnacle Cruiser 3mm": {
+  "url": "http://www.pinnacleaquatics.com/cruiser",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "O'Neill Epic 4/3mm": {
+  "url": "https://us.oneill.com/products/4212b-gr2-epic-4-3-bz-full",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Scubapro Seawing Supernova": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/fins/seawing-supernova-fin",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Scubapro Galileo 3 (G3)": {
+  "url": "https://scubapro.johnsonoutdoors.com/us/shop/computers/wrist-computers/galileo-3-g3-wrist-dive-computer",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Apeks XL4+": {
+  "url": "https://us.apeksdiving.com/products/xl4-1st-stage-dive-regulator",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Apeks VX1": {
+  "url": "https://us.apeksdiving.com/products/vx1-dive-mask",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Atomic Aquatics BC1": {
+  "url": "https://www.atomicaquatics.com/products/bcd/bc1/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "Atomic Aquatics B2": {
+  "url": "https://www.atomicaquatics.com/products/regulators/b2-regulator/",
+  "colors_hint": [],
+  "shopify": true
+ },
+ "TUSA Paragon": {
+  "url": "https://tusa.com/us-en/TUSA/Masks/Paragon",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Hollis M3": {
+  "url": "https://www.hollis.com/product/m3-mask-black/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Hollis F1 Bat Fin": {
+  "url": "https://www.hollis.com/product/f1-bat-fin/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Zeagle F8": {
+  "url": "https://www.zeagle.com/product/airways/regulators/f8-regulator/",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "xDeep Ghost Deluxe": {
+  "url": "https://www.xdeep.eu/lightweight-traveler-scuba-bcd-ghost-bc-system-pr-51.html",
+  "colors_hint": [],
+  "shopify": false
+ },
+ "Sherwood Avid CQR-3": {
+  "url": "https://www.sherwoodscuba.com/products/buoyancy-compensators/products/~743-Avid",
+  "colors_hint": [],
+  "shopify": true
  }
 }

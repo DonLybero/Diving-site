@@ -506,6 +506,192 @@
       "White": "assets/gear/studio/hero/cressi-f1-frameless--white.jpg",
       "Yellow": "assets/gear/studio/hero/cressi-f1-frameless--yellow.jpg"
      }
+    },
+    {
+     "rank": 11,
+     "name": "Aqua Lung Plazma",
+     "blurb": "A frameless single-lens mask with an exceptionally soft double-seal skirt that fits a wide range of faces. One of the most comfortable all-round scuba masks in Aqua Lung's current line.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 135.0,
+       "url": "https://www.scuba.com/p-udrmpl/aqua-lung-plazma-frameless-mask"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 129.0,
+       "url": "https://www.divers-supply.com/aqualung-plazma-mask.html"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 89.99,
+       "url": "https://www.tradeinn.com/diveinn/en/aqualung-plazma-diving-mask/137342219/p"
+      }
+     ],
+     "review": "The Plazma's headline feature is its Advanced Fit Technology skirt: a second, ultra-thin silicone flange sits inside the main seal, so it grips without pressing hard on the face even on long repetitive dives. The frameless build keeps the tempered lens close to the eyes for a wide, undistorted field of view and a low internal volume that clears with a small puff. Push-button buckles mounted directly on the skirt fold flat, so it packs into a BCD pocket as a travel backup. The skirt is noticeably softer than most rivals, which helps divers who normally struggle to get a seal, though very narrow faces should try before buying. It comes in several skirt and lens-trim colors, including a white version that brightens the view for photo models.",
+     "specs": {
+      "Design": "Frameless, single tempered lens",
+      "Skirt": "Silicone with double-flange Advanced Fit seal",
+      "Volume": "Low",
+      "Buckles": "Skirt-mounted push-button, fold flat for packing",
+      "Weight": "About 190 g",
+      "Colors": "Black, white, clear, blue, green skirt options"
+     }
+    },
+    {
+     "rank": 12,
+     "name": "Cressi Calibro",
+     "blurb": "A low-volume twin-lens mask with Cressi's Fog Stop system, which routes exhaled air away from the lenses. One of the few masks engineered specifically against fogging.",
+     "options": [
+      {
+       "store": "Cressi Official Store",
+       "price_usd": 89.95,
+       "url": "https://store.cressi.com/products/calibro-mask"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 99.95,
+       "url": "https://www.divers-supply.com/cressi-calibro-mask.html"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 59.99,
+       "url": "https://www.tradeinn.com/diveinn/en/cressi-calibro-diving-mask/136809876/p"
+      }
+     ],
+     "review": "The Calibro's party trick is the Fog Stop System: raised channels in the nose pocket deflect warm exhaled air downward and out of the skirt instead of letting it wash over the glass, and in practice it fogs noticeably less than conventional twin-lens designs. Cressi's Integrated Dual Frame construction bonds the tempered lenses directly into the skirt, keeping internal volume low and the glass close to the eyes for a wide field of view. The result sits tight to the face, clears with minimal air and equalizes easily with a soft, grippy nose pocket. The silicone skirt seals reliably on medium to narrower faces; larger faces should look at Cressi's bigger-skirted models instead. Micrometric buckles on flexible skirt tabs make one-handed strap adjustments simple with thick gloves.",
+     "specs": {
+      "Design": "Twin tempered lenses, Integrated Dual Frame",
+      "Anti-fog": "Fog Stop exhalation channeling",
+      "Volume": "Low",
+      "Skirt": "Hypoallergenic silicone, medium-narrow fit",
+      "Buckles": "Micrometric, skirt-mounted flexible tabs",
+      "Colors": "Black, blue, white, mirrored-lens version"
+     }
+    },
+    {
+     "rank": 13,
+     "name": "Beuchat Maxlux S",
+     "blurb": "Frameless single-lens mask with the silicone skirt molded directly onto the tempered glass, cutting internal volume to 127 cm3. Built for narrow-to-medium faces that leak in standard skirts.",
+     "options": [
+      {
+       "store": "Diveinn",
+       "price_usd": 44.49,
+       "url": "https://www.tradeinn.com/diveinn/en/beuchat-maxlux-s-diving-mask/1236651/p"
+      },
+      {
+       "store": "Scuba.com",
+       "price_usd": 59.95,
+       "url": "https://www.scuba.com/p-bchmmbc/beuchat-maxlux-s-mask"
+      },
+      {
+       "store": "American Dive Co",
+       "price_usd": 79.95,
+       "url": "https://americandiveco.com/products/beuchat-maxlux-s-frameless-dive-mask"
+      }
+     ],
+     "review": "The Maxlux S clears with a short nose-exhale because there is so little air space to purge, and it sits close enough to the eyes that peripheral vision stays open on wall dives. The compact skirt seals well on slim faces where wider frames channel water in at the temples. Buckles mount on the skirt itself, so the mask folds flat into a BCD pocket as a backup. The soft silicone stays comfortable over a 60-minute dive without leaving a pressure line across the forehead. At its street price it undercuts most low-volume frameless masks by a wide margin.",
+     "specs": {
+      "Type": "Frameless, single lens",
+      "Internal volume": "127 cm3",
+      "Lens": "Tempered glass",
+      "Skirt": "Soft silicone molded to the lens",
+      "Fit": "Narrow to medium faces",
+      "Buckles": "Skirt-mounted, fold-flat for packing"
+     }
+    },
+    {
+     "rank": 14,
+     "name": "Apeks VX1",
+     "blurb": "A frameless, low-volume single-lens mask built around Apeks's Pure Clear lens glass for high light transmission. Designed for technical divers but light and comfortable enough for any level.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 179.0,
+       "url": "https://www.scuba.com/p-apxvx1/apeks-vx1-dive-mask"
+      },
+      {
+       "store": "House of Scuba",
+       "price_usd": 179.0,
+       "url": "https://www.houseofscuba.com/products/msk434"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 84.99,
+       "url": "https://www.tradeinn.com/diveinn/en/apeks-vx1-diving-mask/137342224/p"
+      }
+     ],
+     "review": "The VX1's Pure Clear lens uses low-iron glass, so colors underwater look noticeably less green-tinted than through standard tempered lenses — the difference is obvious on deeper reef dives. The surgical-grade silicone skirt mixes matte and gloss surfaces to seal reliably across a wide range of faces without pressure points, and the low internal volume clears with a short exhale. Quick-release buckles ride on stainless steel rollers, and the mask ships with a spare neoprene strap (kinder to long hair than silicone) plus a rigid case with an external clip. A UV Cut lens version is available for divers who spend long surface intervals in the sun. Frameless construction means it folds flat into a BCD pocket as a backup mask too.",
+     "specs": {
+      "Construction": "Frameless, single lens",
+      "Lens": "Pure Clear low-iron glass; UV Cut version available",
+      "Skirt": "Surgical-grade silicone, matte and gloss sealing zones",
+      "Volume": "Low",
+      "Buckles": "Quick-release on stainless steel rollers",
+      "Included": "Spare neoprene strap, rigid case with clip"
+     }
+    },
+    {
+     "rank": 15,
+     "name": "TUSA Paragon",
+     "blurb": "TUSA's flagship two-window mask pairs a reinforced tri-hybrid frame with optical-grade lenses that filter UV and cut internal reflections. A five-position strap adjuster fine-tunes the pull angle for long dives.",
+     "options": [
+      {
+       "store": "House of Scuba",
+       "price_usd": 250.0,
+       "url": "https://www.houseofscuba.com/products/msk366"
+      },
+      {
+       "store": "Scuba.com",
+       "price_usd": 250.0,
+       "url": "https://www.scuba.com/p-tbtmp/tusa-paragon-mask"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 250.0,
+       "url": "https://www.divers-supply.com/tusa-paragon-mask.html"
+      }
+     ],
+     "review": "The Paragon's CrystalView lenses are the headline: AR-coated, UV 420-treated tempered glass that noticeably reduces glare on shallow reef dives. The Freedom Fit II skirt uses varied silicone thickness and ridged sealing zones, and it holds a seal on narrow faces better than most two-window designs. Build quality is a step above TUSA's mid-range masks — the frame is stiff enough to take corrective lenses without flexing the seal. It sits at the premium end for a two-window mask, and the buckle system feels over-engineered until you adjust strap angle mid-dive with gloves on. Corrective lenses from -1.0 to -8.0 dioptres are available separately.",
+     "specs": {
+      "Design": "Two-window, low volume",
+      "Frame": "Reinforced tri-hybrid construction",
+      "Lenses": "CrystalView tempered glass, UV 420 + anti-reflective coating",
+      "Skirt": "Freedom Fit II silicone with ridged seal zones",
+      "Strap": "Five-position quick-adjust buckles",
+      "Prescription ready": "Yes, corrective lenses -1.0 to -8.0"
+     }
+    },
+    {
+     "rank": 16,
+     "name": "Hollis M3",
+     "blurb": "A low-profile two-lens mask built around extra-clear, low-iron tempered glass and a matte black skirt that kills stray glare. Hollis's pick for divers who want maximum light transmission without a frameless design.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 134.95,
+       "url": "https://www.scuba.com/p-hlsmm3/hollis-m3-mask"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 91.99,
+       "url": "https://www.tradeinn.com/diveinn/en/hollis-m-3-diving-mask/604363/p"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 134.95,
+       "url": "https://www.divers-supply.com/hollis-m3-mask.html"
+      }
+     ],
+     "review": "The M3's glass is the reason to buy it: low-iron lenses pass visibly more light than standard tempered glass, which matters at depth and on night dives. The matte-finish black silicone skirt is deliberately anti-reflective inside, so you don't get the mirror effect glossy skirts produce in bright shallows. Volume is low enough for easy clearing, and the rigid frame keeps the seal stable when a camera housing bumps it. Fit runs medium — narrow faces do well, very wide faces should try before buying. At its usual price it undercuts most premium two-lens masks while giving up little.",
+     "specs": {
+      "Design": "Two-lens, low volume",
+      "Lenses": "Extra-clear low-iron tempered glass",
+      "Skirt": "Matte-finish black silicone, anti-glare",
+      "Frame": "Rigid low-profile frame",
+      "Buckles": "Quick-adjust swivel buckles",
+      "Colors": "Black, white"
+     }
     }
    ],
    "title": "Top Masks in 2026",
@@ -869,6 +1055,100 @@
       "Weight/fin": "~1.1kg (R)",
       "Best for": "Tec/drysuit, frog kick"
      }
+    },
+    {
+     "rank": 11,
+     "name": "Beuchat Powerjet",
+     "blurb": "Tri-material open-heel fin at about 1020 g per fin, sold in two blade stiffnesses: Regular Flex (yellow or blue) for relaxed cruising and Firm Flex (black) for stronger kickers.",
+     "options": [
+      {
+       "store": "Diveinn",
+       "price_usd": 92.99,
+       "url": "https://www.tradeinn.com/diveinn/en/beuchat-powerjet-diving-fins/1236639/p"
+      },
+      {
+       "store": "Nootica",
+       "price_usd": 125.99,
+       "url": "https://www.nootica.com/scuba-diving-fins-beuchat-powerjet-black.html"
+      },
+      {
+       "store": "Dive Avenue",
+       "price_usd": 141.95,
+       "url": "https://www.diveavenue.com/en/diving-fins/3443-beuchat-adjustable-powerjet-fin.html"
+      }
+     ],
+     "review": "The Powerjet's side rails act as springs, loading on the downstroke and snapping the blade back, while an ultra-soft tip creates a spoon effect that keeps thrust smooth instead of jerky. The blade runs continuously into the foot pocket down to the heel, so less kick energy is lost between foot and fin. Regular Flex suits divers who frog-kick or pace themselves on long reef swims; Firm Flex rewards a faster flutter kick and holds better against current. Foot pockets are cut for modern dive boots, and the buckles are detachable and quick to adjust; a stainless spring-strap version exists for cold-water glove users.",
+     "specs": {
+      "Type": "Open heel, adjustable strap",
+      "Construction": "Tri-material blade and pocket",
+      "Weight": "About 1020 g per fin",
+      "Stiffness options": "Regular Flex (yellow, blue); Firm Flex (black)",
+      "Blade": "Spring-effect side rails, flexible spoon tip",
+      "Straps": "Quick-adjust buckles; spring straps available"
+     }
+    },
+    {
+     "rank": 12,
+     "name": "Scubapro Seawing Supernova",
+     "blurb": "Scubapro's flagship open-heel fin, an evolution of the Seawing Nova with a stiffer wing-shaped blade that separates from the foot pocket for packing. The blade auto-adjusts its angle of attack to your kick strength.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 299.0,
+       "url": "https://www.scuba.com/p-scpssf/scubapro-seawing-supernova-fin"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 189.99,
+       "url": "https://www.tradeinn.com/diveinn/en/scubapro-seawing-supernova-oh-diving-fins/138845116/p"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 299.0,
+       "url": "https://www.divers-supply.com/scubapro-seawing-supernova-fins.html"
+      }
+     ],
+     "review": "The Supernova moves a lot of water for its size: a pivoting central panel softens the blade on a cruising kick and firms it up when you push hard into current, so it suits relaxed reef dives and drift dives equally well. Twin winglets at the tips keep the blade tracking straight and make frog kicks and helicopter turns tidier than most paddle-style travel fins, though dedicated back-kickers will still prefer a heavy rubber fin. The two-piece design is genuinely useful — blades and pockets nest flat in a carry-on, and a separate full-foot pocket converts the same blades for warm-water use. Bungee heel straps with a large pull loop make donning on a pitching boat easy. It costs more than most fins in its class, but the build quality supports the price.",
+     "specs": {
+      "Style": "Open-heel blade (full-foot pocket sold separately)",
+      "Blade": "Auto-adjusting angle of attack with twin-tip winglets",
+      "Construction": "Two-piece modular; blade detaches from foot pocket for travel",
+      "Material": "Monprene elastomer, three-compound moulding",
+      "Strap": "Heavy-duty bungee with pull loop",
+      "Sizes": "XS to XL",
+      "Colors": "Black, White"
+     }
+    },
+    {
+     "rank": 13,
+     "name": "Hollis F1 Bat Fin",
+     "blurb": "A negatively buoyant, vented-blade technical fin molded from a single slab of Monprene with stainless spring straps as standard. The default choice for drysuit and doubles divers who frog kick.",
+     "options": [
+      {
+       "store": "Dive Right In Scuba",
+       "price_usd": 259.95,
+       "url": "https://www.diverightinscuba.com/f1-tech-fin.html"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 172.99,
+       "url": "https://www.tradeinn.com/diveinn/en/hollis-f1-bat-diving-fins/13194/p"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 259.95,
+       "url": "https://www.divers-supply.com/hollis-f-1-fin.html"
+      }
+     ],
+     "review": "The F1 is built for control rather than speed: the short, stiff vented blade gives precise frog kicks, back kicks and helicopter turns, which is exactly what wreck and cave divers want. Negative buoyancy keeps your feet down in a drysuit, though warm-water divers with buoyant boots may find them heavy — that's what the lighter F1 LT variant is for. The oversized foot pocket swallows rock boots and 7 mm neoprene without a fight. Spring heel straps ship in the box, not as an upsell, and the one-piece Monprene molding has no bonded joints to fail. At roughly 2 kg per fin in the larger sizes, budget for it in your luggage allowance.",
+     "specs": {
+      "Material": "One-piece molded Monprene elastomer",
+      "Blade": "Vented paddle, short and stiff",
+      "Buoyancy": "Negative",
+      "Straps": "Stainless steel spring straps included",
+      "Foot pocket": "Oversized, fits rock boots and drysuit boots",
+      "Sizes": "S to XXL"
+     }
     }
    ],
    "title": "Top Fins in 2026",
@@ -1196,6 +1476,127 @@
       "Ports": "2 HP / 5 LP (swivel)",
       "Weight": "~3 lb / 1.36 kg w/ hose",
       "Nitrox": "40% out of box"
+     }
+    },
+    {
+     "rank": 11,
+     "name": "Beuchat VR 300",
+     "blurb": "Beuchat's current top-of-range regulator, machined and assembled in the Marseille factory and individually tuned on a hyperbaric test bench before it ships. Built specifically for temperate and cold water.",
+     "options": [
+      {
+       "store": "Diveinn",
+       "price_usd": 455.99,
+       "url": "https://www.tradeinn.com/diveinn/en/beuchat-vr300-din-diving-regulator-set-300-bar/137478523/p"
+      },
+      {
+       "store": "Dive Avenue",
+       "price_usd": 468.95,
+       "url": "https://www.diveavenue.com/en/regulators-regulators/3505-beuchat-vr-300-regulator.html"
+      },
+      {
+       "store": "Spearfishing Experts",
+       "price_usd": 539.95,
+       "url": "https://spearfishingexperts.com/products/beuchat-vr300-regulator"
+      }
+     ],
+     "review": "The VR 300 pairs a balanced diaphragm first stage in bright chrome-plated brass with a pneumatically balanced second stage, so inhalation effort stays flat as tank pressure drops from 200 bar to reserve. The diaphragm design seals the internal mechanism from water and silt, and the anti-icing package carries over from Beuchat's earlier cold-water regulators with improved frost resistance, which matters below 10 degrees C. The second stage has an adjustable Venturi lever and a large soft purge cover that works in thick gloves. Two HP and four MP ports leave room for a transmitter, drysuit hose, octopus and gauge without a crowded turret. Bench-testing every unit individually is rare at this price point.",
+     "specs": {
+      "First stage": "Balanced diaphragm, chrome-plated brass",
+      "Second stage": "Pneumatically balanced, adjustable Venturi",
+      "Ports": "2 HP, 4 MP",
+      "Connection": "DIN 300 bar or yoke 232 bar",
+      "Cold water": "Anti-icing design for water below 10 degrees C",
+      "Origin": "Made in France, individually bench-tested"
+     }
+    },
+    {
+     "rank": 12,
+     "name": "Apeks XL4+",
+     "blurb": "A compact, cold-water-rated regulator pairing an environmentally sealed over-balanced diaphragm first stage with a small pneumatically balanced second stage. Light enough in the mouth to double as a stage or travel reg.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 619.0,
+       "url": "https://www.scuba.com/p-apxxl4dn/apeks-xl4-din-regulator"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 619.0,
+       "url": "https://www.divers-supply.com/apeks-xl4-plus-regulator.html"
+      },
+      {
+       "store": "Dive Right In Scuba",
+       "price_usd": 619.0,
+       "url": "https://www.diverightinscuba.com/apeks-xl4-regulator.html"
+      }
+     ],
+     "review": "The XL4+ takes the cold-water DNA of Apeks's larger MTX and XTX regulators and puts it in a smaller, lighter package: the forged first stage is fully sealed against silt and ice, and the second stage carries a heat exchanger around the valve, so it stays composed in water near freezing. The small second stage body is the real selling point — noticeably less jaw fatigue over a long dive than full-size regs, which is why technical divers also buy it as a stage regulator. Breathing effort stays low and dry through the pneumatically balanced valve, with an integrated venturi lever rather than fiddly separate controls. Four medium-pressure and two high-pressure ports cover a full single-tank setup. It gives up a little top-end airflow to Apeks's flagship models but costs considerably less.",
+     "specs": {
+      "First stage": "Over-balanced diaphragm, forged body, environmentally sealed",
+      "Second stage": "Pneumatically balanced with integrated venturi lever",
+      "Cold water": "Rated for cold water; second-stage heat exchanger",
+      "Ports": "2 HP (7/16\" UNF), 4 MP (3/8\" UNF)",
+      "Weight": "905 g (DIN), 1041 g (yoke)",
+      "Connection": "DIN or yoke, same price"
+     }
+    },
+    {
+     "rank": 13,
+     "name": "Atomic Aquatics B2",
+     "blurb": "Atomic's mid-range regulator pairs the titanium-component second stage of the flagship T3 with a chrome-plated brass balanced-piston first stage. Same breathing performance, roughly half the price.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 969.95,
+       "url": "https://www.scuba.com/p-atmb2s/atomic-aquatics-b2-regulator-yoke"
+      },
+      {
+       "store": "House of Scuba",
+       "price_usd": 969.95,
+       "url": "https://www.houseofscuba.com/products/reg75"
+      },
+      {
+       "store": "Dive Right In Scuba",
+       "price_usd": 969.95,
+       "url": "https://www.diverightinscuba.com/regulatorsoctosregulators-atomicaquatics-b2regulator-p-2609.html"
+      }
+     ],
+     "review": "The B2 breathes like Atomic's top-end regulators because the second stage essentially is one: titanium internals, a pneumatically balanced valve and Atomic's Automatic Flow Control, which adjusts the venturi as you descend so you never touch a dive/pre-dive knob. Inhalation stays light and consistent from the surface to depth, and the seat-saving orifice lifts off the seat between dives, which is a big part of why Atomic backs a 2-year or 300-dive service interval — double most competitors. The balanced-piston first stage flows generously for sharing air or towing a tired buddy, and an optional factory-sealed version keeps silt and cold water out of the mechanism. It handles nitrox to 40% out of the box. Heavier than a titanium T-series reg, but for the money it is one of the strongest performers in its class.",
+     "specs": {
+      "First stage": "Balanced piston, chrome-plated brass; optional factory-sealed",
+      "Second stage": "Pneumatically balanced, titanium components",
+      "Venturi": "Automatic Flow Control, depth-compensating",
+      "Seat": "Seat-saving dynamic orifice",
+      "Nitrox": "Up to 40% out of the box",
+      "Service interval": "2 years or 300 dives",
+      "Connection": "Yoke or DIN"
+     }
+    },
+    {
+     "rank": 14,
+     "name": "Zeagle F8",
+     "blurb": "Zeagle's top regulator pairs a dry-sealed balanced diaphragm first stage with a pneumatically balanced second stage. Sealed internals make it a natural pick for cold water and silty environments.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 749.95,
+       "url": "https://scuba.com/products/zeagle-f8-yoke-regulator"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 749.95,
+       "url": "https://www.divers-supply.com/zeagle-f8-regulator.html"
+      }
+     ],
+     "review": "The F8's first stage is environmentally dry-sealed, so no water touches the main spring — that means consistent performance in cold water and no salt or sediment intrusion between services. Breathing effort stays flat across tank pressures thanks to the balanced diaphragm design, and the pneumatically balanced second stage delivers air smoothly at depth. The diver-adjustable venturi lever tames free-flow at the surface, and the braided flex hose reduces jaw fatigue on long dives. Port count is generous enough for a full recreational or light technical setup. It has held its price for years because Zeagle has not needed to replace it.",
+     "specs": {
+      "First stage": "Balanced diaphragm, environmentally dry-sealed",
+      "Second stage": "Pneumatically balanced",
+      "Ports": "5 low-pressure, 2 high-pressure",
+      "Adjustment": "Diver-adjustable venturi lever",
+      "Hose": "Braided flex hose",
+      "Connection": "Yoke or DIN 232 bar versions",
+      "Cold water rated": "Yes"
      }
     }
    ],
@@ -1537,6 +1938,183 @@
       "Wt-integrated": "Yes",
       "Material": "1000D nylon shell",
       "Travel": "Excellent"
+     }
+    },
+    {
+     "rank": 11,
+     "name": "Mares Prestige SLS",
+     "blurb": "A classic jacket-style BCD in 420-denier Cordura with Mares' Slide & Lock integrated weight system. A dependable choice for divers who want surface stability and plenty of pocket space.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 479.95,
+       "url": "https://www.scuba.com/p-mrsprs/mares-prestige-sls-bcd"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 459.0,
+       "url": "https://www.divers-supply.com/mares-prestige-sls-bcd.html"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 338.99,
+       "url": "https://www.tradeinn.com/diveinn/en/mares-prestige-sls-bcd-jacket/136794637/p"
+      }
+     ],
+     "review": "The Prestige SLS is the traditional jacket done properly: the air cell wraps the sides and back, so it floats you upright and high at the surface, and swiveling shoulder buckles plus an elastic cummerbund keep the fit even as a wetsuit compresses at depth. The Slide & Lock weight pockets take up to about 6 kg per side and give clear visual confirmation they are seated - though the loading motion takes practice, so rehearse it before open water. Three pull dumps cover every attitude in the water, and the big self-draining zip pockets swallow an SMB and spool with room left over. At roughly 3.5 kg it is no travel featherweight, but the 420-denier Cordura shell shrugs off boat decks and rental-grade abuse. It is a strong pick for divers who find back-inflation wings pushy at the surface.",
+     "specs": {
+      "Style": "Jacket / wraparound air cell",
+      "Material": "420-denier Cordura",
+      "Weight system": "SLS integrated, about 6 kg per pocket",
+      "Trim pockets": "2 rear",
+      "Dump valves": "3 pull dumps",
+      "Lift": "Approx. 110-170 N by size",
+      "Weight": "About 3.5 kg (size M)"
+     }
+    },
+    {
+     "rank": 12,
+     "name": "Cressi Ace",
+     "blurb": "A lightweight back-inflation BCD with a rigid backplate and Cressi's Flat-Lock-Aid weight system. It flies with streamlined trim underwater yet stows gear like a jacket.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 419.95,
+       "url": "https://www.scuba.com/p-csba/cressi-ace-bcd"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 539.95,
+       "url": "https://www.divers-supply.com/cressi-ace-bcd.html"
+      }
+     ],
+     "review": "The Ace puts the whole air cell behind the diver, so it trims flat and horizontal underwater without the chest squeeze of a jacket, while an elastic compression strap cinches the 420-denier bladder tight as it deflates to cut drag. Unusually for a back-inflate, it also does well where jackets normally win: gear stowage is generous thanks to multipurpose zip pockets and eight D-rings, and the wraparound harness keeps the surface floating position comfortable rather than face-forward. The Flat-Lock-Aid pockets hold up to 4.5 kg each, release with one clean pull and are easy to hand up to the boat. The ultralight rigid backplate with a molded carrying handle locks the tank solidly - no wobble on giant stride entries. It suits divers stepping up from rental jackets who want better trim without going full backplate-and-wing.",
+     "specs": {
+      "Style": "Back inflation",
+      "Air cell": "420-denier nylon with compression strap",
+      "Weight system": "Flat-Lock-Aid, 4.5 kg per pocket",
+      "Trim pockets": "2 rear",
+      "Backplate": "Rigid ultralight with carrying handle",
+      "D-rings": "4 x 50 mm plus 4 x 25 mm",
+      "Lift": "Approx. 130-225 N by size"
+     }
+    },
+    {
+     "rank": 13,
+     "name": "Beuchat Masterlift X-Air Comfort",
+     "blurb": "Jacket-style BCD with an anatomically shaped bladder that wraps from the back around the sides, scaling lift from 120 N in XS to 310 N in XL. The weight system carries up to 15 kg between quick-release and trim pockets.",
+     "options": [
+      {
+       "store": "Diveinn",
+       "price_usd": 526.49,
+       "url": "https://www.tradeinn.com/diveinn/en/beuchat-masterlift-x-air-comfort-bcd-jacket/135339/p"
+      },
+      {
+       "store": "Nootica",
+       "price_usd": 576.95,
+       "url": "https://www.nootica.com/bcd-diving-beuchat-masterlift-x-air-comfort.html"
+      },
+      {
+       "store": "Spear America",
+       "price_usd": 799.95,
+       "url": "https://www.spearamerica.com/products/beuchat-masterlift-x-air-comfort-bcd"
+      }
+     ],
+     "review": "The X-Air bladder puts buoyancy behind and beside you rather than squeezing the chest when fully inflated, so surface waits stay comfortable and horizontal trim comes easily at depth. Two 5 kg quick-release pockets sit at the hips and two fixed 2.5 kg pockets on the rear gussets shift lead toward the tank, which flattens leg-heavy divers out. The rigid backpack has foam-padded wraparound lumbar support and drainage vents at the shoulders, back and hips so it dries fast between boat dives. Two large gusseted cargo pockets close with double-slider zips and include an elastic clip lanyard for a torch or SMB. Eight ring fasteners, six of them aluminium, give plenty of stowage without much added weight.",
+     "specs": {
+      "Type": "Jacket style, wraparound bladder",
+      "Lift": "120 N (XS) to 310 N (XL)",
+      "Weight system": "2 x 5 kg quick-release, 2 x 2.5 kg rear trim",
+      "Cargo pockets": "2, gusseted with double-slider zips",
+      "Attachment points": "8 rings (6 aluminium)",
+      "Backpack": "Rigid, foam-padded lumbar wrap",
+      "Sizes": "XS to XL"
+     }
+    },
+    {
+     "rank": 14,
+     "name": "Atomic Aquatics BC1",
+     "blurb": "Atomic's no-compromise jacket BCD, built from double-laminated polyurethane-coated fabric that does not absorb water. The most expensive jacket BC on the market, and built like it.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 1549.95,
+       "url": "https://www.scuba.com/p-atmbc1/atomic-aquatics-bc1-bcd"
+      },
+      {
+       "store": "House of Scuba",
+       "price_usd": 1549.95,
+       "url": "https://www.houseofscuba.com/products/bcd228"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 1549.95,
+       "url": "https://www.divers-supply.com/atomic-bc1-no-inflator.html"
+      }
+     ],
+     "review": "Everything on the BC1 is over-engineered in a way that becomes obvious after a season of boat diving: the coated fabric sheds water instead of soaking it up (so it doesn't gain kilograms on a wet deck or fade in the sun), zippers are self-sealing, and the ratcheting cam-lock tank band clamps a cylinder one-handed with no guesswork. The weight-integrated pockets lock in with a positive mechanical latch rather than velcro, and dump valves and pull points sit exactly where your hands land. In the water it holds you upright at the surface and vents cleanly in a head-down trim. The catch is the price — roughly double other premium jackets, and the inflator is sold separately (standard, SS1 alternate-air or Ai models). For divers who log hundreds of dives a year, the durability math can still work.",
+     "specs": {
+      "Style": "Jacket, weight-integrated",
+      "Fabric": "Double-laminated polyurethane-coated nylon, zero water absorption",
+      "Zippers": "Self-sealing",
+      "Tank band": "Ratcheting cam-lock",
+      "Weight system": "Mechanically latching releasable pockets",
+      "Inflator": "Sold separately (standard, SS1 or Ai power inflator)",
+      "Sizes": "S, M, L, XL"
+     }
+    },
+    {
+     "rank": 15,
+     "name": "xDeep Ghost Deluxe",
+     "blurb": "A travel-weight single-tank backplate-and-wing system at about 2.4 kg complete, built from Cordura fabric and an aerospace-grade aluminum plate. The Deluxe trim adds an adjustable padded harness with quick-release buckles.",
+     "options": [
+      {
+       "store": "Dive Right In Scuba",
+       "price_usd": 809.0,
+       "url": "https://www.diverightinscuba.com/nx-ghost-deluxe-single-tank-bcd-package.html"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 598.49,
+       "url": "https://www.tradeinn.com/diveinn/en/xdeep-ghost-deluxe-m-weight-pockets-wing/136806287/p"
+      }
+     ],
+     "review": "The Ghost is what happens when a technical-gear company designs for recreational travel: a full backplate-and-wing that weighs about 2.4 kg and packs flat in a carry-on. The 17.4 kg lift wing is cut narrow so it does not taco around the tank, and the plate-and-wing geometry puts you in horizontal trim with minimal effort. The Deluxe harness is the version to get for most divers — it adjusts without rethreading webbing and its quick-release buckles make donning in a rocking boat far easier than a fixed one-piece harness. Cordura 1100 fabric shrugs off boat decks and rental-tank valves. It costs more than a jacket BCD of similar spec, but it replaces separate travel and home rigs.",
+     "specs": {
+      "Configuration": "Backplate and wing, single tank",
+      "Lift": "17.4 kg",
+      "Weight": "About 2.4 kg complete",
+      "Shell": "Cordura 1100 dtex",
+      "Backplate": "Lightweight aluminum alloy",
+      "Harness": "Deluxe adjustable, quick-release buckles",
+      "Tank compatibility": "Single cylinders up to 15 L, 140-240 mm diameter"
+     }
+    },
+    {
+     "rank": 16,
+     "name": "Sherwood Avid CQR-3",
+     "blurb": "A full-featured jacket BCD with Sherwood's CQR-3 quick-release integrated weight system and seven-size range from XS to 3XL. A workhorse for divers who want wrap-around buoyancy and lots of attachment points.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 604.95,
+       "url": "https://www.scuba.com/p-swdav7/sherwood-avid-cqr-3-bcd-2018-model"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 604.95,
+       "url": "https://www.divers-supply.com/sherwood-avid-bcd.html"
+      }
+     ],
+     "review": "The Avid is the jacket BCD Sherwood has refined rather than reinvented, and it shows in the details: the CQR-3 weight pockets lock with a positive click you can feel through gloves and release with one firm pull. Wrap-around air distribution makes surface floating restful, which newer divers and instructors doing long surface intervals appreciate. Six stainless steel D-rings and dual tank bands give it more carrying and stability capacity than most jackets at this price. The padded neck roll eliminates chafing on repetitive liveaboard days. It is bulkier to pack than travel rigs, so treat it as a home-waters and local-boat BCD rather than a suitcase one.",
+     "specs": {
+      "Style": "Jacket, wrap-around air cell",
+      "Weight system": "CQR-3 quick-release integrated pockets",
+      "D-rings": "6 stainless steel",
+      "Tank bands": "Dual cam bands",
+      "Sizes": "XS to 3XL, seven sizes",
+      "Pockets": "Two zippered cargo pockets",
+      "Padding": "Neoprene-padded neck roll"
      }
     }
    ],
@@ -1887,6 +2465,257 @@
       "Depth rating": "100m (operating)",
       "Modes": "Air/Nitrox/Trimix/CCR/Gauge"
      }
+    },
+    {
+     "rank": 11,
+     "name": "Aqualung i470TC",
+     "blurb": "A watch-style dive computer with Bluetooth and optional hoseless air integration at a mid-range price. Slim enough to wear daily, capable enough for multi-gas nitrox diving.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 499.0,
+       "url": "https://www.scuba.com/p-udri470/aqua-lung-i470tc-wrist-computer"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 449.95,
+       "url": "https://www.divers-supply.com/aqua-lung-i470tc-computer-black.html"
+      },
+      {
+       "store": "House of Scuba",
+       "price_usd": 499.0,
+       "url": "https://www.houseofscuba.com/products/aqua-lung-i470tc-wrist-dive-computer-with-air-integration"
+      }
+     ],
+     "review": "The i470TC packs air integration, a digital compass and three-gas nitrox switching into a watch-sized case that costs roughly half what flagship watch computers do. Pair it with a tank transmitter and it shows cylinder pressure and air-time remaining on the wrist; it can monitor up to four transmitters, which suits instructors keeping an eye on students. Bluetooth syncs dives to the DiverLog+ app, so there is no cable to lose, and the battery is user-replaceable rather than a sealed rechargeable. The segment LCD is sharp and the backlight is adequate, but divers over 40 may prefer a larger screen for reading at depth. Menu logic follows Aqualung's familiar four-button pattern, so upgrading from an i300 or i330R feels immediate.",
+     "specs": {
+      "Modes": "Air, nitrox, gauge, free",
+      "Gas mixes": "3 nitrox mixes, 21-100% O2",
+      "Air integration": "Optional hoseless, up to 4 transmitters",
+      "Compass": "Integrated digital",
+      "Connectivity": "Bluetooth to DiverLog+ app",
+      "Battery": "User-replaceable coin cell",
+      "Depth rating": "100 m"
+     }
+    },
+    {
+     "rank": 12,
+     "name": "Mares Sirius",
+     "blurb": "Mares' flagship watch-style computer, with a color memory-in-pixel display, rechargeable battery and full trimix capability. Built for divers who want one instrument from reef dives to extended-range trips.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 1097.95,
+       "url": "https://www.scuba.com/p-mrssrwc/mares-sirius-wrist-computer"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 949.0,
+       "url": "https://www.divers-supply.com/mares-sirius-computer-black.html"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 799.0,
+       "url": "https://www.tradeinn.com/diveinn/en/mares-sirius-dive-computer/139380914/p"
+      }
+     ],
+     "review": "The Sirius runs Bühlmann ZH-L16C with adjustable gradient factors and handles up to five nitrox or trimix mixes, so it will not be outgrown by technical training. Recreational divers get a clean, simplified screen, while wireless air integration through the Link tank pod adds cylinder pressure and remaining gas time. The memory-in-pixel color display is exceptionally readable in bright shallow water and sips power - Mares quotes about 30 hours of diving per charge without tank data. In dim conditions the screen depends on its backlight, and the companion app is less polished than the hardware, two points worth knowing before buying. Build quality is excellent, with a compact case, quick-swap straps and vibration alarms that are easy to feel through a 5 mm suit.",
+     "specs": {
+      "Algorithm": "Bühlmann ZH-L16C with gradient factors",
+      "Gas mixes": "Up to 5 nitrox/trimix mixes",
+      "Display": "Color memory-in-pixel (MIP)",
+      "Air integration": "Wireless via Link tank pod",
+      "Battery": "Rechargeable, about 30 h diving per charge",
+      "Connectivity": "Bluetooth to Mares app",
+      "Depth rating": "120 m"
+     }
+    },
+    {
+     "rank": 13,
+     "name": "Shearwater Perdix 3",
+     "blurb": "Shearwater's full-size flagship, relaunched in May 2026 with an ultra-bright AMOLED screen in a titanium-reinforced case. The default pick for divers heading from recreational into technical territory.",
+     "options": [
+      {
+       "store": "Dive Gear Express",
+       "price_usd": 1295,
+       "url": "https://www.divegearexpress.com/shearwater-research-perdix-3"
+      },
+      {
+       "store": "Scuba.com",
+       "price_usd": 1295,
+       "url": "https://www.scuba.com/p-swtp3/shearwater-perdix-3-dive-computer"
+      },
+      {
+       "store": "Shearwater (brand store)",
+       "price_usd": 1295,
+       "url": "https://shearwater.com/products/perdix-3"
+      }
+     ],
+     "review": "The Perdix 3 swaps the long-serving LCD for a 2.4-inch AMOLED panel with four times the resolution of the Perdix 2, and readability improves everywhere from bright surface intervals to silty wrecks. It runs Buhlmann ZHL-16C with adjustable gradient factors and covers open-circuit recreational, open-circuit technical, closed-circuit bailout and gauge diving. Air integration handles up to four Swift transmitters (sold separately), enough for sidemount plus stages. Power still comes from a single user-replaceable 1.5 V AA cell — around 60 hours on a lithium battery, swappable anywhere in the world. Bluetooth is roughly six times faster than before, so log downloads and firmware updates no longer test your patience.",
+     "specs": {
+      "Display": "2.4-inch AMOLED, 450 x 600 px",
+      "Algorithm": "Buhlmann ZHL-16C with gradient factors",
+      "Air integration": "Up to 4 Swift transmitters (sold separately)",
+      "Battery": "User-replaceable 1.5 V AA, ~60 h on lithium cell",
+      "Depth rating": "260 m",
+      "Modes": "OC recreational, OC technical, CC bailout, gauge",
+      "Build": "Titanium construction with armored casing"
+     }
+    },
+    {
+     "rank": 14,
+     "name": "Shearwater Teric",
+     "blurb": "The watch-style Shearwater that made full technical capability wearable to dinner. Years on, it is still current in the lineup and still the benchmark premium dive watch-computer.",
+     "options": [
+      {
+       "store": "Divers Supply",
+       "price_usd": 1199,
+       "url": "https://www.divers-supply.com/shearwater-teric-dive-computer-config.html"
+      },
+      {
+       "store": "Scuba.com",
+       "price_usd": 1199,
+       "url": "https://www.scuba.com/p-swttdc/shearwater-teric-dive-computer"
+      },
+      {
+       "store": "Dive Right In Scuba",
+       "price_usd": 1199,
+       "url": "https://www.diverightinscuba.com/teric-dive-computer.html"
+      }
+     ],
+     "review": "The Teric packs the same Buhlmann ZHL-16C engine as Shearwater's full-size computers into a 200 m-rated watch with a 1.39-inch AMOLED face that stays legible in direct sun. It covers open-circuit recreational and technical diving, closed-circuit bailout and gauge modes, with trimix and full customization of gradient factors. Wireless air integration works with Shearwater's Swift transmitters (sold separately), showing tank pressure and gas time remaining on the wrist. The rechargeable battery delivers about 30 hours of diving per charge on the included wireless charging dock. At 120 g it wears like a large sports watch rather than an instrument.",
+     "specs": {
+      "Display": "1.39-inch AMOLED, 400 x 400 px",
+      "Algorithm": "Buhlmann ZHL-16C with gradient factors",
+      "Air integration": "Wireless, Swift transmitter compatible (sold separately)",
+      "Battery": "Rechargeable, ~30 h dive mode, wireless charging dock",
+      "Depth rating": "200 m",
+      "Modes": "OC recreational, OC technical, CC bailout, gauge",
+      "Weight": "120 g"
+     }
+    },
+    {
+     "rank": 15,
+     "name": "Shearwater Tern TX",
+     "blurb": "Shearwater's most compact computer: a watch-sized recreational unit with air integration at several hundred dollars less than the Teric. The value route into the brand for travelling divers.",
+     "options": [
+      {
+       "store": "Dive Right In Scuba",
+       "price_usd": 775,
+       "url": "https://www.diverightinscuba.com/tern-tx-wrist-computer.html"
+      },
+      {
+       "store": "House of Scuba",
+       "price_usd": 775,
+       "url": "https://www.houseofscuba.com/products/shearwater-tern-tx-dive-computer"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 775,
+       "url": "https://www.divers-supply.com/shearwater-tern-tx-wrist-dive-computer.html"
+      }
+     ],
+     "review": "The Tern TX pairs a 1.3-inch AMOLED display with a toughened-glass lens and stainless-steel bezel in a 50 mm, 100 g package. It runs Buhlmann ZHL-16C with gradient factors and handles air and nitrox up to three gas mixes, plus a gauge mode. Air integration via Shearwater's Swift transmitter (sold separately) puts tank pressure and gas time remaining on the main screen. The rechargeable battery gives about 20 hours of diving at medium brightness, topped up on the included wireless charger. The 120 m depth rating covers anything a recreational diver will ask of it.",
+     "specs": {
+      "Display": "1.3-inch AMOLED",
+      "Algorithm": "Buhlmann ZHL-16C with gradient factors",
+      "Air integration": "Swift transmitter (sold separately)",
+      "Battery": "Rechargeable, ~20 h at medium brightness, wireless charger included",
+      "Depth rating": "120 m",
+      "Modes": "Air, nitrox (up to 3 gases), gauge",
+      "Weight": "100 g"
+     }
+    },
+    {
+     "rank": 16,
+     "name": "Suunto Nautic",
+     "blurb": "Suunto's late-2025 large-format computer built around a 3.26-inch AMOLED panel — the biggest screen in its class — with GPS route tracking and an integrated LED flashlight.",
+     "options": [
+      {
+       "store": "Suunto (brand store)",
+       "price_usd": 699,
+       "url": "https://us.suunto.com/products/suunto-nautic-bungee-cord"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 679,
+       "url": "https://www.tradeinn.com/diveinn/en/suunto-nautic-elastic-textile-dive-computer/142673513/p"
+      }
+     ],
+     "review": "The Nautic's 720 x 382 px AMOLED display shows full dive data at a glance, and the rechargeable battery lasts up to 120 hours of diving at medium brightness — enough for a liveaboard week without the charger. It runs Suunto's Buhlmann 16 GF algorithm (ZHL-16C based) with adjustable gradient factors, GF99 and SurfGF readouts, and supports single-gas, multi-gas and trimix diving plus sidemount with dual tank-pressure display. Wireless air integration uses Suunto Tank PODs (sold separately). Surface GPS records entry and exit points and underwater route tracking replays the dive in 3D in the Suunto app; a built-in LED flashlight is a genuinely useful extra. Depth rating is 100 m, which matches its recreational-to-light-technical brief.",
+     "specs": {
+      "Display": "3.26-inch AMOLED, 720 x 382 px",
+      "Algorithm": "Buhlmann 16 GF (ZHL-16C based) with gradient factors",
+      "Air integration": "Suunto Tank POD wireless (sold separately), dual-tank sidemount display",
+      "Battery": "Rechargeable, up to 120 h diving at medium brightness",
+      "Depth rating": "100 m",
+      "Modes": "Single-gas, multi-gas (trimix), sidemount, gauge",
+      "Extras": "Surface GPS with route tracking, integrated LED flashlight"
+     }
+    },
+    {
+     "rank": 17,
+     "name": "Garmin Descent X50i",
+     "blurb": "Garmin's first large-format dive computer: a 7.6 cm colour touchscreen with maps, sonar messaging between divers and tank monitoring for up to eight cylinders.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 1499.95,
+       "url": "https://www.scuba.com/p-grmdx50i/garmin-descent-x50i-dive-computer"
+      },
+      {
+       "store": "Diveinn",
+       "price_usd": 1418.49,
+       "url": "https://www.tradeinn.com/diveinn/en/garmin-ordenador-de-buceo-descent--x50i/141616561/p"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 1499.99,
+       "url": "https://www.divers-supply.com/descent-x50i-premium-dive-computer.html"
+      }
+     ],
+     "review": "The X50i's 7.6 cm touchscreen — backed by leakproof buttons for gloved hands — displays DiveView maps, in-dive depth charts and a projected ascent profile, with over 4,000 dive sites preloaded and surface GPS for marking entries and exits. It runs Buhlmann ZHL-16C with gradient factors across single-gas, multi-gas (nitrox and trimix), closed-circuit rebreather and gauge modes. Paired with Descent T2 transceivers (sold separately), SubWave sonar tracks tank pressure, depth and distance for up to 8 divers and lets buddies exchange preset messages underwater. The rechargeable battery covers roughly 16 hours of diving at medium brightness, or 20 hours in night mode. A sapphire lens, 20 ATM (200 m) rating and an integrated dive light round out the hardware.",
+     "specs": {
+      "Display": "7.6 cm colour touchscreen with leakproof buttons",
+      "Algorithm": "Buhlmann ZHL-16C with gradient factors",
+      "Air integration": "Descent T2 transceivers via SubWave sonar, up to 8 tanks (sold separately)",
+      "Battery": "Rechargeable, ~16 h diving at medium brightness (20 h night mode)",
+      "Depth rating": "200 m (20 ATM)",
+      "Modes": "Single-gas, multi-gas (nitrox, trimix), CCR, gauge",
+      "Extras": "DiveView maps, surface GPS, diver-to-diver messaging, integrated dive light"
+     }
+    },
+    {
+     "rank": 18,
+     "name": "Scubapro Galileo 3 (G3)",
+     "blurb": "Watch-style successor to the G2 with a full-color display under sapphire glass, a stainless steel case and a rechargeable battery. A recent line-wide price cut makes it one of the better values in full-feature computers.",
+     "options": [
+      {
+       "store": "Scuba.com",
+       "price_usd": 499.0,
+       "url": "https://www.scuba.com/p-scpg3c/scubapro-galileo-3-g3-wrist-dive-computer"
+      },
+      {
+       "store": "Divers Supply",
+       "price_usd": 499.0,
+       "url": "https://www.divers-supply.com/scubapro-galileo-3-dive-computer.html"
+      },
+      {
+       "store": "Dive Right In Scuba",
+       "price_usd": 499.0,
+       "url": "https://www.diverightinscuba.com/galileo-3-g3-wrist-dive-computer.html"
+      }
+     ],
+     "review": "The G3 keeps the four-button Galileo menu logic that made the G2 easy to operate in gloves, but shrinks it into a housing you can plausibly wear as a daily watch. You get a choice of two algorithms — Scubapro's predictive multi-gas ZHL-16 ADT MB or plain Buhlmann ZHL-16 with gradient factors — so it works for conservative resort diving and for divers who want to set their own GF values. Optional air integration via the Smart+ Pro transmitter adds tank pressure and true remaining bottom time to the display. Sapphire glass and the steel case shrug off boat-ladder knocks, and Bluetooth log download to a phone works without a cradle. Scubapro repriced its computer range aggressively, so the G3 now sells for roughly half its launch price.",
+     "specs": {
+      "Display": "Full-color LCD under scratch-resistant sapphire glass",
+      "Housing": "Stainless steel, watch-style",
+      "Battery": "Rechargeable lithium-ion",
+      "Algorithms": "ZHL-16 ADT MB PMG (predictive multi-gas) or ZHL-16 GF, selectable",
+      "Depth rating": "300 m in gauge mode",
+      "Air integration": "Optional Smart+ Pro wireless transmitter",
+      "Connectivity": "Bluetooth LE log download (iOS, Android, PC/Mac)"
+     }
     }
    ],
    "title": "Top Dive Computers in 2026",
@@ -2195,6 +3024,37 @@
          "url": "https://www.cressiusa.com/catalogue/details.asp?id=1333"
         }
        ]
+      },
+      {
+       "name": "Waterproof W30 2.5mm Women's",
+       "blurb": "A light, anatomically sculpted 2.5mm full suit for warm-water trips where a shorty is not quite enough. The women's cut follows a genuinely different pattern, not a shrunk men's suit.",
+       "options": [
+        {
+         "store": "Divers Direct",
+         "price_usd": 269.95,
+         "url": "https://www.diversdirect.com/p/waterproof-w30-full-wetsuit-2-5mm-womens"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 270.0,
+         "url": "https://www.scuba.com/p-wpgw30fwn/waterproof-w30-25mm-womens-full-suit"
+        },
+        {
+         "store": "Bluewater Photo",
+         "price_usd": 297.0,
+         "url": "https://www.bluewaterphotostore.com/waterproof-w30-2-5mm-wetsuit-for-women/"
+        }
+       ],
+       "review": "The W30 is built from Waterproof's stretchy Aquatex neoprene with a 3D-sculpted fit and pre-bent arms and legs, so it pulls on easily even when damp. Seams are flatlocked for flexibility and low bulk, appropriate for a suit aimed at 25-29°C water, and a quality YKK Vislon back zip runs the spine. You still get the WPAD thigh dock for accessories and abrasion-resistant knee pads, features rare at this price. It is the right pick for the Maldives, Philippines or Caribbean in high summer, and it doubles as a rash layer under a thicker suit on colder legs of a trip. A men's version and shorty variants share the same construction.",
+       "specs": {
+        "Thickness": "2.5 mm",
+        "Neoprene": "Aquatex stretch neoprene",
+        "Seams": "Flatlock",
+        "Zip": "YKK Vislon back zip",
+        "Water range": "25-29°C",
+        "Cut": "Women's cut (men's version available)",
+        "Sizes": "Women's XS-XL"
+       }
       }
      ]
     },
@@ -2474,6 +3334,94 @@
          "url": "https://lancasterscuba.com/products/bare-evoke-3mm-womens-full-wetsuit"
         }
        ]
+      },
+      {
+       "name": "Beuchat Optima 2",
+       "blurb": "Current second generation of Beuchat's warm-water workhorse, a 3 mm men's one-piece with a preformed anatomical cut and dope-dyed neoprene that cuts dye-process water use by 35 to 40 percent.",
+       "options": [
+        {
+         "store": "Dive Avenue",
+         "price_usd": 189.95,
+         "url": "https://www.diveavenue.com/en/beuchat-diving-wetsuit/4098-beuchat-optima-2-wet-suit-in-3mm-and-5mm-without-hood.html"
+        },
+        {
+         "store": "Palanquee",
+         "price_usd": 195.99,
+         "url": "https://www.palanquee.com/combinaison-optima-2-beuchat-3mm-homme"
+        }
+       ],
+       "review": "The Optima 2 is built for divers logging several tropical trips a year rather than occasional renters: seams and panels are specified for durability first, and the suit holds its shape after repeated rinse-and-dry cycles. The preformed cut follows bent knees and elbows, which minimizes water pockets and keeps the 3 mm layer working in 24-29 degree C water. Shoulder mobility is good enough that donning a BCD or reaching fin straps never strains a seam. The back zip runs smoothly with a long leash you can reach solo on a pitching deck. If your trips mix warm and temperate water, the same suit comes in 5 mm, and a 7 mm hooded version rounds out the range.",
+       "specs": {
+        "Thickness": "3 mm",
+        "Cut": "One-piece overall with collar, no hood",
+        "Fit": "Preformed anatomical panels",
+        "Neoprene dyeing": "Dope Dyed, 35-40% less water use",
+        "Entry": "Back zip with solo-reach leash",
+        "Water range": "Warm water, about 24-29 degrees C",
+        "Other versions": "5 mm overall, 7 mm hooded"
+       }
+      },
+      {
+       "name": "Waterproof W5 3.5mm",
+       "blurb": "Waterproof's tropical entry in its handmade Pro Series, cut from the same premium limestone neoprene as the W7. A 3.5mm for divers who want cold-water build quality in warm seas.",
+       "options": [
+        {
+         "store": "DECA Diving",
+         "price_usd": 499.2,
+         "url": "https://decadiving.com/products/waterproof-w5-mens-3-5mm-fullsuit"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 499.97,
+         "url": "https://www.scuba.com/p-wpgw35fm/waterproof-w5-35mm-mens-full-wetsuit"
+        },
+        {
+         "store": "Dive Right In Scuba",
+         "price_usd": 459.95,
+         "url": "https://www.diverightinscuba.com/men-w5-3mm-tropic-wetsuit.html"
+        }
+       ],
+       "review": "The W5 3.5mm uses 100% Microcell limestone CR neoprene with high-stretch nylon and elastane linings, hand-glued and blind-stitched at every seam. Details carry over from Waterproof's cold-water suits: a comfort zipper at the neck, flow guards at wrists and ankles to stop flushing, embossed DuraTex knee and elbow pads, and the WPAD accessory dock on the thigh. The double-pull back zip is easy to manage solo. Comfortable in about 21-27°C water, which makes it a strong pick for the Red Sea, Canary Islands or Indo-Pacific shoulder seasons. Gender-specific patterns come in an extensive size run.",
+       "specs": {
+        "Thickness": "3.5 mm",
+        "Neoprene": "100% Microcell limestone CR, high-stretch linings",
+        "Seams": "Glued and blind-stitched, handmade",
+        "Zip": "Back zip with neck comfort zipper",
+        "Water range": "21-27°C",
+        "Cut": "Men's and women's cuts",
+        "Sizes": "Men's S-3XL+, women's XS-XL+"
+       }
+      },
+      {
+       "name": "Pinnacle Cruiser 3mm",
+       "blurb": "A budget 3mm that borrows features from suits costing twice as much: titanium lining, smooth-skin seals and ankle zips. One of the best value warm-water full suits at dive retailers.",
+       "options": [
+        {
+         "store": "Divers Supply",
+         "price_usd": 229.95,
+         "url": "https://www.divers-supply.com/pinnacle-cruiser-3-wetsuit-male.html"
+        },
+        {
+         "store": "Wetsuit Wearhouse",
+         "price_usd": 229.95,
+         "url": "https://www.wetsuitwearhouse.com/products/ws51mbk-3mm-mens-pinnacle-cruiser-wetsuit"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 249.95,
+         "url": "https://www.scuba.com/p-pinc3m/pinnacle-3mm-cruiser-mens-full-wetsuit"
+        }
+       ],
+       "review": "The Cruiser pairs standard-stretch neoprene through the torso with higher-stretch panels at the arms and legs, so donning is easier than the price suggests. A titanium heat-reflective lining adds warmth without extra bulk, and smooth-skin wrist, ankle and neck seals cut flushing. Ankle zippers and a sturdy back zip speed up changes on a crowded dive deck, and molded shoulder pads keep BCD straps from grinding the neoprene. Sensible across roughly 22-28°C water. At well under half the cost of premium 3mm suits it gives up some suppleness, but nothing that matters on an easy reef week.",
+       "specs": {
+        "Thickness": "3 mm",
+        "Neoprene": "Titanium-lined, high-stretch arm and leg panels",
+        "Seams": "Glued and sewn with smooth-skin seals",
+        "Zip": "Back zip plus ankle zippers",
+        "Water range": "22-28°C",
+        "Cut": "Men's and women's cuts",
+        "Sizes": "Men's XS-3XL, women's XS-XL"
+       }
       }
      ]
     },
@@ -2753,6 +3701,120 @@
          "url": "https://www.houseofscuba.com/products/wet473"
         }
        ]
+      },
+      {
+       "name": "Beuchat Focea Comfort 6",
+       "blurb": "Sixth generation of Beuchat's flagship one-piece, in 5 mm ultra-flexible Elaskin neoprene with Fireskin thermal lining and the patented Water Dam seal system. The 5 mm men's version covers roughly 18-26 degree C water.",
+       "options": [
+        {
+         "store": "Diveinn",
+         "price_usd": 310.49,
+         "url": "https://www.tradeinn.com/diveinn/en/beuchat-focea-comfort-6-5-mm-diving-wetsuit/137281429/p"
+        },
+        {
+         "store": "Dive Avenue",
+         "price_usd": 394.95,
+         "url": "https://www.diveavenue.com/en/semi-dry/3414-beuchat-focea-comfort-6mm-wetsuit-hood-men-.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 449.95,
+         "url": "https://www.scuba.com/p-BCH5FCWM/beuchat-5mm-focea-comfort-6-mens-full-wetsuit"
+        }
+       ],
+       "review": "The Focea Comfort 6 behaves like a semi-dry at a wetsuit price: Water Dam seals at the neck, wrists and ankles cut flushing so the layer of water you warm up stays put through a 50-minute dive. Fireskin lining across the torso speeds up donning and adds noticeable warmth on repetitive days when you climb back into a damp suit. Flex System 2 panels and the Free Flex Zone at the shoulders keep reach unrestricted, so reaching back for a valve or clipping a stage does not fight the neoprene. Supratex 2 kneepads and Black Shield panels take boat-ladder and reef-rubble abrasion without cracking. The preformed anatomical cut removes the water pockets that make straight-cut suits run cold.",
+       "specs": {
+        "Thickness": "5 mm",
+        "Neoprene": "Elaskin ultra-flexible",
+        "Lining": "Fireskin thermal, torso",
+        "Seals": "Water Dam at neck, wrists, ankles",
+        "Stretch zones": "Flex System 2, Free Flex Zone shoulders",
+        "Reinforcements": "Supratex 2 knees, Black Shield panels",
+        "Entry": "Back zip with dorsal seal"
+       }
+      },
+      {
+       "name": "Bare Velocity Ultra 2.0 5mm",
+       "blurb": "Bare's updated full-stretch 5mm gives travelling divers a warm, easy-donning suit for temperate reefs and deep cenote days. The 2.0 revision keeps the Omnired heat-reflective lining and sharpens the anatomical fit.",
+       "options": [
+        {
+         "store": "Diveinn (Tradeinn)",
+         "price_usd": 443.99,
+         "url": "https://www.tradeinn.com/diveinn/en/bare-velocity-ultra-5-mm-diving-wetsuit/136797345/p"
+        },
+        {
+         "store": "DiveCatalog",
+         "price_usd": 464.95,
+         "url": "https://divecatalog.com/products/bare-5-mm-velocity-ultra-full-stretch-mens-scuba-diving-wetsuit"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 499.95,
+         "url": "https://scuba.com/products/bare-5mm-velocity-ultra-mens-full-suit"
+        }
+       ],
+       "review": "The Velocity Ultra 2.0 uses Bare's progressive full-stretch neoprene, so the 5mm panels flex more like a 3mm suit and donning stays quick between dives. Omnired infrared fabric woven through the torso reflects body heat back at the core, a real help on repetitive dives. Seams are glued and blind-stitched, and the heavy-duty back zipper carries a full-length spine pad to block flushing. Comfortable in roughly 16-24°C water; add a hooded vest at the cool end. Men's and women's versions run in a wide size range including short and tall fits.",
+       "specs": {
+        "Thickness": "5 mm",
+        "Neoprene": "Progressive full-stretch with Omnired infrared lining",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip with spine pad",
+        "Water range": "16-24°C",
+        "Cut": "Men's and women's cuts",
+        "Sizes": "Men's S-3XL (plus short/tall), women's 4-16"
+       }
+      },
+      {
+       "name": "Fourth Element Xenos ARC 5mm",
+       "blurb": "The current generation of Fourth Element's stretch suit swaps petroleum neoprene for Ocena plant-based natural rubber. A supple 5mm aimed at liveaboard weeks and multi-dive days.",
+       "options": [
+        {
+         "store": "Fourth Element",
+         "price_usd": 615.0,
+         "url": "https://fourthelement.com/product/mens-xenos-arc-5mm-wetsuit/"
+        },
+        {
+         "store": "Santa Barbara Aquatics",
+         "price_usd": 615.0,
+         "url": "https://santabarbaraaquatics.com/products/fourth-element-mens-xenos-arc-5mm-wetsuit"
+        }
+       ],
+       "review": "The Xenos ARC replaces conventional neoprene with foamed natural rubber and lines it inside and out with recycled fabrics, without giving up the easy stretch the original Xenos was known for. Seams are glued and blind-stitched, and the back zip carries a generous flap to limit flushing. Thermal performance sits where a quality 5mm should: comfortable across roughly 16-24°C, covering everything from the Red Sea in winter to the Mediterranean in summer. The trade-off is price, as the natural-rubber construction costs more than comparable neoprene 5mm suits. Men's and women's cuts are offered, with 3mm and 7mm siblings in the same range.",
+       "specs": {
+        "Thickness": "5 mm",
+        "Material": "Ocena plant-based natural rubber, recycled linings",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Back zip with anti-flush flap",
+        "Water range": "16-24°C",
+        "Cut": "Men's and women's cuts",
+        "Sizes": "Men's XS-XXXL, women's 6-18"
+       }
+      },
+      {
+       "name": "O'Neill Epic 4/3mm",
+       "blurb": "O'Neill's long-running 4/3 fills the awkward gap between a 3mm and a 5mm for divers who run cold. A 4mm core with 3mm limbs keeps warmth where it counts and stretch where you move.",
+       "options": [
+        {
+         "store": "House of Scuba",
+         "price_usd": 229.95,
+         "url": "https://www.houseofscuba.com/products/oneill-43mm-mens-epic-2024-full-wetsuit"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 234.95,
+         "url": "https://www.scuba.com/p-onle4jm/oneill-4-3mm-epic-mens-full-wetsuit"
+        }
+       ],
+       "review": "The Epic is cut entirely from O'Neill's UltraFlex stretch neoprene, with 4mm through the torso and 3mm in the arms and legs. Seams are glued and blind-stitched, and the covert blackout back zip pairs with a double-seal neck closure and lumbar seamless design to keep cold water out of the spine area. It suits roughly 15-21°C water, making it a practical single-suit answer for destinations like the Galapagos in the warm season or southern Australia in summer. The fit is athletic and the wrist and ankle seals are snug, so size carefully. Men's and women's versions are stocked at dive retailers alongside the surf shops.",
+       "specs": {
+        "Thickness": "4/3 mm (4 mm torso, 3 mm limbs)",
+        "Neoprene": "100% UltraFlex stretch neoprene",
+        "Seams": "Glued and blind-stitched",
+        "Zip": "Covert blackout back zip, double-seal neck",
+        "Water range": "15-21°C",
+        "Cut": "Men's and women's cuts",
+        "Sizes": "Men's S-3XL (plus tall), women's 4-14"
+       }
       }
      ]
     },
@@ -3032,6 +4094,38 @@
          "url": "https://www.scuba.com/products/henderson-greenprene-7mm-mens-jumpsuit"
         }
        ]
+      },
+      {
+       "name": "Henderson Aqua Lock 7mm",
+       "blurb": "Henderson's flagship semi-dry for genuinely cold water, built around interlocking seals that mate with matching Aqua Lock hoods, boots and gloves. A drysuit alternative for quarry and cold-coast divers.",
+       "options": [
+        {
+         "store": "Wetsuit Wearhouse",
+         "price_usd": 543.99,
+         "url": "https://www.wetsuitwearhouse.com/products/q870mb"
+        },
+        {
+         "store": "Divers Supply",
+         "price_usd": 575.96,
+         "url": "https://www.divers-supply.com/henderson-aqualock-quikdry-mens-7mm-wetsuit.html"
+        },
+        {
+         "store": "Scuba.com",
+         "price_usd": 639.95,
+         "url": "https://www.scuba.com/p-hndaq7jm/henderson-mens-7mm-aqua-lock-quick-dry-jumpsuit"
+        }
+       ],
+       "review": "The Aqua Lock pairs 250%-stretch neoprene with a Quick-Dry interior lining, so the suit goes back on warm and nearly dry for a second dive. Every seam is double glued and blind-stitched inside and out, then sealed with liquid-tape coating to shut out water entry. Zipperless interlocking wrist, ankle and neck closures form near-watertight seals on their own or docked to Aqua Lock accessories, and the heavy #10 back zipper sits behind a full dam. In 8-16°C water it is one of the warmest wetsuit options short of a drysuit, and Henderson backs it with a 10-year seam warranty. Men's and women's cuts cover an unusually broad size chart.",
+       "specs": {
+        "Thickness": "7 mm",
+        "Neoprene": "250%-stretch with Quick-Dry interior lining",
+        "Seams": "Double glued, blind-stitched, liquid-tape sealed",
+        "Zip": "#10 back zip with water dam",
+        "Seals": "Interlocking zipperless wrist, ankle and neck seals",
+        "Water range": "8-16°C",
+        "Cut": "Men's and women's cuts",
+        "Sizes": "Men's S-5XL (plus short/tall), women's 4-16"
+       }
       }
      ]
     }
