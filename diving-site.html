@@ -1025,7 +1025,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .f-sum .f-name{color:var(--ink);font-weight:700;border-bottom:3px double var(--line-strong);padding-bottom:5px}
   @media(max-width:480px){.f-name{letter-spacing:.13em;font-size:.66rem}.formula{gap:12px}}
   /* destination carousel: editorial left rail, portrait cards bleeding off the right edge */
-  .dcar-wrap{display:grid;grid-template-columns:minmax(230px,300px) 1fr;gap:44px;align-items:start}
+  .dcar-wrap{display:grid;grid-template-columns:minmax(230px,300px) minmax(0,1fr);gap:44px;align-items:start}
+  /* the box wraps a no-wrap flex row of cards; without min-width:0 its
+     min-content (the full card row, ~2300px) blows the 1fr track past the
+     viewport and the centered arrow row lands off-screen */
+  .dcar-box{min-width:0}
   .dcar-head{padding-top:26px}
   #view-home .dcar-head .sec-head{text-align:left;justify-content:flex-start;margin:0 0 16px;
        font-size:clamp(1.9rem,3vw,2.6rem);max-width:14ch}
