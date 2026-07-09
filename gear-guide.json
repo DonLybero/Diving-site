@@ -2548,16 +2548,7 @@
       "Purple"
      ],
      "color_source": "https://www.otadiving.com/products/atomic-aquatics-b2-color-kit",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/atomic-aquatics-b2--black.jpg",
-      "Red": "assets/gear/studio/hero/atomic-aquatics-b2--red.jpg",
-      "Royal Blue": "assets/gear/studio/hero/atomic-aquatics-b2--royal-blue.jpg",
-      "Aqua": "assets/gear/studio/hero/atomic-aquatics-b2--aqua.jpg",
-      "Yellow": "assets/gear/studio/hero/atomic-aquatics-b2--yellow.jpg",
-      "Pink": "assets/gear/studio/hero/atomic-aquatics-b2--pink.jpg",
-      "Purple": "assets/gear/studio/hero/atomic-aquatics-b2--purple.jpg"
-     }
+     "color_platform": "shopify"
     },
     {
      "rank": 14,
@@ -2612,15 +2603,7 @@
       "Red"
      ],
      "color_source": "https://www.zeagle.com/product/accessories/airway-accessories/f8-color-kit/",
-     "color_platform": "woocommerce",
-     "color_images": {
-      "Aqua": "assets/gear/studio/hero/zeagle-f8--aqua.jpg",
-      "Black": "assets/gear/studio/hero/zeagle-f8--black.jpg",
-      "Blue": "assets/gear/studio/hero/zeagle-f8--blue.jpg",
-      "Pink": "assets/gear/studio/hero/zeagle-f8--pink.jpg",
-      "Purple": "assets/gear/studio/hero/zeagle-f8--purple.jpg",
-      "Red": "assets/gear/studio/hero/zeagle-f8--red.jpg"
-     }
+     "color_platform": "woocommerce"
     }
    ],
    "title": "Top Regulators in 2026",
@@ -5223,10 +5206,7 @@
         "Black/Blue"
        ],
        "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce",
-       "color_images": {
-        "Black": "assets/gear/studio/hero/henderson-thermoprene--black.jpg"
-       }
+       "color_platform": "woocommerce"
       },
       {
        "rank": 5,
@@ -5813,10 +5793,7 @@
         "Black"
        ],
        "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce",
-       "color_images": {
-        "Black": "assets/gear/studio/hero/henderson-thermoprene--black.jpg"
-       }
+       "color_platform": "woocommerce"
       },
       {
        "rank": 5,
@@ -6293,11 +6270,7 @@
         "Black/Heather Blue"
        ],
        "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce",
-       "color_images": {
-        "Black/Heather Gray": "assets/gear/studio/hero/henderson-thermoprene--black-heather-gray.jpg",
-        "Black/Heather Blue": "assets/gear/studio/hero/henderson-thermoprene--black-heather-blue.jpg"
-       }
+       "color_platform": "woocommerce"
       },
       {
        "rank": 2,
