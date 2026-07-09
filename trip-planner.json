@@ -1,0 +1,4512 @@
+{
+ "updated": "2026-07",
+ "airports": [
+  {
+   "iata": "DXB",
+   "city": "Dubai",
+   "country": "United Arab Emirates",
+   "name": "Dubai International"
+  },
+  {
+   "iata": "AUH",
+   "city": "Abu Dhabi",
+   "country": "United Arab Emirates",
+   "name": "Zayed International"
+  },
+  {
+   "iata": "SHJ",
+   "city": "Sharjah",
+   "country": "United Arab Emirates",
+   "name": "Sharjah International"
+  },
+  {
+   "iata": "DOH",
+   "city": "Doha",
+   "country": "Qatar",
+   "name": "Hamad International"
+  },
+  {
+   "iata": "KWI",
+   "city": "Kuwait City",
+   "country": "Kuwait",
+   "name": "Kuwait International"
+  },
+  {
+   "iata": "BAH",
+   "city": "Manama",
+   "country": "Bahrain",
+   "name": "Bahrain International"
+  },
+  {
+   "iata": "RUH",
+   "city": "Riyadh",
+   "country": "Saudi Arabia",
+   "name": "King Khalid International"
+  },
+  {
+   "iata": "JED",
+   "city": "Jeddah",
+   "country": "Saudi Arabia",
+   "name": "King Abdulaziz International"
+  },
+  {
+   "iata": "MCT",
+   "city": "Muscat",
+   "country": "Oman",
+   "name": "Muscat International"
+  },
+  {
+   "iata": "AMM",
+   "city": "Amman",
+   "country": "Jordan",
+   "name": "Queen Alia International"
+  },
+  {
+   "iata": "BEY",
+   "city": "Beirut",
+   "country": "Lebanon",
+   "name": "Beirut-Rafic Hariri"
+  },
+  {
+   "iata": "CAI",
+   "city": "Cairo",
+   "country": "Egypt",
+   "name": "Cairo International"
+  },
+  {
+   "iata": "IST",
+   "city": "Istanbul",
+   "country": "Türkiye",
+   "name": "Istanbul Airport"
+  },
+  {
+   "iata": "SAW",
+   "city": "Istanbul",
+   "country": "Türkiye",
+   "name": "Sabiha Gökçen"
+  },
+  {
+   "iata": "LHR",
+   "city": "London",
+   "country": "United Kingdom",
+   "name": "Heathrow"
+  },
+  {
+   "iata": "LGW",
+   "city": "London",
+   "country": "United Kingdom",
+   "name": "Gatwick"
+  },
+  {
+   "iata": "STN",
+   "city": "London",
+   "country": "United Kingdom",
+   "name": "Stansted"
+  },
+  {
+   "iata": "MAN",
+   "city": "Manchester",
+   "country": "United Kingdom",
+   "name": "Manchester"
+  },
+  {
+   "iata": "BHX",
+   "city": "Birmingham",
+   "country": "United Kingdom",
+   "name": "Birmingham"
+  },
+  {
+   "iata": "EDI",
+   "city": "Edinburgh",
+   "country": "United Kingdom",
+   "name": "Edinburgh"
+  },
+  {
+   "iata": "DUB",
+   "city": "Dublin",
+   "country": "Ireland",
+   "name": "Dublin"
+  },
+  {
+   "iata": "CDG",
+   "city": "Paris",
+   "country": "France",
+   "name": "Charles de Gaulle"
+  },
+  {
+   "iata": "ORY",
+   "city": "Paris",
+   "country": "France",
+   "name": "Orly"
+  },
+  {
+   "iata": "NCE",
+   "city": "Nice",
+   "country": "France",
+   "name": "Côte d'Azur"
+  },
+  {
+   "iata": "AMS",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "name": "Schiphol"
+  },
+  {
+   "iata": "BRU",
+   "city": "Brussels",
+   "country": "Belgium",
+   "name": "Brussels"
+  },
+  {
+   "iata": "FRA",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "name": "Frankfurt"
+  },
+  {
+   "iata": "MUC",
+   "city": "Munich",
+   "country": "Germany",
+   "name": "Munich"
+  },
+  {
+   "iata": "BER",
+   "city": "Berlin",
+   "country": "Germany",
+   "name": "Brandenburg"
+  },
+  {
+   "iata": "DUS",
+   "city": "Düsseldorf",
+   "country": "Germany",
+   "name": "Düsseldorf"
+  },
+  {
+   "iata": "HAM",
+   "city": "Hamburg",
+   "country": "Germany",
+   "name": "Hamburg"
+  },
+  {
+   "iata": "ZRH",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "name": "Zurich"
+  },
+  {
+   "iata": "GVA",
+   "city": "Geneva",
+   "country": "Switzerland",
+   "name": "Geneva"
+  },
+  {
+   "iata": "VIE",
+   "city": "Vienna",
+   "country": "Austria",
+   "name": "Vienna"
+  },
+  {
+   "iata": "CPH",
+   "city": "Copenhagen",
+   "country": "Denmark",
+   "name": "Copenhagen"
+  },
+  {
+   "iata": "OSL",
+   "city": "Oslo",
+   "country": "Norway",
+   "name": "Gardermoen"
+  },
+  {
+   "iata": "ARN",
+   "city": "Stockholm",
+   "country": "Sweden",
+   "name": "Arlanda"
+  },
+  {
+   "iata": "HEL",
+   "city": "Helsinki",
+   "country": "Finland",
+   "name": "Helsinki-Vantaa"
+  },
+  {
+   "iata": "WAW",
+   "city": "Warsaw",
+   "country": "Poland",
+   "name": "Chopin"
+  },
+  {
+   "iata": "KRK",
+   "city": "Kraków",
+   "country": "Poland",
+   "name": "Kraków"
+  },
+  {
+   "iata": "PRG",
+   "city": "Prague",
+   "country": "Czechia",
+   "name": "Václav Havel"
+  },
+  {
+   "iata": "BUD",
+   "city": "Budapest",
+   "country": "Hungary",
+   "name": "Ferenc Liszt"
+  },
+  {
+   "iata": "OTP",
+   "city": "Bucharest",
+   "country": "Romania",
+   "name": "Otopeni"
+  },
+  {
+   "iata": "SOF",
+   "city": "Sofia",
+   "country": "Bulgaria",
+   "name": "Sofia"
+  },
+  {
+   "iata": "BEG",
+   "city": "Belgrade",
+   "country": "Serbia",
+   "name": "Nikola Tesla"
+  },
+  {
+   "iata": "ZAG",
+   "city": "Zagreb",
+   "country": "Croatia",
+   "name": "Zagreb"
+  },
+  {
+   "iata": "ATH",
+   "city": "Athens",
+   "country": "Greece",
+   "name": "Eleftherios Venizelos"
+  },
+  {
+   "iata": "SKG",
+   "city": "Thessaloniki",
+   "country": "Greece",
+   "name": "Makedonia"
+  },
+  {
+   "iata": "LIS",
+   "city": "Lisbon",
+   "country": "Portugal",
+   "name": "Humberto Delgado"
+  },
+  {
+   "iata": "OPO",
+   "city": "Porto",
+   "country": "Portugal",
+   "name": "Francisco Sá Carneiro"
+  },
+  {
+   "iata": "MAD",
+   "city": "Madrid",
+   "country": "Spain",
+   "name": "Barajas"
+  },
+  {
+   "iata": "BCN",
+   "city": "Barcelona",
+   "country": "Spain",
+   "name": "El Prat"
+  },
+  {
+   "iata": "AGP",
+   "city": "Málaga",
+   "country": "Spain",
+   "name": "Costa del Sol"
+  },
+  {
+   "iata": "FCO",
+   "city": "Rome",
+   "country": "Italy",
+   "name": "Fiumicino"
+  },
+  {
+   "iata": "MXP",
+   "city": "Milan",
+   "country": "Italy",
+   "name": "Malpensa"
+  },
+  {
+   "iata": "VCE",
+   "city": "Venice",
+   "country": "Italy",
+   "name": "Marco Polo"
+  },
+  {
+   "iata": "NAP",
+   "city": "Naples",
+   "country": "Italy",
+   "name": "Naples"
+  },
+  {
+   "iata": "MLA",
+   "city": "Valletta",
+   "country": "Malta",
+   "name": "Malta International"
+  },
+  {
+   "iata": "LCA",
+   "city": "Larnaca",
+   "country": "Cyprus",
+   "name": "Larnaca International"
+  },
+  {
+   "iata": "TLV",
+   "city": "Tel Aviv",
+   "country": "Israel",
+   "name": "Ben Gurion"
+  },
+  {
+   "iata": "SVO",
+   "city": "Moscow",
+   "country": "Russia",
+   "name": "Sheremetyevo"
+  },
+  {
+   "iata": "ALA",
+   "city": "Almaty",
+   "country": "Kazakhstan",
+   "name": "Almaty"
+  },
+  {
+   "iata": "TAS",
+   "city": "Tashkent",
+   "country": "Uzbekistan",
+   "name": "Tashkent International"
+  },
+  {
+   "iata": "BAK",
+   "city": "Baku",
+   "country": "Azerbaijan",
+   "name": "Heydar Aliyev"
+  },
+  {
+   "iata": "DEL",
+   "city": "New Delhi",
+   "country": "India",
+   "name": "Indira Gandhi International"
+  },
+  {
+   "iata": "BOM",
+   "city": "Mumbai",
+   "country": "India",
+   "name": "Chhatrapati Shivaji"
+  },
+  {
+   "iata": "BLR",
+   "city": "Bengaluru",
+   "country": "India",
+   "name": "Kempegowda"
+  },
+  {
+   "iata": "MAA",
+   "city": "Chennai",
+   "country": "India",
+   "name": "Chennai International"
+  },
+  {
+   "iata": "HYD",
+   "city": "Hyderabad",
+   "country": "India",
+   "name": "Rajiv Gandhi"
+  },
+  {
+   "iata": "CCU",
+   "city": "Kolkata",
+   "country": "India",
+   "name": "Netaji Subhas Chandra Bose"
+  },
+  {
+   "iata": "COK",
+   "city": "Kochi",
+   "country": "India",
+   "name": "Cochin International"
+  },
+  {
+   "iata": "KHI",
+   "city": "Karachi",
+   "country": "Pakistan",
+   "name": "Jinnah International"
+  },
+  {
+   "iata": "LHE",
+   "city": "Lahore",
+   "country": "Pakistan",
+   "name": "Allama Iqbal"
+  },
+  {
+   "iata": "ISB",
+   "city": "Islamabad",
+   "country": "Pakistan",
+   "name": "Islamabad International"
+  },
+  {
+   "iata": "DAC",
+   "city": "Dhaka",
+   "country": "Bangladesh",
+   "name": "Hazrat Shahjalal"
+  },
+  {
+   "iata": "CMB",
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "name": "Bandaranaike"
+  },
+  {
+   "iata": "KTM",
+   "city": "Kathmandu",
+   "country": "Nepal",
+   "name": "Tribhuvan"
+  },
+  {
+   "iata": "BKK",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "name": "Suvarnabhumi"
+  },
+  {
+   "iata": "DMK",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "name": "Don Mueang"
+  },
+  {
+   "iata": "HKT",
+   "city": "Phuket",
+   "country": "Thailand",
+   "name": "Phuket International"
+  },
+  {
+   "iata": "CNX",
+   "city": "Chiang Mai",
+   "country": "Thailand",
+   "name": "Chiang Mai"
+  },
+  {
+   "iata": "SIN",
+   "city": "Singapore",
+   "country": "Singapore",
+   "name": "Changi"
+  },
+  {
+   "iata": "KUL",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "name": "KLIA"
+  },
+  {
+   "iata": "CGK",
+   "city": "Jakarta",
+   "country": "Indonesia",
+   "name": "Soekarno-Hatta"
+  },
+  {
+   "iata": "DPS",
+   "city": "Denpasar",
+   "country": "Indonesia",
+   "name": "I Gusti Ngurah Rai"
+  },
+  {
+   "iata": "SUB",
+   "city": "Surabaya",
+   "country": "Indonesia",
+   "name": "Juanda"
+  },
+  {
+   "iata": "MNL",
+   "city": "Manila",
+   "country": "Philippines",
+   "name": "Ninoy Aquino"
+  },
+  {
+   "iata": "CEB",
+   "city": "Cebu",
+   "country": "Philippines",
+   "name": "Mactan-Cebu"
+  },
+  {
+   "iata": "SGN",
+   "city": "Ho Chi Minh City",
+   "country": "Vietnam",
+   "name": "Tan Son Nhat"
+  },
+  {
+   "iata": "HAN",
+   "city": "Hanoi",
+   "country": "Vietnam",
+   "name": "Noi Bai"
+  },
+  {
+   "iata": "PNH",
+   "city": "Phnom Penh",
+   "country": "Cambodia",
+   "name": "Phnom Penh International"
+  },
+  {
+   "iata": "HKG",
+   "city": "Hong Kong",
+   "country": "Hong Kong",
+   "name": "Hong Kong International"
+  },
+  {
+   "iata": "TPE",
+   "city": "Taipei",
+   "country": "Taiwan",
+   "name": "Taoyuan"
+  },
+  {
+   "iata": "ICN",
+   "city": "Seoul",
+   "country": "South Korea",
+   "name": "Incheon"
+  },
+  {
+   "iata": "NRT",
+   "city": "Tokyo",
+   "country": "Japan",
+   "name": "Narita"
+  },
+  {
+   "iata": "HND",
+   "city": "Tokyo",
+   "country": "Japan",
+   "name": "Haneda"
+  },
+  {
+   "iata": "KIX",
+   "city": "Osaka",
+   "country": "Japan",
+   "name": "Kansai"
+  },
+  {
+   "iata": "PEK",
+   "city": "Beijing",
+   "country": "China",
+   "name": "Capital"
+  },
+  {
+   "iata": "PVG",
+   "city": "Shanghai",
+   "country": "China",
+   "name": "Pudong"
+  },
+  {
+   "iata": "CAN",
+   "city": "Guangzhou",
+   "country": "China",
+   "name": "Baiyun"
+  },
+  {
+   "iata": "SZX",
+   "city": "Shenzhen",
+   "country": "China",
+   "name": "Bao'an"
+  },
+  {
+   "iata": "SYD",
+   "city": "Sydney",
+   "country": "Australia",
+   "name": "Kingsford Smith"
+  },
+  {
+   "iata": "MEL",
+   "city": "Melbourne",
+   "country": "Australia",
+   "name": "Tullamarine"
+  },
+  {
+   "iata": "BNE",
+   "city": "Brisbane",
+   "country": "Australia",
+   "name": "Brisbane"
+  },
+  {
+   "iata": "PER",
+   "city": "Perth",
+   "country": "Australia",
+   "name": "Perth"
+  },
+  {
+   "iata": "ADL",
+   "city": "Adelaide",
+   "country": "Australia",
+   "name": "Adelaide"
+  },
+  {
+   "iata": "CNS",
+   "city": "Cairns",
+   "country": "Australia",
+   "name": "Cairns"
+  },
+  {
+   "iata": "AKL",
+   "city": "Auckland",
+   "country": "New Zealand",
+   "name": "Auckland"
+  },
+  {
+   "iata": "CHC",
+   "city": "Christchurch",
+   "country": "New Zealand",
+   "name": "Christchurch"
+  },
+  {
+   "iata": "JNB",
+   "city": "Johannesburg",
+   "country": "South Africa",
+   "name": "O.R. Tambo"
+  },
+  {
+   "iata": "CPT",
+   "city": "Cape Town",
+   "country": "South Africa",
+   "name": "Cape Town International"
+  },
+  {
+   "iata": "DUR",
+   "city": "Durban",
+   "country": "South Africa",
+   "name": "King Shaka"
+  },
+  {
+   "iata": "NBO",
+   "city": "Nairobi",
+   "country": "Kenya",
+   "name": "Jomo Kenyatta"
+  },
+  {
+   "iata": "ADD",
+   "city": "Addis Ababa",
+   "country": "Ethiopia",
+   "name": "Bole"
+  },
+  {
+   "iata": "DAR",
+   "city": "Dar es Salaam",
+   "country": "Tanzania",
+   "name": "Julius Nyerere"
+  },
+  {
+   "iata": "LOS",
+   "city": "Lagos",
+   "country": "Nigeria",
+   "name": "Murtala Muhammed"
+  },
+  {
+   "iata": "ACC",
+   "city": "Accra",
+   "country": "Ghana",
+   "name": "Kotoka"
+  },
+  {
+   "iata": "CMN",
+   "city": "Casablanca",
+   "country": "Morocco",
+   "name": "Mohammed V"
+  },
+  {
+   "iata": "RAK",
+   "city": "Marrakesh",
+   "country": "Morocco",
+   "name": "Menara"
+  },
+  {
+   "iata": "ALG",
+   "city": "Algiers",
+   "country": "Algeria",
+   "name": "Houari Boumediene"
+  },
+  {
+   "iata": "TUN",
+   "city": "Tunis",
+   "country": "Tunisia",
+   "name": "Carthage"
+  },
+  {
+   "iata": "JFK",
+   "city": "New York",
+   "country": "United States",
+   "name": "John F. Kennedy"
+  },
+  {
+   "iata": "EWR",
+   "city": "Newark",
+   "country": "United States",
+   "name": "Newark Liberty"
+  },
+  {
+   "iata": "BOS",
+   "city": "Boston",
+   "country": "United States",
+   "name": "Logan"
+  },
+  {
+   "iata": "PHL",
+   "city": "Philadelphia",
+   "country": "United States",
+   "name": "Philadelphia"
+  },
+  {
+   "iata": "IAD",
+   "city": "Washington",
+   "country": "United States",
+   "name": "Dulles"
+  },
+  {
+   "iata": "ATL",
+   "city": "Atlanta",
+   "country": "United States",
+   "name": "Hartsfield-Jackson"
+  },
+  {
+   "iata": "MIA",
+   "city": "Miami",
+   "country": "United States",
+   "name": "Miami International"
+  },
+  {
+   "iata": "FLL",
+   "city": "Fort Lauderdale",
+   "country": "United States",
+   "name": "Fort Lauderdale"
+  },
+  {
+   "iata": "MCO",
+   "city": "Orlando",
+   "country": "United States",
+   "name": "Orlando International"
+  },
+  {
+   "iata": "TPA",
+   "city": "Tampa",
+   "country": "United States",
+   "name": "Tampa International"
+  },
+  {
+   "iata": "ORD",
+   "city": "Chicago",
+   "country": "United States",
+   "name": "O'Hare"
+  },
+  {
+   "iata": "DTW",
+   "city": "Detroit",
+   "country": "United States",
+   "name": "Detroit Metro"
+  },
+  {
+   "iata": "MSP",
+   "city": "Minneapolis",
+   "country": "United States",
+   "name": "Saint Paul"
+  },
+  {
+   "iata": "DEN",
+   "city": "Denver",
+   "country": "United States",
+   "name": "Denver International"
+  },
+  {
+   "iata": "DFW",
+   "city": "Dallas",
+   "country": "United States",
+   "name": "Dallas Fort Worth"
+  },
+  {
+   "iata": "IAH",
+   "city": "Houston",
+   "country": "United States",
+   "name": "George Bush"
+  },
+  {
+   "iata": "AUS",
+   "city": "Austin",
+   "country": "United States",
+   "name": "Bergstrom"
+  },
+  {
+   "iata": "PHX",
+   "city": "Phoenix",
+   "country": "United States",
+   "name": "Sky Harbor"
+  },
+  {
+   "iata": "LAS",
+   "city": "Las Vegas",
+   "country": "United States",
+   "name": "Harry Reid"
+  },
+  {
+   "iata": "LAX",
+   "city": "Los Angeles",
+   "country": "United States",
+   "name": "Los Angeles International"
+  },
+  {
+   "iata": "SFO",
+   "city": "San Francisco",
+   "country": "United States",
+   "name": "San Francisco International"
+  },
+  {
+   "iata": "SAN",
+   "city": "San Diego",
+   "country": "United States",
+   "name": "San Diego International"
+  },
+  {
+   "iata": "SEA",
+   "city": "Seattle",
+   "country": "United States",
+   "name": "Seattle-Tacoma"
+  },
+  {
+   "iata": "PDX",
+   "city": "Portland",
+   "country": "United States",
+   "name": "Portland International"
+  },
+  {
+   "iata": "SLC",
+   "city": "Salt Lake City",
+   "country": "United States",
+   "name": "Salt Lake City"
+  },
+  {
+   "iata": "HNL",
+   "city": "Honolulu",
+   "country": "United States",
+   "name": "Daniel K. Inouye"
+  },
+  {
+   "iata": "YVR",
+   "city": "Vancouver",
+   "country": "Canada",
+   "name": "Vancouver International"
+  },
+  {
+   "iata": "YYZ",
+   "city": "Toronto",
+   "country": "Canada",
+   "name": "Pearson"
+  },
+  {
+   "iata": "YUL",
+   "city": "Montreal",
+   "country": "Canada",
+   "name": "Trudeau"
+  },
+  {
+   "iata": "YYC",
+   "city": "Calgary",
+   "country": "Canada",
+   "name": "Calgary International"
+  },
+  {
+   "iata": "MEX",
+   "city": "Mexico City",
+   "country": "Mexico",
+   "name": "Benito Juárez"
+  },
+  {
+   "iata": "GDL",
+   "city": "Guadalajara",
+   "country": "Mexico",
+   "name": "Guadalajara"
+  },
+  {
+   "iata": "MTY",
+   "city": "Monterrey",
+   "country": "Mexico",
+   "name": "Monterrey"
+  },
+  {
+   "iata": "CUN",
+   "city": "Cancún",
+   "country": "Mexico",
+   "name": "Cancún International"
+  },
+  {
+   "iata": "GRU",
+   "city": "São Paulo",
+   "country": "Brazil",
+   "name": "Guarulhos"
+  },
+  {
+   "iata": "GIG",
+   "city": "Rio de Janeiro",
+   "country": "Brazil",
+   "name": "Galeão"
+  },
+  {
+   "iata": "EZE",
+   "city": "Buenos Aires",
+   "country": "Argentina",
+   "name": "Ezeiza"
+  },
+  {
+   "iata": "SCL",
+   "city": "Santiago",
+   "country": "Chile",
+   "name": "Arturo Merino Benítez"
+  },
+  {
+   "iata": "LIM",
+   "city": "Lima",
+   "country": "Peru",
+   "name": "Jorge Chávez"
+  },
+  {
+   "iata": "BOG",
+   "city": "Bogotá",
+   "country": "Colombia",
+   "name": "El Dorado"
+  },
+  {
+   "iata": "MDE",
+   "city": "Medellín",
+   "country": "Colombia",
+   "name": "José María Córdova"
+  },
+  {
+   "iata": "UIO",
+   "city": "Quito",
+   "country": "Ecuador",
+   "name": "Mariscal Sucre"
+  },
+  {
+   "iata": "GYE",
+   "city": "Guayaquil",
+   "country": "Ecuador",
+   "name": "José Joaquín de Olmedo"
+  },
+  {
+   "iata": "PTY",
+   "city": "Panama City",
+   "country": "Panama",
+   "name": "Tocumen"
+  },
+  {
+   "iata": "SJO",
+   "city": "San José",
+   "country": "Costa Rica",
+   "name": "Juan Santamaría"
+  },
+  {
+   "iata": "SAL",
+   "city": "San Salvador",
+   "country": "El Salvador",
+   "name": "Monseñor Romero"
+  },
+  {
+   "iata": "GUA",
+   "city": "Guatemala City",
+   "country": "Guatemala",
+   "name": "La Aurora"
+  },
+  {
+   "iata": "SJU",
+   "city": "San Juan",
+   "country": "Puerto Rico",
+   "name": "Luis Muñoz Marín"
+  }
+ ],
+ "gateways": {
+  "Fernando de Noronha": {
+   "iata": "FEN",
+   "label": "Fernando de Noronha (via Recife)"
+  },
+  "Bahamas": {
+   "iata": "NAS",
+   "label": "Nassau"
+  },
+  "Bay Islands": {
+   "iata": "RTB",
+   "label": "Roatán"
+  },
+  "Bonaire": {
+   "iata": "BON",
+   "label": "Kralendijk"
+  },
+  "Cayman Islands": {
+   "iata": "GCM",
+   "label": "Grand Cayman"
+  },
+  "Cozumel": {
+   "iata": "CZM",
+   "label": "Cozumel"
+  },
+  "Great Blue Hole": {
+   "iata": "BZE",
+   "label": "Belize City"
+  },
+  "Roatán": {
+   "iata": "RTB",
+   "label": "Roatán"
+  },
+  "Utila": {
+   "iata": "LCE",
+   "label": "La Ceiba (ferry to Utila)"
+  },
+  "Sipadan Island": {
+   "iata": "TWU",
+   "label": "Tawau (via Kuala Lumpur)"
+  },
+  "Great Barrier Reef": {
+   "iata": "CNS",
+   "label": "Cairns"
+  },
+  "Whitsunday Islands": {
+   "iata": "HTI",
+   "label": "Hamilton Island"
+  },
+  "Heron Island": {
+   "iata": "GLT",
+   "label": "Gladstone"
+  },
+  "Komodo National Park": {
+   "iata": "LBJ",
+   "label": "Labuan Bajo"
+  },
+  "Raja Ampat": {
+   "iata": "SOQ",
+   "label": "Sorong"
+  },
+  "Okinawa Islands": {
+   "iata": "OKA",
+   "label": "Naha, Okinawa"
+  },
+  "Cocos Island": {
+   "iata": "SJO",
+   "label": "San José (liveaboard from Puntarenas)"
+  },
+  "Galapagos Islands": {
+   "iata": "GPS",
+   "label": "Baltra (via Quito/Guayaquil)"
+  },
+  "Socorro Island": {
+   "iata": "SJD",
+   "label": "Los Cabos (liveaboard)"
+  },
+  "Sea of Cortez": {
+   "iata": "LAP",
+   "label": "La Paz"
+  },
+  "Maui & Kona": {
+   "iata": "OGG",
+   "label": "Kahului, Maui"
+  },
+  "Maldives": {
+   "iata": "MLE",
+   "label": "Malé"
+  },
+  "Seychelles": {
+   "iata": "SEZ",
+   "label": "Mahé"
+  },
+  "Aliwal Shoal": {
+   "iata": "DUR",
+   "label": "Durban"
+  },
+  "Ningaloo Reef": {
+   "iata": "LEA",
+   "label": "Learmonth (Exmouth)"
+  },
+  "Gozo & Malta": {
+   "iata": "MLA",
+   "label": "Malta"
+  },
+  "Medes Islands": {
+   "iata": "BCN",
+   "label": "Barcelona"
+  },
+  "Palau": {
+   "iata": "ROR",
+   "label": "Koror"
+  },
+  "Truk (Chuuk) Lagoon": {
+   "iata": "TKK",
+   "label": "Weno, Chuuk"
+  },
+  "Cenotes of Yucatán Peninsula": {
+   "iata": "CUN",
+   "label": "Cancún"
+  },
+  "Azores": {
+   "iata": "PDL",
+   "label": "Ponta Delgada"
+  },
+  "Lundy Island": {
+   "iata": "BRS",
+   "label": "Bristol (boat from Bideford)"
+  },
+  "Scapa Flow": {
+   "iata": "KOI",
+   "label": "Kirkwall, Orkney"
+  },
+  "Silfra Fissure": {
+   "iata": "KEF",
+   "label": "Reykjavík"
+  },
+  "Vancouver Island": {
+   "iata": "YVR",
+   "label": "Vancouver"
+  },
+  "Fiji": {
+   "iata": "NAN",
+   "label": "Nadi"
+  },
+  "French Polynesia": {
+   "iata": "PPT",
+   "label": "Papeete, Tahiti"
+  },
+  "Guadalcanal & Western Province": {
+   "iata": "HIR",
+   "label": "Honiara"
+  },
+  "Moorea": {
+   "iata": "PPT",
+   "label": "Papeete (ferry to Moorea)"
+  },
+  "Poor Knights Islands": {
+   "iata": "AKL",
+   "label": "Auckland (drive to Tutukaka)"
+  },
+  "Apo Island & Dumaguete": {
+   "iata": "DGT",
+   "label": "Dumaguete"
+  },
+  "Bunaken National Marine Park": {
+   "iata": "MDC",
+   "label": "Manado"
+  },
+  "Gili Islands & Lombok": {
+   "iata": "LOP",
+   "label": "Lombok"
+  },
+  "Malapascua Island": {
+   "iata": "CEB",
+   "label": "Cebu"
+  },
+  "Similan Islands": {
+   "iata": "HKT",
+   "label": "Phuket (base: Khao Lak)"
+  },
+  "Tubbataha Reefs Natural Park": {
+   "iata": "PPS",
+   "label": "Puerto Princesa (liveaboard)"
+  },
+  "Lord Howe Island": {
+   "iata": "LDH",
+   "label": "Lord Howe (via Sydney)"
+  },
+  "South West Rocks": {
+   "iata": "CFS",
+   "label": "Coffs Harbour"
+  },
+  "Nusa Penida": {
+   "iata": "DPS",
+   "label": "Denpasar (fast boat from Sanur)"
+  },
+  "Fuvahmulah": {
+   "iata": "FVM",
+   "label": "Fuvahmulah (via Malé)"
+  },
+  "Layang Layang": {
+   "iata": "BKI",
+   "label": "Kota Kinabalu (charter)"
+  },
+  "Malpelo Island": {
+   "iata": "CLO",
+   "label": "Cali (liveaboard from Buenaventura)"
+  },
+  "Yap": {
+   "iata": "YAP",
+   "label": "Yap"
+  },
+  "Cenderawasih Bay": {
+   "iata": "BIK",
+   "label": "Biak (liveaboard)"
+  },
+  "Jupiter": {
+   "iata": "PBI",
+   "label": "West Palm Beach"
+  },
+  "Protea Banks": {
+   "iata": "DUR",
+   "label": "Durban"
+  },
+  "Tofo": {
+   "iata": "INH",
+   "label": "Inhambane"
+  },
+  "Larnaca": {
+   "iata": "LCA",
+   "label": "Larnaca"
+  },
+  "Kaş": {
+   "iata": "DLM",
+   "label": "Dalaman"
+  },
+  "Ustica": {
+   "iata": "PMO",
+   "label": "Palermo"
+  },
+  "Vis Island": {
+   "iata": "SPU",
+   "label": "Split (ferry to Vis)"
+  },
+  "Chania (Crete)": {
+   "iata": "CHQ",
+   "label": "Chania"
+  },
+  "Bat Islands": {
+   "iata": "LIR",
+   "label": "Liberia, Guanacaste"
+  },
+  "Coiba": {
+   "iata": "PTY",
+   "label": "Panama City (via Santiago de Veraguas)"
+  },
+  "Aqaba": {
+   "iata": "AQJ",
+   "label": "Aqaba"
+  },
+  "Aruba": {
+   "iata": "AUA",
+   "label": "Oranjestad"
+  },
+  "Bali": {
+   "iata": "DPS",
+   "label": "Denpasar"
+  },
+  "Cancún & Playa del Carmen": {
+   "iata": "CUN",
+   "label": "Cancún"
+  },
+  "Dubai & Fujairah": {
+   "iata": "DXB",
+   "label": "Dubai"
+  },
+  "Florida Keys": {
+   "iata": "MIA",
+   "label": "Miami (drive the Overseas Highway)"
+  },
+  "Koh Tao": {
+   "iata": "USM",
+   "label": "Koh Samui (ferry to Koh Tao)"
+  },
+  "Mallorca": {
+   "iata": "PMI",
+   "label": "Palma de Mallorca"
+  },
+  "Mauritius": {
+   "iata": "MRU",
+   "label": "Mauritius"
+  },
+  "Muscat & Daymaniyat Islands": {
+   "iata": "MCT",
+   "label": "Muscat"
+  },
+  "Oahu": {
+   "iata": "HNL",
+   "label": "Honolulu"
+  },
+  "Phuket": {
+   "iata": "HKT",
+   "label": "Phuket"
+  },
+  "Santorini": {
+   "iata": "JTR",
+   "label": "Santorini"
+  },
+  "Tenerife": {
+   "iata": "TFS",
+   "label": "Tenerife South"
+  },
+  "Zanzibar": {
+   "iata": "ZNZ",
+   "label": "Zanzibar"
+  },
+  "Dahab": {
+   "iata": "SSH",
+   "label": "Sharm El Sheikh (transfer to Dahab)"
+  },
+  "Hurghada & El Gouna": {
+   "iata": "HRG",
+   "label": "Hurghada"
+  },
+  "Marsa Alam": {
+   "iata": "RMF",
+   "label": "Marsa Alam"
+  },
+  "Sharm El Sheikh": {
+   "iata": "SSH",
+   "label": "Sharm El Sheikh"
+  }
+ },
+ "destinations": {
+  "Bali": {
+   "airports": [
+    {
+     "iata": "DPS",
+     "name": "I Gusti Ngurah Rai International",
+     "city": "Denpasar",
+     "note": "Direct long-haul and regional flights; also the gateway airport for Nusa Penida and the fast-boat routes east"
+    }
+   ],
+   "getting_in": "Fly straight into Denpasar (DPS), which has nonstop links from most major Asian and Australian hubs plus Doha and Istanbul — no domestic leg needed. The airport sits between Kuta and Jimbaran, 30-45 min by road from Sanur and about 1.5 h from Ubud.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "taxi",
+      "note": "Fixed-price airport taxi counter; ~30-45 min to Sanur (~IDR 150,000-250,000), ~90 min to Ubud (~IDR 300,000-400,000)"
+     },
+     {
+      "mode": "rideshare",
+      "note": "Ride-hailing apps work from designated airport pickup zones at similar or slightly lower rates"
+     },
+     {
+      "mode": "private_transfer",
+      "note": "Hotel and dive-area pickups bookable in advance; count on 2.5-3 h to Amed/Tulamben on the east coast"
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Driving is on the left and southern Bali traffic is dense with scooters; a car with driver runs about USD 40-50 for a full day, so most visitors skip self-driving. Confident riders rent scooters (~IDR 70,000-100,000/day) outside the congested south."
+    }
+   },
+   "stay": [
+    {
+     "area": "Sanur",
+     "why": "Calm beachfront grid with the fast-boat harbour to Nusa Penida at its doorstep and an easy 30-45 min airport run"
+    },
+    {
+     "area": "Amed & Tulamben",
+     "why": "Quiet fishing villages on the northeast coast, right on the shore-entry dive coast and far from the southern traffic"
+    },
+    {
+     "area": "Ubud",
+     "why": "Inland base among rice terraces and temples with the island's densest concentration of culture, crafts and restaurants"
+    },
+    {
+     "area": "Pemuteran",
+     "why": "Slow northwest-coast village handy for the national-park islands and a night-and-day contrast to the busy south"
+    },
+    {
+     "area": "Canggu / Seminyak",
+     "why": "The food, café and nightlife belt on the southwest surf beaches, best for the non-diving days at either end of a trip"
+    }
+   ],
+   "todo": [
+    {
+     "title": "Kecak dance at Uluwatu Temple",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "A clifftop temple 70 m above the surf where a 60-man chanting choir performs the Ramayana at sunset. Arrive an hour early for a seat on the west side of the amphitheatre.",
+     "q": "uluwatu temple kecak sunset"
+    },
+    {
+     "title": "Mount Batur sunrise trek",
+     "tags": [
+      "adventure",
+      "nature"
+     ],
+     "len": "half",
+     "note": "A 2-h pre-dawn climb to the 1,717 m crater rim for sunrise over Lake Batur and Mount Agung. Pickups run around 02:00-03:00 and you are back by mid-morning.",
+     "q": "mount batur sunrise trek"
+    },
+    {
+     "title": "Jatiluwih rice terraces",
+     "tags": [
+      "nature"
+     ],
+     "len": "half",
+     "note": "600 ha of UNESCO-listed terraces on the slopes of Mount Batukaru, laced with marked walking loops of 1.5-5 km. Far less crowded than the Instagram terraces near Ubud.",
+     "q": "jatiluwih rice terrace walk"
+    },
+    {
+     "title": "Tirta Empul water temple",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "A 10th-century spring temple where Balinese Hindus queue under 13 water spouts for ritual purification; visitors can join with a rented sarong. Combine with the nearby Gunung Kawi rock-cut shrines.",
+     "q": "tirta empul purification ritual"
+    },
+    {
+     "title": "Ubud Monkey Forest and old town",
+     "tags": [
+      "nature",
+      "culture"
+     ],
+     "len": "half",
+     "note": "A 12.5 ha sacred forest with three temples and about 1,200 long-tailed macaques, five minutes' walk from Ubud's palace and market. Keep bags zipped — the monkeys are practised thieves.",
+     "q": "ubud monkey forest walking tour"
+    },
+    {
+     "title": "Balinese cooking class",
+     "tags": [
+      "food",
+      "culture"
+     ],
+     "len": "half",
+     "note": "Most classes start with a morning produce-market visit, then work through base gede spice paste, satay lilit and lawar in an open kitchen. A practical crash course in why Balinese food tastes nothing like Java's.",
+     "q": "balinese cooking class market tour"
+    },
+    {
+     "title": "Sekumpul waterfall trek",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "A cluster of 80 m falls in the north-coast hills, reached by a steep 30-40 min descent and two river crossings. It is a 2.5 h drive from the south, so pair it with north-coast villages for a full day.",
+     "q": "sekumpul waterfall trek"
+    },
+    {
+     "title": "Sidemen valley walk or cycle",
+     "tags": [
+      "nature",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Rice-field lanes and weaving villages under Mount Agung in east Bali, still largely tour-bus-free. Handy on the way to or from the Amed dive coast.",
+     "q": "sidemen valley rice field walk"
+    },
+    {
+     "title": "Beginner surf lesson on the southwest beaches",
+     "tags": [
+      "beach",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "The beach breaks from Kuta up to Canggu offer soft sandbar waves and board rental on the sand. A 2-h lesson typically gets first-timers standing.",
+     "q": "beginner surf lesson bali beach break"
+    }
+   ],
+   "events": [
+    {
+     "name": "Nyepi (Day of Silence)",
+     "months": [
+      3
+     ],
+     "when": "March (date follows the Saka lunar calendar; 19 March in 2026)",
+     "note": "The whole island stops for 24 h — the airport closes, roads empty and guests must stay inside their hotel; the ogoh-ogoh demon parades the evening before are worth seeing",
+     "kind": "culture"
+    },
+    {
+     "name": "Galungan & Kuningan",
+     "months": [
+      6
+     ],
+     "when": "Every 210 days on the pawukon cycle, so the month shifts each year (17 and 27 June in 2026)",
+     "note": "Bamboo penjor poles arch over every village street and temples fill with processions; businesses close for the main days",
+     "kind": "culture"
+    },
+    {
+     "name": "Bali Arts Festival",
+     "months": [
+      6,
+      7
+     ],
+     "when": "Mid-June to mid-July, month-long",
+     "note": "Daily gamelan, dance and craft performances at the Denpasar arts centre, most of them free",
+     "kind": "culture"
+    },
+    {
+     "name": "Bali Kite Festival",
+     "months": [
+      7
+     ],
+     "when": "July, during the windy season (kites fly over Sanur through October)",
+     "note": "Village teams launch traditional kites up to 10 m across from Padang Galak beach near Sanur",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "Bali layers volcanoes, rice terraces and a living Hindu temple culture onto a compact island where daily offerings still appear on every doorstep. The south is dense with surf beaches, restaurants and traffic; Ubud anchors the artistic interior; the east and north coasts stay rural and quiet. Food ranges from IDR 25,000 warung nasi campur to a serious modern dining scene, and ceremony processions will genuinely stop your car."
+  },
+  "Nusa Penida": {
+   "airports": [
+    {
+     "iata": "DPS",
+     "name": "I Gusti Ngurah Rai International",
+     "city": "Denpasar",
+     "note": "Nearest airport — Nusa Penida has none; cross by fast boat from Sanur"
+    }
+   ],
+   "getting_in": "Fly to Denpasar (DPS), transfer 30-45 min to Sanur harbour, then take a fast boat to Toyapakeh or Sampalan — about 21 daily sailings between 06:30 and 17:00, 30-45 min crossing, IDR 150,000-250,000 each way. Slower and cheaper boats also run from Padang Bai and Kusamba on Bali's east coast.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "fast_boat",
+      "note": "Sanur to Toyapakeh/Sampalan, 30-45 min, ~USD 10-15 one way; book ahead in July-August and around Balinese ceremony days"
+     },
+     {
+      "mode": "private_transfer",
+      "note": "On-island cars with driver are the standard way to tour: priced per vehicle for a full day with fuel included, slightly above Bali's usual USD 40-50 day-driver rate"
+     }
+    ],
+    "car": {
+     "recommended": true,
+     "note": "With a driver, yes — there are no taxis or ride-hailing apps on the island. Roads to the headline viewpoints are steep, narrow and part-broken, so the IDR 70,000-100,000/day scooters are only for genuinely experienced riders."
+    }
+   },
+   "stay": [
+    {
+     "area": "Toyapakeh",
+     "why": "Beside the main fast-boat jetty and the closest base to the west-coast big-hitters like Kelingking and Broken Beach"
+    },
+    {
+     "area": "Ped–Sampalan north coast",
+     "why": "The island's main strip of guesthouses, warungs and dive shops along the calm north shore road"
+    },
+    {
+     "area": "Sakti / Crystal Bay",
+     "why": "A quieter western pocket with a swimmable sunset beach ten minutes from Toyapakeh"
+    }
+   ],
+   "todo": [
+    {
+     "title": "Kelingking viewpoint",
+     "tags": [
+      "nature"
+     ],
+     "len": "half",
+     "note": "The 200 m limestone headland shaped like a T-rex, with the island's most photographed clifftop panorama. The optional descent to the beach is a steep, exposed 40-60 min scramble — the view alone justifies the trip.",
+     "q": "kelingking beach viewpoint"
+    },
+    {
+     "title": "Broken Beach and Angel's Billabong",
+     "tags": [
+      "nature"
+     ],
+     "len": "half",
+     "note": "A collapsed sea cave forming a natural rock arch around a circular cove, next to a tide-carved natural infinity pool. Visit at low tide and stay out of the pool when swell is running.",
+     "q": "broken beach angels billabong"
+    },
+    {
+     "title": "Diamond Beach and Atuh Beach",
+     "tags": [
+      "beach",
+      "nature"
+     ],
+     "len": "half",
+     "note": "Twin white-sand coves under limestone pinnacles on the east tip, reached by cliff-cut staircases. The east-coast drive from Sampalan takes about an hour each way.",
+     "q": "diamond beach atuh beach"
+    },
+    {
+     "title": "Peguyangan waterfall stairs",
+     "tags": [
+      "adventure",
+      "culture"
+     ],
+     "len": "half",
+     "note": "A blue steel staircase bolted down a 200 m sea cliff to a spring-fed temple and bathing pools at the bottom. Sarongs required — it is an active pilgrimage site, not just a photo stop.",
+     "q": "peguyangan waterfall blue stairs"
+    },
+    {
+     "title": "Teletubbies Hills",
+     "tags": [
+      "nature",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Rounded green karst hummocks across the island's dry southeast interior, best in the late-afternoon light. An easy add-on to the Diamond Beach run.",
+     "q": "teletubbies hills nusa penida"
+    },
+    {
+     "title": "Crystal Bay sunset",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "The island's most swimmable beach, a palm-backed cove facing due west toward Nusa Ceningan. Warungs on the sand sell grilled corn and coconuts for the sunset hour.",
+     "q": "crystal bay sunset beach"
+    },
+    {
+     "title": "Tembeling forest and rock pools",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "A jungle track drops to two spring-fed pools and a tiny cove on the wild south coast. The final stretch is only passable by ojek or on foot, which keeps the crowds off.",
+     "q": "tembeling forest natural pool"
+    },
+    {
+     "title": "Pura Dalem Ped temple",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "One of Bali's most important pilgrimage temples, drawing boatloads of worshippers from the mainland on ceremony days. It sits right on the north-coast road, so a respectful 30-minute stop is easy.",
+     "q": "pura dalem ped temple penida"
+    }
+   ],
+   "events": [
+    {
+     "name": "Nyepi (Day of Silence)",
+     "months": [
+      3
+     ],
+     "when": "March (Saka lunar calendar; 19 March in 2026)",
+     "note": "Penida observes the silence like the rest of Bali province — all boats stop and guests stay in their accommodation for 24 h, with Denpasar airport also closed",
+     "kind": "culture"
+    },
+    {
+     "name": "Galungan & Kuningan pilgrimages",
+     "months": [
+      6
+     ],
+     "when": "Every 210 days on the pawukon cycle, so the month shifts each year (June in 2026)",
+     "note": "Pura Dalem Ped fills with pilgrims crossing from mainland Bali; fast boats sell out around the holy days",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "Nusa Penida is a raw limestone plateau 45 minutes off Bali that skipped the mainland's development curve: seaweed farms, cassava plots and cliff-edge temples, with 200 m sea cliffs on its south coast. Infrastructure is basic and roads rough, which is exactly the appeal — days are spent bouncing between viewpoints, stair-cut beaches and warung lunches. Evenings are quiet; this is an early-nights island."
+  },
+  "Gili Islands & Lombok": {
+   "airports": [
+    {
+     "iata": "LOP",
+     "name": "Lombok International (Zainuddin Abdul Madjid)",
+     "city": "Praya",
+     "note": "Domestic hub plus short-haul international (Kuala Lumpur, Singapore); ~2 h drive from Bangsal harbour for the Gilis"
+    },
+    {
+     "iata": "DPS",
+     "name": "I Gusti Ngurah Rai International",
+     "city": "Denpasar",
+     "note": "The usual long-haul gateway, connected to the Gilis by direct fast boats"
+    }
+   ],
+   "getting_in": "Two workable routes: fly long-haul into Bali (DPS) and take a direct fast boat from Padang Bai or Serangan to Gili Trawangan (1.5-2.5 h, ~USD 22-35), or fly into Lombok (LOP) — 30 min from Bali, or nonstop from Jakarta, Kuala Lumpur and Singapore — then drive about 2 h north to Bangsal harbour for the 20-45 min boat hop. For south-Lombok stays, Kuta Lombok is only 30 min from LOP.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "fast_boat",
+      "note": "Bali (Padang Bai) to Gili Trawangan, 1.5-2 h, ~USD 22-35 one way; several morning departures, seas roughest December-February"
+     },
+     {
+      "mode": "private_transfer",
+      "note": "LOP airport to Bangsal harbour ~2 h, around USD 25-50 per car; to Kuta Lombok ~30 min"
+     },
+     {
+      "mode": "ferry",
+      "note": "Public boats from Bangsal to the Gilis, 20-45 min, under IDR 50,000 — they leave when full, so allow slack"
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "The Gilis ban all motor vehicles — you walk, cycle (~IDR 50,000/day), take a cidomo horse cart (IDR 100,000-150,000 a hop) or rent an e-bike (IDR 250,000-350,000/day). On Lombok itself, driving is on the left, traffic is far lighter than Bali, and a scooter or car with driver covers the waterfalls and south-coast beaches well."
+    }
+   },
+   "stay": [
+    {
+     "area": "Gili Trawangan",
+     "why": "The largest island with the widest spread of restaurants, dive shops and nightlife, plus the most boat connections"
+    },
+    {
+     "area": "Gili Air",
+     "why": "Closest island to Lombok with a middle-ground pace — enough cafés to be easy, quiet enough to sleep"
+    },
+    {
+     "area": "Gili Meno",
+     "why": "The smallest and quietest of the three, essentially a honeymoon-and-hammock island"
+    },
+    {
+     "area": "Kuta Lombok",
+     "why": "South-coast surf town 30 min from the airport, the base for Mandalika, Sasak villages and the best beach road-trips"
+    }
+   ],
+   "todo": [
+    {
+     "title": "Cycle the Gili Trawangan loop",
+     "tags": [
+      "relax",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "The flat 7 km coastal track circles the island in about an hour, passing salt flats and the quiet north beaches. Push the bike through the two soft-sand stretches on the west side.",
+     "q": "gili trawangan bicycle island loop"
+    },
+    {
+     "title": "Sunset strip on Gili T's west coast",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "The west-facing beach bars line up swings and beanbags for sunset behind Bali's Mount Agung across the strait. Come down from about 17:30 for the show.",
+     "q": "gili trawangan sunset beach swings"
+    },
+    {
+     "title": "Gili Trawangan night market",
+     "tags": [
+      "food"
+     ],
+     "len": "half",
+     "note": "Evening stalls by the harbour grill fresh reef fish and serve nasi campur to shared tables for a few dollars a plate. Go early — the best fish sells out by 20:00.",
+     "q": "gili trawangan night market food"
+    },
+    {
+     "title": "Island-hop to Gili Meno and Gili Air",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Public island-hopping boats link the three Gilis twice daily for pocket change. Meno's salt lake and empty east-coast sand make the laziest of day trips.",
+     "q": "gili islands hopping boat trip"
+    },
+    {
+     "title": "Surf lesson at Selong Belanak",
+     "tags": [
+      "beach",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "A horseshoe bay near Kuta Lombok with a sandy-bottomed beginner wave and board rentals on the beach. One of the easiest places in Indonesia to catch a first green wave.",
+     "q": "selong belanak surf lesson"
+    },
+    {
+     "title": "Tiu Kelep and Sendang Gile waterfalls",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "Two falls on Rinjani's northern foothills near Senaru, the second reached by a 45-min river-wading walk into a mossy amphitheatre. It pairs naturally with the drive along the scenic north coast from Bangsal.",
+     "q": "sendang gile tiu kelep waterfall senaru"
+    },
+    {
+     "title": "Sasak village visit (Sade or Ende)",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "Traditional villages of bamboo-and-thatch lumbung houses where weaving is still done on backstrap looms. Ten minutes from Kuta Lombok; a local guide and a small donation are expected.",
+     "q": "sade sasak traditional village"
+    },
+    {
+     "title": "Tetebatu rice terraces",
+     "tags": [
+      "nature",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Rinjani's green southern slopes with terrace walks through tobacco and rice plots and a monkey-inhabited forest — Lombok's quieter answer to Ubud's countryside. About 1.5 h from Kuta Lombok.",
+     "q": "tetebatu rice terrace walk"
+    },
+    {
+     "title": "Rinjani crater rim trek",
+     "tags": [
+      "adventure",
+      "nature"
+     ],
+     "len": "full",
+     "note": "Indonesia's second-highest volcano (3,726 m) with a crater-lake panorama from the 2,639 m Senaru rim; the standard trip is a guided 2-day/1-night camp. Only for a spare weather-window before flying — no diving after a high-altitude night.",
+     "q": "rinjani crater rim trek"
+    }
+   ],
+   "events": [
+    {
+     "name": "Bau Nyale festival",
+     "months": [
+      2
+     ],
+     "when": "February (date set by the tenth month of the Sasak lunar calendar)",
+     "note": "Tens of thousands descend on the Kuta/Mandalika beaches at dawn to harvest sea worms tied to a princess legend — south-coast rooms sell out",
+     "kind": "culture"
+    },
+    {
+     "name": "Idul Fitri (Lebaran)",
+     "months": [
+      2,
+      3
+     ],
+     "when": "End of Ramadan; the Islamic calendar moves it ~11 days earlier each year (falls in March in 2026)",
+     "note": "Lombok is majority Muslim — domestic flights, fast boats and hotels fill for about a week, and mainland restaurants keep daytime hours low-key during Ramadan itself",
+     "kind": "culture"
+    },
+    {
+     "name": "Indonesian motorcycle grand prix, Mandalika",
+     "months": [
+      10
+     ],
+     "when": "A weekend in early October",
+     "note": "The street circuit sits beside Kuta Lombok; accommodation across the south coast books out and prices spike for race week",
+     "kind": "sport"
+    },
+    {
+     "name": "Perang Topat",
+     "months": [
+      11,
+      12
+     ],
+     "when": "Late November or December, on the full moon of the seventh Sasak month",
+     "note": "A good-natured 'rice-cake war' between Hindu and Muslim communities at Lingsar temple near Mataram — an easy half-day from Senggigi or the Gilis",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "The three Gilis are flat coral cays with no motor vehicles — days run on bicycles, beach naps and grilled fish, with Trawangan supplying the nightlife and Meno the silence. Lombok next door is a different register entirely: a Sasak, majority-Muslim island of surf bays, tobacco fields and the 3,726 m Rinjani volcano. Split a week between sandbar idleness and south-coast road trips and neither half feels like filler."
+  },
+  "Komodo National Park": {
+   "airports": [
+    {
+     "iata": "LBJ",
+     "name": "Komodo International",
+     "city": "Labuan Bajo",
+     "note": "On Flores, the sole gateway town for the park; the airport is ~10-15 min from the harbour"
+    }
+   ],
+   "getting_in": "Fly to Labuan Bajo (LBJ) on Flores: about 1 h nonstop from Bali with 4-6 daily flights, or ~2.5 h nonstop from Jakarta. The airport is a 10-15 min drive from town and the harbour, from where all park boats — day trips and liveaboards — depart.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "taxi",
+      "note": "Fixed-rate airport cars into town, 10-15 min, roughly IDR 50,000-100,000; most hotels also offer free or cheap pickups"
+     },
+     {
+      "mode": "liveaboard_pickup",
+      "note": "Boats board directly at Labuan Bajo harbour or the marina, 10 min from the airport — same-day connections from a morning Bali flight are routine"
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Labuan Bajo is a walkable one-road harbour town and the park itself is reached only by boat. Rent a scooter (~IDR 75,000/day, left-hand driving) for hillside cafés and nearby caves; hire a car with driver only for full-day inland Flores trips."
+    }
+   },
+   "stay": [
+    {
+     "area": "Labuan Bajo harbourfront",
+     "why": "Steps from the jetties for 05:30 park departures, with the town's restaurant row and trip offices on the same street"
+    },
+    {
+     "area": "Hillside above town",
+     "why": "Guesthouses and hotels a short, steep ride up get harbour-sunset views and cooler air away from the street noise"
+    },
+    {
+     "area": "Waecicu / north beaches",
+     "why": "Beach resorts 10-15 min north of town for a quieter base that still reaches the harbour easily"
+    }
+   ],
+   "todo": [
+    {
+     "title": "Padar Island sunrise hike",
+     "tags": [
+      "adventure",
+      "nature"
+     ],
+     "len": "full",
+     "note": "A 30-40 min stair climb to the ridge view over Padar's three differently-coloured bays, the park's signature panorama. Done as the first stop on a boat day leaving Labuan Bajo around 05:00-06:00.",
+     "q": "padar island sunrise hike"
+    },
+    {
+     "title": "Ranger-guided dragon walk on Komodo or Rinca",
+     "tags": [
+      "wildlife",
+      "nature"
+     ],
+     "len": "full",
+     "note": "The only place on earth to see wild Komodo dragons — 2-3 m monitors that rangers track on short guided loops past deer and wild pigs. Rinca's boardwalk circuit is shorter; Komodo island's savannah walks feel wilder.",
+     "q": "komodo dragon ranger trekking rinca"
+    },
+    {
+     "title": "Pink Beach (Pantai Merah)",
+     "tags": [
+      "beach"
+     ],
+     "len": "full",
+     "note": "Crushed red organ-pipe coral tints the sand pink against turquoise shallows; it is a standard swim-and-lunch stop on park boat itineraries. Late morning gives the strongest colour.",
+     "q": "pink beach komodo boat trip"
+    },
+    {
+     "title": "Flying foxes at Kalong Island",
+     "tags": [
+      "wildlife",
+      "nature"
+     ],
+     "len": "half",
+     "note": "At dusk thousands of fruit bats stream off a mangrove islet toward Flores in a river of wings that lasts half an hour. Overnight boats anchor here; day boats sometimes catch it on the way home.",
+     "q": "kalong island flying fox sunset"
+    },
+    {
+     "title": "Wae Rebo village",
+     "tags": [
+      "culture",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "A ring of seven cone-roofed Manggarai clan houses at 1,100 m, reached by a 4-5 h drive and a 2-3 h forest hike; guests sleep on mats in a communal house. Usually run as an overnight from Labuan Bajo — the single best cultural trip on Flores.",
+     "q": "wae rebo village trek overnight"
+    },
+    {
+     "title": "Cunca Wulang waterfall and canyon",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "A slot canyon with jump-able pools and small falls about 1.5 h inland from town, plus a 30-40 min guided walk through candlenut and cacao gardens. The reliable pick for a surface-interval day.",
+     "q": "cunca wulang waterfall canyon"
+    },
+    {
+     "title": "Rangko Cave swim",
+     "tags": [
+      "nature"
+     ],
+     "len": "half",
+     "note": "A tidal cave near Boleng, 45 min drive plus a short boat hop, holding a clear turquoise saltwater pool lit by a shaft of midday sun. Go around low tide when the ledge for entry is exposed.",
+     "q": "rangko cave swimming"
+    },
+    {
+     "title": "Caci whip-duel performance at Melo village",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "Manggarai men duel with rattan whips and buffalo-hide shields in a ritual display of courage, staged for visitors in a hill village 20 km from town. Book as a half-day trip with hotel pickup.",
+     "q": "caci whip dance melo village"
+    }
+   ],
+   "events": [
+    {
+     "name": "Penti harvest ceremony at Wae Rebo",
+     "months": [
+      11
+     ],
+     "when": "November each year (exact days set by the village)",
+     "note": "The Manggarai new-year thanksgiving with all-night ritual, gong music and caci — the village's few guest mats book out well ahead",
+     "kind": "culture"
+    },
+    {
+     "name": "Indonesian Independence Day",
+     "months": [
+      8
+     ],
+     "when": "17 August",
+     "note": "Flag ceremonies, street games and packed domestic flights in the days around it — book LBJ seats early",
+     "kind": "holiday"
+    },
+    {
+     "name": "Idul Fitri (Lebaran) travel surge",
+     "months": [
+      2,
+      3
+     ],
+     "when": "End of Ramadan; the Islamic calendar moves it ~11 days earlier each year (March in 2026)",
+     "note": "A week-long national holiday when flights to Labuan Bajo and park boats fill with domestic travellers",
+     "kind": "holiday"
+    }
+   ],
+   "topside_summary": "The park is a cluster of savannah islands — dry, golden and dragon-patrolled — while the base town of Labuan Bajo is a fast-growing harbour strip on Flores with a sunset-facing restaurant row above the jetties. Topside days revolve around ridge hikes, ranger walks and boat-deck hours; inland Flores adds waterfalls, cacao gardens and the cone-roofed mountain village of Wae Rebo. Manggarai culture surfaces in caci whip duels and strong local coffee."
+  },
+  "Raja Ampat": {
+   "airports": [
+    {
+     "iata": "SOQ",
+     "name": "Domine Eduard Osok",
+     "city": "Sorong",
+     "note": "Reached via Jakarta (nonstop ~4 h, mostly overnight departures) or Makassar; onward by ferry to Waisai on Waigeo"
+    }
+   ],
+   "getting_in": "Fly to Sorong (SOQ) in Southwest Papua — nonstop from Jakarta in about 4 h (typically red-eyes) or via Makassar — then take the ~2 h fast ferry from Sorong harbour to Waisai on Waigeo, which runs once or twice daily. Homestays and resorts collect guests by boat from Waisai jetty; budget for the marine-park permit (IDR 700,000) and visitor entry ticket (IDR 300,000) payable in Waisai or online.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "taxi",
+      "note": "Sorong airport to the ferry harbour, 15-20 min, around IDR 100,000"
+     },
+     {
+      "mode": "ferry",
+      "note": "Sorong-Waisai fast ferry, ~2 h: economy IDR 110,000-137,000, VIP cabin IDR 250,000-262,000, plus a small boarding fee; arrive at least an hour early"
+     },
+     {
+      "mode": "fast_boat",
+      "note": "Homestay or resort boat pickup from Waisai jetty, 20 min-2 h depending on the island, usually charged per boat and arranged when booking"
+     },
+     {
+      "mode": "liveaboard_pickup",
+      "note": "Liveaboards board directly in Sorong harbour or the marina, skipping the ferry entirely"
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "There is nothing to drive: beyond Waisai's few streets the archipelago has no road network, and every stay, village and viewpoint is reached by boat. Plan around fuel costs — boat petrol is the biggest line item after the room."
+    }
+   },
+   "stay": [
+    {
+     "area": "Kri & Mansuar islands",
+     "why": "The main homestay-and-resort belt in the Dampier Strait, minutes by boat from the region's busiest reefs and jetties"
+    },
+    {
+     "area": "Gam Island",
+     "why": "Quieter over-water homestays around Kabui Bay's karst, well placed for bird-of-paradise walks and mangrove paddling"
+    },
+    {
+     "area": "Waisai (Waigeo)",
+     "why": "The small capital with the ferry jetty, ATMs and permit offices — practical for first and last nights rather than the whole stay"
+    }
+   ],
+   "todo": [
+    {
+     "title": "Piaynemo viewpoint and Star Lagoon",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "A 320-step boardwalk climbs to the postcard view over cone karst islets in a turquoise lagoon, with the star-shaped Telaga Bintang lookout nearby. It is a 1.5-2 h boat run from the Dampier Strait, so it fills a day with lagoon stops en route.",
+     "q": "piaynemo viewpoint boat trip"
+    },
+    {
+     "title": "Red bird-of-paradise dawn walk",
+     "tags": [
+      "wildlife",
+      "nature"
+     ],
+     "len": "half",
+     "note": "Local guides in Saporkren or Sawinggrai lead pre-dawn forest walks to display trees where red birds-of-paradise dance at first light. Departure is around 04:30-05:00; back for breakfast.",
+     "q": "red bird of paradise watching waigeo"
+    },
+    {
+     "title": "Arborek village visit",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "A tidy 200-person island village known for woven-palm handicrafts and a lively jetty, and an easy model of how tourism income works here. Combine with a sandbar or lagoon stop on the same boat.",
+     "q": "arborek village raja ampat"
+    },
+    {
+     "title": "Paddle the Kabui Bay karst and mangroves",
+     "tags": [
+      "adventure",
+      "nature"
+     ],
+     "len": "half",
+     "note": "Kayaks or dugouts thread between mushroom-shaped islets, hidden coves and the narrow 'passage' channel between Gam and Waigeo. Calm, shaded water — the best low-effort afternoon in the islands.",
+     "q": "kabui bay kayak mangrove karst"
+    },
+    {
+     "title": "Pasir Timbul sandbar",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "A bright white sandbar that surfaces only around low tide in the middle of the strait. Boats time a swim-and-photo stop around the tide tables — ask your hosts which day works.",
+     "q": "pasir timbul sandbar raja ampat"
+    },
+    {
+     "title": "Kali Biru blue river",
+     "tags": [
+      "nature"
+     ],
+     "len": "half",
+     "note": "A spring-fed river in the Warsambin forest east of Waisai that runs an improbable electric blue and stays cold enough to gasp. Reached by boat up the bay plus a short walk; pay the village fee on arrival.",
+     "q": "kali biru blue river waigeo"
+    }
+   ],
+   "events": [
+    {
+     "name": "Raja Ampat Festival",
+     "months": [
+      10
+     ],
+     "when": "Mid-to-late October, in Waisai",
+     "note": "Several days of Papuan dance, boat races, crafts and seafood stalls on the Waisai waterfront — ferries and town rooms run full",
+     "kind": "culture"
+    },
+    {
+     "name": "Christmas and New Year",
+     "months": [
+      12,
+      1
+     ],
+     "when": "Late December to early January",
+     "note": "The islands are largely Christian: villages hold week-long church celebrations, some homestays close for family time, and ferries fill — confirm ahead",
+     "kind": "holiday"
+    }
+   ],
+   "topside_summary": "Raja Ampat is an archipelago of jungle-covered karst islands off the Bird's Head of New Guinea, where life runs on boat schedules, rainwater tanks and generator hours. Villages are small, Christian and Papuan, meals are grilled fish and sago-based staples at the homestay table, and the loudest evening sound is rain on a thatch roof. It rewards travellers who want dawn birdsong and hammock time rather than restaurants — bring cash, patience and dry bags."
+  },
+  "Sharm El Sheikh": {
+   "airports": [
+    {
+     "iata": "SSH",
+     "name": "Sharm El Sheikh International",
+     "city": "Sharm El Sheikh",
+     "note": "Direct scheduled and charter flights from most of Europe and the Gulf; roughly hourly Cairo connections."
+    }
+   ],
+   "getting_in": "SSH takes direct scheduled and charter flights from much of Europe and the Gulf year-round; from anywhere else, connect through Cairo (about 1h10 onward). The airport sits at the northern end of the resort strip — 15-25 minutes by road to Naama Bay, up to 40 minutes to Hadaba and the Old Market.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "private_transfer",
+      "note": "Pre-booked car to Naama Bay 15-25 min, about USD 8-15; farther bays up to 40 min."
+     },
+     {
+      "mode": "taxi",
+      "note": "Airport-rank taxis run roughly USD 10-15 to the central bays; agree the fare before getting in."
+     },
+     {
+      "mode": "shuttle",
+      "note": "Many resorts include a minibus pickup with the room rate — confirm when booking."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Distances are short, taxis are everywhere, and Sinai police checkpoints plus assertive local driving make self-drive more hassle than help."
+    }
+   },
+   "stay": [
+    {
+     "area": "Naama Bay",
+     "why": "Central pedestrian promenade of restaurants, bars and shops, with most dive-boat jetties a 10-minute ride away."
+    },
+    {
+     "area": "Hadaba / Ras Um Sid",
+     "why": "Clifftop quarter with house reefs off the rocks and quick access to the Old Market, noticeably quieter than Naama Bay."
+    },
+    {
+     "area": "Sharks Bay",
+     "why": "Calm swimmable beach with a house reef, close to the jetties used by boats running to the Strait of Tiran."
+    },
+    {
+     "area": "Nabq Bay",
+     "why": "Family all-inclusive strip 10 minutes from the airport fronting a broad, shallow, windswept lagoon."
+    },
+    {
+     "area": "Sharm El Maya / Old Market",
+     "why": "The local end of town — cheaper rooms, Egyptian restaurants and the evening souk on foot."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Mount Sinai sunrise climb and St Catherine's Monastery",
+     "tags": [
+      "culture",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "About 3 hours' drive to the trailhead, then a 2-3 hour night ascent to 2,285 m for sunrise. The 6th-century monastery below is closed to visitors on Sundays.",
+     "q": "Mount Sinai sunrise monastery trip"
+    },
+    {
+     "title": "Ras Mohammed National Park by land",
+     "tags": [
+      "nature",
+      "beach"
+     ],
+     "len": "full",
+     "note": "Jeep or bus tours cover the headland about 25 km south of town: snorkel bays, a mangrove channel and the inland salt lake, back by late afternoon.",
+     "q": "Ras Mohammed national park jeep tour"
+    },
+    {
+     "title": "White Island sandbar boat day",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "full",
+     "note": "Boats from Sharm El Maya anchor off a bare white sandbar inside Ras Mohammed for swimming and sunbathing, with snorkel stops on the way.",
+     "q": "White Island boat trip"
+    },
+    {
+     "title": "Old Market evening and Al Sahaba Mosque",
+     "tags": [
+      "culture",
+      "food"
+     ],
+     "len": "half",
+     "note": "Browse the spice and souvenir souk in Sharm El Maya, photograph the mosque's mixed Islamic-revival architecture, and eat grilled fish priced by the kilo.",
+     "q": "old market walking tour"
+    },
+    {
+     "title": "Quad bike sunset and Bedouin dinner",
+     "tags": [
+      "adventure",
+      "culture"
+     ],
+     "len": "half",
+     "note": "Two-hour desert rides end at a Bedouin camp for tea, sand-baked bread and dinner under the stars; typically USD 25-40 per person.",
+     "q": "quad bike sunset bedouin dinner"
+    },
+    {
+     "title": "Colored Canyon day trip",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "About 2.5 hours each way toward Nuweiba for a 1-2 hour scramble through a sandstone slot canyon with walls up to 40 m.",
+     "q": "colored canyon tour"
+    },
+    {
+     "title": "Naama Bay promenade and SOHO Square by night",
+     "tags": [
+      "nightlife",
+      "family"
+     ],
+     "len": "half",
+     "note": "Pedestrian strip of shisha cafes, bars and shops; SOHO Square adds fountains, an ice rink and family entertainment. Self-guided and safe on foot.",
+     "q": "evening city tour"
+    },
+    {
+     "title": "Glass-bottom boat or semi-submarine",
+     "tags": [
+      "family",
+      "nature"
+     ],
+     "len": "half",
+     "note": "One-hour reef viewing without getting wet — useful for non-diving companions and for your no-fly day before departure.",
+     "q": "glass bottom boat trip"
+    }
+   ],
+   "events": [
+    {
+     "name": "Ramadan",
+     "months": [
+      2,
+      3
+     ],
+     "when": "Moving dates, about 11 days earlier each year: 18 February-19 March in 2026, 7 February-9 March in 2027.",
+     "note": "Resorts, boats and tourist restaurants run normally, but towns are quieter by day and lively after sunset; alcohol service can be limited outside hotels.",
+     "kind": "culture"
+    },
+    {
+     "name": "Eid al-Fitr and Eid al-Adha holidays",
+     "months": [
+      3,
+      5
+     ],
+     "when": "Moving dates on the lunar calendar — Eid al-Fitr right after Ramadan, Eid al-Adha about 10 weeks later.",
+     "note": "Egyptian holidaymakers fill Red Sea resorts for about a week each time; book rooms and domestic flights well ahead.",
+     "kind": "culture"
+    },
+    {
+     "name": "New Year peak week",
+     "months": [
+      12,
+      1
+     ],
+     "when": "Christmas through the first week of January, every year.",
+     "note": "Peak pricing, full flights, and many resorts charge compulsory gala-dinner supplements on 31 December.",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "A purpose-built resort strip along Sinai's southern tip: hotel bays, two promenade centres (Naama Bay and SOHO Square) and the Old Market souk, with bare desert mountains directly behind. It is also the gateway to the Sinai interior — canyon hikes, Bedouin camps and the Mount Sinai night climb all start here. Nightlife and shopping are concentrated and walkable; everything else is a short taxi ride."
+  },
+  "Hurghada & El Gouna": {
+   "airports": [
+    {
+     "iata": "HRG",
+     "name": "Hurghada International",
+     "city": "Hurghada",
+     "note": "One of Egypt's busiest holiday airports — direct flights from most of Europe; also serves El Gouna, 25 km north."
+    }
+   ],
+   "getting_in": "HRG has year-round direct scheduled and charter flights from most European cities plus frequent Cairo connections (about 1 hour). Hurghada's hotel zones start 10-15 minutes from the terminal; El Gouna has no airport of its own and is a 25 km, 30-45 minute road transfer north.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "private_transfer",
+      "note": "Pre-booked car to El Gouna 30-45 min, about EUR 17-25; central Hurghada 15-25 min, EUR 10-15."
+     },
+     {
+      "mode": "taxi",
+      "note": "Airport taxis ask EUR 20-25 to El Gouna and EUR 10-15 into town — fix the price before departure."
+     },
+     {
+      "mode": "shuttle",
+      "note": "Inside El Gouna, tuk-tuks (a few euros per hop) and scheduled shuttle boats link Downtown, the lagoons and Abu Tig Marina."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "El Gouna runs on tuk-tuks and shuttle boats, and Hurghada taxis are cheap; a rental only makes sense for repeated trips along the 40 km coastal strip."
+    }
+   },
+   "stay": [
+    {
+     "area": "El Gouna (Downtown & Abu Tig Marina)",
+     "why": "Planned lagoon town 25 km north of the airport — marina restaurants, calm swimmable lagoons, and everything reachable by tuk-tuk or shuttle boat."
+    },
+    {
+     "area": "Hurghada Marina / Sekalla",
+     "why": "Central Hurghada around the marina: walkable restaurants and nightlife, close to the jetties most dive boats leave from."
+    },
+    {
+     "area": "El Dahar",
+     "why": "Hurghada's old town — souk, fish market and budget guesthouses, 20-30 minutes from the marina jetties."
+    },
+    {
+     "area": "Sahl Hasheesh",
+     "why": "Quiet planned resort bay about 20 km south with a long seafront boardwalk; suits couples wanting a beach base."
+    },
+    {
+     "area": "Makadi Bay",
+     "why": "Self-contained family all-inclusive bay roughly 30 km south of the airport."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Luxor day trip: Karnak and the Valley of the Kings",
+     "tags": [
+      "culture"
+     ],
+     "len": "full",
+     "note": "About 280 km and 4 hours each way across the Eastern Desert; a 14-16 hour day starting 04:00-05:00 covering Karnak, the West Bank tombs and the Colossi of Memnon.",
+     "q": "Luxor day trip valley of the kings"
+    },
+    {
+     "title": "Giftun Island / Orange Bay beach day",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "full",
+     "note": "Boat day to white-sand islands 45-60 minutes offshore, with shallow turquoise swimming, snorkel stops and lunch on board.",
+     "q": "Orange Bay island boat trip"
+    },
+    {
+     "title": "Quad or jeep desert safari with Bedouin dinner",
+     "tags": [
+      "adventure",
+      "culture"
+     ],
+     "len": "half",
+     "note": "Afternoon rides through the Eastern Desert end at a camp for tea, bread baking and dinner as the sun drops behind the mountains.",
+     "q": "quad safari bedouin dinner"
+    },
+    {
+     "title": "El Dahar souk and fish market",
+     "tags": [
+      "culture",
+      "food"
+     ],
+     "len": "half",
+     "note": "Hurghada's old quarter: spice stalls, gold shops and a working fish market where nearby restaurants grill your pick by weight.",
+     "q": "Hurghada old town market tour"
+    },
+    {
+     "title": "El Gouna lagoon circuit by tuk-tuk and shuttle boat",
+     "tags": [
+      "relax",
+      "family"
+     ],
+     "len": "half",
+     "note": "Ride the canals between Downtown and Abu Tig Marina, swim in a lagoon, and finish with dinner on the marina quay.",
+     "q": "El Gouna city boat tour"
+    },
+    {
+     "title": "Kitesurf taster lesson in El Gouna's lagoons",
+     "tags": [
+      "adventure"
+     ],
+     "len": "half",
+     "note": "Flat, waist-deep water and steady northerly wind make this one of the easiest places anywhere to try kitesurfing; 2-3 hour beginner sessions run year-round.",
+     "q": "kitesurf beginner lesson"
+    },
+    {
+     "title": "Hurghada Grand Aquarium",
+     "tags": [
+      "family"
+     ],
+     "len": "half",
+     "note": "Walk-through tunnel aquarium and small zoo south of town; a reliable half day for kids or a windy afternoon.",
+     "q": "grand aquarium tickets"
+    },
+    {
+     "title": "Sunset sailing cruise",
+     "tags": [
+      "relax"
+     ],
+     "len": "half",
+     "note": "Two- to three-hour catamaran or felucca sails out of the marinas, usually with drinks and a swim stop.",
+     "q": "sunset catamaran cruise"
+    },
+    {
+     "title": "Abu Tig Marina evening",
+     "tags": [
+      "food",
+      "nightlife"
+     ],
+     "len": "half",
+     "note": "El Gouna's yacht-lined restaurant row; bars and late cafes cluster here while Downtown stays more low-key.",
+     "q": "marina dinner night out"
+    }
+   ],
+   "events": [
+    {
+     "name": "El Gouna Film Festival",
+     "months": [
+      10
+     ],
+     "when": "Nine days in mid-to-late October each year.",
+     "note": "Open-air premieres and industry crowds fill El Gouna's hotels — book months ahead or stay in Hurghada and day-trip in.",
+     "kind": "culture"
+    },
+    {
+     "name": "El Gouna International Squash Open",
+     "months": [
+      4
+     ],
+     "when": "About one week, usually April.",
+     "note": "World-tour squash on an outdoor glass court by the marina; restaurants and hotels around Abu Tig get busy.",
+     "kind": "sport"
+    },
+    {
+     "name": "Ramadan",
+     "months": [
+      2,
+      3
+     ],
+     "when": "Moving dates, about 11 days earlier each year: 18 February-19 March in 2026, 7 February-9 March in 2027.",
+     "note": "Resorts and El Gouna operate normally; Hurghada's local quarters are quieter by day and festive after sunset.",
+     "kind": "culture"
+    },
+    {
+     "name": "Eid al-Fitr and Eid al-Adha holidays",
+     "months": [
+      3,
+      5
+     ],
+     "when": "Moving dates on the lunar calendar — Eid al-Fitr right after Ramadan, Eid al-Adha about 10 weeks later.",
+     "note": "Domestic holiday surge for about a week each time; rooms and Cairo flights sell out early.",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "Hurghada is a working resort city — souk quarter, marina nightlife and a 40 km hotel strip — while El Gouna, 25 km north, is a privately planned lagoon town of bridges, tuk-tuks and quayside restaurants. Between them you get the widest topside range on the Egyptian Red Sea: island beach days, kitesurf lagoons, desert camps, and the only realistic day-trip base for Luxor."
+  },
+  "Dahab": {
+   "airports": [
+    {
+     "iata": "SSH",
+     "name": "Sharm El Sheikh International",
+     "city": "Sharm El Sheikh",
+     "note": "Nearest airport, 90 km south of Dahab; nearly all visitors land here and transfer by road."
+    }
+   ],
+   "getting_in": "Dahab has no airport: fly into Sharm El Sheikh (direct European scheduled and charter flights, or via Cairo) and transfer 90 km north over the mountains, about 1 hour 15 minutes to 1.5 hours by road. Pre-booking the transfer is cheaper than negotiating at the terminal.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "private_transfer",
+      "note": "SSH to Dahab 1h15-1h30; roughly USD 25-45 pre-booked for a private car."
+     },
+     {
+      "mode": "taxi",
+      "note": "Airport-rank taxis ask around EUR 40-50 to Dahab, more at night; agree the fare first."
+     },
+     {
+      "mode": "shuttle",
+      "note": "Shared minibuses and scheduled buses run Sharm-Dahab from the town bus station (about 1.5 h, a few euros) — you need a short taxi from arrivals first."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "The town is walkable end-to-end along the seafront, excursions come with drivers, and Sinai road checkpoints make self-drive paperwork-heavy."
+    }
+   },
+   "stay": [
+    {
+     "area": "Masbat",
+     "why": "The centre of town — seafront promenade of restaurants, cafes and guesthouses with everything on foot."
+    },
+    {
+     "area": "Mashraba",
+     "why": "Quieter southern stretch of the same promenade; small hotels a few minutes' walk from the restaurant strip."
+    },
+    {
+     "area": "Assalah",
+     "why": "The local quarter behind the beach, with the cheapest long-stay rooms and everyday Egyptian eateries."
+    },
+    {
+     "area": "Laguna",
+     "why": "Sandy lagoon south of town where the kitesurf and windsurf schools sit; the closest Dahab gets to resort hotels."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Blue Lagoon via Ras Abu Galum",
+     "tags": [
+      "beach",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "Jeep to the Blue Hole, then continue by camel, boat or a 2-3 hour coastal walk to a Bedouin-run lagoon of shallow turquoise water, with fresh fish lunch in a palm hut.",
+     "q": "Blue Lagoon camel boat trip"
+    },
+    {
+     "title": "Mount Sinai sunrise and St Catherine's Monastery",
+     "tags": [
+      "culture",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "About 2 hours' drive from Dahab, then a night ascent to 2,285 m for sunrise; the 6th-century monastery below is closed to visitors on Sundays.",
+     "q": "Mount Sinai sunrise trip"
+    },
+    {
+     "title": "Colored Canyon hike",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "Roughly six hours door to door: a drive toward Nuweiba, then a 1-2 hour walk through a sandstone slot canyon with 40 m walls.",
+     "q": "colored canyon hike"
+    },
+    {
+     "title": "Wadi Gnai camel trek and Bedouin dinner",
+     "tags": [
+      "culture",
+      "nature"
+     ],
+     "len": "half",
+     "note": "Granite wadi 15 minutes south of town with acacias and rock pools; sunset camel rides end with sand-baked bread and dinner at a camp.",
+     "q": "camel ride bedouin dinner"
+    },
+    {
+     "title": "Kitesurf or windsurf lesson at the Laguna",
+     "tags": [
+      "adventure"
+     ],
+     "len": "half",
+     "note": "The shallow sandy lagoon south of town has reliable wind most of the year; 2-3 hour beginner sessions are easy to book on the spot.",
+     "q": "kitesurf beginner lesson"
+    },
+    {
+     "title": "Blue Hole rim for non-divers",
+     "tags": [
+      "nature",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Carpeted Bedouin cafes ring the 100-m-deep sinkhole 30 minutes north of town; non-divers snorkel the coral lip or watch from the terraces with tea.",
+     "q": "Blue Hole day trip"
+    },
+    {
+     "title": "Seafront promenade dinner and shopping",
+     "tags": [
+      "food",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Dinner on cushions at waterline restaurants, then the craft, spice and silver shops of Masbat — most of Dahab's evening happens along this 1.5 km strip.",
+     "q": "food walking tour"
+    },
+    {
+     "title": "Quad biking and sandboarding in the dunes",
+     "tags": [
+      "adventure"
+     ],
+     "len": "half",
+     "note": "Short desert circuits into the wadis behind town, usually timed for sunset; often combined with a camp dinner.",
+     "q": "quad bike desert sunset"
+    }
+   ],
+   "events": [
+    {
+     "name": "Ramadan",
+     "months": [
+      2,
+      3
+     ],
+     "when": "Moving dates, about 11 days earlier each year: 18 February-19 March in 2026, 7 February-9 March in 2027.",
+     "note": "Tourist restaurants and camps run normally; some local places close in daytime and evenings turn festive.",
+     "kind": "culture"
+    },
+    {
+     "name": "Eid holiday weeks",
+     "months": [
+      3,
+      5
+     ],
+     "when": "Moving dates — the week after Ramadan ends and again about 10 weeks later.",
+     "note": "Cairo crowds fill Dahab's camps and guesthouses and room prices jump; book ahead or shift dates.",
+     "kind": "culture"
+    },
+    {
+     "name": "Freediving competition season",
+     "months": [
+      9,
+      10
+     ],
+     "when": "Editions cluster in autumn, with occasional spring events.",
+     "note": "Competitions at the Blue Hole bring athletes and film crews; the site gets crowded on competition days and rooms in town tighten.",
+     "kind": "sport"
+    }
+   ],
+   "topside_summary": "A former Bedouin fishing village that grew into a low-rise, low-pressure beach town: carpeted waterline cafes, yoga-and-guesthouse lanes and granite mountains rising straight behind the palms. It is the cheapest and most laid-back of Egypt's Red Sea bases, with genuine Bedouin culture minutes from town. Nightlife means promenade dinners and beach fires, not clubs."
+  },
+  "Marsa Alam": {
+   "airports": [
+    {
+     "iata": "RMF",
+     "name": "Marsa Alam International",
+     "city": "Marsa Alam",
+     "note": "67 km north of Marsa Alam town and 10 minutes from Port Ghalib; seasonal European charters plus Cairo flights."
+    },
+    {
+     "iata": "HRG",
+     "name": "Hurghada International",
+     "city": "Hurghada",
+     "note": "Fallback with far more flight choice; 3.5-4 hours by road (about 215 km) to the northern Marsa Alam resorts."
+    }
+   ],
+   "getting_in": "RMF is served by seasonal charters and scheduled flights from Europe plus near-daily Cairo connections (about 1h20). The airport is 10 minutes from Port Ghalib but 45-90 minutes from most south-coast resorts; travellers who can't route into RMF fly to Hurghada and transfer 3.5-4 hours south by road.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "private_transfer",
+      "note": "RMF to Port Ghalib 10-15 min (about EUR 10-25); to Marsa Alam town or southern resorts 45-90 min, EUR 25-50 pre-booked."
+     },
+     {
+      "mode": "taxi",
+      "note": "Local taxis run about EUR 8-15 to Port Ghalib; fares south rise with distance — agree before setting off."
+     },
+     {
+      "mode": "liveaboard_pickup",
+      "note": "Most liveaboards depart Port Ghalib marina and include or arrange the 10-minute airport pickup."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Resorts are strung along 100-plus km of coast with sparse fuel and services in the far south; hotel transfers and arranged drivers are how everyone moves."
+    }
+   },
+   "stay": [
+    {
+     "area": "Port Ghalib",
+     "why": "Marina village 10 minutes from the airport with restaurants, a promenade and the main liveaboard departure quay."
+    },
+    {
+     "area": "Abu Dabbab & the northern bays",
+     "why": "Resort cluster around sheltered bays where green turtles graze seagrass within swimming distance of the beach."
+    },
+    {
+     "area": "Marsa Alam town",
+     "why": "Small working town 67 km south of the airport; budget guesthouses and dive camps rather than resorts."
+    },
+    {
+     "area": "El Quseir",
+     "why": "Coral-stone old town with a 16th-century fort about 60 km north of Port Ghalib; quiet mid-range hotels."
+    },
+    {
+     "area": "Hamata / deep south",
+     "why": "Remote resorts 120 km-plus south near Wadi el Gemal, chosen for reefs and quiet rather than amenities."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Wadi el Gemal National Park safari",
+     "tags": [
+      "nature",
+      "wildlife"
+     ],
+     "len": "full",
+     "note": "Jeep and camel routes through a desert-and-mangrove national park about 50 km south of town: Roman-era emerald mine settlements, gazelle, ibex and a bird-rich coast.",
+     "q": "Wadi el Gemal safari"
+    },
+    {
+     "title": "Abu Dabbab bay swim with turtles",
+     "tags": [
+      "wildlife",
+      "beach"
+     ],
+     "len": "half",
+     "note": "Walk-in sandy bay about 30 km north of Marsa Alam town where green turtles graze seagrass metres from shore; dugong sightings happen but are rare. Sunbeds and showers on the beach.",
+     "q": "Abu Dabbab turtle bay trip"
+    },
+    {
+     "title": "El Quseir old town and fort",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "A 16th-century fort (now a small museum) and lanes of coral-block houses roughly an hour north of Port Ghalib; go late afternoon when the souk street wakes up.",
+     "q": "El Quseir old town tour"
+    },
+    {
+     "title": "Luxor trip across the desert",
+     "tags": [
+      "culture"
+     ],
+     "len": "full",
+     "note": "Karnak and the Valley of the Kings are 4-5 hours each way from the northern resorts — feasible as one very long day, better as an overnight.",
+     "q": "Luxor day trip"
+    },
+    {
+     "title": "Bedouin dinner and stargazing in the Eastern Desert",
+     "tags": [
+      "culture",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Inland camps run camel rides, sand-baked bread and telescope sessions; this far from any city the sky is genuinely dark.",
+     "q": "desert stargazing dinner"
+    },
+    {
+     "title": "Port Ghalib marina promenade",
+     "tags": [
+      "food",
+      "relax"
+     ],
+     "len": "half",
+     "note": "The marina's restaurant row and evening bazaar fill rest days and pre-flight afternoons, with berthed liveaboards to size up for next time.",
+     "q": "marina evening walk"
+    },
+    {
+     "title": "Quad bike sunset safari",
+     "tags": [
+      "adventure"
+     ],
+     "len": "half",
+     "note": "Two- to three-hour circuits into the desert behind the coast road, timed for sunset and often paired with a camp dinner.",
+     "q": "quad bike sunset safari"
+    },
+    {
+     "title": "Sataya reef dolphin day from Hamata",
+     "tags": [
+      "wildlife"
+     ],
+     "len": "full",
+     "note": "From the far south, boats anchor at a crescent reef where spinner dolphin pods rest; in-water viewing is regulated, so keep expectations flexible.",
+     "q": "Sataya dolphin reef trip"
+    }
+   ],
+   "events": [
+    {
+     "name": "Ramadan",
+     "months": [
+      2,
+      3
+     ],
+     "when": "Moving dates, about 11 days earlier each year: 18 February-19 March in 2026, 7 February-9 March in 2027.",
+     "note": "Resorts and boats run normally; Marsa Alam town and El Quseir are quiet by day and lively after sunset.",
+     "kind": "culture"
+    },
+    {
+     "name": "Eid al-Fitr and Eid al-Adha holidays",
+     "months": [
+      3,
+      5
+     ],
+     "when": "Moving dates on the lunar calendar — the week after Ramadan and again about 10 weeks later.",
+     "note": "Domestic holiday surge; transfers and the few restaurants outside resorts get busy, and Cairo flights fill.",
+     "kind": "culture"
+    },
+    {
+     "name": "Green turtle nesting season",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "when": "Roughly June to September each year on southern beaches.",
+     "note": "Some beach sections are roped off at night; early risers may see tracks or hatchlings — keep lights off and keep your distance.",
+     "kind": "wildlife"
+    }
+   ],
+   "topside_summary": "The quietest of Egypt's Red Sea bases: a thin line of resorts along 100-plus km of desert coast, anchored by the Port Ghalib marina and the small working town of Marsa Alam. Topside life is desert — national-park safaris, Bedouin camps, very dark skies — plus the coral-stone old town of El Quseir an hour north. People come for the reefs and the space, not for nightlife."
+  },
+  "Phuket": {
+   "airports": [
+    {
+     "iata": "HKT",
+     "name": "Phuket International",
+     "city": "Phuket",
+     "note": "Direct long-haul and regional arrivals; the airport sits at the island's north tip, 30-45 km from most beach areas."
+    }
+   ],
+   "getting_in": "Fly straight into HKT on a direct international service, or connect through Bangkok on the roughly 1 h 25 min domestic hop. Most dive boats leave from Chalong Pier in the island's south, about an hour's drive from the airport.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "taxi",
+      "note": "Official airport taxis run 800-1,000 THB to Patong including the 100 THB airport surcharge; 45-60 minutes depending on traffic."
+     },
+     {
+      "mode": "private_transfer",
+      "note": "Pre-booked cars use fixed zone pricing (roughly 800-1,200 THB to the west-coast beaches) with a driver meeting you in arrivals."
+     },
+     {
+      "mode": "rideshare",
+      "note": "Ride-hailing apps operate island-wide and usually undercut the taxi counters; pickup points at the airport are signposted."
+     },
+     {
+      "mode": "shuttle",
+      "note": "The airport smart bus follows the west coast to Rawai for about 100 THB per person, hourly, 60-90 minutes to Patong."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Traffic on the airport-Patong corridor is heavy, parking near the beaches is tight, and Thailand drives on the left. Scooters dominate local traffic and rental accidents involving visitors are common; taxis and apps cover the island well enough."
+    }
+   },
+   "stay": [
+    {
+     "area": "Chalong / Rawai",
+     "why": "Closest base to Chalong Pier, where most dive-boat and liveaboard departures leave from, with a quieter local-restaurant scene."
+    },
+    {
+     "area": "Kata / Karon",
+     "why": "Long swimmable beaches and a mid-paced resort strip, 20-30 minutes from Chalong Pier for morning boat pickups."
+    },
+    {
+     "area": "Phuket Old Town",
+     "why": "Shophouse architecture, coffee shops and the island's best food, at the cost of a 30-40 minute drive to any beach."
+    },
+    {
+     "area": "Patong",
+     "why": "The nightlife and shopping hub with the widest hotel choice; loud, but dive pickups service it daily."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Walk Phuket Old Town",
+     "tags": [
+      "culture",
+      "food"
+     ],
+     "len": "half",
+     "note": "Sino-Portuguese shophouses along Thalang and Dibuk Roads, street art, and Peranakan-style cafes. Sunday evenings Thalang Road closes to traffic for a walking-street market.",
+     "q": "Phuket Old Town walking tour"
+    },
+    {
+     "title": "Visit the Big Buddha on Nakkerd Hill",
+     "tags": [
+      "culture",
+      "nature"
+     ],
+     "len": "half",
+     "note": "The 45 m white marble statue above Chalong reopened to visitors in March 2026 after a long closure; open 09:00-18:00, free entry, wide views over both coasts.",
+     "q": "Big Buddha Nakkerd Hill viewpoint"
+    },
+    {
+     "title": "Wat Chalong temple",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "Phuket's largest Buddhist temple complex, a 10-minute drive from Chalong Pier, so it pairs easily with a boat day. Cover shoulders and knees.",
+     "q": "Wat Chalong temple visit"
+    },
+    {
+     "title": "Sea-kayak Phang Nga Bay",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "Paddle through the hongs (collapsed sea caves) inside the bay's limestone karst islands, entered at low tide through tunnel passages. Day trips run year-round from the island's east side.",
+     "q": "Phang Nga Bay sea kayak hong"
+    },
+    {
+     "title": "Night-market crawl",
+     "tags": [
+      "food",
+      "nightlife"
+     ],
+     "len": "half",
+     "note": "The weekend market near Central Festival and the nightly Chillva market in Phuket Town cover grilled seafood, southern Thai curries and 20-60 THB street plates.",
+     "q": "Phuket night market street food"
+    },
+    {
+     "title": "Watch or train Muay Thai",
+     "tags": [
+      "culture",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "Stadiums around Patong and Chalong hold fight nights several evenings a week, and gyms run drop-in beginner sessions of 1-2 hours.",
+     "q": "Muay Thai class Phuket"
+    },
+    {
+     "title": "Thai cooking class",
+     "tags": [
+      "food",
+      "culture"
+     ],
+     "len": "half",
+     "note": "Half-day courses typically start with a wet-market visit then cook 4-5 dishes such as tom yam and massaman. A practical surface-interval activity between dive days.",
+     "q": "Thai cooking class Phuket"
+    },
+    {
+     "title": "Sunset at Promthep Cape",
+     "tags": [
+      "nature",
+      "relax"
+     ],
+     "len": "half",
+     "note": "The headland at the island's southern tip is the standard sunset stop; arrive an hour early for parking and walk down the ridge trail away from the crowds.",
+     "q": "Promthep Cape sunset viewpoint"
+    },
+    {
+     "title": "Ethical elephant sanctuary visit",
+     "tags": [
+      "wildlife",
+      "family"
+     ],
+     "len": "half",
+     "note": "Several rescue sanctuaries in the island's interior offer observation-based visits with feeding and no riding. Check that the one you pick keeps a no-riding, no-bathing policy.",
+     "q": "elephant sanctuary Phuket no riding"
+    },
+    {
+     "title": "Beach day at Nai Harn or Freedom Beach",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Nai Harn has calm high-season swimming and shade; Freedom Beach requires a longtail ride or steep walk in, which keeps numbers down.",
+     "q": "Nai Harn beach day"
+    }
+   ],
+   "events": [
+    {
+     "name": "Phuket Vegetarian Festival",
+     "months": [
+      9,
+      10
+     ],
+     "when": "Nine days in the ninth Chinese lunar month, usually late September to mid-October (10-18 October in 2026)",
+     "note": "Street processions with firewalking and body-piercing rituals centre on Phuket Town's shrines; roads close, firecrackers run all day, and hotels in town fill. Excellent food stalls flying yellow flags serve vegan southern Thai dishes.",
+     "kind": "culture"
+    },
+    {
+     "name": "Songkran",
+     "months": [
+      4
+     ],
+     "when": "13-15 April, Thai New Year",
+     "note": "Island-wide water fights, especially in Patong and Old Town; transport books out and prices rise. Keep cameras and phones in dry bags anywhere near a road.",
+     "kind": "culture"
+    },
+    {
+     "name": "Loy Krathong",
+     "months": [
+      11
+     ],
+     "when": "Full moon of the twelfth Thai lunar month, usually mid-to-late November",
+     "note": "Locals float candle-lit krathong baskets at beaches and lagoons after dark; a calm, photogenic evening rather than a disruption.",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "Phuket is Thailand's largest island and its most developed resort economy, so the topside mix runs from Michelin-listed southern Thai food and Sino-Portuguese heritage streets in Phuket Town to full-volume nightlife in Patong. The interior and south keep temples, viewpoints and quieter beaches within a 30-minute drive of the dive piers. It works best as a base where non-diving partners and families have as much to do as the divers."
+  },
+  "Koh Tao": {
+   "airports": [
+    {
+     "iata": "USM",
+     "name": "Samui International",
+     "city": "Koh Samui",
+     "note": "Fastest route: fly here then take the 1.5-2 h high-speed catamaran to Koh Tao."
+    },
+    {
+     "iata": "CJM",
+     "name": "Chumphon",
+     "city": "Chumphon",
+     "note": "Budget domestic route; the mainland pier with the shortest crossing (about 1 h 45 min) to Koh Tao."
+    },
+    {
+     "iata": "BKK",
+     "name": "Suvarnabhumi",
+     "city": "Bangkok",
+     "note": "Main international gateway; connect by domestic flight, or overnight bus/train plus ferry combo."
+    }
+   ],
+   "getting_in": "Koh Tao has no airport: fly Bangkok to Koh Samui (USM) or Chumphon (CJM) and connect to a high-speed ferry into Mae Haad Pier, giving a total door-to-door time of roughly 4-6 hours. The cheaper classic route is an overnight bus or train from Bangkok to Chumphon (or slower via Surat Thani) sold as a combined ticket with the morning ferry, about 10-11 hours in total.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "ferry",
+      "note": "High-speed catamarans from Chumphon take about 1 h 45 min (roughly 600-700 THB); from Koh Samui or Koh Phangan about 1.5-2.5 h (from about 550-700 THB). Book ahead December-March; crossings get rough and are occasionally cancelled in the November monsoon."
+     },
+     {
+      "mode": "shuttle",
+      "note": "Combined bus-plus-ferry tickets from Bangkok run overnight to Chumphon and connect to the morning boat, 10-11 hours total."
+     },
+     {
+      "mode": "taxi",
+      "note": "On the island itself, shared pickup-truck taxis and longtail water taxis link Mae Haad Pier with Sairee and the southern bays; agree the fare before boarding."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "There is no practical way or reason to bring a car; the island is 21 km2 with steep, partly unpaved concrete roads. Locals and visitors move by scooter (left-hand traffic, frequent rental-damage disputes and accidents), shared pickup taxi, longtail boat or on foot."
+    }
+   },
+   "stay": [
+    {
+     "area": "Sairee Beach",
+     "why": "The 1.7 km west-coast strip holds most restaurants, bars and sunset viewing, with everything walkable."
+    },
+    {
+     "area": "Mae Haad",
+     "why": "The ferry-pier village; practical for early boats and short stays, with a calmer evening scene than Sairee."
+    },
+    {
+     "area": "Chalok Baan Kao",
+     "why": "The sheltered southern bay is the quiet option, 10 minutes by taxi from the pier and handy for the south-coast viewpoints."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Koh Nang Yuan viewpoint",
+     "tags": [
+      "nature",
+      "beach"
+     ],
+     "len": "half",
+     "note": "A longtail taxi boat from Sairee (about 350 THB return) reaches the three-islet group; the short stair climb tops out above the connecting sandbar. Entry fee applies and the island closes late afternoon.",
+     "q": "Koh Nang Yuan viewpoint boat"
+    },
+    {
+     "title": "Hike to John-Suwan viewpoint",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "A steep 15-20 minute scramble from the south end of Freedom Beach to a rock platform over Chalok Baan Kao and Shark Bay. Go early morning for light and cooler air.",
+     "q": "John-Suwan viewpoint hike"
+    },
+    {
+     "title": "Coastal walk Mae Haad to Sai Nuan",
+     "tags": [
+      "nature",
+      "relax"
+     ],
+     "len": "half",
+     "note": "An unmarked shoreline path links Jansom Bay and the two small Sai Nuan beaches, which stay near-empty on weekday mornings. Bring water; there is little shade on the connecting sections.",
+     "q": "Sai Nuan beach coastal walk"
+    },
+    {
+     "title": "Kayak the east-coast bays",
+     "tags": [
+      "adventure",
+      "nature"
+     ],
+     "len": "half",
+     "note": "Rent a kayak or paddleboard and work along Tanote Bay and Ao Leuk, granite-boulder coves that are awkward to reach by road. Afternoon sea breeze picks up, so paddle out early.",
+     "q": "kayak rental Tanote Bay"
+    },
+    {
+     "title": "Rock climbing and bouldering",
+     "tags": [
+      "adventure"
+     ],
+     "len": "half",
+     "note": "The island's rounded granite gives friction climbing unlike Thailand's limestone crags, with guided half-day sessions and bolted routes near Tanote Bay suitable for beginners.",
+     "q": "rock climbing Koh Tao granite"
+    },
+    {
+     "title": "Sairee sunset and bar strip",
+     "tags": [
+      "nightlife",
+      "relax"
+     ],
+     "len": "half",
+     "note": "The west-facing beach lines up directly with the sunset; beach bars run fire shows and open decks from about 17:30. Low-key by Thai island standards, which suits early dive starts.",
+     "q": "Sairee beach sunset bars"
+    },
+    {
+     "title": "Thai cooking class",
+     "tags": [
+      "food",
+      "culture"
+     ],
+     "len": "half",
+     "note": "Small-group classes in Sairee and Mae Haad cook 3-5 standard dishes in 3-4 hours, a reliable option for a no-fly day before departure.",
+     "q": "cooking class Koh Tao"
+    }
+   ],
+   "events": [
+    {
+     "name": "Full Moon Party (Koh Phangan)",
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "when": "Every full moon, on neighbouring Koh Phangan",
+     "note": "Not on Koh Tao itself, but ferries and accommodation across the gulf islands fill for 2-3 days around each full moon; some visitors day-trip over and dive groups thin out the morning after.",
+     "kind": "nightlife"
+    },
+    {
+     "name": "Songkran",
+     "months": [
+      4
+     ],
+     "when": "13-15 April, Thai New Year",
+     "note": "Water fights along Sairee's main lane; ferries and rooms book out as Thai holidaymakers travel, so reserve crossings early.",
+     "kind": "culture"
+    },
+    {
+     "name": "Loy Krathong",
+     "months": [
+      11
+     ],
+     "when": "Full moon of the twelfth Thai lunar month, usually mid-to-late November",
+     "note": "Candle-lit floats launched from Sairee Beach after dark. November is also the gulf's rainy month, when ferry cancellations are most likely.",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "Koh Tao is a 21 km2 granite island built almost entirely around its dive economy, with a compact strip of restaurants and beach bars at Sairee and quiet coves everywhere else. Off-gassing days fill easily with viewpoint hikes, kayaking and empty south-coast beaches rather than shopping or big-ticket sights. It suits travellers happy with a small-island rhythm; anyone wanting resorts and variety should pair it with Koh Samui."
+  },
+  "Similan Islands": {
+   "airports": [
+    {
+     "iata": "HKT",
+     "name": "Phuket International",
+     "city": "Phuket",
+     "note": "The gateway airport; Khao Lak, the mainland base for the Similans, is 60-80 km north by road."
+    }
+   ],
+   "getting_in": "There is no airport or overnight accommodation for visitors in the islands themselves: fly to Phuket (HKT) and transfer about 1-1.5 hours north to Khao Lak. Boats leave from Thap Lamu Pier, a 15-minute drive south of Khao Lak town, either as multi-day liveaboards or 1-1.5 hour speedboat day trips.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "private_transfer",
+      "note": "Pre-booked car from HKT to Khao Lak costs roughly 1,200-1,800 THB and takes 75-90 minutes; to Thap Lamu Pier allow up to 2 hours."
+     },
+     {
+      "mode": "liveaboard_pickup",
+      "note": "Most liveaboards include or arrange minibus pickup from Phuket or Khao Lak hotels to Thap Lamu, typically boarding in the evening and crossing to the islands overnight."
+     },
+     {
+      "mode": "fast_boat",
+      "note": "Day-trip speedboats cover Thap Lamu to the islands in 1-1.5 hours; they run only during the open season, roughly mid-October to mid-May."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Boat operators handle pier pickups, so a car is unnecessary for the diving. Khao Lak itself is a 20 km strip where a rental (left-hand driving, easy highway) is only worth it if you plan self-drive day trips to Khao Sok or Takua Pa; otherwise taxis and hotel shuttles cover it."
+    }
+   },
+   "stay": [
+    {
+     "area": "Nang Thong / Khao Lak town",
+     "why": "The main services cluster with dive shops, restaurants and pharmacies, closest to Thap Lamu Pier for early boat departures."
+    },
+    {
+     "area": "Bang Niang",
+     "why": "A slightly quieter beach stretch 3 km north with the area's best night market and a wide, walkable sand beach."
+    },
+    {
+     "area": "Bangsak / Khuk Khak",
+     "why": "Low-density resort beaches north of town for travellers who want quiet between liveaboard legs; you will need transport for restaurants."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Day trip to Khao Sok and Cheow Lan Lake",
+     "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "The rainforest park is about 1.5 hours inland, with longtail-boat trips among limestone towers on the reservoir and trails where hornbills and gibbons are regularly heard. A standard add-on before or after a liveaboard.",
+     "q": "Khao Sok Cheow Lan lake day trip"
+    },
+    {
+     "title": "Kayak the Little Amazon mangroves",
+     "tags": [
+      "nature",
+      "wildlife"
+     ],
+     "len": "half",
+     "note": "Guided inflatable-kayak floats through the banyan and mangrove channel at Takua Pa run about an hour on the water (around 500 THB) with frequent sightings of snakes, monitor lizards and macaques.",
+     "q": "Little Amazon mangrove kayak Takua Pa"
+    },
+    {
+     "title": "Takua Pa old town",
+     "tags": [
+      "culture",
+      "food"
+     ],
+     "len": "half",
+     "note": "A former tin-mining town 30 km north with preserved Sino-Portuguese arcade shophouses and street art; liveliest during the Sunday afternoon walking-street market roughly October to May.",
+     "q": "Takua Pa old town walking street"
+    },
+    {
+     "title": "Bang Niang market and the beached patrol boat",
+     "tags": [
+      "food",
+      "culture"
+     ],
+     "len": "half",
+     "note": "The afternoon-to-evening market (Monday, Wednesday, Thursday, Saturday) covers grilled seafood and fruit stalls; the police patrol boat carried 1 km inland by the 2004 tsunami stands nearby as a memorial.",
+     "q": "Bang Niang night market tsunami memorial"
+    },
+    {
+     "title": "Waterfalls and coast trails of Khao Lak-Lam Ru",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "The small national park behind town has short jungle trails, the multi-tier Ton Chong Fa waterfall (best just after the wet season) and a headland viewpoint over the coast.",
+     "q": "Khao Lak Lam Ru national park waterfall hike"
+    },
+    {
+     "title": "Beach afternoon on Bang Niang or Bangsak",
+     "tags": [
+      "beach",
+      "relax",
+      "family"
+     ],
+     "len": "half",
+     "note": "Long, flat, west-facing sand with calm high-season swimming and few vendors; sunset lines up directly offshore toward the islands.",
+     "q": "Bang Niang beach sunset"
+    }
+   ],
+   "events": [
+    {
+     "name": "Similan National Park seasonal closure",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "when": "Approximately 16 May to 14 October each year",
+     "note": "The park shuts completely for the southwest monsoon, so no day trips or liveaboards operate; plan Similan diving between mid-October and mid-May and confirm the exact dates for your year.",
+     "kind": "nature"
+    },
+    {
+     "name": "Season opening",
+     "months": [
+      10
+     ],
+     "when": "Around 15 October",
+     "note": "Boats resume in the first open weeks with the fewest visitors of the season, though sea conditions can still be mixed into early November.",
+     "kind": "nature"
+    },
+    {
+     "name": "Loy Krathong",
+     "months": [
+      11
+     ],
+     "when": "Full moon of the twelfth Thai lunar month, usually mid-to-late November",
+     "note": "Krathong floats are launched from Khao Lak's beaches and at Bang Niang market in the evening; no travel disruption.",
+     "kind": "culture"
+    },
+    {
+     "name": "Songkran",
+     "months": [
+      4
+     ],
+     "when": "13-15 April, Thai New Year",
+     "note": "Water fights along the Khao Lak main road and busy domestic travel in the season's final open month; book transfers and rooms ahead.",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "The Similans themselves are uninhabited granite islands inside a national park, so the topside experience belongs to Khao Lak, the low-rise mainland beach town where the boats are based. Khao Lak trades nightlife for long quiet beaches, afternoon markets and quick access to rainforest at Khao Sok and the mangrove channels of Takua Pa. It suits couples and families pacing a liveaboard with slow beach days, and nearly everything closes down to a local rhythm during the May-October park closure."
+  },
+  "Cozumel": {
+   "airports": [
+    {
+     "iata": "CZM",
+     "name": "Cozumel International",
+     "city": "Cozumel",
+     "note": "On-island; year-round nonstops from Dallas, Miami and Houston, plus seasonal routes from Atlanta, Chicago, Charlotte, Denver and Minneapolis."
+    },
+    {
+     "iata": "CUN",
+     "name": "Cancún International",
+     "city": "Cancún",
+     "note": "Far more flight choice and often cheaper; connect via ground transfer to Playa del Carmen and the passenger ferry."
+    }
+   ],
+   "getting_in": "Fly direct into CZM if your city has a route; otherwise land at CUN, transfer about 1 hour south to Playa del Carmen and take the passenger ferry across (about 40 minutes, departures roughly every 30-60 minutes until late evening).",
+   "transfer": {
+    "options": [
+     {
+      "mode": "shuttle",
+      "note": "Shared vans from CZM airport run about 10-20 USD per person depending on hotel zone; the airport is only 3-4 km from downtown San Miguel."
+     },
+     {
+      "mode": "taxi",
+      "note": "Airport taxis cost roughly 15-35 USD by zone; around town, fixed-rate taxis are the default and are easy to flag down."
+     },
+     {
+      "mode": "ferry",
+      "note": "Playa del Carmen-Cozumel passenger ferry, about 40 minutes, roughly 220-290 MXN (13-16 USD) one way; two competing operators alternate departures."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Taxis cover the town and west-coast hotel strip fine. Rent a car, jeep or scooter for one day (roughly 25-80 USD) to loop the wild east coast and Punta Sur — that single day trip is the main reason to drive here."
+    }
+   },
+   "stay": [
+    {
+     "area": "San Miguel (downtown)",
+     "why": "Walkable to the ferry pier, the malecón, taco stands and most morning boat departures, with the island's best-value hotels."
+    },
+    {
+     "area": "Zona Hotelera Norte",
+     "why": "A quieter strip of mid-size hotels and condos 2-5 km north of town, with calm shore entries and sunset-facing pools."
+    },
+    {
+     "area": "Zona Hotelera Sur",
+     "why": "Resorts strung down the southwest coast sit closest to the southern reefs, so boat rides are shortest — but you depend on taxis for town."
+    }
+   ],
+   "todo": [
+    {
+     "title": "San Gervasio ruins",
+     "tags": [
+      "culture",
+      "nature"
+     ],
+     "len": "half",
+     "note": "Cozumel's main Maya site, a sanctuary of the fertility goddess Ixchel where mainland women once made pilgrimage. Combined entry runs about 14-15 USD; jungle paths link several small temple groups. Open 8:00-16:00.",
+     "q": "San Gervasio Maya ruins Cozumel"
+    },
+    {
+     "title": "Punta Sur eco park",
+     "tags": [
+      "nature",
+      "wildlife",
+      "beach"
+     ],
+     "len": "half",
+     "note": "Reserve at the island's southern tip with a 133-step lighthouse climb, a crocodile lagoon and an empty white beach. Arrive at 09:00 opening to catch crocodiles and iguanas before the heat; entry about 20 USD, closed Sundays.",
+     "q": "Punta Sur eco park Cozumel"
+    },
+    {
+     "title": "East-coast road loop",
+     "tags": [
+      "adventure",
+      "beach",
+      "nature"
+     ],
+     "len": "half",
+     "note": "The undeveloped windward coast is one road, a string of surf beaches like Chen Río and Punta Morena, and a handful of ramshackle beach bars. Swim only in the protected coves — the open surf has strong currents.",
+     "q": "Cozumel east coast beaches drive"
+    },
+    {
+     "title": "El Cielo sandbar by boat",
+     "tags": [
+      "beach",
+      "wildlife",
+      "relax"
+     ],
+     "len": "half",
+     "note": "A shallow sandbar off the southwest coast, 1-2 m deep and scattered with sea stars, reached only by boat trips that usually pair it with a Palancar snorkel stop. An easy surface day for off-gassing before a flight.",
+     "q": "El Cielo sandbar boat trip Cozumel"
+    },
+    {
+     "title": "Beach clubs at Playa Palancar",
+     "tags": [
+      "beach",
+      "relax",
+      "food"
+     ],
+     "len": "half",
+     "note": "Low-key sand-floor beach clubs on the southwest coast where a lounger costs the price of lunch. Calm water, palm shade and ceviche; go on a non-cruise-ship day for space.",
+     "q": "Playa Palancar beach club Cozumel"
+    },
+    {
+     "title": "San Miguel food crawl",
+     "tags": [
+      "food",
+      "culture"
+     ],
+     "len": "half",
+     "note": "Skip the waterfront tourist rows and eat where the island does: cochinita pibil tortas at the Mercado Municipal, late-night taco stands along Avenida 30 and coffee roasters on the plaza side streets.",
+     "q": "San Miguel Cozumel local tacos market"
+    },
+    {
+     "title": "Island museum on the malecón",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "Compact two-floor museum covering reef ecology, Maya settlement and the island's 20th-century chicle and dive history — useful context for what you see underwater. An hour is enough.",
+     "q": "Cozumel island museum"
+    },
+    {
+     "title": "El Cedral village",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "The island's oldest settlement, a tiny inland village with a small Maya ruin and a church, quiet outside its late-April festival. Pair it with the Palancar beaches 10 minutes away.",
+     "q": "El Cedral village Cozumel"
+    },
+    {
+     "title": "Sunset on the malecón",
+     "tags": [
+      "relax",
+      "nightlife"
+     ],
+     "len": "half",
+     "note": "The seafront promenade faces due west toward the mainland; locals gather at the plaza on Sunday evenings for food carts and live music. Rooftop bars along the strip catch the last light.",
+     "q": "Cozumel malecon sunset bars"
+    }
+   ],
+   "events": [
+    {
+     "name": "Carnaval de Cozumel",
+     "months": [
+      2
+     ],
+     "when": "The week before Lent, usually mid-February (Feb 11-18 in 2026), with parades on the final Saturday, Sunday and Fat Tuesday",
+     "note": "The island's biggest party, running over 150 years; the malecón closes for night parades, hotels fill and the town is loud until late. Book well ahead or aim for the festive pre-Carnaval weeks.",
+     "kind": "culture"
+    },
+    {
+     "name": "El Cedral Festival",
+     "months": [
+      4,
+      5
+     ],
+     "when": "Roughly April 28 to May 3, ending on the Day of the Holy Cross",
+     "note": "A 170-year-old fair in El Cedral village with rodeos, horse races, dancing and roast-meat feasts. Easy to add to a dive week; taxis and rental cars reach the village in 20 minutes from town.",
+     "kind": "culture"
+    },
+    {
+     "name": "Ironman Cozumel",
+     "months": [
+      11
+     ],
+     "when": "Late November (Nov 22 in 2026)",
+     "note": "A full-distance triathlon that closes the coastal road and fills hotels for the weekend; the swim course sits over the reefs. Avoid the dates unless you're racing, or book far ahead.",
+     "kind": "sport"
+    },
+    {
+     "name": "Día de Muertos",
+     "months": [
+      10,
+      11
+     ],
+     "when": "October 31 to November 2",
+     "note": "Altars appear in the plaza, cemeteries and shopfronts of San Miguel; a small, local-feeling version of the holiday rather than a spectacle. No disruption to diving.",
+     "kind": "culture"
+    },
+    {
+     "name": "Sargassum season",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "when": "May through September, worst June-August",
+     "note": "Cozumel's west-facing leeward coast is largely spared by the island's geography, so beaches here stay far cleaner than the mainland's — a real advantage for a summer trip.",
+     "kind": "consideration"
+    }
+   ],
+   "topside_summary": "Cozumel is a small-town island: one real settlement, San Miguel, a west coast of piers and beach clubs, and a windward east side that is still empty road and surf. Topside days revolve around a rental-jeep coast loop, Maya ruins in the scrub jungle, and unhurried meals a few blocks back from the waterfront. Cruise ships bring day crowds to the pier zone, but evenings belong to the plaza."
+  },
+  "Cancún & Playa del Carmen": {
+   "airports": [
+    {
+     "iata": "CUN",
+     "name": "Cancún International",
+     "city": "Cancún",
+     "note": "The region's main hub with four terminals and nonstops from dozens of North American and European cities; 20 minutes from the Hotel Zone, about an hour from Playa del Carmen."
+    }
+   ],
+   "getting_in": "Nearly everyone lands at CUN, the busiest gateway in the Mexican Caribbean. Cancún's Hotel Zone is 20-30 minutes from the terminal; Playa del Carmen is a 55-90 minute run south on highway 307 by bus or pre-booked van, and Playa's pier is the ferry link to Cozumel.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "shuttle",
+      "note": "Direct first-class buses leave each CUN terminal for downtown Playa del Carmen roughly every 30 minutes, about 270 MXN (15 USD), 1 h 15 min to 1 h 50 min."
+     },
+     {
+      "mode": "private_transfer",
+      "note": "Pre-booked vans (up to 6-8 people) run about 45-90 USD one way to Playa del Carmen, 55-60 minutes door to door; the sensible choice with dive bags."
+     },
+     {
+      "mode": "taxi",
+      "note": "Authorized airport taxis are metered by zone and cost more than pre-booked vans; note that app rideshares cannot pick up inside the airport."
+     },
+     {
+      "mode": "ferry",
+      "note": "From Playa del Carmen's pier, the Cozumel passenger ferry takes about 40 minutes; from Puerto Juárez in Cancún, the Isla Mujeres ferry takes 15-20 minutes."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Not needed if you're basing in the Hotel Zone or central Playa — both are walkable and buses/colectivos ply highway 307 constantly. Rent for a day or two only if you want self-paced cenote or ruin trips."
+    }
+   },
+   "stay": [
+    {
+     "area": "Cancún Hotel Zone",
+     "why": "A 22 km barrier-island strip of big beach resorts between the Caribbean and the lagoon — the widest sand and the shortest airport run."
+    },
+    {
+     "area": "Downtown Cancún (El Centro)",
+     "why": "Markets, taquerías and hotels at half Hotel Zone prices, 15 minutes by bus from the beach and close to the Isla Mujeres ferry docks."
+    },
+    {
+     "area": "Playa del Carmen centro",
+     "why": "Walk to the Cozumel ferry, dive piers and the Quinta Avenida restaurant strip; the most practical base for mixing reef days with mainland trips."
+    },
+    {
+     "area": "Playacar",
+     "why": "A quiet gated enclave of resorts and villas immediately south of Playa's center — beach access and calm nights, ten minutes' walk from the action."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Isla Mujeres day trip",
+     "tags": [
+      "beach",
+      "adventure",
+      "relax"
+     ],
+     "len": "full",
+     "note": "Ferries cross from Puerto Juárez in 15-20 minutes; rent a golf cart (roughly 40-90 USD/day) and loop the 8 km island from Playa Norte's shallow sandbar to the sculpture park and cliffs at the southern point.",
+     "q": "Isla Mujeres golf cart day trip"
+    },
+    {
+     "title": "Chichén Itzá",
+     "tags": [
+      "culture"
+     ],
+     "len": "full",
+     "note": "The peninsula's headline Maya city, about 2.5-3 hours west; foreign adult entry totals roughly 700 MXN (about 40 USD) and gates run 08:00-17:00. Leave by 06:30 or stay in Valladolid to beat tour-bus crowds and heat.",
+     "q": "Chichen Itza day trip"
+    },
+    {
+     "title": "Tulum clifftop ruins",
+     "tags": [
+      "culture",
+      "beach"
+     ],
+     "len": "full",
+     "note": "A walled Maya port on 12 m cliffs above turquoise water, about an hour south of Playa; combined fees total roughly 515 MXN. Go for the 08:00 opening — by 10:00 the site is packed.",
+     "q": "Tulum ruins visit"
+    },
+    {
+     "title": "Cenote swim day",
+     "tags": [
+      "nature",
+      "adventure",
+      "family"
+     ],
+     "len": "half",
+     "note": "Open-air swimming cenotes like Cenote Azul and Jardín del Edén sit just off highway 307 south of Playa, with entries around 150-200 MXN. Clear fresh water, cliff-jump ledges and fish — an easy no-dive afternoon.",
+     "q": "cenote swimming Playa del Carmen"
+    },
+    {
+     "title": "Akumal turtle snorkel",
+     "tags": [
+      "wildlife",
+      "beach",
+      "family"
+     ],
+     "len": "half",
+     "note": "Green turtles graze the seagrass in Akumal Bay, 40 minutes south of Playa. Turtle-zone snorkeling now requires a licensed guide booked at the beach modules (about 25-40 USD, 55-minute sessions, 3 m distance rule).",
+     "q": "Akumal turtle snorkeling guided"
+    },
+    {
+     "title": "Quinta Avenida evening",
+     "tags": [
+      "food",
+      "nightlife"
+     ],
+     "len": "half",
+     "note": "Playa del Carmen's 4 km pedestrian spine runs from the ferry pier north past taquerías, mezcal bars and rooftop lounges. Eat a block or two off the avenue where prices drop and the cooking improves.",
+     "q": "Quinta Avenida Playa del Carmen restaurants"
+    },
+    {
+     "title": "Whale shark snorkel trip",
+     "tags": [
+      "wildlife",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "From June to mid-September hundreds of whale sharks feed off Isla Mujeres and Holbox; boats leave Cancún and Isla Mujeres early morning for 1-1.5 hour rides to the aggregation. Snorkel only — no tanks — with peak numbers in July-August.",
+     "q": "whale shark snorkel Cancun"
+    },
+    {
+     "title": "Maya Museum of Cancún",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "A modern museum in the Hotel Zone holding one of the region's most complete Maya collections, with the small San Miguelito ruins in the jungle out back. A solid rainy-afternoon or surface-interval plan.",
+     "q": "Maya museum Cancun hotel zone"
+    },
+    {
+     "title": "Downtown Cancún market eating",
+     "tags": [
+      "food",
+      "culture"
+     ],
+     "len": "half",
+     "note": "Mercado 28 and the Parque de las Palapas food stalls serve the city that tourism built — salbutes, marquesitas and grilled corn at local prices, best in the evening when families come out.",
+     "q": "Cancun downtown food market palapas"
+    },
+    {
+     "title": "Xpu-Ha beach afternoon",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "A long, palm-backed bay 25 minutes south of Playa with a few low-rise beach clubs and calmer water than town beaches. Reachable by colectivo along highway 307 plus a short walk in.",
+     "q": "Xpu-Ha beach Riviera Maya"
+    }
+   ],
+   "events": [
+    {
+     "name": "Whale shark season",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "when": "June to mid-September, peaking July-August",
+     "note": "The world's largest known whale shark aggregation forms offshore; morning boats sell out in peak weeks, so book a day or two ahead and keep a buffer day for weather.",
+     "kind": "wildlife"
+    },
+    {
+     "name": "Sargassum season",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "when": "Roughly April to October, heaviest June-August",
+     "note": "Drifting seaweed can pile up on east-facing mainland beaches; resorts rake daily and amounts vary week to week. Diving is unaffected, and November-February beaches are most reliably clear.",
+     "kind": "consideration"
+    },
+    {
+     "name": "Día de Muertos / Hanal Pixán",
+     "months": [
+      10,
+      11
+     ],
+     "when": "End of October through November 2",
+     "note": "The Maya version of Day of the Dead fills plazas in Cancún and Playa with altars, candlelit processions and festival nights at the big eco-parks south of Playa. Book those festival evenings ahead.",
+     "kind": "culture"
+    },
+    {
+     "name": "Carnaval",
+     "months": [
+      2
+     ],
+     "when": "The week before Lent, usually mid-February",
+     "note": "Playa del Carmen and Cancún both stage parades and street concerts in the same window as Cozumel's larger Carnaval — lively evenings, minor street closures.",
+     "kind": "culture"
+    },
+    {
+     "name": "Spring break",
+     "months": [
+      3
+     ],
+     "when": "March, concentrated in the Cancún Hotel Zone",
+     "note": "US college crowds push Hotel Zone prices up and noise levels higher; Playa del Carmen and points south feel it far less.",
+     "kind": "consideration"
+    }
+   ],
+   "topside_summary": "This is the high-energy end of the Mexican Caribbean: Cancún's resort strip and nightlife on one end, Playa del Carmen's walkable grid of restaurants, ferries and beach clubs on the other, with highway 307 threading cenotes, turtle bays and Maya ruins between them. Everything runs on day trips — you can climb a pyramid, swim a cenote and eat street tacos in the same day. It is busy and commercial, but the infrastructure makes non-diving days effortless."
+  },
+  "Cenotes of Yucatán Peninsula": {
+   "airports": [
+    {
+     "iata": "CUN",
+     "name": "Cancún International",
+     "city": "Cancún",
+     "note": "Main gateway with the most flights and cheapest fares; 1 hour to Playa del Carmen, 1.5-2 hours to Tulum on highway 307."
+    },
+    {
+     "iata": "TQO",
+     "name": "Tulum International (Felipe Carrillo Puerto)",
+     "city": "Tulum",
+     "note": "Opened December 2023, about 25 km south of Tulum town; a growing set of US nonstops (Dallas, Houston, Miami, Atlanta, Chicago) puts you 35-45 minutes from a Tulum base."
+    }
+   ],
+   "getting_in": "The cenote belt runs along highway 307 between Playa del Carmen and Tulum and inland on the Cobá road, so most divers land at CUN and drive south; TQO is the shortcut if you're basing in Tulum. There is no single 'cenote town' — Playa del Carmen and Tulum are the two practical bases.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "shuttle",
+      "note": "First-class buses run from CUN's terminals to Playa del Carmen (about 270 MXN, 1 h 15 min-1 h 50 min) and on to Tulum; colectivo vans shuttle the 307 corridor all day for a few dollars a hop."
+     },
+     {
+      "mode": "private_transfer",
+      "note": "Pre-booked vans from CUN cost about 45-90 USD to Playa del Carmen and roughly 100-140 USD to Tulum (1.5-2 h) — worth it with cave-diving luggage."
+     },
+     {
+      "mode": "taxi",
+      "note": "Taxis cover in-town runs in Playa and Tulum; for cenote gates 20-45 km out they get expensive fast and you'll need to arrange the return."
+     }
+    ],
+    "car": {
+     "recommended": true,
+     "note": "This is the classic rental-car destination: cenotes are scattered down 60 km of highway 307 and the Cobá road, gates open around 08:00-09:00 when the water is clearest and emptiest, and a car lets you chain two or three sites a day. Budget for mandatory third-party liability insurance on top of teaser base rates, and carry cash — most cenote gates take pesos only."
+    }
+   },
+   "stay": [
+    {
+     "area": "Tulum centro",
+     "why": "The budget-friendly grid on the highway side of Tulum, closest to the Cobá-road cenotes and full of taquerías; you trade beach frontage for location and price."
+    },
+    {
+     "area": "Tulum beach zone",
+     "why": "The boho hotel strip along the sand — atmospheric and expensive, with a 10-20 minute drive back inland to most cenote gates."
+    },
+    {
+     "area": "Playa del Carmen centro",
+     "why": "The most connected base: cenotes south toward Tulum, the Cozumel ferry for reef days, and buses in every direction from one walkable center."
+    },
+    {
+     "area": "Puerto Aventuras / Akumal corridor",
+     "why": "Quiet marina-and-bay communities midway along the cenote belt, cutting drive times to popular systems roughly in half versus either town."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Cobá pyramid climb",
+     "tags": [
+      "culture",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "Nohoch Mul, 42 m tall, reopened to climbers in December 2025 via a new wooden staircase over the original 120 steps — again the only major pyramid in the peninsula you can ascend. Climbing runs 08:00-15:30 in small groups; rent a bike to cover the jungle site's long causeways.",
+     "q": "Coba ruins pyramid climb"
+    },
+    {
+     "title": "Tulum clifftop ruins",
+     "tags": [
+      "culture",
+      "beach"
+     ],
+     "len": "half",
+     "note": "The walled Maya port stands on 12 m cliffs over the Caribbean; combined entry fees total about 515 MXN and last admission is 15:30. Arrive at 08:00 — it is the most-visited site on the coast.",
+     "q": "Tulum archaeological site"
+    },
+    {
+     "title": "Chichén Itzá via Valladolid",
+     "tags": [
+      "culture"
+     ],
+     "len": "full",
+     "note": "About 2 hours inland from Tulum; pair the ruins (roughly 700 MXN foreign entry, 08:00 opening) with lunch in Valladolid, a pastel colonial town with a swimmable cenote right in its center. Doing it self-drive beats the bus-tour timetable.",
+     "q": "Chichen Itza Valladolid day trip"
+    },
+    {
+     "title": "Swim-cenote circuit for non-divers",
+     "tags": [
+      "nature",
+      "family",
+      "adventure"
+     ],
+     "len": "half",
+     "note": "Open cenotes like Gran Cenote and Cenote Azul welcome swimmers and snorkelers for about 150-400 MXN each — turtles, light shafts and cool 25 °C water. Guided snorkel routes through the Dos Ojos caverns (about 370-700 MXN) give non-divers a taste of the cave systems.",
+     "q": "cenote swimming snorkeling Tulum"
+    },
+    {
+     "title": "Sian Ka'an lagoon float at Muyil",
+     "tags": [
+      "nature",
+      "wildlife"
+     ],
+     "len": "half",
+     "note": "From the Muyil ruins, boats cross two lagoons in the UNESCO biosphere to a Maya-dug canal where you drift with the current through the mangroves in a life vest. Half-day trips run about 50-100 USD; over 300 bird species live in the reserve.",
+     "q": "Sian Kaan Muyil float tour"
+    },
+    {
+     "title": "Akumal turtle bay",
+     "tags": [
+      "wildlife",
+      "beach",
+      "family"
+     ],
+     "len": "half",
+     "note": "Green turtles feed on the seagrass a short swim off Akumal beach; guided turtle-zone sessions (mandatory, about 25-40 USD, 55 minutes) are booked at the beach entrance. The rule set — 3 m distance, no touching, reef-safe sunscreen — is enforced.",
+     "q": "Akumal sea turtle snorkel"
+    },
+    {
+     "title": "Punta Laguna monkey reserve",
+     "tags": [
+      "wildlife",
+      "nature"
+     ],
+     "len": "half",
+     "note": "A community-run forest reserve 40 minutes past Cobá where local guides track wild spider monkey troops around a lagoon; early morning gives the best sightings. A low-key counterpoint to the coast's commercial parks.",
+     "q": "Punta Laguna spider monkey reserve"
+    },
+    {
+     "title": "Tulum centro taco crawl",
+     "tags": [
+      "food",
+      "nightlife"
+     ],
+     "len": "half",
+     "note": "The town-side avenues serve al pastor, cochinita and seafood tostadas at a third of beach-strip prices, with mezcalerías filling in after dark. Eat where the pickup trucks park.",
+     "q": "Tulum town tacos street food"
+    },
+    {
+     "title": "Playa Paraíso beach afternoon",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "The wide public beach just south of the Tulum ruins, with fine sand, beach-club loungers and a view back to the clifftop temples. Check seaweed conditions in summer months before committing a day.",
+     "q": "Playa Paraiso Tulum beach"
+    },
+    {
+     "title": "Kaan Luum lagoon",
+     "tags": [
+      "nature",
+      "relax"
+     ],
+     "len": "half",
+     "note": "A shallow turquoise lagoon 10 minutes south of Tulum ringing a deep central cenote; entry is cheap, docks and swings line the shallows, and weekday mornings are near-empty. Swimming is allowed in the shallow ring only.",
+     "q": "Kaan Luum lagoon Tulum"
+    }
+   ],
+   "events": [
+    {
+     "name": "Día de Muertos / Hanal Pixán",
+     "months": [
+      10,
+      11
+     ],
+     "when": "End of October through November 2",
+     "note": "The Yucatec Maya version of Day of the Dead — altars with 'food for the souls' appear in Tulum, Valladolid and every village square, and the coast's eco-parks stage multi-night festivals. One of the best culture windows of the year.",
+     "kind": "culture"
+    },
+    {
+     "name": "Equinox at Chichén Itzá",
+     "months": [
+      3,
+      9
+     ],
+     "when": "Around March 20-21 and September 22, strongest in March",
+     "note": "The serpent-shadow illusion descends El Castillo's staircase and draws tens of thousands; a spectacle if you want it, a reason to shift your visit by a few days if you don't.",
+     "kind": "culture"
+    },
+    {
+     "name": "Sargassum season",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "when": "Roughly April to October, heaviest June-August; Tulum's open coast collects the most of any beach on this coast",
+     "note": "Beach days suffer in peak months, but cenotes are completely unaffected — freshwater, inland and clear year-round — which makes this destination a smart summer pick.",
+     "kind": "consideration"
+    },
+    {
+     "name": "Whale shark season",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "when": "June to mid-September off Isla Mujeres and Holbox, peak July-August",
+     "note": "An add-on day from a cenote trip: leave at dawn from Cancún or Isla Mujeres, snorkel with the aggregation, and be back on the 307 corridor by evening.",
+     "kind": "wildlife"
+    },
+    {
+     "name": "Rainy season",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "when": "June through October, with short heavy afternoon storms and the hurricane watch peaking August-October",
+     "note": "Rain rarely wrecks a cenote day — most storms pass in an hour and the caverns don't care — but heavy runoff can temporarily cloud open cenotes' surface layers.",
+     "kind": "consideration"
+    }
+   ],
+   "topside_summary": "The cenote belt is jungle-and-highway country: hundreds of collapsed limestone sinkholes strung between Playa del Carmen, Tulum and the Cobá road, with Maya cities, monkey forest and the Sian Ka'an biosphere folded in among them. Topside life means a rental car, cash for village gates, taco stops between swims, and ruins climbed before the heat. Tulum adds a beach-club scene; inland, the peninsula stays rural and unhurried."
+  },
+  "Maldives": {
+   "airports": [
+    {
+     "iata": "MLE",
+     "name": "Velana International",
+     "city": "Malé",
+     "note": "On Hulhulé island, linked to Malé by bridge; all onward atoll transfers start here"
+    },
+    {
+     "iata": "GAN",
+     "name": "Gan International",
+     "city": "Addu Atoll",
+     "note": "Far-south gateway, mostly reached by domestic connection from MLE"
+    }
+   ],
+   "getting_in": "Long-haul flights land at MLE (Velana International), on its own island next to Malé. From there every atoll leg is a second booking — resort speedboat, seaplane (daylight hours only), or a domestic flight plus boat for the far atolls — arranged through your resort or guesthouse.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "fast_boat",
+      "note": "Resort speedboats cover islands within about 80 km of Malé in 20-60 minutes; typically 100-200 USD return per person. Scheduled shared boats to local islands like Maafushi run about 25-30 USD one way, 45 minutes."
+     },
+     {
+      "mode": "domestic_flight",
+      "note": "Seaplanes serve mid-distance atolls, roughly 400-820 USD return per person, flying only about 06:00-16:00 — late arrivals overnight near the airport. Far atolls use a domestic flight plus speedboat, about 350-520 USD return."
+     },
+     {
+      "mode": "ferry",
+      "note": "Public ferries link Malé with local islands for 2-4 USD; Malé-Maafushi takes about 90 minutes and does not run on Fridays."
+     },
+     {
+      "mode": "liveaboard_pickup",
+      "note": "Liveaboards collect guests directly at the airport jetty or nearby Hulhumalé marina, usually on embarkation afternoon."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "There is no road network between islands; apart from the Malé-Hulhumalé bridge, everything moves by boat or air, so a car is pointless."
+    }
+   },
+   "stay": [
+    {
+     "area": "Resort islands",
+     "why": "One island, one resort: transfers, meals, house reef and alcohol all on site, with prices running from about 250 USD to several thousand per night."
+    },
+    {
+     "area": "Local islands (Maafushi, Dhigurah, Fulidhoo)",
+     "why": "Guesthouses from about 50 USD with dive centres on the doorstep and cheap speedboat access, but local law applies — no alcohol on the island and covered shoulders away from designated bikini beaches."
+    },
+    {
+     "area": "Hulhumalé",
+     "why": "A practical airport-adjacent base for the night before an early flight or between a liveaboard and a resort stay."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Sandbank picnic",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Boats drop you on a bare white sandbank in the lagoon for a few hours of swimming and a packed lunch. Most guesthouses and resorts run the trip for roughly 30-70 USD per person.",
+     "q": "sandbank trip"
+    },
+    {
+     "title": "Malé old town on foot",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "The capital packs the 17th-century coral-stone Friday Mosque, the fish market and the produce market into about 2 square kilometres. Two to three hours covers it between transfers.",
+     "q": "Malé city walk"
+    },
+    {
+     "title": "Local-island day trip",
+     "tags": [
+      "culture",
+      "beach"
+     ],
+     "len": "half",
+     "note": "Visit an inhabited island such as Maafushi, Gulhi or Guraidhoo to see schools, cafés and boatyards rather than resort lawns. Public ferries make it a 2-4 USD outing from Malé.",
+     "q": "local island tour"
+    },
+    {
+     "title": "Night fishing",
+     "tags": [
+      "adventure",
+      "food"
+     ],
+     "len": "half",
+     "note": "Handline fishing from a dhoni at sunset, Maldivian style, with the catch grilled afterwards. Runs about 2-3 hours and is offered on nearly every island.",
+     "q": "night fishing trip"
+    },
+    {
+     "title": "Sunset dolphin cruise",
+     "tags": [
+      "wildlife",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Spinner dolphins move along atoll channels in the late afternoon and pods of 50+ are common. Cruises last around 2 hours.",
+     "q": "sunset dolphin cruise"
+    },
+    {
+     "title": "Bioluminescent beach walk",
+     "tags": [
+      "nature"
+     ],
+     "len": "half",
+     "note": "On dark nights, plankton can light the tideline blue, most reliably around new moon in the wetter months. Ask locally which beach has had recent displays rather than fixing on one island.",
+     "q": "bioluminescent beach"
+    },
+    {
+     "title": "Surf a North Malé Atoll break",
+     "tags": [
+      "adventure"
+     ],
+     "len": "half",
+     "note": "The atoll's east side holds reliable reef breaks from March to October, with boat access from Malé, Hulhumalé and nearby islands. Lessons and board hire suit the smaller days.",
+     "q": "surf lesson"
+    },
+    {
+     "title": "Spa afternoon",
+     "tags": [
+      "relax"
+     ],
+     "len": "half",
+     "note": "Overwater treatment rooms with glass floors are a resort staple, and local islands have simpler, cheaper spas. A sensible surface-interval filler before a flight.",
+     "q": "spa treatment"
+    }
+   ],
+   "events": [
+    {
+     "name": "Ramadan",
+     "months": [
+      2,
+      3
+     ],
+     "when": "One lunar month, moving about 11 days earlier each year (Feb-Mar in 2026-2027); exact dates depend on moon sighting",
+     "note": "Cafés and shops on Malé and local islands close in daylight hours and excursion schedules shrink; resort islands run normally.",
+     "kind": "culture"
+    },
+    {
+     "name": "Eid al-Fitr",
+     "months": [
+      3
+     ],
+     "when": "Directly after Ramadan; a moving date confirmed by moon sighting",
+     "note": "Multi-day public holiday with feasts and games on local islands, but domestic transport books out with Maldivians travelling home.",
+     "kind": "culture"
+    },
+    {
+     "name": "Independence Day",
+     "months": [
+      7
+     ],
+     "when": "26 July each year, with festivities starting the evening of the 25th",
+     "note": "Parades, stadium shows and fireworks in Malé; offices close but resorts and transfers are unaffected.",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "Above water the Maldives is 1,200 low coral islands where the choice is binary: sealed-off resort comfort or the small mosques, cafés and boatyards of local-island life. Distances are all by boat or seaplane, so most non-diving time happens within walking range of your island. Days fill with sandbanks, dolphin channels and handline fishing rather than sights in the conventional sense."
+  },
+  "Great Barrier Reef": {
+   "airports": [
+    {
+     "iata": "CNS",
+     "name": "Cairns Airport",
+     "city": "Cairns",
+     "note": "Main gateway for the northern and central reef; 7 km from the city centre"
+    },
+    {
+     "iata": "HTI",
+     "name": "Hamilton Island",
+     "city": "Whitsundays",
+     "note": "Only relevant if you are diving the southern Whitsundays section instead of the Cairns reefs"
+    }
+   ],
+   "getting_in": "Fly into Cairns (CNS), usually via Brisbane, Sydney or Melbourne, with some direct routes from Asian hubs. Reef day boats and liveaboards leave from the marina an easy walk from the Cairns city centre, and Port Douglas is about an hour north by road.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "taxi",
+      "note": "Airport to Cairns city is about 10 minutes; expect roughly 20-30 AUD. Rideshare runs slightly cheaper."
+     },
+     {
+      "mode": "shuttle",
+      "note": "Direct shuttles to Port Douglas take 60-70 minutes and cost about 32-58 AUD per person, running roughly hourly through the day."
+     },
+     {
+      "mode": "private_transfer",
+      "note": "Door-to-door cars to Port Douglas or Palm Cove, around 150-200 AUD per vehicle; useful for groups with dive bags."
+     },
+     {
+      "mode": "liveaboard_pickup",
+      "note": "Cairns-based liveaboards board at the Marlin Marina in the city centre; several include hotel pickup within Cairns."
+     }
+    ],
+    "car": {
+     "recommended": true,
+     "note": "Worth hiring for the topside half of the trip: the Daintree, Cape Tribulation and the Atherton Tablelands are self-drive country on good sealed roads. Skip it if you are staying central in Cairns and only doing boat days."
+    }
+   },
+   "stay": [
+    {
+     "area": "Cairns",
+     "why": "The practical base: most reef boats leave from the city marina, the Esplanade has a free swimming lagoon, and accommodation spans hostels to high-rise hotels."
+    },
+    {
+     "area": "Port Douglas",
+     "why": "A smaller, slower resort town an hour north with its own reef fleet reaching the outer ribbon reefs faster, plus 6 km of beach and quick access to the Daintree."
+    },
+    {
+     "area": "Palm Cove / Northern Beaches",
+     "why": "Quiet beachfront villages 25-30 minutes from Cairns for travellers who want sand at the door and are happy to shuttle to the marina."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Kuranda by rail and rainforest cableway",
+     "tags": [
+      "nature",
+      "family"
+     ],
+     "len": "full",
+     "note": "Ride the 1891 railway up through 15 tunnels to the village of Kuranda, browse its markets, and return by cableway over the rainforest canopy with boardwalk stops. Packages from Cairns start around 160 AUD.",
+     "q": "Kuranda rail and cableway"
+    },
+    {
+     "title": "Daintree and Mossman Gorge",
+     "tags": [
+      "nature"
+     ],
+     "len": "full",
+     "note": "Walk suspended boardwalks through rainforest that has grown here for over 100 million years and swim in the clear granite pools of Mossman Gorge. About 75 minutes' drive north of Cairns.",
+     "q": "Daintree day trip"
+    },
+    {
+     "title": "Cape Tribulation",
+     "tags": [
+      "nature",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "Cross the Daintree River by cable ferry and follow the coast road to where rainforest runs straight onto the beach. Boardwalks, lookouts and ice-cream stops make it an easy self-drive day.",
+     "q": "Cape Tribulation drive"
+    },
+    {
+     "title": "Atherton Tablelands waterfall circuit",
+     "tags": [
+      "nature"
+     ],
+     "len": "full",
+     "note": "A highland loop past Millaa Millaa Falls, crater lakes Barrine and Eacham, and giant curtain fig trees, 60-90 minutes above Cairns. Cooler air makes it a good surface-interval day.",
+     "q": "Atherton Tablelands waterfalls"
+    },
+    {
+     "title": "Daintree River crocodile cruise",
+     "tags": [
+      "wildlife"
+     ],
+     "len": "half",
+     "note": "One-hour boat searches for wild estuarine crocodiles, snakes and kingfishers on the lower Daintree. Sightings are most reliable in the cooler months when crocs bask on the banks.",
+     "q": "crocodile river cruise"
+    },
+    {
+     "title": "Cairns Esplanade and night markets",
+     "tags": [
+      "relax",
+      "food"
+     ],
+     "len": "half",
+     "note": "The 4,800-square-metre saltwater lagoon on the Esplanade is free, patrolled and open until late; the adjacent night markets run every evening for food stalls and souvenirs.",
+     "q": "Cairns Esplanade lagoon"
+    },
+    {
+     "title": "Green or Fitzroy Island day",
+     "tags": [
+      "beach",
+      "family"
+     ],
+     "len": "full",
+     "note": "45-minute ferries reach coral cays and rainforest islands with calm swimming beaches — Nudey Beach on Fitzroy is a regular in national beach rankings. Good for non-diving companions.",
+     "q": "island day trip"
+    },
+    {
+     "title": "Hot-air balloon over Mareeba",
+     "tags": [
+      "adventure"
+     ],
+     "len": "half",
+     "note": "Dawn flights drift over the Mareeba savannah with kangaroos visible below, back in Cairns by late morning. Book a non-flying day since it starts around 04:30.",
+     "q": "hot air balloon flight"
+    },
+    {
+     "title": "Four Mile Beach and Port Douglas markets",
+     "tags": [
+      "beach",
+      "relax"
+     ],
+     "len": "half",
+     "note": "Walk the flat 6 km beach at low tide, then the Sunday morning craft markets in Anzac Park. Swim between the flags at the netted enclosure during stinger season.",
+     "q": "Four Mile Beach"
+    }
+   ],
+   "events": [
+    {
+     "name": "Stinger season",
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "when": "Roughly November to May each year on the tropical coast",
+     "note": "Box jellyfish keep coastal beach swimming to netted enclosures and full-length lycra suits are standard on boats; the outer reef itself stays diveable year-round.",
+     "kind": "nature"
+    },
+    {
+     "name": "Coral spawning",
+     "months": [
+      11,
+      12
+     ],
+     "when": "2-6 nights after the full moon in November or December; inshore reefs can go in October",
+     "note": "The reef's mass spawning fills the water with pink bundles for a few nights — night dives around the date book out early.",
+     "kind": "nature"
+    },
+    {
+     "name": "Cairns Festival",
+     "months": [
+      8,
+      9
+     ],
+     "when": "About 10 days from late August into early September",
+     "note": "Free parades, light installations and concerts along the Esplanade; accommodation in Cairns tightens slightly.",
+     "kind": "culture"
+    },
+    {
+     "name": "Port Douglas Carnivale",
+     "months": [
+      5
+     ],
+     "when": "A long weekend in late May, with satellite events the week before",
+     "note": "Street parade, beach day and long-table lunches take over Macrossan Street; book Port Douglas rooms early that week.",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "Tropical North Queensland pairs the reef with the oldest continuously growing rainforest on earth, so surface days mean waterfalls, crocodile rivers and canopy walks rather than beach lounging alone. Cairns is a working, walkable base town built around its Esplanade lagoon and marina; Port Douglas trades size for polish an hour north. A hire car opens the Daintree, Cape Tribulation and the Tablelands within a day's loop."
+  },
+  "Zanzibar": {
+   "airports": [
+    {
+     "iata": "ZNZ",
+     "name": "Abeid Amani Karume International",
+     "city": "Zanzibar City",
+     "note": "6 km from Stone Town; direct wide-body routes from the Gulf, Istanbul and parts of Europe"
+    },
+    {
+     "iata": "DAR",
+     "name": "Julius Nyerere International",
+     "city": "Dar es Salaam",
+     "note": "Mainland hub; connect by 20-30 minute hop or fast ferry to Stone Town"
+    }
+   ],
+   "getting_in": "Fly direct into ZNZ on routes from the Gulf, Istanbul and seasonal European services, or connect through Dar es Salaam (DAR). From Dar the last leg is a 20-30 minute flight or a roughly 2-hour fast ferry into Stone Town harbour.",
+   "transfer": {
+    "options": [
+     {
+      "mode": "taxi",
+      "note": "Airport to Stone Town is 15-20 minutes, about 15 USD; to Nungwi in the north about 1 hour 20 minutes, 35-60 USD. No meters — agree the fare before leaving."
+     },
+     {
+      "mode": "private_transfer",
+      "note": "Hotels arrange fixed-price cars at similar rates, worth it for late arrivals or the east-coast run to Paje (about 1 hour, 30-50 USD)."
+     },
+     {
+      "mode": "ferry",
+      "note": "Fast ferries link Dar es Salaam and Stone Town about 4 times daily, 1 hour 45 minutes to 2 hours, roughly 35-50 USD one way in tourist class."
+     },
+     {
+      "mode": "shuttle",
+      "note": "Local dala dala minibuses cover the island for 1-2 USD but are slow, crowded and awkward with dive bags."
+     }
+    ],
+    "car": {
+     "recommended": false,
+     "note": "Self-drive requires a local driving permit, and unlit roads, speed bumps and frequent police checkpoints make a hired car with driver — often only 10-20 USD more per day — the easier option."
+    }
+   },
+   "stay": [
+    {
+     "area": "Stone Town",
+     "why": "The cultural core with carved doors, museums and the ferry port, right for a 1-2 night history stopover, but it has no usable beach."
+    },
+    {
+     "area": "Nungwi / Kendwa (north)",
+     "why": "The only coast where the sea stays swimmable at all tides, with the island's densest cluster of dive centres and, at Kendwa, monthly full-moon beach parties."
+    },
+    {
+     "area": "Paje / east coast",
+     "why": "A wide tidal lagoon that empties at low water, kitesurfing from December to March and June to September, and a quieter, budget-friendlier village scene."
+    },
+    {
+     "area": "Matemwe (northeast)",
+     "why": "Small lodges facing Mnemba's reef ring, the shortest boat rides to the island's best-known dive sites, on a beach used as much by seaweed farmers as by tourists."
+    }
+   ],
+   "todo": [
+    {
+     "title": "Stone Town heritage walk",
+     "tags": [
+      "culture"
+     ],
+     "len": "half",
+     "note": "A UNESCO-listed maze of coral-stone merchant houses, carved brass-studded doors, the Old Fort and the former slave-market site with its underground holding chambers. Two to three hours with a guide covers the essentials.",
+     "q": "Stone Town walking tour"
+    },
+    {
+     "title": "Spice farm tour",
+     "tags": [
+      "food",
+      "culture"
+     ],
+     "len": "half",
+     "note": "Working farms 20-30 minutes from Stone Town grow the cloves, vanilla, nutmeg and cardamom behind the island's old trade name; tours end with fruit tastings. Typically 3-4 hours including transfers.",
+     "q": "spice farm tour"
+    },
+    {
+     "title": "Jozani Forest and red colobus monkeys",
+     "tags": [
+      "wildlife",
+      "nature"
+     ],
+     "len": "half",
+     "note": "The island's national park protects Zanzibar red colobus found nowhere else, habituated troops sitting metres from the trail, plus a mangrove boardwalk. About 45 minutes from Stone Town or 30 from Paje.",
+     "q": "Jozani forest tour"
+    },
+    {
+     "title": "Prison Island boat trip",
+     "tags": [
+      "wildlife"
+     ],
+     "len": "half",
+     "note": "A 30-minute boat from Stone Town reaches Changuu Island, home to a colony of Aldabra giant tortoises, some over 100 years old, and the ruins of a quarantine station. Combine with a swim off the beach.",
+     "q": "Prison Island boat trip"
+    },
+    {
+     "title": "Sunset dhow cruise",
+     "tags": [
+      "relax"
+     ],
+     "len": "half",
+     "note": "Traditional wooden sailing dhows leave Stone Town and Nungwi in the last two hours of light; most trips run 2 hours with drinks on board.",
+     "q": "sunset dhow cruise"
+    },
+    {
+     "title": "Forodhani Gardens night market",
+     "tags": [
+      "food"
+     ],
+     "len": "half",
+     "note": "Every evening the seafront park in Stone Town fills with grill stalls selling skewers, Zanzibar pizza and sugarcane juice. Go hungry and check seafood is cooked fresh in front of you.",
+     "q": "night food market"
+    },
+    {
+     "title": "Full-day dhow sailing with sandbank",
+     "tags": [
+      "beach",
+      "adventure"
+     ],
+     "len": "full",
+     "note": "Day trips from the Fumba area sail the Menai Bay conservation zone: snorkelling, a seafood grill on a sandbank and mangrove lagoon swimming. Usually 7-8 hours door to door.",
+     "q": "dhow sailing day trip"
+    },
+    {
+     "title": "Kitesurfing lesson in Paje",
+     "tags": [
+      "adventure"
+     ],
+     "len": "half",
+     "note": "The shallow east-coast lagoon and steady seasonal trade winds (Dec-Mar and Jun-Sep) make Paje an easy place to learn; schools line the beach with beginner courses from about 80-100 USD.",
+     "q": "kitesurfing lesson"
+    },
+    {
+     "title": "Nungwi turtle sanctuary",
+     "tags": [
+      "wildlife",
+      "family"
+     ],
+     "len": "half",
+     "note": "A natural tidal lagoon at Nungwi's northern tip holds rescued green and hawksbill turtles ahead of release. A short visit that pairs well with a beach afternoon.",
+     "q": "turtle sanctuary visit"
+    }
+   ],
+   "events": [
+    {
+     "name": "Sauti za Busara",
+     "months": [
+      2
+     ],
+     "when": "Four days in early February, in Stone Town's Old Fort",
+     "note": "East Africa's biggest live-music festival fills Stone Town — a highlight if you time for it, but book rooms months ahead.",
+     "kind": "culture"
+    },
+    {
+     "name": "Zanzibar International Film Festival",
+     "months": [
+      6,
+      7
+     ],
+     "when": "About a week in late June or July, varying by year",
+     "note": "Open-air screenings in the Old Fort and around Stone Town; the town is lively but beach areas are unaffected.",
+     "kind": "culture"
+    },
+    {
+     "name": "Mwaka Kogwa",
+     "months": [
+      7
+     ],
+     "when": "Four days around 23-24 July, centred on Makunduchi village in the south",
+     "note": "The Shirazi new year, marked with ritual banana-stalk fights, songs and a symbolic hut burning; visitors are welcome as spectators.",
+     "kind": "culture"
+    },
+    {
+     "name": "Ramadan and Eid al-Fitr",
+     "months": [
+      2,
+      3
+     ],
+     "when": "One lunar month moving about 11 days earlier each year (Feb-Mar in 2026-2027), ending in the multi-day Eid holiday",
+     "note": "Zanzibar is predominantly Muslim: many local restaurants close in daylight and eating openly in villages is frowned on, while hotels and dive boats run normally. Eid brings street celebrations and busy domestic transport.",
+     "kind": "culture"
+    }
+   ],
+   "topside_summary": "Zanzibar layers Swahili, Arab, Indian and European history onto a coral island of spice farms and fishing villages, with Stone Town's alleyways as the cultural anchor. Coasts differ sharply — tide-swept lagoons and kitesurf winds in the east, all-tide swimming and nightlife in the north — so where you sleep shapes the trip. Between dives the draws are markets, dhows, forest monkeys and food that runs from grill stalls to rooftop Swahili dinners."
+  }
+ }
+}

@@ -772,6 +772,101 @@
   .subtabs button .ico{font-size:15px;margin-right:6px}
   .subtabs button:hover{border-color:var(--accent);color:var(--ink)}
   .subtabs button.active{background:rgba(47,224,214,.14);color:var(--accent);border-color:var(--accent);font-weight:700}
+
+  /* ---------- trip planner (travel-desk wizard) ---------- */
+  .tw{max-width:860px;margin:0 auto}
+  .tw-steps{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:18px 0 20px}
+  .tw-steps button{background:transparent;border:1px solid var(--line);border-radius:999px;color:var(--muted);
+       padding:7px 14px;font-size:.82rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .15s}
+  .tw-steps button span{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;
+       background:rgba(14,156,146,.1);color:var(--accent-deep);font-family:var(--mono);font-size:.68rem}
+  .tw-steps button.active{border-color:var(--accent);color:var(--ink);background:rgba(47,224,214,.1)}
+  .tw-steps button.done span{background:var(--accent);color:#04202b}
+  .tw-step{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:var(--r);
+       padding:26px 26px 22px;box-shadow:var(--shadow)}
+  .tw-h{margin:0 0 16px;font-size:1.3rem}
+  .tw-fields{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end}
+  .tw-fields .field input,.tw-fields .field select{background:#fff;border:1px solid var(--line-strong);border-radius:9px;
+       padding:9px 11px;color:var(--ink);font-family:var(--sans);font-size:.9rem;min-width:0}
+  .tw-origin-field{position:relative;flex:1;min-width:240px}
+  .tw-ac{position:absolute;top:100%;left:0;right:0;z-index:40;background:#fff;border:1px solid var(--line-strong);
+       border-radius:10px;margin-top:4px;max-height:250px;overflow:auto;box-shadow:var(--shadow)}
+  .tw-ac div{padding:8px 12px;cursor:pointer;font-size:.86rem;display:flex;gap:8px;align-items:baseline}
+  .tw-ac div:hover{background:rgba(47,224,214,.1)}
+  .tw-ac b{font-family:var(--mono);font-size:.74rem;color:var(--accent-deep)}
+  .tw-ac small{color:var(--muted);margin-left:auto;text-align:right}
+  .tw-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:10px}
+  .tw-star{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--accent-deep);
+       border:1px solid rgba(14,156,146,.4);border-radius:5px;padding:1px 5px;vertical-align:1px}
+  .tw-legs{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+  .tw-leg-row{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;
+       padding:10px 14px;flex-wrap:wrap}
+  .tw-leg-row .tw-leg-name{font-weight:700;min-width:0}
+  .tw-leg-row .tw-leg-name small{display:block;font-weight:400;color:var(--muted);font-size:.74rem}
+  .tw-leg-season{font-family:var(--mono);font-size:.68rem;padding:3px 8px;border-radius:6px;white-space:nowrap}
+  .tw-stepper{display:inline-flex;align-items:center;gap:0;margin-left:auto}
+  .tw-stepper button{width:34px;height:34px;border:1px solid var(--line-strong);background:#fff;color:var(--ink);
+       font-size:1rem;cursor:pointer;border-radius:8px 0 0 8px}
+  .tw-stepper button:last-child{border-radius:0 8px 8px 0;border-left:none}
+  .tw-stepper b{border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);height:34px;
+       display:inline-flex;align-items:center;padding:0 10px;font-family:var(--mono);font-size:.8rem;background:#fff;white-space:nowrap}
+  .tw-leg-x{background:none;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:4px 6px}
+  .tw-leg-x:hover{color:#c0442c}
+  .tw-group{margin:0 0 18px}
+  .tw-group>label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+       color:var(--muted);margin-bottom:8px}
+  .tw-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .tw-chips button{background:#fff;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink-soft);
+       padding:8px 15px;font-size:.85rem;cursor:pointer;transition:all .15s;min-height:40px}
+  .tw-chips button:hover{border-color:var(--accent)}
+  .tw-chips button.sel{background:rgba(47,224,214,.14);border-color:var(--accent);color:var(--accent-deep);font-weight:700}
+  /* the plan */
+  .tw-summary{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:var(--r);
+       padding:22px 24px;margin-bottom:18px;box-shadow:var(--shadow)}
+  .tw-route{font-family:var(--mono);font-size:.8rem;color:var(--accent-deep);letter-spacing:.06em;margin-bottom:8px;overflow-wrap:anywhere}
+  .tw-summary h3{margin:0 0 6px;font-size:1.45rem}
+  .tw-leg{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:20px;overflow:hidden;box-shadow:var(--shadow)}
+  .tw-leg-cover{position:relative;height:170px;background:linear-gradient(165deg,#0e6e78,#06333c)}
+  .tw-leg-cover img{width:100%;height:100%;object-fit:cover;display:block}
+  .tw-leg-cover .tw-leg-title{position:absolute;left:18px;bottom:12px;color:#fff;font-family:var(--serif);
+       font-size:1.5rem;font-weight:600;text-shadow:0 2px 14px rgba(2,20,26,.65)}
+  .tw-leg-cover .tw-leg-dates{position:absolute;right:14px;bottom:14px;font-family:var(--mono);font-size:.7rem;
+       color:#eafaf8;background:rgba(4,32,43,.55);border-radius:7px;padding:4px 9px;backdrop-filter:blur(4px)}
+  .tw-leg-body{padding:18px 20px 20px}
+  .tw-leg-chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+  .tw-book{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+  .tw-days{margin-top:14px;border-top:1px dashed var(--line-strong);padding-top:6px}
+  .tw-day{display:flex;gap:14px;padding:11px 2px;border-bottom:1px dashed var(--line)}
+  .tw-day:last-child{border-bottom:none}
+  .tw-day-label{font-family:var(--mono);font-size:.66rem;color:var(--muted);letter-spacing:.06em;
+       min-width:86px;padding-top:3px;text-transform:uppercase}
+  .tw-day-what{flex:1;min-width:0;font-size:.9rem}
+  .tw-day-what b{display:block;margin-bottom:2px}
+  .tw-day-what p{margin:2px 0 0;color:var(--ink-soft);font-size:.84rem;line-height:1.55}
+  .tw-day-what a{font-size:.8rem}
+  .tw-day .chip{white-space:nowrap}
+  .tw-day-dive{background:rgba(47,224,214,.05);border-radius:10px;margin:2px -8px;padding:11px 10px}
+  .tw-nofly{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:#8a5a00;
+       background:rgba(240,192,70,.18);border:1px solid rgba(240,192,70,.55);border-radius:6px;padding:2px 7px;margin-left:6px}
+  .tw-event{background:rgba(240,192,70,.1);border:1px solid rgba(240,192,70,.45);border-radius:10px;
+       padding:10px 14px;margin:12px 0 0;font-size:.85rem}
+  .tw-event b{display:block}
+  .tw-event .meta{margin:2px 0 0}
+  .tw-ai{background:linear-gradient(165deg,#ffffff,#f4f7ff);border:1px solid rgba(70,90,180,.25);border-radius:var(--r);
+       padding:18px 22px;margin:0 0 18px}
+  .tw-ai-kicker{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#4656b8;margin-bottom:8px}
+  .tw-empty-note{color:var(--muted);font-size:.86rem;background:rgba(14,156,146,.06);border:1px dashed var(--line-strong);
+       border-radius:10px;padding:10px 14px;margin:10px 0 0}
+  @media(max-width:640px){
+    .tw-step{padding:18px 14px 16px}
+    .tw-fields{flex-direction:column;align-items:stretch}
+    .tw-fields .field{width:100%}
+    .tw-stepper{margin-left:0}
+    .tw-leg-row{gap:8px}
+    .tw-day{flex-direction:column;gap:2px}
+    .tw-day-label{min-width:0}
+    .tw-leg-cover{height:130px}
+  }
 </style>
 </head>
 <body>
@@ -819,13 +914,77 @@
   <!-- GEAR -->
   <section id="view-trip" class="hidden">
     <div class="sec-head">Trip Planner</div>
-    <p class="sec-sub">Something new is being built here.</p>
-    <div class="article" style="max-width:640px;margin:26px auto;text-align:center;padding:44px 30px">
-      <div style="font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px">Coming soon</div>
-      <h3 style="font-family:var(--serif);font-size:1.5rem;margin:0 0 10px">Plan a whole dive trip, end to end.</h3>
-      <p style="color:var(--muted);line-height:1.65;margin:0 0 20px">We're working on a tool that turns a season match into a full
-        itinerary. Until it lands, the Destinations tab finds where the diving is at its best for your dates.</p>
-      <a class="btn" href="#" onclick="showTab('planner');return false;">Browse destinations &rarr;</a>
+    <p class="sec-sub">Your dive-trip travel desk: tell us where you fly from, where you want to dive
+      and what you enjoy on dry days — get a day-by-day plan with every booking in one place.</p>
+
+    <div class="tw" id="tw">
+      <div class="tw-steps" id="twSteps">
+        <button id="twS1" class="active" onclick="twGoto(1)"><span>1</span>Route</button>
+        <button id="twS2" onclick="twGoto(2)"><span>2</span>Destinations</button>
+        <button id="twS3" onclick="twGoto(3)"><span>3</span>Trip style</button>
+        <button id="twS4" onclick="twGoto(4)"><span>4</span>Your plan</button>
+      </div>
+
+      <!-- step 1: route -->
+      <div id="twStep1" class="tw-step">
+        <h3 class="tw-h">Where does the trip start?</h3>
+        <div class="tw-fields">
+          <div class="field tw-origin-field">
+            <label>Home airport</label>
+            <input id="twOrigin" type="text" placeholder="City or airport code — e.g. Dubai, LHR" autocomplete="off"
+                   oninput="twOriginType()" onfocus="twOriginType()">
+            <div id="twOriginMenu" class="tw-ac hidden"></div>
+          </div>
+          <div class="field"><label>Travellers</label><select id="twAdults">
+            <option value="1">1 — travelling solo</option><option value="2">2</option><option value="3">3</option>
+            <option value="4">4</option><option value="5">5</option><option value="6">6</option></select></div>
+          <div class="field"><label>Departure date</label><input id="twStart" type="date"></div>
+        </div>
+        <p class="meta" id="twStep1Note">Dates flexible? Pick a rough date now — step 2 shows how each destination's season
+          scores for that month, so you can shift until the water is at its best.</p>
+        <div class="tw-nav"><span></span><button class="btn" onclick="twGoto(2)">Choose destinations &rarr;</button></div>
+      </div>
+
+      <!-- step 2: destinations & nights -->
+      <div id="twStep2" class="tw-step hidden">
+        <h3 class="tw-h">Where to — and for how long?</h3>
+        <p class="meta" style="margin:0 0 12px">Add one destination or chain several into one route. Destinations marked
+          <b class="tw-star">FULL GUIDE</b> come with a researched topside plan — things to do, transfers and local events.</p>
+        <div class="tw-fields">
+          <div class="field" style="flex:1;min-width:230px">
+            <label>Add a destination</label>
+            <input id="twDestPick" type="text" list="twDestList" placeholder="Type a destination…" autocomplete="off">
+            <datalist id="twDestList"></datalist>
+          </div>
+          <button class="btn ghost" style="align-self:flex-end" onclick="twAddLeg()">+ Add to route</button>
+        </div>
+        <div id="twLegs" class="tw-legs"></div>
+        <div class="tw-nav"><button class="btn ghost" onclick="twGoto(1)">&larr; Back</button>
+          <button class="btn" onclick="twGoto(3)">Trip style &rarr;</button></div>
+      </div>
+
+      <!-- step 3: preferences -->
+      <div id="twStep3" class="tw-step hidden">
+        <h3 class="tw-h">What kind of trip is it?</h3>
+        <div class="tw-group"><label>Beyond diving, you enjoy… <small>(pick any)</small></label>
+          <div class="tw-chips" id="twTags"></div></div>
+        <div class="tw-group"><label>Dive pace</label>
+          <div class="tw-chips" id="twPace">
+            <button data-v="light" onclick="twSetPace('light')">Easy — a few dive days</button>
+            <button data-v="balanced" class="sel" onclick="twSetPace('balanced')">Balanced — dive and explore</button>
+            <button data-v="max" onclick="twSetPace('max')">All in — dive every day I can</button>
+          </div></div>
+        <div class="tw-group"><label>Getting around</label>
+          <div class="tw-chips" id="twMove">
+            <button data-v="transfer" class="sel" onclick="twSetMove('transfer')">Transfers &amp; taxis</button>
+            <button data-v="car" onclick="twSetMove('car')">Rental car where it makes sense</button>
+          </div></div>
+        <div class="tw-nav"><button class="btn ghost" onclick="twGoto(2)">&larr; Back</button>
+          <button class="btn" onclick="twGoto(4)">Build my plan &rarr;</button></div>
+      </div>
+
+      <!-- step 4: the plan -->
+      <div id="twStep4" class="tw-step hidden"><div id="twPlan"></div></div>
     </div>
   </section>
 
@@ -2392,17 +2551,434 @@ function renderDestinations(month){
 }
 
 // Prefer data embedded by the single-file build; otherwise fetch from disk.
+/* =============================================================
+   TRIP PLANNER — the travel-desk wizard.
+   Survey (route → destinations → style) → day-by-day itinerary
+   with season-aware dive days, the no-fly rule, researched
+   topside picks and one booking panel per leg.
+   ============================================================= */
+var TRIP=null;                                     // trip-planner.json payload
+
+/* Travel affiliate wiring. Empty values leave every link raw — safe in
+   production, exactly like the gear AFFILIATE config above.
+   Travelpayouts: paste your marker + trs (traffic source), then for each
+   programme copy p (tool id) and campaign_id from any link the dashboard's
+   link generator produces for that programme. */
+var TRIP_AFFILIATE={
+  tp_marker:'',                                    // Travelpayouts marker
+  tp_trs:'',                                       // Travelpayouts traffic source id
+  tp_programs:{
+    flights:{p:'',c:''},                           // Aviasales
+    hotels:{p:'',c:''},                            // Hotellook
+    transfers:{p:'',c:''},                         // Kiwitaxi
+    cars:{p:'',c:''},                              // Discover Cars / Localrent
+    activities:{p:'',c:''}                         // GetYourGuide / Tiqets via TP
+  },
+  gyg_partner:''                                   // direct GetYourGuide partner id (used when the TP activities programme is empty)
+};
+function tpWrap(url,prog){
+  var t=TRIP_AFFILIATE, pr=t.tp_programs[prog];
+  if(t.tp_marker&&t.tp_trs&&pr&&pr.p&&pr.c)
+    return 'https://tp.media/r?marker='+t.tp_marker+'&trs='+t.tp_trs+'&p='+pr.p+
+           '&u='+encodeURIComponent(url)+'&campaign_id='+pr.c;
+  if(prog==='activities'&&t.gyg_partner&&/getyourguide\./.test(url))
+    return url+(url.indexOf('?')>-1?'&':'?')+'partner_id='+t.gyg_partner;
+  return url;
+}
+
+/* Optional AI concierge: a serverless endpoint (see serverless/trip-concierge/)
+   that turns the finished plan into personal notes via the Claude API.
+   Empty endpoint = the feature simply doesn't render. */
+var TRIP_AI={endpoint:''};
+
+var TW={origin:null,adults:1,start:'',legs:[],prefs:{tags:[],pace:'balanced',move:'transfer'}};
+var TW_TAGS=['culture','nature','food','beach','adventure','wildlife','relax','nightlife','family'];
+var TW_MODE_LABEL={private_transfer:'Private transfer',taxi:'Taxi',rideshare:'Ride-hailing',shuttle:'Shuttle',
+  ferry:'Ferry',fast_boat:'Fast boat',domestic_flight:'Domestic flight / seaplane',liveaboard_pickup:'Liveaboard pickup'};
+
+function twEsc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function twGuide(name){return TRIP&&TRIP.destinations&&TRIP.destinations[name]||null;}
+function twGateway(name){
+  var g=twGuide(name);
+  if(g&&g.airports&&g.airports.length) return {iata:g.airports[0].iata,label:g.airports[0].city||g.airports[0].name};
+  var gw=TRIP&&TRIP.gateways&&TRIP.gateways[name];
+  return gw?{iata:gw.iata,label:gw.label}:null;
+}
+function twDate(s){return new Date(s+'T12:00:00');}
+function twAddDays(d,n){var x=new Date(d.getTime());x.setDate(x.getDate()+n);return x;}
+function twIso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+function twNice(d){return d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});}
+function twMon(d){return DivingCalendar.MONTHS[d.getMonth()];}
+
+/* ---- deep links: each answer in the survey lands in the partner URL ---- */
+function twFlightUrl(o,d,dep,ret){
+  function dm(x){return ('0'+x.getDate()).slice(-2)+('0'+(x.getMonth()+1)).slice(-2);}
+  return tpWrap('https://www.aviasales.com/search/'+o+dm(dep)+d+(ret?dm(ret):'')+(TW.adults||1),'flights');
+}
+function twStayUrl(name,arr,dep){
+  var d=DivingCalendar.getDestination(DESTS,name);
+  var q=d?stayQuery(d):name;
+  return tpWrap('https://search.hotellook.com/?destination='+encodeURIComponent(q)+
+    '&checkIn='+twIso(arr)+'&checkOut='+twIso(dep)+'&adults='+(TW.adults||1),'hotels');
+}
+function twActUrl(q,from,to){
+  var u='https://www.getyourguide.com/s/?q='+encodeURIComponent(q)+'&searchSource=3';
+  if(from)u+='&date_from='+twIso(from); if(to)u+='&date_to='+twIso(to);
+  return tpWrap(u,'activities');
+}
+function twTransferUrl(){return tpWrap('https://kiwitaxi.com/','transfers');}
+function twCarUrl(){return tpWrap('https://www.discovercars.com/','cars');}
+
+/* ---------- init + step navigation ---------- */
+function twInit(){
+  var dl=document.getElementById('twDestList');
+  if(dl) dl.innerHTML=DESTS.map(function(d){
+    return '<option value="'+twEsc(d.name)+'">'+twEsc(d.country)+(twGuide(d.name)?' · full guide':'')+'</option>';
+  }).join('');
+  var st=document.getElementById('twStart');
+  if(st&&!st.value){st.min=twIso(new Date());st.value=twIso(twAddDays(new Date(),45));}
+  var tg=document.getElementById('twTags');
+  if(tg) tg.innerHTML=TW_TAGS.map(function(t){
+    return '<button data-v="'+t+'" onclick="twToggleTag(\''+t+'\')">'+t.charAt(0).toUpperCase()+t.slice(1)+'</button>';
+  }).join('');
+  document.addEventListener('click',function(e){
+    var m=document.getElementById('twOriginMenu');
+    if(m&&!m.classList.contains('hidden')&&!e.target.closest('.tw-origin-field')) m.classList.add('hidden');
+  });
+}
+function twGoto(n){
+  TW.adults=Number(val('twAdults'))||1;
+  TW.start=val('twStart');
+  if(n>=3&&!TW.legs.length){twGoto(2);var dp=document.getElementById('twDestPick');if(dp)dp.focus();return;}
+  for(var i=1;i<=4;i++){
+    document.getElementById('twStep'+i).classList.toggle('hidden',i!==n);
+    var b=document.getElementById('twS'+i);
+    b.classList.toggle('active',i===n); b.classList.toggle('done',i<n);
+  }
+  if(n===2) twRenderLegs();
+  if(n===4) twBuildPlan();
+  document.getElementById('view-trip').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ---------- origin airport autocomplete ---------- */
+function twOriginType(){
+  var q=val('twOrigin').trim().toLowerCase(), m=document.getElementById('twOriginMenu');
+  TW.origin=null;
+  if(!TRIP||!q){m.classList.add('hidden');return;}
+  var hits=TRIP.airports.filter(function(a){
+    return a.iata.toLowerCase().indexOf(q)===0||a.city.toLowerCase().indexOf(q)>-1||
+           a.country.toLowerCase().indexOf(q)>-1||a.name.toLowerCase().indexOf(q)>-1;
+  }).slice(0,9);
+  if(!hits.length&&/^[a-z]{3}$/.test(q)) hits=[{iata:q.toUpperCase(),city:q.toUpperCase(),country:'airport code',name:'Use this code'}];
+  m.innerHTML=hits.map(function(a){
+    return '<div onclick="twPickOrigin(\''+a.iata+'\')"><b>'+a.iata+'</b> '+twEsc(a.city)+' <small>'+twEsc(a.country)+'</small></div>';
+  }).join('');
+  m.classList.toggle('hidden',!hits.length);
+}
+function twPickOrigin(iata){
+  var a=(TRIP?TRIP.airports:[]).filter(function(x){return x.iata===iata;})[0]||{iata:iata,city:iata,country:'',name:''};
+  TW.origin=a;
+  document.getElementById('twOrigin').value=a.iata+' — '+a.city;
+  document.getElementById('twOriginMenu').classList.add('hidden');
+}
+
+/* ---------- legs ---------- */
+function twAddLeg(){
+  var name=val('twDestPick').trim();
+  var d=DivingCalendar.getDestination(DESTS,name);
+  if(!d){var dp=document.getElementById('twDestPick');dp.focus();return;}
+  if(TW.legs.some(function(l){return l.name===d.name;})) return;
+  TW.legs.push({name:d.name,nights:4});
+  document.getElementById('twDestPick').value='';
+  twRenderLegs();
+}
+function twNights(i,delta){
+  var l=TW.legs[i]; if(!l)return;
+  l.nights=Math.max(1,Math.min(21,l.nights+delta));
+  twRenderLegs();
+}
+function twDropLeg(i){TW.legs.splice(i,1);twRenderLegs();}
+function twMoveLeg(i,dir){
+  var j=i+dir; if(j<0||j>=TW.legs.length)return;
+  var t=TW.legs[i];TW.legs[i]=TW.legs[j];TW.legs[j]=t;
+  twRenderLegs();
+}
+function twLegDates(){
+  /* arrival/departure per leg from the start date + nights chain */
+  var out=[], cur=TW.start?twDate(TW.start):twAddDays(new Date(),45);
+  TW.legs.forEach(function(l){
+    var arr=cur, dep=twAddDays(cur,l.nights);
+    out.push({arr:arr,dep:dep}); cur=dep;
+  });
+  return out;
+}
+function twRenderLegs(){
+  TW.start=val('twStart')||TW.start;
+  var box=document.getElementById('twLegs'), dates=twLegDates();
+  if(!TW.legs.length){box.innerHTML='<p class="meta" style="text-align:center">No destinations yet — add at least one above.</p>';return;}
+  box.innerHTML=TW.legs.map(function(l,i){
+    var d=DivingCalendar.getDestination(DESTS,l.name);
+    var gw=twGateway(l.name), m=twMon(dates[i].arr);
+    var mm=d&&d.monthly&&d.monthly[m], rating=mm?mm.rating:null;
+    var col=rating?RCOLOR[rating]:null;
+    return '<div class="tw-leg-row">'+
+      '<span style="display:inline-flex;flex-direction:column;gap:2px">'+
+        '<button class="tw-leg-x" style="padding:0 4px;font-size:.7rem" onclick="twMoveLeg('+i+',-1)" aria-label="Move up">&#9650;</button>'+
+        '<button class="tw-leg-x" style="padding:0 4px;font-size:.7rem" onclick="twMoveLeg('+i+',1)" aria-label="Move down">&#9660;</button></span>'+
+      '<span class="tw-leg-name">'+twEsc(l.name)+(twGuide(l.name)?' <b class="tw-star">FULL GUIDE</b>':'')+
+        '<small>'+(gw?('arrive '+gw.iata+' · '+twEsc(gw.label)):'')+'</small></span>'+
+      (rating?'<span class="tw-leg-season" style="color:'+col+';border:1px solid '+col+'55;background:'+col+'14">'+
+        m+': '+rating+'</span>':'')+
+      '<span class="tw-stepper"><button onclick="twNights('+i+',-1)" aria-label="Fewer nights">&minus;</button><b>'+l.nights+
+        ' night'+(l.nights>1?'s':'')+'</b><button onclick="twNights('+i+',1)" aria-label="More nights">+</button></span>'+
+      '<button class="tw-leg-x" onclick="twDropLeg('+i+')" aria-label="Remove">&times;</button></div>';
+  }).join('');
+}
+
+/* ---------- preferences ---------- */
+function twToggleTag(t){
+  var i=TW.prefs.tags.indexOf(t);
+  if(i>-1)TW.prefs.tags.splice(i,1); else TW.prefs.tags.push(t);
+  document.querySelectorAll('#twTags button').forEach(function(b){
+    b.classList.toggle('sel',TW.prefs.tags.indexOf(b.getAttribute('data-v'))>-1);
+  });
+}
+function twSetPace(v){TW.prefs.pace=v;
+  document.querySelectorAll('#twPace button').forEach(function(b){b.classList.toggle('sel',b.getAttribute('data-v')===v);});}
+function twSetMove(v){TW.prefs.move=v;
+  document.querySelectorAll('#twMove button').forEach(function(b){b.classList.toggle('sel',b.getAttribute('data-v')===v);});}
+
+/* ---------- topside pick allocation ---------- */
+function twPickPool(guide){
+  if(!guide||!guide.todo) return {half:[],full:[]};
+  var want=TW.prefs.tags;
+  var scored=guide.todo.map(function(t,idx){
+    var s=0;(t.tags||[]).forEach(function(x){if(want.indexOf(x)>-1)s+=2;});
+    return {t:t,s:s,idx:idx};
+  });
+  scored.sort(function(a,b){return b.s-a.s||a.idx-b.idx;});
+  return {
+    half:scored.filter(function(x){return x.t.len!=='full';}).map(function(x){return x.t;}),
+    full:scored.filter(function(x){return x.t.len==='full';}).map(function(x){return x.t;})
+  };
+}
+function twTodoHtml(t,from,to){
+  return '<b>'+twEsc(t.title)+'</b><p>'+twEsc(t.note||'')+
+    (t.q?' <a href="'+twActUrl(t.q,from,to)+'" target="_blank" rel="noopener sponsored">Check availability &rarr;</a>':'')+'</p>';
+}
+
+/* ---------- the plan ---------- */
+function twBuildPlan(){
+  var box=document.getElementById('twPlan');
+  if(!TW.legs.length){box.innerHTML='<div class="empty">Add at least one destination in step 2.</div>';return;}
+  TW.adults=Number(val('twAdults'))||1; TW.start=val('twStart');
+  var dates=twLegDates(), o=TW.origin, n=TW.legs.length;
+  var totalN=TW.legs.reduce(function(s,l){return s+l.nights;},0);
+
+  /* summary header */
+  var routeBits=[o?o.iata:'Home'];
+  TW.legs.forEach(function(l,i){var gw=twGateway(l.name);routeBits.push((gw?gw.iata:l.name)+' ('+l.nights+'n)');});
+  routeBits.push(o?o.iata:'home');
+  var h='<div class="tw-summary"><div class="tw-route">'+routeBits.join(' &rarr; ')+'</div>'+
+    '<h3>'+totalN+' nights · '+twNice(dates[0].arr)+' &rarr; '+twNice(dates[n-1].dep)+'</h3>'+
+    '<p class="meta" style="margin:4px 0 10px">'+TW.adults+' traveller'+(TW.adults>1?'s':'')+
+      (TW.prefs.tags.length?' · into '+TW.prefs.tags.join(', '):'')+
+      ' · '+({light:'easy dive pace',balanced:'balanced dive pace',max:'diving every possible day'})[TW.prefs.pace]+'</p>';
+  if(o){
+    var gw0=twGateway(TW.legs[0].name), gwL=twGateway(TW.legs[n-1].name);
+    if(gw0&&gwL){
+      h+='<div class="pack-ctas">';
+      if(n===1){h+='<a class="pack-cta" href="'+twFlightUrl(o.iata,gw0.iata,dates[0].arr,dates[0].dep)+
+        '" target="_blank" rel="noopener sponsored">Find return flights '+o.iata+' &harr; '+gw0.iata+' &rarr;</a>';}
+      else{h+='<a class="pack-cta" href="'+twFlightUrl(o.iata,gw0.iata,dates[0].arr)+
+        '" target="_blank" rel="noopener sponsored">Outbound '+o.iata+' &rarr; '+gw0.iata+'</a>'+
+        '<a class="pack-cta ghost" href="'+twFlightUrl(gwL.iata,o.iata,dates[n-1].dep)+
+        '" target="_blank" rel="noopener sponsored">Return '+gwL.iata+' &rarr; '+o.iata+'</a>';}
+      h+='</div>';
+    }
+  }else{
+    h+='<p class="tw-empty-note">Set your home airport in step 1 and the flight searches come pre-filled with your route and dates.</p>';
+  }
+  h+='</div>';
+
+  /* AI concierge slot (renders only when an endpoint is configured) */
+  if(TRIP_AI.endpoint) h+='<div class="tw-ai" id="twAI"><div class="tw-ai-kicker">Concierge notes</div><p class="meta">Writing your personal notes…</p></div>';
+
+  /* legs */
+  TW.legs.forEach(function(l,i){h+=twLegHtml(l,i,dates,n);});
+
+  h+='<p class="disclosure" style="max-width:none"><b>Affiliate disclosure:</b> booking links open partner sites with your route and dates pre-filled; '+
+     'DiveSZN may earn a commission at no extra cost to you. Times and prices shown are indicative — the partner shows the live figure. '+
+     'Dive-day suggestions respect a no-dive buffer before every flight; always follow your own computer and training.</p>';
+  box.innerHTML=h;
+  if(TRIP_AI.endpoint) twAskAI(dates);
+}
+
+function twLegHtml(l,i,dates,n){
+  var d=DivingCalendar.getDestination(DESTS,l.name)||{name:l.name};
+  var g=twGuide(l.name), gw=twGateway(l.name);
+  var arr=dates[i].arr, dep=dates[i].dep, m=twMon(arr);
+  var mm=d.monthly&&d.monthly[m]||{}, temp=d.monthly_temp_c&&d.monthly_temp_c[m];
+  var nextGw=i<n-1?twGateway(TW.legs[i+1].name):null;
+  var flyOut=!(nextGw&&gw&&nextGw.iata===gw.iata);      // same gateway airport → boat/road hop, no no-fly day needed
+  var fullDays=l.nights-1;
+  var noFly=flyOut&&fullDays>0;
+  var eligible=Math.max(0,fullDays-(noFly?1:0));
+  var diveDays={light:Math.ceil(eligible/3),balanced:Math.ceil(eligible*0.6),max:eligible}[TW.prefs.pace];
+  if(mm.rating==='Closed') diveDays=0;
+  var diveIdx={};
+  for(var k=0;k<diveDays;k++) diveIdx[Math.floor(k*eligible/diveDays)]=true;
+  var pool=twPickPool(g), sites=(d.dive_sites||[]).slice(0,12), sp=0;
+
+  var hd='<div class="tw-leg"><div class="tw-leg-cover">'+
+    (d.image?'<img src="'+d.image+'" alt="'+twEsc(d.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+
+    '<div class="tw-leg-title">'+(i+1)+'. '+twEsc(l.name)+'</div>'+
+    '<div class="tw-leg-dates">'+twNice(arr)+' &rarr; '+twNice(dep)+'</div></div><div class="tw-leg-body">';
+
+  hd+='<div class="tw-leg-chips">'+
+    (mm.rating?badge(mm.rating):'')+
+    (temp!=null?'<span class="chip">'+ico('temp',12)+tempStr(temp)+' water</span>':'')+
+    (mm.visibility_m!=null?'<span class="chip">'+ico('eye',12)+mm.visibility_m+'m viz</span>':'')+
+    (sites.length?'<span class="chip">'+ico('fish',12)+d.dive_sites.length+' dive sites</span>':'')+
+    (gw?'<span class="chip">'+ico('map',12)+gw.iata+' · '+twEsc(gw.label)+'</span>':'')+'</div>';
+
+  if(mm.rating==='Low'||mm.rating==='Closed'){
+    var best=(d.best_months||[]).slice(0,3).join(', ');
+    hd+='<p class="tw-empty-note">'+twEsc(m)+' is '+(mm.rating==='Closed'?'closed season':'low season')+' here'+
+      (best?' — the water is at its best in '+twEsc(best):'')+'. Shift the dates in step 1, or keep it as a topside-first stop.</p>';
+  }
+  if(g&&g.topside_summary) hd+='<p style="color:var(--ink-soft);font-size:.9rem;line-height:1.6;margin:2px 0 0">'+twEsc(g.topside_summary)+'</p>';
+
+  /* booking panel */
+  var prevGw=i>0?twGateway(TW.legs[i-1].name):null;
+  var from=i===0?(TW.origin?TW.origin.iata:null):(prevGw?prevGw.iata:null);
+  hd+='<div class="tw-book">';
+  if(i>0&&from&&gw&&from!==gw.iata)
+    hd+='<a class="pack-cta" href="'+twFlightUrl(from,gw.iata,arr)+'" target="_blank" rel="noopener sponsored">Flight '+from+' &rarr; '+gw.iata+'</a>';
+  hd+='<a class="pack-cta" href="'+twStayUrl(l.name,arr,dep)+'" target="_blank" rel="noopener sponsored">Stays · '+l.nights+' night'+(l.nights>1?'s':'')+'</a>';
+  var carRec=g&&g.transfer&&g.transfer.car&&g.transfer.car.recommended;
+  if(TW.prefs.move==='car'&&carRec!==false)
+    hd+='<a class="pack-cta ghost" href="'+twCarUrl()+'" target="_blank" rel="noopener sponsored">Compare rental cars</a>';
+  hd+='<a class="pack-cta ghost" href="'+twTransferUrl()+'" target="_blank" rel="noopener sponsored">Airport transfer</a>';
+  hd+='<a class="pack-cta ghost" href="'+twActUrl(l.name+' diving',arr,dep)+'" target="_blank" rel="noopener sponsored">Dive trips &amp; tours</a>';
+  if(hasLiveaboard(d))
+    hd+='<a class="pack-cta ghost" href="'+liveaboardLink(d)+'" target="_blank" rel="noopener sponsored">Liveaboards</a>';
+  hd+='</div>';
+  if(TW.prefs.move==='car'&&g&&g.transfer&&g.transfer.car&&g.transfer.car.note)
+    hd+='<p class="meta" style="margin:2px 0 0">'+(carRec?'Rental car works here: ':'Think twice about a car here: ')+twEsc(g.transfer.car.note)+'</p>';
+
+  /* day by day */
+  hd+='<div class="tw-days">';
+  hd+=twDayHtml('Day 1 · '+twNice(arr),twArrivalHtml(l,g,gw,arr,dep),false);
+  var dayNo=2, ei=0;
+  for(var f=0;f<fullDays;f++){
+    var date=twAddDays(arr,f+1), label='Day '+dayNo+' · '+twNice(date);
+    var isNoFly=noFly&&f===fullDays-1;
+    if(!isNoFly&&diveIdx[ei]){
+      var pm=pool.half.shift(), where;
+      if(sites.length){
+        var s1=sites[sp++%sites.length], s2=sites[sp++%sites.length];
+        where='Ask your operator about '+twEsc(s1.name)+(s2&&s2!==s1?' and '+twEsc(s2.name):'')+'.';
+      }else{
+        where='Book with a local operator for your dates. <a href="'+twActUrl(l.name+' diving',date,date)+
+          '" target="_blank" rel="noopener sponsored">Find dive trips &rarr;</a>';
+      }
+      hd+=twDayHtml(label,'<b>'+(TW.prefs.pace==='max'?'Two to three boat dives':'Morning boat dives')+'</b>'+
+        '<p>'+where+'</p>'+(pm?twTodoHtml(pm,date,date).replace('<b>','<b>Afternoon: '):''),true);
+    }else{
+      var item=pool.full.shift()||pool.half.shift();
+      var extra=item&&item.len!=='full'?pool.half.shift():null;
+      var body=item?twTodoHtml(item,date,date)+(extra?twTodoHtml(extra,date,date):'')
+        :'<b>Free day in '+twEsc(l.name)+'</b><p>Browse local tours and day trips for your dates. '+
+         '<a href="'+twActUrl(l.name+' tours',date,date)+'" target="_blank" rel="noopener sponsored">See what\'s on &rarr;</a></p>';
+      if(isNoFly) body+='<span class="tw-nofly">NO-DIVE DAY — FLYING TOMORROW</span>';
+      hd+=twDayHtml(label,body,false);
+    }
+    if(!isNoFly)ei++;
+    dayNo++;
+  }
+  /* departure line */
+  var depTxt=i<n-1?('Travel day — on to '+twEsc(TW.legs[i+1].name)+
+      (flyOut?'':' by boat or road (no flight, so yesterday\'s dives were fine)')):
+    'Departure day — fly home'+(TW.origin?' to '+twEsc(TW.origin.city):'')+'.';
+  hd+=twDayHtml('Day '+dayNo+' · '+twNice(dep),'<b>'+depTxt+'</b>'+
+    (flyOut&&l.nights>1?'<p>Your last dive was the day before yesterday at the latest — the plan keeps a full no-dive day before this flight.</p>':''),false);
+  hd+='</div>';
+
+  /* events overlapping the stay */
+  if(g&&g.events){
+    var months={}; var cur=new Date(arr.getTime());
+    while(cur<=dep){months[cur.getMonth()+1]=true;cur=twAddDays(cur,7);}
+    months[dep.getMonth()+1]=true;
+    g.events.forEach(function(e){
+      if((e.months||[]).some(function(x){return months[x];}))
+        hd+='<div class="tw-event"><b>'+twEsc(e.name)+' <small style="font-family:var(--mono);font-weight:400">· '+twEsc(e.when||'')+'</small></b>'+
+          twEsc(e.note||'')+
+          (e.kind!=='nature'?' <a href="'+twActUrl(e.name+' '+l.name)+'" target="_blank" rel="noopener sponsored">Tickets &amp; tours &rarr;</a>':'')+
+          '</div>';
+    });
+  }
+  if(!g) hd+='<p class="tw-empty-note">The researched topside guide for '+twEsc(l.name)+' is on its way — season data, dive sites and the booking links above already work.</p>';
+  hd+='</div></div>';
+  return hd;
+}
+function twDayHtml(label,body,dive){
+  return '<div class="tw-day'+(dive?' tw-day-dive':'')+'"><span class="tw-day-label">'+label+'</span>'+
+    '<span class="tw-day-what">'+body+'</span></div>';
+}
+function twArrivalHtml(l,g,gw,arr,dep){
+  var h='<b>Arrive'+(gw?' into '+twEsc(gw.label)+' ('+gw.iata+')':'')+'</b>';
+  if(g&&g.getting_in) h+='<p>'+twEsc(g.getting_in)+'</p>';
+  if(g&&g.transfer&&g.transfer.options&&g.transfer.options.length){
+    var opts=g.transfer.options.slice(0,2).map(function(o){
+      return (TW_MODE_LABEL[o.mode]||o.mode)+' — '+o.note;
+    }).join(' · ');
+    h+='<p>'+twEsc(opts)+' <a href="'+twTransferUrl()+'" target="_blank" rel="noopener sponsored">Book a transfer &rarr;</a></p>';
+  }else{
+    h+='<p>Transfers are easiest arranged through your accommodation. <a href="'+twTransferUrl()+'" target="_blank" rel="noopener sponsored">Book a transfer &rarr;</a></p>';
+  }
+  if(g&&g.stay&&g.stay.length){
+    h+='<p><b style="display:inline">Where to base yourself:</b> '+g.stay.slice(0,3).map(function(s){
+      return '<b style="display:inline;font-weight:600">'+twEsc(s.area)+'</b> — '+twEsc(s.why);
+    }).join(' &nbsp;·&nbsp; ')+'</p>';
+  }
+  return h;
+}
+
+/* ---------- optional AI concierge call ---------- */
+function twAskAI(dates){
+  var payload={origin:TW.origin,adults:TW.adults,start:TW.start,prefs:TW.prefs,
+    legs:TW.legs.map(function(l,i){
+      var d=DivingCalendar.getDestination(DESTS,l.name),m=twMon(dates[i].arr);
+      return {name:l.name,nights:l.nights,arrive:twIso(dates[i].arr),depart:twIso(dates[i].dep),
+        rating:d&&d.monthly&&d.monthly[m]?d.monthly[m].rating:null};
+    })};
+  var ctrl=('AbortController' in window)?new AbortController():null;
+  if(ctrl)setTimeout(function(){ctrl.abort();},25000);
+  fetch(TRIP_AI.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(payload),signal:ctrl?ctrl.signal:undefined})
+  .then(function(r){return r.ok?r.json():null;})
+  .then(function(j){
+    var el=document.getElementById('twAI'); if(!el)return;
+    if(j&&j.text){el.innerHTML='<div class="tw-ai-kicker">Concierge notes</div>'+
+      j.text.split(/\n\n+/).map(function(p){return '<p style="margin:6px 0;font-size:.9rem;line-height:1.6">'+twEsc(p)+'</p>';}).join('');}
+    else el.remove();
+  }).catch(function(){var el=document.getElementById('twAI');if(el)el.remove();});
+}
+
 function loadData(){
-  if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null, window.__GEAR_DATA__||null, window.__MARINE_DATA__||null]);
+  if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null, window.__GEAR_DATA__||null, window.__MARINE_DATA__||null, window.__TRIP_DATA__||null]);
   return Promise.all([
     fetch('diving-destinations.json').then(function(r){return r.json();}),
     fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
     fetch('gear-guide.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
-    fetch('marine-life.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+    fetch('marine-life.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
+    fetch('trip-planner.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
   ]);
 }
 loadData().then(function(res){
   var j=res[0]; LAND=res[1]; GEAR_GUIDE=res[2]; MARINE=(res[3]&&res[3].experiences)||[];
+  TRIP=res[4]||null;
   DATA=j; DESTS=j.destinations;
   document.getElementById('foot').innerHTML=
     '<div class="foot-mark">Dive<b>SZN</b></div>'+
@@ -2422,7 +2998,7 @@ loadData().then(function(res){
     '<div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear or book a trip through our links, '+
     'at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price; trip prices are sample data. '+
     'We link only to authorised retailers and trusted operators, and commissions never influence our rankings.</div>';
-  initControls();
+  initControls(); twInit();
   applyIcons(); setHeroPhoto();
   renderHome(); renderGear(); renderDestinations(); renderMarine(); buildBrowseDir();
   // planner result views render on the diver's first selection (progressive disclosure)

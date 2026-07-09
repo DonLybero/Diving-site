@@ -71,6 +71,8 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
 | `diving-calendar.js` | Scoring/query engine: `rankPeriod`, `rankWindow`, `getDestination`, `searchDestinations`, `destinationSeasonSummary`. Browser + Node. |
 | `diving-destinations.json` | **Canonical data** — 50 destinations × 12 monthly entries + metadata (coords, currents, wetsuit, access, dive_sites, image). |
 | `gear-guide.json` | Gear guide data — 6 categories × 10 items: review, specs dict, image (local `assets/gear/`), 3 cheapest buy options, article intro/tips. |
+| `trip-planner.json` | **Trip Planner data** — 169 origin airports (autocomplete), a gateway airport for all 83 destinations, and researched topside guides (airports, transfers, stay areas, tagged things-to-do, recurring events) for 18 destinations. Built once via web research (2026-07); extend by appending destinations in the same schema. |
+| `serverless/trip-concierge/` | Optional Cloudflare Worker: turns a finished plan into AI "Concierge notes" via the Claude API. Site works fully without it; wire via `TRIP_AI.endpoint` in index.html (see its README). |
 | `diving-site.html` | Single-file offline build (all JSON/JS inlined). **Regenerate after every index.html or data change** (`scripts/build_standalone.py`). |
 | `destinations/*.html` | 50 static SEO pages + sitemap.xml (`scripts/build_pages.py`). |
 | `assets/gear/` | 60 self-hosted product images (no hotlinking). |
@@ -92,6 +94,16 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
 - `openProfile()` — full destination profile (intro paragraph via
   `destIntro()`, best months, conditions grid, dive-sites table,
   month-by-month table).
+- **Trip Planner tab** (`tw*` functions + `TRIP` data): a 4-step travel-desk
+  wizard (route → destinations/nights → style → plan). The itinerary engine
+  assigns dive days by pace, enforces a **no-dive day before every flight**
+  (skipped when consecutive legs share a gateway airport — boat/road hop),
+  matches researched topside picks to the traveller's interest tags, and
+  surfaces recurring events that overlap the stay. `TRIP_AFFILIATE` wraps
+  booking links via tp.media (Travelpayouts: Aviasales flights with
+  origin/dates/pax prefilled, Hotellook stays, Kiwitaxi transfers,
+  DiscoverCars, GetYourGuide activities) — empty IDs leave links raw.
+  `TRIP_AI.endpoint` (empty = off) posts the survey to the concierge worker.
 
 ## 5. Data pipeline
 
@@ -219,6 +231,12 @@ and supplies the site token.
   resolve (reuse the fetch-gear-images workflow pattern); flag dead links.
 - Replace sample Liveaboard Safaris with researched listings (match the gear
   guide's data standard) or clearly label as illustrative.
+- Trip Planner: research topside guides for the next batch of destinations
+  (18 of 83 done — same schema in `trip-planner.json`; the wizard already
+  degrades gracefully for the rest). When affiliate IDs arrive, fill
+  `TRIP_AFFILIATE` (Travelpayouts marker/trs + per-programme p/campaign_id)
+  alongside the gear `AFFILIATE` config. Optional: deploy
+  `serverless/trip-concierge/` and set `TRIP_AI.endpoint`.
 - Prune leftovers: `map-A-osm-tiles.html`, `map-B-vector-offline.html`,
   `diving-calendar-24-periods.md`.
 - Quarterly gear-price refresh ritual (prices are indicative, drift over time).
