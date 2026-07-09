@@ -147,6 +147,8 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .csw i{width:26px;height:26px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
 .csw.on{border:2px solid var(--ink)}
 .csw:hover{border-color:var(--ink)}
+.csw-name{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);flex-basis:100%;margin-top:2px;min-height:1em}
 .grel{list-style:none;margin:8px 0 0;padding:0}
 .grel li{padding:8px 0;border-top:1px solid var(--line)}
 .grel a{color:var(--ink);text-decoration:none;font-weight:600}
@@ -597,7 +599,44 @@ COLOR_HEX = {"black": "#16181a", "white": "#f4f4f2", "blue": "#2563eb", "lime": 
              "pink": "#ec4899", "yellow": "#facc15", "red": "#dc2626", "orange": "#ea580c",
              "green": "#16a34a", "grey": "#9ca3af", "gray": "#9ca3af", "silver": "#c9ced3",
              "purple": "#7c3aed", "turquoise": "#14b8a6", "navy": "#1e3a5f",
-             "clear": "#e8edef", "aquamarine": "#7fd4c9", "lilac": "#b79bd6", "blk": "#16181a"}
+             "clear": "#e8edef", "aquamarine": "#7fd4c9", "lilac": "#b79bd6", "blk": "#16181a",
+             # multi-word / brand colour names (every token in gear-guide colours
+             # must resolve — a grey fallback dot reads as a bug)
+             "aqua": "#34c8dc", "aqua blue": "#34c8dc", "army green": "#4b5d3a",
+             "blue metal": "#3b6ea5", "bronze": "#8c6a4e", "brown": "#7b5a3e",
+             "camo black": "#2f3430", "carbon": "#3b3f44", "charcoal": "#36393d",
+             "dark grey": "#55595e", "dark olive": "#4f5442", "energy green": "#35d24a",
+             "energy orange": "#ff7a1a", "fishtail blue": "#1f6fb8", "flash yellow": "#f5e21c",
+             "fluo green": "#7dff2a", "fluo pink": "#ff4fa3", "fluo yellow": "#f5e21c",
+             "glacier": "#dbe7ea", "graphite": "#4c5157", "green camo": "#56604a",
+             "green water": "#6fbfb2", "heather blue": "#6d87a8", "heather gray": "#8f949b",
+             "grey heather": "#8f949b", "hot pink": "#ff2d8d", "lava": "#c62f1f",
+             "lemon yellow": "#f2e63c", "light grey": "#c3c8cd", "metallic dark red": "#8e1f24",
+             "multicam": "#6a6f5a", "ocean": "#1b6f8f", "ocean green": "#2e8f7a",
+             "olive": "#556b2f", "olive green": "#556b2f", "petrol": "#0f5e6b",
+             "powder gray": "#b9c2c9", "raspberry": "#b3245e", "rose pink": "#e56b9d",
+             "royal blue": "#1d4ed8", "sand": "#d9c9a3", "sea": "#2e8f8a",
+             "slate": "#64748b", "smoke": "#6e747b", "steel black": "#2a2e33",
+             "ti black": "#23272b", "ti silver": "#c9ced3", "titanium": "#c2c7cc",
+             "transparent": "#eef2f4", "tropic": "#19b5a5", "ultra blue": "#2143d1",
+             "warm grey": "#a29a90", "wildberry": "#a2306e"}
+
+
+def color_hex(token):
+    """Resolve a colour token to a hex: exact match first, then the longest
+    known colour name contained in it ('bronze pvd titanium …' -> bronze)."""
+    t = re.sub(r"\(.*?\)", " ", token.lower())
+    t = re.sub(r"\s+", " ", t).strip()
+    if t in COLOR_HEX:
+        return COLOR_HEX[t]
+    hits = []
+    for k in COLOR_HEX:
+        m = re.search(r"(?<![a-z])" + re.escape(k) + r"(?![a-z])", t)
+        if m:
+            hits.append((m.start(), -len(k), k))
+    if hits:
+        return COLOR_HEX[min(hits)[2]]
+    return None
 
 
 def product_ld(item):
@@ -647,9 +686,9 @@ def gear_item_page(cat, item, prefix="../"):
         f'rel="noopener sponsored">{esc(o["store"])} · {fmtp(o["price_usd"])}</a>'
         for i, o in enumerate(offers[:3]))
     def swatch_bg(cname):
-        toks = [t.strip().lower() for t in re.split(r"[/+]", cname) if t.strip()]
-        toks = [t for t in toks if "lens" not in t and "mirror" not in t] or [t.strip().lower() for t in re.split(r"[/+]", cname)]
-        hx = [COLOR_HEX[t] for t in toks[:2] if t in COLOR_HEX]
+        toks = [t.strip() for t in re.split(r"[/+]", cname) if t.strip()]
+        keep = [t for t in toks if "lens" not in t.lower() and "mirror" not in t.lower()] or toks
+        hx = [h for h in (color_hex(t) for t in keep[:2]) if h]
         if not hx:
             hx = ["#8899a0"]
         if len(hx) == 1:
@@ -657,21 +696,30 @@ def gear_item_page(cat, item, prefix="../"):
         return f"background:linear-gradient(135deg,{hx[0]} 50%,{hx[1]} 50%)"
     swatches, cjs = "", ""
     if colors:
+        # every dot is clickable: it highlights, names the colour, and swaps
+        # the photo when a variant shot exists (else the standard photo shows)
         dots = ""
         for i, c in enumerate(colors):
-            act = " on" if (cimgs and i == 0) else ""
-            click = f' onclick="pickC(this,\'{esc(c)}\')" role="button" tabindex="0"' if cimgs.get(c) else ""
-            dots += (f'<span class="csw{act}" title="{esc(c)}"{click}>'
+            act = " on" if (first and c == first) else ""
+            dots += (f'<span class="csw{act}" title="{esc(c)}" role="button" tabindex="0"'
+                     f' onclick="pickC(this,\'{esc(c).replace(chr(39), "&#39;")}\')">'
                      f'<i style="{swatch_bg(c)}"></i></span>')
-        swatches = f'<div class="gitem-colors">{dots}</div>'
-        if cimgs:
-            cmap = {c: prefix + p for c, p in cimgs.items()}
-            cjs = ('<script>var GIMG=' + json.dumps(cmap, ensure_ascii=False) + ';'
-                   'function pickC(el,c){var i=document.getElementById("gimg");'
-                   'if(GIMG[c]){i.src=GIMG[c];}'
-                   'var s=document.querySelectorAll(".csw");'
-                   'for(var k=0;k<s.length;k++)s[k].className="csw";'
-                   'el.className="csw on";}</script>')
+        label0 = esc(first) if first else ""
+        swatches = (f'<div class="gitem-colors">{dots}'
+                    f'<span class="csw-name" id="cswName">{label0}</span></div>')
+        cmap = {c: prefix + p for c, p in cimgs.items()}
+        cjs = ('<script>var GIMG=' + json.dumps(cmap, ensure_ascii=False) + ','
+               'DEFIMG=' + json.dumps(prefix + hero_path, ensure_ascii=False) + ';'
+               'function pickC(el,c){var i=document.getElementById("gimg");'
+               'i.src=GIMG[c]||DEFIMG;'
+               'var n=document.getElementById("cswName");'
+               'if(n)n.textContent=c+(GIMG[c]?"":" \\u00b7 photo shows the standard colour");'
+               'var s=document.querySelectorAll(".csw");'
+               'for(var k=0;k<s.length;k++)s[k].className="csw";'
+               'el.className="csw on";}'
+               'document.addEventListener("keydown",function(e){'
+               'if(e.key==="Enter"&&e.target.classList&&e.target.classList.contains("csw"))e.target.click();});'
+               '</script>')
     banner = (f'<div class="gitem-banner">'
               f'<div class="gitem-id"><b>{esc(item["name"])}</b>'
               f'<span class="gitem-price">{f"from <b>{fmtp(lo)}</b>" if lo is not None else ""}</span>'
