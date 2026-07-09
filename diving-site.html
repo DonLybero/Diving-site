@@ -687,7 +687,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <style>
   :root{
     --bg:#f4f9f9; --bg2:#e8f1f2; --panel:#ffffff; --panel2:#f2f8f8;
-    --ink:#0e2f37; --ink-soft:#33565e; --muted:#61838a;
+    --ink:#0e2f37; --ink-soft:#33565e; --muted:#4a6a71;
     --peak:#22c197; --good:#36b6e8; --shoulder:#f0c046; --low:#fb8a4a; --closed:#5b7078;
     --accent:#0e9c92; --accent-deep:#0b7d75; --aqua2:#179e98; --cta:#0b7d75; --cta-deep:#06333c;
     --line:rgba(13,80,90,.14); --line-strong:rgba(13,80,90,.28);
@@ -938,7 +938,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   footer{color:var(--muted);font-size:.78rem;text-align:center;margin-top:72px;line-height:1.8;
        border-top:1px solid var(--line);padding-top:40px}
-  .disclosure{max-width:780px;margin:14px auto 0;color:#6b8d93;font-size:.72rem}
+  .disclosure{max-width:780px;margin:14px auto 0;color:var(--muted);font-size:.78rem}
   /* poster footer: the wordmark gets the closing statement */
   .foot-mark{font-family:var(--serif);font-weight:600;font-size:clamp(3.2rem,11vw,7rem);line-height:1;
        letter-spacing:-.03em;color:var(--ink);margin:6px 0 4px;user-select:none}
@@ -955,8 +955,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
        display:inline-flex;align-items:center;gap:6px;transition:transform .15s,box-shadow .15s;
        box-shadow:0 8px 20px -8px rgba(6,51,60,.55)}
   .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(11,125,117,.6);color:#fff}
-  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--line-strong);box-shadow:none}
-  .btn.ghost:hover{background:rgba(47,224,214,.1);border-color:var(--accent);color:var(--accent);box-shadow:none}
+  .btn.ghost{background:transparent;color:var(--accent-deep);border:1px solid var(--line-strong);box-shadow:none}
+  .btn.ghost:hover{background:rgba(47,224,214,.1);border-color:var(--accent);color:var(--accent-deep);box-shadow:none}
 
   /* ---------- section headings ---------- */
   .sec-head{font-family:var(--serif);font-size:2rem;margin:8px 0 6px;color:var(--ink);display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
@@ -1002,7 +1002,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .hband .hb-in{max-width:1180px;margin:0 auto}
   .hband-last{margin-bottom:-70px}   /* swallows .wrap's bottom padding so the band meets the footer */
   .home-kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
-       color:#0e8c82;text-align:center;margin:0 0 18px}
+       color:var(--cta);text-align:center;margin:0 0 18px}
   /* rotating strapline between hairlines, cross-fading through phrases */
   .rotor{text-align:center;margin:0 auto 60px;max-width:760px}
   .rotor .r-line{width:52px;height:1px;background:var(--line-strong);margin:0 auto;border:none}
@@ -1019,11 +1019,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .f-term{display:flex;flex-direction:column;align-items:center;gap:6px}
   .f-name{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
        color:var(--ink-soft);white-space:nowrap}
-  .f-val{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:var(--muted);
+  .f-val{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--muted);
        font-variant-numeric:tabular-nums}
   .f-op{font-family:var(--serif);font-size:1.05rem;line-height:1.2;color:var(--muted)}
   .f-sum .f-name{color:var(--ink);font-weight:700;border-bottom:3px double var(--line-strong);padding-bottom:5px}
-  @media(max-width:480px){.f-name{letter-spacing:.13em;font-size:.66rem}.formula{gap:12px}}
+  @media(max-width:480px){.f-name{letter-spacing:.13em;font-size:.7rem}.formula{gap:12px}}
   /* destination carousel: editorial left rail, portrait cards bleeding off the right edge */
   .dcar-wrap{display:grid;grid-template-columns:minmax(230px,300px) minmax(0,1fr);gap:44px;align-items:start}
   /* the box wraps a no-wrap flex row of cards; without min-width:0 its
@@ -1063,8 +1063,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .dcar-nav button:first-child:hover{transform:translateX(-2px)}
   .dcar-nav button:last-child:hover{transform:translateX(2px)}
   .dcar-dots{display:flex;gap:9px}
-  .dcar-dots span{width:24px;height:2px;background:var(--ink);opacity:.18;transition:opacity .3s}
-  .dcar-dots span.on{opacity:.85}
+  .dcar-dots span{width:24px;height:3px;border-radius:2px;background:var(--ink);opacity:.3;transition:opacity .3s,background .3s}
+  .dcar-dots span.on{background:var(--accent-deep);opacity:1}
   /* mobile: the full-width dash row squeezed the arrows into the screen edges */
   @media(max-width:640px){
     .dcar-nav{gap:10px;padding:0 16px}
@@ -1083,7 +1083,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   #view-home .home-grid{gap:22px;text-align:left}
   #view-home .feature .cover{height:240px}
   #view-home .trust{margin:0}
-  #view-home .trust div{background:rgba(255,255,255,.72);text-align:left}
+  #view-home .trust div{background:#ffffff;text-align:left}
+  #view-home .trust .gear-ico{width:44px;height:44px;border-radius:12px;position:static;margin:0 0 12px}
+  #view-home .trust .gear-ico svg{width:22px;height:22px}
+  #view-home .trust .meta{font-size:.84rem;line-height:1.6;margin:6px 0 0}
   .hband details.more{text-align:left}
   .rv-x{opacity:0;transform:translateX(72px);transition:opacity .65s ease,transform .65s ease}
   .rv-x.in{opacity:1;transform:none}
@@ -1221,7 +1224,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .feature .big{font-size:2rem;line-height:1}
   .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
   .trust div{background:var(--glass);border:1px solid var(--line);border-radius:var(--r);padding:18px}
-  .trust b{color:var(--accent);font-family:var(--serif);font-size:1.05rem}
+  .trust b{color:var(--ink);font-family:var(--serif);font-size:1.05rem}
   .pips{display:inline-flex;gap:3px;vertical-align:middle}
   .pips i{width:8px;height:8px;border-radius:50%;background:#c6dde1;display:inline-block}
   .pips i.on{background:var(--accent)}
@@ -1471,6 +1474,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <header class="hero" id="hero">
   <h1>Know your trip lands on great diving — before you book.</h1>
   <p class="tagline">Every destination is scored for all twelve months on the things that make a dive: season, marine life, visibility and currents. Tell DiveSZN when you can travel, and see exactly where the water is at its best.</p>
+  <div class="hero-cta">
+    <a class="btn" href="#" onclick="showTab('planner');return false;">Plan your dive trip</a>
+    <a class="btn ghost" href="how-we-score.html">How the score works</a>
+  </div>
 </header>
 
 <div class="wrap">
@@ -2716,9 +2723,9 @@ function renderHome(){
     '<section class="hband hband-last rv"><div class="hb-in">'+
     '<div class="home-kicker">Why divers trust the scores</div>'+
     '<div class="trust">'+
-      '<div><b>Independent by design</b><br><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
-      '<div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
-      '<div><b>Safety first</b><br><span class="meta">Every dive-site page lists difficulty, currents and the nearest recompression chamber.</span></div>'+
+      '<div><div class="gear-ico"><svg viewBox="0 0 24 24">'+ICONS.compass+'</svg></div><b>Independent by design</b><br><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
+      '<div><div class="gear-ico"><svg viewBox="0 0 24 24">'+ICONS.store+'</svg></div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
+      '<div><div class="gear-ico"><svg viewBox="0 0 24 24">'+ICONS.medic+'</svg></div><b>Safety first</b><br><span class="meta">Every dive-site page lists difficulty, currents and the nearest recompression chamber.</span></div>'+
     '</div>'+
     '</div></section>';
   fillDestCovers();
