@@ -12,11 +12,11 @@ Indonesia's five best dive regions line up west to east along one flight corrido
 - **Komodo, 4 nights.** Boat days start at 05:30 and the tidal currents reward multiple days of timing — plus one day for the dragons.
 - **Raja Ampat, 6 nights.** Getting there costs roughly a day each way (a ~4 h flight to Sorong, then the Waisai ferry); six nights amortises the effort.
 
-**The 12–14 day version:** Bali 4 → Nusa Penida 3 → Komodo 4, flying home from Labuan Bajo. Cut the Gilis first — their relaxed reefs overlap most with Bali — and save Raja Ampat for its own trip: with a travel day each way, anything under five nights there is mostly transit.
+**The 12–14 day version:** Bali 4 → Nusa Penida 3 → Komodo 4, flying home from Labuan Bajo. Cut the Gilis first — their relaxed reefs overlap most with Bali — and save Raja Ampat for its own trip: under five nights there is mostly transit.
 
 ## When to go
 
-The route has one real tension. Komodo's dry season runs April–October (Peak throughout, May the standout), while Raja Ampat runs the mirror image: October–April, peaking December–February, with June–August rated Low — rough seas, most liveaboards gone.
+The route has one real tension. Komodo's dry season runs April–October (Peak throughout, May the standout), while Raja Ampat is the mirror image: October–April, peaking December–February, with June–August rated Low — rough seas, most liveaboards gone.
 
 The overlap is October, and it's excellent everywhere: Bali at Peak with its clearest water of the year (30 m visibility); Penida rated Good — mola-mola tapering, mantas steady; the Gilis Good at 24 m; Komodo still Peak with calm seas; Raja Ampat Good and climbing fast — 25–40 m visibility, mantas building at the cleaning stations.
 
@@ -26,7 +26,7 @@ The overlap is October, and it's excellent everywhere: Bali at Peak with its cle
 
 Bali earns its place with the easiest great diving of the trip. The USAT Liberty at Tulamben is a 120 m WWII cargo ship 30 m off the beach in 5–30 m of water, with bumphead parrotfish grazing it at dawn. Seraya Secrets is a black-sand slope where photographers hunt harlequin shrimp and ghost pipefish; Blue Lagoon at Padang Bai turns up rhinopias and blue-ringed octopus; Menjangan Island adds gorgonian-draped walls in the island's clearest water. The northeast coast is sheltered and gentle — a forgiving warm-up at 28°C before the Throughflow legs ahead.
 
-Base in Amed or Tulamben for the shore-entry coast, then finish in Sanur, a calm beachfront grid with the Penida fast-boat harbour at its doorstep. Spend the surface days well: the Mount Batur sunrise trek puts you on a 1,717 m crater rim by dawn and back by mid-morning; the kecak dance at Uluwatu sets a 60-man chanting choir on a clifftop 70 m above the surf at sunset; the Sidemen valley's rice-field lanes sit on the drive to Amed; a cooking class is the best rainy-morning insurance.
+Base in Amed or Tulamben for the shore-entry coast, then finish in Sanur, a calm beachfront grid with the Penida fast-boat harbour at its doorstep. Spend the surface days well: the Mount Batur sunrise trek puts you on a 1,717 m crater rim by dawn; the kecak dance at Uluwatu sets a 60-man chanting choir on a clifftop 70 m above the surf at sunset; the Sidemen valley's rice-field lanes sit on the drive to Amed; a cooking class covers rainy mornings.
 
 **Getting in:** fly into Denpasar (DPS), nonstop from most major Asian and Australian hubs plus Doha and Istanbul. Onward is a 30–45 min transfer to Sanur harbour.
 
@@ -42,13 +42,13 @@ Stay on the Ped–Sampalan north-coast strip, where guesthouses, warungs and div
 
 After two current-conscious stops, the Gilis are the exhale: three flat, car-free coral cays with mild currents on most sites and turtles at practically every one. Turtle Heaven, a pinnacle north of Gili Meno, is stacked with green and hawksbill turtles; Meno Wall is the area's top night dive; Shark Point brings reef sharks and rays onto a sloping reef; Han's Reef off Gili Air is the critter site — frogfish, seahorses, ribbon eels.
 
-Gili Trawangan has the widest spread of restaurants and dive shops; Gili Air is the quieter middle ground. Between dives, cycle Trawangan's flat 7 km coastal loop, eat grilled reef fish at the harbour night market (go before 20:00 — the best fish sells out), or hop the public boats to Meno's salt lake; a spare day fits the Tiu Kelep waterfall walk on Lombok.
+Gili Trawangan has the widest spread of restaurants and dive shops; Gili Air is the quieter middle ground. Between dives, cycle Trawangan's flat 7 km coastal loop, eat grilled reef fish at the harbour night market (go before 20:00), or hop the public boats to Meno's salt lake; a spare day fits the Tiu Kelep waterfall walk on Lombok.
 
 **Getting there:** direct fast boats run from Padang Bai or Serangan on Bali to Gili Trawangan (1.5–2.5 h, ~USD 22–35). For Komodo, boat back to Bali and fly from Denpasar.
 
 ## Komodo National Park
 
-Komodo is the big-animal, big-current centrepiece. Tidal currents peak at full and new moon, and the best sites are built on them: Batu Bolong, a current-swept pinnacle dense with fish and pristine coral; Castle Rock and Crystal Rock, seamounts where sharks and trevally hunt in the flow; and Manta Point (Karang Makassar), a long shallow drift past manta cleaning stations at 6–15 m. Calmer days go to Siaba Besar — a sheltered bay dubbed Turtle City — or the soft-coral drift at Tatawa Besar.
+Komodo is the big-animal, big-current centrepiece. Tidal currents peak at full and new moon, and the best sites are built on them: Batu Bolong, a current-swept pinnacle dense with fish; Castle Rock and Crystal Rock, seamounts where sharks and trevally hunt in the flow; and Manta Point (Karang Makassar), a long shallow drift past manta cleaning stations at 6–15 m. Calmer days go to Siaba Besar, a sheltered bay dubbed Turtle City.
 
 Base in Labuan Bajo on the harbourfront, steps from the jetties for 05:30 departures, with the sunset restaurant row on the same street. Give one full boat day to the topside icons: the stair climb to Padar Island's three-bay ridge view, a ranger-guided dragon walk on Komodo or Rinca — the only place on earth to see wild Komodo dragons — and the pink sand of Pantai Merah.
 
@@ -74,7 +74,7 @@ Stay on Kri or Mansuar, the homestay belt minutes by boat from the busiest reefs
 - **No-fly days.** Three flight legs follow diving (to Labuan Bajo, to Sorong, and home). Build a full no-dive day before each — the itinerary absorbs them as topside days.
 - **Permits.** Raja Ampat requires a marine-park permit (IDR 700,000) plus a visitor entry ticket (IDR 300,000), payable in Waisai or online. Komodo diving happens inside a national park, so park fees apply on every boat day — confirm rates when booking.
 - **Cash.** Waisai has Raja Ampat's ATMs and permit offices; the homestay islands run on cash, so withdraw everything before the ferry. Penida's infrastructure is basic too.
-- **The flight thread.** DPS is the hub for the first three stops; DPS–LBJ is 1 h with 4–6 daily flights; LBJ connects to Sorong via Jakarta or Makassar; SOQ–Jakarta gets you home. Book the LBJ and SOQ legs first — they have the least capacity.
+- **The flight thread.** DPS serves the first three stops; DPS–LBJ is 1 h with 4–6 daily flights; LBJ connects to Sorong via Jakarta or Makassar; SOQ–Jakarta gets you home. Book the LBJ and SOQ legs first — they have the least capacity.
 
 ## Turn it into a booked plan
 

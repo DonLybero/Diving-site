@@ -4,7 +4,7 @@ Egypt's Red Sea coast packs four distinct dive bases into one country: Sharm El 
 
 ## Four bases, one sea
 
-**Sharm El Sheikh** is the big-name option: a purpose-built resort strip at Sinai's southern tip, with tidal drifts through the Straits of Tiran, the anthias-carpeted walls of Ras Mohammed and day boats to the SS Thistlegorm. Currents run strong on the exposed corners while the sheltered bays stay calm, so it suits new divers and drift addicts alike. Pick it for schooling fish, famous sites and walkable nightlife.
+**Sharm El Sheikh** is the big-name option: a purpose-built resort strip at Sinai's southern tip, with tidal drifts through the Straits of Tiran, the anthias-carpeted walls of Ras Mohammed and day boats to the SS Thistlegorm. Currents run strong on the exposed corners while sheltered bays stay calm, so it suits new divers and drift addicts alike.
 
 **Dahab**, 90 km north, is the opposite temperament: a low-rise former Bedouin fishing village where nearly everything is a walk-in shore dive on the near-currentless Gulf of Aqaba, with a deep technical scene on tap. Pick it for relaxed multi-dive days, guesthouse prices and evenings on carpeted waterline cafes rather than clubs.
 
@@ -14,7 +14,7 @@ Egypt's Red Sea coast packs four distinct dive bases into one country: Sharm El 
 
 ## The routes and how many days
 
-**Sinai route, 7-8 nights: Sharm 4 + Dahab 3-4.** Fly into Sharm El Sheikh (SSH), dive Tiran, Ras Mohammed and the Thistlegorm over three diving days, then transfer 90 km north to Dahab — about 1.5 hours by road, roughly USD 25-45 for a pre-booked private car. Dahab's shore diving needs no boat schedule, so three days covers the Blue Hole, the Canyon and the town house reefs, with the last day kept dry for the drive back to SSH.
+**Sinai route, 7-8 nights: Sharm 4 + Dahab 3-4.** Fly into Sharm El Sheikh (SSH), dive Tiran, Ras Mohammed and the Thistlegorm over three diving days, then transfer 90 km north to Dahab — about 1.5 hours by road, roughly USD 25-45 pre-booked. Dahab's shore diving needs no boat schedule, so three days covers the Blue Hole, the Canyon and the town house reefs, with the last day kept dry for the drive back to SSH.
 
 **Mainland route, 8-9 nights: Hurghada/El Gouna 4 + Marsa Alam 4.** Fly into Hurghada (HRG), spend three diving days on the Giftun reefs and Abu Nuhas, then drive about 215 km south — 3.5-4 hours — to the Marsa Alam coast. Four nights in the south is the minimum that makes sense: the resorts are strung along more than 100 km of coast, Elphinstone runs to a weather window, and Wadi el Gemal eats a day. If dates allow, swap the Marsa Alam land stay for a liveaboard out of Port Ghalib, 10 minutes from Marsa Alam's airport (RMF) — the only way to reach Daedalus Reef and its schooling hammerheads.
 
@@ -24,13 +24,13 @@ Egypt's Red Sea coast packs four distinct dive bases into one country: Sharm El 
 
 Sharm's diving is built around two protected corners. At Ras Mohammed, Shark & Yolanda Reef stacks twin pinnacles above the scattered toilet-bowl cargo of the Yolanda, where bohar snapper and barracuda mass in spawning aggregations from June to September. In the Straits of Tiran, Jackson Reef hangs scalloped hammerheads off its exposed north face in summer, and Jackfish Alley is a sandy drift past resting whitetips. Early-start day boats reach the SS Thistlegorm, the WWII supply ship whose holds still carry motorbikes, trucks and rifles at 16-32 m.
 
-Topside, this is the gateway to the Sinai interior: the night ascent of Mount Sinai to 2,285 m for sunrise (the 6th-century monastery below closes to visitors on Sundays), Ras Mohammed by jeep, or the Old Market souk and grilled fish priced by the kilo. A glass-bottom boat hour fills the no-fly day.
+Topside, this is the gateway to the Sinai interior: the night ascent of Mount Sinai to 2,285 m for sunrise (the monastery below closes to visitors on Sundays), Ras Mohammed by jeep, or the Old Market souk and grilled fish priced by the kilo. A glass-bottom boat hour fills the no-fly day.
 
 Stay in Naama Bay for the central promenade and dive-boat jetties, Hadaba/Ras Um Sid for clifftop quiet and house reefs off the rocks, or Sharks Bay for quick access to Tiran boats. SSH takes direct flights from much of Europe and the Gulf year-round, plus hourly Cairo connections; the airport is 15-25 minutes from Naama Bay.
 
 ## Dahab
 
-Dahab has no airport — fly to Sharm El Sheikh and transfer 90 km over the mountains, about 1.5 hours. What you get for the drive is diving on your own clock: the Bells chimney dropping onto the Blue Hole's outer wall and over the 7 m saddle into the sinkhole; the Canyon, a crack in the reef plate opening into a fishbowl cavern lit by shafts of blue; Lighthouse Reef in the middle of town with resident frogfish and the go-to night dive; and the Islands, a maze of hard-coral pinnacles south of town. Visibility peaks at 30 m in late summer.
+Dahab has no airport — fly to Sharm El Sheikh and transfer 90 km over the mountains, about 1.5 hours. What you get for the drive is diving on your own clock: the Bells chimney dropping onto the Blue Hole's outer wall and over the 7 m saddle into the sinkhole; the Canyon, a crack in the reef plate opening into a fishbowl cavern; Lighthouse Reef in the middle of town with resident frogfish and the go-to night dive; and the Islands, a maze of hard-coral pinnacles. Visibility peaks at 30 m in late summer.
 
 Surface days write themselves: the jeep-and-camel run past the Blue Hole to the Blue Lagoon at Ras Abu Galum for a fresh fish lunch in a palm hut, tea on the carpeted cafe terraces ringing the Blue Hole's rim, Mount Sinai only 2 hours away, or the Colored Canyon's 40 m sandstone walls for a half-day scramble.
 

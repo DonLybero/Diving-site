@@ -6,7 +6,7 @@ Thailand's best diving sits on two coasts with opposite weather. The Andaman sid
 
 - **Phuket — 4 nights.** Three day-boat outings from Chalong Pier (Shark Point, the King Cruiser wreck, the Racha Islands) plus a topside day in Old Town or Phang Nga Bay.
 - **Khao Lak / Similan liveaboard — 3-4 nights.** The standard itinerary covers the Similan chain, Koh Bon, Koh Tachai and Richelieu Rock; the boat is the hotel.
-- **Koh Tao — 4-5 nights.** Short boat rides mean two dives before lunch; four days covers Chumphon Pinnacle twice, Sail Rock, the Sattakut wreck and the easy bays, with a no-fly day at the end.
+- **Koh Tao — 4-5 nights.** Four days covers Chumphon Pinnacle twice, Sail Rock, the Sattakut wreck and the easy bays, with a no-fly day at the end.
 
 Total: about 13-14 days including the crossing. A single-coast week works either way: Phuket 3 nights plus a 3-4 night Similan liveaboard (November-April), or Koh Tao alone for 7-8 days (best March-May or September).
 
