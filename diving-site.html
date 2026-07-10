@@ -2651,7 +2651,7 @@ function renderHome(){
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   var crew='<div class="crew-slide" id="crewSlide">'+
     '<div class="crew-photo"><img src="'+CREW_IMG.src+'" alt="Divers preparing gear" '+
-    'onerror="document.getElementById(\'crewSlide\').style.display=\'none\'">'+
+    'onerror="this.style.display=\'none\'">'+
     (CREW_IMG.credit?'<span class="crew-credit">'+CREW_IMG.credit+'</span>':'')+'</div>'+
     '<div class="crew-stats">'+
     '<div class="crew-stat crew-a"><b>996</b><span>destination-months scored, rechecked every season</span></div>'+
