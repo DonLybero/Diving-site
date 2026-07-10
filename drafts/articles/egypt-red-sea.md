@@ -18,7 +18,7 @@ Egypt's Red Sea coast packs four distinct dive bases into one country: Sharm El 
 
 **Mainland route, 8-9 nights: Hurghada/El Gouna 4 + Marsa Alam 4.** Fly into Hurghada (HRG), spend three diving days on the Giftun reefs and Abu Nuhas, then drive about 215 km south — 3.5-4 hours — to the Marsa Alam coast. Four nights in the south is the minimum that makes sense: the resorts are strung along more than 100 km of coast, Elphinstone runs to a weather window, and Wadi el Gemal eats a day. If dates allow, swap the Marsa Alam land stay for a liveaboard out of Port Ghalib, 10 minutes from Marsa Alam's airport (RMF) — the only way to reach Daedalus Reef and its schooling hammerheads.
 
-**Both sides, 15-16 days.** Do Sinai first, then the mainland (or reverse). Crossing between sides needs a flight — usually via Cairo, about an hour in the air each leg — or a very long day of road transfers, so treat it as a full travel day; it conveniently doubles as the no-fly buffer after your last Sinai dive. Budget: 4 nights Sharm, 3-4 Dahab, crossing day, 4 nights Hurghada/El Gouna, 4 Marsa Alam, final day dive-free before the flight home.
+**Both sides, 15-16 days.** Do Sinai first, then the mainland (or reverse). Crossing between sides needs a flight — usually via Cairo — or a very long day of road transfers, so treat it as a full travel day; it conveniently doubles as the no-fly buffer after your last Sinai dive. Budget: 4 nights Sharm, 3-4 Dahab, crossing day, 4 nights Hurghada/El Gouna, 4 Marsa Alam, final day dive-free.
 
 ## Sharm El Sheikh
 
@@ -34,7 +34,7 @@ Dahab has no airport — fly to Sharm El Sheikh and transfer 90 km over the moun
 
 Surface days write themselves: the jeep-and-camel run past the Blue Hole to the Blue Lagoon at Ras Abu Galum for a fresh fish lunch in a palm hut, tea on the carpeted cafe terraces ringing the Blue Hole's rim, Mount Sinai only 2 hours away, or the Colored Canyon's 40 m sandstone walls for a half-day scramble.
 
-Stay in Masbat for the seafront promenade, Mashraba for the quieter end of the same strip, or Assalah for the cheapest long-stay rooms in the local quarter.
+Stay in Masbat for the seafront promenade, Mashraba for the quieter end of the same strip, or Assalah for the cheapest long-stay rooms.
 
 ## Hurghada & El Gouna
 
@@ -48,13 +48,13 @@ Stay in El Gouna (Downtown or Abu Tig Marina) for the lagoon-town setup, Hurghad
 
 The south splits in two. Inshore, Abu Dabbab is a walk-in seagrass bay where green turtles graze metres from shore and dugong turn up rarely, and Marsa Shagra's house reef has twin entry channels you can dive on your own schedule. Offshore, Elphinstone Reef's plateaus draw patrolling oceanic whitetips from October to December, in currents that demand experience; Daedalus, the hammerhead pinnacle, is liveaboard range from Port Ghalib. Sha'ab Samadai and Sataya both hold resting spinner dolphin pods.
 
-Topside means desert: Wadi el Gemal National Park's jeep-and-camel routes past Roman-era emerald mine settlements, El Quseir's 16th-century fort an hour north, and telescope nights at inland camps under genuinely dark sky. Green turtles nest on southern beaches from roughly June to September.
+Topside means desert: Wadi el Gemal National Park's jeep-and-camel routes past Roman-era emerald mine settlements, El Quseir's 16th-century fort an hour north, and telescope nights at inland camps under genuinely dark sky. Green turtles nest on southern beaches roughly June to September.
 
-Stay at Port Ghalib for the marina and liveaboard quay, the Abu Dabbab bays for turtles off the beach, or Hamata in the deep south for reefs and quiet. RMF airport is 10 minutes from Port Ghalib but 45-90 minutes from most south-coast resorts; if you can't route into RMF, Hurghada is the fallback.
+Stay at Port Ghalib for the marina and liveaboard quay, the Abu Dabbab bays for turtles off the beach, or Hamata in the deep south for reefs and quiet. RMF airport is 10 minutes from Port Ghalib but 45-90 minutes from most south-coast resorts; Hurghada is the fallback if you can't route into RMF.
 
 ## When to go
 
-The Red Sea dives year-round, but the water swings from 21-22°C in February to 28-29°C in August — a 3 mm suit in high summer, 5-7 mm with a hood in winter. Sharm peaks June-September, when the snapper and barracuda aggregations mass at Ras Mohammed and crossings to Tiran are calm. Dahab and Hurghada are best April-June and September-November; Marsa Alam April-May and September-November, with Elphinstone's whitetip season running October into December. Winter brings northerly wind, chop and cancelled outer-reef runs, though visibility stays clear; July-August trades perfect sea states for hot decks and crowds. October is the safest single answer for all four bases.
+The water swings from 21-22°C in February to 28-29°C in August — a 3 mm suit in high summer, 5-7 mm with a hood in winter. Sharm peaks June-September, when the snapper and barracuda aggregations mass at Ras Mohammed and crossings to Tiran are calm. Dahab and Hurghada are best April-June and September-November; Marsa Alam April-May and September-November, with Elphinstone's whitetip season running October into December. Winter brings northerly wind, chop and cancelled outer-reef runs, though visibility stays clear; July-August trades perfect sea states for hot decks and crowds. October is the safest single answer for all four bases.
 
 ## Events and timing
 

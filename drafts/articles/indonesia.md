@@ -6,11 +6,11 @@ Indonesia's five best dive regions line up west to east along one flight corrido
 
 **Bali 5 nights → Nusa Penida 3 → Gili Islands & Lombok 3 → Komodo 4 → Raja Ampat 6. That's 21 nights — about 3.5 weeks with travel days.**
 
-- **Bali, 5 nights.** You land here anyway; five nights covers jet lag, the Tulamben–Amed shore-diving coast and a topside day or two.
+- **Bali, 5 nights.** You land here anyway; five nights covers jet lag, the Tulamben–Amed shore-diving coast and a topside day.
 - **Nusa Penida, 3 nights.** Small island, concentrated diving — three nights buys several morning shots at mola-mola and mantas.
 - **Gili Islands, 3 nights.** Easy turtle-heavy reefs, a car-free reset between two current-heavy legs.
 - **Komodo, 4 nights.** Boat days start at 05:30 and the tidal currents reward multiple days of timing — plus one day for the dragons.
-- **Raja Ampat, 6 nights.** Getting there costs roughly a day each way (a ~4 h flight to Sorong, then the Waisai ferry) and the permits run IDR 1,000,000; six nights amortises the effort.
+- **Raja Ampat, 6 nights.** Getting there costs roughly a day each way (a ~4 h flight to Sorong, then the Waisai ferry); six nights amortises the effort.
 
 **The 12–14 day version:** Bali 4 → Nusa Penida 3 → Komodo 4, flying home from Labuan Bajo. Cut the Gilis first — their relaxed reefs overlap most with Bali — and save Raja Ampat for its own trip: with a travel day each way, anything under five nights there is mostly transit.
 
@@ -24,7 +24,7 @@ The overlap is October, and it's excellent everywhere: Bali at Peak with its cle
 
 ## Bali
 
-Bali earns its place with the easiest great diving of the trip. The USAT Liberty at Tulamben is a 120 m WWII cargo ship 30 m off the beach in 5–30 m of water, with bumphead parrotfish grazing it at dawn. Seraya Secrets is a black-sand slope where photographers hunt harlequin shrimp and ghost pipefish; Blue Lagoon at Padang Bai turns up rhinopias and blue-ringed octopus in a calm bay; Menjangan Island adds sheer gorgonian-draped walls in the island's clearest water. The northeast coast is sheltered and gentle — a forgiving warm-up at 28°C before the Throughflow legs ahead.
+Bali earns its place with the easiest great diving of the trip. The USAT Liberty at Tulamben is a 120 m WWII cargo ship 30 m off the beach in 5–30 m of water, with bumphead parrotfish grazing it at dawn. Seraya Secrets is a black-sand slope where photographers hunt harlequin shrimp and ghost pipefish; Blue Lagoon at Padang Bai turns up rhinopias and blue-ringed octopus; Menjangan Island adds gorgonian-draped walls in the island's clearest water. The northeast coast is sheltered and gentle — a forgiving warm-up at 28°C before the Throughflow legs ahead.
 
 Base in Amed or Tulamben for the shore-entry coast, then finish in Sanur, a calm beachfront grid with the Penida fast-boat harbour at its doorstep. Spend the surface days well: the Mount Batur sunrise trek puts you on a 1,717 m crater rim by dawn and back by mid-morning; the kecak dance at Uluwatu sets a 60-man chanting choir on a clifftop 70 m above the surf at sunset; the Sidemen valley's rice-field lanes sit on the drive to Amed; a cooking class is the best rainy-morning insurance.
 
@@ -32,15 +32,15 @@ Base in Amed or Tulamben for the shore-entry coast, then finish in Sanur, a calm
 
 ## Nusa Penida
 
-Penida is the advanced leg: the Indonesian Throughflow funnels between the islands, driving fast drifts and sudden down-currents that demand solid buoyancy and guide-led planning. The payoff is two marquee animals. Crystal Bay is the classic mola-mola site, where cold July–October upwellings (water drops to 24–25°C — pack accordingly) bring sunfish to cleaning stations on the deep slope. Manta Point hosts reef mantas year-round on the exposed south coast, with Manta Bay the calmer alternative and Gamat Bay the sheltered macro option.
+Penida is the advanced leg: the Indonesian Throughflow funnels between the islands, driving fast drifts and sudden down-currents that demand solid buoyancy and guide-led planning. The payoff is two marquee animals. Crystal Bay is the classic mola-mola site, where cold July–October upwellings (water drops to 24–25°C) bring sunfish to cleaning stations on the deep slope. Manta Point hosts reef mantas year-round on the exposed south coast; Manta Bay is the calmer alternative.
 
-Stay on the Ped–Sampalan north-coast strip, where the guesthouses, warungs and dive shops line the calm shore road. Topside, this is a raw limestone plateau with 200 m sea cliffs: the Kelingking viewpoint, the collapsed sea-cave arch at Broken Beach, and the Peguyangan stairs — a steel staircase bolted down a 200 m cliff to a spring-fed temple. Evenings are quiet, which suits dawn boat calls.
+Stay on the Ped–Sampalan north-coast strip, where guesthouses, warungs and dive shops line the calm shore road. Topside, this is a raw limestone plateau: the Kelingking viewpoint, the collapsed sea-cave arch at Broken Beach, and the Peguyangan stairs — a steel staircase bolted down a 200 m sea cliff to a spring-fed temple. Evenings are quiet, which suits dawn boat calls.
 
 **Getting there:** fast boats run from Sanur about 21 times daily (30–45 min, IDR 150,000–250,000 each way) to Toyapakeh or Sampalan.
 
 ## Gili Islands & Lombok
 
-After two current-conscious stops, the Gilis are the exhale: three flat, car-free coral cays with mild currents on most sites and turtles at practically every one. Turtle Heaven, a pinnacle north of Gili Meno, is stacked with green and hawksbill turtles; Meno Wall is a gentle wall and the area's top night dive; Shark Point brings reef sharks and rays onto a sloping reef; Han's Reef off Gili Air is the critter site — frogfish, seahorses, ribbon eels.
+After two current-conscious stops, the Gilis are the exhale: three flat, car-free coral cays with mild currents on most sites and turtles at practically every one. Turtle Heaven, a pinnacle north of Gili Meno, is stacked with green and hawksbill turtles; Meno Wall is the area's top night dive; Shark Point brings reef sharks and rays onto a sloping reef; Han's Reef off Gili Air is the critter site — frogfish, seahorses, ribbon eels.
 
 Gili Trawangan has the widest spread of restaurants and dive shops; Gili Air is the quieter middle ground. Between dives, cycle Trawangan's flat 7 km coastal loop, eat grilled reef fish at the harbour night market (go before 20:00 — the best fish sells out), or hop the public boats to Meno's salt lake; a spare day fits the Tiu Kelep waterfall walk on Lombok.
 
@@ -56,7 +56,7 @@ Base in Labuan Bajo on the harbourfront, steps from the jetties for 05:30 depart
 
 ## Raja Ampat
 
-The final leg is the richest reef system on the route and the reason to keep six nights in hand. Cape Kri holds a world-record fish count for a single dive — snapper, trevally and sharks in one water column. Blue Magic is a Dampier Strait seamount visited by oceanic mantas and wobbegongs; Manta Sandy is a shallow cleaning station with a marked viewing line; Melissa's Garden is a pristine hard-coral plateau with pygmy seahorses in its fans; The Passage runs like a river between Waigeo and Gam through archways and soft coral. Drift diving is central here — the strait's flow is what feeds those fish numbers.
+The final leg is the richest reef system on the route and the reason to keep six nights in hand. Cape Kri holds a world-record fish count for a single dive — snapper, trevally and sharks in one water column. Blue Magic is a Dampier Strait seamount visited by oceanic mantas and wobbegongs; Manta Sandy is a shallow cleaning station with a marked viewing line; The Passage runs like a river between Waigeo and Gam through archways and soft coral. Drift diving is central here — the strait's flow feeds those fish numbers.
 
 Stay on Kri or Mansuar, the homestay-and-resort belt minutes by boat from the busiest reefs, or on quieter Gam. Life runs on boat schedules, rainwater tanks and generator hours — bring cash, patience and dry bags. Between dives: the 320-step boardwalk to the Piaynemo viewpoint over the cone-karst lagoon, a 04:30 dawn walk to watch red birds-of-paradise display at Saporkren, and a paddle through Kabui Bay's mangroves.
 
@@ -72,10 +72,10 @@ Stay on Kri or Mansuar, the homestay-and-resort belt minutes by boat from the bu
 ## The practical bits
 
 - **No-fly days.** Three flight legs follow diving (to Labuan Bajo, to Sorong, and home). Build a full no-dive day before each — the itinerary absorbs them as topside days.
-- **Permits.** Raja Ampat requires a marine-park permit (IDR 700,000) plus a visitor entry ticket (IDR 300,000), payable in Waisai or online. Komodo diving happens inside a national park, so park fees apply on every boat day — confirm current rates when booking.
-- **Cash.** Waisai has Raja Ampat's ATMs and permit offices; the homestay islands run on cash, so withdraw everything before the ferry. Penida's infrastructure is basic too — carry more than you think.
+- **Permits.** Raja Ampat requires a marine-park permit (IDR 700,000) plus a visitor entry ticket (IDR 300,000), payable in Waisai or online. Komodo diving happens inside a national park, so park fees apply on every boat day — confirm rates when booking.
+- **Cash.** Waisai has Raja Ampat's ATMs and permit offices; the homestay islands run on cash, so withdraw everything before the ferry. Penida's infrastructure is basic too.
 - **The flight thread.** DPS is the hub for the first three stops; DPS–LBJ is 1 h with 4–6 daily flights; LBJ connects to Sorong via Jakarta or Makassar; SOQ–Jakarta gets you home. Book the LBJ and SOQ legs first — they have the least capacity.
 
 ## Turn it into a booked plan
 
-Every transfer, stay area, dive site and event above comes from the DiveSZN Trip Planner. Open the Trip Planner tab, add these five destinations, and it will lay the route onto real dates — flagging Nyepi, the ferry days and the no-fly buffers — so this article becomes a dated, bookable itinerary.
+Every transfer, stay area, dive site and event above lives in the DiveSZN Trip Planner. Open the Trip Planner tab, add these five destinations, and turn this route into a dated, bookable itinerary — Nyepi, ferry days and no-fly buffers included.

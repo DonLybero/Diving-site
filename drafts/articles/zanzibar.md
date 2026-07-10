@@ -1,6 +1,6 @@
 # Zanzibar dive trip: Nungwi, Mnemba and Stone Town — the complete plan
 
-Zanzibar is two trips in one: easy tropical reef diving with a real big-animal calendar, and a Swahili island whose spice farms, dhow harbours and carved doorways fill every surface interval. The catch is that the coasts differ sharply — tide-swept lagoons in the east, all-tide swimming and dive-centre density in the north — so the biggest decision is not which sites to dive but where to sleep. Get that right and the rest falls into place: green turtles are near-guaranteed on Mnemba's slopes, humpbacks pass from August into October, whale sharks show through the warm kaskazi months, and Stone Town waits at the end with grill stalls and 100-year-old tortoises.
+Zanzibar is two trips in one: easy tropical reef diving with a real big-animal calendar, and a Swahili island whose spice farms, dhow harbours and carved doorways fill every surface interval. But the coasts differ sharply — tide-swept lagoons in the east, all-tide swimming and dive-centre density in the north — so the biggest decision is not which sites to dive but where to sleep. Get that right and the rest falls into place: green turtles are near-guaranteed on Mnemba's slopes, humpbacks pass from August into October, whale sharks show through the warm kaskazi months, and Stone Town waits at the end with grill stalls and 100-year-old tortoises.
 
 ## How many days
 
@@ -20,9 +20,9 @@ The maths: five dive days from Nungwi or Matemwe covers the Mnemba circuit (Kich
 
 ## The diving
 
-Mnemba Atoll is the anchor. **Kichwani** (2-30 m, beginner-friendly) is the classic sloping wall drift, dense with hard and soft coral, trevally, morays and well-camouflaged leaf fish. **Wattabomi** (6-30 m) is a gentle slope of bommies and plate coral where green turtles are near-guaranteed and bottlenose dolphins sometimes cruise through mid-dive. **Big Wall** (14-70 m, advanced) drops a vertical face of overhangs and sponge-crusted ledges that pulls tuna, barracuda, rays and the occasional hammerhead out of the blue.
+Mnemba Atoll is the anchor. **Kichwani** (2-30 m, beginner-friendly) is the classic sloping wall drift, dense with hard and soft coral, trevally, morays and well-camouflaged leaf fish. **Wattabomi** (6-30 m) is a gentle slope of bommies and plate coral where green turtles are near-guaranteed and bottlenose dolphins sometimes cruise through mid-dive. **Big Wall** (14-70 m, advanced) drops a vertical face of overhangs and sponge-crusted ledges pulling tuna, barracuda, rays and the occasional hammerhead out of the blue.
 
-Off the north coast, **Hunga Reef** (10-17 m) is a circular open-water reef known for huge coral bommies and consistently sharp visibility, and **Tumbatu Coral Gardens** (8-20 m) holds what many consider the island's healthiest coral, with seahorses and turtles among the highlights.
+Off the north coast, **Hunga Reef** (10-17 m) is a circular open-water reef known for huge coral bommies and consistently sharp visibility, while **Tumbatu Coral Gardens** (8-20 m) holds the island's healthiest coral, with seahorses and turtles among the highlights.
 
 Then there is **Leven Bank** (12-55 m), an open-ocean seamount in the Pemba Channel where strong, unpredictable current stacks kingfish, tuna, big morays and schooling great barracuda. Everywhere else the 5 m tides produce gentle drifts fine for newer divers; Leven Bank demands genuine drift experience and belongs in the second half of the week.
 
