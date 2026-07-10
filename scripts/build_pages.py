@@ -122,12 +122,6 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .prof-essay{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 .prof-essay h2{margin:0 0 8px;font-size:1.12rem}
 .prof-essay p{margin:0;color:#33565e;line-height:1.7;font-size:.95rem}
-.honest{background:#fff;border:1px solid var(--line-strong,#bcd7d9);border-radius:14px;padding:20px 22px;margin:26px 0 8px}
-.honest-kicker{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#0b7d75;margin-bottom:4px}
-.honest h3{font-family:var(--serif);font-size:1.35rem;margin:0 0 12px}
-.honest ul{list-style:none;margin:0;padding:0}
-.honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
-.honest li b{color:var(--ink)}
 .gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
 .gitem-kicker a{color:var(--accent);text-decoration:none}
 .gitem-stage{margin:10px 0 26px}
@@ -354,15 +348,7 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
 .dots i.f{background:#0e7569}
 .s-level em{font-style:normal;font-size:.92rem;color:var(--ink-soft)}
 .s-why{font-size:.95rem;line-height:1.65;color:var(--ink-soft)}
-/* honest picture */
-.dest2 .honest{background:#fff;border:1px solid #ddeeea;border-radius:18px;padding:30px 36px;
   margin:40px 0 0;box-shadow:0 8px 30px rgba(18,51,47,.05)}
-.dest2 .honest-kicker{font-size:.78rem;letter-spacing:2.5px;color:var(--accent-deep);margin-bottom:6px}
-.dest2 .honest h3{font-size:1.35rem;margin:0 0 6px}
-.dest2 .honest li{padding:16px 0;border-top:1px solid #eef5f3;font-size:1.03rem;line-height:1.75;
-  color:var(--ink-soft);max-width:1100px}
-.dest2 .honest li:first-child{border-top:none}
-.dest2 .honest li b{color:var(--ink)}
 /* verification + permalink */
 .endnote{margin:30px 0 0;display:flex;flex-direction:column;gap:12px}
 .verline{font-size:.97rem;color:var(--muted)}
@@ -370,7 +356,7 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
 .permalink:hover{color:var(--cta-deep);text-decoration:underline}
 .dest2 .related{margin-top:36px}
 @media(max-width:640px){.dest2 .wrap{padding:16px 14px 48px}
-  .dest2 .prof-essay{padding:22px 20px}.dest2 .honest{padding:22px 20px}
+  .dest2 .prof-essay{padding:22px 20px}
   .dest2 .packbox,.dest2 .staybox{padding:20px 18px}
   .srow{padding:16px 18px;gap:14px}.srow.head{padding:12px 18px}}
 @media(prefers-reduced-motion:reduce){.dest2 .prof-essay,.fact,.calbar,.dest2 .pack-cta,.tag,.srow{transition:none}}
@@ -578,30 +564,6 @@ def essays_block(d):
     if d.get("encounters"):
         cards += f'<div class="prof-essay rev"><h2>What you&#8217;ll encounter</h2><p>{esc(d["encounters"])}</p></div>'
     return f'<div class="prof-essays">{cards}</div>' if cards else ""
-
-
-def honest_block(d):
-    """Radical-transparency panel: what we can't promise (mirrors honestBlock in index.html)."""
-    items = [
-        "<b>Seasons drift.</b> Marine-life timing shifts year to year with plankton blooms and lunar "
-        "cycles — a peak landing a couple of weeks early or late is normal, not bad luck.",
-        "<b>Temperatures are ranges.</b> Water figures here are typical monthly ranges (&plusmn;1&deg;C); "
-        "an upwelling or a heatwave can step outside them.",
-        "<b>Visibility is seasonal, not daily.</b> Wind, swell, rain and plankton move it day to day — "
-        "read our metres as the month's typical form, not a promise for your dive.",
-        "<b>Currents can run above the rating.</b> Conditions on the day decide — brief with your "
-        "operator before the first dive, and sit one out if it's beyond your training.",
-    ]
-    closed = [m for m in MONTHS if d["monthly"][m]["rating"] == "Closed"]
-    if closed:
-        items.append(f"<b>Closed means closed.</b> {_join_list(closed)} {'are' if len(closed) > 1 else 'is'} "
-                     "out of season here — weather windows or park rules, not a scheduling choice.")
-    items.append("<b>A score compares, it doesn't guarantee.</b> We rank months from dive-operator and "
-                 "liveaboard calendars so you can weigh destinations like for like — always confirm "
-                 "current conditions with a local dive centre.")
-    lis = "</li><li>".join(items)
-    return ('<div class="honest"><div class="honest-kicker">The honest picture</div>'
-            f'<h3>What can change on the day?</h3><ul><li>{lis}</li></ul></div>')
 
 
 def dest_intro(d):
@@ -910,7 +872,6 @@ def page(d, top_month=None):
   {stay_box(d)}
   {sealife}
   {sites_block}
-  {honest_block(d).replace('class="honest"', 'class="honest rev"', 1)}
   <div class="endnote rev">
     {verline}
     <a class="permalink" href="../index.html">Plan a dive trip here — open the DiveSZN planner &rarr;</a>
