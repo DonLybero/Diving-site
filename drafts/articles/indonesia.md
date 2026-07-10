@@ -1,6 +1,6 @@
 # Indonesia dive trip: the complete plan — Bali to Raja Ampat
 
-Indonesia's five best dive regions line up west to east along one flight corridor, so you can dive a WWII wreck off a Bali beach, hang at a Nusa Penida manta station, drift Komodo's pinnacles and finish on the Dampier Strait reefs in one trip. Here is the route, the nights per stop, the months that work for all five legs at once, and the transfers and permits in between.
+Indonesia's five best dive regions line up west to east along one flight corridor, so you can dive a WWII wreck off a Bali beach, hang at a Nusa Penida manta station, drift Komodo's pinnacles and finish on the Dampier Strait reefs in one trip. Here is the route, the nights per stop, the months that serve all five legs at once, and the transfers and permits in between.
 
 ## The route at a glance
 
@@ -28,7 +28,7 @@ Bali earns its place with the easiest great diving of the trip. The USAT Liberty
 
 Base in Amed or Tulamben for the shore-entry coast, then finish in Sanur, a calm beachfront grid with the Penida fast-boat harbour at its doorstep. Spend the surface days well: the Mount Batur sunrise trek puts you on a 1,717 m crater rim by dawn; the kecak dance at Uluwatu sets a 60-man chanting choir on a clifftop 70 m above the surf at sunset; the Sidemen valley's rice-field lanes sit on the drive to Amed; a cooking class covers rainy mornings.
 
-**Getting in:** fly into Denpasar (DPS), nonstop from most major Asian and Australian hubs plus Doha and Istanbul. Onward is a 30–45 min transfer to Sanur harbour.
+**Getting in:** fly into Denpasar (DPS), nonstop from most major Asian and Australian hubs plus Doha and Istanbul; Sanur harbour is a 30–45 min transfer.
 
 ## Nusa Penida
 
@@ -36,7 +36,7 @@ Penida is the advanced leg: the Indonesian Throughflow funnels between the islan
 
 Stay on the Ped–Sampalan north-coast strip, where guesthouses, warungs and dive shops line the calm shore road. Topside, this is a raw limestone plateau: the Kelingking viewpoint, the collapsed sea-cave arch at Broken Beach, and the Peguyangan stairs — a steel staircase bolted down a 200 m sea cliff to a spring-fed temple. Evenings are quiet, which suits dawn boat calls.
 
-**Getting there:** fast boats run from Sanur about 21 times daily (30–45 min, IDR 150,000–250,000 each way) to Toyapakeh or Sampalan.
+**Getting there:** fast boats run from Sanur to Toyapakeh or Sampalan about 21 times daily (30–45 min, IDR 150,000–250,000).
 
 ## Gili Islands & Lombok
 
@@ -44,13 +44,13 @@ After two current-conscious stops, the Gilis are the exhale: three flat, car-fre
 
 Gili Trawangan has the widest spread of restaurants and dive shops; Gili Air is the quieter middle ground. Between dives, cycle Trawangan's flat 7 km coastal loop, eat grilled reef fish at the harbour night market (go before 20:00), or hop the public boats to Meno's salt lake; a spare day fits the Tiu Kelep waterfall walk on Lombok.
 
-**Getting there:** direct fast boats run from Padang Bai or Serangan on Bali to Gili Trawangan (1.5–2.5 h, ~USD 22–35). For Komodo, boat back to Bali and fly from Denpasar.
+**Getting there:** direct fast boats run from Padang Bai or Serangan to Gili Trawangan (1.5–2.5 h, ~USD 22–35). For Komodo, boat back to Bali and fly from Denpasar.
 
 ## Komodo National Park
 
 Komodo is the big-animal, big-current centrepiece. Tidal currents peak at full and new moon, and the best sites are built on them: Batu Bolong, a current-swept pinnacle dense with fish; Castle Rock and Crystal Rock, seamounts where sharks and trevally hunt in the flow; and Manta Point (Karang Makassar), a long shallow drift past manta cleaning stations at 6–15 m. Calmer days go to Siaba Besar, a sheltered bay dubbed Turtle City.
 
-Base in Labuan Bajo on the harbourfront, steps from the jetties for 05:30 departures, with the sunset restaurant row on the same street. Give one full boat day to the topside icons: the stair climb to Padar Island's three-bay ridge view, a ranger-guided dragon walk on Komodo or Rinca — the only place on earth to see wild Komodo dragons — and the pink sand of Pantai Merah.
+Base in Labuan Bajo on the harbourfront, steps from the jetties for 05:30 departures, with the restaurant row on the same street. Give one boat day to the topside icons: the stair climb to Padar Island's three-bay ridge view, a ranger-guided dragon walk on Komodo or Rinca — the only place on earth to see wild Komodo dragons — and the pink sand of Pantai Merah.
 
 **Getting there:** fly Denpasar to Labuan Bajo (LBJ), about 1 h nonstop with 4–6 daily flights. The airport is 10–15 min from the harbour.
 
@@ -60,7 +60,7 @@ The final leg is the richest reef system on the route and the reason to keep six
 
 Stay on Kri or Mansuar, the homestay belt minutes by boat from the busiest reefs, or on quieter Gam. Life runs on boat schedules, rainwater tanks and generator hours — bring cash, patience and dry bags. Between dives: the 320-step boardwalk to the Piaynemo viewpoint over the cone-karst lagoon, a 04:30 walk to watch red birds-of-paradise display at Saporkren, a paddle through Kabui Bay's mangroves.
 
-**Getting there:** fly to Sorong (SOQ) — about 4 h nonstop from Jakarta, typically a red-eye, or via Makassar — then the ~2 h fast ferry from Sorong harbour to Waisai (once or twice daily). Homestays collect guests by boat from the Waisai jetty.
+**Getting there:** fly to Sorong (SOQ) — about 4 h nonstop from Jakarta, typically a red-eye, or via Makassar — then the ~2 h fast ferry to Waisai (once or twice daily). Homestays collect guests by boat from the Waisai jetty.
 
 ## Events worth timing — or planning around
 
@@ -71,11 +71,11 @@ Stay on Kri or Mansuar, the homestay belt minutes by boat from the busiest reefs
 
 ## The practical bits
 
-- **No-fly days.** Three flight legs follow diving (to Labuan Bajo, to Sorong, and home). Build a full no-dive day before each — the itinerary absorbs them as topside days.
+- **No-fly days.** Three flight legs follow diving (to Labuan Bajo, to Sorong, and home). Build a full no-dive day before each — the topside days above absorb them.
 - **Permits.** Raja Ampat requires a marine-park permit (IDR 700,000) plus a visitor entry ticket (IDR 300,000), payable in Waisai or online. Komodo diving happens inside a national park, so park fees apply on every boat day — confirm rates when booking.
 - **Cash.** Waisai has Raja Ampat's ATMs and permit offices; the homestay islands run on cash, so withdraw everything before the ferry. Penida's infrastructure is basic too.
 - **The flight thread.** DPS serves the first three stops; DPS–LBJ is 1 h with 4–6 daily flights; LBJ connects to Sorong via Jakarta or Makassar; SOQ–Jakarta gets you home. Book the LBJ and SOQ legs first — they have the least capacity.
 
 ## Turn it into a booked plan
 
-Every transfer, stay area, dive site and event above lives in the DiveSZN Trip Planner. Open the Trip Planner tab, add these five destinations, and turn this route into a dated, bookable itinerary — Nyepi, ferry days and no-fly buffers included.
+Every transfer, stay area, dive site and event above lives in the DiveSZN Trip Planner. Open the Trip Planner tab, add these five stops, and turn this route into a dated, bookable itinerary — Nyepi, ferry days and no-fly buffers included.
