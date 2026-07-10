@@ -30,7 +30,7 @@ Where you sleep shapes the trip, because Zanzibar's coasts differ sharply.
 
 **Matemwe**, on the northeast coast, is the specialist's choice: small lodges facing Mnemba's reef ring with the shortest boat rides to the island's best-known sites, on a quiet beach used as much by seaweed farmers as by tourists. Pick it if Mnemba is the point of the trip.
 
-**Paje and the east coast** is the outlier for divers: a wide tidal lagoon that empties at low water, so boats run to the tide table. What it offers instead is kitesurfing on steady trade winds (December-March and June-September) and a quieter, budget-friendlier village scene — reasonable for a mixed group where only some people dive.
+**Paje and the east coast** is the outlier for divers: a wide tidal lagoon that empties at low water, so boats run to the tide table. It offers instead kitesurfing on steady trade winds (December-March and June-September) and a quieter, budget-friendlier village scene — reasonable when only some of the group dives.
 
 **Stone Town** has no usable beach; it is the 1-2 night cultural bookend, not a dive base.
 
