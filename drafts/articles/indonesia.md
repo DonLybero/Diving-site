@@ -56,7 +56,7 @@ Base in Labuan Bajo on the harbourfront, steps from the jetties for 05:30 depart
 
 ## Raja Ampat
 
-The final leg is the richest reef system on the route and the reason to keep six nights in hand. Cape Kri holds a world-record fish count for a single dive — snapper, trevally and sharks in one water column. Blue Magic is a Dampier Strait seamount visited by oceanic mantas and wobbegongs; Manta Sandy is a shallow cleaning station with a marked viewing line; The Passage runs like a river between Waigeo and Gam through archways and soft coral. Drift diving is central here — the strait's flow feeds those fish numbers.
+The final leg is the richest reef system on the route and the reason to keep six nights in hand. Cape Kri holds a world-record fish count for a single dive — snapper, trevally and sharks in one water column. Blue Magic is a Dampier Strait seamount visited by oceanic mantas and wobbegongs; Manta Sandy is a shallow cleaning station with a marked viewing line; The Passage runs like a river between Waigeo and Gam through archways and soft coral. Drift diving is central — the strait's flow feeds those fish numbers.
 
 Stay on Kri or Mansuar, the homestay belt minutes by boat from the busiest reefs, or on quieter Gam. Life runs on boat schedules, rainwater tanks and generator hours — bring cash, patience and dry bags. Between dives: the 320-step boardwalk to the Piaynemo viewpoint over the cone-karst lagoon, a 04:30 walk to watch red birds-of-paradise display at Saporkren, a paddle through Kabui Bay's mangroves.
 
@@ -66,7 +66,7 @@ Stay on Kri or Mansuar, the homestay belt minutes by boat from the busiest reefs
 
 - **Nyepi (19 March in 2026).** Bali's Day of Silence stops the whole province for 24 h — Denpasar airport closes, roads empty, guests stay inside their hotels, Penida's boats stop. The ogoh-ogoh parades the evening before are worth seeing; just don't schedule a flight or crossing that day.
 - **Galungan & Kuningan (17 and 27 June in 2026).** Penjor poles arch over every Balinese street; Penida's Pura Dalem Ped fills with pilgrims and fast boats sell out around the holy days.
-- **Raja Ampat Festival (mid-to-late October, Waisai).** Papuan dance, boat races and seafood stalls — but ferries and town rooms run full, so book the Sorong–Waisai crossing early if your October dates land on it.
+- **Raja Ampat Festival (mid-to-late October, Waisai).** Papuan dance, boat races and seafood stalls — ferries and town rooms run full, so book the Sorong–Waisai crossing early if your dates land on it.
 - **Lebaran (March in 2026).** A week-long national travel surge — Labuan Bajo flights and Lombok crossings fill hardest.
 
 ## The practical bits
