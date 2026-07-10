@@ -4,19 +4,19 @@ The headline finding on a Zanzibar dive trip is that there is no single best sea
 
 ## When to go
 
-**January-March** is the comfort peak. Glassy mornings, the year's warmest water, top-of-year visibility, turtles packing Mnemba and dolphins working the channel. Whale sharks pass offshore in January, late animals linger into March, and February's spawning aggregations bring the reefs to their densest. If you dive in a 3 mm shorty and want the easiest possible conditions, this is your window.
+**January-March** is the comfort peak. Glassy mornings, the year's warmest water, top-of-year visibility, turtles packing Mnemba and dolphins working the channel. Whale sharks pass offshore in January, late animals linger into March, and February's spawning aggregations bring the reefs to their densest. For 3 mm-shorty diving in the easiest conditions, this is the window.
 
 **September-October** is the big-animal peak. Winds ease after the kusi season, seas go flat, and the Pemba Channel earns its keep: humpbacks in numbers in September with barracuda and tuna schooling offshore, then October's calm inter-monsoon lull where late whales and early whale sharks share the calendar. Water is the year's coolest at 25-26°C — bring a 5 mm — but visibility matches January.
 
 **June to August is solidly good**, not peak: the kusi wind puts chop on crossings, visibility holds at 20-22 m, and the first humpbacks arrive in August. **November and December are good too** — whale sharks build through both months, though November's short vuli rains bring brief showers before December's kaskazi calm.
 
-**Avoid April and May.** The masika long rains cut visibility to around 12 m, seas turn choppy and some boats pause entirely. They are the only two months that fall outside every rated window, and no price discount buys back a 12 m ocean.
+**Avoid April and May.** The masika long rains cut visibility to around 12 m, seas turn choppy and some boats pause entirely. No price discount buys back a 12 m ocean.
 
 ## How long — the researched answer
 
 The ultimate 9 days: **2 Stone Town nights + 5 dive days on the north coast (6 coast nights) + 1 no-fly day** at the end.
 
-The travel consensus clusters tightly. Guides to the island converge on 5-7 days as the minimum for a trip that covers both the culture and the coast, with 7 nights — around 2 in Stone Town, the rest on a beach — as the most-repeated ideal. That consensus, though, is written for beach holidays. Diving changes the arithmetic in two ways: dive operators run Mnemba as a 2-dive, 5-6 hour morning trip, so each dive day consumes the daylight hours; and a dive trip ends with a mandatory no-fly interval that a beach itinerary never has to budget.
+The travel consensus clusters tightly: guides to the island converge on 5-7 days as the minimum for culture plus coast, with 7 nights — around 2 in Stone Town, the rest on a beach — as the most-repeated ideal. But that consensus is written for beach holidays. Diving changes the arithmetic twice over: operators run Mnemba as a 2-dive, 5-6 hour morning trip, so each dive day consumes the daylight hours; and a dive trip ends with a mandatory no-fly interval a beach itinerary never budgets.
 
 So the split works like this. **Two Stone Town nights** at the start cover the heritage walk, an evening at Forodhani and a half-day boat to Prison Island — the town's best hours are the ones day-trippers miss, and one night forces you to choose between them. **Five dive days** is the number our site list actually supports: at two dives a day that is ten dives across six named sites — the three Mnemba sites (Kichwani, Wattabomi, Big Wall), the two northern reefs (Hunga Reef, Tumbatu Coral Gardens) and a Leven Bank day once you have a few local drifts logged — with room to repeat the Mnemba slope that earns it. Four dive days forces a choice between Mnemba and the north; six or more and you are re-diving without new ground. **The final day is the no-fly day**, and ending it back near Stone Town solves it: dive your last morning up north, transfer down in the afternoon, then spend the off-gassing day at a spice farm or Jozani Forest before an evening at the night market. Nine days, and none of them is a waiting day.
 

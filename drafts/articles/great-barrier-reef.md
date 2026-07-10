@@ -12,7 +12,7 @@ The counter-case belongs to specialists. For 2-6 nights after the November or De
 
 ## How long — the researched answer
 
-The ultimate nine days. Here is how that number is built, from operator schedules and our own topside data rather than instinct.
+The ultimate nine days — a number built from operator schedules and our own topside data, not instinct.
 
 The reef block first. Cairns liveaboards run to fixed formats: 3-day/2-night and 4-day/3-night trips to the outer reefs are the standard products, with around 11 dives on the shorter format and up to 14 on the longer. The expeditions that reach the Ribbon Reefs — the minke boats — run 3 to 4 nights, typically pairing the trip with a one-way low-level flight between Cairns and Lizard Island; the 4-night versions add roughly two days at Osprey Reef in the Coral Sea. Seven-night combinations exist but are the exception. So the researched reef block is a 4-night liveaboard: five calendar days that cover the Ribbons, the minkes in season and the Osprey extension.
 
