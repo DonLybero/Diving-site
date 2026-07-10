@@ -1,6 +1,6 @@
 # Great Barrier Reef dive trip: the best window, the right day count, the full plan
 
-The finding up front: the Great Barrier Reef is at its best in the austral winter, and if the dwarf minke whale encounter is the goal, the window narrows to June and July on the Ribbon Reefs. That is when the world's only predictable minke aggregation meets the dry season's calm seas and climbing visibility. Everything else about the trip follows from that call: a 3-4 night liveaboard north from Cairns, then a self-drive block through the Daintree and the Atherton Tablelands that doubles as your no-fly buffer. Nine days on the ground does it properly.
+The finding up front: the Great Barrier Reef is at its best in the austral winter, and if the dwarf minke whale encounter is the goal, the window narrows to June and July on the Ribbon Reefs. That is when the world's only predictable minke aggregation meets the dry season's calm seas and climbing visibility. The rest of the trip follows from that call: a 3-4 night liveaboard north from Cairns, then a self-drive block through the Daintree and the Atherton Tablelands that doubles as your no-fly buffer. Nine days on the ground does it properly.
 
 ## When to go
 
@@ -28,7 +28,7 @@ Everything leaves from the Marlin Marina, a short walk from the Cairns city cent
 
 The liveaboards head north to the Ribbon Reefs, and that is where the trip earns its length. Cod Hole, on Ribbon Reef No. 10, is a 10-25 m reef dive where resident giant potato cod meet you on the descent and follow you around like large, curious dogs. Nearby, Pixie Pinnacle is a coral tower climbing from 40 m, packed with reef fish, and Steve's Bommie on Ribbon Reef No. 3 rises from 30 m to within 5 m of the surface with dense fish schools and macro life on the way up. In June and July, Lighthouse Bommie becomes the centre of the reef's most remarkable encounter: dwarf minke whales approach divers hanging on surface lines here, often circling the boats for hours.
 
-The 4-night itineraries push into the Coral Sea for Osprey Reef, where the character changes: North Horn is a 10-40 m wall amphitheatre where grey reef and whitetip sharks patrol in numbers, and Admiralty Anchor threads swim-throughs past a 19th-century anchor embedded in the wall. Currents are honest but manageable — inner reefs stay mild, the Ribbon walls drift with the tides, and only the Coral Sea sites demand real current skills. The SS Yongala, a 110 m shipwreck from 1911 lying at 16-28 m off Townsville, is the region's advanced-diver pilgrimage; it sits well south of Cairns and is dived only at slack tide, so treat it as its own side trip.
+The 4-night itineraries push into the Coral Sea for Osprey Reef, where the character changes: North Horn is a 10-40 m wall amphitheatre where grey reef and whitetip sharks patrol in numbers, and Admiralty Anchor threads swim-throughs past a 19th-century anchor embedded in the wall. Currents are honest but manageable — inner reefs stay mild, the Ribbon walls drift with the tides, and only the Coral Sea sites demand real current skills. The SS Yongala, a 110 m shipwreck from 1911 lying at 16-28 m off Townsville, sits well south of Cairns and is dived only at slack tide — treat it as its own side trip.
 
 ## The topside block
 

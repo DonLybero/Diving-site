@@ -67,6 +67,5 @@ Getting in: Koh Tao has no airport. Fly to Koh Samui (USM) and take the 1.5-2 h 
 - **Ferries.** Book Koh Tao crossings ahead December-March and around Songkran and full moons; agree island-taxi fares before boarding.
 - **Liveaboard timing.** The exact park opening dates shift slightly by year — confirm them before locking flights, and expect evening boarding at Thap Lamu with an overnight crossing.
 - **Scooters.** Skip them on both coasts. Rental accidents involving visitors are common on Phuket, and Koh Tao's steep, partly unpaved roads plus frequent rental-damage disputes make shared pickup taxis and longtails the better call.
-- **The no-fly rule.** The route already builds both buffers in — the coast-to-coast crossing after the liveaboard, and Koh Tao's final viewpoint day before the flight out.
 
 To build your own version, open the Trip Planner tab and add Phuket, the Similan Islands and Koh Tao — it lays out flights, transfers, stay areas and month-by-month conditions for your exact dates.
