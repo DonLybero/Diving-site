@@ -2635,12 +2635,12 @@ function renderHome(){
     return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="location.href=\'gear/'+gearSlug(g.name)+'.html\'">'+
       '<div class="dimg">'+(g.image?'<img src="'+g.image+'" alt="'+esc(g.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<span class="dcap">'+g.name+'</span>'+
-      '<div class="dmeta"><span class="score" style="font-size:.68rem">#1 '+c.category.replace(/s$/,'')+'</span> · full review</div>'+
+      '<div class="dmeta"><span class="score" style="font-size:.68rem">#1 '+c.category.replace(/s$/,'')+' on DiveSZN</span></div>'+
       '</div>';
   }):GEAR.slice(0,6).map(function(g,i){
     return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="showTab(\'gear\')">'+
       '<div class="dimg"></div><span class="dcap">'+g.name+'</span>'+
-      '<div class="dmeta"><span class="score" style="font-size:.68rem">top pick</span> · full review</div></div>';})).join('');
+      '<div class="dmeta"><span class="score" style="font-size:.68rem">our top pick</span></div></div>';})).join('');
   var sitePrev=topAug.map(function(r,i){
     var dd=DivingCalendar.getDestination(DESTS,r.name)||{};
     return '<div class="dcard rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="openProfile(\''+esc(r.name)+'\')">'+
