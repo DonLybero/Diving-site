@@ -1696,16 +1696,16 @@ function renderHome(){
   var seenC={}, topAug=[];
   pool.forEach(function(r){ if(topAug.length<8 && !seenC[r.country]){ seenC[r.country]=1; topAug.push(r); } });
   var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.map(function(c,i){
-    var g=leadItem(c), lo=g.options.slice().sort(function(a,b){return a.price_usd-b.price_usd;})[0];
+    var g=leadItem(c);
     return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="location.href=\'gear/'+gearSlug(g.name)+'.html\'">'+
       '<div class="dimg">'+(g.image?'<img src="'+g.image+'" alt="'+esc(g.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<span class="dcap">'+g.name+'</span>'+
-      '<div class="dmeta"><span class="score" style="font-size:.68rem">from '+fmtPrice(lo.price_usd)+'</span> · #1 '+c.category.replace(/s$/,'')+' — '+lo.store+'</div>'+
+      '<div class="dmeta"><span class="score" style="font-size:.68rem">#1 '+c.category.replace(/s$/,'')+'</span> · full review</div>'+
       '</div>';
-  }):GEAR.slice(0,6).map(function(g,i){var lo=g.offers.slice().sort(function(a,b){return a[1]-b[1];})[0];
+  }):GEAR.slice(0,6).map(function(g,i){
     return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="showTab(\'gear\')">'+
       '<div class="dimg"></div><span class="dcap">'+g.name+'</span>'+
-      '<div class="dmeta"><span class="score" style="font-size:.68rem">from $'+lo[1]+'</span> · sample price · authorised dealers</div></div>';})).join('');
+      '<div class="dmeta"><span class="score" style="font-size:.68rem">top pick</span> · full review</div></div>';})).join('');
   var sitePrev=topAug.map(function(r,i){
     var dd=DivingCalendar.getDestination(DESTS,r.name)||{};
     return '<div class="dcard rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="openProfile(\''+esc(r.name)+'\')">'+
@@ -1740,8 +1740,8 @@ function renderHome(){
     '<section class="hband rv"><div class="hb-in">'+
     '<div class="dcar-wrap">'+
     '<div class="dcar-head">'+
-    '<div class="sec-head">Gear, at the right price</div>'+
-    '<p class="sec-sub">Researched buyer’s guides with indicative prices from authorised dealers only — so your warranty stays valid.</p>'+
+    '<div class="sec-head">Everything you need to know about diving gear</div>'+
+    '<p class="sec-sub">Researched buyer’s guides for every piece of kit — real strengths, real weaknesses, and links to authorised dealers only, so your warranty stays valid.</p>'+
     '</div>'+
     '<div class="dcar-box"><div class="dcar" id="gcar">'+bestGear+'</div>'+
     '<div class="dcar-nav"><button onclick="dcarStep(-1,\'gcar\')" aria-label="Previous"><svg width="9" height="16" viewBox="0 0 9 16" fill="none"><path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
