@@ -8,7 +8,7 @@ The headline finding on a Zanzibar dive trip is that there is no single best sea
 
 **September-October** is the big-animal peak. Winds ease after the kusi season, seas go flat, and the Pemba Channel earns its keep: humpbacks in numbers in September with barracuda and tuna schooling offshore, then October's calm inter-monsoon lull where late whales and early whale sharks share the calendar. Water is the year's coolest at 25-26°C — bring a 5 mm — but visibility matches January.
 
-**June to August is solidly good**, not peak: the kusi wind puts chop on crossings, visibility holds at 20-22 m, and the first humpbacks arrive in August. **November and December are good too** — whale sharks build through both months, though November's short vuli rains bring brief showers before December's kaskazi calm.
+**June to August is solidly good**, not peak: the kusi wind puts chop on crossings, visibility holds at 20-22 m, and the first humpbacks arrive in August. **November and December are good too** — whale sharks build through both, though November's short vuli rains bring brief showers before December's kaskazi calm.
 
 **Avoid April and May.** The masika long rains cut visibility to around 12 m, seas turn choppy and some boats pause entirely. No price discount buys back a 12 m ocean.
 
@@ -48,7 +48,7 @@ Season sets the cast. January-March: whale sharks offshore, February spawning ag
 
 Use the Stone Town nights properly. A guided heritage walk — 2-3 hours covers the essentials — threads the maze of coral-stone merchant houses, brass-studded carved doors, the Old Fort and the former slave-market site with its underground holding chambers. Every evening, Forodhani Gardens fills with grill stalls selling skewers, Zanzibar pizza and sugarcane juice; go hungry and watch your seafood cooked in front of you.
 
-Half-days slot around dive schedules. Working spice farms 20-30 minutes from town grow the cloves, vanilla, nutmeg and cardamom behind the island's old trade name, with fruit tastings at the end — 3-4 hours including transfers. Jozani Forest, about 45 minutes out, protects the Zanzibar red colobus found nowhere else; habituated troops sit metres from the trail. A 30-minute boat reaches Prison Island and its Aldabra giant tortoises, some over 100 years old. A 2-hour sunset dhow cruise from Nungwi or Stone Town is the classic final-evening move, and Nungwi's tidal-lagoon turtle sanctuary — rescued green and hawksbill turtles ahead of release — pairs well with a beach afternoon.
+Half-days slot around dive schedules. Working spice farms 20-30 minutes from town grow the cloves, vanilla, nutmeg and cardamom behind the island's old trade name, with fruit tastings at the end — 3-4 hours including transfers. Jozani Forest, about 45 minutes out, protects the Zanzibar red colobus found nowhere else; habituated troops sit metres from the trail. A 30-minute boat reaches Prison Island and its Aldabra giant tortoises, some over 100 years old. A 2-hour sunset dhow cruise from Nungwi or Stone Town is the classic final-evening move.
 
 ## Events and the practical bits
 
@@ -56,7 +56,7 @@ Sauti za Busara fills Stone Town's Old Fort for four days in early February — 
 
 Note Ramadan: Zanzibar is predominantly Muslim, and during the fasting month (February-March in 2026-2027, moving about 11 days earlier each year) many local restaurants close in daylight and eating openly in villages is frowned on. Hotels and dive boats run normally; Eid al-Fitr brings street celebrations and busy domestic transport.
 
-Fly direct into ZNZ from the Gulf, Istanbul and seasonal European routes, or connect through Dar es Salaam (DAR) with a 20-30 minute hop or a roughly 2-hour fast ferry into Stone Town harbour. Taxis have no meters, so agree the fare before leaving: about 15 USD for the 15-20 minutes to Stone Town, 35-60 USD for the 1 hour 20 minutes to Nungwi. Hotels arrange fixed-price cars at similar rates. Skip self-drive — it needs a local permit, and unlit roads and frequent checkpoints make a hired car with driver, often only 10-20 USD more per day, the easier option.
+Fly direct into ZNZ from the Gulf, Istanbul and seasonal European routes, or connect through Dar es Salaam (DAR) with a 20-30 minute hop or a roughly 2-hour fast ferry into Stone Town harbour. Taxis have no meters — agree the fare before leaving: about 15 USD for the 15-20 minutes to Stone Town, 35-60 USD for the 1 hour 20 minutes to Nungwi; hotels arrange fixed-price cars at similar rates. Skip self-drive — it needs a local permit, and a hired car with driver is often only 10-20 USD more per day.
 
 ## Plan it properly
 
