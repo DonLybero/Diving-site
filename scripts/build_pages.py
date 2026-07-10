@@ -141,8 +141,6 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .gitem-price{font-family:var(--mono);font-size:.9rem;color:var(--ink)}
 .gitem-price b{color:var(--ink);font-size:1.15rem;font-family:var(--mono);font-variant-numeric:tabular-nums;display:inline}
 .gitem-id small{display:block;color:var(--muted);font-size:.64rem;margin-top:2px}
-.gitem-colors{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--muted);line-height:1.7}
-.gitem-colors b{color:var(--ink);font-weight:600}
 .grel{list-style:none;margin:8px 0 0;padding:0}
 .grel li{padding:8px 0;border-top:1px solid var(--line)}
 .grel a{color:var(--ink);text-decoration:none;font-weight:600}
@@ -621,7 +619,6 @@ def gear_item_page(cat, item, prefix="../"):
     hero_path = f"assets/gear/studio/hero/{base}.jpg"
     if not os.path.exists(os.path.join(ROOT, hero_path)):
         hero_path = img
-    colors = item.get("colors") or []
     photo = (f'<figure class="gitem-photo"><img id="gimg" src="{prefix}{esc(hero_path)}" '
              f'alt="{esc(item["name"])}"></figure>' if hero_path else "")
     stage_open = '<div class="gitem-stage">' if hero_path else ""
@@ -632,18 +629,10 @@ def gear_item_page(cat, item, prefix="../"):
         f'<a class="pack-cta{"" if i == 0 else " ghost"}" href="{esc(o["url"])}" target="_blank" '
         f'rel="noopener sponsored">{esc(o["store"])} · {fmtp(o["price_usd"])}</a>'
         for i, o in enumerate(offers[:3]))
-    # colours are stated, not clickable: the photo always shows the standard
-    # colour, the line lists what the market actually sells (owner ruling)
-    colorline = ""
-    if colors:
-        lead = f"Comes in {len(colors)} colours" if len(colors) > 1 else "One colour"
-        colorline = (f'<div class="gitem-colors"><b>{lead}</b> · '
-                     + " · ".join(esc(c) for c in colors) + '</div>')
     banner = (f'<div class="gitem-banner">'
               f'<div class="gitem-id"><b>{esc(item["name"])}</b>'
               f'<span class="gitem-price">{f"from <b>{fmtp(lo)}</b>" if lo is not None else ""}</span>'
               f'<small>indicative — the retailer shows the live price</small></div>'
-              f'{colorline}'
               f'<div class="pack-ctas">{btns}</div></div>')
     # the banner sits INSIDE the photo card (owner spec: on the photo, bottom
     # side, with the studio background behind and below it — never a separate
