@@ -194,12 +194,7 @@
       "Gray/Black",
       "Red/Black"
      ],
-     "color_source": "https://www.atomicaquatics.com/products/masks/venom-frameless/",
-     "color_platform": "other",
-     "color_images": {
-      "Gray/Black": "assets/gear/studio/hero/atomic-aquatics-venom-frameless--gray-black.jpg",
-      "Red/Black": "assets/gear/studio/hero/atomic-aquatics-venom-frameless--red-black.jpg"
-     }
+     "color_source": "https://www.atomicaquatics.com/products/masks/venom-frameless/"
     },
     {
      "rank": 2,
@@ -247,15 +242,11 @@
      ],
      "colors": [
       "Black/Silver",
-      "Black/Silver Mirrored",
       "Black/Red",
+      "Black/Silver Mirrored",
       "Clear/Blue-Silver"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/masks/synergy-2-trufit-dive-mask-w-comfort-strap",
-     "color_platform": "other",
-     "color_images": {
-      "Black/Silver": "assets/gear/studio/hero/scubapro-synergy-2-trufit--black-silver.jpg"
-     }
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/masks/synergy-2-trufit-dive-mask-w-comfort-strap"
     },
     {
      "rank": 3,
@@ -293,27 +284,13 @@
       "Made in": "Italy"
      },
      "colors": [
-      "Black / Black",
-      "Black / Black / Silver Mirrored lens",
-      "Black / Blue",
-      "Black / Yellow",
-      "Clear / Black",
-      "Clear / Blue",
-      "Clear / Pink",
-      "Clear / Red",
-      "Clear / Yellow"
+      "Clear/Blue",
+      "Clear/Yellow",
+      "Clear/Pink",
+      "Clear/Black",
+      "Black/Blue",
+      "Black/Yellow"
      ],
-     "color_images": {
-      "Black / Black": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-black.jpg",
-      "Black / Black / Silver Mirrored lens": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-black-silver-mirrored-lens.jpg",
-      "Black / Blue": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-blue.jpg",
-      "Black / Yellow": "assets/gear/studio/hero/cressi-big-eyes-evolution--black-yellow.jpg",
-      "Clear / Black": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-black.jpg",
-      "Clear / Blue": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-blue.jpg",
-      "Clear / Pink": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-pink.jpg",
-      "Clear / Red": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-red.jpg",
-      "Clear / Yellow": "assets/gear/studio/hero/cressi-big-eyes-evolution--clear-yellow.jpg"
-     },
      "pros": [
       "Inverted-teardrop lenses raked at 15° add more than 30% downward visibility — gauges, clips and inflator stay in view without tipping the head",
       "Buckles sit on flexible elastomer tabs that fold through 180°, fixing the strap-lug breakage that dogged the original Big Eyes",
@@ -325,8 +302,7 @@
       "The strap itself is unusually slim for a mask this size",
       "The frame bridge between the two lenses sits in the middle of your view; single-lens converts notice it"
      ],
-     "color_source": "https://cressiamerica.com/products/big-eyes-evolution-mask",
-     "color_platform": "shopify"
+     "color_source": "https://cressiamerica.com/products/big-eyes-evolution-mask"
     },
     {
      "rank": 4,
@@ -378,10 +354,10 @@
       "Black/Black",
       "White/Black",
       "Lime/Black",
-      "Yellow/Black"
+      "Yellow/Black",
+      "Blue White/Clear"
      ],
-     "color_source": "https://mareshop.eu/en/products/mares-x-vision-black-black-411053-ebbk7bk-194151013405",
-     "color_platform": "shopify"
+     "color_source": "https://mareshop.eu/en/products/mares-x-vision-black-black-411053-ebbk7bk-194151013405"
     },
     {
      "rank": 5,
@@ -429,11 +405,19 @@
      "colors": [
       "Black/Black",
       "Black/Yellow",
-      "Black/Orange",
-      "White/Blue"
+      "Blue/Black",
+      "Pink/Black",
+      "Clear/Blue",
+      "Clear/Orange",
+      "Clear/Pink",
+      "Clear/White",
+      "Glacier/White",
+      "Red/White",
+      "White/Blue",
+      "Yellow/White",
+      "Tropical"
      ],
-     "color_source": "https://us.aqualung.com/collections/diving-masks/products/reveal-x2-dive-mask",
-     "color_platform": "shopify"
+     "color_source": "https://www.divers-supply.com/aqua-lung-reveal-x2-dual-lens-mask.html"
     },
     {
      "rank": 6,
@@ -482,16 +466,29 @@
       "TUSA sells no drop-in corrective lenses for the M-212, so prescriptions mean custom-ground lenses through a specialist shop"
      ],
      "colors": [
+      "Black",
+      "Bougainvillea Pink",
+      "Cobalt Blue",
+      "Dragonfruit Purple",
+      "Energy Orange",
+      "Fishtail Blue",
+      "Flash Yellow",
+      "Light Blue/White",
+      "Ocean Green",
+      "Moon Gold",
+      "Pink/White",
+      "Translucent",
       "Black/Black",
+      "Black/Energy Orange",
       "Black/Fishtail Blue",
       "Black/Flash Yellow",
       "Black/Hot Pink",
       "Black/Metallic Dark Red",
       "Black/Metallic Silver",
-      "Black/Ocean Green"
+      "Black/Ocean Green",
+      "Black/Siesta Green"
      ],
-     "color_source": "https://tusa.com/product/freedom-ceos-mask/",
-     "color_platform": "woocommerce"
+     "color_source": "https://tusa.com/us-en/TUSA/Masks/Freedom_Ceos"
     },
     {
      "rank": 7,
@@ -538,7 +535,9 @@
       "Sold in black only, with no swivel on the buckles and no drop-in prescription lens option"
      ],
      "color_source": "https://www.hollis.com/product/mask-m-1/",
-     "color_platform": "woocommerce"
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 8,
@@ -591,11 +590,7 @@
       "White",
       "Army Green"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/masks/frameless-dive-mask",
-     "color_platform": "other",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/scubapro-frameless--black.jpg"
-     }
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/masks/frameless-dive-mask"
     },
     {
      "rank": 9,
@@ -644,30 +639,21 @@
      ],
      "colors": [
       "Black/Black",
-      "Black/Red",
-      "Black/Royal Blue",
-      "Black/Aqua",
-      "Black/Pink",
-      "Black/Purple",
-      "Clear/Black",
-      "Clear/Blue",
-      "Clear/Pink",
-      "Clear/Purple"
+      "Red/Black",
+      "Aqua/Black",
+      "Blue/Black",
+      "Royal Blue/Black",
+      "Yellow/Black",
+      "Pink/Black",
+      "Purple/Black",
+      "Black/Clear",
+      "Aqua/Clear",
+      "Blue/Clear",
+      "Yellow/Clear",
+      "Pink/Clear",
+      "Purple/Clear"
      ],
-     "color_source": "https://divecatalog.com/products/atomic-aquatics-subframe-mask",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black/Black": "assets/gear/studio/hero/atomic-aquatics-subframe--black-black.jpg",
-      "Black/Red": "assets/gear/studio/hero/atomic-aquatics-subframe--black-red.jpg",
-      "Black/Royal Blue": "assets/gear/studio/hero/atomic-aquatics-subframe--black-royal-blue.jpg",
-      "Black/Aqua": "assets/gear/studio/hero/atomic-aquatics-subframe--black-aqua.jpg",
-      "Black/Pink": "assets/gear/studio/hero/atomic-aquatics-subframe--black-pink.jpg",
-      "Black/Purple": "assets/gear/studio/hero/atomic-aquatics-subframe--black-purple.jpg",
-      "Clear/Black": "assets/gear/studio/hero/atomic-aquatics-subframe--clear-black.jpg",
-      "Clear/Blue": "assets/gear/studio/hero/atomic-aquatics-subframe--clear-blue.jpg",
-      "Clear/Pink": "assets/gear/studio/hero/atomic-aquatics-subframe--clear-pink.jpg",
-      "Clear/Purple": "assets/gear/studio/hero/atomic-aquatics-subframe--clear-purple.jpg"
-     }
+     "color_source": "https://www.atomicaquatics.com/products/masks/subframe/"
     },
     {
      "rank": 10,
@@ -706,26 +692,14 @@
      },
      "colors": [
       "Black",
-      "Black / Blue / Orange lens",
-      "Blue",
-      "Clear",
-      "Pink",
-      "Silver",
-      "Turquoise",
       "White",
-      "Yellow"
+      "Clear",
+      "Blue",
+      "Yellow",
+      "Pink",
+      "Lilac",
+      "Silver"
      ],
-     "color_images": {
-      "Black": "assets/gear/studio/hero/cressi-f1-frameless--black.jpg",
-      "Black / Blue / Orange lens": "assets/gear/studio/hero/cressi-f1-frameless--black-blue-orange-lens.jpg",
-      "Blue": "assets/gear/studio/hero/cressi-f1-frameless--blue.jpg",
-      "Clear": "assets/gear/studio/hero/cressi-f1-frameless--clear.jpg",
-      "Pink": "assets/gear/studio/hero/cressi-f1-frameless--pink.jpg",
-      "Silver": "assets/gear/studio/hero/cressi-f1-frameless--silver.jpg",
-      "Turquoise": "assets/gear/studio/hero/cressi-f1-frameless--turquoise.jpg",
-      "White": "assets/gear/studio/hero/cressi-f1-frameless--white.jpg",
-      "Yellow": "assets/gear/studio/hero/cressi-f1-frameless--yellow.jpg"
-     },
      "pros": [
       "A single CE-certified tempered lens is bonded straight to the skirt with no frame in between, which is where the low profile and the wide peripheral and downward view come from",
       "Weighs under 200 g and folds flat, so it doubles as a backup mask in a BC pocket",
@@ -736,8 +710,7 @@
       "The shell runs compact — small-to-medium faces seal best, and Cressi's answer to fit problems is the even narrower F1 Small, so broad faces are out of range",
       "Like most frameless masks the glass ships with mold-release residue; owners report several rounds of flame or abrasive treatment before defog holds"
      ],
-     "color_source": "https://store.cressi.com/products/f1-mask",
-     "color_platform": "shopify"
+     "color_source": "https://store.cressi.com/products/f1-mask"
     },
     {
      "rank": 11,
@@ -787,18 +760,16 @@
      ],
      "colors": [
       "Black/White",
+      "White/White",
       "Blue/White",
-      "Navy Blue/Sand",
-      "Orange/Transparent",
-      "Petrol/Petrol",
-      "Transparent/Black",
-      "Transparent/Pink"
+      "Navy/Sand",
+      "Brick/Navy",
+      "Yellow/Asphalt",
+      "Apricot/Clear",
+      "Pink/Clear",
+      "Petrol/Petrol"
      ],
-     "color_source": "https://us.aqualung.com/products/plazma-dive-mask",
-     "color_platform": "shopify",
-     "color_images": {
-      "Orange/Transparent": "assets/gear/studio/hero/aqua-lung-plazma--orange-transparent.jpg"
-     }
+     "color_source": "https://www.divers-supply.com/aqua-lung-plazma-mask.html"
     },
     {
      "rank": 12,
@@ -848,20 +819,12 @@
       "Runs small-to-medium; big faces find the skirt tight"
      ],
      "colors": [
-      "Black",
-      "Black/Blue",
+      "Black/Black",
+      "Green/Green",
       "Blue Metal",
-      "Green",
       "White/Pink"
      ],
-     "color_source": "https://store.cressi.com/products/calibro-mask",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/cressi-calibro--black.jpg",
-      "Black/Blue": "assets/gear/studio/hero/cressi-calibro--black-blue.jpg",
-      "Green": "assets/gear/studio/hero/cressi-calibro--green.jpg",
-      "White/Pink": "assets/gear/studio/hero/cressi-calibro--white-pink.jpg"
-     }
+     "color_source": "https://cressiamerica.com/products/calibro-mask"
     },
     {
      "rank": 13,
@@ -914,19 +877,22 @@
       "White",
       "Blue",
       "Ultra Blue",
+      "Atoll Blue",
       "Red",
       "Orange",
-      "Green",
-      "Fluo Green",
       "Fluo Yellow",
+      "Green",
+      "Almond Green",
+      "Fluo Green",
+      "Acid Green",
+      "Brown",
       "Fluo Pink",
       "Raspberry",
-      "Brown",
       "Green Water",
-      "Warm Grey"
+      "Warm Grey",
+      "Marble"
      ],
-     "color_source": "https://www.beuchat-sports.com/gb/products/149-maxlux-s.html",
-     "color_platform": "other"
+     "color_source": "https://www.beuchat-sports.com/gb/products/149-maxlux-s.html"
     },
     {
      "rank": 14,
@@ -975,10 +941,13 @@
      ],
      "colors": [
       "Black",
-      "White"
+      "White",
+      "Grey",
+      "Orange",
+      "Grey/Orange",
+      "Orange/Grey"
      ],
-     "color_source": "https://us.apeksdiving.com/products/vx1-dive-mask",
-     "color_platform": "shopify"
+     "color_source": "https://www.dirdirect.com/products/apeks-vx1-mask"
     },
     {
      "rank": 15,
@@ -1036,17 +1005,7 @@
       "Black/Rose Pink",
       "White/White"
      ],
-     "color_source": "https://www.houseofscuba.com/products/msk366",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black/Black": "assets/gear/studio/hero/tusa-paragon--black-black.jpg",
-      "Black/Energy Green": "assets/gear/studio/hero/tusa-paragon--black-energy-green.jpg",
-      "Black/Energy Orange": "assets/gear/studio/hero/tusa-paragon--black-energy-orange.jpg",
-      "Black/Fishtail Blue": "assets/gear/studio/hero/tusa-paragon--black-fishtail-blue.jpg",
-      "Black/Flash Yellow": "assets/gear/studio/hero/tusa-paragon--black-flash-yellow.jpg",
-      "Black/Rose Pink": "assets/gear/studio/hero/tusa-paragon--black-rose-pink.jpg",
-      "White/White": "assets/gear/studio/hero/tusa-paragon--white-white.jpg"
-     }
+     "color_source": "https://tusa.com/us-en/TUSA/Masks/Paragon"
     },
     {
      "rank": 16,
@@ -1098,11 +1057,7 @@
       "Black",
       "White"
      ],
-     "color_source": "https://www.hollis.com/product/m3-mask-black/",
-     "color_platform": "woocommerce",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/hollis-m3--black.jpg"
-     }
+     "color_source": "https://www.hollis.com/product/m3-mask-black/"
     }
    ],
    "title": "Top Masks in 2026",
@@ -1153,21 +1108,13 @@
       "Buoyancy": "Neutral"
      },
      "colors": [
+      "Black",
       "Blue",
+      "Yellow",
       "White",
       "Lime",
-      "Pink",
-      "Black",
-      "Yellow"
+      "Flamingo"
      ],
-     "color_images": {
-      "Blue": "assets/gear/studio/hero/mares-avanti-quattro--blue.jpg",
-      "White": "assets/gear/studio/hero/mares-avanti-quattro--white.jpg",
-      "Lime": "assets/gear/studio/hero/mares-avanti-quattro--lime.jpg",
-      "Pink": "assets/gear/studio/hero/mares-avanti-quattro--pink.jpg",
-      "Black": "assets/gear/studio/hero/mares-avanti-quattro--black.jpg",
-      "Yellow": "assets/gear/studio/hero/mares-avanti-quattro--yellow.jpg"
-     },
      "pros": [
       "Four longitudinal channels flex into a scoop mid-stroke, holding water across roughly 780 cm2 of blade instead of spilling it off the edges",
       "Bungee straps come standard, so donning is one pull over the heel even with gloves on",
@@ -1179,8 +1126,7 @@
       "Strong kickers overpower the blade in serious drift current; it rewards a relaxed cadence, not a sprint",
       "The wide foot pocket is loose on narrow feet without a thick boot"
      ],
-     "color_source": "https://dipndive.com/products/mares-avanti-quattro-plus-open-heel-dive-fins",
-     "color_platform": "shopify"
+     "color_source": "https://www.mares.com/en/avanti-quattro-18"
     },
     {
      "rank": 2,
@@ -1232,15 +1178,12 @@
       "Black",
       "White",
       "Blue",
-      "Turquoise",
       "Yellow",
-      "Pink"
+      "Pink",
+      "Purple",
+      "Turquoise"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/seawing-nova-fin",
-     "color_platform": "other",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/scubapro-seawing-nova--black.jpg"
-     }
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/seawing-nova-fin"
     },
     {
      "rank": 3,
@@ -1291,17 +1234,16 @@
      "colors": [
       "Black",
       "White",
-      "Yellow",
       "Red",
-      "Green",
+      "Yellow",
       "Pink",
-      "Green Camo"
+      "Green",
+      "Blue Camo",
+      "Dark Blue Camo",
+      "Green Camo",
+      "White Camo"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/jet-fin-w-spring-heel-strap",
-     "color_platform": "other",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/scubapro-jet-fin--black.jpg"
-     }
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/jet-fin-w-spring-heel-strap"
     },
     {
      "rank": 4,
@@ -1351,14 +1293,12 @@
      ],
      "colors": [
       "Black",
+      "Dark Grey",
       "White",
-      "Yellow"
+      "Yellow",
+      "Pink"
      ],
-     "color_source": "https://us.apeksdiving.com/products/rk3-dive-fins",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/apeks-rk3--black.jpg"
-     }
+     "color_source": "https://us.apeksdiving.com/products/rk3-dive-fins"
     },
     {
      "rank": 5,
@@ -1415,15 +1355,7 @@
       "Rose Pink",
       "White"
      ],
-     "color_source": "https://dipndive.com/products/tusa-sf0104-hyflex-switch-fins",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/tusa-hyflex-switch--black.jpg",
-      "Fishtail Blue": "assets/gear/studio/hero/tusa-hyflex-switch--fishtail-blue.jpg",
-      "Flash Yellow": "assets/gear/studio/hero/tusa-hyflex-switch--flash-yellow.jpg",
-      "Metallic Dark Red": "assets/gear/studio/hero/tusa-hyflex-switch--metallic-dark-red.jpg",
-      "White": "assets/gear/studio/hero/tusa-hyflex-switch--white.jpg"
-     }
+     "color_source": "https://tusa.com/us-en/TUSA/Fins/TUSA_HyFlex_Switch"
     },
     {
      "rank": 6,
@@ -1475,16 +1407,13 @@
      ],
      "colors": [
       "Black",
+      "White",
       "Blue",
       "Turquoise",
-      "White",
-      "Yellow"
+      "Yellow",
+      "Pink"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/go-sport-fin",
-     "color_platform": "other",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/scubapro-go-sport--black.jpg"
-     }
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/go-sport-fin"
     },
     {
      "rank": 7,
@@ -1541,15 +1470,10 @@
       "Red",
       "Pink",
       "Purple",
+      "Aqua",
       "Smoke"
      ],
-     "color_source": "https://santabarbaraaquatics.com/products/atomic-aquatics-open-heel-split-fins",
-     "color_platform": "shopify",
-     "color_images": {
-      "Red": "assets/gear/studio/hero/atomic-aquatics-splitfin--red.jpg",
-      "Purple": "assets/gear/studio/hero/atomic-aquatics-splitfin--purple.jpg",
-      "Smoke": "assets/gear/studio/hero/atomic-aquatics-splitfin--smoke.jpg"
-     }
+     "color_source": "https://www.scuba.com/p-atmfs/atomic-aquatics-split-fins"
     },
     {
      "rank": 8,
@@ -1588,19 +1512,12 @@
       "Strap versions": "sold with quick-release buckles or the EBS bungee heel strap"
      },
      "colors": [
-      "Black / Pink",
-      "Black / Silver",
-      "Black / White",
-      "Black / Yellow",
-      "Blue / Silver"
+      "Black/Silver",
+      "Black/White",
+      "Black/Yellow",
+      "Black/Pink",
+      "Blue/Silver"
      ],
-     "color_images": {
-      "Black / Pink": "assets/gear/studio/hero/cressi-frog-plus--black-pink.jpg",
-      "Black / Silver": "assets/gear/studio/hero/cressi-frog-plus--black-silver.jpg",
-      "Black / White": "assets/gear/studio/hero/cressi-frog-plus--black-white.jpg",
-      "Black / Yellow": "assets/gear/studio/hero/cressi-frog-plus--black-yellow.jpg",
-      "Blue / Silver": "assets/gear/studio/hero/cressi-frog-plus--blue-silver.jpg"
-     },
      "pros": [
       "At 680 g (XS/S) to about 900 g (M/L) per fin it is light for a full open-heel paddle, and short enough to pack diagonally in a standard case",
       "Setting the foot pocket under the blade rather than behind it adds roughly 20% usable blade area without adding length",
@@ -1613,8 +1530,7 @@
       "The buckle socket is a proprietary twist-lock into a hole in the fin body — no stud — so aftermarket spring straps are hard to source and Cressi's replacement straps go out of stock",
       "Cruise efficiency is respectable but top-end speed sits mid-pack; divers chasing thrust outgrow it"
      ],
-     "color_source": "https://store.cressi.com/products/frog-plus-fins",
-     "color_platform": "shopify"
+     "color_source": "https://store.cressi.com/products/frog-plus-fins"
     },
     {
      "rank": 9,
@@ -1664,17 +1580,15 @@
      ],
      "colors": [
       "Black",
-      "White",
-      "Yellow",
+      "White Arctic",
       "Navy Blue",
-      "Petrol",
       "Glacier",
-      "Dark Olive",
+      "Petrol",
       "Raspberry",
-      "Tropic"
+      "Tropic Yellow",
+      "Dark Olive"
      ],
-     "color_source": "https://us.aqualung.com/products/storm-dive-fins",
-     "color_platform": "shopify"
+     "color_source": "https://us.aqualung.com/products/storm-dive-fins"
     },
     {
      "rank": 10,
@@ -1727,8 +1641,7 @@
       "White",
       "Orange"
      ],
-     "color_source": "https://www.mares.com/en_US/product/power-plana-lt-410052",
-     "color_platform": "other"
+     "color_source": "https://www.mares.com/en/power-plana-lt-410052"
     },
     {
      "rank": 11,
@@ -1779,8 +1692,7 @@
       "Blue",
       "Yellow"
      ],
-     "color_source": "https://www.beuchat-diving.com/gb/fins-diving/197-powerjet-avec-sangles-a-ressorts-3278551541717.html",
-     "color_platform": "other"
+     "color_source": "https://www.beuchat-diving.com/gb/fins-diving/197-powerjet-avec-sangles-a-ressorts-3278551541717.html"
     },
     {
      "rank": 12,
@@ -1832,8 +1744,7 @@
       "Black",
       "White"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/seawing-supernova-fin",
-     "color_platform": "other"
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/fins/seawing-supernova-fin"
     },
     {
      "rank": 13,
@@ -1880,7 +1791,9 @@
       "Three sizes (Regular, XL, XXL) start at US men's 7 and run their own way; most divers size up, and smaller feet are outside the range."
      ],
      "color_source": "https://www.hollis.com/product/f1-bat-fin/",
-     "color_platform": "woocommerce"
+     "colors": [
+      "Black"
+     ]
     }
    ],
    "title": "Top Fins in 2026",
@@ -1942,14 +1855,11 @@
       "Some owners report a brief surface freeflow the first time they hit the purge until they learn to feather it."
      ],
      "colors": [
-      "Black",
-      "White"
+      "Black/Chrome",
+      "White (limited edition)",
+      "Carbon Black Tech (60th Anniversary edition)"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/regulators/systems",
-     "color_platform": "other",
-     "color_images": {
-      "White": "assets/gear/studio/hero/scubapro-mk25-evo-s620-ti--white.jpg"
-     }
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/regulators/systems/mk25-evo-s620-ti-white-dive-regulator-system"
     },
     {
      "rank": 2,
@@ -1999,7 +1909,9 @@
       "Even in the sealed version, ice and hard-cold divers tend to choose diaphragm designs over this piston."
      ],
      "color_source": "https://www.atomicaquatics.com/products/regulators/t3-regulator/",
-     "color_platform": "other"
+     "colors": [
+      "Titanium/Gray"
+     ]
     },
     {
      "rank": 3,
@@ -2047,7 +1959,9 @@
       "Forum posters consistently flag the price as high for a brass-and-chrome design that has changed little in years."
      ],
      "color_source": "https://us.apeksdiving.com/products/xtx50-dive-regulator",
-     "color_platform": "shopify"
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 4,
@@ -2095,7 +2009,9 @@
       "The yoke first stage weighs 957 g, 210 g more than the DIN, which adds up in a travel bag."
      ],
      "color_source": "https://us.aqualung.com/products/leg3nd-dive-regulator",
-     "color_platform": "shopify"
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 5,
@@ -2143,8 +2059,10 @@
       "Yoke version weighs 885 g, 220 g more than the DIN set",
       "Cold-water, silt-focused build is overkill for warm-water holiday diving"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/regulators/systems/mk19-evo-bt-g260-carbon-bt-dive-regulator-system",
-     "color_platform": "other"
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/regulators/systems/mk19-evo-bt-g260-carbon-bt-dive-regulator-system/12719600",
+     "colors": [
+      "Black (Black Tech/Carbon)"
+     ]
     },
     {
      "rank": 6,
@@ -2193,7 +2111,10 @@
       "Second-stage case has thin alignment guides that can deform during a hose change, and servicing requires an Apeks-certified technician"
      ],
      "color_source": "https://us.apeksdiving.com/products/mtx-rc-dive-regulator",
-     "color_platform": "shopify"
+     "colors": [
+      "Grey",
+      "Black/Bronze (50 Years limited edition)"
+     ]
     },
     {
      "rank": 7,
@@ -2241,8 +2162,10 @@
       "Purge cover pivots instead of pressing straight in - a Mares quirk that takes getting used to",
       "82X first stage is bulkier than the older Mares units it replaced"
      ],
-     "color_source": "https://divecatalog.com/products/mares-epic-adj-82x-regulator",
-     "color_platform": "shopify"
+     "color_source": "https://www.mares.com/en_US/epic-82x-2",
+     "colors": [
+      "Black/Chrome"
+     ]
     },
     {
      "rank": 8,
@@ -2289,8 +2212,10 @@
       "Exhalation feels rougher than the smooth servo-assisted inhale - divers describe it as chuggy",
       "Servo second stages are unfamiliar to many service techs, and some divers report leak-prone units"
      ],
-     "color_source": "https://divecatalog.com/products/hollis-500se-dc7-dive-regulator-set",
-     "color_platform": "shopify"
+     "color_source": "https://www.scuba.com/p-hlsdc75/hollis-dc7-500se-regulator-with-maxflex-hose",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 9,
@@ -2338,8 +2263,10 @@
       "Forum reports mention the ACD mechanism occasionally sticking on yoke first stages",
       "Free-parts warranty only holds if you log an inspection every year and an overhaul every two years at an authorized Aqua Lung dealer, with proof of purchase"
      ],
-     "color_source": "https://www.houseofscuba.com/products/reg287",
-     "color_platform": "shopify"
+     "color_source": "https://www.scuba.com/p-udrcsy/aqua-lung-core-supreme-regulator-yoke",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 10,
@@ -2387,8 +2314,13 @@
       "The second stage carries its weight at the end, which some divers feel in the jaw on long dives",
       "Sherwood's dealer and service network is thinner than the biggest brands, so parts and qualified technicians can be hard to find at remote destinations"
      ],
-     "color_source": "https://www.houseofscuba.com/products/reg150",
-     "color_platform": "shopify"
+     "color_source": "https://www.scubadiving.com/sherwood-sr2-regulator-0",
+     "colors": [
+      "Black",
+      "Blue (colour kit)",
+      "Turquoise (colour kit)",
+      "Magenta (colour kit)"
+     ]
     },
     {
      "rank": 11,
@@ -2436,8 +2368,10 @@
       "The second stage offers venturi control only, with no diver-adjustable cracking effort",
       "The yoke version weighs 1173 g, 153 g more than the DIN"
      ],
-     "color_source": "https://spearfishingexperts.com/products/beuchat-vr300-regulator",
-     "color_platform": "shopify"
+     "color_source": "https://www.tradeinn.com/diveinn/en/beuchat-vr300-int-diving-regulator-set/137478522/p",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 12,
@@ -2486,8 +2420,10 @@
       "No inhalation-effort knob; the venturi lever is the only control on the second stage",
       "The XL4-series second stage needs model-specific service tools, and Apeks specifies annual servicing, so you are tied to a properly equipped Apeks dealer"
      ],
-     "color_source": "https://us.apeksdiving.com/products/xl4-1st-stage-dive-regulator",
-     "color_platform": "shopify"
+     "color_source": "https://www.divers-supply.com/apeks-xl4-plus-regulator-din.html",
+     "colors": [
+      "White"
+     ]
     },
     {
      "rank": 13,
@@ -2538,17 +2474,16 @@
       "At roughly US$970 for the yoke version it costs flagship money from most other brands, and the sealed first stage adds more"
      ],
      "colors": [
-      "Black",
-      "Gray",
-      "Red",
-      "Royal Blue",
-      "Aqua",
-      "Yellow",
-      "Pink",
-      "Purple"
+      "Black/Chrome",
+      "Gray (colour kit)",
+      "Red (colour kit)",
+      "Royal Blue (colour kit)",
+      "Yellow (colour kit)",
+      "Pink (colour kit)",
+      "Purple (colour kit)",
+      "Black (colour kit)"
      ],
-     "color_source": "https://www.otadiving.com/products/atomic-aquatics-b2-color-kit",
-     "color_platform": "shopify"
+     "color_source": "https://www.scuba.com/p-atmckb2/atomic-aquatics-color-kit-for-b2-regulator"
     },
     {
      "rank": 14,
@@ -2595,15 +2530,14 @@
       "The warranty still requires an annual technician inspection even in the year you skip the full rebuild"
      ],
      "colors": [
-      "Aqua",
       "Black",
-      "Blue",
-      "Pink",
-      "Purple",
-      "Red"
+      "Aqua (colour kit)",
+      "Blue (colour kit)",
+      "Red (colour kit)",
+      "Pink (colour kit)",
+      "Purple (colour kit)"
      ],
-     "color_source": "https://www.zeagle.com/product/accessories/airway-accessories/f8-color-kit/",
-     "color_platform": "woocommerce"
+     "color_source": "https://www.zeagle.com/product/accessories/airway-accessories/f8-color-kit/"
     }
    ],
    "title": "Top Regulators in 2026",
@@ -2668,16 +2602,15 @@
      "colors": [
       "Black",
       "White",
-      "Yellow",
-      "Pink",
       "Blue",
-      "Purple",
-      "Orange",
       "Turquoise",
-      "Olive Green"
+      "Yellow",
+      "Orange",
+      "Pink",
+      "Purple",
+      "Army Green"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/accessories/bcd-accessories/hydros-bcd-color-kit",
-     "color_platform": "other"
+     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/accessories/bcd-accessories/hydros-bcd-color-kit"
     },
     {
      "rank": 2,
@@ -2726,8 +2659,10 @@
       "Weight integration is an extra purchase, which erodes the low sticker price",
       "The stripped-down layout assumes experience; new divers miss the usual handholds and pockets"
      ],
-     "color_source": "https://www.houseofscuba.com/products/aqua-lung-outlaw-bc-bcd-scuba-diving-buoyancy-compensator",
-     "color_platform": "shopify"
+     "color_source": "https://www.scuba.com/p-udrol/aqualung-outlaw-bcd",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 3,
@@ -2766,13 +2701,8 @@
       "Lift range": "6-16.3 kg by size"
      },
      "colors": [
-      "Black / Blue",
-      "Black / Pink"
+      "Black/Blue"
      ],
-     "color_images": {
-      "Black / Blue": "assets/gear/studio/hero/cressi-travelight--black-blue.jpg",
-      "Black / Pink": "assets/gear/studio/hero/cressi-travelight--black-pink.jpg"
-     },
      "pros": [
       "2.5 kg in size M, and it folds into its own 36 x 25 x 15 cm bag that fits inside carry-on luggage",
       "Keeps full-BCD features at travel weight: 8 D-rings, real zippered pockets and 9 kg of ditchable lead plus 5 kg of trim",
@@ -2783,8 +2713,7 @@
       "The 210-denier body fabric shows wear sooner than heavier BCDs if you log 100+ dives a year",
       "The chest strap placement fits poorly on some builds, a common gripe against its closest travel rivals"
      ],
-     "color_source": "https://store.cressi.com/products/travelight-b-c-d",
-     "color_platform": "shopify"
+     "color_source": "https://cressiamerica.com/products/travelight"
     },
     {
      "rank": 4,
@@ -2832,8 +2761,10 @@
       "The weight-pocket handles protrude from the front of the jacket and catch on kit",
       "The proprietary Mares inflator and D-ring placement draw criticism from divers used to standard layouts"
      ],
-     "color_source": "https://www.mares.com/en_US/dragon-sls-5",
-     "color_platform": "other"
+     "color_source": "https://www.scuba.com/p-mrsdrs/mares-dragon-sls-weight-system-bcd",
+     "colors": [
+      "Black/Blue"
+     ]
     },
     {
      "rank": 5,
@@ -2883,7 +2814,16 @@
       "Stock colorway is black only - custom panels add a fee and factory lead time"
      ],
      "color_source": "https://www.zeagle.com/customize/custom-ranger-bcd/",
-     "color_platform": "woocommerce"
+     "colors": [
+      "Black",
+      "Blue",
+      "Red",
+      "Green",
+      "Purple",
+      "Pink",
+      "Neon Yellow",
+      "Camo"
+     ]
     },
     {
      "rank": 6,
@@ -2932,8 +2872,10 @@
       "The Super Cinch buckle can pinch fingers while tensioning with the tank seated",
       "One colorway only - black with silver, blue and white graphics"
      ],
-     "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/bcds/level-bcd",
-     "color_platform": "other"
+     "color_source": "https://www.divers-supply.com/scubapro-level-scuba-bcd-w-balanced-inflator.html",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 7,
@@ -2982,7 +2924,10 @@
       "Runs large (buy a size down) and carries inherent buoyancy that must be offset with extra lead"
      ],
      "color_source": "https://us.aqualung.com/products/pro-hd-mens-dive-bcd",
-     "color_platform": "shopify"
+     "colors": [
+      "Black/Blue Petrol",
+      "Black/Grey"
+     ]
     },
     {
      "rank": 8,
@@ -3035,11 +2980,7 @@
       "Black/Grey",
       "Black/Orange"
      ],
-     "color_source": "https://us.apeksdiving.com/products/exotec-dive-bcd",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black/Grey": "assets/gear/studio/hero/apeks-exotec--black-grey.jpg"
-     }
+     "color_source": "https://us.apeksdiving.com/products/exotec-dive-bcd"
     },
     {
      "rank": 9,
@@ -3089,27 +3030,9 @@
       "The steel-plate set at about 5.5 kg cancels the travel argument; pick the plate for the diving you do"
      ],
      "colors": [
-      "Black",
-      "Dark Grey",
-      "Light Grey",
-      "White",
-      "Blue",
-      "Lime",
-      "Red",
-      "Yellow",
-      "Sea",
-      "Multicam"
+      "Black"
      ],
-     "color_source": "https://tecdivegear.com/products/color-xdeep-zeos-deluxe-scuba-diving-bcd",
-     "color_platform": "shopify",
-     "color_images": {
-      "White": "assets/gear/studio/hero/xdeep-zeos-28--white.jpg",
-      "Blue": "assets/gear/studio/hero/xdeep-zeos-28--blue.jpg",
-      "Lime": "assets/gear/studio/hero/xdeep-zeos-28--lime.jpg",
-      "Red": "assets/gear/studio/hero/xdeep-zeos-28--red.jpg",
-      "Yellow": "assets/gear/studio/hero/xdeep-zeos-28--yellow.jpg",
-      "Sea": "assets/gear/studio/hero/xdeep-zeos-28--sea.jpg"
-     }
+     "color_source": "https://www.tradeinn.com/diveinn/en/xdeep-zeos-28-wing/628949/p"
     },
     {
      "rank": 10,
@@ -3156,8 +3079,10 @@
       "Only 4.6 kg of ditchable lead total, so cooler-water suits force a weight belt",
       "No crotch strap or mounting point for one, which wing divers notice immediately"
      ],
-     "color_source": "https://www.hollis.com/product/hollis-light-travel-system/",
-     "color_platform": "woocommerce"
+     "color_source": "https://www.tradeinn.com/diveinn/en/hollis-l.t.s-bcd-jacket/1248108/p",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 11,
@@ -3206,15 +3131,9 @@
       "3.9 kg in Large is mid-pack weight; it neither travels light nor adds cold-water toughness for it"
      ],
      "colors": [
-      "Black/Silver",
-      "Blue",
-      "White/Black"
+      "Blue"
      ],
-     "color_source": "https://athensscubapark.com/shop-products/ols/products/mares-prestige-sls-bcd",
-     "color_platform": "other",
-     "color_images": {
-      "Blue": "assets/gear/studio/hero/mares-prestige-sls--blue.jpg"
-     }
+     "color_source": "https://www.mares.com/en_US/prestige-sls-man-5"
     },
     {
      "rank": 12,
@@ -3258,8 +3177,10 @@
       "3.1 kg dry is a kilogram more than dedicated travel BCDs, without their fold-flat packing",
       "Single colorway only"
      ],
-     "color_source": "https://www.scuba.com/p-csba/cressi-ace-bcd",
-     "color_platform": "other"
+     "color_source": "https://www.amazon.com/Cressi-IC741401-Parent-Ace-BCD/dp/B07T8HKHVC",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 13,
@@ -3309,7 +3230,9 @@
       "One colorway - the high-visibility black/orange is a safety argument, not a choice"
      ],
      "color_source": "https://www.beuchat-sports.com/gb/products/143-masterlift-x-air-comfort.html",
-     "color_platform": "other"
+     "colors": [
+      "Black/Orange"
+     ]
     },
     {
      "rank": 14,
@@ -3363,12 +3286,7 @@
       "Black",
       "Red"
      ],
-     "color_source": "https://www.atomicaquatics.com/products/bcd/bc1/",
-     "color_platform": "other",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/atomic-aquatics-bc1--black.jpg",
-      "Red": "assets/gear/studio/hero/atomic-aquatics-bc1--red.jpg"
-     }
+     "color_source": "https://www.atomicaquatics.com/products/the-vault/bc1/"
     },
     {
      "rank": 15,
@@ -3413,8 +3331,20 @@
       "Special-order colors add weeks of factory lead time",
       "The single-webbing harness philosophy, even padded in Deluxe trim, feels spartan to divers arriving from jackets"
      ],
-     "color_source": "https://www.mikesdivestore.com/products/xdeep-nx-ghost-deluxe-full-setup-wing-system-special-order-colours",
-     "color_platform": "shopify"
+     "color_source": "https://www.xdeep.eu/bcd-color-options-catalog-nsc-13.html",
+     "colors": [
+      "Black",
+      "Red",
+      "Blue",
+      "Dark Gray",
+      "Light Gray",
+      "Green",
+      "Yellow",
+      "White",
+      "Lavender",
+      "Pink",
+      "Camo"
+     ]
     },
     {
      "rank": 16,
@@ -3458,8 +3388,11 @@
       "Loaded weight pouches crowd the zippered cargo pockets, and the strap webbing drags through its buckles when cinching",
       "The soft backpack flexes under a heavy cylinder where rivals fit a rigid plate"
      ],
-     "color_source": "https://www.scuba.com/p-swdav7/sherwood-avid-cqr-3-bcd-2018-model",
-     "color_platform": "other"
+     "color_source": "https://www.sherwoodscuba.com/products/buoyancy-compensators/products/~743-Avid",
+     "colors": [
+      "Black",
+      "Phantom"
+     ]
     }
    ],
    "title": "Top BCDs in 2026",
@@ -3523,15 +3456,11 @@
       "Charging depends on a loose-sitting induction pad that gets knocked out of position in a gear bag and is hard to replace mid-trip"
      ],
      "colors": [
-      "Black (Original)",
-      "White (Adventures Edition Light)",
-      "Gray (Adventures Edition Dark)"
+      "Black",
+      "White/Teal",
+      "Gray/Orange"
      ],
-     "color_source": "https://www.divegearexpress.com/computers/shearwater-peregrine-category",
-     "color_platform": "other",
-     "color_images": {
-      "White (Adventures Edition Light)": "assets/gear/studio/hero/shearwater-peregrine--white-adventures-edition-light.jpg"
-     }
+     "color_source": "https://shearwater.com/blogs/community/peregrine-adventures-edition-en"
     },
     {
      "rank": 2,
@@ -3582,11 +3511,11 @@
       "Settings do not carry over from earlier Descent models, and owners report the Garmin Dive app logging them out at the dock"
      ],
      "colors": [
-      "Carbon Gray DLC Titanium with Black Silicone Band",
-      "Bronze PVD Titanium with French Gray Silicone Band"
+      "Carbon Gray DLC Titanium/Black Band",
+      "Bronze PVD Titanium/French Gray Band",
+      "Carbon Gray DLC Titanium/Titanium Band"
      ],
-     "color_source": "https://www.garmin.com/en-US/p/852217/",
-     "color_platform": "other"
+     "color_source": "https://www.garmin.com/en-US/p/852217/"
     },
     {
      "rank": 3,
@@ -3636,14 +3565,10 @@
       "The bottom-row gas label is fixed in the screen layout, taking space owners would rather give to runtime or average depth"
      ],
      "colors": [
-      "Ti Black",
-      "Ti Silver"
+      "Black",
+      "Silver"
      ],
-     "color_source": "https://shearwater.com/products/perdix-2",
-     "color_platform": "shopify",
-     "color_images": {
-      "Ti Silver": "assets/gear/studio/hero/shearwater-perdix-2--ti-silver.jpg"
-     }
+     "color_source": "https://www.divegearexpress.com/shearwater-research-perdix-2-ti"
     },
     {
      "rank": 4,
@@ -3697,12 +3622,7 @@
       "Steel Black",
       "Sand"
      ],
-     "color_source": "https://us.suunto.com/products/suunto-ocean-all-black",
-     "color_platform": "shopify",
-     "color_images": {
-      "All Black": "assets/gear/studio/hero/suunto-ocean--all-black.jpg",
-      "Sand": "assets/gear/studio/hero/suunto-ocean--sand.jpg"
-     }
+     "color_source": "https://us.suunto.com/products/suunto-ocean-all-black"
     },
     {
      "rank": 5,
@@ -3753,10 +3673,12 @@
      ],
      "colors": [
       "Slate Gray",
-      "Powder Gray"
+      "Powder Gray",
+      "Black (Solar)",
+      "Hurricane Blue (Solar)",
+      "Azure Blue (Solar Ocean Edition)"
      ],
-     "color_source": "https://www.garmin.com/en-US/p/766516/",
-     "color_platform": "other"
+     "color_source": "https://www.garmin.com/en-US/p/766516/"
     },
     {
      "rank": 6,
@@ -3806,12 +3728,10 @@
      ],
      "colors": [
       "Black",
-      "Aqua Blue",
-      "Lemon Yellow",
-      "Wildberry"
+      "Blue",
+      "Lime"
      ],
-     "color_source": "https://us.suunto.com/products/suunto-zoop-novo-black",
-     "color_platform": "shopify"
+     "color_source": "https://us.suunto.com/products/suunto-zoop-novo-black"
     },
     {
      "rank": 7,
@@ -3850,21 +3770,13 @@
       "Tissue compartments": "9, half-times 2.5 to 480 minutes"
      },
      "colors": [
-      "Black / Black",
-      "Black / Blue",
-      "Black / Grey",
-      "Black / Pink",
-      "Black / White",
-      "Black / Yellow"
+      "Black/Black",
+      "Black/Grey",
+      "Black/Blue",
+      "Black/Yellow",
+      "Black/Pink",
+      "Black/White"
      ],
-     "color_images": {
-      "Black / Black": "assets/gear/studio/hero/cressi-leonardo--black-black.jpg",
-      "Black / Blue": "assets/gear/studio/hero/cressi-leonardo--black-blue.jpg",
-      "Black / Grey": "assets/gear/studio/hero/cressi-leonardo--black-grey.jpg",
-      "Black / Pink": "assets/gear/studio/hero/cressi-leonardo--black-pink.jpg",
-      "Black / White": "assets/gear/studio/hero/cressi-leonardo--black-white.jpg",
-      "Black / Yellow": "assets/gear/studio/hero/cressi-leonardo--black-yellow.jpg"
-     },
      "pros": [
       "Full decompression management, not just no-deco timing: it keeps calculating stops if you blow the NDL, unlike gauge-only budget units",
       "Complete reset function wipes tissue loading between users, which is why rental fleets and training pools run it by the crate",
@@ -3876,7 +3788,8 @@
       "The Cressi RGBM runs conservative: forum divers report roughly 20% less no-deco time than buddies on other computers, and off-gassing credit only starts shallower than 6 m",
       "One button means long press-and-hold cycles to reach settings; changing a nitrox mix on a pitching boat takes patience",
       "Ascent-rate and deco alarms are loud and divers report no way to soften them; the safety-stop countdown shows whole minutes only"
-     ]
+     ],
+     "color_source": "https://store.cressi.com/products/leonardo-computer"
     },
     {
      "rank": 8,
@@ -3925,7 +3838,16 @@
       "Bluetooth needs the separate Bluelink Pro clip-on dongle, roughly a 60 USD add-on the box does not mention loudly",
       "One-button navigation means cycling forward through the whole menu if you overshoot a setting",
       "The Mares-Wienke RGBM gets conservative on repetitive days, and there is no compass for divers hoping to skip a wrist console"
-     ]
+     ],
+     "colors": [
+      "Black",
+      "White",
+      "Blue",
+      "Yellow",
+      "Lime",
+      "Grey"
+     ],
+     "color_source": "https://www.tradeinn.com/diveinn/en/mares-puck-pro--dive-computer/136145522/p"
     },
     {
      "rank": 9,
@@ -3975,7 +3897,11 @@
       "The plastic lens scratches readily; owners report the screen getting hard to read topside and resort to aftermarket protectors",
       "Early units were recalled for miscalculating no-deco times at altitudes above roughly 900 m, so second-hand buyers need to confirm the fix",
       "The sealed rechargeable battery means charging discipline on liveaboards and a finite cell life with no user swap"
-     ]
+     ],
+     "colors": [
+      "Black"
+     ],
+     "color_source": "https://us.aqualung.com/products/i330r-dive-computer"
     },
     {
      "rank": 10,
@@ -4024,8 +3950,10 @@
       "The screen glass scratches more easily than comparable computers; a protector is a common first purchase.",
       "$1,399 list before adding a single transmitter."
      ],
-     "color_source": "https://us.apeksdiving.com/products/dsx-dive-computer",
-     "color_platform": "shopify"
+     "color_source": "https://www.tradeinn.com/diveinn/en/apeks-dsx-dive-computer/138754797/p",
+     "colors": [
+      "Silver"
+     ]
     },
     {
      "rank": 11,
@@ -4074,8 +4002,10 @@
       "On-unit history stops at 24 dives, so a busy trip overruns it unless you sync to the app.",
       "The stock watch band draws complaints and is often the first thing replaced."
      ],
-     "color_source": "https://www.houseofscuba.com/products/aqua-lung-i470tc-wrist-dive-computer-with-air-integration",
-     "color_platform": "shopify"
+     "color_source": "https://us.aqualung.com/products/i470tc-dive-computer",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 12,
@@ -4129,12 +4059,7 @@
       "Black",
       "Black/Silver"
      ],
-     "color_source": "https://www.scuba.com/p-mrssrwc/mares-sirius-wrist-computer",
-     "color_platform": "other",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/mares-sirius--black.jpg",
-      "Black/Silver": "assets/gear/studio/hero/mares-sirius--black-silver.jpg"
-     }
+     "color_source": "https://www.divers-supply.com/mares-sirius-computer-black-silver.html"
     },
     {
      "rank": 13,
@@ -4189,12 +4114,7 @@
       "Black",
       "Silver"
      ],
-     "color_source": "https://shearwater.com/products/perdix-3",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/shearwater-perdix-3--black.jpg",
-      "Silver": "assets/gear/studio/hero/shearwater-perdix-3--silver.jpg"
-     }
+     "color_source": "https://www.divegearexpress.com/shearwater-research-perdix-3"
     },
     {
      "rank": 14,
@@ -4250,12 +4170,7 @@
       "Blue",
       "Silver"
      ],
-     "color_source": "https://shearwater.com/products/teric",
-     "color_platform": "shopify",
-     "color_images": {
-      "Blue": "assets/gear/studio/hero/shearwater-teric--blue.jpg",
-      "Silver": "assets/gear/studio/hero/shearwater-teric--silver.jpg"
-     }
+     "color_source": "https://www.divegearexpress.com/shearwater-research-teric"
     },
     {
      "rank": 15,
@@ -4306,16 +4221,10 @@
      ],
      "colors": [
       "Black",
-      "Gray",
-      "Navy",
-      "Orange",
-      "Pink"
+      "Blue",
+      "Purple"
      ],
-     "color_source": "https://shearwater.com/products/tern-tx",
-     "color_platform": "shopify",
-     "color_images": {
-      "Black": "assets/gear/studio/hero/shearwater-tern-tx--black.jpg"
-     }
+     "color_source": "https://divernet.com/scuba-gear/shearwater-introduces-limited-edition-tern-tx-in-support-of-global-marine-conservation/"
     },
     {
      "rank": 16,
@@ -4360,8 +4269,10 @@
       "It is big: 232 g and a 101 mm case that sits like a console on smaller wrists — divers coming from watch-sized computers report an adjustment period",
       "At $699 buyers cross-shop the Shearwater Peregrine TX, and the Nautic platform is new; CCR support was promised via a post-launch firmware update rather than shipping in the box"
      ],
-     "color_source": "https://us.suunto.com/products/suunto-nautic-bungee-cord",
-     "color_platform": "shopify"
+     "color_source": "https://www.suunto.com/Products/dive-computers-and-instruments/suunto-nautic/suunto-nautic-bungee-cord/",
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 17,
@@ -4413,7 +4324,9 @@
       "280 g on the nylon strap and $1,499.99 before T2 transceivers, and the glass runs larger than the active display, leaving a black border"
      ],
      "color_source": "https://www.garmin.com/en-US/p/985238/",
-     "color_platform": "other"
+     "colors": [
+      "Black"
+     ]
     },
     {
      "rank": 18,
@@ -4464,7 +4377,10 @@
       "The steel case is heavy for daily wear — Scubapro's own titanium version cuts weight to 99 g, nearly 40% less, but costs more"
      ],
      "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/computers/wrist-computers/galileo-3-g3-wrist-dive-computer",
-     "color_platform": "other"
+     "colors": [
+      "Black",
+      "Titanium/Deep Blue (G3 Ti)"
+     ]
     }
    ],
    "title": "Top Dive Computers in 2026",
@@ -4543,12 +4459,9 @@
        ],
        "colors": [
         "Black/Black",
-        "Black/Graphite",
-        "Black/Slate",
-        "Black/Ocean"
+        "Black/Slate"
        ],
-       "color_source": "https://us.oneill.com/products/5041-a00-reactor-2-mm-back-zip-spring",
-       "color_platform": "shopify"
+       "color_source": "https://us.oneill.com/products/5041-l43-reactor-ii-2mm-bz"
       },
       {
        "rank": 2,
@@ -4597,8 +4510,10 @@
         "At roughly $90-100 it costs $20-30 more than comparable flatlock shorties from Cressi or Bare",
         "Flatlock seams exchange water steadily, so it is a 26°C-plus suit rather than a true 2 mm-rating stretch"
        ],
-       "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/sport-shorty-men-2mm",
-       "color_platform": "other"
+       "color_source": "https://www.tradeinn.com/diveinn/en/scubapro-sport-shorty-2-mm/137989055/p",
+       "colors": [
+        "Black"
+       ]
       },
       {
        "rank": 3,
@@ -4637,13 +4552,8 @@
         }
        ],
        "colors": [
-        "Black / Aquamarine",
-        "Black / Lilac"
+        "Black/Aquamarine"
        ],
-       "color_images": {
-        "Black / Aquamarine": "assets/gear/studio/hero/cressi-lido-2mm-shorty-women-s--black-aquamarine.jpg",
-        "Black / Lilac": "assets/gear/studio/hero/cressi-lido-2mm-shorty-women-s--black-lilac.jpg"
-       },
        "pros": [
         "The front YKK plastic zip makes it fully self-donning — no fishing for a back-zip leash on a moving boat, and the pull sits low enough not to press at the throat",
         "Double-lined neoprene on both faces takes abrasion better than the single-lined suits common at this price",
@@ -4655,8 +4565,7 @@
         "Torso length draws opposite complaints from tall and petite divers, so try-on matters more than the chart",
         "Larger-busted divers report the front zipper creeping down during use"
        ],
-       "color_source": "https://store.cressi.com/products/lido-shorty-lady",
-       "color_platform": "shopify"
+       "color_source": "https://www.scuba.com/p-csbswl/cressi-2mm-lido-womens-shorty-wetsuit"
       },
       {
        "rank": 4,
@@ -4695,13 +4604,9 @@
         }
        ],
        "colors": [
-        "Red",
+        "Black",
         "Blue"
        ],
-       "color_images": {
-        "Red": "assets/gear/studio/hero/bare-2mm-sport-s-flex-shorty--red.jpg",
-        "Blue": "assets/gear/studio/hero/bare-2mm-sport-s-flex-shorty--blue.jpg"
-       },
        "pros": [
         "S-Flex full-stretch neoprene plus the 53 cm back-zip opening makes this one of the fastest 2 mm shorties to don and doff",
         "Seamless underarm panels remove the flatlock seam exactly where shorties chafe on long surface swims",
@@ -4713,8 +4618,7 @@
         "Back-zip entry needs the pull leash or a buddy on a pitching deck",
         "Flatseam construction exchanges water continuously — a 26°C-plus suit like every flatlock shorty"
        ],
-       "color_source": "https://www.wetsuitwearhouse.com/products/1170",
-       "color_platform": "shopify"
+       "color_source": "https://www.scuba.com/p-bresf2m/bare-2mm-sport-s-flex-mens-shorty"
       },
       {
        "rank": 5,
@@ -4766,7 +4670,9 @@
         "Runs snug — owners between sizes advise going up"
        ],
        "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-front-zip-shorty/",
-       "color_platform": "woocommerce"
+       "colors": [
+        "Black/Blue"
+       ]
       },
       {
        "rank": 6,
@@ -4816,11 +4722,10 @@
        ],
        "colors": [
         "Black/Blue",
-        "Black/Grey",
-        "Camo Black/White"
+        "Black/White",
+        "Camo Blue"
        ],
-       "color_source": "https://us.aqualung.com/products/hydroflex-men-s-dive-shorty-3mm",
-       "color_platform": "shopify"
+       "color_source": "https://us.aqualung.com/products/hydroflex-men-s-dive-shorty-3mm"
       },
       {
        "rank": 7,
@@ -4871,10 +4776,9 @@
        ],
        "colors": [
         "Black",
-        "White"
+        "Camo Green"
        ],
-       "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/everflex-steamer-3-2mm-women",
-       "color_platform": "other"
+       "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/everflex-steamer-men-3-2mm-black-s"
       },
       {
        "rank": 8,
@@ -4924,14 +4828,9 @@
         "Wrist and ankle hems are single-stitched, the one place the construction looks its price"
        ],
        "colors": [
-        "Black/Blue",
-        "Black/Aquamarine"
+        "Black/Blue"
        ],
-       "color_source": "https://store.cressi.com/products/lido-wetsuit-man",
-       "color_platform": "shopify",
-       "color_images": {
-        "Black/Blue": "assets/gear/studio/hero/cressi-lido-2mm-full-wetsuit--black-blue.jpg"
-       }
+       "color_source": "https://www.scuba.com/p-csbl2jm/cressi-2mm-lido-mens-full-wetsuit"
       },
       {
        "name": "Waterproof W30 2.5mm Women's",
@@ -4979,8 +4878,10 @@
         "The back zip needs a buddy or a long reach with the leash",
         "Some owners report the wrist openings run loose relative to the otherwise snug cut"
        ],
-       "color_source": "https://www.mikesdivestore.com/products/waterproof-w30-2-5mm-wetsuit-womens-2019",
-       "color_platform": "shopify"
+       "color_source": "https://www.scuba.com/p-wpgw30fwn/waterproof-w30-25mm-womens-full-suit",
+       "colors": [
+        "Black"
+       ]
       }
      ]
     },
@@ -5046,7 +4947,9 @@
         "At $692 on Fourth Element's US store, it costs more than many 5 mm suits; the snug seal-driven fit also pushes buyers a size up"
        ],
        "color_source": "https://fourthelement.com/product/mens-proteus-ii-3mm/",
-       "color_platform": "woocommerce"
+       "colors": [
+        "Black/Grey"
+       ]
       },
       {
        "rank": 2,
@@ -5098,8 +5001,7 @@
        "colors": [
         "Yellow/Black"
        ],
-       "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/definition-steamer-men-3mm",
-       "color_platform": "other"
+       "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/definition-steamer-men-3mm"
       },
       {
        "rank": 3,
@@ -5152,8 +5054,7 @@
         "Black",
         "Blue"
        ],
-       "color_source": "https://www.baresports.com/products/mens-wetsuits/reactive/reactive-3mm/",
-       "color_platform": "woocommerce"
+       "color_source": "https://www.baresports.com/products/mens-wetsuits/reactive/reactive-3mm/"
       },
       {
        "rank": 4,
@@ -5202,11 +5103,9 @@
         "Men's colors stop at black and black/blue"
        ],
        "colors": [
-        "Black",
         "Black/Blue"
        ],
-       "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce"
+       "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/"
       },
       {
        "rank": 5,
@@ -5257,11 +5156,7 @@
        "colors": [
         "Black/Blue"
        ],
-       "color_source": "https://cressiamerica.com/products/morea-wetsuit-man",
-       "color_platform": "shopify",
-       "color_images": {
-        "Black/Blue": "assets/gear/studio/hero/cressi-morea-3mm--black-blue.jpg"
-       }
+       "color_source": "https://cressiamerica.com/products/morea-wetsuit-man"
       },
       {
        "rank": 6,
@@ -5310,8 +5205,10 @@
         "Thin retail stock: scuba.com sells it at closeout pricing and tall sizes come and go",
         "Black only, with no high-visibility option"
        ],
-       "color_source": "https://www.houseofscuba.com/products/wet345",
-       "color_platform": "shopify"
+       "color_source": "https://www.scuba.com/p-pinmetm3/pinnacle-merino-elastiprene-tempo-xt-3mm-mens-jumpsuit",
+       "colors": [
+        "Black"
+       ]
       },
       {
        "rank": 7,
@@ -5361,7 +5258,9 @@
         "One colorway per gender, so no picking a high-visibility option"
        ],
        "color_source": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-3mm",
-       "color_platform": "shopify"
+       "colors": [
+        "Black/Chine Grey"
+       ]
       },
       {
        "rank": 8,
@@ -5414,12 +5313,7 @@
         "Black",
         "Aqua"
        ],
-       "color_source": "https://www.baresports.com/products/womens-wetsuits/evoke/3mm-evoke-21/",
-       "color_platform": "woocommerce",
-       "color_images": {
-        "Black": "assets/gear/studio/hero/bare-evoke-women-s--black.jpg",
-        "Aqua": "assets/gear/studio/hero/bare-evoke-women-s--aqua.jpg"
-       }
+       "color_source": "https://www.baresports.com/products/womens-wetsuits/evoke/3mm-evoke-21/"
       },
       {
        "name": "Beuchat Optima 2",
@@ -5462,8 +5356,10 @@
         "Distribution is Europe-centric; North American shops rarely stock it, so sizing exchanges mean international shipping",
         "Black only, with no high-visibility colorway"
        ],
-       "color_source": "https://www.beuchat-sports.com/gb/wetsuits-diving/753-optima-2-3278555355013.html",
-       "color_platform": "other"
+       "color_source": "https://www.tradeinn.com/diveinn/en/beuchat-optima-2-diving-wetsuit-7-mm/141579386/p",
+       "colors": [
+        "Black"
+       ]
       },
       {
        "name": "Waterproof W5 3.5mm",
@@ -5511,8 +5407,10 @@
         "ScubaBoard owners report seam problems: a glued ankle-cuff seam separating and stray seam threads working loose",
         "Multiple owners find the sizing chart runs small and ended up one size above their measurement"
        ],
-       "color_source": "https://decadiving.com/products/waterproof-w5-mens-3-5mm-fullsuit",
-       "color_platform": "shopify"
+       "color_source": "https://www.scuba.com/p-wpgw35fm/waterproof-w5-35mm-mens-full-wetsuit",
+       "colors": [
+        "Black/Grey"
+       ]
       },
       {
        "name": "Pinnacle Cruiser 3mm",
@@ -5560,7 +5458,9 @@
         "Surface stitching frays with use — cosmetic, since the seams are glued and blind stitched both sides, but it looks worn early"
        ],
        "color_source": "https://www.wetsuitwearhouse.com/products/ws51mbk-3mm-mens-pinnacle-cruiser-wetsuit",
-       "color_platform": "shopify"
+       "colors": [
+        "Black"
+       ]
       }
      ]
     },
@@ -5625,13 +5525,10 @@
         "Some divers dismiss the infrared-mineral claims as marketing, since the warmth benefit is hard to separate from the suit's tight NST construction."
        ],
        "colors": [
-        "Black"
+        "Black",
+        "Blue"
        ],
-       "color_source": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/reactive-5mm/",
-       "color_platform": "woocommerce",
-       "color_images": {
-        "Black": "assets/gear/studio/hero/bare-reactive--black.jpg"
-       }
+       "color_source": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/reactive-5mm/"
       },
       {
        "rank": 2,
@@ -5682,10 +5579,9 @@
         "Because the seals grip harder than the body panels, sizing is awkward, and some divers between sizes cannot find a combination where both the suit and the neck fit."
        ],
        "colors": [
-        "Black"
+        "Black/Red"
        ],
-       "color_source": "https://fourthelement.com/product/mens-proteus-ii-5mm-diving-wetsuit/",
-       "color_platform": "woocommerce"
+       "color_source": "https://fourthelement.com/product/mens-proteus-ii-5mm-diving-wetsuit/"
       },
       {
        "rank": 3,
@@ -5738,8 +5634,7 @@
        "colors": [
         "Black"
        ],
-       "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/everflex-yulex-dive-steamer-men-5-4mm",
-       "color_platform": "other"
+       "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/everflex-yulex-dive-steamer-men-5-4mm"
       },
       {
        "rank": 4,
@@ -5790,10 +5685,10 @@
         "Very soft, high-stretch neoprene trades some robustness for comfort; it marks and compresses more readily than stiffer suits."
        ],
        "colors": [
-        "Black"
+        "Black/Heather Blue",
+        "Black/Heather Gray"
        ],
-       "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce"
+       "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/"
       },
       {
        "rank": 5,
@@ -5843,10 +5738,9 @@
         "It is sold in a single dark colorway, which makes suits easy to confuse on a crowded dive boat."
        ],
        "colors": [
-        "Black/Charcoal"
+        "Black/Chine Grey"
        ],
-       "color_source": "https://scuba.com/products/aqua-lung-aquaflex-5mm-mens-jumpsuit-black-charcoal",
-       "color_platform": "shopify"
+       "color_source": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-5mm"
       },
       {
        "rank": 6,
@@ -5897,7 +5791,9 @@
         "The neoprene compresses with use; one owner measured roughly 3 mm remaining of the original 5 mm after two years of regular diving"
        ],
        "color_source": "https://www.scuba.com/p-csbc2m/cressi-5mm-castoro-mens-full-wetsuit",
-       "color_platform": "other"
+       "colors": [
+        "Black"
+       ]
       },
       {
        "rank": 7,
@@ -5948,7 +5844,10 @@
         "One colorway — black — with no lighter option for divers who overheat topside in the sun"
        ],
        "color_source": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/5mm-nixie-ultra/",
-       "color_platform": "woocommerce"
+       "colors": [
+        "Black",
+        "Grey Heather"
+       ]
       },
       {
        "rank": 8,
@@ -5997,8 +5896,10 @@
         "Scubapro's Euro cut runs slim — forum consensus is one to two sizes smaller than US brands, so try it on or size up",
         "One colorway per cut (black/blue men's, black/turquoise women's), with no neutral all-black men's option"
        ],
-       "color_source": "https://www.houseofscuba.com/products/wet473",
-       "color_platform": "shopify"
+       "color_source": "https://scubapro.johnsonoutdoors.com/us/shop/dive-wear/wetsuits/definition-steamer-men-5mm",
+       "colors": [
+        "Black/Blue"
+       ]
       },
       {
        "name": "Beuchat Focea Comfort 6",
@@ -6046,8 +5947,10 @@
         "Beuchat's European sizing assumes a taller, slimmer frame than US charts — measure against the chart rather than guessing your usual letter size",
         "Choosing the attached-hood version drops the construction to 40 panels in 14 neoprene grades, so some of the fit advantage goes with it"
        ],
-       "color_source": "https://www.tradeinn.com/diveinn/en/beuchat-focea-comfort-6-5-mm-diving-wetsuit/137281429/p",
-       "color_platform": "other"
+       "color_source": "https://www.beuchat-diving.com/gb/products/376-focea-comfort-5-homme-monopiece-col.html",
+       "colors": [
+        "Black/Lime"
+       ]
       },
       {
        "name": "Bare Velocity Ultra 2.0 5mm",
@@ -6098,15 +6001,9 @@
        ],
        "colors": [
         "Black",
-        "Blue",
-        "Lava"
+        "Blue"
        ],
-       "color_source": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/5mm-velocity-ultra-full-2-0/",
-       "color_platform": "woocommerce",
-       "color_images": {
-        "Black": "assets/gear/studio/hero/bare-velocity-ultra-2-0-5mm--black.jpg",
-        "Blue": "assets/gear/studio/hero/bare-velocity-ultra-2-0-5mm--blue.jpg"
-       }
+       "color_source": "https://www.baresports.com/products/all-wetsuits/5mm-wetsuits/5mm-velocity-ultra-full-2-0/"
       },
       {
        "name": "Fourth Element Xenos ARC 5mm",
@@ -6150,7 +6047,9 @@
         "Short and Tall options are offered in most, but not all, sizes"
        ],
        "color_source": "https://fourthelement.com/product/mens-xenos-arc-5mm-wetsuit/",
-       "color_platform": "woocommerce"
+       "colors": [
+        "Black"
+       ]
       },
       {
        "name": "O'Neill Epic 4/3mm",
@@ -6195,12 +6094,12 @@
         "One-year warranty is short next to Henderson's five years on materials and ten on the zipper"
        ],
        "colors": [
-        "Black/Black",
+        "Black",
         "Graphite Black",
-        "Grey II"
+        "Grey II",
+        "Black/Gunmetal"
        ],
-       "color_source": "https://us.oneill.com/products/epic-4-3-bz-full-blk-blk",
-       "color_platform": "shopify"
+       "color_source": "https://us.oneill.com/products/4212b-hs7-epic-4-3-bz-full"
       }
      ]
     },
@@ -6266,11 +6165,10 @@
         "The extended sizes (short/tall and 4XL-6XL) only come in the Black/Heather Blue trim — Black/Heather Gray stops at 3XL"
        ],
        "colors": [
-        "Black/Heather Gray",
-        "Black/Heather Blue"
+        "Black/Heather Blue",
+        "Black/Heather Gray"
        ],
-       "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/",
-       "color_platform": "woocommerce"
+       "color_source": "https://hendersonusa.com/product/thermoprene-pro-mens-back-zip-jumpsuit/"
       },
       {
        "rank": 2,
@@ -6323,12 +6221,7 @@
         "Black",
         "Blue"
        ],
-       "color_source": "https://divecenter.com/bare-reactive-7mm-mens-wetsuit-2-colors/",
-       "color_platform": "other",
-       "color_images": {
-        "Black": "assets/gear/studio/hero/bare-reactive--black.jpg",
-        "Blue": "assets/gear/studio/hero/bare-reactive--blue.jpg"
-       }
+       "color_source": "https://www.baresports.com/products/all-wetsuits/7mm-wetsuits/reactive-7mm/"
       },
       {
        "rank": 3,
@@ -6377,8 +6270,10 @@
         "The double zipper seal is a vertical back zip, not a horizontal dry-zip, so it still needs a buddy to close and cannot quite match a true semi-dry",
         "At around $551 it costs more than the Henderson while one owner still found it colder than expected in 20-21°C (69-70°F) water"
        ],
-       "color_source": "https://www.scdivingstore.com/products/waterproof-brand-mens-wetsuit-w7-7mm",
-       "color_platform": "shopify"
+       "color_source": "https://waterproof-usa.com/products/wetsuits/w7/",
+       "colors": [
+        "Black/Grey"
+       ]
       },
       {
        "rank": 4,
@@ -6427,8 +6322,10 @@
         "At roughly $550 new it costs about twice as much as a Cressi Fast.",
         "Scubapro's current catalogue has moved to the Everflex Yulex version, so this X-Foam suit is sold from remaining retailer stock and size runs are getting patchy."
        ],
-       "color_source": "https://divecatalog.com/products/scubapro-everflex-steamer-75-mm-mens-full-scuba-diving-wetsuit",
-       "color_platform": "shopify"
+       "color_source": "https://www.scuba.com/p-scpe75m/scubapro-everflex-steamer-7-5mm-mens-wetsuit-black-gray",
+       "colors": [
+        "Black/Gray"
+       ]
       },
       {
        "rank": 5,
@@ -6477,7 +6374,10 @@
         "At $489 on Aqua Lung's own store it costs nearly double a Cressi Fast for the same thickness."
        ],
        "color_source": "https://us.aqualung.com/products/aquaflex-mens-dive-wetsuit-7mm",
-       "color_platform": "shopify"
+       "colors": [
+        "Black/Chine Grey",
+        "Black/Charcoal"
+       ]
       },
       {
        "rank": 6,
@@ -6527,7 +6427,9 @@
         "The 24-month warranty is short next to Henderson's five-year material cover."
        ],
        "color_source": "https://cressiamerica.com/products/fast-7mm-wetsuit-man",
-       "color_platform": "shopify"
+       "colors": [
+        "Black/Blue"
+       ]
       },
       {
        "rank": 7,
@@ -6579,12 +6481,7 @@
         "Black",
         "Grey Heather"
        ],
-       "color_source": "https://www.baresports.com/products/all-wetsuits/7mm-wetsuits/7mm-nixie-ultra/",
-       "color_platform": "woocommerce",
-       "color_images": {
-        "Black": "assets/gear/studio/hero/bare-nixie-ultra-7mm--black.jpg",
-        "Grey Heather": "assets/gear/studio/hero/bare-nixie-ultra-7mm--grey-heather.jpg"
-       }
+       "color_source": "https://www.baresports.com/product-category/womens-wetsuits/nixie-ultra/"
       },
       {
        "rank": 8,
@@ -6634,8 +6531,10 @@
         "Seams are glued and sewn but not liquid-taped, so there is an initial flush of water before the suit settles.",
         "Retail pricing runs roughly $500-600 for the 7 mm, a premium of about $100 over comparable neoprene suits."
        ],
-       "color_source": "https://hendersonusa.com/product/mens-greenprene-back-zip-fullsuit/",
-       "color_platform": "woocommerce"
+       "color_source": "https://www.scuba.com/products/henderson-greenprene-7mm-mens-jumpsuit",
+       "colors": [
+        "Black"
+       ]
       },
       {
        "name": "Henderson Aqua Lock 7mm",
@@ -6685,8 +6584,10 @@
         "It is one of the most expensive stock 7 mm wetsuits sold — the 5 mm version already lists around $575 at retail.",
         "Pulling the collar open mid-dive lets a gulp of water run through the suit, so the neck seal discipline matters."
        ],
-       "color_source": "https://divecatalog.com/products/henderson-7mm-aqualock-quikdry-fullsuit-mens",
-       "color_platform": "shopify"
+       "color_source": "https://www.scuba.com/p-hndaq7jm/henderson-7mm-aqualock-mens-full-wetsuit",
+       "colors": [
+        "Black"
+       ]
       }
      ]
     }
