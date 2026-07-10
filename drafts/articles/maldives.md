@@ -51,4 +51,4 @@ Non-diving time happens within walking range of your island. Boats drop you on a
 - **Transfers.** Speedboat 100–200 USD return near Malé; seaplane 400–820 USD return, daylight only; far atolls by domestic flight plus boat, 350–520 USD return.
 - **Fuvahmulah**, the oceanic island in the far south with year-round tiger sharks, is advanced diving and a separate trip in its own right.
 
-Picked your peak? Open the Trip Planner tab — it holds these transfer options, stay areas and surface-day ideas alongside month-by-month conditions for the Maldives and 49 other destinations, so you can build the whole itinerary in one place.
+Picked your peak? Open the Trip Planner tab — it holds these transfer options, stay areas and surface-day ideas alongside month-by-month conditions for the Maldives, so you can build the whole itinerary in one place.

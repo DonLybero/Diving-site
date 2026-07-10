@@ -42,7 +42,7 @@ Off the north coast, **Hunga Reef** (10-17 m) is a circular open-water reef know
 
 Then there is **Leven Bank** (12-55 m), an open-ocean seamount in the Pemba Channel where strong, unpredictable current stacks kingfish, tuna, big morays and schooling great barracuda. Everywhere else the 5 m tides produce gentle drifts fine for newer divers; Leven Bank demands genuine drift experience and belongs in the second half of the week.
 
-Season sets the cast. January-March: whale sharks offshore, February spawning aggregations, turtles and Napoleon wrasse on the reefs. August: first humpbacks past Leven Bank and the Mnemba channel. September: humpbacks in numbers with tuna and barracuda schooling. October: whales and the season's first whale sharks in the same fortnight. November-December: whale sharks most frequent, nesting turtles active at Mnemba. Turtles and dolphins hold year-round.
+Season sets the cast. January-March: whale sharks offshore, February spawning aggregations, Napoleon wrasse on the reefs. August: first humpbacks past Leven Bank and the Mnemba channel. September: humpbacks in numbers, tuna and barracuda schooling. October: whales and the season's first whale sharks in the same fortnight. November-December: whale sharks most frequent, nesting turtles at Mnemba. Turtles and dolphins hold year-round.
 
 ## Between dives
 
@@ -54,7 +54,7 @@ Half-days slot around dive schedules. Working spice farms 20-30 minutes from tow
 
 Sauti za Busara fills Stone Town's Old Fort for four days in early February — squarely inside the January-March peak, so you can time a peak-season trip around it, but book rooms months ahead. The Zanzibar International Film Festival runs about a week in late June or July with open-air screenings in the Old Fort; beach areas are unaffected. Mwaka Kogwa, the Shirazi new year, brings ritual banana-stalk fights and a symbolic hut burning to Makunduchi around 23-24 July; spectators are welcome.
 
-Note Ramadan: Zanzibar is predominantly Muslim, and during the fasting month (February-March in 2026-2027, moving about 11 days earlier each year) many local restaurants close in daylight and eating openly in villages is frowned on. Hotels and dive boats run normally; Eid al-Fitr brings street celebrations and busy domestic transport.
+Note Ramadan (February-March in 2026-2027, moving about 11 days earlier each year): Zanzibar is predominantly Muslim, many local restaurants close in daylight and eating openly in villages is frowned on. Hotels and dive boats run normally; Eid al-Fitr brings street celebrations and busy domestic transport.
 
 Fly direct into ZNZ from the Gulf, Istanbul and seasonal European routes, or connect through Dar es Salaam (DAR) with a 20-30 minute hop or a roughly 2-hour fast ferry into Stone Town harbour. Taxis have no meters — agree the fare before leaving: about 15 USD for the 15-20 minutes to Stone Town, 35-60 USD for the 1 hour 20 minutes to Nungwi; hotels arrange fixed-price cars at similar rates. Skip self-drive — it needs a local permit, and a hired car with driver is often only 10-20 USD more per day.
 
