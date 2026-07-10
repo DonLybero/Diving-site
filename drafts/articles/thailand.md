@@ -10,7 +10,7 @@ Thailand's best diving sits on two coasts with opposite weather. The Andaman sid
 
 Total: about 13-14 days including the crossing. Short on time? A single-coast week works either way: Phuket 3 nights plus a 3-4 night Similan liveaboard (November-April), or Koh Tao alone for 7-8 days (best March-May or September).
 
-**The seasonal fork:** November to April, run the whole route, Andaman first. May to October, drop the Andaman leg entirely — the Similan park is shut and Phuket's crossings get rough — and build the trip around Koh Tao, which stays good through the southwest monsoon.
+**The seasonal fork:** November to April, run the whole route, Andaman first. May to October, drop the Andaman leg — the Similan park is shut and Phuket's crossings get rough — and build the trip around Koh Tao.
 
 ## Phuket: the day-boat workhorse
 
@@ -18,7 +18,7 @@ Phuket diving runs on big, comfortable boats leaving Chalong Pier every morning.
 
 Topside, Phuket carries a trip better than any other stop on this route. Walk Old Town's Sino-Portuguese shophouses on Thalang and Dibuk Roads — Sunday evenings the street closes for a walking market. Sea-kayak the hongs of Phang Nga Bay, collapsed sea caves inside the limestone karst, entered through tunnel passages at low tide. Night markets in Phuket Town serve 20-60 THB street plates, a half-day cooking class fills a surface interval, and Promthep Cape is the standard sunset stop.
 
-Stay in Chalong or Rawai to be closest to the pier, or Kata/Karon for swimmable beaches 20-30 minutes from morning pickups. Fly direct into HKT or connect through Bangkok on a 1 h 25 min hop; the airport sits at the island's north tip, 45-60 minutes from the beaches by taxi (800-1,000 THB to Patong).
+Stay in Chalong or Rawai, closest to the pier, or Kata/Karon for swimmable beaches 20-30 minutes from morning pickups. Fly direct into HKT or connect through Bangkok on a 1 h 25 min hop; the airport sits at the island's north tip, 45-60 minutes from the beaches by taxi (800-1,000 THB to Patong).
 
 ## Similan Islands: the liveaboard leg (base: Khao Lak)
 
@@ -28,22 +28,22 @@ The Similans are uninhabited granite islands where house-sized boulders tumble f
 
 The park closes completely for the southwest monsoon, approximately 16 May to 14 October; confirm the exact dates for your year. The first weeks after reopening have the season's fewest boats, though seas can stay mixed into early November.
 
-Khao Lak itself is a low-rise, 20 km beach strip that trades nightlife for quiet. Bracket the liveaboard with a full day at Khao Sok — longtail boats among the limestone towers of Cheow Lan Lake, about 1.5 hours inland — or an hour's kayak float through the Little Amazon mangrove channel at Takua Pa (around 500 THB), where monitor lizards and macaques are regular sightings. Bang Niang's afternoon market runs four days a week near the police patrol boat carried 1 km inland by the 2004 tsunami. Stay in Nang Thong for the pier, or Bang Niang for the beach and the market.
+Khao Lak itself is a low-rise, 20 km beach strip that trades nightlife for quiet. Bracket the liveaboard with a full day at Khao Sok — longtail boats among the limestone towers of Cheow Lan Lake, 1.5 hours inland — or an hour's kayak float through the Little Amazon mangrove channel at Takua Pa (around 500 THB), watching for monitor lizards and macaques. Bang Niang's afternoon market runs four days a week near the police patrol boat carried 1 km inland by the 2004 tsunami. Stay in Nang Thong for the pier, or Bang Niang for the beach and the market.
 
 ## Koh Tao: the Gulf side
 
-Koh Tao has no airport. Fastest route: fly to Koh Samui (USM) and take the 1.5-2 h high-speed catamaran into Mae Haad Pier, about 4-6 hours door to door. The budget route is a domestic flight to Chumphon (CJM) — the mainland pier with the shortest crossing, about 1 h 45 min, 600-700 THB — or an overnight bus or train from Bangkok via Chumphon or Surat Thani sold as a combined ticket with the morning ferry, 10-11 hours total. Coming from Phuket, either fly to Samui or take the bus-ferry combination across the isthmus.
+Koh Tao has no airport. Fastest route: fly to Koh Samui (USM) and take the 1.5-2 h high-speed catamaran into Mae Haad Pier, about 4-6 hours door to door. The budget route is a flight to Chumphon (CJM) — the mainland pier with the shortest crossing, about 1 h 45 min, 600-700 THB — or an overnight bus or train via Chumphon or Surat Thani sold as a combined ticket with the morning ferry, 10-11 hours total. From Phuket, either fly to Samui or take the bus-ferry combination across the isthmus.
 
 Underwater, the island splits in two. The sheltered bays — Twins, White Rock — are shallow boulder reefs in near-still water, which is why so many divers learn here. Offshore is different: Chumphon Pinnacle (14-36 m) is an anemone-carpeted granite tower swarmed by trevally and chevron barracuda, and the island's most reliable whale shark spot — strongest March-May when plankton blooms pull them in, with a second run in September. Sail Rock, midway to Koh Phangan, adds a vertical chimney swim-through from 5-40 m, and the HTMS Sattakut — a 48 m former navy vessel at 18-30 m — keeps groupers in her gun turrets. Water runs 27-30°C; a 3 mm shorty or rash guard covers most of the year.
 
-Off-gassing days are viewpoint hikes and empty coves rather than sights: the longtail run to Koh Nang Yuan's three-islet viewpoint (about 350 THB return), the steep 15-20 minute scramble to John-Suwan above Chalok Baan Kao, or kayaking the granite coves of Tanote Bay and Ao Leuk before the afternoon breeze picks up. Stay on Sairee Beach for the 1.7 km restaurant-and-bar strip, Mae Haad for early ferries, or Chalok Baan Kao for quiet.
+Off-gassing days are viewpoint hikes and empty coves: the longtail run to Koh Nang Yuan's three-islet viewpoint (about 350 THB return), the steep 15-20 minute scramble to John-Suwan above Chalok Baan Kao, or kayaking the granite coves of Tanote Bay and Ao Leuk before the afternoon breeze. Stay on Sairee Beach for the 1.7 km restaurant-and-bar strip, Mae Haad for early ferries, or Chalok Baan Kao for quiet.
 
 ## When to go
 
 The two coasts oppose each other, which is what makes the route work — and what forces the fork.
 
-- **November-April:** the Andaman peak. Phuket rates Peak from November through April, with mantas at Racha Noi and calm crossings everywhere; the Similans peak February-April with visibility past 30 m and the best manta and whale shark odds. Koh Tao is at its worst in November-December (8-10 m visibility, monsoon rain, weather-dependent boats) but recovers by February and peaks March-May — so run Andaman first and finish in the Gulf from late February onward.
-- **May-October:** the Similan park is closed (mid-May to mid-October) and Phuket drops to shoulder-then-low, with August-September crossings often cancelled. Koh Tao stays Good to Peak almost throughout, with a September peak of calm seas, 22 m visibility and whale shark sightings picking back up. This half of the year is a Gulf-only trip.
+- **November-April:** the Andaman peak. Phuket rates Peak from November through April, with mantas at Racha Noi and calm crossings; the Similans peak February-April with visibility past 30 m and the best manta and whale shark odds. Koh Tao is at its worst in November-December (8-10 m visibility, monsoon rain) but recovers by February and peaks March-May — so run Andaman first and finish in the Gulf from late February onward.
+- **May-October:** the Similan park is closed and Phuket drops to shoulder-then-low, with August-September crossings often cancelled. Koh Tao stays Good to Peak almost throughout, with a September peak of calm seas, 22 m visibility and whale shark sightings picking back up. This half of the year is a Gulf-only trip.
 
 The ideal full-route window is roughly late February to early May: both coasts at or near peak, with the Similans' mid-May closure as the hard deadline.
 
@@ -56,6 +56,6 @@ The ideal full-route window is roughly late February to early May: both coasts a
 - **No-fly day.** Keep a full non-diving day before any flight — schedule it as the Phuket-to-Gulf crossing day, and again at the end on Koh Tao (a cooking class in Sairee is the standard way to fill it).
 - **Ferries.** Book Koh Tao crossings ahead December-March and around Songkran and full moons; November crossings get rough and are occasionally cancelled.
 - **Liveaboard timing.** Boats fill for the February-April Similan peak, and the exact park dates shift slightly by year — confirm before locking flights.
-- **Scooters.** Skip them. Rental accidents involving visitors are common on Phuket, and Koh Tao's steep, partly unpaved roads plus frequent rental-damage disputes make shared pickup taxis and longtails the better option. Thailand drives on the left.
+- **Scooters.** Skip them. Rental accidents involving visitors are common on Phuket, and Koh Tao's steep, partly unpaved roads plus frequent rental-damage disputes make shared pickup taxis and longtails the better option.
 
-Ready to build your own version? Open the Trip Planner tab, add Phuket, the Similan Islands and Koh Tao, and it will lay out the flights, transfers, stay areas and month-by-month conditions for your exact dates.
+To build your own version, open the Trip Planner tab and add Phuket, the Similan Islands and Koh Tao — it lays out flights, transfers, stay areas and month-by-month conditions for your exact dates.

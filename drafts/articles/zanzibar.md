@@ -26,7 +26,7 @@ Off the north coast, **Hunga Reef** (10-17 m) is a circular open-water reef know
 
 Then there is **Leven Bank** (12-55 m), an open-ocean seamount in the Pemba Channel where strong, unpredictable current stacks kingfish, tuna, big morays and schooling great barracuda. Everywhere else the 5 m tides produce gentle drifts fine for newer divers; Leven Bank demands genuine drift experience and belongs in the second half of the week.
 
-Seasonality shapes the cast. Whale sharks pass offshore from October through March, showing most frequently around December. Humpback whales migrate past Leven Bank and the Mnemba channel from August, gathering in numbers in September. Turtles, dolphins and Napoleon wrasse are year-round staples, and February brings reef-fish spawning aggregations with the year's best visibility.
+Seasonality shapes the cast. Whale sharks pass offshore from October through March, most frequently around December. Humpback whales migrate past Leven Bank and the Mnemba channel from August, gathering in numbers in September. Turtles, dolphins and Napoleon wrasse are year-round; February adds reef-fish spawning aggregations with the year's best visibility.
 
 ## Between dives
 
@@ -36,7 +36,7 @@ Half-day trips slot neatly around dive schedules. Working spice farms 20-30 minu
 
 ## When to go
 
-Two monsoons split the year into two prime windows. The kaskazi season, December to March, brings warm calm seas, 28-29°C water and visibility peaking around 25 m — this is whale-shark time, with January-March rated peak. The inter-monsoon lull of September-October is the other peak: winds easing, flat seas, 25 m visibility, humpbacks in September overlapping with the first whale sharks in October, in the year's coolest water at 25-26°C.
+Two monsoons split the year into two prime windows. The kaskazi season, December to March, brings warm calm seas, 28-29°C water and visibility peaking around 25 m — whale-shark time, with January-March rated peak. The other peak is the September-October inter-monsoon lull: winds easing, flat seas, 25 m visibility, humpbacks in September overlapping the first whale sharks in October, in the year's coolest water at 25-26°C.
 
 June to August is solidly good — the kusi wind puts some chop on crossings, but visibility holds at 20-22 m and humpbacks begin arriving in August. Avoid April and May: the masika long rains cut visibility to around 12 m, seas get choppy and some boats pause entirely. November's short vuli rains bring brief showers but seas stay mostly workable. Pack a 3 mm shorty or full suit for November-April, a 3-5 mm full suit for the cooler June-September season.
 

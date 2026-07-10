@@ -55,4 +55,4 @@ Carnaval de Cozumel fills the week before Lent, usually mid-February — parades
 - **Akumal's turtle zone is guided-only**, with enforced rules: licensed guide, 3 m distance, no touching, reef-safe sunscreen.
 - **Rideshare apps cannot pick up inside Cancún airport**; take a first-class bus (about 270 MXN to Playa) or a pre-booked van (45-90 USD, the sensible choice with dive bags).
 
-Ready to pin down dates? Open the Trip Planner tab, add Cozumel, Cancún & Playa del Carmen and the Cenotes of Yucatán Peninsula to one trip, and compare month-by-month conditions, transfers and events side by side.
+Ready to pin down dates? Open the Trip Planner tab, add all three destinations to one trip, and compare month-by-month conditions, transfers and events side by side.
