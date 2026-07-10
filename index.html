@@ -593,6 +593,9 @@
   .gentry .ptable{max-width:560px}
   .gentry>*{min-width:0}
   @media(max-width:700px){.gentry{grid-template-columns:minmax(0,1fr);gap:12px}}
+  /* colours are stated, not clickable (owner ruling) */
+  .gcolors{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--muted);line-height:1.7;margin:10px 0 14px}
+  .gcolors b{color:var(--ink);font-weight:600}
   /* verdict columns: hairline editorial pros/cons */
   .gverdict{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:14px 0}
   @media(max-width:640px){.gverdict{grid-template-columns:1fr;gap:14px}}
@@ -2011,6 +2014,8 @@ function gearEntry(item,cat,idx){
   var specs=item.specs?'<dl class="specs">'+Object.keys(item.specs).map(function(k){
     return '<div><dt>'+k+'</dt><dd>'+item.specs[k]+'</dd></div>';
   }).join('')+'</dl>':'';
+  var colorline=(item.colors&&item.colors.length)?
+    '<div class="gcolors"><b>'+(item.colors.length>1?'Comes in '+item.colors.length+' colours':'One colour')+'</b> · '+item.colors.join(' · ')+'</div>':'';
   var verdict='';
   if((item.pros&&item.pros.length)||(item.cons&&item.cons.length)){
     verdict='<div class="gverdict">'+
@@ -2024,7 +2029,7 @@ function gearEntry(item,cat,idx){
   return '<div class="gentry">'+gearPhoto(item,cat)+
     '<div><h3>'+item.rank+'. '+item.name+'</h3>'+
     '<p class="gentry-review">'+(item.review||item.blurb)+'</p>'+
-    verdict+specs+buyBox(item)+cmp+
+    colorline+verdict+specs+buyBox(item)+cmp+
     '<p class="meta" style="margin-top:8px"><a href="gear/'+gearSlug(item.name)+'.html">Full page: photos, specs &amp; prices &rarr;</a></p>'+
     '</div></div>';
 }
