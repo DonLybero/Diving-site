@@ -40,13 +40,13 @@ Stay in Masbat for the seafront promenade, Mashraba for the quieter end of the s
 
 The mainland's northern base is wreck country. Abu Nuhas reef holds four ships, among them the Giannis D with its glassfish-filled engine room, the 1869 Carnatic whose exposed ribs are sheathed in soft coral, and the Chrisoula K still stacked with Italian floor tiles. An hour offshore, Careless Reef's twin pinnacles are the area's most reliable spot for grey reef sharks; Shaab El Erg's lagoon shelters resident spinner dolphins. Inshore reefs run gentle; the exposed pinnacles bite harder when the wind is up.
 
-This is also the base for the Luxor day trip — 280 km and 4 hours each way for Karnak and the Valley of the Kings, a 14-16 hour day starting before 05:00. Softer options: a Giftun Island beach day, the El Dahar souk and fish market, or an evening on Abu Tig Marina's restaurant row.
+This is also the base for the Luxor day trip — 280 km and 4 hours each way for Karnak and the Valley of the Kings, a 14-16 hour day. Softer options: a Giftun Island beach day, the El Dahar souk and fish market, or an evening on Abu Tig Marina's restaurant row.
 
-Stay in El Gouna (Downtown or Abu Tig Marina) for the lagoon-town setup, Hurghada Marina/Sekalla to walk to the dive jetties, or El Dahar for budget rooms. HRG takes direct flights from most of Europe; El Gouna is a 30-45 minute transfer north.
+Stay in El Gouna (Downtown or Abu Tig Marina), Hurghada Marina/Sekalla to walk to the dive jetties, or El Dahar for budget rooms. HRG takes direct flights from most of Europe; El Gouna is a 30-45 minute transfer north.
 
 ## Marsa Alam
 
-The south splits in two. Inshore, Abu Dabbab is a walk-in seagrass bay where green turtles graze metres from shore and dugong turn up rarely, and Marsa Shagra's house reef has twin entry channels you can dive on your own schedule. Offshore, Elphinstone Reef's plateaus draw patrolling oceanic whitetips from October to December, in currents that demand experience; Daedalus, the hammerhead pinnacle, is liveaboard range from Port Ghalib. Sha'ab Samadai and Sataya both hold resting spinner dolphin pods.
+The south splits in two. Inshore, Abu Dabbab is a walk-in seagrass bay where green turtles graze metres from shore and dugong turn up rarely, and Marsa Shagra's house reef has twin entry channels divable on your own schedule. Offshore, Elphinstone Reef's plateaus draw patrolling oceanic whitetips from October to December, in currents that demand experience; Daedalus, the hammerhead pinnacle, is liveaboard range. Sha'ab Samadai and Sataya both hold resting spinner dolphin pods.
 
 Topside means desert: Wadi el Gemal National Park's jeep-and-camel routes past Roman-era emerald mine settlements, El Quseir's 16th-century fort an hour north, and telescope nights at inland camps under genuinely dark sky. Green turtles nest on southern beaches roughly June to September.
 
@@ -58,10 +58,10 @@ The water swings from 21-22°C in February to 28-29°C in August — a 3 mm suit
 
 ## Events and timing
 
-Ramadan moves about 11 days earlier each year (18 February-19 March in 2026, 7 February-9 March in 2027); resorts and boats run normally, but towns go quiet by day and alcohol service can be limited outside hotels. The two Eid holiday weeks fill Red Sea rooms with domestic travellers — book ahead or shift dates. The El Gouna Film Festival takes over that town for nine days in mid-to-late October, and Christmas through the first week of January means peak pricing plus compulsory gala-dinner supplements on 31 December at many resorts.
+Ramadan moves about 11 days earlier each year (18 February-19 March in 2026, 7 February-9 March in 2027); resorts and boats run normally, but towns go quiet by day and alcohol service can be limited outside hotels. The two Eid holiday weeks fill Red Sea rooms with domestic travellers — book ahead or shift dates. The El Gouna Film Festival takes over that town for nine days in mid-to-late October, and Christmas through the first week of January means peak pricing plus compulsory gala-dinner supplements on 31 December.
 
 ## The practical bits
 
-Leave 18-24 hours between your last dive and any flight — including the internal Cairo hop if you combine both sides. Transfer ballparks: SSH to Naama Bay USD 8-15, SSH to Dahab USD 25-45 pre-booked, HRG to El Gouna EUR 17-25, RMF to the southern Marsa Alam resorts EUR 25-50. Airport-rank taxis everywhere expect a negotiated price — agree the fare before getting in. Self-drive is not worth it at any of the four bases; pre-booked cars and hotel shuttles cover everything.
+Leave 18-24 hours between your last dive and any flight — including the internal Cairo hop if you combine both sides. Transfer ballparks: SSH to Naama Bay USD 8-15, SSH to Dahab USD 25-45 pre-booked, HRG to El Gouna EUR 17-25, RMF to the southern resorts EUR 25-50. Airport-rank taxis expect a negotiated price — agree the fare before getting in. Self-drive is not worth it at any base; pre-booked cars and hotel shuttles cover everything.
 
 Ready to turn this into dates? Open the Trip Planner tab, pick your base or route, and it will lay out flights in, transfer times, nights per stop and month-by-month conditions — a booked plan instead of a bookmark.
