@@ -73,9 +73,11 @@ def graph_ld(*nodes):
 TODAY = datetime.date.today().isoformat()
 
 CSS = """
-:root{--bg:#f4f9f9;--panel:#ffffff;--ink:#0e2f37;--muted:#61838a;--accent:#0e9c92;--cta:#0b7d75;--cta-deep:#06333c;--line:#d7e5e7;
---serif:Georgia,'Iowan Old Style','Times New Roman',serif;--mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+:root{--bg:#f4f9f9;--panel:#ffffff;--ink:#0e2f37;--muted:#4a6a71;--accent:#0e9c92;--cta:#0b7d75;--cta-deep:#06333c;--line:#d7e5e7;
+--serif:'Fraunces',Georgia,'Iowan Old Style','Times New Roman',serif;
+--sans:'Plus Jakarta Sans',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace}
+*{box-sizing:border-box}body{margin:0;font-family:var(--sans);
 background:linear-gradient(180deg,#ffffff,#e9f2f3);color:var(--ink);min-height:100vh}
 a{color:var(--accent)}h1,h2{font-family:var(--serif);font-weight:600}
 .topbar{display:flex;align-items:center;gap:11px;padding:10px 18px;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line)}
@@ -896,6 +898,7 @@ def index_page(dests):
 <title>All Dive Destinations — Season Guides | DiveSZN</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{BASE}destinations/index.html">
+{FONTS_LINK}
 <style>{CSS}</style>
 </head>
 <body>
@@ -1064,6 +1067,7 @@ def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None):
 <link rel="canonical" href="{esc(url)}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}">
 {ldtag}
+{FONTS_LINK}
 <style>{CSS}</style>
 </head>
 <body>
@@ -1509,7 +1513,8 @@ def main():
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(info["title"])} Diving — Now Split by Resort Town | DiveSZN</title>
 <meta name="description" content="Our {esc(info["title"])} guide is now split into dedicated destination guides.">
-<link rel="canonical" href="{esc(url)}"><style>{CSS}</style></head><body>
+<link rel="canonical" href="{esc(url)}">{FONTS_LINK}
+<style>{CSS}</style></head><body>
 {topbar()}
 <main class="wrap"><h1>{esc(info["title"])} — now four destinations</h1>
 <p class="meta">We split this guide so each resort town gets its own season calendar, dive sites and photos.</p>
