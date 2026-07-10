@@ -62,6 +62,6 @@ Ramadan moves about 11 days earlier each year (18 February-19 March in 2026); re
 
 ## The practical bits
 
-Leave 18-24 hours between your last dive and any flight — including the internal Cairo hop if you combine both sides. Transfer ballparks: SSH to Naama Bay USD 8-15, SSH to Dahab USD 25-45 pre-booked, HRG to El Gouna EUR 17-25, RMF to the southern resorts EUR 25-50. Airport-rank taxis expect a negotiated price — agree the fare before getting in. Self-drive is not worth it at any base; pre-booked cars and hotel shuttles cover everything.
+Leave 18-24 hours between your last dive and any flight — including the internal Cairo hop if you combine both sides. Transfer ballparks: SSH to Naama Bay USD 8-15, SSH to Dahab USD 25-45 pre-booked, HRG to El Gouna EUR 17-25, RMF to the southern resorts EUR 25-50. Airport-rank taxis expect a negotiated price — agree the fare before getting in. Self-drive is not worth it anywhere here; pre-booked cars and shuttles cover everything.
 
 Ready for dates? Open the Trip Planner tab, pick your base or route, and it will lay out flights in, transfers, nights per stop and month-by-month conditions — a booked plan instead of a bookmark.
