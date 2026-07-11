@@ -16,9 +16,9 @@ import json, os, html, re, urllib.parse, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://donlybero.github.io/Diving-site/"
 MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-RCOLOR = {"Peak":"#16a34a","Good":"#0ea5e9","Shoulder":"#eab308","Low":"#f97316","Closed":"#64748b"}
-# Owner-approved tonal (single-hue) season palette — DESTINATION PAGES ONLY
-# (the SPA and month hubs keep the classic rating colours).
+# Owner-approved tonal (single-hue) season palette — used on every generated
+# page (destinations, month hubs, marine ribbons). Keep in sync with the
+# TONAL map in index.html.
 TONAL = {"Peak":"#0e7569","Good":"#5cb8ab","Shoulder":"#dfa826","Low":"#cfe4e0","Closed":"#b9c6c9"}
 # Badge/ink pairing on the tonal fills (all pairs >=4.5:1)
 TONAL_TEXT = {"Peak":"#ffffff","Good":"#0e2f37","Shoulder":"#0e2f37","Low":"#0e2f37","Closed":"#0e2f37"}
@@ -1719,8 +1719,8 @@ def month_page(month, rankings, dests_by_name):
         img = d.get("image") or ""
         photo = (f'<div class="gphoto dphoto"><img src="{esc(img)}" alt="{esc(r["name"])}" loading="lazy"></div>'
                  if img else '<div class="gphoto dphoto"></div>')
-        chips = (f'<span class="badge sm" style="background:{RCOLOR[r["rating"]]}'
-                 f'{";color:#fff" if r["rating"] in ("Peak","Low","Closed") else ""}">{r["rating"]}</span> '
+        chips = (f'<span class="badge sm" style="background:{TONAL[r["rating"]]};'
+                 f'color:{TONAL_TEXT[r["rating"]]}">{r["rating"]}</span> '
                  f'<span class="chip">{r["water_temp_c"] if r["water_temp_c"] is not None else "—"}°C</span> '
                  f'<span class="chip">{r.get("visibility_m") or "—"}m viz</span>'
                  + (f' <span class="chip">{esc(r["current_strength"])} current</span>' if r.get("current_strength") else ""))
