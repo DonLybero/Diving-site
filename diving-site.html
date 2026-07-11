@@ -688,7 +688,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   :root{
     --bg:#f4f9f9; --bg2:#e8f1f2; --panel:#ffffff; --panel2:#f2f8f8;
     --ink:#0e2f37; --ink-soft:#33565e; --muted:#4a6a71;
-    --peak:#22c197; --good:#36b6e8; --shoulder:#f0c046; --low:#fb8a4a; --closed:#5b7078;
+    --peak:#0e7569; --good:#5cb8ab; --shoulder:#dfa826; --low:#cfe4e0; --closed:#b9c6c9;
     --accent:#0e9c92; --accent-deep:#0b7d75; --aqua2:#179e98; --cta:#0b7d75; --cta-deep:#06333c;
     --line:rgba(13,80,90,.14); --line-strong:rgba(13,80,90,.28);
     --glass:rgba(255,255,255,.72); --glass-2:rgba(255,255,255,.9);
@@ -1125,7 +1125,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .scoreline{display:flex;align-items:center;gap:10px;margin:4px 0 10px}
   .scaption{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
   .sbar{flex:1;max-width:150px;height:6px;background:var(--line);border-radius:5px;overflow:hidden}
-  .sbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#16a34a);border-radius:5px}
+  .sbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--peak));border-radius:5px}
   .card.photo-card .scoreline{margin:4px 20px 10px}
   /* Expander used on cards / profile for progressive disclosure */
   details.more{margin:0}
@@ -1582,9 +1582,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
     <div id="sv-map" class="subview hidden">
       <div class="legend">
-        <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
-        <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
-        <span><i style="background:#64748b"></i>Closed</span>
+        <span><i style="background:#0e7569"></i>Peak</span><span><i style="background:#5cb8ab"></i>Good</span>
+        <span><i style="background:#dfa826"></i>Shoulder</span><span><i style="background:#cfe4e0"></i>Low</span>
+        <span><i style="background:#b9c6c9"></i>Closed</span>
       </div>
       <div id="map"></div>
       <p id="mapNote" class="meta" style="text-align:center"></p>
@@ -1600,9 +1600,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
           <option value="temp">Water °C</option><option value="viz">Visibility m</option><option value="rating">Rating</option></select></div>
       </div>
       <div class="legend" style="justify-content:center">
-        <span><i style="background:#16a34a"></i>Peak</span><span><i style="background:#0ea5e9"></i>Good</span>
-        <span><i style="background:#eab308"></i>Shoulder</span><span><i style="background:#f97316"></i>Low</span>
-        <span><i style="background:#64748b"></i>Closed</span>
+        <span><i style="background:#0e7569"></i>Peak</span><span><i style="background:#5cb8ab"></i>Good</span>
+        <span><i style="background:#dfa826"></i>Shoulder</span><span><i style="background:#cfe4e0"></i>Low</span>
+        <span><i style="background:#b9c6c9"></i>Closed</span>
         <span style="margin-left:8px">· colour = season rating</span>
       </div>
       <div class="cal-wrap"><table class="cal" id="calTable"></table></div>
@@ -1900,7 +1900,10 @@ window.__MARINE_DATA__={"experiences": [{"slug": "whale-sharks", "title": "Whale
 </script>
 <script>
 var DATA=null, DESTS=[], MAP=null, MARKERS=null, LAND=null, GEAR_GUIDE=null;
-var RCOLOR={Peak:'#16a34a',Good:'#0ea5e9',Shoulder:'#eab308',Low:'#f97316',Closed:'#64748b'};
+/* Tonal rating palette (owner-approved 2026-07) — single source for every
+   colour-by-rating surface: calendar, planner matrix, map markers, mini ribbons. */
+var RCOLOR={Peak:'#0e7569',Good:'#5cb8ab',Shoulder:'#dfa826',Low:'#cfe4e0',Closed:'#b9c6c9'};
+var RTEXT={Peak:'#ffffff',Good:'#0e2f37',Shoulder:'#0e2f37',Low:'#0e2f37',Closed:'#0e2f37'};
 
 /* ---------- inline SVG icon set (single stroke style, replaces emoji) ---------- */
 var ICONS={
@@ -2309,7 +2312,7 @@ function renderCalendar(){
       var txt = show==='temp'?(t==null?'':t) : show==='viz'?(mm.visibility_m==null?'':mm.visibility_m) : mm.rating[0];
       if(mm.rating==='Closed') txt='✕';
       var title=d.name+' — '+m+': '+mm.rating+' · '+tempStr(t)+' · '+vizStr(mm.visibility_m)+' · '+mm.marine_life;
-      return '<td class="cell'+(m===hlMonth?' hl':'')+'" style="background:'+RCOLOR[mm.rating]+'" title="'+title.replace(/"/g,'&quot;')+
+      return '<td class="cell'+(m===hlMonth?' hl':'')+'" style="background:'+RCOLOR[mm.rating]+';color:'+RTEXT[mm.rating]+'" title="'+title.replace(/"/g,'&quot;')+
         '" onclick="openProfile(\''+esc(d.name)+'\')">'+txt+'</td>';
     }).join('');
     return '<tr><td class="name" onclick="openProfile(\''+esc(d.name)+'\')">'+d.name+
@@ -2407,7 +2410,7 @@ function drawMarkers(){
       fillColor:RCOLOR[mm.rating],fillOpacity:.92});
     var top=(d.dive_sites||[]).slice(0,3).map(function(x){return x.name;}).join(', ');
     m.bindPopup('<b>'+d.name+'</b><br>'+metaLine(d.country,d.region)+'<br>'+
-      month+': <b style="color:'+RCOLOR[mm.rating]+'">'+mm.rating+'</b> · '+tempStr(d.monthly_temp_c[month])+
+      month+': <b style="background:'+RCOLOR[mm.rating]+';color:'+RTEXT[mm.rating]+';padding:1px 8px;border-radius:999px">'+mm.rating+'</b> · '+tempStr(d.monthly_temp_c[month])+
       ' · '+vizStr(mm.visibility_m)+' · '+d.current_strength+' current<br>'+mm.marine_life+
       (top?'<br><b>Top sites:</b> '+top+((d.dive_sites.length>3)?' +'+(d.dive_sites.length-3)+' more':''):'')+
       '<br><a href="#" onclick="openProfile(\''+esc(d.name)+'\');return false;">full profile →</a>');
@@ -3286,7 +3289,7 @@ function renderMarine(){
             return '<i style="background:'+c+'"'+(m===nowM&&inSeason?' class="now"':'')+' title="'+m+(inSeason?' — '+r.d.monthly[m].rating:'')+'"></i>';
           }).join('');
           return '<tr><td><a href="#" onclick="openProfile(\''+escq(r.d.name)+'\');return false;"><b>'+r.d.name+'</b></a>'+
-          '<div class="meta">'+r.d.country+(r.now===0?' · <b style=\"color:var(--peak,#16a34a)\">in season now</b>':'')+'</div></td>'+
+          '<div class="meta">'+r.d.country+(r.now===0?' · <b style=\"color:var(--peak,#0e7569)\">in season now</b>':'')+'</div></td>'+
           '<td><div class="mini-ribbon">'+mini+'</div></td></tr>';}).join('')+'</tbody></table>';
     }else{
       ww='<h3 style="margin-top:22px">Where &amp; when to dive it</h3>'+
@@ -3328,7 +3331,7 @@ function renderDestinations(month){
       var teaser=(MONTH_INTROS[m]||'').split('. ')[0]+'.';
       return '<a class="artrow" href="#" onclick="openMonthArticle(\''+m+'\');return false;">'+
         '<div class="artrow-thumb dest-thumb">'+thumb+'</div>'+
-        '<div><div class="kicker">Article · '+MONTH_FULL[m]+(m===DivingCalendar.MONTHS[nowIdx]?' · <span style="color:var(--peak,#16a34a)">this month</span>':'')+'</div>'+
+        '<div><div class="kicker">Article · '+MONTH_FULL[m]+(m===DivingCalendar.MONTHS[nowIdx]?' · <span style="color:var(--peak,#0e7569)">this month</span>':'')+'</div>'+
         '<h4>Where to Dive in '+MONTH_FULL[m]+'</h4>'+
         '<p>'+teaser+'</p></div></a>';
     }).join('');
