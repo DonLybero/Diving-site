@@ -2028,7 +2028,10 @@ function buildBrowseDir(){
       '<div class="dcountries">'+inner+'</div></section>';
   }).join('');
   el.innerHTML='<div class="bsearch"><input id="browseSearch" type="search" placeholder="The world by destination" '+
-    'autocomplete="off" aria-label="Search destinations"></div>'+sections;
+    'autocomplete="off" aria-label="Search destinations"></div>'+
+    '<div id="browseEmpty" class="empty" style="display:none">No destinations match — '+
+    '<a href="#" onclick="browseToSearch();return false;">try the Search tab</a> for marine life and more.</div>'+
+    sections;
   var bi=document.getElementById('browseSearch');
   bi.addEventListener('input',browseFilter);
   bi.addEventListener('keydown',function(e){
@@ -2039,10 +2042,12 @@ function buildBrowseDir(){
     }
   });
 }
-/* live filter: match destination, country or region; hide empty groups */
+/* live filter: match destination, country or region; hide empty groups.
+   When nothing matches, a visible empty state points at the Search tab
+   (which also finds species) instead of a blank directory. */
 function browseFilter(){
   var inp=document.getElementById('browseSearch'); if(!inp) return;
-  var q=inp.value.trim().toLowerCase();
+  var q=inp.value.trim().toLowerCase(), anySec=false;
   [].slice.call(document.querySelectorAll('#browseDir .dregion')).forEach(function(sec){
     var region=((sec.querySelector('h3 span')||{}).textContent||'').toLowerCase();
     var anyCountry=false;
@@ -2058,7 +2063,17 @@ function browseFilter(){
       if(any)anyCountry=true;
     });
     sec.style.display=anyCountry?'':'none';
+    if(anyCountry)anySec=true;
   });
+  var em=document.getElementById('browseEmpty');
+  if(em) em.style.display=anySec?'none':'';
+}
+/* hand the no-match query to the Search tab (destinations + species) */
+function browseToSearch(){
+  var q=(document.getElementById('browseSearch')||{value:''}).value;
+  showTab('search');
+  var sb=document.getElementById('searchBox');
+  if(sb){sb.value=q;renderSearch();sb.focus();}
 }
 
 /* country · region line without repeating the country when the region already names it */
@@ -3064,10 +3079,12 @@ function gearBrandDir(onlyCat){
       '<div class="gbgrid">'+cols+'</div></section>';
   }).join('');
 }
-/* live gear search: hub rows by name/brand, guide entries by name */
+/* live gear search: hub rows by name/brand, guide entries by name.
+   A no-match query shows a visible empty state with a clear action instead
+   of silently hiding the whole hub (Enter stays a no-op then). */
 function gearFilter(){
   var inp=document.getElementById('gearSearch'); if(!inp) return;
-  var q=inp.value.trim().toLowerCase();
+  var q=inp.value.trim().toLowerCase(), shown=0;
   [].slice.call(document.querySelectorAll('#gearGrid section.dregion')).forEach(function(sec){
     var anyCol=false;
     [].slice.call(sec.querySelectorAll('.gbcol')).forEach(function(col){
@@ -3082,11 +3099,30 @@ function gearFilter(){
       if(any)anyCol=true;
     });
     sec.style.display=anyCol?'':'none';
+    if(anyCol)shown++;
   });
   [].slice.call(document.querySelectorAll('#gearGrid .gentry')).forEach(function(g){
     var name=((g.querySelector('h3')||{}).textContent||'').toLowerCase();
-    g.style.display=(!q||name.indexOf(q)>-1)?'':'none';
+    var hit=!q||name.indexOf(q)>-1;
+    g.style.display=hit?'':'none';
+    if(hit)shown++;
   });
+  var grid=document.getElementById('gearGrid'), em=document.getElementById('gearEmpty');
+  if(q&&!shown){
+    if(!em){
+      em=document.createElement('div');
+      em.id='gearEmpty'; em.className='empty'; em.style.gridColumn='1/-1';
+      grid.appendChild(em);
+    }
+    em.innerHTML='No gear matches \''+escAttr(inp.value.trim())+'\' — '+
+      '<a href="#" onclick="clearGearSearch();return false;">clear the search</a> to see everything.';
+  }else if(em){
+    em.parentNode.removeChild(em);
+  }
+}
+function clearGearSearch(){
+  var inp=document.getElementById('gearSearch'); if(!inp) return;
+  inp.value=''; gearFilter(); inp.focus();
 }
 function renderGear(){
   var sel=document.getElementById('gearCat');
@@ -3096,9 +3132,14 @@ function renderGear(){
   function cmpScope(scope,items){ if(scope!==CMP_SCOPE){CMP=[];CMP_SCOPE=scope;} GEAR_VIEW={items:items||[]}; }
   if(!cat){
     cmpScope('',[]);
+    // a category picked in the Category select: surface the compare feature,
+    // which lives on the ranked guide's entries
+    var onlyCat=sel.value;
+    var cmpHint=onlyCat?'<p class="aff-note">&#8646;&nbsp; Compare picks side by side in the ranked guide — '+
+      '<a href="#" onclick="openGearArticle(\''+escq(onlyCat)+'\');return false;">open the full '+onlyCat+' guide &rarr;</a></p>':'';
     g.innerHTML='<div class="article" style="grid-column:1/-1;margin-bottom:6px">'+
       '<p class="gentry-review" style="max-width:80ch;margin-top:0">'+(GEAR_GUIDE.intro||'')+'</p>'+
-      gearBrandDir(sel.value)+'</div>';
+      cmpHint+gearBrandDir(onlyCat)+'</div>';
   }else{
     var c=GEAR_GUIDE.categories.filter(function(x){return x.category===cat;})[0];
     if(!c){g.innerHTML='';return;}
