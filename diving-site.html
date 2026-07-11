@@ -1321,7 +1321,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     #marineLedger.swap{animation:none}
     .mp-bar,.mp-cell,.mcover,.mteaser{transition:none}
   }
+  /* the ledger table scrolls inside its own box — never the page */
+  #marineLedger{overflow-x:auto;-webkit-overflow-scrolling:touch}
   .mev{display:block;font-size:.78rem;color:var(--muted);font-style:italic;max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}
+  /* narrow viewports: evidence quotes wrap instead of forcing table width */
+  @media(max-width:640px){
+    .mev{white-space:normal;max-width:none;overflow:visible;text-overflow:clip}
+  }
   .mchips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
   .mwin-chip{display:inline-flex;align-items:center;background:none;border:1px solid var(--line-strong);border-radius:999px;padding:9px 16px;margin-top:12px;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);cursor:pointer}
   .mwin-chip:hover{border-color:var(--accent);background:rgba(47,224,214,.08)}
