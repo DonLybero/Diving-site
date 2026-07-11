@@ -1601,6 +1601,7 @@ function gotoWetsuit(th){
 function handleHash(){
   var h=(location.hash||'').replace(/^#/,''); if(!h) return;
   var parts=h.split('-');
+  if(parts[0]==='destinations'){showTab('planner');window.scrollTo({top:0});return;}
   if(parts[0]!=='gear') return;
   showTab('gear');
   var sel=document.getElementById('gearCat'); renderGear();

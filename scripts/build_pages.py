@@ -293,6 +293,9 @@ body.v2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
 DEST_CSS = """
 .dest2 h1,.dest2 h2,.dest2 h3{font-family:var(--serif)}
 .dest2 .wrap{max-width:1240px;padding:24px 32px 64px}
+.dest2 .dback{margin:0 0 12px;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+.dest2 .dback a{color:var(--accent-deep);text-decoration:none}
+.dest2 .dback a:hover{color:var(--cta-deep);text-decoration:underline}
 .dest2 .sec-h{font-size:2rem;font-weight:600;letter-spacing:-.01em;margin:0 0 20px;color:var(--ink)}
 /* intro */
 .lead2{font-size:1.22rem;line-height:1.75;color:var(--ink-soft);max-width:1160px;margin:34px 0 0}
@@ -925,6 +928,7 @@ def page(d, top_month=None):
 <body class="v2 dest2">
 {topbar()}
 <main class="wrap">
+  <p class="dback"><a href="../index.html#destinations" onclick="if(document.referrer.indexOf(location.host)>-1){{history.back();return false;}}">&larr; Back to destinations</a></p>
   {hero}
   {f'<p class="lead2 rev">{esc(d["description"])}</p>' if d.get("description") else ""}
   <p class="lead2sub rev">{esc(dest_intro(d))}</p>
