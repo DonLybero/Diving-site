@@ -2613,7 +2613,10 @@ function stayBox(d){
    structured section on the product page instead of buried fine print. */
 function openProfile(name){
   var d=DivingCalendar.getDestination(DESTS,name); if(!d)return;
-  showTab('planner');                       // profiles live on the Destinations tab
+  // Owner call (2026-07): a destination opens its own page — same pattern as
+  // gear products — rather than an inline profile below the directory.
+  if(d.slug){location.href='destinations/'+d.slug+'.html';return;}
+  showTab('planner');                       // fallback: inline profile on the Destinations tab
   var s=DivingCalendar.destinationSeasonSummary(d);
   var rows=DivingCalendar.MONTHS.map(function(m){
     var mm=d.monthly[m];
