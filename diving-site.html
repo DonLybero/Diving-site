@@ -1172,6 +1172,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .aff-note{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:0 0 16px}
   /* browse-the-world directory: full-page regions -> countries -> destinations */
   .browse-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:26px 0 4px;text-align:center}
+  /* destination search fronting the browse directory */
+  .bsearch{display:flex;justify-content:center;margin:26px 0 12px}
+  .bsearch input{width:min(440px,100%);padding:12px 20px;border:1.5px solid var(--line-strong);border-radius:999px;
+       font-family:var(--sans);font-size:.95rem;color:var(--ink);background:#fff;text-align:center;outline:none;
+       transition:border-color .15s ease,box-shadow .15s ease}
+  .bsearch input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(14,156,146,.12)}
+  .bsearch input::placeholder{color:var(--muted);opacity:.55;font-family:var(--mono);font-size:.78rem;
+       letter-spacing:.14em;text-transform:uppercase}
   .dregion{margin:26px 0 8px}
   .dregion h3{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--serif);font-size:1.45rem;font-weight:600;margin:0;padding-bottom:9px;border-bottom:2px solid var(--line-strong)}
   .bcount{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em}
@@ -1995,7 +2003,38 @@ function buildBrowseDir(){
       '<span class="bcount">'+n+' destination'+(n===1?'':'s')+'</span></h3>'+
       '<div class="dcountries">'+inner+'</div></section>';
   }).join('');
-  el.innerHTML='<h3 class="browse-head">The world by region</h3>'+sections;
+  el.innerHTML='<div class="bsearch"><input id="browseSearch" type="search" placeholder="The world by destination" '+
+    'autocomplete="off" aria-label="Search destinations"></div>'+sections;
+  var bi=document.getElementById('browseSearch');
+  bi.addEventListener('input',browseFilter);
+  bi.addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var links=[].slice.call(document.querySelectorAll('#browseDir .bcountry a'));
+    for(var i=0;i<links.length;i++){
+      if(links[i].style.display!=='none'){links[i].click();break;}
+    }
+  });
+}
+/* live filter: match destination, country or region; hide empty groups */
+function browseFilter(){
+  var inp=document.getElementById('browseSearch'); if(!inp) return;
+  var q=inp.value.trim().toLowerCase();
+  [].slice.call(document.querySelectorAll('#browseDir .dregion')).forEach(function(sec){
+    var region=((sec.querySelector('h3 span')||{}).textContent||'').toLowerCase();
+    var anyCountry=false;
+    [].slice.call(sec.querySelectorAll('.bcountry')).forEach(function(bc){
+      var country=((bc.querySelector('b')||{}).textContent||'').toLowerCase();
+      var any=false;
+      [].slice.call(bc.querySelectorAll('a')).forEach(function(a){
+        var hit=!q||a.textContent.toLowerCase().indexOf(q)>-1||country.indexOf(q)>-1||region.indexOf(q)>-1;
+        a.style.display=hit?'':'none';
+        if(hit)any=true;
+      });
+      bc.style.display=any?'':'none';
+      if(any)anyCountry=true;
+    });
+    sec.style.display=anyCountry?'':'none';
+  });
 }
 
 /* country · region line without repeating the country when the region already names it */
