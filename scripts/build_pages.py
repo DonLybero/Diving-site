@@ -17,6 +17,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://donlybero.github.io/Diving-site/"
 MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 RCOLOR = {"Peak":"#16a34a","Good":"#0ea5e9","Shoulder":"#eab308","Low":"#f97316","Closed":"#64748b"}
+# Owner-approved tonal (single-hue) season palette — DESTINATION PAGES ONLY
+# (the SPA and month hubs keep the classic rating colours).
+TONAL = {"Peak":"#0e7569","Good":"#5cb8ab","Shoulder":"#dfa826","Low":"#cfe4e0","Closed":"#b9c6c9"}
+# Badge/ink pairing on the tonal fills (all pairs >=4.5:1)
+TONAL_TEXT = {"Peak":"#ffffff","Good":"#0e2f37","Shoulder":"#0e2f37","Low":"#0e2f37","Closed":"#0e2f37"}
 MONTH_FULL = {"Jan":"January","Feb":"February","Mar":"March","Apr":"April","May":"May","Jun":"June",
               "Jul":"July","Aug":"August","Sep":"September","Oct":"October","Nov":"November","Dec":"December"}
 
@@ -68,9 +73,11 @@ def graph_ld(*nodes):
 TODAY = datetime.date.today().isoformat()
 
 CSS = """
-:root{--bg:#f4f9f9;--panel:#ffffff;--ink:#0e2f37;--muted:#61838a;--accent:#0e9c92;--cta:#0b7d75;--cta-deep:#06333c;--line:#d7e5e7;
---serif:Georgia,'Iowan Old Style','Times New Roman',serif;--mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+:root{--bg:#f4f9f9;--panel:#ffffff;--ink:#0e2f37;--muted:#4a6a71;--accent:#0e9c92;--cta:#0b7d75;--cta-deep:#06333c;--line:#d7e5e7;
+--serif:'Fraunces',Georgia,'Iowan Old Style','Times New Roman',serif;
+--sans:'Plus Jakarta Sans',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace}
+*{box-sizing:border-box}body{margin:0;font-family:var(--sans);
 background:linear-gradient(180deg,#ffffff,#e9f2f3);color:var(--ink);min-height:100vh}
 a{color:var(--accent)}h1,h2{font-family:var(--serif);font-weight:600}
 .topbar{display:flex;align-items:center;gap:11px;padding:10px 18px;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line)}
@@ -117,12 +124,6 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .prof-essay{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 .prof-essay h2{margin:0 0 8px;font-size:1.12rem}
 .prof-essay p{margin:0;color:#33565e;line-height:1.7;font-size:.95rem}
-.honest{background:#fff;border:1px solid var(--line-strong,#bcd7d9);border-radius:14px;padding:20px 22px;margin:26px 0 8px}
-.honest-kicker{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#0b7d75;margin-bottom:4px}
-.honest h3{font-family:var(--serif);font-size:1.35rem;margin:0 0 12px}
-.honest ul{list-style:none;margin:0;padding:0}
-.honest li{padding:9px 0;border-top:1px solid var(--line);color:#33565e;font-size:.92rem;line-height:1.65;max-width:80ch}
-.honest li b{color:var(--ink)}
 .gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
 .gitem-kicker a{color:var(--accent);text-decoration:none}
 .gitem-stage{margin:10px 0 26px}
@@ -209,6 +210,231 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .badge.sm{font-size:.66rem}
 """
 
+# ------------------------------------------------------- destination redesign
+# Owner-approved Tofo redesign (2026-07), applied to every destination page.
+# Scoped under body.dest2 so gear/month/marine pages keep the shared look.
+DEST_CSS = """
+.dest2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
+  --serif:'Fraunces',Georgia,'Iowan Old Style','Times New Roman',serif;
+  --sans:'Plus Jakarta Sans',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  font-family:var(--sans);color:var(--ink);
+  background:linear-gradient(180deg,#eef7f6 0%,#f4f9fb 40%,#eef4f8 100%)}
+.dest2 a{color:var(--accent-deep)}
+.dest2 h1,.dest2 h2,.dest2 h3{font-family:var(--serif)}
+.dest2 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,117,105,.10)}
+.dest2 .wrap{max-width:1240px;padding:24px 32px 64px}
+.dest2 .sec-h{font-size:2rem;font-weight:600;letter-spacing:-.01em;margin:0 0 20px;color:var(--ink)}
+.rev{will-change:opacity,transform}
+/* hero */
+.hero2{position:relative;margin-top:4px;border-radius:20px;overflow:hidden;height:520px;
+  box-shadow:0 16px 44px rgba(18,51,47,.14);background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+.hero2>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero2-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 45%,rgba(8,32,29,.62) 100%);pointer-events:none}
+.hero2-bar{position:absolute;left:40px;right:40px;bottom:34px;display:flex;align-items:flex-end;
+  justify-content:space-between;gap:16px 24px;flex-wrap:wrap}
+.hero2-kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:2.5px;color:#a8e6db;text-transform:uppercase;margin-bottom:8px}
+.hero2 h1{font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,3.6rem);font-weight:600;color:#fff;margin:0;
+  line-height:1.05;text-shadow:0 2px 20px rgba(8,32,29,.4)}
+.hero2-pills{display:flex;gap:10px;padding-bottom:6px;flex-wrap:wrap}
+.hero2-pills span{background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.28);color:#fff;font-size:.88rem;font-weight:600;padding:8px 16px;
+  border-radius:999px;white-space:nowrap}
+.credit2{position:absolute;right:12px;top:12px;width:24px;height:24px;border-radius:50%;
+  background:rgba(8,32,29,.45);color:rgba(255,255,255,.9);font-size:.74rem;font-family:var(--mono);
+  display:flex;align-items:center;justify-content:center;cursor:help}
+@media(max-width:640px){.hero2{height:320px;border-radius:14px}
+  .hero2-bar{left:18px;right:18px;bottom:16px;flex-direction:column;align-items:flex-start;gap:10px}
+  .hero2-pills{padding-bottom:0}.hero2-pills span{font-size:.78rem;padding:6px 12px}}
+/* intro */
+.lead2{font-size:1.22rem;line-height:1.75;color:var(--ink-soft);max-width:1160px;margin:34px 0 0}
+.lead2sub{font-size:1.02rem;line-height:1.7;color:var(--ink-soft);max-width:1160px;margin:14px 0 0}
+/* expect / encounter cards */
+.dest2 .prof-essays{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:30px 0 0}
+.dest2 .prof-essay{background:#fff;border:none;border-radius:18px;padding:28px 32px;
+  box-shadow:0 8px 30px rgba(18,51,47,.06);transition:transform .25s ease,box-shadow .25s ease}
+.dest2 .prof-essay:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(18,51,47,.10)}
+.dest2 .prof-essay h2{font-size:1.63rem;font-weight:600;margin:0 0 14px;color:var(--ink)}
+.dest2 .prof-essay p{margin:0;font-size:1.03rem;line-height:1.8;color:var(--ink-soft)}
+@media(max-width:860px){.dest2 .prof-essays{grid-template-columns:1fr}}
+/* best-months strip */
+.best2{margin-top:22px;background:linear-gradient(90deg,#e2f3f0,#eaf6f6);border:1px solid #cfe8e3;
+  border-radius:14px;padding:16px 24px;display:flex;align-items:center;gap:14px 36px;flex-wrap:wrap}
+.pair{display:flex;align-items:baseline;gap:8px}
+.lbl{font-family:var(--mono);font-size:.75rem;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.pair .val{font-size:1rem;font-weight:600;color:var(--ink)}
+/* season calendar */
+.cal{margin-top:44px}
+.calgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:8px}
+.calm{appearance:none;-webkit-appearance:none;background:none;border:0;padding:0;margin:0;cursor:pointer;
+  font:inherit;display:block;width:100%}
+.calbar{display:block;height:52px;border-radius:10px;border:2.5px solid transparent;
+  transition:transform .2s ease,filter .2s ease,border-color .15s ease}
+.calm:hover .calbar{transform:translateY(-3px);filter:brightness(1.06)}
+.calm.on .calbar{border-color:var(--ink)}
+.calm:focus-visible .calbar{outline:2px solid var(--accent-deep);outline-offset:2px}
+.callab{display:block;text-align:center;margin-top:8px;font-family:var(--mono);font-size:.78rem;
+  letter-spacing:1px;color:var(--muted)}
+.calm.on .callab{color:var(--ink);font-weight:700}
+@media(max-width:640px){.calgrid{gap:4px}.calbar{height:40px;border-radius:7px;border-width:2px}
+  .callab{font-size:.58rem;letter-spacing:.3px}}
+.calread{margin-top:16px;background:#fff;border:1px solid #ddeeea;border-radius:14px;padding:18px 24px;
+  display:flex;align-items:center;gap:14px 40px;flex-wrap:wrap}
+.cr-id{display:flex;align-items:center;gap:12px}
+.cr-swatch{width:14px;height:14px;border-radius:4px;display:inline-block;flex:none}
+.cr-month{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--ink)}
+.cr-chip{font-size:.85rem;font-weight:600;color:#0e7569;background:#e2f3f0;padding:4px 12px;border-radius:999px}
+.cr-note{flex:1 1 240px}
+.cr-note .cr-val{font-weight:400;color:var(--ink-soft);font-size:.95rem}
+.cr-val{font-size:1rem;font-weight:600;color:var(--ink)}
+.callegend{margin-top:14px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap}
+.lg{display:flex;align-items:center;gap:7px;font-size:.85rem;color:var(--ink-soft)}
+.lg i{width:13px;height:13px;border-radius:4px;display:inline-block;border:1px solid rgba(18,51,47,.08)}
+.calmore{margin-top:10px}
+.calmore summary{list-style:none;cursor:pointer;text-align:right;font-size:.9rem;font-weight:600;color:var(--accent-deep)}
+.calmore summary::-webkit-details-marker{display:none}
+.calmore summary:hover{color:var(--cta-deep);text-decoration:underline}
+.calmore[open] summary{margin-bottom:6px}
+/* fact cards */
+.facts{margin-top:36px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.fact{background:#fff;border-radius:16px;padding:20px 22px;box-shadow:0 6px 22px rgba(18,51,47,.05);
+  transition:transform .25s ease,box-shadow .25s ease;min-width:0}
+.fact:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.fact .lbl{display:block;font-size:.72rem;letter-spacing:1.4px;margin-bottom:10px}
+.fact b{display:block;font-size:1.1rem;font-weight:600;color:var(--ink);line-height:1.4}
+.fact small{display:block;font-size:.83rem;color:var(--muted);margin-top:6px;line-height:1.5}
+@media(max-width:980px){.facts{grid-template-columns:repeat(2,1fr)}}
+/* pack / stay cards */
+.dest2 .packbox,.dest2 .staybox{background:#fff;border:none;border-radius:18px;padding:26px 32px;
+  margin:22px 0 0;box-shadow:0 8px 30px rgba(18,51,47,.06);display:flex;align-items:center;
+  justify-content:space-between;gap:14px 24px;flex-wrap:wrap}
+.dest2 .pack-head,.dest2 .stay-head{flex-basis:100%;font-family:var(--mono);font-size:.75rem;
+  letter-spacing:2px;text-transform:uppercase;color:var(--accent-deep);margin:0 0 2px}
+.dest2 .pack-body{margin:0;font-size:1.13rem;line-height:1.6;color:var(--ink-soft);flex:1 1 320px}
+.dest2 .pack-ctas{display:flex;gap:10px;flex-wrap:wrap}
+.dest2 .pack-cta{display:inline-block;background:var(--cta-deep);color:#fff;font-size:.98rem;font-weight:600;
+  padding:14px 26px;border-radius:12px;text-decoration:none;transition:background .2s ease,transform .2s ease}
+.dest2 .pack-cta:hover{background:var(--cta);transform:translateY(-2px)}
+.dest2 .pack-cta.ghost{background:#fff;color:#0e7569;border:1.5px solid #bfe0da}
+.dest2 .pack-cta.ghost:hover{background:#0e7569;color:#fff;border-color:#0e7569}
+/* sea life tags */
+.sealife{margin-top:34px}
+.sealife .sl-h{font-size:1rem;color:var(--muted);margin-bottom:12px}
+.tags{display:flex;gap:10px;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:.85rem;color:#0e7569;background:#fff;border:1.5px solid #bfe0da;
+  padding:9px 18px;border-radius:999px;text-decoration:none;transition:background .2s ease,color .2s ease,border-color .2s ease}
+a.tag:hover{background:#0e7569;color:#fff;border-color:#0e7569;text-decoration:none}
+span.tag{color:var(--ink-soft);border-color:#d3e5e2}
+/* dive sites */
+.sites2{margin-top:44px}
+.sites2 .sec-h{margin:0 0 6px}
+.sites2 .sec-h em{font-style:normal;color:var(--accent-deep)}
+.sites2 .sub{font-size:1rem;color:var(--muted);margin:0 0 20px}
+.sitewrap{overflow-x:auto;border-radius:18px;box-shadow:0 8px 30px rgba(18,51,47,.06)}
+.sitetable{min-width:840px;background:#fff}
+.srow{display:grid;grid-template-columns:170px 130px 92px 158px 1fr;gap:20px;padding:20px 28px;
+  border-bottom:1px solid #eef5f3;align-items:start;transition:background .2s ease}
+.srow:hover{background:#f7fbfa}
+.srow:last-child{border-bottom:none}
+.srow.head{padding:16px 28px;background:#f4faf9;border-bottom:1px solid #e3f0ed}
+.srow.head:hover{background:#f4faf9}
+.srow.head .lbl{font-size:.72rem;letter-spacing:1.4px}
+.s-name{font-size:1.05rem;font-weight:700;color:var(--ink)}
+.s-type span{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);background:#eef5f3;
+  border:1px solid #ddeae6;padding:4px 10px;border-radius:8px;display:inline-block}
+.s-depth{font-family:var(--mono);font-size:.9rem;color:#0e7569;white-space:nowrap}
+.s-level{display:flex;align-items:center;gap:8px}
+.dots{display:flex;gap:3px;flex:none}
+.dots i{width:9px;height:9px;border-radius:50%;background:#d5e6e2;display:inline-block}
+.dots i.f{background:#0e7569}
+.s-level em{font-style:normal;font-size:.92rem;color:var(--ink-soft)}
+.s-why{font-size:.95rem;line-height:1.65;color:var(--ink-soft)}
+  margin:40px 0 0;box-shadow:0 8px 30px rgba(18,51,47,.05)}
+/* verification + permalink */
+.endnote{margin:30px 0 0;display:flex;flex-direction:column;gap:12px}
+.verline{font-size:.97rem;color:var(--muted)}
+.permalink{font-size:1.03rem;font-weight:600;color:var(--accent-deep);text-decoration:none}
+.permalink:hover{color:var(--cta-deep);text-decoration:underline}
+.dest2 .related{margin-top:36px}
+@media(max-width:640px){.dest2 .wrap{padding:16px 14px 48px}
+  .dest2 .prof-essay{padding:22px 20px}
+  .dest2 .packbox,.dest2 .staybox{padding:20px 18px}
+  .srow{padding:16px 18px;gap:14px}.srow.head{padding:12px 18px}}
+@media(prefers-reduced-motion:reduce){.dest2 .prof-essay,.fact,.calbar,.dest2 .pack-cta,.tag,.srow{transition:none}}
+"""
+
+# Progressive enhancement: content is fully visible without JS (the readout is
+# server-rendered on January); JS re-points it at the visitor's current month,
+# wires hover/click/focus, and adds the entrance animations (skipped under
+# prefers-reduced-motion).
+DEST_JS = """
+(function(){
+  document.documentElement.classList.add('js');
+  var C={Peak:'#0e7569',Good:'#5cb8ab',Shoulder:'#dfa826',Low:'#cfe4e0',Closed:'#b9c6c9'};
+  var bars=[].slice.call(document.querySelectorAll('.calm'));
+  function el(id){return document.getElementById(id)}
+  function set(i){
+    bars.forEach(function(b,j){b.classList.toggle('on',j===i);b.setAttribute('aria-pressed',j===i?'true':'false')});
+    var d=bars[i].dataset;
+    el('crSwatch').style.background=C[d.rating]||'#b9c6c9';
+    el('crMonth').textContent=d.month;
+    el('crChip').textContent=d.rating;
+    el('crTemp').textContent=d.temp;
+    el('crViz').textContent=d.viz;
+    el('crNote').textContent=d.note;
+  }
+  bars.forEach(function(b,i){
+    b.addEventListener('mouseenter',function(){set(i)});
+    b.addEventListener('click',function(){set(i)});
+    b.addEventListener('focus',function(){set(i)});
+  });
+  if(bars.length===12)set(new Date().getMonth());
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(!('IntersectionObserver' in window))return;
+  var els=[].slice.call(document.querySelectorAll('.rev'));
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var t=e.target;
+      t.style.opacity='1';t.style.transform='none';
+      setTimeout(function(){t.style.opacity='';t.style.transform='';t.style.transition=''},760);
+      io.unobserve(t);
+    });
+  },{threshold:.08});
+  els.forEach(function(t){
+    if(t.getBoundingClientRect().top<window.innerHeight*.9)return; // already in view — never hide
+    t.style.opacity='0';t.style.transform='translateY(26px)';
+    t.style.transition='opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
+    io.observe(t);
+  });
+  var cbs=[].slice.call(document.querySelectorAll('.calbar'));
+  if(cbs.length&&cbs[0].getBoundingClientRect().top>window.innerHeight*.95){
+    cbs.forEach(function(b){
+      b.style.transformOrigin='bottom';b.style.transform='scaleY(0.15)';b.style.opacity='0';
+      b.style.transition='opacity .45s ease, transform .55s cubic-bezier(.22,1,.36,1)';
+    });
+    var bio=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting)return;
+        cbs.forEach(function(b,i){
+          setTimeout(function(){b.style.transform='scaleY(1)';b.style.opacity='1'},i*55);
+          setTimeout(function(){b.style.transform='';b.style.opacity='';b.style.transition=''},i*55+620);
+        });
+        bio.disconnect();
+      });
+    },{threshold:.3});
+    bio.observe(cbs[0]);
+  }
+})();
+"""
+
+FONTS_LINK = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+              '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+              '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,'
+              '500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:'
+              'wght@400;500;700&display=swap">')
+
 FLUKE = ('<svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 '
          'C35 32 18 24 6 22 C16 28 33 37 48 41 C53 42 56 43 60 47 C64 43 67 42 72 41 C87 37 104 28 114 22 '
          'C102 24 85 32 74 41 C67 46 64 51 60 62 Z" fill="#2fe0d6"/></svg>')
@@ -283,7 +509,7 @@ def pack_box(d):
             ctas += cta(secondary, f"See the best {secondary}&nbsp;mm &rarr;", ghost=True)
     else:
         return ""
-    return (f'<div class="packbox"><div class="pack-head">What to pack here</div>'
+    return (f'<div class="packbox rev"><div class="pack-head">What to pack here</div>'
             f'<p class="pack-body">{body}</p><div class="pack-ctas">{ctas}</div></div>')
 
 
@@ -328,7 +554,7 @@ def stay_box(d):
     else:
         body = "Base yourself at a dive resort or hotel close to the water."
         ctas = book
-    return (f'<div class="staybox"><div class="stay-head">Where to stay</div>'
+    return (f'<div class="staybox rev"><div class="stay-head">Where to stay</div>'
             f'<p class="pack-body">{body}</p><div class="pack-ctas">{ctas}</div></div>')
 
 
@@ -336,34 +562,10 @@ def essays_block(d):
     """Editorial 'what to expect / what you'll encounter' cards (same as the SPA profile)."""
     cards = ""
     if d.get("underwater"):
-        cards += f'<div class="prof-essay"><h2>What to expect down there</h2><p>{esc(d["underwater"])}</p></div>'
+        cards += f'<div class="prof-essay rev"><h2>What to expect down there</h2><p>{esc(d["underwater"])}</p></div>'
     if d.get("encounters"):
-        cards += f'<div class="prof-essay"><h2>What you&#8217;ll encounter</h2><p>{esc(d["encounters"])}</p></div>'
+        cards += f'<div class="prof-essay rev"><h2>What you&#8217;ll encounter</h2><p>{esc(d["encounters"])}</p></div>'
     return f'<div class="prof-essays">{cards}</div>' if cards else ""
-
-
-def honest_block(d):
-    """Radical-transparency panel: what we can't promise (mirrors honestBlock in index.html)."""
-    items = [
-        "<b>Seasons drift.</b> Marine-life timing shifts year to year with plankton blooms and lunar "
-        "cycles — a peak landing a couple of weeks early or late is normal, not bad luck.",
-        "<b>Temperatures are ranges.</b> Water figures here are typical monthly ranges (&plusmn;1&deg;C); "
-        "an upwelling or a heatwave can step outside them.",
-        "<b>Visibility is seasonal, not daily.</b> Wind, swell, rain and plankton move it day to day — "
-        "read our metres as the month's typical form, not a promise for your dive.",
-        "<b>Currents can run above the rating.</b> Conditions on the day decide — brief with your "
-        "operator before the first dive, and sit one out if it's beyond your training.",
-    ]
-    closed = [m for m in MONTHS if d["monthly"][m]["rating"] == "Closed"]
-    if closed:
-        items.append(f"<b>Closed means closed.</b> {_join_list(closed)} {'are' if len(closed) > 1 else 'is'} "
-                     "out of season here — weather windows or park rules, not a scheduling choice.")
-    items.append("<b>A score compares, it doesn't guarantee.</b> We rank months from dive-operator and "
-                 "liveaboard calendars so you can weigh destinations like for like — always confirm "
-                 "current conditions with a local dive centre.")
-    lis = "</li><li>".join(items)
-    return ('<div class="honest"><div class="honest-kicker">The honest picture</div>'
-            f'<h3>What can change on the day?</h3><ul><li>{lis}</li></ul></div>')
 
 
 def dest_intro(d):
@@ -431,25 +633,206 @@ _SLUGS = {}
 def _slug_of(name):
     return _SLUGS.get(name)
 
-def page(d):
+# ------------------------------------------------- destination page helpers
+def _cap(s):
+    s = (s or "").strip()
+    return s[:1].upper() + s[1:] if s else s
+
+def _trunc(s, n=90):
+    """Clean word-boundary truncation — shortens real data, never invents."""
+    s = (s or "").strip()
+    if len(s) <= n:
+        return s
+    cut = s[:n].rsplit(" ", 1)[0].rstrip(",;:· ")
+    return cut + "…"
+
+def _fact_split(s, maxlen=24):
+    """Short fact-card value + sub-line detail from a free-text data field."""
+    s = (s or "").strip().rstrip(".")
+    head, tail = s, ""
+    m = re.search(r"[(,;]", s)
+    if m:
+        head = s[:m.start()].strip()
+        tail = s[m.start() + 1:].strip().rstrip(")").strip()
+        if m.group(0) == "(" and ")" in tail:
+            tail = tail.replace(")", "", 1)  # drop the paren we split open
+    if len(head) > maxlen:
+        cut = head[:maxlen].rsplit(" ", 1)[0]
+        rest = head[len(cut):].strip()
+        tail = (rest + (" — " + tail if tail else "")).strip()
+        head = cut
+    return _cap(head), _cap(_trunc(tail, 88))
+
+def _wetsuit_fact(w):
+    """'5mm' style short value; the full wetsuit note becomes the sub-line."""
+    w = (w or "").strip()
+    m = re.search(r"\d\s*(?:-|–|to )?\s*\d?\s*mm", w)
+    dry = w.lower().find("drysuit")
+    if dry != -1 and (not m or dry < m.start()):
+        head = "Drysuit"
+    elif m:
+        head = re.sub(r"\s+", "", m.group(0))
+    else:
+        return _fact_split(w)
+    tail = _trunc(w, 88)
+    if tail.lower() == head.lower():
+        tail = ""
+    return head, _cap(tail)
+
+def _level_dots(level):
+    l = (level or "intermediate").lower()
+    n = 3 if ("tec" in l or "advanced" in l) else (2 if "intermediate" in l else 1)
+    dots = "".join('<i class="f"></i>' if k <= n else "<i></i>" for k in (1, 2, 3))
+    return f'<span class="s-level"><span class="dots">{dots}</span><em>{esc(level or "intermediate")}</em></span>'
+
+def _species_tag(s):
+    """Signature-species chip; links to the marine-life guide when one exists."""
+    sl = s.lower()
+    for exp in EXPERIENCES:
+        if any(k.lower() in sl for k in exp.get("keywords", [])):
+            if os.path.exists(os.path.join(ROOT, "marine-life", exp["slug"] + ".html")):
+                return f'<a class="tag" href="../marine-life/{exp["slug"]}.html">{esc(s)}</a>'
+            break
+    return f'<span class="tag">{esc(s)}</span>'
+
+def _pretty_months(t):
+    return re.sub(r"([A-Z][a-z]{2})-([A-Z][a-z]{2})", r"\1–\2", t)
+
+def _hero_pills(d):
+    win = _pretty_months(re.split(r"[(;]", d["best_months"])[0].strip().rstrip(","))
+    temps = [t for t in d["monthly_temp_c"].values() if t is not None]
+    tmin, tmax = min(temps), max(temps)
+    temp = f"{tmin}–{tmax}°C" if tmin != tmax else f"{tmin}°C"
+    vmax = max(d["monthly"][m].get("visibility_m") or 0 for m in MONTHS)
+    pills = [f"Best {win}", temp] + ([f"Viz to {vmax} m"] if vmax else [])
+    return "".join(f"<span>{esc(p)}</span>" for p in pills)
+
+def _month_note(mm):
+    return _cap(_trunc(mm.get("marine_life") or mm.get("conditions") or "", 90))
+
+def page(d, top_month=None):
     slug = d["slug"]; url = BASE + "destinations/" + slug + ".html"
     peak = [m for m in MONTHS if d["monthly"][m]["rating"] == "Peak"]
     closed = [m for m in MONTHS if d["monthly"][m]["rating"] == "Closed"]
     desc = (f'{d["name"]} diving season guide: best months {d["best_months"]}. Month-by-month water temperature, '
             f'visibility, currents ({d["current_strength"].lower()}) and marine life. {d["highlights"]}')[:300]
     img = d.get("image") or ""
-    hero_bg = (f'background-image:linear-gradient(180deg,rgba(4,26,34,.66),rgba(3,23,31,.9)),url(\'{esc(img)}\');' if img else "")
+
+    # ---- hero (photo with scrim + fact pills; plain gradient when no photo)
+    country, region = d["country"], d["region"]
+    loc = region if country.lower() in region.lower() else f"{region} · {country}"
+    credit = (f'<span class="credit2" title="{esc(d.get("image_credit"))}">&#9432;</span>'
+              if img and d.get("image_credit") else "")
+    if img:
+        hero = (f'<header class="hero2 rev">'
+                f'<img src="{esc(img)}" alt="{esc(d["name"])}" onerror="this.style.display=\'none\'">'
+                f'<div class="hero2-scrim"></div>{credit}'
+                f'<div class="hero2-bar"><div>'
+                f'<div class="hero2-kicker">Destination guide · {esc(loc)}</div>'
+                f'<h1>{esc(d["name"])}</h1></div>'
+                f'<div class="hero2-pills">{_hero_pills(d)}</div></div>'
+                f'</header>')
+    else:
+        hero = (f'<header class="hero plain" style="border-radius:20px">'
+                f'<h1>{esc(d["name"])}</h1>'
+                f'<p>{esc(country)} · {esc(region)} — {esc(d["highlights"])}</p></header>')
+
+    # ---- season calendar: 12 tonal bars + interactive readout
+    cells = ""
+    for i, m in enumerate(MONTHS):
+        mm = d["monthly"][m]; rating = mm["rating"]
+        t = d["monthly_temp_c"].get(m)
+        temp = f"{t}°C" if t is not None else "—"
+        viz = f'{mm.get("visibility_m")} m' if mm.get("visibility_m") else "—"
+        note = _month_note(mm)
+        aria = f"{MONTH_FULL[m]}: {rating}. Water {temp}, visibility {viz}"
+        cells += (f'<button type="button" class="calm{" on" if i == 0 else ""}" '
+                  f'data-month="{MONTH_FULL[m]}" data-rating="{rating}" data-temp="{esc(temp)}" '
+                  f'data-viz="{esc(viz)}" data-note="{esc(note)}" '
+                  f'aria-pressed="{"true" if i == 0 else "false"}" aria-label="{esc(aria)}">'
+                  f'<span class="calbar" style="background:{TONAL[rating]}"></span>'
+                  f'<span class="callab">{m}</span></button>')
+    j = d["monthly"]["Jan"]; jt = d["monthly_temp_c"].get("Jan")
+    jtemp = f"{jt}°C" if jt is not None else "—"
+    jviz = f'{j.get("visibility_m")} m' if j.get("visibility_m") else "—"
+    readout = (f'<div class="calread">'
+               f'<div class="cr-id"><span class="cr-swatch" id="crSwatch" style="background:{TONAL[j["rating"]]}"></span>'
+               f'<span class="cr-month" id="crMonth">January</span>'
+               f'<span class="cr-chip" id="crChip">{j["rating"]}</span></div>'
+               f'<div class="pair"><span class="lbl">Water</span><span class="cr-val" id="crTemp">{jtemp}</span></div>'
+               f'<div class="pair"><span class="lbl">Visibility</span><span class="cr-val" id="crViz">{jviz}</span></div>'
+               f'<div class="pair cr-note"><span class="lbl">Highlights</span><span class="cr-val" id="crNote">{esc(_month_note(j))}</span></div>'
+               f'</div>')
+    legend = "".join(f'<span class="lg"><i style="background:{TONAL[r]}"></i>{r}</span>'
+                     for r in ("Peak", "Good", "Shoulder", "Low", "Closed"))
     rows = ""
     for m in MONTHS:
         mm = d["monthly"][m]
         t = d["monthly_temp_c"].get(m)
         rows += (f'<tr><td><b>{m}</b></td>'
-                 f'<td><span class="badge" style="background:{RCOLOR[mm["rating"]]}'
-                 f'{";color:#fff" if mm["rating"] in ("Peak","Low","Closed") else ""}">{mm["rating"]}</span></td>'
+                 f'<td><span class="badge" style="background:{TONAL[mm["rating"]]};color:{TONAL_TEXT[mm["rating"]]}">{mm["rating"]}</span></td>'
                  f'<td class="num">{t if t is not None else "—"}°C</td>'
                  f'<td class="num">{mm.get("visibility_m") or "—"}m</td>'
                  f'<td>{esc(mm["marine_life"])}</td><td>{esc(mm["conditions"])}</td></tr>')
-    species = "".join(f'<span class="chip">{esc(s)}</span>' for s in d.get("signature_species", []))
+    detail = ('<details class="calmore"><summary>+ Full month-by-month detail</summary>'
+              '<div style="overflow:auto;background:#fff;border:1px solid #ddeeea;border-radius:14px;padding:6px 18px 14px"><table>'
+              '<thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions</th></tr></thead>'
+              f'<tbody>{rows}</tbody></table></div></details>')
+    calendar = (f'<section class="cal rev"><h2 class="sec-h">When should you dive {esc(d["name"])}?</h2>'
+                f'<div class="calgrid">{cells}</div>{readout}'
+                f'<div class="callegend">{legend}</div>{detail}</section>')
+
+    # ---- best-months strip (mono label / value pairs)
+    pairs = [f'<span class="pair"><span class="lbl">Best months</span><span class="val">{esc(", ".join(peak) or "—")}</span></span>']
+    if top_month:
+        pairs.append(f'<span class="pair"><span class="lbl">Top month</span><span class="val">{esc(top_month[0])} (score {top_month[1]})</span></span>')
+    pairs.append(f'<span class="pair"><span class="lbl">Window</span><span class="val">{esc(_pretty_months(d["best_months"]))}</span></span>')
+    if closed:
+        pairs.append(f'<span class="pair"><span class="lbl">Closed</span><span class="val">{esc(", ".join(closed))}</span></span>')
+    best_strip = f'<div class="best2 rev">{"".join(pairs)}</div>'
+
+    # ---- fact cards (short value + sub-line detail, all from data)
+    temps = [t for t in d["monthly_temp_c"].values() if t is not None]
+    tmin, tmax = min(temps), max(temps)
+    wv, ws = _fact_split(d["water_type"])
+    if not ws:
+        ws = f"{tmin}–{tmax}°C across the year" if tmin != tmax else f"around {tmin}°C year-round"
+    dv, ds = _fact_split(d["difficulty"])
+    av, asub = _fact_split(d["access"])
+    suitv, suits = _wetsuit_fact(d["wetsuit"])
+    curv = _cap(d["current_strength"])
+    curs = _cap(_trunc(d.get("current_note") or d.get("currents") or "", 88))
+    facts = "".join(
+        f'<div class="fact rev"><span class="lbl">{lbl}</span><b>{esc(v)}</b>'
+        + (f'<small>{esc(s)}</small>' if s else "") + "</div>"
+        for lbl, v, s in (("Water type", wv, ws), ("Difficulty", dv, ds), ("Access", av, asub),
+                          ("Wetsuit", suitv, suits), ("Current strength", curv, curs)))
+
+    # ---- signature sea life (links into marine-life guides where they exist)
+    species = "".join(_species_tag(s) for s in d.get("signature_species", []))
+    sealife = (f'<div class="sealife rev"><div class="sl-h">Signature sea life</div>'
+               f'<div class="tags">{species}</div></div>') if species else ""
+
+    # ---- dive sites grid
+    sites = d.get("dive_sites") or []
+    sites_block = ""
+    if sites:
+        head = ('<div class="srow head">'
+                + "".join(f'<span class="lbl">{h}</span>' for h in
+                          ("Site", "Type", "Depth", "Level", "Why it&#8217;s known"))
+                + "</div>")
+        srows = "".join(
+            f'<div class="srow rev"><span class="s-name">{esc(s.get("name"))}</span>'
+            f'<span class="s-type"><span>{esc(_cap(s.get("type") or "Reef"))}</span></span>'
+            f'<span class="s-depth">{esc(s.get("depth") or "—")}</span>'
+            f'{_level_dots(s.get("level"))}'
+            f'<span class="s-why">{esc(s.get("blurb"))}</span></div>'
+            for s in sites)
+        sites_block = (f'<section class="sites2 rev"><h2 class="sec-h">Recognised dive sites <em>({len(sites)})</em></h2>'
+                       f'<p class="sub">Depths are typical published ranges — always confirm with your operator.</p>'
+                       f'<div class="sitewrap"><div class="sitetable">{head}{srows}</div></div></section>')
+
+    # ---- structured data (unchanged)
     ld = {
         "@type": "TouristDestination",
         "name": d["name"] + " scuba diving", "description": desc, "url": url,
@@ -458,27 +841,11 @@ def page(d):
     if d.get("coordinates", {}).get("lat") is not None:
         ld["geo"] = {"@type": "GeoCoordinates", "latitude": d["coordinates"]["lat"], "longitude": d["coordinates"]["lng"]}
     if img: ld["image"] = img
-    sites = d.get("dive_sites") or []
     if sites:
         ld["containsPlace"] = [{"@type": "TouristAttraction", "name": s.get("name")} for s in sites]
-    site_rows = "".join(
-        f'<tr><td><b>{esc(s.get("name"))}</b></td><td><span class="chip">{esc(s.get("type") or "Reef")}</span></td>'
-        f'<td class="num">{esc(s.get("depth") or "—")}</td>'
-        f'<td class="num">{esc(s.get("level") or "intermediate")}</td>'
-        f'<td>{esc(s.get("blurb"))}</td></tr>'
-        for s in sites)
-    sites_block = ""
-    if site_rows:
-        sites_block = (f'<h2>Recognised dive sites ({len(sites)})</h2>'
-                       f'<p class="meta">Depths are typical published ranges — always confirm with your operator.</p>'
-                       f'<div style="overflow:auto"><table>'
-                       f'<thead><tr><th>Site</th><th>Type</th><th>Depth</th><th>Level</th><th>Why it&#8217;s known</th></tr></thead>'
-                       f'<tbody>{site_rows}</tbody></table></div>')
     og_img = f'<meta property="og:image" content="{esc(img)}">' if img else ""
-    verified = (f'<p class="meta">&#10003; Data verified {esc(d.get("last_verified"))}'
-                f' · source confidence: {esc(d.get("data_confidence"))}</p>' if d.get("last_verified") else "")
-    cur_note = f'<div class="meta" style="font-size:.7rem;margin-top:2px">{esc(d.get("current_note"))}</div>' if d.get("current_note") else ""
-    closed_line = f' &nbsp;·&nbsp; <b>Closed:</b> {", ".join(closed)}' if closed else ""
+    verline = (f'<div class="verline">&#10003; Data verified {esc(d.get("last_verified"))}'
+               f' · source confidence: {esc(d.get("data_confidence"))}</div>' if d.get("last_verified") else "")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -490,44 +857,31 @@ def page(d):
 <meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}">{og_img}
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{json.dumps(graph_ld(ld, crumbs([("Home", BASE), ("Destinations", BASE + "destinations/index.html"), (d["name"], url)])), ensure_ascii=False)}</script>
-<style>{CSS}</style>
+{FONTS_LINK}
+<style>{CSS}{DEST_CSS}</style>
 </head>
-<body>
+<body class="dest2">
 {topbar()}
-<header class="hero" style="{hero_bg}">
-  <h1>{esc(d["name"])}</h1>
-  <p>{esc(d["country"])} · {esc(d["region"])} — {esc(d["highlights"])}</p>
-  {f'<span class="credit">{esc(d.get("image_credit"))}</span>' if d.get("image_credit") else ""}
-</header>
 <main class="wrap">
-  {f'<p style="max-width:78ch;line-height:1.7;color:#33565e;font-size:1.02rem">{esc(d["description"])}</p>' if d.get("description") else ""}
-  <p style="max-width:78ch;line-height:1.65;color:#33565e">{esc(dest_intro(d))}</p>
+  {hero}
+  {f'<p class="lead2 rev">{esc(d["description"])}</p>' if d.get("description") else ""}
+  <p class="lead2sub rev">{esc(dest_intro(d))}</p>
   {essays_block(d)}
-  <div class="best"><b>Best months:</b> {esc(", ".join(peak) or "—")} &nbsp;·&nbsp; <b>Recommended window:</b> {esc(d["best_months"])}{closed_line}</div>
-  <div class="kv">
-    <div><span>Water type</span>{esc(d["water_type"])}</div>
-    <div><span>Difficulty</span>{esc(d["difficulty"])}</div>
-    <div><span>Access</span>{esc(d["access"])}</div>
-    <div><span>Wetsuit</span><b>{esc(d["wetsuit"])}</b></div>
-    <div><span>Current strength</span><b>{esc(d["current_strength"])}</b>{cur_note}</div>
-    <div style="grid-column:1/-1"><span>Currents detail</span>{esc(d["currents"])}</div>
-  </div>
+  {best_strip}
+  {calendar}
+  <div class="facts">{facts}</div>
   {pack_box(d)}
   {stay_box(d)}
-  <span class="meta">Signature sea life</span>
-  <div class="chips">{species}</div>
-  <h2>When should you dive {esc(d["name"])}?</h2>
-  <div style="overflow:auto"><table>
-    <thead><tr><th>Month</th><th>Rating</th><th>Water</th><th>Viz</th><th>Sea life expected</th><th>Conditions</th></tr></thead>
-    <tbody>{rows}</tbody>
-  </table></div>
+  {sealife}
   {sites_block}
-  {honest_block(d)}
-  {verified}
-  {related_block(d)}
-  <a class="cta" href="../index.html">Plan a dive trip here — open the DiveSZN planner &rarr;</a>
+  <div class="endnote rev">
+    {verline}
+    <a class="permalink" href="../index.html">Plan a dive trip here — open the DiveSZN planner &rarr;</a>
+  </div>
+  <div class="related rev">{related_block(d)}</div>
 </main>
 {footer_html()}
+<script>{DEST_JS}</script>
 </body></html>"""
 
 def index_page(dests):
@@ -544,6 +898,7 @@ def index_page(dests):
 <title>All Dive Destinations — Season Guides | DiveSZN</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{BASE}destinations/index.html">
+{FONTS_LINK}
 <style>{CSS}</style>
 </head>
 <body>
@@ -712,6 +1067,7 @@ def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None):
 <link rel="canonical" href="{esc(url)}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}">
 {ldtag}
+{FONTS_LINK}
 <style>{CSS}</style>
 </head>
 <body>
@@ -1099,11 +1455,19 @@ def main():
         rankings = json.load(f)
     dests_by_name = {d["name"]: d for d in dests}
     _SLUGS.update({d["name"]: d["slug"] for d in dests})
+    # top-scoring month per destination, straight from the prebuilt rankings
+    # (never recompute the score here — the formula lives in the engine)
+    top_months = {}
+    for per in rankings["periods"]:
+        for r in per["ranked"]:
+            cur = top_months.get(r["name"])
+            if cur is None or r["score"] > cur[1]:
+                top_months[r["name"]] = (per["month"], r["score"])
     outdir = os.path.join(ROOT, "destinations")
     os.makedirs(outdir, exist_ok=True)
     for d in dests:
         with open(os.path.join(outdir, d["slug"] + ".html"), "w", encoding="utf-8") as f:
-            f.write(page(d))
+            f.write(page(d, top_months.get(d["name"])))
     with open(os.path.join(outdir, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_page(dests))
 
@@ -1149,7 +1513,8 @@ def main():
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(info["title"])} Diving — Now Split by Resort Town | DiveSZN</title>
 <meta name="description" content="Our {esc(info["title"])} guide is now split into dedicated destination guides.">
-<link rel="canonical" href="{esc(url)}"><style>{CSS}</style></head><body>
+<link rel="canonical" href="{esc(url)}">{FONTS_LINK}
+<style>{CSS}</style></head><body>
 {topbar()}
 <main class="wrap"><h1>{esc(info["title"])} — now four destinations</h1>
 <p class="meta">We split this guide so each resort town gets its own season calendar, dive sites and photos.</p>
