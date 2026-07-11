@@ -1140,18 +1140,35 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .card-cta a{text-decoration:none;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:4px}
   .card-cta .stay-link{color:var(--muted);font-weight:500}
   .card-cta .stay-link:hover{color:var(--accent)}
-  /* Season ribbon — 12-cell "when to go" strip */
-  .ribbon{margin:6px 0 4px}
-  .sr-row{display:grid;grid-template-columns:repeat(12,1fr);gap:5px}
-  .sr-cell{display:flex;flex-direction:column;align-items:center;gap:4px}
-  .sr-cell>i{display:block;width:100%;height:34px;border-radius:5px;background:var(--rc)}
-  .sr-cell>em{font-family:var(--mono);font-size:.62rem;color:var(--muted);font-style:normal}
-  .sr-cell.now>i{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--rc)}
-  .sr-cell.now>em{color:var(--ink);font-weight:700}
-  .sr-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
-  .sr-key{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;color:var(--muted)}
-  .sr-key>i{width:11px;height:11px;border-radius:3px;display:inline-block}
-  @media(max-width:640px){.sr-cell>i{height:28px}.sr-cell>em{font-size:.56rem}}
+  /* Tonal season calendar — mirrors the static destination pages' component */
+  .calgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;margin:6px 0 4px}
+  .calm{appearance:none;-webkit-appearance:none;background:none;border:0;padding:0;margin:0;cursor:pointer;
+       font:inherit;display:block;width:100%}
+  .calbar{display:block;height:52px;border-radius:10px;border:2.5px solid transparent;
+       transition:transform .2s ease,filter .2s ease,border-color .15s ease}
+  .calm:hover .calbar{transform:translateY(-3px);filter:brightness(1.06)}
+  .calm.on .calbar{border-color:var(--ink)}
+  .calm:focus-visible .calbar{outline:2px solid var(--accent-deep);outline-offset:2px}
+  .callab{display:block;text-align:center;margin-top:8px;font-family:var(--mono);font-size:.78rem;
+       letter-spacing:1px;color:var(--muted)}
+  .calm.on .callab{color:var(--ink);font-weight:700}
+  .calread{margin-top:16px;background:#fff;border:1px solid #ddeeea;border-radius:14px;padding:18px 24px;
+       display:flex;align-items:center;gap:14px 40px;flex-wrap:wrap}
+  .cr-id{display:flex;align-items:center;gap:12px}
+  .cr-swatch{width:14px;height:14px;border-radius:4px;display:inline-block;flex:none}
+  .cr-month{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--ink)}
+  .cr-chip{font-size:.85rem;font-weight:600;color:#0e7569;background:#e2f3f0;padding:4px 12px;border-radius:999px}
+  .cr-pair{display:flex;flex-direction:column;gap:2px}
+  .cr-lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .cr-val{font-size:1rem;font-weight:600;color:var(--ink)}
+  .cr-note{flex:1 1 240px}
+  .cr-note .cr-val{font-weight:400;color:var(--ink-soft);font-size:.95rem}
+  .callegend{margin-top:14px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap}
+  .lg{display:flex;align-items:center;gap:7px;font-size:.85rem;color:var(--ink-soft)}
+  .lg i{width:13px;height:13px;border-radius:4px;display:inline-block;border:1px solid rgba(18,51,47,.08)}
+  @media(max-width:640px){.calgrid{gap:4px}.calbar{height:40px;border-radius:7px;border-width:2px}
+       .callab{font-size:.58rem;letter-spacing:.3px}.calread{padding:14px 16px;gap:10px 22px}}
+  @media(prefers-reduced-motion:reduce){.calbar{transition:none}}
   .aff-note{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:0 0 16px}
   /* browse-the-world directory: full-page regions -> countries -> destinations */
   .browse-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:26px 0 4px;text-align:center}
@@ -1999,17 +2016,56 @@ function scoreBar(score){
   var pct=Math.max(6,Math.min(100,Math.round((score/150)*100)));
   return '<span class="sbar" title="Season score '+score+'"><i style="width:'+pct+'%"></i></span>';
 }
-/* 12-cell season strip coloured by monthly rating — the scannable "when to go"
-   ribbon that fronts the full month table on a destination profile. */
+/* Tonal season calendar — same component as the static destination pages:
+   12 bar-buttons + an interactive readout (hover/click/focus picks the month). */
+var TONAL={Peak:'#0e7569',Good:'#5cb8ab',Shoulder:'#dfa826',Low:'#cfe4e0',Closed:'#b9c6c9'};
+function escAttr(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function monthNote(mm){
+  var t=(mm.marine_life||'').trim();
+  if(t.length<=110) return t;
+  var cut=t.slice(0,110);
+  return cut.slice(0,cut.lastIndexOf(' '))+'…';
+}
 function seasonRibbon(d){
-  var cells=DivingCalendar.MONTHS.map(function(m){
-    var mm=d.monthly[m], c=RCOLOR[mm.rating]||'#cbd5e1';
-    var now=(m===DivingCalendar.MONTHS[new Date().getMonth()]);
-    return '<span class="sr-cell'+(now?' now':'')+'" style="--rc:'+c+'" title="'+m+' — '+mm.rating+'"><i></i><em>'+m[0]+'</em></span>';
+  var cells=DivingCalendar.MONTHS.map(function(m,i){
+    var mm=d.monthly[m];
+    return '<button type="button" class="calm" data-month="'+MONTH_FULL[m]+'" data-rating="'+mm.rating+'" '+
+      'data-temp="'+tempStr(d.monthly_temp_c[m])+'" data-viz="'+(mm.visibility_m!=null?mm.visibility_m+' m':'—')+'" '+
+      'data-note="'+escAttr(monthNote(mm))+'" aria-pressed="false" '+
+      'aria-label="'+MONTH_FULL[m]+': '+mm.rating+'">'+
+      '<span class="calbar" style="background:'+(TONAL[mm.rating]||'#b9c6c9')+'"></span>'+
+      '<span class="callab">'+m+'</span></button>';
   }).join('');
   var legend=['Peak','Good','Shoulder','Low','Closed'].map(function(r){
-    return '<span class="sr-key"><i style="background:'+RCOLOR[r]+'"></i>'+r+'</span>';}).join('');
-  return '<div class="ribbon"><div class="sr-row">'+cells+'</div><div class="sr-legend">'+legend+'</div></div>';
+    return '<span class="lg"><i style="background:'+TONAL[r]+'"></i>'+r+'</span>';}).join('');
+  return '<div class="calgrid">'+cells+'</div>'+
+    '<div class="calread"><div class="cr-id"><span class="cr-swatch" id="crSwatch"></span>'+
+    '<span class="cr-month" id="crMonth"></span><span class="cr-chip" id="crChip"></span></div>'+
+    '<div class="cr-pair"><span class="cr-lbl">Water</span><span class="cr-val" id="crTemp"></span></div>'+
+    '<div class="cr-pair"><span class="cr-lbl">Visibility</span><span class="cr-val" id="crViz"></span></div>'+
+    '<div class="cr-pair cr-note"><span class="cr-lbl">Highlights</span><span class="cr-val" id="crNote"></span></div></div>'+
+    '<div class="callegend">'+legend+'</div>';
+}
+function calWire(){
+  var bars=[].slice.call(document.querySelectorAll('#profile .calm'));
+  if(bars.length!==12) return;
+  function el(id){return document.getElementById(id);}
+  function set(i){
+    bars.forEach(function(b,j){b.classList.toggle('on',j===i);b.setAttribute('aria-pressed',j===i?'true':'false');});
+    var dd=bars[i].dataset;
+    el('crSwatch').style.background=TONAL[dd.rating]||'#b9c6c9';
+    el('crMonth').textContent=dd.month;
+    el('crChip').textContent=dd.rating;
+    el('crTemp').textContent=dd.temp;
+    el('crViz').textContent=dd.viz;
+    el('crNote').textContent=dd.note;
+  }
+  bars.forEach(function(b,i){
+    b.addEventListener('mouseenter',function(){set(i);});
+    b.addEventListener('click',function(){set(i);});
+    b.addEventListener('focus',function(){set(i);});
+  });
+  set(new Date().getMonth());
 }
 
 /* Hero photo: use a baked destination image (fetch_images.py) behind the headline.
@@ -2575,6 +2631,7 @@ function openProfile(name){
     (d.last_verified?'<p class="meta" style="margin-top:10px">✓ Data verified '.replace('✓','&#10003;')+d.last_verified+
       (d.data_confidence?' · source confidence: '+d.data_confidence:'')+'</p>':'')+
     (d.slug?'<p class="meta"><a href="destinations/'+d.slug+'.html">Permanent season-guide page for '+d.name+' →</a></p>':'');
+  calWire();
   document.getElementById('profile').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
