@@ -146,11 +146,102 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .region-lede{color:var(--muted);font-size:.9rem;margin:2px 0 8px}
 .dphoto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
 .badge.sm{font-size:.66rem}
+
+body.v2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
+  background:linear-gradient(180deg,#eef7f6 0%,#f4f9fb 40%,#eef4f8 100%)}
+.v2 a{color:var(--accent-deep)}
+.v2 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,117,105,.10)}
+.rev{will-change:opacity,transform}
+.kick{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent-deep);margin:16px 0 10px}
+/* photo hero — the gradient shows through if the photo 404s (onerror hides only the img) */
+.hero2{position:relative;margin-top:4px;border-radius:20px;overflow:hidden;height:520px;
+  box-shadow:0 16px 44px rgba(18,51,47,.14);background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+.hero2>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero2-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 45%,rgba(8,32,29,.62) 100%);pointer-events:none}
+.hero2-bar{position:absolute;left:40px;right:40px;bottom:34px;display:flex;align-items:flex-end;
+  justify-content:space-between;gap:16px 24px;flex-wrap:wrap}
+.hero2-kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:2.5px;color:#a8e6db;text-transform:uppercase;margin-bottom:8px}
+.hero2 h1{font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,3.6rem);font-weight:600;color:#fff;margin:0;
+  line-height:1.05;text-shadow:0 2px 20px rgba(8,32,29,.4)}
+.hero2-sub{color:#e8f7f5;max-width:62ch;margin:10px 0 0;font-size:1.02rem;line-height:1.6;
+  text-shadow:0 1px 14px rgba(8,32,29,.5)}
+.hero2-pills{display:flex;gap:10px;padding-bottom:6px;flex-wrap:wrap}
+.hero2-pills span{background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.28);color:#fff;font-size:.88rem;font-weight:600;padding:8px 16px;
+  border-radius:999px;white-space:nowrap}
+.credit2{position:absolute;right:12px;top:12px;width:24px;height:24px;border-radius:50%;
+  background:rgba(8,32,29,.45);color:rgba(255,255,255,.9);font-size:.74rem;font-family:var(--mono);
+  display:flex;align-items:center;justify-content:center;cursor:help}
+.hero2-hub{height:400px;margin-bottom:26px}
+.hero2-hub h1{font-size:clamp(2rem,4.4vw,3rem)}
+@media(max-width:640px){.hero2{height:320px;border-radius:14px}
+  .hero2-bar{left:18px;right:18px;bottom:16px;flex-direction:column;align-items:flex-start;gap:10px}
+  .hero2-pills{padding-bottom:0}.hero2-pills span{font-size:.78rem;padding:6px 12px}
+  .hero2-hub{height:300px;margin-bottom:18px}.hero2-sub{font-size:.88rem}}
+/* card language */
+.v2 .gentry{background:#fff;border:none;border-radius:18px;padding:20px 22px;margin:16px 0;
+  box-shadow:0 8px 30px rgba(18,51,47,.06);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .gentry:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(18,51,47,.10)}
+.v2 .gentry h3,.v2 .artlist h3{font-family:var(--serif)}
+.v2 .gphoto{border-radius:12px}
+.v2 .artlist li{background:#fff;border:none;border-radius:16px;margin:0 0 14px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .artlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .artlist a{padding:14px 16px}
+.v2 .artlist .th{border-radius:10px}
+.v2 .dirlist{gap:14px}
+.v2 .dirlist li{background:#fff;border:none;border-radius:16px;box-shadow:0 6px 22px rgba(18,51,47,.05);
+  transition:transform .25s ease,box-shadow .25s ease}
+.v2 .dirlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .dirlist a{padding:13px 16px}
+.v2 .dirlist b{font-family:var(--serif);font-size:1.02rem}
+.v2 .dirlist small{font-family:var(--mono);font-size:.68rem;margin-top:4px}
+.v2 .tipbox{background:#fff;border:none;border-radius:16px;padding:16px 20px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05)}
+.v2 .tipbox>b{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep)}
+.tablecard{background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(18,51,47,.06);
+  padding:8px 20px 14px;overflow-x:auto;margin:14px 0}
+.v2 .region-head{border-top:none;padding-top:8px;margin:38px 0 2px}
+.v2 .region-head::before{content:"";display:block;width:64px;height:3px;border-radius:2px;
+  margin-bottom:12px;background:linear-gradient(90deg,var(--accent),transparent)}
+.v2 .cta,.v2 .pack-cta{background:var(--cta-deep);transition:background .2s ease,transform .2s ease}
+.v2 .cta{border-radius:12px;padding:13px 22px;color:#fff}
+.v2 .cta:hover,.v2 .pack-cta:hover{background:var(--cta);transform:translateY(-2px)}
+.v2 .pack-cta.ghost{background:#fff;color:#0e7569;border-color:#bfe0da}
+.v2 .pack-cta.ghost:hover{background:#0e7569;color:#fff;border-color:#0e7569}
+.v2 .hero.plain{background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+@media(max-width:640px){.v2 .gentry{padding:16px 14px}.v2 .artlist a{padding:11px 12px}}
+@media(prefers-reduced-motion:reduce){.v2 .gentry,.v2 .artlist li,.v2 .dirlist li,.v2 .cta,.v2 .pack-cta{transition:none}}
 </style>
 </head>
-<body>
+<body class="v2">
 <div class="topbar"><a href="../index.html"><svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 C35 32 18 24 6 22 C16 28 33 37 48 41 C53 42 56 43 60 47 C64 43 67 42 72 41 C87 37 104 28 114 22 C102 24 85 32 74 41 C67 46 64 51 60 62 Z" fill="#2fe0d6"/></svg><span class="name">Dive<b>SZN</b></span></a></div>
-<header class="hero plain"><h1>Atomic Aquatics T3 Review &amp; Best Price</h1><p>Every metal part that touches gas or water is titanium, so corrosion never starts — the reason this regulator is rated for three years or 300 dives between services, twice the usual interval.</p></header>
-<main class="wrap"><p class="meta gitem-kicker">#2 in <a href="regulators.html">Top Regulators in 2026</a></p><div class="gitem-stage"><figure class="gitem-photo"><img id="gimg" src="../assets/gear/studio/hero/atomic-aquatics-t3.jpg" alt="Atomic Aquatics T3"><div class="gitem-banner"><div class="gitem-id"><b>Atomic Aquatics T3</b><span class="gitem-price">from <b>$1799.95</b></span><small>indicative — the retailer shows the live price</small></div><div class="pack-ctas"><a class="pack-cta" href="https://www.divers-supply.com/atomic-t3-regulator-yoke-sealed.html" target="_blank" rel="noopener sponsored">Divers Supply · $1799.95</a><a class="pack-cta ghost" href="https://www.diverdans.com/shop/atomic-t3-regulator/" target="_blank" rel="noopener sponsored">Diver Dan&#x27;s · $1899.95</a><a class="pack-cta ghost" href="https://www.diversdirect.com/p/atomic-t3-scuba-regulator-yoke" target="_blank" rel="noopener sponsored">Divers Direct · $1899.95</a></div></div></figure></div><h2>What makes it good?</h2><p class="greview" style="max-width:80ch">The T3 is Atomic&#x27;s statement piece: first and second stages cut from solid titanium billet, the first stage alone requiring 23 machining operations, for a set weight around 771 g. That is travel-bag territory for a full-size regulator, and corrosion resistance is good enough that Atomic warranties the titanium against it for the original owner&#x27;s lifetime. The service math is the practical argument — 300 dive hours or 3 years between factory services, double or triple what most brass competitors specify. Atomic&#x27;s Automatic Flow Control adjusts the venturi with depth on its own, leaving only a rapid-adjustment knob for surface swims and camera work. The honest criticism, repeated for years on diver forums, is that every Atomic breathes essentially the same, so the T3&#x27;s price over a B2 or ST1 buys grams, not airflow. Titanium also caps the set at 40% O2, and cold-water specialists still default to sealed diaphragm designs. It is sold in its natural titanium finish in yoke or DIN, both factory-sealed.</p><div class="gverdict"><div class="gv-pro"><h3>Where it wins</h3><ul><li>Both stages are machined from solid titanium billet; the complete set weighs about 771 g, roughly 370 g less than an Apeks XTX50 in DIN.</li><li>The factory service interval is 300 dive hours or 3 years, against the 1-2 year schedule most brass regulators require.</li><li>Automatic Flow Control opens the venturi progressively with depth, so there is no knob to remember at 40 m; a manual override knob remains for freeflow-prone situations.</li><li>The balanced Jet Seat piston holds intermediate pressure without creep between services, which is part of how Atomic justifies the long interval.</li><li>Titanium components carry a corrosion warranty for the original owner&#x27;s lifetime.</li></ul></div><div class="gv-con"><h3>Where it falls short</h3><ul><li>It is the most expensive set in Atomic&#x27;s range, and long-running forum consensus is that it breathes no better than the cheaper B2 or ST1 — the premium buys weight savings, not performance.</li><li>Titanium restricts it to mixes of 40% O2 or less.</li><li>Even in the sealed version, ice and hard-cold divers tend to choose diaphragm designs over this piston.</li></ul></div></div><h2>Specs</h2><dl class="gspecs"><div><dt>1st stage</dt><dd>Sealed Ti balanced piston</dd></div><div><dt>2nd stage</dt><dd>Pneu-balanced, AFC</dd></div><div><dt>Cold water</dt><dd>Yes (factory sealed)</dd></div><div><dt>Ports</dt><dd>2 HP / 5 LP (swivel)</dd></div><div><dt>Weight</dt><dd>~1.7 lb / 0.77 kg (yoke)</dd></div><div><dt>Nitrox</dt><dd>40% out of box</dd></div><div><dt>Service interval</dt><dd>300 dive hours or 3 years, whichever comes first</dd></div><div><dt>Warranty</dt><dd>Limited lifetime; titanium parts covered against corrosion for the original owner&#x27;s lifetime</dd></div><div><dt>Construction</dt><dd>First and second stages machined from solid titanium billet; first stage takes 23 machining operations</dd></div><div><dt>Swivel</dt><dd>Titanium comfort swivel with black PVD coating</dd></div></dl><h2>Also in this guide</h2><ul class="grel"><li><a href="scubapro-mk25-evo-s620-ti.html">Scubapro MK25 EVO / S620 Ti</a> <small>from $1199</small></li><li><a href="apeks-xtx50.html">Apeks XTX50</a> <small>from $617.49</small></li><li><a href="aqua-lung-leg3nd.html">Aqua Lung Leg3nd</a> <small>from $659</small></li><li><a href="scubapro-mk19-evo-bt-g260-carbon-bt.html">Scubapro MK19 EVO BT / G260 Carbon BT</a> <small>from $1417</small></li></ul><p class="meta"><a href="regulators.html">&larr; Back to Top Regulators in 2026</a></p></main>
+<header class="hero plain"><h1>Atomic Aquatics T3 Review &amp; Best Price</h1><p>Every metal part that touches gas or water is titanium, so corrosion never starts — the reason this regulator is rated for three years or 300 dives between services, twice the usual interval.</p></header><main class="wrap"><p class="meta gitem-kicker">#2 in <a href="regulators.html">Top Regulators in 2026</a></p><div class="gitem-stage"><figure class="gitem-photo"><img id="gimg" src="../assets/gear/studio/hero/atomic-aquatics-t3.jpg" alt="Atomic Aquatics T3"><div class="gitem-banner"><div class="gitem-id"><b>Atomic Aquatics T3</b><span class="gitem-price">from <b>$1799.95</b></span><small>indicative — the retailer shows the live price</small></div><div class="pack-ctas"><a class="pack-cta" href="https://www.divers-supply.com/atomic-t3-regulator-yoke-sealed.html" target="_blank" rel="noopener sponsored">Divers Supply · $1799.95</a><a class="pack-cta ghost" href="https://www.diverdans.com/shop/atomic-t3-regulator/" target="_blank" rel="noopener sponsored">Diver Dan&#x27;s · $1899.95</a><a class="pack-cta ghost" href="https://www.diversdirect.com/p/atomic-t3-scuba-regulator-yoke" target="_blank" rel="noopener sponsored">Divers Direct · $1899.95</a></div></div></figure></div><h2>What makes it good?</h2><p class="greview" style="max-width:80ch">The T3 is Atomic&#x27;s statement piece: first and second stages cut from solid titanium billet, the first stage alone requiring 23 machining operations, for a set weight around 771 g. That is travel-bag territory for a full-size regulator, and corrosion resistance is good enough that Atomic warranties the titanium against it for the original owner&#x27;s lifetime. The service math is the practical argument — 300 dive hours or 3 years between factory services, double or triple what most brass competitors specify. Atomic&#x27;s Automatic Flow Control adjusts the venturi with depth on its own, leaving only a rapid-adjustment knob for surface swims and camera work. The honest criticism, repeated for years on diver forums, is that every Atomic breathes essentially the same, so the T3&#x27;s price over a B2 or ST1 buys grams, not airflow. Titanium also caps the set at 40% O2, and cold-water specialists still default to sealed diaphragm designs. It is sold in its natural titanium finish in yoke or DIN, both factory-sealed.</p><div class="gverdict"><div class="gv-pro"><h3>Where it wins</h3><ul><li>Both stages are machined from solid titanium billet; the complete set weighs about 771 g, roughly 370 g less than an Apeks XTX50 in DIN.</li><li>The factory service interval is 300 dive hours or 3 years, against the 1-2 year schedule most brass regulators require.</li><li>Automatic Flow Control opens the venturi progressively with depth, so there is no knob to remember at 40 m; a manual override knob remains for freeflow-prone situations.</li><li>The balanced Jet Seat piston holds intermediate pressure without creep between services, which is part of how Atomic justifies the long interval.</li><li>Titanium components carry a corrosion warranty for the original owner&#x27;s lifetime.</li></ul></div><div class="gv-con"><h3>Where it falls short</h3><ul><li>It is the most expensive set in Atomic&#x27;s range, and long-running forum consensus is that it breathes no better than the cheaper B2 or ST1 — the premium buys weight savings, not performance.</li><li>Titanium restricts it to mixes of 40% O2 or less.</li><li>Even in the sealed version, ice and hard-cold divers tend to choose diaphragm designs over this piston.</li></ul></div></div><h2>Specs</h2><dl class="gspecs"><div><dt>1st stage</dt><dd>Sealed Ti balanced piston</dd></div><div><dt>2nd stage</dt><dd>Pneu-balanced, AFC</dd></div><div><dt>Cold water</dt><dd>Yes (factory sealed)</dd></div><div><dt>Ports</dt><dd>2 HP / 5 LP (swivel)</dd></div><div><dt>Weight</dt><dd>~1.7 lb / 0.77 kg (yoke)</dd></div><div><dt>Nitrox</dt><dd>40% out of box</dd></div><div><dt>Service interval</dt><dd>300 dive hours or 3 years, whichever comes first</dd></div><div><dt>Warranty</dt><dd>Limited lifetime; titanium parts covered against corrosion for the original owner&#x27;s lifetime</dd></div><div><dt>Construction</dt><dd>First and second stages machined from solid titanium billet; first stage takes 23 machining operations</dd></div><div><dt>Swivel</dt><dd>Titanium comfort swivel with black PVD coating</dd></div></dl><h2>Also in this guide</h2><ul class="grel"><li><a href="scubapro-mk25-evo-s620-ti.html">Scubapro MK25 EVO / S620 Ti</a> <small>from $1199</small></li><li><a href="apeks-xtx50.html">Apeks XTX50</a> <small>from $617.49</small></li><li><a href="aqua-lung-leg3nd.html">Aqua Lung Leg3nd</a> <small>from $659</small></li><li><a href="scubapro-mk19-evo-bt-g260-carbon-bt.html">Scubapro MK19 EVO BT / G260 Carbon BT</a> <small>from $1417</small></li></ul><p class="meta"><a href="regulators.html">&larr; Back to Top Regulators in 2026</a></p></main>
 <footer><div class="foot-mark">Dive<b>SZN</b></div><div class="foot-tag">Your diving buddy</div><div class="foot-nav"><a href="../index.html">Destinations</a><a href="../destinations/index.html">Season guides</a><a href="../months/index.html">Best by month</a><a href="../marine-life/index.html">Marine life</a><a href="../gear/index.html">Gear guides</a><a href="../how-we-score.html">How we score</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a></div><div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — always confirm with a local dive centre.</div></footer>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(!('IntersectionObserver' in window))return;
+  var els=[].slice.call(document.querySelectorAll('.rev'));
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var t=e.target;
+      t.style.opacity='1';t.style.transform='none';
+      setTimeout(function(){t.style.opacity='';t.style.transform='';t.style.transition=''},760);
+      io.unobserve(t);
+    });
+  },{threshold:.08});
+  els.forEach(function(t){
+    if(t.getBoundingClientRect().top<window.innerHeight*.9)return; // already in view — never hide
+    t.style.opacity='0';t.style.transform='translateY(26px)';
+    t.style.transition='opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
+    io.observe(t);
+  });
+})();
+</script>
 </body></html>

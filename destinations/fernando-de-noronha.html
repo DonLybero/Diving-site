@@ -149,20 +149,15 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .dphoto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
 .badge.sm{font-size:.66rem}
 
-.dest2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
-  --serif:'Fraunces',Georgia,'Iowan Old Style','Times New Roman',serif;
-  --sans:'Plus Jakarta Sans',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-  font-family:var(--sans);color:var(--ink);
+body.v2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
   background:linear-gradient(180deg,#eef7f6 0%,#f4f9fb 40%,#eef4f8 100%)}
-.dest2 a{color:var(--accent-deep)}
-.dest2 h1,.dest2 h2,.dest2 h3{font-family:var(--serif)}
-.dest2 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+.v2 a{color:var(--accent-deep)}
+.v2 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
   -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,117,105,.10)}
-.dest2 .wrap{max-width:1240px;padding:24px 32px 64px}
-.dest2 .sec-h{font-size:2rem;font-weight:600;letter-spacing:-.01em;margin:0 0 20px;color:var(--ink)}
 .rev{will-change:opacity,transform}
-/* hero */
+.kick{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent-deep);margin:16px 0 10px}
+/* photo hero — the gradient shows through if the photo 404s (onerror hides only the img) */
 .hero2{position:relative;margin-top:4px;border-radius:20px;overflow:hidden;height:520px;
   box-shadow:0 16px 44px rgba(18,51,47,.14);background:linear-gradient(160deg,#0e2f37,#0b7d75)}
 .hero2>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -172,6 +167,8 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .hero2-kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:2.5px;color:#a8e6db;text-transform:uppercase;margin-bottom:8px}
 .hero2 h1{font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,3.6rem);font-weight:600;color:#fff;margin:0;
   line-height:1.05;text-shadow:0 2px 20px rgba(8,32,29,.4)}
+.hero2-sub{color:#e8f7f5;max-width:62ch;margin:10px 0 0;font-size:1.02rem;line-height:1.6;
+  text-shadow:0 1px 14px rgba(8,32,29,.5)}
 .hero2-pills{display:flex;gap:10px;padding-bottom:6px;flex-wrap:wrap}
 .hero2-pills span{background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
   border:1px solid rgba(255,255,255,.28);color:#fff;font-size:.88rem;font-weight:600;padding:8px 16px;
@@ -179,9 +176,50 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .credit2{position:absolute;right:12px;top:12px;width:24px;height:24px;border-radius:50%;
   background:rgba(8,32,29,.45);color:rgba(255,255,255,.9);font-size:.74rem;font-family:var(--mono);
   display:flex;align-items:center;justify-content:center;cursor:help}
+.hero2-hub{height:400px;margin-bottom:26px}
+.hero2-hub h1{font-size:clamp(2rem,4.4vw,3rem)}
 @media(max-width:640px){.hero2{height:320px;border-radius:14px}
   .hero2-bar{left:18px;right:18px;bottom:16px;flex-direction:column;align-items:flex-start;gap:10px}
-  .hero2-pills{padding-bottom:0}.hero2-pills span{font-size:.78rem;padding:6px 12px}}
+  .hero2-pills{padding-bottom:0}.hero2-pills span{font-size:.78rem;padding:6px 12px}
+  .hero2-hub{height:300px;margin-bottom:18px}.hero2-sub{font-size:.88rem}}
+/* card language */
+.v2 .gentry{background:#fff;border:none;border-radius:18px;padding:20px 22px;margin:16px 0;
+  box-shadow:0 8px 30px rgba(18,51,47,.06);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .gentry:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(18,51,47,.10)}
+.v2 .gentry h3,.v2 .artlist h3{font-family:var(--serif)}
+.v2 .gphoto{border-radius:12px}
+.v2 .artlist li{background:#fff;border:none;border-radius:16px;margin:0 0 14px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .artlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .artlist a{padding:14px 16px}
+.v2 .artlist .th{border-radius:10px}
+.v2 .dirlist{gap:14px}
+.v2 .dirlist li{background:#fff;border:none;border-radius:16px;box-shadow:0 6px 22px rgba(18,51,47,.05);
+  transition:transform .25s ease,box-shadow .25s ease}
+.v2 .dirlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .dirlist a{padding:13px 16px}
+.v2 .dirlist b{font-family:var(--serif);font-size:1.02rem}
+.v2 .dirlist small{font-family:var(--mono);font-size:.68rem;margin-top:4px}
+.v2 .tipbox{background:#fff;border:none;border-radius:16px;padding:16px 20px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05)}
+.v2 .tipbox>b{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep)}
+.tablecard{background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(18,51,47,.06);
+  padding:8px 20px 14px;overflow-x:auto;margin:14px 0}
+.v2 .region-head{border-top:none;padding-top:8px;margin:38px 0 2px}
+.v2 .region-head::before{content:"";display:block;width:64px;height:3px;border-radius:2px;
+  margin-bottom:12px;background:linear-gradient(90deg,var(--accent),transparent)}
+.v2 .cta,.v2 .pack-cta{background:var(--cta-deep);transition:background .2s ease,transform .2s ease}
+.v2 .cta{border-radius:12px;padding:13px 22px;color:#fff}
+.v2 .cta:hover,.v2 .pack-cta:hover{background:var(--cta);transform:translateY(-2px)}
+.v2 .pack-cta.ghost{background:#fff;color:#0e7569;border-color:#bfe0da}
+.v2 .pack-cta.ghost:hover{background:#0e7569;color:#fff;border-color:#0e7569}
+.v2 .hero.plain{background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+@media(max-width:640px){.v2 .gentry{padding:16px 14px}.v2 .artlist a{padding:11px 12px}}
+@media(prefers-reduced-motion:reduce){.v2 .gentry,.v2 .artlist li,.v2 .dirlist li,.v2 .cta,.v2 .pack-cta{transition:none}}
+
+.dest2 h1,.dest2 h2,.dest2 h3{font-family:var(--serif)}
+.dest2 .wrap{max-width:1240px;padding:24px 32px 64px}
+.dest2 .sec-h{font-size:2rem;font-weight:600;letter-spacing:-.01em;margin:0 0 20px;color:var(--ink)}
 /* intro */
 .lead2{font-size:1.22rem;line-height:1.75;color:var(--ink-soft);max-width:1160px;margin:34px 0 0}
 .lead2sub{font-size:1.02rem;line-height:1.7;color:var(--ink-soft);max-width:1160px;margin:14px 0 0}
@@ -285,7 +323,6 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
 .dots i.f{background:#0e7569}
 .s-level em{font-style:normal;font-size:.92rem;color:var(--ink-soft)}
 .s-why{font-size:.95rem;line-height:1.65;color:var(--ink-soft)}
-  margin:40px 0 0;box-shadow:0 8px 30px rgba(18,51,47,.05)}
 /* verification + permalink */
 .endnote{margin:30px 0 0;display:flex;flex-direction:column;gap:12px}
 .verline{font-size:.97rem;color:var(--muted)}
@@ -299,7 +336,7 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
 @media(prefers-reduced-motion:reduce){.dest2 .prof-essay,.fact,.calbar,.dest2 .pack-cta,.tag,.srow{transition:none}}
 </style>
 </head>
-<body class="dest2">
+<body class="v2 dest2">
 <div class="topbar"><a href="../index.html"><svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 C35 32 18 24 6 22 C16 28 33 37 48 41 C53 42 56 43 60 47 C64 43 67 42 72 41 C87 37 104 28 114 22 C102 24 85 32 74 41 C67 46 64 51 60 62 Z" fill="#2fe0d6"/></svg><span class="name">Dive<b>SZN</b></span></a></div>
 <main class="wrap">
   <header class="hero2 rev"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Baia_do_Sancho_Fernando_de_Noronha.JPG/960px-Baia_do_Sancho_Fernando_de_Noronha.JPG" alt="Fernando de Noronha" onerror="this.style.display='none'"><div class="hero2-scrim"></div><span class="credit2" title="Photo: Roberta monte (CC BY-SA 3.0) via Wikimedia Commons">&#9432;</span><div class="hero2-bar"><div><div class="hero2-kicker">Destination guide · Atlantic Ocean / Brazil</div><h1>Fernando de Noronha</h1></div><div class="hero2-pills"><span>Best Aug–Dec</span><span>26–28°C</span><span>Viz to 32 m</span></div></div></header>
@@ -322,7 +359,6 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
 <footer><div class="foot-mark">Dive<b>SZN</b></div><div class="foot-tag">Your diving buddy</div><div class="foot-nav"><a href="../index.html">Destinations</a><a href="../destinations/index.html">Season guides</a><a href="../months/index.html">Best by month</a><a href="../marine-life/index.html">Marine life</a><a href="../gear/index.html">Gear guides</a><a href="../how-we-score.html">How we score</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a></div><div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — always confirm with a local dive centre.</div></footer>
 <script>
 (function(){
-  document.documentElement.classList.add('js');
   var C={Peak:'#0e7569',Good:'#5cb8ab',Shoulder:'#dfa826',Low:'#cfe4e0',Closed:'#b9c6c9'};
   var bars=[].slice.call(document.querySelectorAll('.calm'));
   function el(id){return document.getElementById(id)}
@@ -344,22 +380,6 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
   if(bars.length===12)set(new Date().getMonth());
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   if(!('IntersectionObserver' in window))return;
-  var els=[].slice.call(document.querySelectorAll('.rev'));
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(!e.isIntersecting)return;
-      var t=e.target;
-      t.style.opacity='1';t.style.transform='none';
-      setTimeout(function(){t.style.opacity='';t.style.transform='';t.style.transition=''},760);
-      io.unobserve(t);
-    });
-  },{threshold:.08});
-  els.forEach(function(t){
-    if(t.getBoundingClientRect().top<window.innerHeight*.9)return; // already in view — never hide
-    t.style.opacity='0';t.style.transform='translateY(26px)';
-    t.style.transition='opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
-    io.observe(t);
-  });
   var cbs=[].slice.call(document.querySelectorAll('.calbar'));
   if(cbs.length&&cbs[0].getBoundingClientRect().top>window.innerHeight*.95){
     cbs.forEach(function(b){
@@ -378,6 +398,29 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
     },{threshold:.3});
     bio.observe(cbs[0]);
   }
+})();
+
+(function(){
+  document.documentElement.classList.add('js');
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(!('IntersectionObserver' in window))return;
+  var els=[].slice.call(document.querySelectorAll('.rev'));
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var t=e.target;
+      t.style.opacity='1';t.style.transform='none';
+      setTimeout(function(){t.style.opacity='';t.style.transform='';t.style.transition=''},760);
+      io.unobserve(t);
+    });
+  },{threshold:.08});
+  els.forEach(function(t){
+    if(t.getBoundingClientRect().top<window.innerHeight*.9)return; // already in view — never hide
+    t.style.opacity='0';t.style.transform='translateY(26px)';
+    t.style.transition='opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
+    io.observe(t);
+  });
 })();
 </script>
 </body></html>
