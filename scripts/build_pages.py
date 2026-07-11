@@ -562,11 +562,12 @@ def photo_hero(kicker, title, sub="", img="", credit="", pills="", pos=""):
     pos_s = f' style="object-position:{esc(pos)}"' if pos else ""
     img_s = (f'<img src="{esc(img)}" alt=""{pos_s} onerror="this.style.display=\'none\'">'
              if img else "")
-    sub_s = f'<p class="hero2-sub">{esc(sub)}</p>' if sub else ""
+    # Owner ruling (2026-07): no sentences on photos — the sub param is
+    # accepted for compatibility but never rendered on the hero.
     pills_s = f'<div class="hero2-pills">{pills}</div>' if pills else ""
     return (f'<header class="hero2 hero2-hub rev">{img_s}<div class="hero2-scrim"></div>{credit_s}'
             f'<div class="hero2-bar"><div><div class="hero2-kicker">{esc(kicker)}</div>'
-            f'<h1>{esc(title)}</h1>{sub_s}</div>{pills_s}</div></header>')
+            f'<h1>{esc(title)}</h1></div>{pills_s}</div></header>')
 
 # Pluralised wording for site-type breakdowns (mirrors destIntro in index.html)
 SITE_PLURALS = {"Muck": "muck dives", "Shore": "shore dives", "Drift": "drift dives",
@@ -819,18 +820,18 @@ def page(d, top_month=None):
     loc = region if country.lower() in region.lower() else f"{region} · {country}"
     credit = (f'<span class="credit2" title="{esc(d.get("image_credit"))}">&#9432;</span>'
               if img and d.get("image_credit") else "")
+    # Owner ruling (2026-07): destination heroes carry the name only —
+    # no kicker line, no sentences on the photo.
     if img:
         hero = (f'<header class="hero2 rev">'
                 f'<img src="{esc(img)}" alt="{esc(d["name"])}" onerror="this.style.display=\'none\'">'
                 f'<div class="hero2-scrim"></div>{credit}'
                 f'<div class="hero2-bar"><div>'
-                f'<div class="hero2-kicker">Destination guide · {esc(loc)}</div>'
                 f'<h1>{esc(d["name"])}</h1></div></div>'
                 f'</header>')
     else:
         hero = (f'<header class="hero plain" style="border-radius:20px">'
-                f'<h1>{esc(d["name"])}</h1>'
-                f'<p>{esc(country)} · {esc(region)} — {esc(d["highlights"])}</p></header>')
+                f'<h1>{esc(d["name"])}</h1></header>')
 
     # ---- season calendar: 12 tonal bars + interactive readout
     cells = ""
