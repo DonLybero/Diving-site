@@ -501,6 +501,22 @@ FLUKE = ('<svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><p
 
 def esc(s): return html.escape(str(s or ""), quote=True)
 
+def meta_desc(s, limit=160):
+    """SERP-length description (~155-160 chars): whole sentences when one ends
+    inside the budget, otherwise a word-boundary cut with an ellipsis — never
+    a mid-word fragment. The same string feeds <meta name=description>,
+    og:description and JSON-LD, so truncate once, here."""
+    s = re.sub(r"\s+", " ", str(s or "")).strip()
+    if len(s) <= limit:
+        return s
+    cut = s[:limit]
+    last = None
+    for m in re.finditer(r"[.!?](?=\s)", cut):
+        last = m
+    if last and last.end() >= limit * 0.55:   # keep useful length — no one-clause stubs
+        return cut[:last.end()]
+    return cut.rsplit(" ", 1)[0].rstrip(",;:·—&- ") + "…"
+
 def topbar(prefix="../"):
     return (f'<div class="topbar"><a href="{prefix}index.html">'+FLUKE+
             '<span class="name">Dive<b>SZN</b></span></a></div>')
@@ -782,8 +798,8 @@ def page(d, top_month=None):
     slug = d["slug"]; url = BASE + "destinations/" + slug + ".html"
     peak = [m for m in MONTHS if d["monthly"][m]["rating"] == "Peak"]
     closed = [m for m in MONTHS if d["monthly"][m]["rating"] == "Closed"]
-    desc = (f'{d["name"]} diving season guide: best months {d["best_months"]}. Month-by-month water temperature, '
-            f'visibility, currents ({d["current_strength"].lower()}) and marine life. {d["highlights"]}')[:300]
+    desc = meta_desc(f'{d["name"]} diving season guide: best months {d["best_months"]}. Month-by-month water temperature, '
+                     f'visibility, currents ({d["current_strength"].lower()}) and marine life. {d["highlights"]}')
     img = d.get("image") or ""
 
     # ---- hero (photo with scrim + fact pills; plain gradient when no photo)
@@ -953,19 +969,30 @@ def page(d, top_month=None):
 </body></html>"""
 
 def index_page(dests):
+    url = BASE + "destinations/index.html"
     items = ""
-    for d in sorted(dests, key=lambda x: x["name"].lower()):
+    ordered = sorted(dests, key=lambda x: x["name"].lower())
+    for d in ordered:
         peak = ", ".join(m for m in MONTHS if d["monthly"][m]["rating"] == "Peak") or "—"
         items += (f'<li><a href="{d["slug"]}.html"><b>{esc(d["name"])}</b>'
                   f'<small>{esc(d["country"])} · peak: {esc(peak)}</small></a></li>')
     desc = "Season guides for the world's scuba diving destinations: best months, water temperature, visibility, currents and marine life."
+    ld = graph_ld({"@type": "CollectionPage", "name": "Dive destination season guides",
+                   "description": desc, "url": url,
+                   "mainEntity": {"@type": "ItemList", "numberOfItems": len(ordered),
+                                  "itemListElement": [
+                                      {"@type": "ListItem", "position": i + 1, "name": d["name"],
+                                       "url": BASE + "destinations/" + d["slug"] + ".html"}
+                                      for i, d in enumerate(ordered)]}},
+                  crumbs([("Home", BASE), ("Destinations", url)]))
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>All Dive Destinations — Season Guides | DiveSZN</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{BASE}destinations/index.html">
+<link rel="canonical" href="{esc(url)}">
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 {FONTS_LINK}
 <style>{CSS}{V2_CSS}</style>
 </head>
@@ -1096,7 +1123,7 @@ def gear_item_page(cat, item, prefix="../"):
              f'{verdict}'
              f'{specs}{related}'
              f'<p class="meta"><a href="{cat_slug}.html">&larr; Back to {esc(cat_title)}</a></p>')
-    desc = (item.get("blurb") or review)[:160]
+    desc = meta_desc(item.get("blurb") or review)
     ld = graph_ld({"@type": "WebPage", "name": item["name"], "url": url, "description": desc},
                   crumbs([("Home", BASE), ("Gear guides", BASE + "gear/index.html"),
                           (cat_title, BASE + "gear/" + cat_slug + ".html"), (item["name"], url)]),
@@ -1183,7 +1210,7 @@ def gear_page(cat, prefix="../"):
             parts.append(f'<div class="tipbox"><b>What to look for</b><ul>{tips}</ul></div>')
         parts += [gear_entry(it, prefix) for it in cat["items"]]
     parts.append(f'<p class="meta"><a href="index.html">&larr; All gear buyer&#8217;s guides</a></p>')
-    desc = (intro or f'The best {cat["category"].lower()} for scuba diving in 2026.')[:160]
+    desc = meta_desc(intro or f'The best {cat["category"].lower()} for scuba diving in 2026.')
     items = _cat_items(cat)
     coll = {"@type": "CollectionPage", "name": cat.get("title"), "description": desc, "url": url}
     bc = crumbs([("Home", BASE), ("Gear guides", BASE + "gear/index.html"),
@@ -1773,8 +1800,8 @@ def marine_index_page(dests, prefix="../"):
                 + '</span></a>')
     wall = (_mcover(EXPERIENCES[0], 0, lead=True)
             + "".join(_mcover(e, i + 1) for i, e in enumerate(EXPERIENCES[1:])))
-    desc = ("Diving with the ocean's headline animals — whale sharks, manta rays, hammerheads, mola mola, "
-            "sea lions and more — with the best destinations and seasons for each.")
+    desc = ("Diving with the ocean's headline animals — whale sharks, mantas, hammerheads, mola mola, "
+            "sea lions and more — the best destinations and seasons for each.")
     inner = (f'<div class="mfile"><p class="greview" style="max-width:80ch">The ocean&#8217;s headline encounters — what they are, and '
              f'where and when to dive them, pulled live from DiveSZN&#8217;s seasonal data.</p>'
              f'<h2>Encounters</h2><div class="mwall rev">{wall}</div>'
@@ -1861,7 +1888,7 @@ def month_page(month, rankings, dests_by_name):
              f'<a href="index.html">All months</a>'
              f'<a href="{next_m.lower()}.html">{next_m} &rarr;</a></p>')
     top3 = ", ".join(r["name"] for r in rows[:3])
-    desc = f"The best scuba diving in {full}: {top3} and more — season ratings, water temperature, visibility and the marine life in season."[:160]
+    desc = meta_desc(f"The best scuba diving in {full}: {top3} and more — season ratings, water temperature, visibility and the marine life in season.")
     intro = MONTH_INTROS.get(month) or ""
     cut = intro.find(". ")
     lede, rest = (intro[:cut + 1], intro[cut + 2:]) if cut > -1 else (intro, "")
@@ -1904,7 +1931,7 @@ def months_index_page(rankings, dests_by_name):
               if img else '<div class="th"></div>')
         rows += (f'<li><a href="{full.lower()}.html">{th}'
                  f'<div><h3>Best diving in {full}</h3><p>{esc(teaser)}</p></div></a></li>')
-    desc = "Month-by-month guides to the world's best scuba diving — where the season, marine life and visibility line up for each month of the year."[:160]
+    desc = "Month-by-month guides to the world's best scuba diving — where the season, marine life and visibility line up for each month of the year."
     inner = (f'<p class="greview" style="max-width:80ch">Twelve guides, one per month — every destination scored for '
              f'that month and grouped by region, so your travel dates pick the spot.</p>'
              f'<h2>Guides</h2><ul class="artlist rev">{rows}</ul>'
@@ -1991,6 +2018,7 @@ def main():
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(info["title"])} Diving — Now Split by Resort Town | DiveSZN</title>
 <meta name="description" content="Our {esc(info["title"])} guide is now split into dedicated destination guides.">
+<meta name="robots" content="noindex">
 <link rel="canonical" href="{esc(url)}">{FONTS_LINK}
 <style>{CSS}{V2_CSS}</style></head><body class="v2">
 {topbar()}
