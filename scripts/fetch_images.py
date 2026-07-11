@@ -134,6 +134,7 @@ DEST_REQUIRE = {
 # Visually-vetted exact Commons files, tried before any search (mirrors the
 # marine fetcher's PINNED map) — for destinations where search keeps missing.
 DEST_PINNED = {
+    "Galapagos Islands": ["File:Sea lions (32819956607).jpg"],
     "Coiba": ["File:Kristallklares Wasser Coiba Panama (152311725).jpeg"],
     "Cancún & Playa del Carmen": ["File:Cancun aerial photo by safa.jpg",
                                   "File:Cancun from the air July 1985.jpg"],
