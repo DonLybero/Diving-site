@@ -1532,7 +1532,6 @@ MARINE_CSS = """
 .mcover-title{display:block;font-family:var(--serif);font-weight:600;line-height:1.1;font-size:1.3rem;margin:6px 0 2px;color:#fff;
   text-shadow:0 2px 16px rgba(8,32,29,.4)}
 .mcover.lead .mcover-title{font-size:clamp(1.6rem,4vw,2.4rem)}
-.mcover-deck{display:block;color:#e8f7f5;font-size:.9rem;line-height:1.45;max-width:60ch}
 .mstatus{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#bfe9e4;margin-top:8px}
 @media(max-width:640px){.mwall{grid-template-columns:1fr}.mcover,.mwall>.mcover.lead{height:300px}
   .mkick{font-size:.58rem}.mcover.lead .mcover-title{font-size:2.2rem}}
@@ -1631,7 +1630,7 @@ def marine_article(exp, dests, prefix="../"):
              + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>'
              + _marine_teasers(idx) + '</div>')
     hero = photo_hero("Marine life",
-                      exp["title"], exp.get("hero_sub") or "",
+                      exp["title"], "",
                       exp.get("image") or "", exp.get("image_credit") or "",
                       pos=exp.get("image_pos") or "")
     art = {"@type": "Article", "headline": exp["title"], "description": exp["desc"], "url": url,
@@ -1659,7 +1658,6 @@ def marine_index_page(dests, prefix="../"):
         return (f'<a class="mcover{" lead" if lead else ""}" href="{e["slug"]}.html">{img}'
                 f'<span class="mcover-scrim"></span><span class="mcover-txt">'
                 f'<span class="mcover-title">{esc(e["title"])}</span>'
-                f'<span class="mcover-deck">{esc(e.get("hero_sub") or "")}</span>'
                 + (f'<span class="mstatus">{status}</span>' if status else "")
                 + '</span></a>')
     wall = (_mcover(EXPERIENCES[0], 0, lead=True)
