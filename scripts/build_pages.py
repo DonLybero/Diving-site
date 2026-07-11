@@ -523,14 +523,16 @@ def footer_html(prefix="../"):
             'always confirm with a local dive centre.</div>'
             '</footer>')
 
-def photo_hero(kicker, title, sub="", img="", credit="", pills=""):
+def photo_hero(kicker, title, sub="", img="", credit="", pills="", pos=""):
     """Shared photo hero (hub variant of the destination hero2): photo with
     scrim, mono kicker, serif title, optional sub-line/pills, tooltip-only
     photo credit. Degrades gracefully — onerror hides only the <img>, the
-    gradient + scrim + title always render."""
+    gradient + scrim + title always render. pos = optional object-position
+    focal point (e.g. "50% 22%") so cover crops keep the subject in frame."""
     credit_s = (f'<span class="credit2" title="{esc(credit)}">&#9432;</span>'
                 if img and credit else "")
-    img_s = (f'<img src="{esc(img)}" alt="" onerror="this.style.display=\'none\'">'
+    pos_s = f' style="object-position:{esc(pos)}"' if pos else ""
+    img_s = (f'<img src="{esc(img)}" alt=""{pos_s} onerror="this.style.display=\'none\'">'
              if img else "")
     sub_s = f'<p class="hero2-sub">{esc(sub)}</p>' if sub else ""
     pills_s = f'<div class="hero2-pills">{pills}</div>' if pills else ""
@@ -1501,7 +1503,8 @@ def _marine_notes(exp):
 
 def _marine_teasers(idx):
     def card(e, kick):
-        img = (f'<img src="{esc(e["image"])}" alt="" loading="lazy" '
+        posi = f' style="object-position:{esc(e["image_pos"])}"' if e.get("image_pos") else ""
+        img = (f'<img src="{esc(e["image"])}" alt="" loading="lazy"{posi} '
                f'onerror="this.style.display=\'none\'">' if e.get("image") else "")
         return (f'<a class="mteaser" href="{e["slug"]}.html">{img}'
                 f'<span class="mcover-scrim"></span><span class="mcover-txt">'
@@ -1629,7 +1632,8 @@ def marine_article(exp, dests, prefix="../"):
              + _marine_teasers(idx) + '</div>')
     hero = photo_hero("Marine life",
                       exp["title"], exp.get("hero_sub") or "",
-                      exp.get("image") or "", exp.get("image_credit") or "")
+                      exp.get("image") or "", exp.get("image_credit") or "",
+                      pos=exp.get("image_pos") or "")
     art = {"@type": "Article", "headline": exp["title"], "description": exp["desc"], "url": url,
            "author": {"@type": "Organization", "name": "DiveSZN"},
            "publisher": {"@type": "Organization", "name": "DiveSZN", "url": BASE}}
@@ -1649,7 +1653,8 @@ def marine_index_page(dests, prefix="../"):
         else:
             modes = _marine_modes(e)
             status = " · ".join(modes) + " ONLY" if modes else ""
-        img = (f'<img src="{esc(e["image"])}" alt="" loading="lazy" '
+        posi = f' style="object-position:{esc(e["image_pos"])}"' if e.get("image_pos") else ""
+        img = (f'<img src="{esc(e["image"])}" alt="" loading="lazy"{posi} '
                f'onerror="this.style.display=\'none\'">' if e.get("image") else "")
         return (f'<a class="mcover{" lead" if lead else ""}" href="{e["slug"]}.html">{img}'
                 f'<span class="mcover-scrim"></span><span class="mcover-txt">'

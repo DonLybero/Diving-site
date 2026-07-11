@@ -2555,7 +2555,7 @@ function marineCoverCard(e,i,lead){
   var rows=marineWhereWhen(e.keywords);
   return '<a class="mcover'+(lead?' lead':'')+'" href="#marine/'+e.slug+'" onclick="openMarineArticle(\''+escq(e.slug)+'\');return false;">'+
     '<i class="ico" data-ico="fish"></i>'+
-    (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+
+    (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'" loading="lazy"'+(e.image_pos?' style="object-position:'+e.image_pos+'"':'')+' onerror="this.style.display=\'none\'">':'')+
     '<span class="mcover-scrim"></span>'+
     '<span class="mcover-txt">'+
       '<span class="mcover-title">'+e.title+'</span>'+
@@ -2568,7 +2568,7 @@ function marineCoverCard(e,i,lead){
 function marineCover(e,i){
   return '<figure class="marine-hero"><div class="mh-frame">'+
     '<i class="ico" data-ico="fish"></i>'+
-    (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'" onerror="this.style.display=\'none\'">':'')+
+    (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'"'+(e.image_pos?' style="object-position:'+e.image_pos+'"':'')+' onerror="this.style.display=\'none\'">':'')+
     '<div class="mh-scrim"></div>'+
     '<div class="mh-txt"><span class="mkick">Marine life</span>'+
     '<h2>'+e.title+'</h2>'+(e.hero_sub?'<p class="mh-deck">'+e.hero_sub+'</p>':'')+'</div>'+
