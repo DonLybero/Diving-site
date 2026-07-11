@@ -49,13 +49,18 @@ def load_region_groups():
     return groups
 
 def load_month_intros():
-    """Parse the editorial MONTH_INTROS ledes out of index.html (best effort)."""
+    """Parse the editorial MONTH_INTROS ledes out of index.html so the SPA
+    stays the single source of truth. Fails loudly if the shape changes —
+    a silent {} would strip the owner-written ledes from all 12 month hubs."""
     m = re.search(r"var MONTH_INTROS=\{(.*?)\};", _index_src(), re.S)
     if not m:
-        return {}
+        raise RuntimeError("MONTH_INTROS not found in index.html")
     intros = {}
     for im in re.finditer(r'(\w{3}):"((?:[^"\\]|\\.)*)"', m.group(1)):
         intros[im.group(1)] = _junesc(im.group(2))
+    missing = [mo for mo in MONTHS if not intros.get(mo)]
+    if missing:
+        raise RuntimeError(f"MONTH_INTROS parsed incomplete (missing {', '.join(missing)})")
     return intros
 
 REGION_GROUPS = load_region_groups()
@@ -109,6 +114,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin:22px 0 6px}
 .foot-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none}
 .foot-nav a:hover{color:var(--accent)}
+footer .disclosure{max-width:780px;margin:14px auto 0;color:var(--muted);font-size:.78rem}
 .dirlist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
 .dirlist li{background:var(--panel);border:1px solid var(--line);border-radius:10px}
 .dirlist a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink)}
@@ -522,21 +528,27 @@ def topbar(prefix="../"):
             '<span class="name">Dive<b>SZN</b></span></a></div>')
 
 def footer_html(prefix="../"):
+    # Nav labels mirror the app footer in index.html — keep the two in sync.
     return ('<footer>'
             '<div class="foot-mark">Dive<b>SZN</b></div>'
             '<div class="foot-tag">Your diving buddy</div>'
             '<div class="foot-nav">'
-            f'<a href="{prefix}index.html">Destinations</a>'
-            f'<a href="{prefix}destinations/index.html">Season guides</a>'
+            f'<a href="{prefix}index.html">Dive planner</a>'
+            f'<a href="{prefix}destinations/index.html">Destination guides</a>'
             f'<a href="{prefix}months/index.html">Best by month</a>'
             f'<a href="{prefix}marine-life/index.html">Marine life</a>'
             f'<a href="{prefix}gear/index.html">Gear guides</a>'
             f'<a href="{prefix}how-we-score.html">How we score</a>'
             f'<a href="{prefix}about.html">About</a>'
             f'<a href="{prefix}privacy.html">Privacy</a></div>'
-            '<div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. '
-            'Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — '
-            'always confirm with a local dive centre.</div>'
+            '<div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean '
+            'sea-temperature sources; water temperatures are typical monthly ranges (±1°C) and marine-life timing '
+            'shifts year to year with plankton and lunar cycles. Always confirm current conditions with a local '
+            'dive centre before travelling.</div>'
+            '<div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear '
+            'or book a trip through our links, at no extra cost to you. Gear prices are indicative as of our '
+            'research date — the retailer shows the live price. We link only to authorised retailers and trusted '
+            'operators, and commissions never influence our rankings.</div>'
             '</footer>')
 
 def photo_hero(kicker, title, sub="", img="", credit="", pills="", pos=""):
@@ -1072,7 +1084,7 @@ def gear_item_page(cat, item, prefix="../"):
     if not os.path.exists(os.path.join(ROOT, hero_path)):
         hero_path = img
     photo = (f'<figure class="gitem-photo"><img id="gimg" src="{prefix}{esc(hero_path)}" '
-             f'alt="{esc(item["name"])}"></figure>' if hero_path else "")
+             f'alt="{esc(item["name"])}" onerror="this.style.display=\'none\'"></figure>' if hero_path else "")
     stage_open = '<div class="gitem-stage">' if hero_path else ""
     stage_close = "</div>" if hero_path else ""
     offers = order_offers(item.get("options"))
@@ -1140,7 +1152,8 @@ def _cat_items(cat):
 
 def gear_entry(item, prefix):
     img = item.get("image") or ""
-    imgtag = f'<img src="{prefix}{esc(img)}" alt="{esc(item["name"])}" loading="lazy">' if img else ""
+    imgtag = (f'<img src="{prefix}{esc(img)}" alt="{esc(item["name"])}" loading="lazy" '
+              f'onerror="this.style.display=\'none\'">' if img else "")
     specs = ""
     if item.get("specs"):
         specs = ('<dl class="gspecs">'
@@ -1239,7 +1252,8 @@ def gear_index_page(gear, prefix="../"):
         slug = gear_slug(cat["category"])
         lead = (cat.get("items") or (cat.get("thickness_groups") or [{}])[0].get("items") or [{}])[0]
         img = lead.get("image") or ""
-        thumb = f'<img src="{prefix}{esc(img)}" alt="" loading="lazy">' if img else ""
+        thumb = (f'<img src="{prefix}{esc(img)}" alt="" loading="lazy" '
+                 f'onerror="this.style.display=\'none\'">' if img else "")
         teaser = ". ".join((cat.get("article_intro") or "").split(". ")[:2]).strip()
         rows += (f'<li><a href="{slug}.html"><div class="th">{thumb}</div>'
                  f'<div><h3>{esc(cat.get("title") or ("Top " + cat["category"]))}</h3>'
@@ -1259,7 +1273,8 @@ def gear_index_page(gear, prefix="../"):
             brows = ""
             for it, lo in sorted(brands[b], key=lambda t: t[0]["name"]):
                 img = it.get("image") or ""
-                th = (f'<span class="gbthumb"><img src="{prefix}{esc(img)}" alt="" loading="lazy"></span>'
+                th = (f'<span class="gbthumb"><img src="{prefix}{esc(img)}" alt="" loading="lazy" '
+                      f'onerror="this.style.display=\'none\'"></span>'
                       if img else '<span class="gbthumb"></span>')
                 frm = f"from {fmtp(lo)}" if lo is not None else ""
                 brows += (f'<a class="gbrow" href="{gear_slug(it["name"])}.html">{th}'
@@ -1855,7 +1870,8 @@ def month_page(month, rankings, dests_by_name):
         mm = d["monthly"][month]
         ctry = f' <span class="meta">— {esc(r["country"])}</span>' if r["country"] and r["country"] != r["name"] else ""
         img = d.get("image") or ""
-        photo = (f'<div class="gphoto dphoto"><img src="{esc(img)}" alt="{esc(r["name"])}" loading="lazy"></div>'
+        photo = (f'<div class="gphoto dphoto"><img src="{esc(img)}" alt="{esc(r["name"])}" loading="lazy" '
+                 f'onerror="this.style.display=\'none\'"></div>'
                  if img else '<div class="gphoto dphoto"></div>')
         chips = (f'<span class="badge sm" style="background:{TONAL[r["rating"]]};'
                  f'color:{TONAL_TEXT[r["rating"]]}">{r["rating"]}</span> '
@@ -1927,7 +1943,8 @@ def months_index_page(rankings, dests_by_name):
             cand = dests_by_name[r["name"]].get("image") or ""
             if cand and cand not in used:
                 img = cand; used.add(cand); break
-        th = (f'<div class="th photo"><img src="{esc(img)}" alt="" loading="lazy"></div>'
+        th = (f'<div class="th photo"><img src="{esc(img)}" alt="" loading="lazy" '
+              f'onerror="this.style.display=\'none\'"></div>'
               if img else '<div class="th"></div>')
         rows += (f'<li><a href="{full.lower()}.html">{th}'
                  f'<div><h3>Best diving in {full}</h3><p>{esc(teaser)}</p></div></a></li>')
