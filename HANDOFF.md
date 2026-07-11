@@ -67,7 +67,7 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
 
 | File | What it is |
 |------|-----------|
-| `index.html` | **The whole app** — HTML + CSS + inline JS in one file. What Pages serves. Tabs: Home, Dive Planner, Diving Gear, Destinations, Search. |
+| `index.html` | **The whole app** — HTML + CSS + inline JS in one file. What Pages serves. Tabs: Home (brand), Diving Gear, Destinations, Marine Life, Articles, Dive Planner, Search. |
 | `diving-calendar.js` | Scoring/query engine: `rankPeriod`, `rankWindow`, `getDestination`, `searchDestinations`, `destinationSeasonSummary`. Browser + Node. |
 | `diving-destinations.json` | **Canonical data** — 50 destinations × 12 monthly entries + metadata (coords, currents, wetsuit, access, dive_sites, image). |
 | `gear-guide.json` | Gear guide data — 6 categories × 10 items: review, specs dict, image (local `assets/gear/`), 3 cheapest buy options, article intro/tips. |
@@ -128,10 +128,12 @@ score = rating_base (Peak 100 / Good 72 / Shoulder 48 / Low 22; Closed excluded)
   images), the 12 monthly Destination articles (computed live from real data).
 - **SAMPLE:** none left on the published site. The old sample Reviews,
   Dive Centres and Liveaboard Safaris sections were **removed** 2026-07; the
-  Trip Planner tab is an honest "coming soon" placeholder until a real tool
-  ships. (Only sample strings left in code: the `GEAR` fallback array in
-  `index.html`, shown solely if `gear-guide.json` fails to load and labelled
-  "sample price" when it does.)
+  old "coming soon" Trip Planner placeholder was replaced 2026-07 by the
+  **Dive Planner** tab — the real seasonal filter + ranked result views
+  (cards / map / year calendar), moved out of the Destinations tab, which now
+  holds only the browse directory + profiles. (Only sample strings left in
+  code: the `GEAR` fallback array in `index.html`, shown solely if
+  `gear-guide.json` fails to load and labelled "sample price" when it does.)
 
 ## 7. Monetization (wired, awaiting owner sign-ups)
 
@@ -223,9 +225,11 @@ and supplies the site token.
 - Quarterly gear-price refresh ritual (prices are indicative, drift over time).
 
 ### Mid-term product
-- Trip Planner tab: replace the "coming soon" placeholder with a real
-  end-to-end trip tool (it superseded the removed sample Safaris listings;
-  any listings it shows must match the gear guide's research standard).
+- Dive Planner tab: DONE 2026-07 in its first form — the seasonal filter +
+  ranked results moved in, replacing the "coming soon" placeholder. Still
+  open: growing it into an end-to-end trip tool (it superseded the removed
+  sample Safaris listings; any listings it shows must match the gear guide's
+  research standard).
 - Wetsuit-by-temperature recommender (data already has per-month temps +
   wetsuit field — pure front-end feature).
 - Destination comparison view (pick 2–3, compare months side by side).
