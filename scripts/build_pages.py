@@ -770,15 +770,6 @@ def _species_tag(s):
 def _pretty_months(t):
     return re.sub(r"([A-Z][a-z]{2})-([A-Z][a-z]{2})", r"\1–\2", t)
 
-def _hero_pills(d):
-    win = _pretty_months(re.split(r"[(;]", d["best_months"])[0].strip().rstrip(","))
-    temps = [t for t in d["monthly_temp_c"].values() if t is not None]
-    tmin, tmax = min(temps), max(temps)
-    temp = f"{tmin}–{tmax}°C" if tmin != tmax else f"{tmin}°C"
-    vmax = max(d["monthly"][m].get("visibility_m") or 0 for m in MONTHS)
-    pills = [f"Best {win}", temp] + ([f"Viz to {vmax} m"] if vmax else [])
-    return "".join(f"<span>{esc(p)}</span>" for p in pills)
-
 def _month_note(mm):
     return _cap(_trunc(mm.get("marine_life") or mm.get("conditions") or "", 90))
 
@@ -801,8 +792,7 @@ def page(d, top_month=None):
                 f'<div class="hero2-scrim"></div>{credit}'
                 f'<div class="hero2-bar"><div>'
                 f'<div class="hero2-kicker">Destination guide · {esc(loc)}</div>'
-                f'<h1>{esc(d["name"])}</h1></div>'
-                f'<div class="hero2-pills">{_hero_pills(d)}</div></div>'
+                f'<h1>{esc(d["name"])}</h1></div></div>'
                 f'</header>')
     else:
         hero = (f'<header class="hero plain" style="border-radius:20px">'
