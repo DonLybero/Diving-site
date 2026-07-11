@@ -11,14 +11,17 @@ slot it into this framework rather than inventing a parallel one.
 
 A static diving website whose USP is answering **WHEN to dive WHERE**:
 
-- **Core product — Dive Planner:** a seasonal trip planner over 50 world dive
+- **Core product — Dive Planner:** a seasonal trip planner over 83 world dive
   destinations × 12 months of researched data (season rating, water temp,
   visibility, marine life, conditions, currents). Results render three ways:
-  ranked cards, world map, year calendar.
-- **Wrapped in a dive hub:** a monetization-ready Gear guide (top-10 buyer's
-  guides with price comparison), a Destinations section (12 monthly
-  "Top Destinations in <Month>" articles ranked live by the scoring engine),
-  destination search with full profiles, and 409 named dive sites.
+  ranked cards, world map, year calendar — and the tab + filter state lives
+  in the URL, so filtered views survive the back button and are shareable.
+- **Wrapped in a dive hub:** a monetization-ready Scuba Gear guide
+  (6 categories, 118 items, 346 retailer buy links, price comparison),
+  a Destinations directory with search (each destination opens its own
+  static page), Marine Life "Encounter Files" (9 species pages), 12 monthly
+  "Top Destinations in <Month>" hub pages ranked by the scoring engine,
+  and 620 named dive sites.
 - **No backend.** Pure static: HTML + CSS + vanilla JS + JSON. GitHub Pages.
 
 - **Live site:** https://donlybero.github.io/Diving-site/
@@ -36,11 +39,17 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
   dark theme is retired). Palette lives in `:root` of `index.html`:
   near-white backgrounds (`--bg:#f4f9f9`, panels `#ffffff`), dark teal ink
   (`#0e2f37`), teal accent (`#0e9c92` family), **coral (`#ff7a59`) strictly for
-  prices/scores/CTAs**.
+  buy/booking CTAs** — prices are quiet ink mono, never coral (owner ruling
+  2026-07).
+- **Season ratings — tonal palette everywhere** (owner ruling 2026-07):
+  Peak `#0e7569`, Good `#5cb8ab`, Shoulder `#dfa826`, Low `#cfe4e0`,
+  Closed `#b9c6c9`; white text only on Peak. Duplicated by design in
+  `index.html` (`TONAL`/`RCOLOR`) and `scripts/build_pages.py`
+  (`TONAL`/`TONAL_TEXT`) — keep them in sync.
 - **Typography:** editorial serif (Georgia) for headings, sans for body,
   **monospace "dive-computer" chips** for data readouts (temps, viz, scores).
-- **Header is an ad slot:** 728×90 leaderboard on desktop, 320×50 stacked on
-  mobile (`#adHeader`); logo left, no nav clutter.
+- **Header is brand-only** — the owner removed the ad slot 2026-07; keep it
+  slim, don't reintroduce ad placements without an owner decision.
 - **Icons:** inline SVG system (`ICONS` map) — never emoji in UI.
 
 ## 3. Editorial rules (owner-mandated, NON-NEGOTIABLE)
@@ -57,29 +66,45 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
 5. **Gear specs must be explicit** — never write "Both"; spell out
    e.g. "open heel and full foot". Reviews must be genuinely informative
    (what it is, why it matters underwater), not marketing fluff.
-6. **Photo credits:** keep attribution data, but on the hero it renders as a
-   tooltip-only ⓘ (owner didn't want a visible photographer name, and did NOT
-   want the photo itself replaced).
+6. **Photo credits:** keep attribution data, but on the page it renders as a
+   corner tooltip-only ⓘ (owner didn't want a visible photographer name, and
+   did NOT want the photo itself replaced). No other credit treatment.
 7. Prices are indicative; depth figures always carry the "confirm with your
    operator" caveat.
+
+### Owner rulings, 2026-07 redesign week (same weight as the rules above)
+8. **No prices on the homepage gear band** — the homepage sells the guides,
+   not the products; prices live on the gear pages/tables.
+9. **No colour mentions anywhere in gear copy** — reviews, blurbs, specs,
+   static pages, standalone build. (`colors`/`color_source` fields remain in
+   `gear-guide.json` as data but are never rendered.)
+10. **Season ratings use the tonal palette everywhere** (see §2) — the old
+    bright badge palette (green/blue/amber) is retired on every surface.
+11. **Photos carry no overlays**: destination, gear and marine photos get no
+    fact pills, no captions, no numbering on the image. Credits are the
+    corner tooltip only (rule 6).
+12. **A destination opens its own page** (`destinations/<slug>.html`) — same
+    pattern as gear products — never an inline profile below the directory.
 
 ## 4. Architecture & file map
 
 | File | What it is |
 |------|-----------|
-| `index.html` | **The whole app** — HTML + CSS + inline JS in one file. What Pages serves. Tabs: Home (brand), Diving Gear, Destinations, Marine Life, Articles, Dive Planner, Search. |
+| `index.html` | **The whole app** — HTML + CSS + inline JS in one file. What Pages serves. Tabs: Home (brand), **Scuba Gear**, **Destinations** (browse directory + search; each destination opens its static page), **Marine Life** (the Encounter Files: cover wall, scrubbable season pulse, evidence ledger), **Articles** (12 monthly), **Dive Planner** (seasonal filter + ranked results — cards/map/year calendar — with tab + filter state in the URL), Search. The footer link tree is **static HTML** (works without JS). |
 | `diving-calendar.js` | Scoring/query engine: `rankPeriod`, `rankWindow`, `getDestination`, `searchDestinations`, `destinationSeasonSummary`. Browser + Node. |
-| `diving-destinations.json` | **Canonical data** — 50 destinations × 12 monthly entries + metadata (coords, currents, wetsuit, access, dive_sites, image). |
-| `gear-guide.json` | Gear guide data — 6 categories × 10 items: review, specs dict, image (local `assets/gear/`), 3 cheapest buy options, article intro/tips. |
+| `diving-destinations.json` | **Canonical data** — 83 destinations × 12 monthly entries + metadata (coords, currents, wetsuit, access, dive_sites — 620 named sites total, image). |
+| `gear-guide.json` | Gear guide data — 6 categories, **118 items** (wetsuits grouped by thickness), **346 buy links**: review, specs dict, image (local `assets/gear/`), cheapest-first buy options, article intro/tips. Unrendered `colors`/`color_source` fields remain as data (owner ruling: no colour mentions in copy). |
 | `diving-site.html` | Single-file offline build (all JSON/JS inlined). **Regenerate after every index.html or data change** (`scripts/build_standalone.py`). |
-| `destinations/*.html` | 50 static SEO pages + sitemap.xml (`scripts/build_pages.py`). |
-| `assets/gear/` | 60 self-hosted product images (no hotlinking). |
+| `destinations/*.html` | 83 static destination pages + directory (`scripts/build_pages.py`). |
+| `gear/`, `marine-life/`, `months/` | Static gear pages (per item + per category + index), 9 marine species pages + index, 12 month hub pages + index — all generated by `scripts/build_pages.py`, which also writes `about.html`, `how-we-score.html`, **`privacy.html`**, `sitemap.xml` and `robots.txt`. Never hand-edit these; edit the generator. |
+| `assets/gear/` | ~111 self-hosted product images (no hotlinking) + `studio/` uniform-background derivatives (`scripts/studio_gear.py`). |
 | `vendor/` | Self-hosted Leaflet + world-land geojson (offline map basemap). |
-| `scripts/` | Data build pipeline + CI fetchers (below). |
+| `scripts/` | Data build pipeline + CI fetchers (below) + audits: `audit_marine_keywords.py` (read-only check of the keyword matching behind every marine "where & when" surface), `studio_gear.py` (gear photo → studio-shot pipeline). |
 | `.github/workflows/deploy-pages.yml` | Deploys repo root to Pages on push to `main`; also manual `workflow_dispatch`. |
 | `.github/workflows/fetch-images.yml` | Destination photos from Wikimedia/Pexels (runs on Actions runners — they have internet). |
 | `.github/workflows/fetch-gear-images.yml` | Gear product images from retailer og:image, localized into `assets/gear/`. |
 | `.github/workflows/check-buy-links.yml` | Monthly report-only health check of every gear-guide buy link (`scripts/check_buy_links.py`); dead/redirected links in the run summary + JSON artifact. |
+| other workflows | `fetch-marine-images.yml`, `fetch-brand-photos.yml`, `photo-candidates.yml`, `audit-marine-images.yml`, `ui-audit.yml` and small fetch/screenshot helpers — all follow the same "runners have internet" pattern (§8). |
 
 ### Key JS structures inside `index.html`
 - `AFFILIATE` config + `affLink()` — affiliate wiring (§7).
@@ -90,28 +115,43 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
   articles, ranked live by the engine.
 - `GEAR_GUIDE` + `renderGear()` / `gearEntry()` — magazine-style article list +
   per-item photo/review/specs/price-table.
-- `openProfile()` — full destination profile (intro paragraph via
-  `destIntro()`, best months, conditions grid, dive-sites table,
-  month-by-month table).
+- `openProfile()` — navigates to the destination's **static page**
+  (`destinations/<slug>.html`), same pattern as gear products. There is no
+  inline profile any more (the old renderer was dead code and was deleted);
+  the full profile — intro, season calendar, conditions grid, dive-sites
+  table, month-by-month — is generated by `build_pages.py`.
 
 ## 5. Data pipeline
 
 `diving-destinations.json` is canonical. Either edit it directly or regenerate:
 
 ```bash
-python3 scripts/build_master.py      # sources -> diving-destinations.json + CSVs
+python3 scripts/build_master.py      # sources -> diving-destinations.json + CSVs (safe merge)
 python3 scripts/build_rankings.py    # -> diving-rankings.json
 python3 scripts/build_standalone.py  # -> diving-site.html (ALWAYS after UI/data edits)
-python3 scripts/build_pages.py       # -> destinations/*.html + sitemap
+python3 scripts/build_pages.py       # -> destinations/gear/marine-life/months/*.html + sitemap
 ```
+
+**`build_master.py` is a safe merge by default** (fixed in commit `afc25e5`):
+the sources under `scripts/` only describe the ORIGINAL 50-destination world,
+while the canonical file has grown to 83 (destinations added/split/retired
+directly in the output file). A plain run keeps the canonical roster and
+order authoritative — sources only refresh the destinations they know about,
+and the script hard-refuses to drop anything. Flags: `--dry-run` (compute and
+report, write nothing), `--allow-additions` (let sources-only entries enter —
+usually retired ones, so off by default), `--allow-removals` (DANGEROUS: full
+regenerate from sources, dropping canonical-only destinations). The old
+danger — a documented plain run silently overwriting 83 destinations with
+50 — is gone.
 
 Sources: `scripts/build_csv.py` + `scripts/meta11.py` (original 11
 destinations), `scripts/data/*.json` (the other 39), `scripts/data/dive_sites.json`
-(**409 verified dive sites** — Google-verified, snorkel-only culled, per-site
-`source` field is research provenance and is **stripped from published
-output**), `scripts/data/verification.json` (hand-verified currents).
-`build_master.py` merges everything, derives `visibility_m` and
-`current_strength`, and preserves baked `image` fields.
+(the original 409 verified dive sites — Google-verified, snorkel-only culled,
+per-site `source` field is research provenance and is **stripped from
+published output**; sites for newer destinations live directly in the
+canonical file, **620 sites total**), `scripts/data/verification.json`
+(hand-verified currents). `build_master.py` merges everything, derives
+`visibility_m` and `current_strength`, and preserves baked `image` fields.
 
 ### Scoring (MUST stay identical in `build_rankings.py` and `diving-calendar.js`)
 ```
@@ -122,10 +162,11 @@ score = rating_base (Peak 100 / Good 72 / Shoulder 48 / Low 22; Closed excluded)
 
 ## 6. What's real vs sample
 
-- **REAL:** the 50-destination seasonal dataset, 409 dive sites, destination
+- **REAL:** the 83-destination seasonal dataset, 620 dive sites, destination
   photos (Wikimedia/Pexels, openly licensed, attribution kept in data), the
-  Gear guide (researched picks, indicative prices, real retailer links, local
-  images), the 12 monthly Destination articles (computed live from real data).
+  Gear guide (118 researched picks, indicative prices, real retailer links,
+  local images), the 9 marine-life species pages, and the 12 monthly
+  Destination articles / month hub pages (computed from real data).
 - **SAMPLE:** none left on the published site. The old sample Reviews,
   Dive Centres and Liveaboard Safaris sections were **removed** 2026-07; the
   old "coming soon" Trip Planner placeholder was replaced 2026-07 by the
@@ -143,7 +184,11 @@ score = rating_base (Peak 100 / Good 72 / Shoulder 48 / Low 22; Closed excluded)
   **Empty values leave links raw — safe in production.** After pasting IDs,
   rerun `build_standalone.py`.
 - All buy links: `rel="noopener sponsored"`, cheapest-first tables.
-- Header ad slot ready for AdSense/direct placements (`#adHeader`).
+- `AFFILIATE.liveaboard_aff` is configured but currently **unreferenced in
+  the app** (its only consumer was the inline profile, deleted as dead code)
+  — see §9 for the static-page monetization note.
+- The header ad slot was removed 2026-07 (header is brand-only, §2); an ad
+  placement would need a fresh owner decision.
 
 ## 8. Operating playbook (how work gets done here)
 
@@ -221,22 +266,32 @@ mention. Hold **GA4** until running Google Ads or needing deep funnels (it
 brings the consent banner). Wiring is ready to add once the owner picks a tool
 and supplies the site token.
 
-### Near-term engineering
+### Near-term engineering / known leftovers (2026-07 audit)
 - Quarterly gear-price refresh ritual (prices are indicative, drift over time).
+- **Owner photo needs:** a genuine Fuvahmulah **underwater** shot, and a real
+  **Protea Banks** photo (the wrong-location stand-ins — Tiger Beach and
+  Aliwal Shoal — were removed; run the owner A/B/C review flow to fill them).
+- `gear/wetsuits.html` is ~236KB — 5–7× heavier than any other generated
+  page; worth splitting or trimming before it hurts mobile.
+- `scripts/build_standalone.py` is brittle: exact-string patching of
+  `index.html` plus unescaped JSON embedding — cosmetic app edits can break
+  the build silently. Harden when next touched.
+- `AFFILIATE.liveaboard_aff` is configured but unreferenced in the app (its
+  only consumer was the deleted inline profile). When wiring static-page
+  monetization (launch checklist item 4), give it a consumer on the
+  generated destination pages (Python `aff_link` in `build_pages.py`).
 
 ### Mid-term product
-- Dive Planner tab: DONE 2026-07 in its first form — the seasonal filter +
-  ranked results moved in, replacing the "coming soon" placeholder. Still
-  open: growing it into an end-to-end trip tool (it superseded the removed
-  sample Safaris listings; any listings it shows must match the gear guide's
-  research standard).
+- Dive Planner: shipped 2026-07 (seasonal filter + ranked results, with tab +
+  filter state in the URL — shareable, back-button-safe). Still open: growing
+  it into an end-to-end trip tool (it superseded the removed sample Safaris
+  listings; any listings it shows must match the gear guide's research
+  standard).
 - Wetsuit-by-temperature recommender (data already has per-month temps +
   wetsuit field — pure front-end feature).
-- Destination comparison view (pick 2–3, compare months side by side).
-- "Best month finder" deep links (shareable URLs for a filtered planner state).
+- Destination comparison view (pick 2–3, compare months side by side) — the
+  gear compare shipped; the destination version is still open.
 - Logo refinement (fluke + a diving cue; lockup + size rules).
-- SEO: per-month landing pages ("diving in <month>") generated like
-  `destinations/`.
 
 ### Long-term (needs a backend or third-party services)
 - Price alerts; verified-diver reviews; personal dive log.
