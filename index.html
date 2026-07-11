@@ -978,7 +978,27 @@
     <div id="searchResults" class="grid"></div>
   </section>
 
-  <footer id="foot"></footer>
+  <!-- static footer: every link is known at build time, so the whole tree
+       stays crawlable and reachable on a no-JS load -->
+  <footer id="foot">
+    <div class="foot-mark">Dive<b>SZN</b></div>
+    <div class="foot-tag">Your diving buddy</div>
+    <div class="foot-nav">
+      <a href="destinations/index.html">Destination guides</a>
+      <a href="months/index.html">Best by month</a>
+      <a href="marine-life/index.html">Marine life</a>
+      <a href="gear/index.html">Gear guides</a>
+      <a href="how-we-score.html">How we score</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a></div>
+    <div style="margin-top:10px">score = conditions rating + sea-life bonus + visibility · ratings, best first: Peak · Good · Shoulder · Low · Closed</div>
+    <div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources;
+      water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles.
+      Always confirm current conditions with a local dive centre before travelling.</div>
+    <div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear or book a trip through our links,
+      at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price.
+      We link only to authorised retailers and trusted operators, and commissions never influence our rankings.</div>
+  </footer>
 </div>
 
 <script src="vendor/leaflet.js"></script>
@@ -2749,24 +2769,6 @@ function loadData(){
 loadData().then(function(res){
   var j=res[0]; LAND=res[1]; GEAR_GUIDE=res[2]; MARINE=(res[3]&&res[3].experiences)||[];
   DATA=j; DESTS=j.destinations;
-  document.getElementById('foot').innerHTML=
-    '<div class="foot-mark">Dive<b>SZN</b></div>'+
-    '<div class="foot-tag">Your diving buddy</div>'+
-    '<div class="foot-nav">'+
-    '<a href="destinations/index.html">Destination guides</a>'+
-    '<a href="months/index.html">Best by month</a>'+
-    '<a href="marine-life/index.html">Marine life</a>'+
-    '<a href="gear/index.html">Gear guides</a>'+
-    '<a href="how-we-score.html">How we score</a>'+
-    '<a href="about.html">About</a>'+
-    '<a href="privacy.html">Privacy</a></div>'+
-    '<div style="margin-top:10px">score = conditions rating + sea-life bonus + visibility · ratings, best first: Peak · Good · Shoulder · Low · Closed</div>'+
-    '<div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources; '+
-    'water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles. '+
-    'Always confirm current conditions with a local dive centre before travelling.</div>'+
-    '<div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear or book a trip through our links, '+
-    'at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price. '+
-    'We link only to authorised retailers and trusted operators, and commissions never influence our rankings.</div>';
   initControls();
   applyIcons(); setHeroPhoto();
   renderHome(); renderGear(); renderDestinations(); renderMarine(); buildBrowseDir();
