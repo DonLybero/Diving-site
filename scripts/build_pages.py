@@ -1603,9 +1603,7 @@ def marine_article(exp, dests, prefix="../"):
         # scuba cover story: stat strip → drop-cap lede → pulse → computed
         # sentence → ribbon ledger → field notes → beyond scuba → CTA → teasers
         body_rows = "".join(
-            f'<tr><td><b><a href="{prefix}destinations/{x["slug"]}.html">{esc(x["name"])}</a></b> '
-            f'<span class="badge" style="background:{TONAL[RANK_WORD[best]]};color:{TONAL_TEXT[RANK_WORD[best]]}">'
-            f'{RANK_WORD[best].upper()}</span>'
+            f'<tr><td><b><a href="{prefix}destinations/{x["slug"]}.html">{esc(x["name"])}</a></b>'
             f'<div class="meta">{esc(x["country"])}</div></td>'
             f'<td>{mini_ribbon_html(x, months)}</td></tr>'
             for best, x, months in rows)

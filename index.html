@@ -2675,7 +2675,6 @@ function marineLedgerHTML(e,rows){
     }
   }
   var body=list.map(function(r){
-    var word=MARINE_MON?r.d.monthly[MARINE_MON].rating:MRANK_WORD[r.best];
     var chips='',ev='';
     if(MARINE_MON){
       var mm=r.d.monthly[MARINE_MON]||{}, tc=r.d.monthly_temp_c[MARINE_MON], cc=[];
@@ -2685,7 +2684,6 @@ function marineLedgerHTML(e,rows){
       if(mm.marine_life)ev='<span class="mev" title="'+escAttr(mm.marine_life)+'">“'+mm.marine_life+'”</span>';
     }
     return '<tr><td><a href="#" onclick="openProfile(\''+escq(r.d.name)+'\');return false;"><b>'+r.d.name+'</b></a>'+
-      (word?' <span class="badge b-'+word+'">'+String(word).toUpperCase()+'</span>':'')+
       '<div class="meta" style="margin-bottom:0">'+r.d.country+(r.now===0?' · <b style="color:var(--peak,#0e7569)">in season now</b>':'')+'</div>'+
       chips+ev+'</td>'+
       '<td><div class="mini-ribbon">'+marineMini(r,nowM)+'</div></td></tr>';
