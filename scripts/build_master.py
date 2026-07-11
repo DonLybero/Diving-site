@@ -1,5 +1,26 @@
 #!/usr/bin/env python3
-import csv, json, sys, os, re, unicodedata
+import argparse, csv, json, sys, os, re, unicodedata
+
+# ---- Safety-first CLI --------------------------------------------------------
+# The sources under scripts/ (build_csv.py + meta11.py + scripts/data/*.json)
+# only describe the ORIGINAL 50-destination world. The canonical
+# diving-destinations.json has since grown (destinations added/split/retired
+# directly in the output file). Default mode is therefore a SAFE MERGE: the
+# canonical file's roster and order are authoritative; sources only refresh
+# the destinations they know about. Nothing is ever dropped (or resurrected)
+# without an explicit flag.
+ap = argparse.ArgumentParser(
+    description="Rebuild diving-destinations.json + published CSVs from sources, "
+                "safe-merged against the current canonical file.")
+ap.add_argument("--dry-run", action="store_true",
+                help="compute and report the merge; write NOTHING")
+ap.add_argument("--allow-additions", action="store_true",
+                help="let sources-only destinations enter the output "
+                     "(default: skipped — sources-only entries are usually retired)")
+ap.add_argument("--allow-removals", action="store_true",
+                help="DANGEROUS: full regenerate from sources; destinations that "
+                     "exist only in the canonical file are DROPPED")
+args = ap.parse_args()
 
 def slugify(name):
     s = unicodedata.normalize("NFD", name)
@@ -170,28 +191,58 @@ def normalize(rec):
     rec["slug"] = slugify(rec["name"])
     return rec
 
-all_dest = [normalize(r) for r in (orig11 + new)]
+src_dest = [normalize(r) for r in (orig11 + new)]
 
 # de-dupe by name (keep first); guard against accidental repeats
 seen, deduped = set(), []
-for r in all_dest:
+for r in src_dest:
     if r["name"] in seen:
         continue
     seen.add(r["name"])
     deduped.append(r)
-all_dest = deduped
+src_dest = deduped
 
-# stable sort: by region, then name
-all_dest.sort(key=lambda r: (r["region"], r["name"]))
+# ---- SAFE MERGE against the current canonical file ----
+# Canonical destinations the sources don't know about are kept verbatim, in
+# canonical order; source-known destinations are refreshed in place.
+_prev_path = os.path.join(OUTDIR, "diving-destinations.json")
+_prev_list = []
+if os.path.exists(_prev_path):
+    with open(_prev_path) as f:
+        _prev_list = json.load(f).get("destinations", [])
+_prev = {d["name"]: d for d in _prev_list}
+_src_by_name = {d["name"]: d for d in src_dest}
+
+refreshed    = sorted(n for n in _prev if n in _src_by_name)
+kept_unknown = sorted(n for n in _prev if n not in _src_by_name)
+sources_only = sorted(n for n in _src_by_name if n not in _prev)
+
+if args.allow_removals or not _prev_list:
+    # Full regenerate from sources (pre-2026-07 behaviour; destroys
+    # canonical-only destinations — hence the flag).
+    all_dest = sorted(src_dest, key=lambda r: (r["region"], r["name"]))
+else:
+    all_dest = [_src_by_name.get(d["name"], d) for d in _prev_list]
+    if args.allow_additions and sources_only:
+        all_dest += sorted((_src_by_name[n] for n in sources_only),
+                           key=lambda r: (r["region"], r["name"]))
+
+print(f"Merge summary: {len(refreshed)} refreshed from sources, "
+      f"{len(kept_unknown)} kept (canonical-only, unknown to sources), "
+      f"{len(sources_only)} sources-only.")
+if kept_unknown:
+    verb = "WOULD BE DROPPED (--allow-removals)" if args.allow_removals else "kept as-is"
+    print(f"  canonical-only, {verb}: {', '.join(kept_unknown)}")
+if sources_only:
+    verb = "added (--allow-additions)" if (args.allow_additions and not args.allow_removals) \
+           else ("added (full regenerate)" if args.allow_removals else "skipped (likely retired)")
+    print(f"  sources-only, {verb}: {', '.join(sources_only)}")
 
 # ---- Preserve baked destination images (written into the output JSON by
 # scripts/fetch_images.py / the fetch-images workflow, not present in sources)
 # and editorial fields authored directly in the output JSON ----
 _EDITORIAL = ("description", "underwater", "encounters")
-_prev_path = os.path.join(OUTDIR, "diving-destinations.json")
-if os.path.exists(_prev_path):
-    with open(_prev_path) as f:
-        _prev = {d["name"]: d for d in json.load(f).get("destinations", [])}
+if _prev:
     kept = 0
     for r in all_dest:
         p = _prev.get(r["name"])
@@ -206,6 +257,14 @@ if os.path.exists(_prev_path):
         for k in _EDITORIAL:
             if p.get(k) and not r.get(k):
                 r[k] = p[k]
+        # The per-month marine_life/conditions prose was editorially rewritten
+        # directly in the canonical JSON (2026-07); the scripts/ sources still
+        # hold the pre-rewrite terse strings. Canonical monthly copy wins —
+        # this also keeps rankings stable (marine-life keyword bonus and
+        # visibility_m derive from these strings). Source monthly data only
+        # seeds destinations that are new to the canonical file.
+        if p.get("monthly"):
+            r["monthly"] = p["monthly"]
     print(f"Preserved baked images for {kept} destinations")
 
 # ---- Apply human/agent verification verdicts (scripts/data/verification.json) ----
@@ -253,6 +312,51 @@ if os.path.exists(_sites_path):
         print("WARNING: dive_sites.json names with no matching destination:", sorted(missing))
     print(f"Attached {total_sites} dive sites across {attached} destinations")
 
+# ---- Stable key order: refreshed records keep the canonical file's key
+# order (new keys appended) so reruns produce minimal, reviewable diffs ----
+if _prev:
+    all_dest = [
+        ({**{k: r[k] for k in _prev[r["name"]] if k in r},
+          **{k: v for k, v in r.items() if k not in _prev[r["name"]]}}
+         if r["name"] in _prev else r)
+        for r in all_dest
+    ]
+
+# ---- SAFETY RAIL: never silently drop live destinations ----
+# Refuse to write if the output would lose any destination slug (or shrink the
+# roster) versus the current canonical file, unless --allow-removals is passed.
+if _prev_list:
+    _prev_slugs = {d.get("slug") or slugify(d["name"]) for d in _prev_list}
+    _new_slugs = {d.get("slug") or slugify(d["name"]) for d in all_dest}
+    _dropped = sorted(_prev_slugs - _new_slugs)
+    if (_dropped or len(all_dest) < len(_prev_list)) and not args.allow_removals:
+        raise SystemExit(
+            "REFUSING TO WRITE: the regenerated output would drop "
+            f"{len(_dropped)} existing destination(s) "
+            f"({len(_prev_list)} -> {len(all_dest)}): {', '.join(_dropped)}\n"
+            "The scripts/ sources lag the canonical diving-destinations.json. "
+            "Rerun with --allow-removals ONLY if these removals are intentional.")
+    if _dropped:
+        print(f"WARNING (--allow-removals): dropping {len(_dropped)} destination(s): "
+              f"{', '.join(_dropped)}")
+
+# ---- Dry run: report what would change, write nothing ----
+if args.dry_run:
+    changed = 0
+    for d in all_dest:
+        p = _prev.get(d["name"])
+        if p is None:
+            print(f"  NEW: {d['name']}")
+            changed += 1
+            continue
+        diffk = sorted(k for k in set(d) | set(p) if d.get(k) != p.get(k))
+        if diffk:
+            print(f"  CHANGED: {d['name']}: {', '.join(diffk)}")
+            changed += 1
+    print(f"Dry run: {len(all_dest)} destinations, {changed} new/changed vs canonical. "
+          "Nothing written.")
+    sys.exit(0)
+
 # ---- Write master JSON ----
 master = {
     "title": "World Diving Calendar",
@@ -272,7 +376,10 @@ master = {
     "destinations": all_dest,
 }
 with open(os.path.join(OUTDIR,"diving-destinations.json"),"w") as f:
-    json.dump(master, f, indent=2, ensure_ascii=False)
+    # indent=1 + trailing newline: matches the canonical file's existing
+    # formatting so reruns produce minimal diffs.
+    json.dump(master, f, indent=1, ensure_ascii=False)
+    f.write("\n")
 print("Wrote diving-destinations.json with", len(all_dest), "destinations")
 
 # ---- Regenerate the long-format CSV (all destinations x 24 periods) ----
