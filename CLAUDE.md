@@ -1,27 +1,40 @@
 # CLAUDE.md — DiveSZN
 
 DiveSZN is a static diving website: a seasonal **trip planner / calendar** for
-50 world dive destinations, wrapped in a dive-hub (gear buyer's guides with
-price comparison, monthly destination articles, liveaboard safaris). No backend.
+83 world dive destinations, wrapped in a dive-hub (gear buyer's guides with
+price comparison, 12 monthly destination hubs, marine-life encounter pages).
+No backend.
 
 **Read `HANDOFF.md` first** — it has the full project map, brand, data pipeline
 and backlog. Quick orientation:
 
 - **Site:** `index.html` is the entire app (HTML + CSS + inline JS) and is what
   GitHub Pages serves. The scoring/query engine is `diving-calendar.js`.
-- **Canonical data:** `diving-destinations.json` (50 destinations × 12 months).
-  Edit it directly, or regenerate from `scripts/` (see below).
+- **Canonical data:** `diving-destinations.json` (83 destinations × 12 months,
+  620 named dive sites). Edit it directly — the `scripts/` sources only cover
+  the original 50 destinations, so `build_master.py` runs as a safe merge
+  against the canonical file (see below).
 - **Live:** https://donlybero.github.io/Diving-site/ — auto-deploys on push to
   `main` via
   `.github/workflows/deploy-pages.yml`.
 
 ## Build / regenerate (paths are repo-relative)
 ```bash
-python3 scripts/build_master.py      # diving-destinations.json + CSVs
+python3 scripts/build_master.py      # diving-destinations.json + CSVs (safe merge)
 python3 scripts/build_rankings.py    # diving-rankings.json
 python3 scripts/build_standalone.py  # diving-site.html (offline single file)
-python3 scripts/build_pages.py       # destinations/*.html + sitemap (SEO pages)
+python3 scripts/build_pages.py       # destinations/gear/marine-life/months/*.html
+                                     #   + about/how-we-score/privacy + sitemap
 ```
+`build_master.py` **safe-merges by default**: the canonical file's roster and
+order are authoritative, sources only refresh the destinations they know
+about, and it refuses to drop anything without an explicit flag. Flags:
+`--dry-run` (report, write nothing), `--allow-additions` (let sources-only
+entries in), `--allow-removals` (DANGEROUS full regenerate — sources only
+describe the original 50 destinations). The old behaviour where a plain run
+could overwrite the 83-destination dataset with 50 is fixed (commit
+`afc25e5`).
+
 After editing data or `index.html`, rerun `build_standalone.py` so the
 single-file build stays in sync, then commit. Pushing deploys automatically.
 
@@ -33,17 +46,28 @@ single-file build stays in sync, then commit. Pushing deploys automatically.
 - Keep the scoring formula identical in `build_rankings.py` and
   `diving-calendar.js` (rating base + marine-life bonus ≤25 + visibility 0..18).
 - Brand: name **DiveSZN** ("dive season"; wordmark `Dive<b>SZN</b>`), whale-**fluke** logo (no helmets/circles),
-  **light/white theme** with teal ink + accents, coral strictly for prices/CTAs,
-  monospace data readouts, serif headings. Header is a dedicated ad slot.
+  **light/white theme** with teal ink + accents, coral strictly for buy/booking
+  CTAs (prices are quiet ink mono — never coral), monospace data readouts,
+  serif headings. Header is brand-only (the ad slot was removed 2026-07).
+- Season ratings use the **tonal palette** everywhere (Peak `#0e7569`,
+  Good `#5cb8ab`, Shoulder `#dfa826`, Low `#cfe4e0`, Closed `#b9c6c9`; white
+  text only on Peak). It lives in TWO places that MUST stay in sync: the
+  `TONAL`/`RCOLOR` maps in `index.html` and `TONAL`/`TONAL_TEXT` in
+  `scripts/build_pages.py`.
 - Editorial rules (owner-mandated): scuba only (no freediving/snorkel copy);
   never name third parties in site copy (PADI, magazines, testers…); no
   aphorism intros; taglines never cite destination counts; specs never say
   "Both" — spell options out. Full list in HANDOFF.md §3.
 - Everything published is **real and researched** — calendar/dive-site data,
   destination photos, monthly articles, the Gear guide (`gear-guide.json`,
-  indicative prices + real retailer links). No sample sections remain. The
-  **Dive Planner** tab is the filter + ranked results (cards/map/year calendar);
-  the **Destinations** tab is the browse directory + profiles (see HANDOFF §6).
+  118 items, 346 retailer buy links, indicative prices). No sample sections
+  remain. Tabs: the **Dive Planner** tab is the filter + ranked results
+  (cards/map/year calendar) with its tab + filter state written to the URL;
+  the **Destinations** tab is the browse directory + search — destinations
+  open their own static pages (`destinations/<slug>.html`), no inline
+  profile; the gear tab is named **Scuba Gear**; **Marine Life** is the
+  Encounter Files (cover wall, scrubbable season pulse, evidence ledger).
+  See HANDOFF §4/§6.
 - Every finished change gets merged to `main` (auto-deploys); verify on
   desktop AND ~390px mobile viewports before merging.
 - Verify UI changes by serving locally (`python3 -m http.server`) — `index.html`

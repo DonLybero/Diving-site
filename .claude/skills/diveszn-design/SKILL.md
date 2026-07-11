@@ -19,7 +19,9 @@ contract.
   accents for interaction. **Coral is reserved strictly for buy/booking CTAs**
   (buttons and booking links). Prices are NOT coral (owner ruling, July 2026):
   set them as quiet data — ink mono with tabular numerals (`.score`); a
-  best-price flag may use `--accent-deep`, never coral.
+  best-price flag may use `--accent-deep`, never coral. The **homepage
+  carries no prices at all** (owner ruling) — its gear band sells the guides,
+  not the products.
 - Serif display faces for headings, monospace for data readouts (temps, viz,
   scores, kickers, uppercase micro-labels with letter-spacing), sans for body.
   This three-voice typography IS the brand — keep the roles pure.
@@ -31,14 +33,23 @@ contract.
 - Rounded 12–14px cards on white or very light teal-tinted gradients
   (`linear-gradient(165deg,#ffffff,#f2f9f9)`), 1px `var(--line)` borders,
   soft glow shadows on hover. No hard drop shadows, no dark panels.
-- Data chips (Peak/water °C/viz/current) are monospace pills; rating colors:
-  Peak green, Good blue, Shoulder amber, Low/Closed muted. Never invent new
-  rating colors.
-- Season ribbons (12 month cells) and score bars visualize numbers — prefer
-  adding to these existing devices over introducing new chart types.
-- Photos: `object-fit:cover` in rounded containers with the photographer
-  credit in monospace small print. Every destination/marine image must carry
-  its credit.
+- Data chips (Peak/water °C/viz/current) are monospace pills. **Rating
+  colors are the tonal (single-hue) palette, on every surface:** Peak
+  `#0e7569`, Good `#5cb8ab`, Shoulder `#dfa826`, Low `#cfe4e0`, Closed
+  `#b9c6c9` — white text only on Peak, dark ink on the rest. Never invent
+  new rating colors; the old bright badge palette is retired. Keep the maps
+  in `index.html` (`TONAL`/`RCOLOR`) and `scripts/build_pages.py`
+  (`TONAL`/`TONAL_TEXT`) in sync.
+- **The season calendar is the canonical rating device**: 12 tonal bars
+  (36px tall, 30px ≤640px), grid capped at 820px, with a monospace readout
+  panel that updates on hover/tap. Prefer it (and the season ribbons / marine
+  pulse, which share the palette) over introducing new chart types.
+- Photos: `object-fit:cover` in rounded containers. Focal point is data:
+  an optional `image_pos` field renders as `object-position` — set it rather
+  than cropping the source. **Nothing is drawn on the photo** (owner ruling,
+  July 2026): no fact pills, captions or numbering on destination, gear or
+  marine images. Attribution stays in the data and renders only as the
+  corner tooltip ⓘ.
 - Icons are the inline SVG set in index.html (`ico(name,size)` / `data-ico`);
   extend that set rather than importing icon fonts or emoji.
 - Mobile: single column at ~390px; tables scroll horizontally inside their

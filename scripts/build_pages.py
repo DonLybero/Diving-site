@@ -16,9 +16,9 @@ import json, os, html, re, urllib.parse, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://donlybero.github.io/Diving-site/"
 MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-RCOLOR = {"Peak":"#16a34a","Good":"#0ea5e9","Shoulder":"#eab308","Low":"#f97316","Closed":"#64748b"}
-# Owner-approved tonal (single-hue) season palette — DESTINATION PAGES ONLY
-# (the SPA and month hubs keep the classic rating colours).
+# Owner-approved tonal (single-hue) season palette — used on every generated
+# page (destinations, month hubs, marine ribbons). Keep in sync with the
+# TONAL map in index.html.
 TONAL = {"Peak":"#0e7569","Good":"#5cb8ab","Shoulder":"#dfa826","Low":"#cfe4e0","Closed":"#b9c6c9"}
 # Badge/ink pairing on the tonal fills (all pairs >=4.5:1)
 TONAL_TEXT = {"Peak":"#ffffff","Good":"#0e2f37","Shoulder":"#0e2f37","Low":"#0e2f37","Closed":"#0e2f37"}
@@ -49,13 +49,18 @@ def load_region_groups():
     return groups
 
 def load_month_intros():
-    """Parse the editorial MONTH_INTROS ledes out of index.html (best effort)."""
+    """Parse the editorial MONTH_INTROS ledes out of index.html so the SPA
+    stays the single source of truth. Fails loudly if the shape changes —
+    a silent {} would strip the owner-written ledes from all 12 month hubs."""
     m = re.search(r"var MONTH_INTROS=\{(.*?)\};", _index_src(), re.S)
     if not m:
-        return {}
+        raise RuntimeError("MONTH_INTROS not found in index.html")
     intros = {}
     for im in re.finditer(r'(\w{3}):"((?:[^"\\]|\\.)*)"', m.group(1)):
         intros[im.group(1)] = _junesc(im.group(2))
+    missing = [mo for mo in MONTHS if not intros.get(mo)]
+    if missing:
+        raise RuntimeError(f"MONTH_INTROS parsed incomplete (missing {', '.join(missing)})")
     return intros
 
 REGION_GROUPS = load_region_groups()
@@ -109,6 +114,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin:22px 0 6px}
 .foot-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none}
 .foot-nav a:hover{color:var(--accent)}
+footer .disclosure{max-width:780px;margin:14px auto 0;color:var(--muted);font-size:.78rem}
 .dirlist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
 .dirlist li{background:var(--panel);border:1px solid var(--line);border-radius:10px}
 .dirlist a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink)}
@@ -195,7 +201,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .gspecs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:0 0 12px}
 .gspecs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
 .gspecs dt{color:var(--muted);font-size:.6rem;text-transform:uppercase;letter-spacing:.5px;margin:0}
-.gspecs dd{margin:2px 0 0;font-family:var(--mono);font-size:.76rem;color:#0b6b74}
+.gspecs dd{margin:2px 0 0;font-family:var(--mono);font-size:.76rem;color:#0b6b74;min-width:0;overflow-wrap:anywhere}
 .buybox{background:#f6fbfb;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:6px}
 .buy-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:9px}
 .buy-lead{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
@@ -501,26 +507,48 @@ FLUKE = ('<svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><p
 
 def esc(s): return html.escape(str(s or ""), quote=True)
 
+def meta_desc(s, limit=160):
+    """SERP-length description (~155-160 chars): whole sentences when one ends
+    inside the budget, otherwise a word-boundary cut with an ellipsis — never
+    a mid-word fragment. The same string feeds <meta name=description>,
+    og:description and JSON-LD, so truncate once, here."""
+    s = re.sub(r"\s+", " ", str(s or "")).strip()
+    if len(s) <= limit:
+        return s
+    cut = s[:limit]
+    last = None
+    for m in re.finditer(r"[.!?](?=\s)", cut):
+        last = m
+    if last and last.end() >= limit * 0.55:   # keep useful length — no one-clause stubs
+        return cut[:last.end()]
+    return cut.rsplit(" ", 1)[0].rstrip(",;:·—&- ") + "…"
+
 def topbar(prefix="../"):
     return (f'<div class="topbar"><a href="{prefix}index.html">'+FLUKE+
             '<span class="name">Dive<b>SZN</b></span></a></div>')
 
 def footer_html(prefix="../"):
+    # Nav labels mirror the app footer in index.html — keep the two in sync.
     return ('<footer>'
             '<div class="foot-mark">Dive<b>SZN</b></div>'
             '<div class="foot-tag">Your diving buddy</div>'
             '<div class="foot-nav">'
-            f'<a href="{prefix}index.html">Destinations</a>'
-            f'<a href="{prefix}destinations/index.html">Season guides</a>'
+            f'<a href="{prefix}index.html">Dive planner</a>'
+            f'<a href="{prefix}destinations/index.html">Destination guides</a>'
             f'<a href="{prefix}months/index.html">Best by month</a>'
             f'<a href="{prefix}marine-life/index.html">Marine life</a>'
             f'<a href="{prefix}gear/index.html">Gear guides</a>'
             f'<a href="{prefix}how-we-score.html">How we score</a>'
             f'<a href="{prefix}about.html">About</a>'
             f'<a href="{prefix}privacy.html">Privacy</a></div>'
-            '<div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. '
-            'Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — '
-            'always confirm with a local dive centre.</div>'
+            '<div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean '
+            'sea-temperature sources; water temperatures are typical monthly ranges (±1°C) and marine-life timing '
+            'shifts year to year with plankton and lunar cycles. Always confirm current conditions with a local '
+            'dive centre before travelling.</div>'
+            '<div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear '
+            'or book a trip through our links, at no extra cost to you. Gear prices are indicative as of our '
+            'research date — the retailer shows the live price. We link only to authorised retailers and trusted '
+            'operators, and commissions never influence our rankings.</div>'
             '</footer>')
 
 def photo_hero(kicker, title, sub="", img="", credit="", pills="", pos=""):
@@ -782,8 +810,8 @@ def page(d, top_month=None):
     slug = d["slug"]; url = BASE + "destinations/" + slug + ".html"
     peak = [m for m in MONTHS if d["monthly"][m]["rating"] == "Peak"]
     closed = [m for m in MONTHS if d["monthly"][m]["rating"] == "Closed"]
-    desc = (f'{d["name"]} diving season guide: best months {d["best_months"]}. Month-by-month water temperature, '
-            f'visibility, currents ({d["current_strength"].lower()}) and marine life. {d["highlights"]}')[:300]
+    desc = meta_desc(f'{d["name"]} diving season guide: best months {d["best_months"]}. Month-by-month water temperature, '
+                     f'visibility, currents ({d["current_strength"].lower()}) and marine life. {d["highlights"]}')
     img = d.get("image") or ""
 
     # ---- hero (photo with scrim + fact pills; plain gradient when no photo)
@@ -953,19 +981,30 @@ def page(d, top_month=None):
 </body></html>"""
 
 def index_page(dests):
+    url = BASE + "destinations/index.html"
     items = ""
-    for d in sorted(dests, key=lambda x: x["name"].lower()):
+    ordered = sorted(dests, key=lambda x: x["name"].lower())
+    for d in ordered:
         peak = ", ".join(m for m in MONTHS if d["monthly"][m]["rating"] == "Peak") or "—"
         items += (f'<li><a href="{d["slug"]}.html"><b>{esc(d["name"])}</b>'
                   f'<small>{esc(d["country"])} · peak: {esc(peak)}</small></a></li>')
     desc = "Season guides for the world's scuba diving destinations: best months, water temperature, visibility, currents and marine life."
+    ld = graph_ld({"@type": "CollectionPage", "name": "Dive destination season guides",
+                   "description": desc, "url": url,
+                   "mainEntity": {"@type": "ItemList", "numberOfItems": len(ordered),
+                                  "itemListElement": [
+                                      {"@type": "ListItem", "position": i + 1, "name": d["name"],
+                                       "url": BASE + "destinations/" + d["slug"] + ".html"}
+                                      for i, d in enumerate(ordered)]}},
+                  crumbs([("Home", BASE), ("Destinations", url)]))
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>All Dive Destinations — Season Guides | DiveSZN</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{BASE}destinations/index.html">
+<link rel="canonical" href="{esc(url)}">
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 {FONTS_LINK}
 <style>{CSS}{V2_CSS}</style>
 </head>
@@ -1045,7 +1084,7 @@ def gear_item_page(cat, item, prefix="../"):
     if not os.path.exists(os.path.join(ROOT, hero_path)):
         hero_path = img
     photo = (f'<figure class="gitem-photo"><img id="gimg" src="{prefix}{esc(hero_path)}" '
-             f'alt="{esc(item["name"])}"></figure>' if hero_path else "")
+             f'alt="{esc(item["name"])}" onerror="this.style.display=\'none\'"></figure>' if hero_path else "")
     stage_open = '<div class="gitem-stage">' if hero_path else ""
     stage_close = "</div>" if hero_path else ""
     offers = order_offers(item.get("options"))
@@ -1096,7 +1135,7 @@ def gear_item_page(cat, item, prefix="../"):
              f'{verdict}'
              f'{specs}{related}'
              f'<p class="meta"><a href="{cat_slug}.html">&larr; Back to {esc(cat_title)}</a></p>')
-    desc = (item.get("blurb") or review)[:160]
+    desc = meta_desc(item.get("blurb") or review)
     ld = graph_ld({"@type": "WebPage", "name": item["name"], "url": url, "description": desc},
                   crumbs([("Home", BASE), ("Gear guides", BASE + "gear/index.html"),
                           (cat_title, BASE + "gear/" + cat_slug + ".html"), (item["name"], url)]),
@@ -1113,7 +1152,8 @@ def _cat_items(cat):
 
 def gear_entry(item, prefix):
     img = item.get("image") or ""
-    imgtag = f'<img src="{prefix}{esc(img)}" alt="{esc(item["name"])}" loading="lazy">' if img else ""
+    imgtag = (f'<img src="{prefix}{esc(img)}" alt="{esc(item["name"])}" loading="lazy" '
+              f'onerror="this.style.display=\'none\'">' if img else "")
     specs = ""
     if item.get("specs"):
         specs = ('<dl class="gspecs">'
@@ -1183,7 +1223,7 @@ def gear_page(cat, prefix="../"):
             parts.append(f'<div class="tipbox"><b>What to look for</b><ul>{tips}</ul></div>')
         parts += [gear_entry(it, prefix) for it in cat["items"]]
     parts.append(f'<p class="meta"><a href="index.html">&larr; All gear buyer&#8217;s guides</a></p>')
-    desc = (intro or f'The best {cat["category"].lower()} for scuba diving in 2026.')[:160]
+    desc = meta_desc(intro or f'The best {cat["category"].lower()} for scuba diving in 2026.')
     items = _cat_items(cat)
     coll = {"@type": "CollectionPage", "name": cat.get("title"), "description": desc, "url": url}
     bc = crumbs([("Home", BASE), ("Gear guides", BASE + "gear/index.html"),
@@ -1212,7 +1252,8 @@ def gear_index_page(gear, prefix="../"):
         slug = gear_slug(cat["category"])
         lead = (cat.get("items") or (cat.get("thickness_groups") or [{}])[0].get("items") or [{}])[0]
         img = lead.get("image") or ""
-        thumb = f'<img src="{prefix}{esc(img)}" alt="" loading="lazy">' if img else ""
+        thumb = (f'<img src="{prefix}{esc(img)}" alt="" loading="lazy" '
+                 f'onerror="this.style.display=\'none\'">' if img else "")
         teaser = ". ".join((cat.get("article_intro") or "").split(". ")[:2]).strip()
         rows += (f'<li><a href="{slug}.html"><div class="th">{thumb}</div>'
                  f'<div><h3>{esc(cat.get("title") or ("Top " + cat["category"]))}</h3>'
@@ -1232,7 +1273,8 @@ def gear_index_page(gear, prefix="../"):
             brows = ""
             for it, lo in sorted(brands[b], key=lambda t: t[0]["name"]):
                 img = it.get("image") or ""
-                th = (f'<span class="gbthumb"><img src="{prefix}{esc(img)}" alt="" loading="lazy"></span>'
+                th = (f'<span class="gbthumb"><img src="{prefix}{esc(img)}" alt="" loading="lazy" '
+                      f'onerror="this.style.display=\'none\'"></span>'
                       if img else '<span class="gbthumb"></span>')
                 frm = f"from {fmtp(lo)}" if lo is not None else ""
                 brows += (f'<a class="gbrow" href="{gear_slug(it["name"])}.html">{th}'
@@ -1291,6 +1333,117 @@ destination&#8217;s best months to a wetsuit&#8217;s thickness, is framed around
     desc = "About DiveSZN — a seasonal scuba dive-trip planner and independent gear buyer's guide. How our destination data is compiled and how we stay independent."
     ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "About DiveSZN", "description": desc, "url": url}
     return content_shell("About DiveSZN — Seasonal Dive Planner & Gear Guide", desc, url, "", None, inner, ld)
+
+def privacy_page():
+    """Privacy policy through the shared v2 shell (legal copy preserved
+    verbatim) — generated so it can never drift from the design system again."""
+    url = BASE + "privacy.html"
+    inner = """
+<div class="legal">
+<div class="updated">Last updated: 6 July 2026</div>
+
+<div class="lead">DiveSZN has no accounts, no sign-up and no forms — we don't ask you for
+  personal information and we never sell any. The only data involved comes from our host's
+  standard server logs and from cookies set by the retailers and affiliate networks we link
+  to. This page explains that in full.</div>
+
+<p>DiveSZN ("we", "us", "the site") operates this website. This policy explains what
+  information is collected when you visit, how it is used, and the choices you have.</p>
+
+<h2>1. Information we collect</h2>
+<p><strong>Information you give us:</strong> None. There is no registration, login, newsletter
+  or contact form on DiveSZN. If you choose to email us, we receive whatever you include in
+  that message.</p>
+<p><strong>Information collected automatically:</strong> The site is hosted on GitHub Pages.
+  Like all web hosts, GitHub's servers automatically log basic technical data for each
+  request — such as your IP address, browser type, referring page and the pages you view.
+  This is handled by GitHub under
+  <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">its own privacy statement</a>;
+  we do not maintain a database of it.</p>
+<p><strong>Cookies:</strong> DiveSZN itself does not set advertising or analytics cookies.
+  Cookies may be set by the third-party affiliate networks below <strong>only when you click
+  an outbound "Buy" link</strong>.</p>
+
+<h2>2. Affiliate links</h2>
+<p>DiveSZN is reader-supported. Many "Buy" links are affiliate links: if you click through and
+  make a purchase, we may earn a commission <strong>at no extra cost to you</strong>. To credit
+  that referral, the retailer or affiliate network sets a cookie in your browser at the moment
+  you click. The networks we use are:</p>
+<ul>
+  <li><strong>Amazon Associates</strong> — as an Amazon Associate, DiveSZN earns from qualifying purchases.</li>
+  <li><strong>AvantLink</strong> (for retailers such as Scuba.com and LeisurePro)</li>
+  <li><strong>Awin</strong> (for retailers such as Tradeinn, Diveinn and Scubastore)</li>
+  <li><strong>eBay Partner Network</strong></li>
+  <li><strong>Skimlinks</strong>, which may affiliate other outbound retailer links automatically</li>
+</ul>
+<p>Each network processes click and purchase data under its own privacy policy. Prices shown on
+  DiveSZN are indicative; the retailer's live price and checkout are governed by that retailer.</p>
+
+<h2>3. Advertising</h2>
+<p>DiveSZN does not currently serve third-party advertising. If we introduce advertising in
+  future, we will update this policy to disclose the ad provider, the use of any advertising
+  cookies, how to manage them, and how consent is handled for visitors in the EU and UK.</p>
+
+<h2>4. Analytics</h2>
+<p>We do not use Google Analytics or any other third-party analytics or measurement cookies.
+  If that changes, this section will be updated to name the tool, describe what it collects,
+  and explain how to opt out.</p>
+
+<h2>5. How information is used</h2>
+<p>The limited data above is used only to keep the site running and secure (host logs) and to
+  credit affiliate referrals (network cookies). We do not build profiles of you, run email
+  marketing, or sell or rent any information to anyone.</p>
+
+<h2>6. Legal bases (EU and UK visitors — GDPR)</h2>
+<p>Where GDPR or UK GDPR applies, we rely on our <strong>legitimate interests</strong> for
+  essential hosting logs and site security, and on <strong>consent</strong> for affiliate
+  cookies, which are set only when you actively choose to click an outbound link.</p>
+
+<h2>7. Your rights</h2>
+<p>Depending on where you live, you may have the right to access, correct, delete or restrict
+  the processing of your personal data, and to object or withdraw consent (GDPR / UK GDPR), or
+  to know about and opt out of any "sale" or "sharing" of personal information (California
+  CCPA / CPRA). DiveSZN does not sell personal information. Because we hold no user database,
+  many requests are best directed to the relevant third party (GitHub or an affiliate network),
+  but you can contact us using the details below and we will help where we can.</p>
+
+<h2>8. International transfers</h2>
+<p>Our host and the affiliate networks operate globally, so data may be processed in countries
+  including the United States. Those providers maintain their own safeguards for such transfers.</p>
+
+<h2>9. Data retention</h2>
+<p>We keep no personal data of our own. Host logs and third-party cookies are retained according
+  to those providers' own schedules.</p>
+
+<h2>10. Children's privacy</h2>
+<p>DiveSZN is a scuba-diving resource intended for adults and is not directed at children under
+  13 (or 16 in the EU). We do not knowingly collect data from children.</p>
+
+<h2>11. Security</h2>
+<p>The site is static — no database and no user input — which removes most common data-security
+  risks, and it is served over HTTPS.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>We may update this policy as the site evolves, for example when advertising or analytics is
+  added. The "Last updated" date at the top reflects the current version.</p>
+
+<h2>13. Contact</h2>
+<p>Questions about this policy can be sent to
+  <a href="mailto:privacy@diveszn.com">privacy@diveszn.com</a>.</p>
+</div>
+"""
+    desc = ("How DiveSZN handles data: no accounts, no forms, no analytics — only standard host "
+            "logs and affiliate-network cookies set when you click a Buy link.")
+    ld = {"@context": "https://schema.org", "@type": "WebPage", "name": "Privacy Policy",
+          "description": desc, "url": url}
+    css = ("\n.legal{max-width:780px}"
+           ".legal .updated{color:var(--muted);font-size:.85rem;font-family:var(--mono);margin:2px 0 8px}"
+           ".legal .lead{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);"
+           "border-radius:12px;padding:16px 18px;margin:18px 0 6px;color:#33565e;"
+           "box-shadow:0 6px 22px rgba(18,51,47,.05)}"
+           ".legal p,.legal ul{color:#33565e;line-height:1.65}"
+           ".legal li{margin:5px 0}.legal h2{margin:30px 0 8px}.legal strong{color:var(--ink)}\n")
+    return content_shell("Privacy Policy | DiveSZN", desc, url, "", None, inner, ld, extra_css=css)
 
 def score_page():
     url = BASE + "how-we-score.html"
@@ -1662,8 +1815,8 @@ def marine_index_page(dests, prefix="../"):
                 + '</span></a>')
     wall = (_mcover(EXPERIENCES[0], 0, lead=True)
             + "".join(_mcover(e, i + 1) for i, e in enumerate(EXPERIENCES[1:])))
-    desc = ("Diving with the ocean's headline animals — whale sharks, manta rays, hammerheads, mola mola, "
-            "sea lions and more — with the best destinations and seasons for each.")
+    desc = ("Diving with the ocean's headline animals — whale sharks, mantas, hammerheads, mola mola, "
+            "sea lions and more — the best destinations and seasons for each.")
     inner = (f'<div class="mfile"><p class="greview" style="max-width:80ch">The ocean&#8217;s headline encounters — what they are, and '
              f'where and when to dive them, pulled live from DiveSZN&#8217;s seasonal data.</p>'
              f'<h2>Encounters</h2><div class="mwall rev">{wall}</div>'
@@ -1717,10 +1870,11 @@ def month_page(month, rankings, dests_by_name):
         mm = d["monthly"][month]
         ctry = f' <span class="meta">— {esc(r["country"])}</span>' if r["country"] and r["country"] != r["name"] else ""
         img = d.get("image") or ""
-        photo = (f'<div class="gphoto dphoto"><img src="{esc(img)}" alt="{esc(r["name"])}" loading="lazy"></div>'
+        photo = (f'<div class="gphoto dphoto"><img src="{esc(img)}" alt="{esc(r["name"])}" loading="lazy" '
+                 f'onerror="this.style.display=\'none\'"></div>'
                  if img else '<div class="gphoto dphoto"></div>')
-        chips = (f'<span class="badge sm" style="background:{RCOLOR[r["rating"]]}'
-                 f'{";color:#fff" if r["rating"] in ("Peak","Low","Closed") else ""}">{r["rating"]}</span> '
+        chips = (f'<span class="badge sm" style="background:{TONAL[r["rating"]]};'
+                 f'color:{TONAL_TEXT[r["rating"]]}">{r["rating"]}</span> '
                  f'<span class="chip">{r["water_temp_c"] if r["water_temp_c"] is not None else "—"}°C</span> '
                  f'<span class="chip">{r.get("visibility_m") or "—"}m viz</span>'
                  + (f' <span class="chip">{esc(r["current_strength"])} current</span>' if r.get("current_strength") else ""))
@@ -1750,7 +1904,7 @@ def month_page(month, rankings, dests_by_name):
              f'<a href="index.html">All months</a>'
              f'<a href="{next_m.lower()}.html">{next_m} &rarr;</a></p>')
     top3 = ", ".join(r["name"] for r in rows[:3])
-    desc = f"The best scuba diving in {full}: {top3} and more — season ratings, water temperature, visibility and the marine life in season."[:160]
+    desc = meta_desc(f"The best scuba diving in {full}: {top3} and more — season ratings, water temperature, visibility and the marine life in season.")
     intro = MONTH_INTROS.get(month) or ""
     cut = intro.find(". ")
     lede, rest = (intro[:cut + 1], intro[cut + 2:]) if cut > -1 else (intro, "")
@@ -1789,11 +1943,12 @@ def months_index_page(rankings, dests_by_name):
             cand = dests_by_name[r["name"]].get("image") or ""
             if cand and cand not in used:
                 img = cand; used.add(cand); break
-        th = (f'<div class="th photo"><img src="{esc(img)}" alt="" loading="lazy"></div>'
+        th = (f'<div class="th photo"><img src="{esc(img)}" alt="" loading="lazy" '
+              f'onerror="this.style.display=\'none\'"></div>'
               if img else '<div class="th"></div>')
         rows += (f'<li><a href="{full.lower()}.html">{th}'
                  f'<div><h3>Best diving in {full}</h3><p>{esc(teaser)}</p></div></a></li>')
-    desc = "Month-by-month guides to the world's best scuba diving — where the season, marine life and visibility line up for each month of the year."[:160]
+    desc = "Month-by-month guides to the world's best scuba diving — where the season, marine life and visibility line up for each month of the year."
     inner = (f'<p class="greview" style="max-width:80ch">Twelve guides, one per month — every destination scored for '
              f'that month and grouped by region, so your travel dates pick the spot.</p>'
              f'<h2>Guides</h2><ul class="artlist rev">{rows}</ul>'
@@ -1880,6 +2035,7 @@ def main():
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(info["title"])} Diving — Now Split by Resort Town | DiveSZN</title>
 <meta name="description" content="Our {esc(info["title"])} guide is now split into dedicated destination guides.">
+<meta name="robots" content="noindex">
 <link rel="canonical" href="{esc(url)}">{FONTS_LINK}
 <style>{CSS}{V2_CSS}</style></head><body class="v2">
 {topbar()}
@@ -1905,6 +2061,8 @@ def main():
         f.write(about_page())
     with open(os.path.join(ROOT, "how-we-score.html"), "w", encoding="utf-8") as f:
         f.write(score_page())
+    with open(os.path.join(ROOT, "privacy.html"), "w", encoding="utf-8") as f:
+        f.write(privacy_page())
 
     urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html", BASE + "privacy.html",
              BASE + "destinations/index.html", BASE + "gear/index.html", BASE + "months/index.html"]
@@ -1923,7 +2081,7 @@ def main():
     with open(os.path.join(ROOT, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
     print(f"Wrote {len(dests)} destination pages + index, 12 month hubs + index, "
-          f"{len(gear_slugs)} gear pages + index, about + how-we-score, "
+          f"{len(gear_slugs)} gear pages + index, about + how-we-score + privacy, "
           f"sitemap.xml ({len(urls)} URLs), robots.txt")
 
 if __name__ == "__main__":

@@ -47,6 +47,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin:22px 0 6px}
 .foot-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none}
 .foot-nav a:hover{color:var(--accent)}
+footer .disclosure{max-width:780px;margin:14px auto 0;color:var(--muted);font-size:.78rem}
 .dirlist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
 .dirlist li{background:var(--panel);border:1px solid var(--line);border-radius:10px}
 .dirlist a{display:block;padding:10px 12px;text-decoration:none;color:var(--ink)}
@@ -133,7 +134,7 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .gspecs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:0 0 12px}
 .gspecs div{background:#f0f6f7;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
 .gspecs dt{color:var(--muted);font-size:.6rem;text-transform:uppercase;letter-spacing:.5px;margin:0}
-.gspecs dd{margin:2px 0 0;font-family:var(--mono);font-size:.76rem;color:#0b6b74}
+.gspecs dd{margin:2px 0 0;font-family:var(--mono);font-size:.76rem;color:#0b6b74;min-width:0;overflow-wrap:anywhere}
 .buybox{background:#f6fbfb;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:6px}
 .buy-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:9px}
 .buy-lead{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
@@ -248,7 +249,7 @@ destination&#8217;s best months to a wetsuit&#8217;s thickness, is framed around
 <a href="privacy.html">Privacy Policy</a> and <a href="how-we-score.html">How we score</a> page.</p>
 <a class="cta" href="index.html">Open the dive planner &rarr;</a>
 </main>
-<footer><div class="foot-mark">Dive<b>SZN</b></div><div class="foot-tag">Your diving buddy</div><div class="foot-nav"><a href="index.html">Destinations</a><a href="destinations/index.html">Season guides</a><a href="months/index.html">Best by month</a><a href="marine-life/index.html">Marine life</a><a href="gear/index.html">Gear guides</a><a href="how-we-score.html">How we score</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></div><div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — always confirm with a local dive centre.</div></footer>
+<footer><div class="foot-mark">Dive<b>SZN</b></div><div class="foot-tag">Your diving buddy</div><div class="foot-nav"><a href="index.html">Dive planner</a><a href="destinations/index.html">Destination guides</a><a href="months/index.html">Best by month</a><a href="marine-life/index.html">Marine life</a><a href="gear/index.html">Gear guides</a><a href="how-we-score.html">How we score</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></div><div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources; water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles. Always confirm current conditions with a local dive centre before travelling.</div><div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear or book a trip through our links, at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price. We link only to authorised retailers and trusted operators, and commissions never influence our rankings.</div></footer>
 <script>
 (function(){
   document.documentElement.classList.add('js');

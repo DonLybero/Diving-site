@@ -108,8 +108,11 @@ DEST_REQUIRE = {
     "South West Rocks": re.compile(r"(grey.?nurse|fish.?rock|trial.?bay|smoky.?cape|arakoon)", re.I),
     "Malpelo Island": re.compile(r"malpelo", re.I),
     "Ningaloo Reef": re.compile(r"(ningaloo|whale.?shark|exmouth|coral.?bay)", re.I),
-    "Protea Banks": re.compile(r"(protea|ragged|sand.?tiger|carcharias|aliwal)", re.I),
-    "Fuvahmulah": re.compile(r"(fuvahmulah|tiger.?shark|galeocerdo)", re.I),
+    # Place-name only: generic species matches (tiger shark, raggie) let
+    # wrong-place photos through — Fuvahmulah once got a Tiger Beach
+    # (Bahamas) shot, Protea Banks an Aliwal Shoal one (photo audit 2026-07).
+    "Protea Banks": re.compile(r"protea", re.I),
+    "Fuvahmulah": re.compile(r"fuvahmulah", re.I),
     "Yap": re.compile(r"(yap|manta)", re.I),
     "Kaş": re.compile(r"(kaş|kas|kaputa|kekova|antalya|lycia|meis)", re.I),
     "Cocos Island": re.compile(r"(cocos|isla_del_coco|hammerhead|sphyrna)", re.I),
@@ -134,6 +137,10 @@ DEST_REQUIRE = {
 # Visually-vetted exact Commons files, tried before any search (mirrors the
 # marine fetcher's PINNED map) — for destinations where search keeps missing.
 DEST_PINNED = {
+    # Genuine Fuvahmulah shot (photo audit 2026-07: the previous hero was a
+    # Tiger Beach, Bahamas file). No genuine Fuvahmulah underwater photo
+    # exists on Commons; this topside harbour shot is the honest choice.
+    "Fuvahmulah": ["File:The Sunset Point in Fuvahmulah Harbour - panoramio.jpg"],
     "Galapagos Islands": ["File:Sea lions (32819956607).jpg"],
     "Coiba": ["File:Kristallklares Wasser Coiba Panama (152311725).jpeg"],
     "Cancún & Playa del Carmen": ["File:Cancun aerial photo by safa.jpg",
@@ -156,6 +163,15 @@ DEST_PINNED = {
     "Ustica": ["File:Grotta verde.jpg"],
     "Vancouver Island": ["File:Diving Humpback Whale near Vancouver Island, Canada (54881205528).jpg"],
     "Whitsunday Islands": ["File:Whitehaven Beach - Northern End.jpg"],
+}
+
+# Destinations that deliberately have NO hero photo: no genuine openly-
+# licensed photo of the place exists (Commons audited 2026-07), so the page
+# renders the branded gradient hero instead. Never auto-fill these — a
+# wrong-place photo is worse than none. Remove from this set only when the
+# owner supplies/approves a genuine shot.
+DEST_NO_HERO = {
+    "Protea Banks",   # submerged shoal, 8 km offshore; Commons has nothing genuine
 }
 
 # Exact-file rejects per destination — visually-audited duds that pass the
@@ -318,6 +334,8 @@ def main():
     updated = 0
     for d in dests:
         name = d.get("name", "")
+        if name in DEST_NO_HERO:
+            continue
         if d.get("image") and not FORCE:
             continue
         got = (from_pexels(name, d.get("country", ""))
@@ -331,7 +349,10 @@ def main():
             print(f"  · {name:<28} no image found")
         time.sleep(0.3)
     with open(DATA, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        # indent=1 + trailing newline: matches build_master.py / the canonical
+        # file's formatting so image runs don't reformat the whole JSON.
+        json.dump(data, f, ensure_ascii=False, indent=1)
+        f.write("\n")
     print(f"Done — {updated} destination image(s) written to diving-destinations.json")
 
 

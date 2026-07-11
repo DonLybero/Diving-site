@@ -242,54 +242,60 @@ komodo = {
 }
 destinations.append(komodo)
 
-# ---------------- BUILD CSV ----------------
-rows = []
-period_no = 0
-# We iterate period order: for each month, early then late, but to keep a single "Destination then period" sort
-# the user can sort however; we'll output Destination-major, period order.
-for d in destinations:
-    pno = 0
-    for mi,m in enumerate(MONTHS):
-        temp,life,cond,rating = d["months"][m]
-        for half in ["early","late"]:
-            pno += 1
-            rows.append({
-                "Period_No": pno,
-                "Month": m,
-                "Half": half,
-                "Destination": d["name"],
-                "Water_Temp_C": temp,
-                "Currents": d["currents"],
-                "Marine_Life_Highlights": life,
-                "Conditions_Visibility": cond,
-                "Rating": rating,
-            })
-
-cols = ["Destination","Period_No","Month","Half","Water_Temp_C","Rating","Marine_Life_Highlights","Conditions_Visibility","Currents"]
-out = os.path.join(_ROOT, "diving-calendar-24-periods.csv")
-with open(out,"w",newline="") as f:
-    w = csv.DictWriter(f, fieldnames=cols)
-    w.writeheader()
-    for r in rows:
-        w.writerow({k:r[k] for k in cols})
-
-print("Wrote", len(rows), "rows to", out)
-
-# ---------------- BUILD PIVOT GRID (24 periods x destinations) ----------------
-periods = []
-for mi,m in enumerate(MONTHS):
-    for half in ["early","late"]:
-        periods.append((m,half))
-
-grid_cols = ["Period_No","Month","Half"] + [d["name"] for d in destinations]
-out2 = os.path.join(_ROOT, "diving-calendar-grid.csv")
-with open(out2,"w",newline="") as f:
-    w = csv.writer(f)
-    w.writerow(grid_cols)
-    for i,(m,half) in enumerate(periods, start=1):
-        row = [i,m,half]
-        for d in destinations:
+# ---------------- BUILD CSV (only when run directly) ----------------
+# IMPORTANT: build_master.py imports this module for `destinations` only.
+# The legacy 11-destination CSVs below would overwrite the published
+# 83-destination CSVs at import time, so they are gated behind __main__.
+def _write_legacy_csvs():
+    rows = []
+    # We iterate period order: for each month, early then late, but to keep a single "Destination then period" sort
+    # the user can sort however; we'll output Destination-major, period order.
+    for d in destinations:
+        pno = 0
+        for mi,m in enumerate(MONTHS):
             temp,life,cond,rating = d["months"][m]
-            row.append(rating)
-        w.writerow(row)
-print("Wrote pivot grid to", out2)
+            for half in ["early","late"]:
+                pno += 1
+                rows.append({
+                    "Period_No": pno,
+                    "Month": m,
+                    "Half": half,
+                    "Destination": d["name"],
+                    "Water_Temp_C": temp,
+                    "Currents": d["currents"],
+                    "Marine_Life_Highlights": life,
+                    "Conditions_Visibility": cond,
+                    "Rating": rating,
+                })
+
+    cols = ["Destination","Period_No","Month","Half","Water_Temp_C","Rating","Marine_Life_Highlights","Conditions_Visibility","Currents"]
+    out = os.path.join(_ROOT, "diving-calendar-24-periods.csv")
+    with open(out,"w",newline="") as f:
+        w = csv.DictWriter(f, fieldnames=cols)
+        w.writeheader()
+        for r in rows:
+            w.writerow({k:r[k] for k in cols})
+
+    print("Wrote", len(rows), "rows to", out)
+
+    # ---------------- BUILD PIVOT GRID (24 periods x destinations) ----------------
+    periods = []
+    for mi,m in enumerate(MONTHS):
+        for half in ["early","late"]:
+            periods.append((m,half))
+
+    grid_cols = ["Period_No","Month","Half"] + [d["name"] for d in destinations]
+    out2 = os.path.join(_ROOT, "diving-calendar-grid.csv")
+    with open(out2,"w",newline="") as f:
+        w = csv.writer(f)
+        w.writerow(grid_cols)
+        for i,(m,half) in enumerate(periods, start=1):
+            row = [i,m,half]
+            for d in destinations:
+                temp,life,cond,rating = d["months"][m]
+                row.append(rating)
+            w.writerow(row)
+    print("Wrote pivot grid to", out2)
+
+if __name__ == "__main__":
+    _write_legacy_csvs()
