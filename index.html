@@ -129,16 +129,19 @@
   .rsel-menu{position:absolute;top:calc(100% + 6px);left:0;z-index:60;min-width:290px;max-height:420px;overflow-y:auto;
        background:#ffffff;border:1px solid var(--line-strong);border-radius:12px;box-shadow:var(--shadow);padding:6px}
   .rsel-row{display:flex;align-items:center;justify-content:space-between;border-radius:8px}
-  .rsel-row>span{flex:1;padding:9px 10px;cursor:pointer;font-size:.9rem;font-weight:600}
-  .rsel-row>span small{color:var(--muted);font-weight:400;margin-left:6px}
+  /* menu options are real buttons (keyboard/screen-reader reachable) styled like the old rows */
+  .rsel-menu button{background:none;border:0;font-family:inherit;color:inherit;text-align:left;margin:0}
+  .rsel-opt{flex:1;padding:9px 10px;cursor:pointer;font-size:.9rem;font-weight:600;border-radius:8px}
+  .rsel-opt small{color:var(--muted);font-weight:400;margin-left:6px}
   .rsel-row:hover{background:rgba(14,156,146,.07)}
   .rsel-arrow{padding:9px 12px;cursor:pointer;color:var(--muted);font-size:.8rem;transition:transform .15s;user-select:none}
   .rsel-arrow.open{transform:rotate(90deg);color:var(--ink)}
   .rsel-kids{border-left:2px solid var(--line);margin:0 0 4px 14px;padding-left:4px}
-  .rsel-kids a{display:block;padding:6px 10px;border-radius:7px;font-size:.84rem;color:var(--ink);cursor:pointer}
-  .rsel-kids a small{color:var(--muted)}
-  .rsel-kids a:hover{background:rgba(14,156,146,.08);color:var(--accent-deep)}
-  .rsel-row.sel>span,.rsel-kids a.sel{color:var(--accent-deep)}
+  .rsel-kid{display:block;width:100%;padding:6px 10px;border-radius:7px;font-size:.84rem;color:var(--ink);cursor:pointer}
+  .rsel-kid small{color:var(--muted)}
+  .rsel-kid:hover{background:rgba(14,156,146,.08);color:var(--accent-deep)}
+  .rsel-menu button:focus-visible{outline:2px solid var(--accent-deep);outline-offset:-2px}
+  .rsel-row.sel>.rsel-opt,.rsel-kid.sel{color:var(--accent-deep)}
 
   /* Dive Planner + Destinations share a centered section intro */
   #view-planner>.sec-head,#view-trip>.sec-head{justify-content:center;text-align:center}
@@ -861,8 +864,8 @@
       <div class="field"><label>Period of travel</label><select id="planPeriod">
         <option value="">— any time —</option></select></div>
       <div class="field"><label>Region</label>
-        <div class="rsel" id="regionSel">
-          <button type="button" class="rsel-btn" id="regionBtn" onclick="toggleRegionMenu(event)">Any region <span class="rsel-caret">&#9662;</span></button>
+        <div class="rsel" id="regionSel" onkeydown="regionKey(event)">
+          <button type="button" class="rsel-btn" id="regionBtn" aria-haspopup="true" aria-expanded="false" aria-controls="regionMenu" onclick="toggleRegionMenu(event)">Any region <span class="rsel-caret">&#9662;</span></button>
           <div class="rsel-menu hidden" id="regionMenu"></div>
         </div>
       </div>
@@ -1293,32 +1296,91 @@ function matchRegionSel(d){
 function escq(s){return s.replace(/'/g,"\\'");}
 function buildRegionMenu(){
   var m=document.getElementById('regionMenu');
-  var h='<div class="rsel-row'+((!PLAN_RGROUP&&!PLAN_RDEST)?' sel':'')+'"><span onclick="pickRegion(\'\')">All regions</span></div>';
+  var h='<div class="rsel-row'+((!PLAN_RGROUP&&!PLAN_RDEST)?' sel':'')+'"><button type="button" class="rsel-opt" onclick="pickRegion(\'\')">All regions</button></div>';
   Object.keys(REGION_GROUPS).sort().forEach(function(g){
     var names=REGION_GROUPS[g].filter(function(n){return DivingCalendar.getDestination(DESTS,n);});
     if(!names.length) return;
     h+='<div class="rsel-row'+(PLAN_RGROUP===g&&!PLAN_RDEST?' sel':'')+'">'+
-       '<span onclick="pickRegion(\''+escq(g)+'\')">'+g+' <small>('+names.length+')</small></span>'+
-       '<i class="rsel-arrow" data-g="'+g+'" onclick="toggleRegionKids(event,\''+escq(g)+'\')">&#9656;</i></div>'+
+       '<button type="button" class="rsel-opt" onclick="pickRegion(\''+escq(g)+'\')">'+g+' <small>('+names.length+')</small></button>'+
+       '<button type="button" class="rsel-arrow" data-g="'+g+'" aria-expanded="false" aria-label="Show '+escAttr(g)+' destinations" onclick="toggleRegionKids(event,\''+escq(g)+'\')">&#9656;</button></div>'+
        '<div class="rsel-kids hidden" data-kids="'+g+'">'+
        names.map(function(n){var d=DivingCalendar.getDestination(DESTS,n);
-         return '<a class="'+(PLAN_RDEST===n?'sel':'')+'" onclick="pickDest(\''+escq(n)+'\')">'+n+' <small>· '+d.country+'</small></a>';
+         return '<button type="button" class="rsel-kid'+(PLAN_RDEST===n?' sel':'')+'" onclick="pickDest(\''+escq(n)+'\')">'+n+' <small>· '+d.country+'</small></button>';
        }).join('')+'</div>';
   });
   m.innerHTML=h;
 }
+function openRegionMenu(focusFirst){
+  buildRegionMenu();
+  document.getElementById('regionMenu').classList.remove('hidden');
+  document.getElementById('regionBtn').setAttribute('aria-expanded','true');
+  if(focusFirst){var f=document.querySelector('#regionMenu .rsel-opt'); if(f)f.focus();}
+}
+function closeRegionMenu(refocus){
+  var m=document.getElementById('regionMenu');
+  if(m) m.classList.add('hidden');
+  var b=document.getElementById('regionBtn');
+  if(b){b.setAttribute('aria-expanded','false'); if(refocus)b.focus();}
+}
 function toggleRegionMenu(ev){
   ev.stopPropagation();
   var m=document.getElementById('regionMenu');
-  if(m.classList.contains('hidden')){buildRegionMenu();m.classList.remove('hidden');}
-  else m.classList.add('hidden');
+  if(m.classList.contains('hidden')) openRegionMenu(ev.detail===0);   // keyboard-opened → focus the first option
+  else closeRegionMenu(false);
 }
 function toggleRegionKids(ev,g){
   ev.stopPropagation();
   var kids=document.querySelector('.rsel-kids[data-kids="'+g+'"]');
   var arrow=document.querySelector('.rsel-arrow[data-g="'+g+'"]');
   kids.classList.toggle('hidden');
-  arrow.classList.toggle('open',!kids.classList.contains('hidden'));
+  var open=!kids.classList.contains('hidden');
+  arrow.classList.toggle('open',open);
+  arrow.setAttribute('aria-expanded',open?'true':'false');
+}
+/* Full keyboard driving for the picker: arrows rove the visible options,
+   ArrowRight/ArrowLeft expand/collapse a region's destinations, Enter/Space
+   select (native button click), Escape closes and refocuses the trigger. */
+function regionMenuItems(){
+  return [].slice.call(document.querySelectorAll('#regionMenu .rsel-opt,#regionMenu .rsel-kid')).filter(function(b){
+    var kids=b.closest('.rsel-kids');
+    return !kids||!kids.classList.contains('hidden');
+  });
+}
+function regionKey(ev){
+  var menu=document.getElementById('regionMenu');
+  var open=menu&&!menu.classList.contains('hidden');
+  if(ev.key==='Escape'){ if(open){ev.preventDefault();closeRegionMenu(true);} return; }
+  if(!open){
+    if(ev.key==='ArrowDown'&&ev.target===document.getElementById('regionBtn')){ev.preventDefault();openRegionMenu(true);}
+    return;
+  }
+  var items=regionMenuItems(), cur=document.activeElement, i=items.indexOf(cur);
+  if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){
+    ev.preventDefault();
+    items[i<0?0:(i+(ev.key==='ArrowDown'?1:items.length-1))%items.length].focus();
+  }else if(ev.key==='Home'&&items.length){ ev.preventDefault(); items[0].focus();
+  }else if(ev.key==='End'&&items.length){ ev.preventDefault(); items[items.length-1].focus();
+  }else if(ev.key==='ArrowRight'&&cur.classList&&cur.classList.contains('rsel-opt')){
+    var arrow=cur.parentNode.querySelector('.rsel-arrow');
+    if(arrow){
+      ev.preventDefault();
+      if(arrow.getAttribute('aria-expanded')!=='true') toggleRegionKids(ev,arrow.getAttribute('data-g'));
+      var kid=document.querySelector('.rsel-kids[data-kids="'+arrow.getAttribute('data-g')+'"] .rsel-kid');
+      if(kid)kid.focus();
+    }
+  }else if(ev.key==='ArrowLeft'){
+    var box=cur.closest?cur.closest('.rsel-kids'):null;
+    if(box){                                     // inside a region's list: collapse, focus the region
+      ev.preventDefault();
+      var g=box.getAttribute('data-kids');
+      toggleRegionKids(ev,g);
+      var ar=document.querySelector('.rsel-arrow[data-g="'+g+'"]');
+      if(ar&&ar.previousElementSibling)ar.previousElementSibling.focus();
+    }else if(cur.classList&&cur.classList.contains('rsel-opt')){
+      var ar2=cur.parentNode.querySelector('.rsel-arrow');
+      if(ar2&&ar2.getAttribute('aria-expanded')==='true'){ev.preventDefault();toggleRegionKids(ev,ar2.getAttribute('data-g'));}
+    }
+  }else if(ev.key==='Tab'){ closeRegionMenu(false); }
 }
 function setRegionBtn(){
   document.getElementById('regionBtn').innerHTML=
@@ -1331,18 +1393,18 @@ function scrollToMatches(){
 function pickRegion(g){
   PLAN_RGROUP=g; PLAN_RDEST='';
   setRegionBtn();
-  document.getElementById('regionMenu').classList.add('hidden');
+  closeRegionMenu(true);
   planShown=3; refreshPlanViews(); writePlannerHash(); scrollToMatches();
 }
 function pickDest(n){
   PLAN_RDEST=n; PLAN_RGROUP=DEST_GROUP[n]||'';
   setRegionBtn();
-  document.getElementById('regionMenu').classList.add('hidden');
+  closeRegionMenu(true);
   planShown=3; refreshPlanViews(); writePlannerHash(); scrollToMatches();
 }
 document.addEventListener('click',function(e){
   var m=document.getElementById('regionMenu');
-  if(m&&!m.classList.contains('hidden')&&!document.getElementById('regionSel').contains(e.target)) m.classList.add('hidden');
+  if(m&&!m.classList.contains('hidden')&&!document.getElementById('regionSel').contains(e.target)) closeRegionMenu(false);
 });
 
 // static (non-period) planner filters, shared by cards, map and calendar
