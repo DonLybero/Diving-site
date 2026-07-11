@@ -1123,10 +1123,13 @@ def gear_entry(item, prefix):
             f'<p class="greview">{esc(item.get("review") or item.get("blurb"))}</p>{specs}{buy_box(item)}'
             f'<p class="meta" style="margin-top:8px"><a href="{slug}.html">Full page: photos, specs &amp; prices &rarr;</a></p></div></div>')
 
-def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None, hero_html=None):
+def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None, hero_html=None,
+                  extra_css="", extra_js=""):
     """Shared page shell. Default: plain gradient hero band with the page h1.
     Pass hero_html (built with photo_hero) to get the photo-hero treatment
-    inside the content column instead — the plain hero is then skipped."""
+    inside the content column instead — the plain hero is then skipped.
+    extra_css/extra_js let a page family (marine encounter files) append its
+    scoped styles/enhancement without growing every other page."""
     ldtag = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>' if ld else ""
     h1 = esc(title.split(" | ")[0].split(" — ")[0])
     if hero_html:
@@ -1145,13 +1148,13 @@ def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None, hero_html=
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}">
 {ldtag}
 {FONTS_LINK}
-<style>{CSS}{V2_CSS}</style>
+<style>{CSS}{V2_CSS}{extra_css}</style>
 </head>
 <body class="v2">
 {topbar(prefix)}
 {body}
 {footer_html(prefix)}
-<script>{REVEAL_JS}</script>
+<script>{REVEAL_JS}{extra_js}</script>
 </body></html>"""
 
 def gear_page(cat, prefix="../"):
@@ -1322,7 +1325,12 @@ conditions with a local dive centre.</p>
     return content_shell("How We Score Dive Destinations | DiveSZN", desc, url, "", None, inner, ld)
 
 # ---------------------------------------------------------------- marine life
+# "The encounter files": nine numbered cover stories over the seasonal data.
+# Every count/season on these pages is computed from diving-destinations.json
+# (where_when + marine_pulse) — nothing invented. Fully server-rendered; the
+# tiny MARINE_JS enhancement is additive only (now-ring + live in-season stat).
 RATING_RANK = {"Peak": 0, "Good": 1, "Shoulder": 2, "Low": 3, "Closed": 9}
+RANK_WORD = {0: "Peak", 1: "Good", 2: "Shoulder", 3: "Low"}
 
 with open(os.path.join(ROOT, "marine-life.json")) as _mf:
     EXPERIENCES = json.load(_mf)["experiences"]
@@ -1340,44 +1348,294 @@ def where_when(dests, keywords):
     rows.sort(key=lambda r: (r[0], r[1]["name"]))
     return rows
 
+def marine_pulse(dests, keywords):
+    """Per month: destinations carrying the species + best rating among them.
+    Mirror of marinePulse() in index.html — keep in sync."""
+    kws = [k.lower() for k in keywords]
+    out = []
+    for m in MONTHS:
+        count, best = 0, 9
+        for d in dests:
+            t = (d["monthly"][m].get("marine_life") or "").lower()
+            if any(k in t for k in kws):
+                count += 1
+                best = min(best, RATING_RANK.get(d["monthly"][m]["rating"], 9))
+        out.append({"count": count, "best": best})
+    return out
+
+def _month_runs(mons):
+    """['May','Jun','Jul','Sep'] -> 'MAY–JUL, SEP' (Dec–Jan runs wrap).
+    Mirror of marineRuns() in index.html — keep in sync."""
+    idx = sorted(MONTHS.index(m) for m in mons)
+    runs = []
+    for i in idx:
+        if runs and i == runs[-1][1] + 1:
+            runs[-1][1] = i
+        else:
+            runs.append([i, i])
+    if len(runs) > 1 and runs[0][0] == 0 and runs[-1][1] == 11:
+        runs[-1][1] = runs[0][1] + 12
+        runs.pop(0)
+    out = [MONTHS[a % 12].upper() if a == b else f"{MONTHS[a % 12].upper()}–{MONTHS[b % 12].upper()}"
+           for a, b in runs]
+    if len(out) > 6:
+        out = out[:6] + [f"+{len(out) - 6}"]
+    return ", ".join(out)
+
+def _mode_word(mode):
+    return re.sub(r"\s*diving\s*$", "", (mode or ""), flags=re.I).strip().split()[0].upper()
+
+def _marine_modes(exp):
+    return sorted({_mode_word(b["mode"]) for b in exp.get("beyond_scuba") or []})
+
+def _marine_verb(short):
+    words = re.findall(r"[a-z]+", (short or "").lower())
+    w = words[-1] if words else ""
+    return "show" if re.search(r"[^s]s$", w) else "shows"
+
+def _mnum(i):
+    return f"{i + 1:02d}"
+
+def mini_ribbon_html(x, months):
+    """12-cell tonal season ribbon for one ledger row, with the dive-computer
+    readout in each in-season cell's title. data-r lets MARINE_JS add the
+    current-month ring after load (additive only)."""
+    cells = ""
+    for m in MONTHS:
+        mm = x["monthly"][m]
+        if m in months:
+            t = f'{m} · {mm["rating"]}'
+            tc = x["monthly_temp_c"].get(m)
+            if tc is not None:
+                t += f" · {tc}°C"
+            if mm.get("visibility_m") is not None:
+                t += f' · {mm["visibility_m"]} m'
+            cells += (f'<i style="background:{TONAL[mm["rating"]]}" data-r="{mm["rating"]}" '
+                      f'title="{esc(t)}"></i>')
+        else:
+            cells += f'<i style="background:var(--line)" title="{m}"></i>'
+    return f'<div class="mini-ribbon">{cells}</div>'
+
+def marine_pulse_html(exp, pulse):
+    """Static season pulse: 12 tonal cells with readout titles. Informational
+    only — the scrubber is the app's job (no links, no JS required)."""
+    cells = ""
+    for i, m in enumerate(MONTHS):
+        p = pulse[i]
+        if p["count"]:
+            word = RANK_WORD.get(p["best"], "")
+            title = f'{m.upper()} · {word.upper()} · {p["count"]} DESTINATION{"" if p["count"] == 1 else "S"}'
+            bar = f'<span class="mp-bar" style="background:{TONAL.get(word, "#b9c6c9")}"></span>'
+        else:
+            title = f"{m.upper()} · OUT OF SEASON"
+            bar = '<span class="mp-bar" style="background:var(--line)"></span>'
+        cells += f'<span class="mp-cell" title="{title}">{bar}<span class="mp-lab">{m[0]}</span></span>'
+    return ('<div class="mpulse rev"><p class="mpulse-cap">Where it is in the water, month by month</p>'
+            f'<div class="mpulse-grid">{cells}</div>{MARINE_CAVEAT}</div>')
+
+def marine_hatch_html(exp):
+    """Hatched outline pulse for beyond-scuba-only species (great white,
+    orcas): cells from beyond_scuba[].months — never a rating colour."""
+    by_mon = {}
+    for b in exp.get("beyond_scuba") or []:
+        for m in b.get("months") or []:
+            by_mon.setdefault(m, set()).add(_mode_word(b["mode"]))
+    cells = ""
+    for m in MONTHS:
+        modes = sorted(by_mon.get(m) or [])
+        title = f'{m.upper()} · {" · ".join(modes)}' if modes else f"{m.upper()} · OUT OF SEASON"
+        bar = ('<span class="mp-bar hx"></span>' if modes
+               else '<span class="mp-bar" style="background:var(--line)"></span>')
+        cells += f'<span class="mp-cell" title="{title}">{bar}<span class="mp-lab">{m[0]}</span></span>'
+    kicker = " · ".join(_marine_modes(exp))
+    return ('<div class="mpulse rev"><p class="mpulse-cap">Surface &amp; cage seasons — not scuba'
+            + (f'<span class="mp-mode">{kicker}</span>' if kicker else "")
+            + f'</p><div class="mpulse-grid">{cells}</div>{MARINE_CAVEAT}</div>')
+
+MARINE_CAVEAT = ('<p class="mpulse-cav">Timing shifts year to year — '
+                 'confirm dates with your operator.</p>')
+
+def marine_stat_html(rows, pulse):
+    """Build-stable stat strip (no client-date claims baked). MARINE_JS may
+    swap cell 1 to the live 'IN SEASON NOW · n'; if it fails, this stands."""
+    n = len(rows)
+    peak = [MONTHS[i] for i, p in enumerate(pulse) if p["count"] and p["best"] == 0]
+    widest = max(range(12), key=lambda i: pulse[i]["count"])
+    return ('<div class="mstat">'
+            f'<div id="mstatLive">SEASONS AT · <b>{n}</b> DESTINATION{"" if n == 1 else "S"}</div>'
+            f'<div>PEAK MONTHS · <b>{_month_runs(peak) if peak else "—"}</b></div>'
+            f'<div>WIDEST MONTH · <b>{MONTHS[widest].upper()}</b></div></div>')
+
+def marine_sentence(exp, rows):
+    """Build-stable computed sentence — fixed template, injected names/counts,
+    no date-dependent claims. Top picks: best rating, then the longest season
+    (ratings tie across many Peak rows — season length keeps the 'longest and
+    strongest' claim honest), then name."""
+    n = len(rows)
+    short, verb = exp["short"], _marine_verb(exp["short"])
+    if n == 1:
+        return f'Across the year, {short} {verb} at one of our destinations — {rows[0][1]["name"]}.'
+    picks = sorted(rows, key=lambda r: (r[0], -len(r[2]), r[1]["name"]))[:3]
+    top = _join_list(x["name"] for _, x, _ in picks)
+    return (f'Across the year, {short} {verb} at {n} of our destinations; '
+            f'the longest and strongest seasons are {top}.')
+
+def _marine_beyond(exp):
+    if not exp.get("beyond_scuba"):
+        return ""
+    brows = "".join(
+        f'<tr><td><b>{esc(b["name"])}</b><div class="meta">{esc(b["country"])} · {esc(b["mode"])}</div></td>'
+        f'<td>{esc(", ".join(b["months"]))}</td>'
+        f'<td><a class="pack-cta ghost" href="https://www.getyourguide.com/s/?q={urllib.parse.quote(b["q"])}" '
+        f'target="_blank" rel="noopener sponsored">Book &rarr;</a></td></tr>'
+        for b in exp["beyond_scuba"])
+    return (f'<h2>Beyond scuba — snorkel &amp; cage encounters</h2>'
+            f'<p class="greview" style="max-width:78ch">{esc(exp.get("beyond_intro") or "Some of the best encounters with this animal do not run on scuba — they are snorkel or cage-diving trips. If that is the experience you are after, these are the places to book it.")}</p>'
+            f'<div class="tablecard rev"><table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead>'
+            f'<tbody>{brows}</tbody></table></div>')
+
+def _marine_notes(exp):
+    tips = exp.get("tips") or []
+    if not tips:
+        return ""
+    lis = "".join(f"<li>{esc(t)}</li>" for t in tips)
+    return f'<h2>Field notes</h2><ol class="mnotes rev">{lis}</ol>'
+
+def _marine_teasers(idx):
+    def card(e, kick):
+        img = (f'<img src="{esc(e["image"])}" alt="" loading="lazy" '
+               f'onerror="this.style.display=\'none\'">' if e.get("image") else "")
+        return (f'<a class="mteaser" href="{e["slug"]}.html">{img}'
+                f'<span class="mcover-scrim"></span><span class="mcover-txt">'
+                f'<span class="mkick">{kick}</span>'
+                f'<span class="mcover-title">{esc(e["title"])}</span></span></a>')
+    prev_e = EXPERIENCES[(idx - 1) % len(EXPERIENCES)]
+    next_e = EXPERIENCES[(idx + 1) % len(EXPERIENCES)]
+    return f'<div class="mteasers rev">{card(prev_e, "Previous")}{card(next_e, "Next encounter")}</div>'
+
+# Encounter-file styles, appended only on the 10 marine pages (extra_css) and
+# scoped by the .mfile wrapper / m-prefixed classes. Mirrors the app's marine
+# CSS in index.html — keep the two in visual sync.
+MARINE_CSS = """
+.mkick{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#a8e6db}
+.mwall{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+.mwall>.mcover.lead{grid-column:1/-1;height:clamp(300px,30vw,380px)}
+.mcover{position:relative;display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(160deg,#0e2f37,#0b7d75);
+  height:clamp(200px,24vw,250px);box-shadow:0 6px 22px rgba(18,51,47,.05);transition:box-shadow .2s ease,border-color .2s ease}
+.mcover:hover{border-color:var(--accent);box-shadow:0 12px 30px rgba(18,51,47,.12)}
+.mcover:focus-visible{outline:2px solid #0b7d75;outline-offset:2px}
+.mcover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mcover-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 30%,rgba(8,32,29,.76) 100%)}
+.mcover-txt{position:absolute;left:20px;right:20px;bottom:16px;color:#fff}
+.mcover-title{display:block;font-family:var(--serif);font-weight:600;line-height:1.1;font-size:1.3rem;margin:6px 0 2px;color:#fff;
+  text-shadow:0 2px 16px rgba(8,32,29,.4)}
+.mcover.lead .mcover-title{font-size:clamp(1.6rem,4vw,2.4rem)}
+.mcover-deck{display:block;color:#e8f7f5;font-size:.9rem;line-height:1.45;max-width:60ch}
+.mstatus{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#bfe9e4;margin-top:8px}
+.mp-micro{display:inline-flex;gap:2px;margin-top:8px}
+.mp-micro i{width:6px;height:10px;border-radius:2px;display:inline-block}
+@media(max-width:640px){.mwall{grid-template-columns:1fr}.mcover,.mwall>.mcover.lead{height:300px}
+  .mkick{font-size:.58rem}.mcover.lead .mcover-title{font-size:2.2rem}}
+.mstat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:18px 0 8px}
+.mstat>div{padding:12px 8px 12px 14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.6}
+.mstat>div:first-child{padding-left:0}
+.mstat>div+div{border-left:1px solid var(--line)}
+.mstat b{color:var(--ink);font-weight:600}
+@media(max-width:640px){.mstat{grid-template-columns:1fr}.mstat>div{padding:10px 0}.mstat>div+div{border-left:none;border-top:1px solid var(--line)}}
+.mlede{font-size:1.05rem;line-height:1.75;color:#33565e;max-width:66ch}
+.mlede::first-letter{float:left;font-family:var(--serif);font-weight:600;font-size:3.35em;line-height:.8;padding:6px 10px 0 0;color:#0b7d75}
+.mpulse{margin:26px 0 10px}
+.mpulse-cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.mpulse-cap .mp-mode{color:#0b7d75;margin-left:10px}
+.mpulse-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;max-width:820px}
+.mp-cell{display:block;padding:2px 0 5px}
+.mp-bar{display:block;height:28px;border-radius:6px}
+.mp-bar.hx{background:repeating-linear-gradient(45deg,transparent 0 3px,var(--line) 3px 4px);border:1px solid var(--line)}
+.mp-lab{display:block;text-align:center;margin-top:5px;font-family:var(--mono);font-size:.58rem;letter-spacing:1px;color:var(--muted)}
+.mpulse-cav{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin:8px 0 0}
+.msent{color:#33565e;line-height:1.7;max-width:80ch}
+.mini-ribbon{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;min-width:180px;max-width:260px;margin-top:4px}
+.mini-ribbon i{display:block;height:12px;border-radius:3px}
+.mini-ribbon i.now{box-shadow:0 0 0 1.5px #fff,0 0 0 3px var(--ink)}
+.mnow{color:#0e7569}
+.mnotes{list-style:none;margin:12px 0 4px;padding:0;counter-reset:mn;max-width:80ch}
+.mnotes li{counter-increment:mn;display:flex;gap:16px;padding:13px 0;border-top:1px solid var(--line);color:#33565e;line-height:1.65;font-size:.95rem}
+.mnotes li:last-child{border-bottom:1px solid var(--line)}
+.mnotes li::before{content:counter(mn,decimal-leading-zero);font-family:var(--mono);font-size:.72rem;color:#0b7d75;padding-top:4px;letter-spacing:.08em}
+.mnote-ed{font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.7;color:#33565e;max-width:70ch;border-left:3px solid #bcd7d9;padding-left:16px;margin:18px 0}
+.mteasers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 8px}
+@media(max-width:480px){.mteasers{grid-template-columns:1fr}}
+.mteaser{position:relative;display:block;height:130px;border-radius:12px;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(160deg,#0e2f37,#0b7d75);
+  transition:box-shadow .2s ease,border-color .2s ease}
+.mteaser:hover{border-color:var(--accent);box-shadow:0 12px 30px rgba(18,51,47,.12)}
+.mteaser:focus-visible{outline:2px solid #0b7d75;outline-offset:2px}
+.mteaser img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mteaser .mcover-txt{left:14px;right:14px;bottom:12px}
+.mteaser .mcover-title{font-size:1.15rem}
+@media(prefers-reduced-motion:reduce){.mcover,.mteaser{transition:none}}
+"""
+
+# Additive enhancement on species pages: ring the current month on each ledger
+# ribbon, tag those rows "in season now", and swap the first stat cell to the
+# live count. Never reorders, never hides content; the page is complete
+# without it (guarded — the build-stable stat stands if anything fails).
+MARINE_JS = """
+(function(){try{
+  var mi=new Date().getMonth(),n=0;
+  [].slice.call(document.querySelectorAll('.mfile .mini-ribbon')).forEach(function(rb){
+    var c=rb.children[mi];
+    if(!c||!c.getAttribute('data-r'))return;
+    c.className='now';n++;
+    var tr=c.closest&&c.closest('tr');
+    var meta=tr&&tr.querySelector('.meta');
+    if(meta){var b=document.createElement('b');b.className='mnow';b.textContent=' · in season now';meta.appendChild(b);}
+  });
+  var s=document.getElementById('mstatLive');
+  if(s)s.innerHTML='IN SEASON NOW · <b>'+n+'</b> DESTINATION'+(n===1?'':'S');
+}catch(e){}})();
+"""
+
 def marine_article(exp, dests, prefix="../"):
     url = BASE + "marine-life/" + exp["slug"] + ".html"
+    idx = EXPERIENCES.index(exp)
     rows = where_when(dests, exp["keywords"])
-    body_rows = "".join(
-        f'<tr><td><b><a href="{prefix}destinations/{x["slug"]}.html">{esc(x["name"])}</a></b>'
-        f'<div class="meta">{esc(x["country"])}</div></td><td>{esc(", ".join(months))}</td></tr>'
-        for _, x, months in rows)
+    pulse = marine_pulse(dests, exp["keywords"])
+    lede = f'<p class="mlede rev">{esc(exp["intro"])}</p>'
     if rows:
+        # scuba cover story: stat strip → drop-cap lede → pulse → computed
+        # sentence → ribbon ledger → field notes → beyond scuba → CTA → teasers
+        body_rows = "".join(
+            f'<tr><td><b><a href="{prefix}destinations/{x["slug"]}.html">{esc(x["name"])}</a></b> '
+            f'<span class="badge" style="background:{TONAL[RANK_WORD[best]]};color:{TONAL_TEXT[RANK_WORD[best]]}">'
+            f'{RANK_WORD[best].upper()}</span>'
+            f'<div class="meta">{esc(x["country"])}</div></td>'
+            f'<td>{mini_ribbon_html(x, months)}</td></tr>'
+            for best, x, months in rows)
         table = (f'<h2>Where &amp; when to dive it</h2>'
                  f'<p class="greview" style="max-width:78ch">Pulled live from our seasonal data — the destinations where '
                  f'{esc(exp["short"])} shows in the water, and the months to catch it.</p>'
                  f'<div class="tablecard rev"><table><thead><tr><th>Destination</th><th>Best months</th></tr></thead>'
                  f'<tbody>{body_rows}</tbody></table></div>')
+        core = (marine_stat_html(rows, pulse) + lede
+                + marine_pulse_html(exp, pulse)
+                + f'<p class="msent">{esc(marine_sentence(exp, rows))}</p>'
+                + table + _marine_notes(exp) + _marine_beyond(exp))
     else:
-        table = (f'<h2>Where &amp; when to dive it</h2>'
-                 f'<p class="greview" style="max-width:78ch">{esc(exp.get("no_data") or "This is an opportunistic encounter — none of our current destinations has a fixed season for it yet.")}</p>')
-    # "Beyond scuba" — snorkel & cage experiences (not scuba, so not destinations),
-    # an affiliate surface: book via a tours platform (raw here; wrap when the
-    # experiences affiliate id is set).
-    beyond = ""
-    if exp.get("beyond_scuba"):
-        brows = "".join(
-            f'<tr><td><b>{esc(b["name"])}</b><div class="meta">{esc(b["country"])} · {esc(b["mode"])}</div></td>'
-            f'<td>{esc(", ".join(b["months"]))}</td>'
-            f'<td><a class="pack-cta ghost" href="https://www.getyourguide.com/s/?q={urllib.parse.quote(b["q"])}" '
-            f'target="_blank" rel="noopener sponsored">Book &rarr;</a></td></tr>'
-            for b in exp["beyond_scuba"])
-        beyond = (f'<h2>Beyond scuba — snorkel &amp; cage encounters</h2>'
-                  f'<p class="greview" style="max-width:78ch">{esc(exp.get("beyond_intro") or "Some of the best encounters with this animal do not run on scuba — they are snorkel or cage-diving trips. If that is the experience you are after, these are the places to book it.")}</p>'
-                  f'<div class="tablecard rev"><table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead>'
-                  f'<tbody>{brows}</tbody></table></div>')
-    tips = "".join(f"<li>{esc(t)}</li>" for t in exp.get("tips", []))
-    hero = photo_hero("Marine life guide", exp["title"], exp.get("hero_sub") or "",
+        # beyond-scuba species (great white, orcas): no stat strip, no ledger —
+        # editor's note + hatched surface-season pulse, beyond table as primary
+        note = esc(exp.get("no_data") or "This is an opportunistic encounter — "
+                   "none of our current destinations has a fixed season for it yet.")
+        hatch = marine_hatch_html(exp) if exp.get("beyond_scuba") else ""
+        core = (lede + f'<p class="mnote-ed rev">{note}</p>' + hatch
+                + _marine_beyond(exp) + _marine_notes(exp))
+    inner = ('<div class="mfile">' + core
+             + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>'
+             + _marine_teasers(idx) + '</div>')
+    hero = photo_hero(f"Marine life · Encounter {_mnum(idx)} / {_mnum(len(EXPERIENCES) - 1)}",
+                      exp["title"], exp.get("hero_sub") or "",
                       exp.get("image") or "", exp.get("image_credit") or "")
-    inner = (f'<p class="greview" style="max-width:78ch">{esc(exp["intro"])}</p>'
-             + table + beyond
-             + (f'<div class="tipbox rev"><b>Good to know</b><ul>{tips}</ul></div>' if tips else "")
-             + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>')
     art = {"@type": "Article", "headline": exp["title"], "description": exp["desc"], "url": url,
            "author": {"@type": "Organization", "name": "DiveSZN"},
            "publisher": {"@type": "Organization", "name": "DiveSZN", "url": BASE}}
@@ -1386,24 +1644,38 @@ def marine_article(exp, dests, prefix="../"):
     ld = graph_ld(art, crumbs([("Home", BASE), ("Marine life", BASE + "marine-life/index.html"),
                                (exp["title"], url)]))
     return content_shell(exp["title"] + " | DiveSZN", exp["desc"], url, prefix, exp.get("hero_sub"), inner, ld,
-                         hero_html=hero)
+                         hero_html=hero, extra_css=MARINE_CSS, extra_js=MARINE_JS if rows else "")
 
-def marine_index_page(prefix="../"):
+def marine_index_page(dests, prefix="../"):
     url = BASE + "marine-life/index.html"
-    def _mrow(e):
-        if e.get("image"):
-            th = '<div class="th photo"><img src="%s" alt="" loading="lazy"></div>' % esc(e["image"])
+    def _mcover(e, i, lead=False):
+        rows = where_when(dests, e["keywords"])
+        pulse = marine_pulse(dests, e["keywords"])
+        if rows:
+            status = f'SEASONS AT · {len(rows)} DESTINATION{"" if len(rows) == 1 else "S"}'
         else:
-            th = '<div class="th"></div>'
-        return ('<li><a href="%s.html">%s<div><h3>%s</h3><p>%s</p></div></a></li>'
-                % (e["slug"], th, esc(e["title"]), esc(e.get("hero_sub", ""))))
-    rows = "".join(_mrow(e) for e in EXPERIENCES)
+            modes = _marine_modes(e)
+            status = " · ".join(modes) + " ONLY" if modes else ""
+        micro = "".join(
+            f'<i style="background:{TONAL[RANK_WORD[p["best"]]] if p["count"] else "rgba(255,255,255,.28)"}"></i>'
+            for p in pulse)
+        img = (f'<img src="{esc(e["image"])}" alt="" loading="lazy" '
+               f'onerror="this.style.display=\'none\'">' if e.get("image") else "")
+        return (f'<a class="mcover{" lead" if lead else ""}" href="{e["slug"]}.html">{img}'
+                f'<span class="mcover-scrim"></span><span class="mcover-txt">'
+                f'<span class="mkick">Encounter {_mnum(i)} / {_mnum(len(EXPERIENCES) - 1)}</span>'
+                f'<span class="mcover-title">{esc(e["title"])}</span>'
+                f'<span class="mcover-deck">{esc(e.get("hero_sub") or "")}</span>'
+                + (f'<span class="mstatus">{status}</span>' if status else "")
+                + f'<span class="mp-micro" aria-hidden="true">{micro}</span></span></a>')
+    wall = (_mcover(EXPERIENCES[0], 0, lead=True)
+            + "".join(_mcover(e, i + 1) for i, e in enumerate(EXPERIENCES[1:])))
     desc = ("Diving with the ocean's headline animals — whale sharks, manta rays, hammerheads, mola mola, "
             "sea lions and more — with the best destinations and seasons for each.")
-    inner = (f'<p class="greview" style="max-width:80ch">The ocean&#8217;s headline encounters — what they are, and '
+    inner = (f'<div class="mfile"><p class="greview" style="max-width:80ch">The ocean&#8217;s headline encounters — what they are, and '
              f'where and when to dive them, pulled live from DiveSZN&#8217;s seasonal data.</p>'
-             f'<h2>Encounters</h2><ul class="artlist rev">{rows}</ul>'
-             f'<a class="cta" href="../index.html">Open the dive planner &rarr;</a>')
+             f'<h2>Encounters</h2><div class="mwall rev">{wall}</div>'
+             f'<a class="cta" href="../index.html">Open the dive planner &rarr;</a></div>')
     ld = graph_ld({"@type": "CollectionPage", "name": "Marine life encounters",
                    "description": desc, "url": url},
                   crumbs([("Home", BASE), ("Marine life", url)]))
@@ -1413,7 +1685,7 @@ def marine_index_page(prefix="../"):
                       (lead or {}).get("image", ""), (lead or {}).get("image_credit", ""))
     return content_shell("Marine Life — Dive With the Ocean's Icons | DiveSZN", desc, url, prefix,
                          "Whale sharks to orcas — what they are, and where and when to dive them.", inner, ld,
-                         hero_html=hero)
+                         hero_html=hero, extra_css=MARINE_CSS)
 
 # ---------------------------------------------------------------- month hubs
 def month_ranked(rankings, month, dests_by_name):
@@ -1600,7 +1872,7 @@ def main():
         with open(os.path.join(marinedir, exp["slug"] + ".html"), "w", encoding="utf-8") as f:
             f.write(marine_article(exp, dests))
     with open(os.path.join(marinedir, "index.html"), "w", encoding="utf-8") as f:
-        f.write(marine_index_page())
+        f.write(marine_index_page(dests))
 
     # legacy URLs for destinations that split into several (keep old links alive)
     LEGACY = {"red-sea-egypt": {"title": "Red Sea (Egypt)",
