@@ -16,13 +16,9 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 10
 
 CANDIDATE_QUERIES = {
-    # Owner round 2026-07-11: Protea Banks page hero — KwaZulu-Natal south
-    # coast topside (launch coast for the reef; no genuine underwater photo
-    # exists on Commons).
-    "protea-banks": ["Shelly Beach KwaZulu-Natal", "Margate beach South Africa",
-                     "Uvongo beach", "Ramsgate KwaZulu-Natal coast",
-                     "Port Shepstone coast", "KwaZulu-Natal south coast aerial",
-                     "Trafalgar Marine Reserve", "Hibberdene coast"],
+    # Owner round 2026-07-11 v2: Protea Banks hero — KZN south coast only.
+    # "Shelly Beach" alone is ambiguous on Commons (Sydney beaches) — use
+    # town names that only exist on this coast.
 }
 
 EXCLUDE = {}
