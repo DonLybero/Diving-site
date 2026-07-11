@@ -248,11 +248,16 @@ if _prev:
         p = _prev.get(r["name"])
         if not p:
             continue
-        if p.get("image"):
-            for k in ("image", "image_credit", "image_source",
-                      "image_dest", "image_dest_credit"):
-                if p.get(k) is not None:
-                    r[k] = p[k]
+        # Each image field is preserved independently: a destination may have
+        # a topside carousel shot (image_dest) but deliberately NO hero
+        # (image null -> branded gradient hero, e.g. Protea Banks).
+        got_any = False
+        for k in ("image", "image_credit", "image_source",
+                  "image_dest", "image_dest_credit"):
+            if k in p:
+                r[k] = p[k]          # explicit nulls survive rebuilds too
+                got_any = got_any or p[k] is not None
+        if got_any:
             kept += 1
         for k in _EDITORIAL:
             if p.get(k) and not r.get(k):
