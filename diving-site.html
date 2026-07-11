@@ -1308,7 +1308,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .marine-thumb img{position:relative;z-index:1}
   .marine-hero{margin:0 0 16px;border-radius:12px;overflow:hidden;background:#dbe9ec}
   .marine-hero img{display:block;width:100%;height:300px;object-fit:cover}
-  .marine-hero figcaption{font-family:var(--mono);font-size:.6rem;color:var(--muted);padding:6px 10px;background:#f3f9f9}
+  .mh-credit{position:absolute;right:10px;bottom:8px;z-index:2;width:20px;height:20px;border-radius:50%;
+       display:flex;align-items:center;justify-content:center;background:rgba(8,32,29,.45);
+       color:rgba(233,247,246,.85);font-size:.72rem;cursor:help}
   @media(max-width:640px){.marine-hero img{height:200px}}
   /* ---------- Marine Life: the encounter files (cover wall + cover stories) ---------- */
   .mwall{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
@@ -1328,7 +1330,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .mcover-title{display:block;font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em;
        font-size:1.3rem;margin:6px 0 2px;color:#fff;text-shadow:0 2px 16px rgba(8,32,29,.4)}
   .mcover.lead .mcover-title{font-size:clamp(1.6rem,4vw,2.4rem)}
-  .mcover-deck{display:block;color:#e8f7f5;font-size:.9rem;line-height:1.45;max-width:60ch}
   .mstatus{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#bfe9e4;margin-top:8px}
   @media(max-width:640px){
     .mwall{grid-template-columns:1fr}
@@ -1344,7 +1345,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .mh-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 32%,rgba(8,32,29,.74) 100%)}
   .mh-txt{position:absolute;left:24px;right:24px;bottom:20px;color:#fff}
   .mh-txt h2{margin:6px 0 4px;font-size:clamp(2.2rem,6vw,3.2rem);color:#fff;line-height:1.05;text-shadow:0 2px 20px rgba(8,32,29,.4)}
-  .mh-deck{color:#e8f7f5;font-size:1rem;line-height:1.5;max-width:62ch;margin:0;text-shadow:0 1px 14px rgba(8,32,29,.5)}
   /* mono stat strip between hairlines */
   .mstat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:16px 0 4px}
   .mstat>div{padding:12px 8px 12px 14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.6}
@@ -3494,20 +3494,20 @@ function marineCoverCard(e,i,lead){
     '<span class="mcover-scrim"></span>'+
     '<span class="mcover-txt">'+
       '<span class="mcover-title">'+e.title+'</span>'+
-      '<span class="mcover-deck">'+(e.hero_sub||'')+'</span>'+
       '<span class="mstatus">'+marineStatus(e,rows)+'</span>'+
     '</span></a>';
 }
-/* Cover: tall photo frame + scrim + kicker/title/deck; the mono credit
-   figcaption below is untouched (owner ruling on photo credits). */
+/* Cover: tall photo frame + scrim + kicker/title; the credit is a corner
+   info mark whose tooltip carries the source (owner ruling on photo credits). */
 function marineCover(e,i){
   return '<figure class="marine-hero"><div class="mh-frame">'+
     '<i class="ico" data-ico="fish"></i>'+
     (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'"'+(e.image_pos?' style="object-position:'+e.image_pos+'"':'')+' onerror="this.style.display=\'none\'">':'')+
     '<div class="mh-scrim"></div>'+
+    (e.image&&e.image_credit?'<span class="mh-credit" title="'+escAttr(e.image_credit)+'">&#9432;</span>':'')+
     '<div class="mh-txt"><span class="mkick">Marine life</span>'+
-    '<h2>'+e.title+'</h2>'+(e.hero_sub?'<p class="mh-deck">'+e.hero_sub+'</p>':'')+'</div>'+
-    '</div>'+(e.image&&e.image_credit?'<figcaption>'+e.image_credit+'</figcaption>':'')+'</figure>';
+    '<h2>'+e.title+'</h2></div>'+
+    '</div></figure>';
 }
 function marineStatStrip(e,rows){
   var pulse=marinePulse(e.slug,e.keywords);
