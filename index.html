@@ -647,6 +647,102 @@
   .marine-hero img{display:block;width:100%;height:300px;object-fit:cover}
   .marine-hero figcaption{font-family:var(--mono);font-size:.6rem;color:var(--muted);padding:6px 10px;background:#f3f9f9}
   @media(max-width:640px){.marine-hero img{height:200px}}
+  /* ---------- Marine Life: the encounter files (cover wall + cover stories) ---------- */
+  .mwall{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+  .mwall>.mcover.lead{grid-column:1/-1}
+  .mcover{position:relative;display:block;border-radius:14px;overflow:hidden;
+       background:linear-gradient(160deg,#0e2f37,#0b7d75);   /* photo-hero fallback: white text stays readable if the image fails */
+       border:1px solid var(--line);height:clamp(200px,24vw,250px);
+       transition:border-color .2s ease,box-shadow .2s ease}
+  .mcover.lead{height:clamp(300px,30vw,380px)}
+  .mcover:hover,.mcover:focus-visible{border-color:var(--accent);box-shadow:var(--shadow-glow)}
+  .mcover:focus-visible{outline:2px solid var(--accent-deep);outline-offset:2px}
+  .mcover>.ico{position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);font-size:44px;color:rgba(233,247,246,.4)}
+  .mcover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .mcover-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 30%,rgba(8,32,29,.76) 100%)}
+  .mcover-txt{position:absolute;left:20px;right:20px;bottom:16px;color:#fff}
+  .mkick{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#a8e6db}
+  .mcover-title{display:block;font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em;
+       font-size:1.3rem;margin:6px 0 2px;color:#fff;text-shadow:0 2px 16px rgba(8,32,29,.4)}
+  .mcover.lead .mcover-title{font-size:clamp(1.6rem,4vw,2.4rem)}
+  .mcover-deck{display:block;color:#e8f7f5;font-size:.9rem;line-height:1.45;max-width:60ch}
+  .mstatus{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#bfe9e4;margin-top:8px}
+  .mp-micro{display:inline-flex;gap:2px;margin-top:8px}
+  .mp-micro i{width:6px;height:10px;border-radius:2px;display:inline-block}
+  @media(max-width:640px){
+    .mwall{grid-template-columns:1fr}
+    .mcover,.mcover.lead{height:300px}
+    .mkick{font-size:.58rem}
+    .mcover.lead .mcover-title{font-size:2.2rem}
+  }
+  /* cover story: tall hero frame with scrim + overlaid title (credit stays below) */
+  .mh-frame{position:relative;background:linear-gradient(160deg,#0e2f37,#0b7d75);min-height:200px}
+  .mh-frame>.ico{position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);font-size:54px;color:rgba(233,247,246,.4)}
+  .marine-hero .mh-frame img{position:relative;height:min(52vh,420px)}
+  @media(max-width:640px){.marine-hero .mh-frame img{height:300px}}
+  .mh-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 32%,rgba(8,32,29,.74) 100%)}
+  .mh-txt{position:absolute;left:24px;right:24px;bottom:20px;color:#fff}
+  .mh-txt h2{margin:6px 0 4px;font-size:clamp(2.2rem,6vw,3.2rem);color:#fff;line-height:1.05;text-shadow:0 2px 20px rgba(8,32,29,.4)}
+  .mh-deck{color:#e8f7f5;font-size:1rem;line-height:1.5;max-width:62ch;margin:0;text-shadow:0 1px 14px rgba(8,32,29,.5)}
+  /* mono stat strip between hairlines */
+  .mstat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:16px 0 4px}
+  .mstat>div{padding:12px 8px 12px 14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.6}
+  .mstat>div:first-child{padding-left:0}
+  .mstat>div+div{border-left:1px solid var(--line)}
+  .mstat b{color:var(--ink);font-weight:600}
+  @media(max-width:640px){.mstat{grid-template-columns:1fr}.mstat>div{padding:10px 0}.mstat>div+div{border-left:none;border-top:1px solid var(--line)}}
+  /* drop-cap lede */
+  .mlede{font-size:1.05rem;line-height:1.75;color:var(--ink-soft);max-width:66ch}
+  .mlede::first-letter{float:left;font-family:var(--serif);font-weight:600;font-size:3.35em;line-height:.8;padding:6px 10px 0 0;color:var(--accent-deep)}
+  /* season pulse: 12 scrubbable cells */
+  .mpulse{margin:26px 0 6px}
+  .mpulse-cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  .mpulse-cap .mp-mode{color:var(--accent-deep);margin-left:10px}
+  .mpulse-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
+  .mp-cell{appearance:none;-webkit-appearance:none;background:none;border:0;border-bottom:3px solid transparent;
+       border-radius:6px;padding:2px 0 5px;margin:0;cursor:pointer;display:block;width:100%;font:inherit}
+  .mp-bar{display:block;height:28px;border-radius:6px;transition:transform .2s ease,filter .2s ease}
+  button.mp-cell:hover .mp-bar{transform:translateY(-2px);filter:brightness(1.06)}
+  .mp-cell.sel{border-bottom-color:var(--ink)}
+  .mp-cell.sel .mp-lab{color:var(--ink);font-weight:700}
+  .mp-cell:focus-visible{outline:2px solid var(--accent-deep);outline-offset:2px}
+  .mp-lab{display:block;text-align:center;margin-top:5px;font-family:var(--mono);font-size:.58rem;letter-spacing:1px;color:var(--muted)}
+  .mp-bar.now{box-shadow:0 0 0 1.5px #fff,0 0 0 3px var(--ink)}
+  .mp-bar.hx{background:repeating-linear-gradient(45deg,transparent 0 3px,var(--line) 3px 4px);border:1px solid var(--line)}
+  .mp-static{cursor:default}
+  .mpulse-read{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 12px}
+  .mp-clear{background:none;border:1px solid var(--line-strong);border-radius:999px;padding:4px 12px;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);cursor:pointer}
+  .mp-clear:hover{border-color:var(--accent);color:var(--accent-deep)}
+  .mpulse-cav{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin:8px 0 0}
+  /* ledger extras: scrub swap fade, evidence line, month chips, empty-state chip */
+  #marineLedger.swap{animation:mswap .15s ease}
+  @keyframes mswap{from{opacity:0}}
+  @media(prefers-reduced-motion:reduce){
+    #marineLedger.swap{animation:none}
+    .mp-bar,.mp-cell,.mcover,.mteaser{transition:none}
+  }
+  .mev{display:block;font-size:.78rem;color:var(--muted);font-style:italic;max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}
+  .mchips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+  .mwin-chip{display:inline-flex;align-items:center;background:none;border:1px solid var(--line-strong);border-radius:999px;padding:9px 16px;margin-top:12px;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);cursor:pointer}
+  .mwin-chip:hover{border-color:var(--accent);background:rgba(47,224,214,.08)}
+  /* numbered field notes */
+  .mnotes{list-style:none;margin:12px 0 4px;padding:0;counter-reset:mn;max-width:80ch}
+  .mnotes li{counter-increment:mn;display:flex;gap:16px;padding:13px 0;border-top:1px solid var(--line);color:var(--ink-soft);line-height:1.65;font-size:.95rem}
+  .mnotes li:last-child{border-bottom:1px solid var(--line)}
+  .mnotes li::before{content:counter(mn,decimal-leading-zero);font-family:var(--mono);font-size:.72rem;color:var(--accent-deep);padding-top:4px;letter-spacing:.08em}
+  /* beyond-scuba editor's note */
+  .mnote-ed{font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.7;color:var(--ink-soft);max-width:70ch;border-left:3px solid var(--line-strong);padding-left:16px;margin:18px 0}
+  /* next/prev encounter teasers */
+  .mteasers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 4px}
+  @media(max-width:480px){.mteasers{grid-template-columns:1fr}}
+  .mteaser{position:relative;display:block;height:130px;border-radius:12px;overflow:hidden;
+       background:linear-gradient(160deg,#0e2f37,#0b7d75);
+       border:1px solid var(--line);transition:border-color .2s ease,box-shadow .2s ease}
+  .mteaser:hover,.mteaser:focus-visible{border-color:var(--accent);box-shadow:var(--shadow-glow)}
+  .mteaser:focus-visible{outline:2px solid var(--accent-deep);outline-offset:2px}
+  .mteaser img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .mteaser .mcover-txt{left:14px;right:14px;bottom:12px}
+  .mteaser .mcover-title{font-size:1.15rem}
   .tipbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:14px 0;max-width:80ch}
   .tipbox ul{margin:8px 0 0;padding-left:20px;line-height:1.7;font-size:.9rem}
   .channels{margin:14px 0}
@@ -815,7 +911,7 @@
   <div class="tabs">
     <button id="tab-gear" onclick="showTab('gear')">Scuba Gear</button>
     <button id="tab-planner" onclick="showTab('planner')">Destinations</button>
-    <button id="tab-marine" onclick="MARINE_SLUG='';showTab('marine')">Marine Life</button>
+    <button id="tab-marine" onclick="openMarineIndex()">Marine Life</button>
     <button id="tab-destinations" onclick="showTab('destinations')">Articles</button>
     <button id="tab-trip" onclick="showTab('trip')">Dive Planner</button>
     <button id="tab-search" onclick="showTab('search')">Search</button>
@@ -1597,9 +1693,24 @@ function gotoWetsuit(th){
   sel.value='Wetsuits'; GEAR_ARTICLE='Wetsuits'; GEAR_THICK=th; renderGear();
   window.scrollTo({top:0,behavior:'smooth'});
 }
-// deep link e.g. #gear-wetsuits-5mm (used by the static destination SEO pages)
+// deep links: #marine/<slug>/<mon> (marine encounters — '/' separator keeps
+// hyphenated slugs intact), #gear-<cat>-<thickness>, #destinations
 function handleHash(){
   var h=(location.hash||'').replace(/^#/,''); if(!h) return;
+  var mp=h.split('/');
+  if(mp[0]==='marine'){
+    var me=MARINE.filter(function(x){return x.slug===(mp[1]||'');})[0];
+    MARINE_SLUG=me?me.slug:'';
+    MARINE_MON='';
+    if(me&&mp[2]){
+      var mon=mp[2].charAt(0).toUpperCase()+mp[2].slice(1,3).toLowerCase();
+      // months only scrub scuba species (beyond-scuba pages have no scrubber)
+      if(DivingCalendar.MONTHS.indexOf(mon)>-1&&marineWhereWhen(me.keywords).length) MARINE_MON=mon;
+    }
+    showTab('marine');
+    window.scrollTo({top:0});
+    return;
+  }
   var parts=h.split('-');
   if(parts[0]==='destinations'){showTab('planner');window.scrollTo({top:0});return;}
   if(parts[0]!=='gear') return;
@@ -2353,9 +2464,13 @@ function openMonthArticle(m){
   renderDestinations(m);
   window.scrollTo({top:0,behavior:'smooth'});
 }
-/* ---------------- Marine Life: encounter articles, data-generated where&when ---------------- */
-var MARINE=[], MARINE_SLUG='';
+/* ---------------- Marine Life: the encounter files ----------------
+   Nine numbered cover stories over the same seasonal data as the planner.
+   Everything numeric on this tab comes from marineWhereWhen()/marinePulse()
+   over diving-destinations.json — no invented counts or seasons. */
+var MARINE=[], MARINE_SLUG='', MARINE_MON='';
 var MRANK={Peak:0,Good:1,Shoulder:2,Low:3,Closed:9};
+var MRANK_WORD={0:'Peak',1:'Good',2:'Shoulder',3:'Low'};
 function marineWhereWhen(kws){
   kws=kws.map(function(k){return k.toLowerCase();});
   var rows=[];
@@ -2373,69 +2488,347 @@ function marineWhereWhen(kws){
   rows.sort(function(a,b){return a.now-b.now || a.best-b.best || a.d.name.localeCompare(b.d.name);});
   return rows;
 }
-function openMarineArticle(slug){ MARINE_SLUG=slug; showTab('marine'); renderMarine(); window.scrollTo({top:0,behavior:'smooth'}); }
-/* Marine thumbnails/hero: show the baked photo, falling back to the fish icon
-   (which sits behind the image) if the URL ever fails to load. */
-function marineThumb(e){
-  return '<div class="artrow-thumb dest-thumb marine-thumb">'+
-    (e.image?'<img src="'+e.image+'" alt="'+escq(e.title)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+
-    '<i class="ico" data-ico="fish"></i></div>';
+/* Season pulse: per month, how many destinations carry the species and the
+   best rating among them (0=Peak … 3=Low, 9=none).
+   Mirror of marine_pulse() in scripts/build_pages.py — keep in sync. */
+var MARINE_PULSE_CACHE={};
+function marinePulse(slug,kws){
+  if(MARINE_PULSE_CACHE[slug]) return MARINE_PULSE_CACHE[slug];
+  var lk=kws.map(function(k){return k.toLowerCase();});
+  var out=DivingCalendar.MONTHS.map(function(m){
+    var count=0,best=9;
+    DESTS.forEach(function(d){
+      var t=((d.monthly[m]||{}).marine_life||'').toLowerCase();
+      if(lk.some(function(k){return t.indexOf(k)>-1;})){
+        count++;
+        var rk=MRANK[d.monthly[m].rating]; if(rk==null)rk=9;
+        if(rk<best)best=rk;
+      }
+    });
+    return {count:count,best:best};
+  });
+  MARINE_PULSE_CACHE[slug]=out; return out;
 }
-function marineHero(e){
-  if(!e.image) return '';
-  return '<figure class="marine-hero"><img src="'+e.image+'" alt="'+escq(e.title)+'" onerror="this.closest(\'figure\').style.display=\'none\'">'+
-    (e.image_credit?'<figcaption>'+e.image_credit+'</figcaption>':'')+'</figure>';
+/* Nearest in-season month, searching forward from `fromMon` then wrapping. */
+function marineNearest(e,fromMon){
+  var pulse=marinePulse(e.slug,e.keywords);
+  var i=DivingCalendar.MONTHS.indexOf(fromMon);
+  for(var k=1;k<=12;k++){var j=(i+k)%12; if(pulse[j].count) return DivingCalendar.MONTHS[j];}
+  return '';
+}
+/* Collapse a month list into runs — ['May','Jun','Jul','Sep'] -> 'MAY–JUL, SEP'
+   (Dec–Jan runs wrap). Mirror of _month_runs() in scripts/build_pages.py. */
+function marineRuns(mons){
+  var idx=mons.map(function(m){return DivingCalendar.MONTHS.indexOf(m);}).sort(function(a,b){return a-b;});
+  var runs=[],cur=null;
+  idx.forEach(function(i){ if(cur&&i===cur[1]+1){cur[1]=i;} else {cur=[i,i];runs.push(cur);} });
+  if(runs.length>1&&runs[0][0]===0&&runs[runs.length-1][1]===11){
+    runs[runs.length-1][1]=runs[0][1]+12; runs.shift();
+  }
+  var out=runs.map(function(r){
+    var a=DivingCalendar.MONTHS[r[0]%12].toUpperCase(), b=DivingCalendar.MONTHS[r[1]%12].toUpperCase();
+    return r[0]===r[1]?a:a+'–'+b;
+  });
+  if(out.length>6) out=out.slice(0,6).concat(['+'+(out.length-6)]);
+  return out.join(', ');
+}
+function modeWord(m){return String(m||'').replace(/\s*diving\s*$/i,'').trim().split(/\s+/)[0].toUpperCase();}
+function marineModes(e){
+  var seen={},out=[];
+  (e.beyond_scuba||[]).forEach(function(b){var w=modeWord(b.mode); if(!seen[w]){seen[w]=1;out.push(w);}});
+  return out.sort();
+}
+/* "show"/"shows" for the computed sentence, from e.short's last word. */
+function marineVerb(shortName){
+  var w=(String(shortName).toLowerCase().match(/[a-z]+/g)||['']).pop();
+  return (/[^s]s$/.test(w))?'show':'shows';
+}
+function marineStatus(e,rows){
+  if(!rows.length){
+    var modes=marineModes(e);
+    return modes.length?modes.join(' · ')+' ONLY':'';
+  }
+  var nowN=rows.filter(function(r){return r.now===0;}).length;
+  if(nowN) return 'IN SEASON NOW · '+nowN+' DESTINATION'+(nowN===1?'':'S');
+  var nx=marineNearest(e,DivingCalendar.MONTHS[new Date().getMonth()]);
+  return nx?'NEXT SEASON: '+nx.toUpperCase():'';
+}
+/* 12-tick micro-pulse preview (decorative — the article pulse is the real one) */
+function marineMicro(e){
+  var pulse=marinePulse(e.slug,e.keywords);
+  return '<span class="mp-micro" aria-hidden="true">'+pulse.map(function(p){
+    var c=p.count?(RCOLOR[MRANK_WORD[p.best]]||'#94a3b8'):'rgba(255,255,255,.28)';
+    return '<i style="background:'+c+'"></i>';
+  }).join('')+'</span>';
+}
+function marineNum(i){return ('0'+(i+1)).slice(-2);}
+function marineCoverCard(e,i,lead){
+  var rows=marineWhereWhen(e.keywords);
+  return '<a class="mcover'+(lead?' lead':'')+'" href="#marine/'+e.slug+'" onclick="openMarineArticle(\''+escq(e.slug)+'\');return false;">'+
+    '<i class="ico" data-ico="fish"></i>'+
+    (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+
+    '<span class="mcover-scrim"></span>'+
+    '<span class="mcover-txt">'+
+      '<span class="mkick">Encounter '+marineNum(i)+' / '+marineNum(MARINE.length-1)+'</span>'+
+      '<span class="mcover-title">'+e.title+'</span>'+
+      '<span class="mcover-deck">'+(e.hero_sub||'')+'</span>'+
+      '<span class="mstatus">'+marineStatus(e,rows)+'</span>'+
+      marineMicro(e)+
+    '</span></a>';
+}
+/* Cover: tall photo frame + scrim + kicker/title/deck; the mono credit
+   figcaption below is untouched (owner ruling on photo credits). */
+function marineCover(e,i){
+  return '<figure class="marine-hero"><div class="mh-frame">'+
+    '<i class="ico" data-ico="fish"></i>'+
+    (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'" onerror="this.style.display=\'none\'">':'')+
+    '<div class="mh-scrim"></div>'+
+    '<div class="mh-txt"><span class="mkick">Marine life · Encounter '+marineNum(i)+' / '+marineNum(MARINE.length-1)+'</span>'+
+    '<h2>'+e.title+'</h2>'+(e.hero_sub?'<p class="mh-deck">'+e.hero_sub+'</p>':'')+'</div>'+
+    '</div>'+(e.image&&e.image_credit?'<figcaption>'+e.image_credit+'</figcaption>':'')+'</figure>';
+}
+function marineStatStrip(e,rows){
+  var pulse=marinePulse(e.slug,e.keywords);
+  var nowN=rows.filter(function(r){return r.now===0;}).length;
+  var peakM=DivingCalendar.MONTHS.filter(function(m,i){return pulse[i].count>0&&pulse[i].best===0;});
+  return '<div class="mstat">'+
+    '<div>IN SEASON NOW · <b>'+nowN+'</b></div>'+
+    '<div>PEAK MONTHS · <b>'+(peakM.length?marineRuns(peakM):'—')+'</b></div>'+
+    '<div>SEASONS AT · <b>'+rows.length+'</b> DESTINATION'+(rows.length===1?'':'S')+'</div></div>';
+}
+/* The 12 scrubbable pulse cells (scuba species). */
+function marinePulseCells(e){
+  var pulse=marinePulse(e.slug,e.keywords);
+  var nowM=DivingCalendar.MONTHS[new Date().getMonth()];
+  return DivingCalendar.MONTHS.map(function(m,i){
+    var p=pulse[i], sel=MARINE_MON===m;
+    var word=p.count?MRANK_WORD[p.best]:'';
+    var col=p.count?(RCOLOR[word]||'#94a3b8'):'var(--line)';
+    var title=m.toUpperCase()+(p.count?' · '+word.toUpperCase()+' · '+p.count+' DESTINATION'+(p.count===1?'':'S'):' · OUT OF SEASON');
+    var aria=MONTH_FULL[m]+(p.count?' — '+word+' season, '+p.count+' destination'+(p.count===1?'':'s'):' — out of season');
+    var ti=(MARINE_MON?sel:i===0)?0:-1;
+    return '<button type="button" class="mp-cell'+(sel?' sel':'')+'" data-mon="'+m+'" tabindex="'+ti+'" '+
+      'title="'+title+'" aria-label="'+aria+'" aria-pressed="'+(sel?'true':'false')+'" '+
+      'onclick="marineScrub(\''+m+'\')">'+
+      '<span class="mp-bar'+(m===nowM?' now':'')+'" style="background:'+col+'"></span>'+
+      '<span class="mp-lab">'+m.charAt(0)+'</span></button>';
+  }).join('');
+}
+/* Hatched, non-interactive pulse for beyond-scuba-only species (great white,
+   orcas): outline cells from beyond_scuba[].months, never a rating colour. */
+function marineHatchCells(e){
+  var byMon={};
+  (e.beyond_scuba||[]).forEach(function(b){
+    (b.months||[]).forEach(function(m){(byMon[m]=byMon[m]||{})[modeWord(b.mode)]=1;});
+  });
+  return DivingCalendar.MONTHS.map(function(m){
+    var modes=byMon[m]?Object.keys(byMon[m]).sort():null;
+    var title=m.toUpperCase()+(modes?' · '+modes.join(' · '):' · OUT OF SEASON');
+    return '<span class="mp-cell mp-static" title="'+title+'">'+
+      '<span class="mp-bar'+(modes?' hx':'')+'"'+(modes?'':' style="background:var(--line)"')+'></span>'+
+      '<span class="mp-lab">'+m.charAt(0)+'</span></span>';
+  }).join('');
+}
+function marineReadout(e,rows){
+  var clear='<button type="button" class="mp-clear" onclick="marineClearScrub()">CLEAR ×</button>';
+  if(!MARINE_MON) return 'SHOWING ALL MONTHS · '+rows.length+' DESTINATION'+(rows.length===1?'':'S');
+  var n=rows.filter(function(r){return r.months.indexOf(MARINE_MON)>-1;}).length;
+  return 'SHOWING '+MONTH_FULL[MARINE_MON].toUpperCase()+' · '+n+' DESTINATION'+(n===1?'':'S')+' '+clear;
+}
+/* Template-only computed sentence — names, counts and months are injected
+   from the ranked rows; no freeform claims. */
+function marineSentence(e,rows){
+  var mon=MARINE_MON||DivingCalendar.MONTHS[new Date().getMonth()];
+  // top picks: that month's rating first, then the longest season (ratings tie
+  // across many Peak rows — season length keeps the "strongest" claim honest)
+  var inMon=rows.filter(function(r){return r.months.indexOf(mon)>-1;}).sort(function(a,b){
+    var ra=MRANK[a.d.monthly[mon].rating],rb=MRANK[b.d.monthly[mon].rating];
+    return ((ra==null?9:ra)-(rb==null?9:rb))||(b.months.length-a.months.length)||a.d.name.localeCompare(b.d.name);
+  });
+  var full=MONTH_FULL[mon], verb=marineVerb(e.short);
+  if(!inMon.length){
+    var nx=marineNearest(e,mon);
+    return 'No destination carries '+e.short+' in '+full+(nx?'; the season opens in '+MONTH_FULL[nx]:'')+'.';
+  }
+  if(inMon.length===1) return 'In '+full+', '+e.short+' '+verb+' at one destination: '+inMon[0].d.name+'.';
+  var top=inMon.slice(0,3).map(function(r){return r.d.name;});
+  return 'In '+full+', '+e.short+' '+verb+' at '+inMon.length+' destinations; the strongest seasons are '+joinList(top)+'.';
+}
+/* One ledger row's 12-cell mini ribbon with dive-computer readout titles. */
+function marineMini(r,nowM){
+  return DivingCalendar.MONTHS.map(function(m){
+    var inS=r.months.indexOf(m)>-1;
+    var mm=r.d.monthly[m]||{};
+    var c=inS?(RCOLOR[mm.rating]||'#94a3b8'):'var(--line)';
+    var t=m.toUpperCase();
+    if(inS){
+      t+=' · '+String(mm.rating||'').toUpperCase();
+      var tc=r.d.monthly_temp_c[m]; if(tc!=null)t+=' · '+tc+'°C';
+      if(mm.visibility_m!=null)t+=' · '+mm.visibility_m+' M';
+    }
+    return '<i style="background:'+c+'"'+(m===nowM&&inS?' class="now"':'')+' title="'+t+'"></i>';
+  }).join('');
+}
+/* The where-&-when ledger. Default: every carrying destination, now→best→name.
+   Scrubbed: filtered to MARINE_MON, sorted by that month's rating, each row
+   quoting its own marine_life sentence for the month (the evidence line). */
+function marineLedgerHTML(e,rows){
+  var nowM=DivingCalendar.MONTHS[new Date().getMonth()];
+  var list=rows;
+  if(MARINE_MON){
+    list=rows.filter(function(r){return r.months.indexOf(MARINE_MON)>-1;}).sort(function(a,b){
+      var ra=MRANK[a.d.monthly[MARINE_MON].rating],rb=MRANK[b.d.monthly[MARINE_MON].rating];
+      return ((ra==null?9:ra)-(rb==null?9:rb))||a.d.name.localeCompare(b.d.name);
+    });
+    if(!list.length){
+      var nx=marineNearest(e,MARINE_MON);
+      return '<div class="empty">No destination carries '+e.short+' in '+MONTH_FULL[MARINE_MON]+'.'+
+        (nx?'<br><button type="button" class="mwin-chip" onclick="marineScrub(\''+nx+'\')">NEAREST WINDOW: '+nx.toUpperCase()+' →</button>':'')+
+        '</div>';
+    }
+  }
+  var body=list.map(function(r){
+    var word=MARINE_MON?r.d.monthly[MARINE_MON].rating:MRANK_WORD[r.best];
+    var chips='',ev='';
+    if(MARINE_MON){
+      var mm=r.d.monthly[MARINE_MON]||{}, tc=r.d.monthly_temp_c[MARINE_MON], cc=[];
+      if(tc!=null)cc.push(tc+'°C');
+      if(mm.visibility_m!=null)cc.push(mm.visibility_m+' m');
+      if(cc.length)chips='<div class="mchips">'+cc.map(function(c){return '<span class="chip">'+c+'</span>';}).join('')+'</div>';
+      if(mm.marine_life)ev='<span class="mev" title="'+escAttr(mm.marine_life)+'">“'+mm.marine_life+'”</span>';
+    }
+    return '<tr><td><a href="#" onclick="openProfile(\''+escq(r.d.name)+'\');return false;"><b>'+r.d.name+'</b></a>'+
+      (word?' <span class="badge b-'+word+'">'+String(word).toUpperCase()+'</span>':'')+
+      '<div class="meta" style="margin-bottom:0">'+r.d.country+(r.now===0?' · <b style="color:var(--peak,#0e7569)">in season now</b>':'')+'</div>'+
+      chips+ev+'</td>'+
+      '<td><div class="mini-ribbon">'+marineMini(r,nowM)+'</div></td></tr>';
+  }).join('');
+  return '<table><thead><tr><th>Destination</th><th>Best months</th></tr></thead><tbody>'+body+'</tbody></table>';
+}
+function marineNotes(e){
+  if(!e.tips||!e.tips.length) return '';
+  return '<h3 style="margin-top:22px">Field notes</h3><ol class="mnotes">'+
+    e.tips.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ol>';
+}
+function marineBeyond(e){
+  if(!e.beyond_scuba||!e.beyond_scuba.length) return '';
+  return '<h3 style="margin-top:22px">Beyond scuba — snorkel &amp; cage encounters</h3>'+
+    '<p style="color:#33565e;max-width:80ch">'+(e.beyond_intro||'Some of the best encounters with this animal are not on scuba — they run as snorkel or cage-diving trips.')+'</p>'+
+    '<table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead><tbody>'+
+    e.beyond_scuba.map(function(b){return '<tr><td><b>'+b.name+'</b><div class="meta">'+b.country+' · '+b.mode+'</div></td>'+
+      '<td>'+b.months.join(', ')+'</td><td style="text-align:right"><a class="btn ghost" href="https://www.getyourguide.com/s/?q='+
+      encodeURIComponent(b.q)+'" target="_blank" rel="noopener sponsored">Book</a></td></tr>';}).join('')+'</tbody></table>';
+}
+function marineTeasers(idx){
+  function card(e,kick){
+    return '<a class="mteaser" href="#marine/'+e.slug+'" onclick="openMarineArticle(\''+escq(e.slug)+'\');return false;">'+
+      (e.image?'<img src="'+e.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+
+      '<span class="mcover-scrim"></span><span class="mcover-txt">'+
+      '<span class="mkick">'+kick+'</span><span class="mcover-title">'+e.title+'</span></span></a>';
+  }
+  var p=MARINE[(idx+MARINE.length-1)%MARINE.length], n=MARINE[(idx+1)%MARINE.length];
+  return '<div class="mteasers">'+card(p,'Previous')+card(n,'Next encounter')+'</div>';
+}
+function marineScrollTop(){
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top:0,behavior:rm?'auto':'smooth'});
+}
+function openMarineArticle(slug){
+  MARINE_SLUG=slug; MARINE_MON='';
+  history.replaceState(null,'','#marine/'+slug);
+  showTab('marine');
+  marineScrollTop();
+}
+function openMarineIndex(){
+  MARINE_SLUG=''; MARINE_MON='';
+  if(location.hash) history.replaceState(null,'','#marine');
+  showTab('marine');
+  marineScrollTop();
+}
+/* Tap a pulse cell: filter the ledger to that month (tap again to clear). */
+function marineScrub(m){ MARINE_MON=(MARINE_MON===m)?'':m; marineSyncScrub(); }
+function marineClearScrub(){ MARINE_MON=''; marineSyncScrub(); }
+function marineSyncScrub(){
+  var e=MARINE.filter(function(x){return x.slug===MARINE_SLUG;})[0]; if(!e) return;
+  document.querySelectorAll('#mpulseGrid .mp-cell').forEach(function(b){
+    var on=b.getAttribute('data-mon')===MARINE_MON;
+    b.classList.toggle('sel',on); b.setAttribute('aria-pressed',on?'true':'false');
+  });
+  var rows=marineWhereWhen(e.keywords);
+  var rd=document.getElementById('mpulseRead'); if(rd)rd.innerHTML=marineReadout(e,rows);
+  var st=document.getElementById('marineSent'); if(st)st.innerHTML=marineSentence(e,rows);
+  var led=document.getElementById('marineLedger');
+  if(led){
+    led.innerHTML=marineLedgerHTML(e,rows);
+    led.classList.remove('swap'); void led.offsetWidth; led.classList.add('swap');
+  }
+  history.replaceState(null,'','#marine/'+e.slug+(MARINE_MON?'/'+MARINE_MON.toLowerCase():''));
+}
+/* Roving arrow keys across the pulse (Enter/Space select natively). */
+function mpulseKey(ev){
+  if(ev.key!=='ArrowLeft'&&ev.key!=='ArrowRight') return;
+  var btns=[].slice.call(ev.currentTarget.querySelectorAll('button.mp-cell'));
+  var i=btns.indexOf(document.activeElement); if(i<0) return;
+  ev.preventDefault();
+  var j=(i+(ev.key==='ArrowRight'?1:btns.length-1))%btns.length;
+  btns.forEach(function(b,x){b.tabIndex=x===j?0:-1;});
+  btns[j].focus();
 }
 function renderMarine(){
   var body=document.getElementById('marineBody'); if(!body) return;
   if(!MARINE.length){ body.innerHTML='<div class="empty">Marine life guide could not load.</div>'; return; }
   if(!MARINE_SLUG){
-    var rows=MARINE.map(function(e){
-      return '<a class="artrow" href="#" onclick="openMarineArticle(\''+escq(e.slug)+'\');return false;">'+
-        marineThumb(e)+
-        '<div><h4>'+e.title+'</h4><p>'+(e.hero_sub||'')+'</p></div></a>';
-    }).join('');
+    // ------- state 1: the cover wall (numbering is positional — never re-sort)
+    var lead=marineCoverCard(MARINE[0],0,true);
+    var grid=MARINE.slice(1).map(function(e,i){return marineCoverCard(e,i+1,false);}).join('');
     body.innerHTML='<div class="article" style="grid-column:1/-1">'+
       '<div class="sec-head">Marine life</div>'+
       '<p class="sec-sub">The ocean’s headline encounters — what they are, and, pulled live from our seasonal data, exactly where and when to dive them.</p>'+
-      '<h3 class="artlist-head">Encounters</h3>'+rows+'</div>';
+      '<div class="mwall">'+lead+grid+'</div></div>';
   }else{
     var e=MARINE.filter(function(x){return x.slug===MARINE_SLUG;})[0];
     if(!e){ MARINE_SLUG=''; return renderMarine(); }
-    var back='<p class="meta"><a href="#" onclick="MARINE_SLUG=\'\';renderMarine();window.scrollTo(0,0);return false;">← All marine life</a></p>';
-    var rows=marineWhereWhen(e.keywords), ww;
+    var idx=MARINE.indexOf(e);
+    var back='<p class="meta"><a href="#" onclick="openMarineIndex();return false;">← All marine life</a></p>';
+    var rows=marineWhereWhen(e.keywords);
+    var caveat='<p class="mpulse-cav">Timing shifts year to year — confirm dates with your operator.</p>';
+    var html;
     if(rows.length){
-      ww='<h3 style="margin-top:22px">Where &amp; when to dive it</h3>'+
+      // ------- state 2a: scuba cover story — stat strip, pulse, ledger
+      var pulse='<div class="mpulse">'+
+        '<p class="mpulse-cap">Where it is in the water, month by month</p>'+
+        '<div class="mpulse-read" id="mpulseRead">'+marineReadout(e,rows)+'</div>'+
+        '<div class="mpulse-grid" id="mpulseGrid" onkeydown="mpulseKey(event)">'+marinePulseCells(e)+'</div>'+
+        caveat+'</div>';
+      html=back+marineCover(e,idx)+
+        marineStatStrip(e,rows)+
+        '<p class="mlede">'+e.intro+'</p>'+
+        pulse+
+        '<p class="gentry-review" id="marineSent" style="max-width:80ch">'+marineSentence(e,rows)+'</p>'+
+        '<h3 style="margin-top:22px">Where &amp; when to dive it</h3>'+
         '<p class="meta">Pulled live from our seasonal data — the destinations where '+e.short+' shows in the water, and the months to catch it.</p>'+
-        '<table><thead><tr><th>Destination</th><th>Best months</th></tr></thead><tbody>'+
-        rows.map(function(r){
-          var nowM=DivingCalendar.MONTHS[new Date().getMonth()];
-          var mini=DivingCalendar.MONTHS.map(function(m){
-            var inSeason=r.months.indexOf(m)>-1;
-            var c=inSeason?(RCOLOR[r.d.monthly[m].rating]||'#94a3b8'):'var(--line)';
-            return '<i style="background:'+c+'"'+(m===nowM&&inSeason?' class="now"':'')+' title="'+m+(inSeason?' — '+r.d.monthly[m].rating:'')+'"></i>';
-          }).join('');
-          return '<tr><td><a href="#" onclick="openProfile(\''+escq(r.d.name)+'\');return false;"><b>'+r.d.name+'</b></a>'+
-          '<div class="meta">'+r.d.country+(r.now===0?' · <b style=\"color:var(--peak,#0e7569)\">in season now</b>':'')+'</div></td>'+
-          '<td><div class="mini-ribbon">'+mini+'</div></td></tr>';}).join('')+'</tbody></table>';
+        '<div id="marineLedger">'+marineLedgerHTML(e,rows)+'</div>'+
+        marineNotes(e)+
+        marineBeyond(e)+
+        '<p style="margin-top:22px"><a class="btn" href="#" onclick="showTab(\'trip\');return false;">Plan a trip around it →</a></p>'+
+        marineTeasers(idx);
     }else{
-      ww='<h3 style="margin-top:22px">Where &amp; when to dive it</h3>'+
-        '<p style="color:#33565e;max-width:80ch">'+(e.no_data||'This is an opportunistic encounter — none of our current destinations has a fixed season for it yet.')+'</p>';
+      // ------- state 2b: beyond-scuba species (great white, orcas) — no
+      // scrubber/ledger/stat strip; hatched surface-season pulse instead
+      var modes=marineModes(e).join(' · ');
+      var hatch=(e.beyond_scuba&&e.beyond_scuba.length)?
+        '<div class="mpulse">'+
+        '<p class="mpulse-cap">Surface &amp; cage seasons — not scuba'+(modes?'<span class="mp-mode">'+modes+'</span>':'')+'</p>'+
+        '<div class="mpulse-grid">'+marineHatchCells(e)+'</div>'+caveat+'</div>':'';
+      html=back+marineCover(e,idx)+
+        '<p class="mlede">'+e.intro+'</p>'+
+        '<p class="mnote-ed">'+(e.no_data||'This is an opportunistic encounter — none of our current destinations has a fixed season for it yet.')+'</p>'+
+        hatch+
+        marineBeyond(e)+
+        marineNotes(e)+
+        marineTeasers(idx);
     }
-    var beyond='';
-    if(e.beyond_scuba&&e.beyond_scuba.length){
-      beyond='<h3 style="margin-top:22px">Beyond scuba — snorkel &amp; cage encounters</h3>'+
-        '<p style="color:#33565e;max-width:80ch">'+(e.beyond_intro||'Some of the best encounters with this animal are not on scuba — they run as snorkel or cage-diving trips.')+'</p>'+
-        '<table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead><tbody>'+
-        e.beyond_scuba.map(function(b){return '<tr><td><b>'+b.name+'</b><div class="meta">'+b.country+' · '+b.mode+'</div></td>'+
-          '<td>'+b.months.join(', ')+'</td><td style="text-align:right"><a class="btn ghost" href="https://www.getyourguide.com/s/?q='+
-          encodeURIComponent(b.q)+'" target="_blank" rel="noopener sponsored">Book</a></td></tr>';}).join('')+'</tbody></table>';
-    }
-    var tips=(e.tips&&e.tips.length)?'<div class="tipbox"><b>Good to know</b><ul>'+e.tips.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>':'';
-    body.innerHTML='<div class="article" style="grid-column:1/-1">'+back+
-      marineHero(e)+
-      '<h2 style="margin:6px 0 2px">'+e.title+'</h2><p class="sec-sub" style="margin-top:0">'+(e.hero_sub||'')+'</p>'+
-      '<p class="gentry-review" style="max-width:80ch">'+e.intro+'</p>'+ww+beyond+tips+back+'</div>';
+    body.innerHTML='<div class="article" style="grid-column:1/-1">'+html+'</div>';
   }
   applyIcons();
 }

@@ -214,11 +214,70 @@ body.v2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
 .v2 .hero.plain{background:linear-gradient(160deg,#0e2f37,#0b7d75)}
 @media(max-width:640px){.v2 .gentry{padding:16px 14px}.v2 .artlist a{padding:11px 12px}}
 @media(prefers-reduced-motion:reduce){.v2 .gentry,.v2 .artlist li,.v2 .dirlist li,.v2 .cta,.v2 .pack-cta{transition:none}}
+
+.mkick{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#a8e6db}
+.mwall{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+.mwall>.mcover.lead{grid-column:1/-1;height:clamp(300px,30vw,380px)}
+.mcover{position:relative;display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(160deg,#0e2f37,#0b7d75);
+  height:clamp(200px,24vw,250px);box-shadow:0 6px 22px rgba(18,51,47,.05);transition:box-shadow .2s ease,border-color .2s ease}
+.mcover:hover{border-color:var(--accent);box-shadow:0 12px 30px rgba(18,51,47,.12)}
+.mcover:focus-visible{outline:2px solid #0b7d75;outline-offset:2px}
+.mcover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mcover-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 30%,rgba(8,32,29,.76) 100%)}
+.mcover-txt{position:absolute;left:20px;right:20px;bottom:16px;color:#fff}
+.mcover-title{display:block;font-family:var(--serif);font-weight:600;line-height:1.1;font-size:1.3rem;margin:6px 0 2px;color:#fff;
+  text-shadow:0 2px 16px rgba(8,32,29,.4)}
+.mcover.lead .mcover-title{font-size:clamp(1.6rem,4vw,2.4rem)}
+.mcover-deck{display:block;color:#e8f7f5;font-size:.9rem;line-height:1.45;max-width:60ch}
+.mstatus{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#bfe9e4;margin-top:8px}
+.mp-micro{display:inline-flex;gap:2px;margin-top:8px}
+.mp-micro i{width:6px;height:10px;border-radius:2px;display:inline-block}
+@media(max-width:640px){.mwall{grid-template-columns:1fr}.mcover,.mwall>.mcover.lead{height:300px}
+  .mkick{font-size:.58rem}.mcover.lead .mcover-title{font-size:2.2rem}}
+.mstat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:18px 0 8px}
+.mstat>div{padding:12px 8px 12px 14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.6}
+.mstat>div:first-child{padding-left:0}
+.mstat>div+div{border-left:1px solid var(--line)}
+.mstat b{color:var(--ink);font-weight:600}
+@media(max-width:640px){.mstat{grid-template-columns:1fr}.mstat>div{padding:10px 0}.mstat>div+div{border-left:none;border-top:1px solid var(--line)}}
+.mlede{font-size:1.05rem;line-height:1.75;color:#33565e;max-width:66ch}
+.mlede::first-letter{float:left;font-family:var(--serif);font-weight:600;font-size:3.35em;line-height:.8;padding:6px 10px 0 0;color:#0b7d75}
+.mpulse{margin:26px 0 10px}
+.mpulse-cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.mpulse-cap .mp-mode{color:#0b7d75;margin-left:10px}
+.mpulse-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;max-width:820px}
+.mp-cell{display:block;padding:2px 0 5px}
+.mp-bar{display:block;height:28px;border-radius:6px}
+.mp-bar.hx{background:repeating-linear-gradient(45deg,transparent 0 3px,var(--line) 3px 4px);border:1px solid var(--line)}
+.mp-lab{display:block;text-align:center;margin-top:5px;font-family:var(--mono);font-size:.58rem;letter-spacing:1px;color:var(--muted)}
+.mpulse-cav{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin:8px 0 0}
+.msent{color:#33565e;line-height:1.7;max-width:80ch}
+.mini-ribbon{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;min-width:180px;max-width:260px;margin-top:4px}
+.mini-ribbon i{display:block;height:12px;border-radius:3px}
+.mini-ribbon i.now{box-shadow:0 0 0 1.5px #fff,0 0 0 3px var(--ink)}
+.mnow{color:#0e7569}
+.mnotes{list-style:none;margin:12px 0 4px;padding:0;counter-reset:mn;max-width:80ch}
+.mnotes li{counter-increment:mn;display:flex;gap:16px;padding:13px 0;border-top:1px solid var(--line);color:#33565e;line-height:1.65;font-size:.95rem}
+.mnotes li:last-child{border-bottom:1px solid var(--line)}
+.mnotes li::before{content:counter(mn,decimal-leading-zero);font-family:var(--mono);font-size:.72rem;color:#0b7d75;padding-top:4px;letter-spacing:.08em}
+.mnote-ed{font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.7;color:#33565e;max-width:70ch;border-left:3px solid #bcd7d9;padding-left:16px;margin:18px 0}
+.mteasers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 8px}
+@media(max-width:480px){.mteasers{grid-template-columns:1fr}}
+.mteaser{position:relative;display:block;height:130px;border-radius:12px;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(160deg,#0e2f37,#0b7d75);
+  transition:box-shadow .2s ease,border-color .2s ease}
+.mteaser:hover{border-color:var(--accent);box-shadow:0 12px 30px rgba(18,51,47,.12)}
+.mteaser:focus-visible{outline:2px solid #0b7d75;outline-offset:2px}
+.mteaser img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mteaser .mcover-txt{left:14px;right:14px;bottom:12px}
+.mteaser .mcover-title{font-size:1.15rem}
+@media(prefers-reduced-motion:reduce){.mcover,.mteaser{transition:none}}
 </style>
 </head>
 <body class="v2">
 <div class="topbar"><a href="../index.html"><svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 C35 32 18 24 6 22 C16 28 33 37 48 41 C53 42 56 43 60 47 C64 43 67 42 72 41 C87 37 104 28 114 22 C102 24 85 32 74 41 C67 46 64 51 60 62 Z" fill="#2fe0d6"/></svg><span class="name">Dive<b>SZN</b></span></a></div>
-<main class="wrap"><header class="hero2 hero2-hub rev"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Threshershark.jpg/960px-Threshershark.jpg" alt="" onerror="this.style.display='none'"><div class="hero2-scrim"></div><span class="credit2" title="Photo: Petter Lindgren (CC BY-SA 3.0) via Wikimedia Commons">&#9432;</span><div class="hero2-bar"><div><div class="hero2-kicker">Marine life guide</div><h1>Thresher Sharks</h1><p class="hero2-sub">Dawn on the seamount, where the whip-tails come to be cleaned.</p></div></div></header><p class="greview" style="max-width:78ch">The pelagic thresher is all elegance — a slender shark with an upper tail lobe as long as its body, which it cracks like a whip to stun fish. It spends its days in cool deep water and rises at dawn to seamount cleaning stations, where divers wait in the half-light for it to glide in. It is one of very few reliably-scheduled encounters with a truly open-ocean shark.</p><h2>Where &amp; when to dive it</h2><p class="greview" style="max-width:78ch">Pulled live from our seasonal data — the destinations where thresher sharks shows in the water, and the months to catch it.</p><div class="tablecard rev"><table><thead><tr><th>Destination</th><th>Best months</th></tr></thead><tbody><tr><td><b><a href="../destinations/fuvahmulah.html">Fuvahmulah</a></b><div class="meta">Maldives</div></td><td>Mar, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr><tr><td><b><a href="../destinations/malapascua-island.html">Malapascua Island</a></b><div class="meta">Philippines</div></td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr></tbody></table></div><div class="tipbox rev"><b>Good to know</b><ul><li>It is a dawn dive — be on the seamount before sunrise when the threshers rise to be cleaned.</li><li>Stay behind the agreed line and keep still; threshers are shy and veer off at the first chase.</li><li>Cooler, deeper cleaning stations mean solid buoyancy and often a 5 mm suit.</li></ul></div><a class="cta" href="../index.html">Plan a trip around it — open the dive planner &rarr;</a></main>
+<main class="wrap"><header class="hero2 hero2-hub rev"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Threshershark.jpg/960px-Threshershark.jpg" alt="" onerror="this.style.display='none'"><div class="hero2-scrim"></div><span class="credit2" title="Photo: Petter Lindgren (CC BY-SA 3.0) via Wikimedia Commons">&#9432;</span><div class="hero2-bar"><div><div class="hero2-kicker">Marine life · Encounter 04 / 09</div><h1>Thresher Sharks</h1><p class="hero2-sub">Dawn on the seamount, where the whip-tails come to be cleaned.</p></div></div></header><div class="mfile"><div class="mstat"><div id="mstatLive">SEASONS AT · <b>2</b> DESTINATIONS</div><div>PEAK MONTHS · <b>MAR–MAY, DEC</b></div><div>WIDEST MONTH · <b>MAR</b></div></div><p class="mlede rev">The pelagic thresher is all elegance — a slender shark with an upper tail lobe as long as its body, which it cracks like a whip to stun fish. It spends its days in cool deep water and rises at dawn to seamount cleaning stations, where divers wait in the half-light for it to glide in. It is one of very few reliably-scheduled encounters with a truly open-ocean shark.</p><div class="mpulse rev"><p class="mpulse-cap">Where it is in the water, month by month</p><div class="mpulse-grid"><span class="mp-cell" title="JAN · GOOD · 1 DESTINATION"><span class="mp-bar" style="background:#5cb8ab"></span><span class="mp-lab">J</span></span><span class="mp-cell" title="FEB · GOOD · 1 DESTINATION"><span class="mp-bar" style="background:#5cb8ab"></span><span class="mp-lab">F</span></span><span class="mp-cell" title="MAR · PEAK · 2 DESTINATIONS"><span class="mp-bar" style="background:#0e7569"></span><span class="mp-lab">M</span></span><span class="mp-cell" title="APR · PEAK · 1 DESTINATION"><span class="mp-bar" style="background:#0e7569"></span><span class="mp-lab">A</span></span><span class="mp-cell" title="MAY · PEAK · 1 DESTINATION"><span class="mp-bar" style="background:#0e7569"></span><span class="mp-lab">M</span></span><span class="mp-cell" title="JUN · GOOD · 2 DESTINATIONS"><span class="mp-bar" style="background:#5cb8ab"></span><span class="mp-lab">J</span></span><span class="mp-cell" title="JUL · SHOULDER · 2 DESTINATIONS"><span class="mp-bar" style="background:#dfa826"></span><span class="mp-lab">J</span></span><span class="mp-cell" title="AUG · SHOULDER · 2 DESTINATIONS"><span class="mp-bar" style="background:#dfa826"></span><span class="mp-lab">A</span></span><span class="mp-cell" title="SEP · SHOULDER · 2 DESTINATIONS"><span class="mp-bar" style="background:#dfa826"></span><span class="mp-lab">S</span></span><span class="mp-cell" title="OCT · GOOD · 2 DESTINATIONS"><span class="mp-bar" style="background:#5cb8ab"></span><span class="mp-lab">O</span></span><span class="mp-cell" title="NOV · GOOD · 2 DESTINATIONS"><span class="mp-bar" style="background:#5cb8ab"></span><span class="mp-lab">N</span></span><span class="mp-cell" title="DEC · PEAK · 2 DESTINATIONS"><span class="mp-bar" style="background:#0e7569"></span><span class="mp-lab">D</span></span></div><p class="mpulse-cav">Timing shifts year to year — confirm dates with your operator.</p></div><p class="msent">Across the year, thresher sharks show at 2 of our destinations; the longest and strongest seasons are Malapascua Island and Fuvahmulah.</p><h2>Where &amp; when to dive it</h2><p class="greview" style="max-width:78ch">Pulled live from our seasonal data — the destinations where thresher sharks shows in the water, and the months to catch it.</p><div class="tablecard rev"><table><thead><tr><th>Destination</th><th>Best months</th></tr></thead><tbody><tr><td><b><a href="../destinations/fuvahmulah.html">Fuvahmulah</a></b> <span class="badge" style="background:#0e7569;color:#ffffff">PEAK</span><div class="meta">Maldives</div></td><td><div class="mini-ribbon"><i style="background:var(--line)" title="Jan"></i><i style="background:var(--line)" title="Feb"></i><i style="background:#0e7569" data-r="Peak" title="Mar · Peak · 29°C · 35 m"></i><i style="background:var(--line)" title="Apr"></i><i style="background:var(--line)" title="May"></i><i style="background:#dfa826" data-r="Shoulder" title="Jun · Shoulder · 29°C · 25 m"></i><i style="background:#dfa826" data-r="Shoulder" title="Jul · Shoulder · 29°C · 25 m"></i><i style="background:#dfa826" data-r="Shoulder" title="Aug · Shoulder · 29°C · 24 m"></i><i style="background:#dfa826" data-r="Shoulder" title="Sep · Shoulder · 29°C · 25 m"></i><i style="background:#5cb8ab" data-r="Good" title="Oct · Good · 29°C · 28 m"></i><i style="background:#5cb8ab" data-r="Good" title="Nov · Good · 28°C · 30 m"></i><i style="background:#0e7569" data-r="Peak" title="Dec · Peak · 28°C · 33 m"></i></div></td></tr><tr><td><b><a href="../destinations/malapascua-island.html">Malapascua Island</a></b> <span class="badge" style="background:#0e7569;color:#ffffff">PEAK</span><div class="meta">Philippines</div></td><td><div class="mini-ribbon"><i style="background:#5cb8ab" data-r="Good" title="Jan · Good · 27°C · 16 m"></i><i style="background:#5cb8ab" data-r="Good" title="Feb · Good · 27°C · 24 m"></i><i style="background:#0e7569" data-r="Peak" title="Mar · Peak · 28°C · 24 m"></i><i style="background:#0e7569" data-r="Peak" title="Apr · Peak · 29°C · 32 m"></i><i style="background:#0e7569" data-r="Peak" title="May · Peak · 29°C · 24 m"></i><i style="background:#5cb8ab" data-r="Good" title="Jun · Good · 29°C · 24 m"></i><i style="background:#dfa826" data-r="Shoulder" title="Jul · Shoulder · 29°C · 16 m"></i><i style="background:#dfa826" data-r="Shoulder" title="Aug · Shoulder · 29°C · 18 m"></i><i style="background:#dfa826" data-r="Shoulder" title="Sep · Shoulder · 29°C · 18 m"></i><i style="background:#5cb8ab" data-r="Good" title="Oct · Good · 29°C · 24 m"></i><i style="background:#5cb8ab" data-r="Good" title="Nov · Good · 28°C · 18 m"></i><i style="background:#5cb8ab" data-r="Good" title="Dec · Good · 28°C · 16 m"></i></div></td></tr></tbody></table></div><h2>Field notes</h2><ol class="mnotes rev"><li>It is a dawn dive — be on the seamount before sunrise when the threshers rise to be cleaned.</li><li>Stay behind the agreed line and keep still; threshers are shy and veer off at the first chase.</li><li>Cooler, deeper cleaning stations mean solid buoyancy and often a 5 mm suit.</li></ol><a class="cta" href="../index.html">Plan a trip around it — open the dive planner &rarr;</a><div class="mteasers rev"><a class="mteaser" href="hammerhead-sharks.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28223125973%29.jpeg/960px-Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28223125973%29.jpeg" alt="" loading="lazy" onerror="this.style.display='none'"><span class="mcover-scrim"></span><span class="mcover-txt"><span class="mkick">Previous</span><span class="mcover-title">Hammerhead Sharks</span></span></a><a class="mteaser" href="mola-mola.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Nusa_Lembongan_Mola_Mola.jpg/960px-Nusa_Lembongan_Mola_Mola.jpg" alt="" loading="lazy" onerror="this.style.display='none'"><span class="mcover-scrim"></span><span class="mcover-txt"><span class="mkick">Next encounter</span><span class="mcover-title">Mola Mola</span></span></a></div></div></main>
 <footer><div class="foot-mark">Dive<b>SZN</b></div><div class="foot-tag">Your diving buddy</div><div class="foot-nav"><a href="../index.html">Destinations</a><a href="../destinations/index.html">Season guides</a><a href="../months/index.html">Best by month</a><a href="../marine-life/index.html">Marine life</a><a href="../gear/index.html">Gear guides</a><a href="../how-we-score.html">How we score</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a></div><div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — always confirm with a local dive centre.</div></footer>
 <script>
 (function(){
@@ -243,5 +302,19 @@ body.v2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
     io.observe(t);
   });
 })();
+
+(function(){try{
+  var mi=new Date().getMonth(),n=0;
+  [].slice.call(document.querySelectorAll('.mfile .mini-ribbon')).forEach(function(rb){
+    var c=rb.children[mi];
+    if(!c||!c.getAttribute('data-r'))return;
+    c.className='now';n++;
+    var tr=c.closest&&c.closest('tr');
+    var meta=tr&&tr.querySelector('.meta');
+    if(meta){var b=document.createElement('b');b.className='mnow';b.textContent=' · in season now';meta.appendChild(b);}
+  });
+  var s=document.getElementById('mstatLive');
+  if(s)s.innerHTML='IN SEASON NOW · <b>'+n+'</b> DESTINATION'+(n===1?'':'S');
+}catch(e){}})();
 </script>
 </body></html>
