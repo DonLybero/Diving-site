@@ -1172,6 +1172,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .aff-note{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:0 0 16px}
   /* browse-the-world directory: full-page regions -> countries -> destinations */
   .browse-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:26px 0 4px;text-align:center}
+  /* gear controls: category pinned left, search pinned right */
+  .gear-controls{justify-content:space-between}
+  .gsearch-f input{width:min(320px,72vw);border-radius:999px;padding:10px 18px}
+  .gsearch-f input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(14,156,146,.12);outline:none}
+  .gsearch-f input::placeholder{color:var(--muted);opacity:.55;font-family:var(--mono);font-size:.74rem;
+       letter-spacing:.12em;text-transform:uppercase}
   /* destination search fronting the browse directory */
   .bsearch{display:flex;justify-content:center;margin:26px 0 12px}
   .bsearch input{width:min(440px,100%);padding:12px 20px;border:1.5px solid var(--line-strong);border-radius:999px;
@@ -1569,8 +1575,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   <!-- GEAR -->
   <section id="view-gear" class="hidden">
-    <div class="controls">
+    <div class="controls gear-controls">
       <div class="field"><label>Category</label><select id="gearCat"><option value="">All categories</option></select></div>
+      <div class="field gsearch-f"><input id="gearSearch" type="search" placeholder="Search scuba gear" autocomplete="off" aria-label="Search gear"></div>
     </div>
     <div id="gearGrid" class="grid"></div>
   </section>
@@ -2308,6 +2315,14 @@ function initControls(){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
   document.getElementById('gearCat').addEventListener('change',function(){GEAR_ARTICLE='';renderGear();});
+  document.getElementById('gearSearch').addEventListener('input',gearFilter);
+  document.getElementById('gearSearch').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var links=[].slice.call(document.querySelectorAll('#gearGrid .gbrow'));
+    for(var i=0;i<links.length;i++){
+      if(links[i].style.display!=='none'){location.href=links[i].href;break;}
+    }
+  });
   // Any planner selection refreshes the active result view.
   ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
@@ -3122,6 +3137,30 @@ function gearBrandDir(onlyCat){
       '<div class="gbgrid">'+cols+'</div></section>';
   }).join('');
 }
+/* live gear search: hub rows by name/brand, guide entries by name */
+function gearFilter(){
+  var inp=document.getElementById('gearSearch'); if(!inp) return;
+  var q=inp.value.trim().toLowerCase();
+  [].slice.call(document.querySelectorAll('#gearGrid section.dregion')).forEach(function(sec){
+    var anyCol=false;
+    [].slice.call(sec.querySelectorAll('.gbcol')).forEach(function(col){
+      var brand=((col.querySelector('.gbrand')||{}).textContent||'').toLowerCase();
+      var any=false;
+      [].slice.call(col.querySelectorAll('.gbrow')).forEach(function(a){
+        var hit=!q||a.textContent.toLowerCase().indexOf(q)>-1||brand.indexOf(q)>-1;
+        a.style.display=hit?'':'none';
+        if(hit)any=true;
+      });
+      col.style.display=any?'':'none';
+      if(any)anyCol=true;
+    });
+    sec.style.display=anyCol?'':'none';
+  });
+  [].slice.call(document.querySelectorAll('#gearGrid .gentry')).forEach(function(g){
+    var name=((g.querySelector('h3')||{}).textContent||'').toLowerCase();
+    g.style.display=(!q||name.indexOf(q)>-1)?'':'none';
+  });
+}
 function renderGear(){
   var sel=document.getElementById('gearCat');
   if(!GEAR_GUIDE||!GEAR_GUIDE.categories){document.getElementById('gearGrid').innerHTML='<div class="empty">Gear guide could not load.</div>';return;}
@@ -3169,7 +3208,7 @@ function renderGear(){
         foot+'</div>';
     }
   }
-  applyIcons(); updateCmpBar();
+  applyIcons(); updateCmpBar(); gearFilter();
 }
 
 /* ---------------- Destinations: 12 monthly top-destination articles ----------------
