@@ -146,11 +146,102 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .region-lede{color:var(--muted);font-size:.9rem;margin:2px 0 8px}
 .dphoto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
 .badge.sm{font-size:.66rem}
+
+body.v2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
+  background:linear-gradient(180deg,#eef7f6 0%,#f4f9fb 40%,#eef4f8 100%)}
+.v2 a{color:var(--accent-deep)}
+.v2 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,117,105,.10)}
+.rev{will-change:opacity,transform}
+.kick{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent-deep);margin:16px 0 10px}
+/* photo hero — the gradient shows through if the photo 404s (onerror hides only the img) */
+.hero2{position:relative;margin-top:4px;border-radius:20px;overflow:hidden;height:520px;
+  box-shadow:0 16px 44px rgba(18,51,47,.14);background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+.hero2>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero2-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 45%,rgba(8,32,29,.62) 100%);pointer-events:none}
+.hero2-bar{position:absolute;left:40px;right:40px;bottom:34px;display:flex;align-items:flex-end;
+  justify-content:space-between;gap:16px 24px;flex-wrap:wrap}
+.hero2-kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:2.5px;color:#a8e6db;text-transform:uppercase;margin-bottom:8px}
+.hero2 h1{font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,3.6rem);font-weight:600;color:#fff;margin:0;
+  line-height:1.05;text-shadow:0 2px 20px rgba(8,32,29,.4)}
+.hero2-sub{color:#e8f7f5;max-width:62ch;margin:10px 0 0;font-size:1.02rem;line-height:1.6;
+  text-shadow:0 1px 14px rgba(8,32,29,.5)}
+.hero2-pills{display:flex;gap:10px;padding-bottom:6px;flex-wrap:wrap}
+.hero2-pills span{background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.28);color:#fff;font-size:.88rem;font-weight:600;padding:8px 16px;
+  border-radius:999px;white-space:nowrap}
+.credit2{position:absolute;right:12px;top:12px;width:24px;height:24px;border-radius:50%;
+  background:rgba(8,32,29,.45);color:rgba(255,255,255,.9);font-size:.74rem;font-family:var(--mono);
+  display:flex;align-items:center;justify-content:center;cursor:help}
+.hero2-hub{height:400px;margin-bottom:26px}
+.hero2-hub h1{font-size:clamp(2rem,4.4vw,3rem)}
+@media(max-width:640px){.hero2{height:320px;border-radius:14px}
+  .hero2-bar{left:18px;right:18px;bottom:16px;flex-direction:column;align-items:flex-start;gap:10px}
+  .hero2-pills{padding-bottom:0}.hero2-pills span{font-size:.78rem;padding:6px 12px}
+  .hero2-hub{height:300px;margin-bottom:18px}.hero2-sub{font-size:.88rem}}
+/* card language */
+.v2 .gentry{background:#fff;border:none;border-radius:18px;padding:20px 22px;margin:16px 0;
+  box-shadow:0 8px 30px rgba(18,51,47,.06);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .gentry:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(18,51,47,.10)}
+.v2 .gentry h3,.v2 .artlist h3{font-family:var(--serif)}
+.v2 .gphoto{border-radius:12px}
+.v2 .artlist li{background:#fff;border:none;border-radius:16px;margin:0 0 14px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .artlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .artlist a{padding:14px 16px}
+.v2 .artlist .th{border-radius:10px}
+.v2 .dirlist{gap:14px}
+.v2 .dirlist li{background:#fff;border:none;border-radius:16px;box-shadow:0 6px 22px rgba(18,51,47,.05);
+  transition:transform .25s ease,box-shadow .25s ease}
+.v2 .dirlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .dirlist a{padding:13px 16px}
+.v2 .dirlist b{font-family:var(--serif);font-size:1.02rem}
+.v2 .dirlist small{font-family:var(--mono);font-size:.68rem;margin-top:4px}
+.v2 .tipbox{background:#fff;border:none;border-radius:16px;padding:16px 20px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05)}
+.v2 .tipbox>b{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep)}
+.tablecard{background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(18,51,47,.06);
+  padding:8px 20px 14px;overflow-x:auto;margin:14px 0}
+.v2 .region-head{border-top:none;padding-top:8px;margin:38px 0 2px}
+.v2 .region-head::before{content:"";display:block;width:64px;height:3px;border-radius:2px;
+  margin-bottom:12px;background:linear-gradient(90deg,var(--accent),transparent)}
+.v2 .cta,.v2 .pack-cta{background:var(--cta-deep);transition:background .2s ease,transform .2s ease}
+.v2 .cta{border-radius:12px;padding:13px 22px;color:#fff}
+.v2 .cta:hover,.v2 .pack-cta:hover{background:var(--cta);transform:translateY(-2px)}
+.v2 .pack-cta.ghost{background:#fff;color:#0e7569;border-color:#bfe0da}
+.v2 .pack-cta.ghost:hover{background:#0e7569;color:#fff;border-color:#0e7569}
+.v2 .hero.plain{background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+@media(max-width:640px){.v2 .gentry{padding:16px 14px}.v2 .artlist a{padding:11px 12px}}
+@media(prefers-reduced-motion:reduce){.v2 .gentry,.v2 .artlist li,.v2 .dirlist li,.v2 .cta,.v2 .pack-cta{transition:none}}
 </style>
 </head>
-<body>
+<body class="v2">
 <div class="topbar"><a href="../index.html"><svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 C35 32 18 24 6 22 C16 28 33 37 48 41 C53 42 56 43 60 47 C64 43 67 42 72 41 C87 37 104 28 114 22 C102 24 85 32 74 41 C67 46 64 51 60 62 Z" fill="#2fe0d6"/></svg><span class="name">Dive<b>SZN</b></span></a></div>
-<header class="hero plain"><h1>Mares Puck Pro+ Review &amp; Best Price</h1><p>The puck format grown up: large digits, an intuitive two-button flow, nitrox to 99% with gas switching, and Bluetooth upload of your logbook to the phone app.</p></header>
-<main class="wrap"><p class="meta gitem-kicker">#8 in <a href="dive-computers.html">Top Dive Computers in 2026</a></p><div class="gitem-stage"><figure class="gitem-photo"><img id="gimg" src="../assets/gear/studio/hero/mares-puck-pro.jpg" alt="Mares Puck Pro+"><div class="gitem-banner"><div class="gitem-id"><b>Mares Puck Pro+</b><span class="gitem-price">from <b>$229.95</b></span><small>indicative — the retailer shows the live price</small></div><div class="pack-ctas"><a class="pack-cta" href="https://www.amazon.com/Mares-Puck-Plus-Dive-Computer/dp/B01N07YC7F" target="_blank" rel="noopener sponsored">Amazon · $229.95</a><a class="pack-cta ghost" href="https://dipndive.com/products/mares-puck-pro-plus-scuba-dive-computer" target="_blank" rel="noopener sponsored">DIPNDIVE · $249.95</a><a class="pack-cta ghost" href="https://www.walmart.com/browse/sports-outdoors/dive-computers/mares/4125_546956_1075805_7014188_3663623/YnJhbmQ6TWFyZXMie" target="_blank" rel="noopener sponsored">Walmart · $329.95</a></div></div></figure></div><h2>What makes it good?</h2><p class="greview" style="max-width:80ch">The Puck Pro+ is the pared-down puck that half the world&#x27;s dive schools strap onto students, and the plus version keeps the formula while adding gas switching and connectivity. It runs the Mares-Wienke RGBM across 10 tissue compartments, displays depth to 150 m, and takes two nitrox mixes anywhere from 21 to 99% O2 with switching allowed mid-dive — deco-stage capability at an entry price. The segment display is large for the 113 g case and the mineral glass lens resists the scuffs that kill cheaper acrylic screens. Navigation is one button; it works, but a missed menu item means riding the loop around again, and settings changes with thick gloves are deliberate work. The CR2450 battery is user-replaceable and rated to roughly 300 dives, so the computer can sit in a gear bin for a year and wake up ready. The catch on connectivity: logbook download and firmware updates run over Bluetooth only through the Bluelink Pro dongle, sold separately. There is no compass and no air integration, and the RGBM trims repetitive-dive allowances more than liberal algorithms. For a first computer or a dedicated travel spare, the trade-offs are the right ones.</p><div class="gverdict"><div class="gv-pro"><h3>Where it wins</h3><ul><li>Handles two nitrox mixes from 21 to 99% with mid-dive gas switching, a feature usually absent under 250 USD</li><li>113 g and an ultra-flat puck profile sits under a wetsuit cuff without snagging</li><li>User-replaceable CR2450 coin cell is rated for up to 300 dives and needs no service-center visit</li><li>Mineral glass lens shrugs off the scratches that fog acrylic-faced budget computers after a season of boat dives</li><li>Firmware updates over the Mares app keep a 2016-era design current instead of orphaned</li></ul></div><div class="gv-con"><h3>Where it falls short</h3><ul><li>Bluetooth needs the separate Bluelink Pro clip-on dongle, roughly a 60 USD add-on the box does not mention loudly</li><li>One-button navigation means cycling forward through the whole menu if you overshoot a setting</li><li>The Mares-Wienke RGBM gets conservative on repetitive days, and there is no compass for divers hoping to skip a wrist console</li></ul></div></div><h2>Specs</h2><dl class="gspecs"><div><dt>Display</dt><dd>Segment LCD</dd></div><div><dt>Algorithm</dt><dd>RGBM Mares-Wienke</dd></div><div><dt>Air integration</dt><dd>No</dd></div><div><dt>Battery</dt><dd>User-changeable CR2450</dd></div><div><dt>Depth rating</dt><dd>150m</dd></div><div><dt>Modes</dt><dd>Air/Nitrox/Gauge</dd></div><div><dt>Weight</dt><dd>113 g</dd></div><div><dt>Logbook</dt><dd>35 hours at 5-second sampling</dd></div><div><dt>Nitrox range</dt><dd>two gases, 21 to 99% O2, switchable during the dive</dd></div><div><dt>Lens</dt><dd>mineral glass</dd></div><div><dt>Firmware</dt><dd>user-upgradeable via Mares app</dd></div></dl><h2>Also in this guide</h2><ul class="grel"><li><a href="shearwater-peregrine.html">Shearwater Peregrine</a> <small>from $495</small></li><li><a href="garmin-descent-mk3i.html">Garmin Descent Mk3i</a> <small>from $1199.99</small></li><li><a href="shearwater-perdix-2.html">Shearwater Perdix 2</a> <small>from $1255</small></li><li><a href="suunto-ocean.html">Suunto Ocean</a> <small>from $678.99</small></li></ul><p class="meta"><a href="dive-computers.html">&larr; Back to Top Dive Computers in 2026</a></p></main>
+<header class="hero plain"><h1>Mares Puck Pro+ Review &amp; Best Price</h1><p>The puck format grown up: large digits, an intuitive two-button flow, nitrox to 99% with gas switching, and Bluetooth upload of your logbook to the phone app.</p></header><main class="wrap"><p class="meta gitem-kicker">#8 in <a href="dive-computers.html">Top Dive Computers in 2026</a></p><div class="gitem-stage"><figure class="gitem-photo"><img id="gimg" src="../assets/gear/studio/hero/mares-puck-pro.jpg" alt="Mares Puck Pro+"><div class="gitem-banner"><div class="gitem-id"><b>Mares Puck Pro+</b><span class="gitem-price">from <b>$229.95</b></span><small>indicative — the retailer shows the live price</small></div><div class="pack-ctas"><a class="pack-cta" href="https://www.amazon.com/Mares-Puck-Plus-Dive-Computer/dp/B01N07YC7F" target="_blank" rel="noopener sponsored">Amazon · $229.95</a><a class="pack-cta ghost" href="https://dipndive.com/products/mares-puck-pro-plus-scuba-dive-computer" target="_blank" rel="noopener sponsored">DIPNDIVE · $249.95</a><a class="pack-cta ghost" href="https://www.walmart.com/browse/sports-outdoors/dive-computers/mares/4125_546956_1075805_7014188_3663623/YnJhbmQ6TWFyZXMie" target="_blank" rel="noopener sponsored">Walmart · $329.95</a></div></div></figure></div><h2>What makes it good?</h2><p class="greview" style="max-width:80ch">The Puck Pro+ is the pared-down puck that half the world&#x27;s dive schools strap onto students, and the plus version keeps the formula while adding gas switching and connectivity. It runs the Mares-Wienke RGBM across 10 tissue compartments, displays depth to 150 m, and takes two nitrox mixes anywhere from 21 to 99% O2 with switching allowed mid-dive — deco-stage capability at an entry price. The segment display is large for the 113 g case and the mineral glass lens resists the scuffs that kill cheaper acrylic screens. Navigation is one button; it works, but a missed menu item means riding the loop around again, and settings changes with thick gloves are deliberate work. The CR2450 battery is user-replaceable and rated to roughly 300 dives, so the computer can sit in a gear bin for a year and wake up ready. The catch on connectivity: logbook download and firmware updates run over Bluetooth only through the Bluelink Pro dongle, sold separately. There is no compass and no air integration, and the RGBM trims repetitive-dive allowances more than liberal algorithms. For a first computer or a dedicated travel spare, the trade-offs are the right ones.</p><div class="gverdict"><div class="gv-pro"><h3>Where it wins</h3><ul><li>Handles two nitrox mixes from 21 to 99% with mid-dive gas switching, a feature usually absent under 250 USD</li><li>113 g and an ultra-flat puck profile sits under a wetsuit cuff without snagging</li><li>User-replaceable CR2450 coin cell is rated for up to 300 dives and needs no service-center visit</li><li>Mineral glass lens shrugs off the scratches that fog acrylic-faced budget computers after a season of boat dives</li><li>Firmware updates over the Mares app keep a 2016-era design current instead of orphaned</li></ul></div><div class="gv-con"><h3>Where it falls short</h3><ul><li>Bluetooth needs the separate Bluelink Pro clip-on dongle, roughly a 60 USD add-on the box does not mention loudly</li><li>One-button navigation means cycling forward through the whole menu if you overshoot a setting</li><li>The Mares-Wienke RGBM gets conservative on repetitive days, and there is no compass for divers hoping to skip a wrist console</li></ul></div></div><h2>Specs</h2><dl class="gspecs"><div><dt>Display</dt><dd>Segment LCD</dd></div><div><dt>Algorithm</dt><dd>RGBM Mares-Wienke</dd></div><div><dt>Air integration</dt><dd>No</dd></div><div><dt>Battery</dt><dd>User-changeable CR2450</dd></div><div><dt>Depth rating</dt><dd>150m</dd></div><div><dt>Modes</dt><dd>Air/Nitrox/Gauge</dd></div><div><dt>Weight</dt><dd>113 g</dd></div><div><dt>Logbook</dt><dd>35 hours at 5-second sampling</dd></div><div><dt>Nitrox range</dt><dd>two gases, 21 to 99% O2, switchable during the dive</dd></div><div><dt>Lens</dt><dd>mineral glass</dd></div><div><dt>Firmware</dt><dd>user-upgradeable via Mares app</dd></div></dl><h2>Also in this guide</h2><ul class="grel"><li><a href="shearwater-peregrine.html">Shearwater Peregrine</a> <small>from $495</small></li><li><a href="garmin-descent-mk3i.html">Garmin Descent Mk3i</a> <small>from $1199.99</small></li><li><a href="shearwater-perdix-2.html">Shearwater Perdix 2</a> <small>from $1255</small></li><li><a href="suunto-ocean.html">Suunto Ocean</a> <small>from $678.99</small></li></ul><p class="meta"><a href="dive-computers.html">&larr; Back to Top Dive Computers in 2026</a></p></main>
 <footer><div class="foot-mark">Dive<b>SZN</b></div><div class="foot-tag">Your diving buddy</div><div class="foot-nav"><a href="../index.html">Destinations</a><a href="../destinations/index.html">Season guides</a><a href="../months/index.html">Best by month</a><a href="../marine-life/index.html">Marine life</a><a href="../gear/index.html">Gear guides</a><a href="../how-we-score.html">How we score</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a></div><div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — always confirm with a local dive centre.</div></footer>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(!('IntersectionObserver' in window))return;
+  var els=[].slice.call(document.querySelectorAll('.rev'));
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var t=e.target;
+      t.style.opacity='1';t.style.transform='none';
+      setTimeout(function(){t.style.opacity='';t.style.transform='';t.style.transition=''},760);
+      io.unobserve(t);
+    });
+  },{threshold:.08});
+  els.forEach(function(t){
+    if(t.getBoundingClientRect().top<window.innerHeight*.9)return; // already in view — never hide
+    t.style.opacity='0';t.style.transform='translateY(26px)';
+    t.style.transition='opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
+    io.observe(t);
+  });
+})();
+</script>
 </body></html>

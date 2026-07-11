@@ -146,11 +146,102 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .region-lede{color:var(--muted);font-size:.9rem;margin:2px 0 8px}
 .dphoto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
 .badge.sm{font-size:.66rem}
+
+body.v2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
+  background:linear-gradient(180deg,#eef7f6 0%,#f4f9fb 40%,#eef4f8 100%)}
+.v2 a{color:var(--accent-deep)}
+.v2 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,117,105,.10)}
+.rev{will-change:opacity,transform}
+.kick{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent-deep);margin:16px 0 10px}
+/* photo hero — the gradient shows through if the photo 404s (onerror hides only the img) */
+.hero2{position:relative;margin-top:4px;border-radius:20px;overflow:hidden;height:520px;
+  box-shadow:0 16px 44px rgba(18,51,47,.14);background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+.hero2>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero2-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,32,29,0) 45%,rgba(8,32,29,.62) 100%);pointer-events:none}
+.hero2-bar{position:absolute;left:40px;right:40px;bottom:34px;display:flex;align-items:flex-end;
+  justify-content:space-between;gap:16px 24px;flex-wrap:wrap}
+.hero2-kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:2.5px;color:#a8e6db;text-transform:uppercase;margin-bottom:8px}
+.hero2 h1{font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,3.6rem);font-weight:600;color:#fff;margin:0;
+  line-height:1.05;text-shadow:0 2px 20px rgba(8,32,29,.4)}
+.hero2-sub{color:#e8f7f5;max-width:62ch;margin:10px 0 0;font-size:1.02rem;line-height:1.6;
+  text-shadow:0 1px 14px rgba(8,32,29,.5)}
+.hero2-pills{display:flex;gap:10px;padding-bottom:6px;flex-wrap:wrap}
+.hero2-pills span{background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.28);color:#fff;font-size:.88rem;font-weight:600;padding:8px 16px;
+  border-radius:999px;white-space:nowrap}
+.credit2{position:absolute;right:12px;top:12px;width:24px;height:24px;border-radius:50%;
+  background:rgba(8,32,29,.45);color:rgba(255,255,255,.9);font-size:.74rem;font-family:var(--mono);
+  display:flex;align-items:center;justify-content:center;cursor:help}
+.hero2-hub{height:400px;margin-bottom:26px}
+.hero2-hub h1{font-size:clamp(2rem,4.4vw,3rem)}
+@media(max-width:640px){.hero2{height:320px;border-radius:14px}
+  .hero2-bar{left:18px;right:18px;bottom:16px;flex-direction:column;align-items:flex-start;gap:10px}
+  .hero2-pills{padding-bottom:0}.hero2-pills span{font-size:.78rem;padding:6px 12px}
+  .hero2-hub{height:300px;margin-bottom:18px}.hero2-sub{font-size:.88rem}}
+/* card language */
+.v2 .gentry{background:#fff;border:none;border-radius:18px;padding:20px 22px;margin:16px 0;
+  box-shadow:0 8px 30px rgba(18,51,47,.06);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .gentry:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(18,51,47,.10)}
+.v2 .gentry h3,.v2 .artlist h3{font-family:var(--serif)}
+.v2 .gphoto{border-radius:12px}
+.v2 .artlist li{background:#fff;border:none;border-radius:16px;margin:0 0 14px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .artlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .artlist a{padding:14px 16px}
+.v2 .artlist .th{border-radius:10px}
+.v2 .dirlist{gap:14px}
+.v2 .dirlist li{background:#fff;border:none;border-radius:16px;box-shadow:0 6px 22px rgba(18,51,47,.05);
+  transition:transform .25s ease,box-shadow .25s ease}
+.v2 .dirlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .dirlist a{padding:13px 16px}
+.v2 .dirlist b{font-family:var(--serif);font-size:1.02rem}
+.v2 .dirlist small{font-family:var(--mono);font-size:.68rem;margin-top:4px}
+.v2 .tipbox{background:#fff;border:none;border-radius:16px;padding:16px 20px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05)}
+.v2 .tipbox>b{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep)}
+.tablecard{background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(18,51,47,.06);
+  padding:8px 20px 14px;overflow-x:auto;margin:14px 0}
+.v2 .region-head{border-top:none;padding-top:8px;margin:38px 0 2px}
+.v2 .region-head::before{content:"";display:block;width:64px;height:3px;border-radius:2px;
+  margin-bottom:12px;background:linear-gradient(90deg,var(--accent),transparent)}
+.v2 .cta,.v2 .pack-cta{background:var(--cta-deep);transition:background .2s ease,transform .2s ease}
+.v2 .cta{border-radius:12px;padding:13px 22px;color:#fff}
+.v2 .cta:hover,.v2 .pack-cta:hover{background:var(--cta);transform:translateY(-2px)}
+.v2 .pack-cta.ghost{background:#fff;color:#0e7569;border-color:#bfe0da}
+.v2 .pack-cta.ghost:hover{background:#0e7569;color:#fff;border-color:#0e7569}
+.v2 .hero.plain{background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+@media(max-width:640px){.v2 .gentry{padding:16px 14px}.v2 .artlist a{padding:11px 12px}}
+@media(prefers-reduced-motion:reduce){.v2 .gentry,.v2 .artlist li,.v2 .dirlist li,.v2 .cta,.v2 .pack-cta{transition:none}}
 </style>
 </head>
-<body>
+<body class="v2">
 <div class="topbar"><a href="../index.html"><svg width="34" height="22" viewBox="0 0 120 70" aria-hidden="true"><path d="M60 62 C56 51 53 46 46 41 C35 32 18 24 6 22 C16 28 33 37 48 41 C53 42 56 43 60 47 C64 43 67 42 72 41 C87 37 104 28 114 22 C102 24 85 32 74 41 C67 46 64 51 60 62 Z" fill="#2fe0d6"/></svg><span class="name">Dive<b>SZN</b></span></a></div>
-<header class="hero plain"><h1>Atomic Aquatics B2 Review &amp; Best Price</h1><p>Atomic&#x27;s mid-range regulator pairs the titanium-component second stage of the flagship T3 with a chrome-plated brass balanced-piston first stage. Same breathing performance, roughly half the price.</p></header>
-<main class="wrap"><p class="meta gitem-kicker">#13 in <a href="regulators.html">Top Regulators in 2026</a></p><div class="gitem-stage"><figure class="gitem-photo"><img id="gimg" src="../assets/gear/studio/hero/atomic-aquatics-b2.jpg" alt="Atomic Aquatics B2"><div class="gitem-banner"><div class="gitem-id"><b>Atomic Aquatics B2</b><span class="gitem-price">from <b>$969.95</b></span><small>indicative — the retailer shows the live price</small></div><div class="pack-ctas"><a class="pack-cta" href="https://www.scuba.com/p-atmb2s/atomic-aquatics-b2-regulator-yoke" target="_blank" rel="noopener sponsored">Scuba.com · $969.95</a><a class="pack-cta ghost" href="https://www.houseofscuba.com/products/reg75" target="_blank" rel="noopener sponsored">House of Scuba · $969.95</a><a class="pack-cta ghost" href="https://www.diverightinscuba.com/regulatorsoctosregulators-atomicaquatics-b2regulator-p-2609.html" target="_blank" rel="noopener sponsored">Dive Right In Scuba · $969.95</a></div></div></figure></div><h2>What makes it good?</h2><p class="greview" style="max-width:80ch">The B2 pairs Atomic&#x27;s titanium second stage — the same design and materials as the all-titanium T3 — with a chrome-plated brass and 316 stainless first stage, which is how it gets near-flagship breathing at several hundred dollars under the T3. The seat-saving dynamic orifice keeps the seat off the orifice between dives, which is why Atomic signs off on 2 years or 300 dives between rebuilds. Automatic Flow Control adjusts the venturi as depth changes, so there is no lever to set, and the 5 LP ports ride a swivel cap that takes the fight out of hose routing; yoke weight is 1.13 kg. The catch is the first stage: the standard version is unsealed, and the piston chamber floods with seawater whenever it sits unpressurized — fine for a primary you always keep charged, a real problem on stage bottles unless you pay for the factory-sealed variant. At roughly US$970 in yoke trim, it is priced against other brands&#x27; top models. The lifetime warranty is not contingent on annual servicing, which almost no competitor matches.</p><div class="gverdict"><div class="gv-pro"><h3>Where it wins</h3><ul><li>Second stage uses the same titanium design and materials as Atomic&#x27;s all-titanium T3, at several hundred dollars less than the flagship</li><li>Seat-saving dynamic orifice lifts the seat off the knife edge between dives — the basis for the 2-year / 300-dive service interval</li><li>5 LP ports sit on a swivel cap, so hoses route where you want them without adapters</li><li>Automatic Flow Control trims the venturi with depth; there is no pre-dive lever to forget</li><li>Lifetime warranty holds even if you skip annual service — rare among the major regulator brands</li></ul></div><div class="gv-con"><h3>Where it falls short</h3><ul><li>The standard first stage is unsealed and the piston chamber floods with seawater when it sits unpressurized — workable on a primary you always charge, a liability on stage or deco bottles unless you buy the factory-sealed variant</li><li>At roughly US$970 for the yoke version it costs flagship money from most other brands, and the sealed first stage adds more</li></ul></div></div><h2>Specs</h2><dl class="gspecs"><div><dt>First stage</dt><dd>Balanced piston, chrome-plated brass; optional factory-sealed</dd></div><div><dt>Second stage</dt><dd>Pneumatically balanced, titanium components</dd></div><div><dt>Venturi</dt><dd>Automatic Flow Control, depth-compensating</dd></div><div><dt>Seat</dt><dd>Seat-saving dynamic orifice</dd></div><div><dt>Nitrox</dt><dd>Up to 40% out of the box</dd></div><div><dt>Service interval</dt><dd>2 years or 300 dives</dd></div><div><dt>Connection</dt><dd>Yoke or DIN</dd></div><div><dt>Weight</dt><dd>1.13 kg (yoke)</dd></div><div><dt>Ports</dt><dd>2 HP fixed, 5 LP on swivel cap</dd></div><div><dt>First stage materials</dt><dd>Chrome-plated marine brass with 316 stainless steel components</dd></div><div><dt>Environmental sealing</dt><dd>Unsealed standard; factory-sealed version optional</dd></div><div><dt>Warranty</dt><dd>Limited lifetime for the original owner, not contingent on annual service</dd></div></dl><h2>Also in this guide</h2><ul class="grel"><li><a href="scubapro-mk25-evo-s620-ti.html">Scubapro MK25 EVO / S620 Ti</a> <small>from $1199</small></li><li><a href="atomic-aquatics-t3.html">Atomic Aquatics T3</a> <small>from $1799.95</small></li><li><a href="apeks-xtx50.html">Apeks XTX50</a> <small>from $617.49</small></li><li><a href="aqua-lung-leg3nd.html">Aqua Lung Leg3nd</a> <small>from $659</small></li></ul><p class="meta"><a href="regulators.html">&larr; Back to Top Regulators in 2026</a></p></main>
+<header class="hero plain"><h1>Atomic Aquatics B2 Review &amp; Best Price</h1><p>Atomic&#x27;s mid-range regulator pairs the titanium-component second stage of the flagship T3 with a chrome-plated brass balanced-piston first stage. Same breathing performance, roughly half the price.</p></header><main class="wrap"><p class="meta gitem-kicker">#13 in <a href="regulators.html">Top Regulators in 2026</a></p><div class="gitem-stage"><figure class="gitem-photo"><img id="gimg" src="../assets/gear/studio/hero/atomic-aquatics-b2.jpg" alt="Atomic Aquatics B2"><div class="gitem-banner"><div class="gitem-id"><b>Atomic Aquatics B2</b><span class="gitem-price">from <b>$969.95</b></span><small>indicative — the retailer shows the live price</small></div><div class="pack-ctas"><a class="pack-cta" href="https://www.scuba.com/p-atmb2s/atomic-aquatics-b2-regulator-yoke" target="_blank" rel="noopener sponsored">Scuba.com · $969.95</a><a class="pack-cta ghost" href="https://www.houseofscuba.com/products/reg75" target="_blank" rel="noopener sponsored">House of Scuba · $969.95</a><a class="pack-cta ghost" href="https://www.diverightinscuba.com/regulatorsoctosregulators-atomicaquatics-b2regulator-p-2609.html" target="_blank" rel="noopener sponsored">Dive Right In Scuba · $969.95</a></div></div></figure></div><h2>What makes it good?</h2><p class="greview" style="max-width:80ch">The B2 pairs Atomic&#x27;s titanium second stage — the same design and materials as the all-titanium T3 — with a chrome-plated brass and 316 stainless first stage, which is how it gets near-flagship breathing at several hundred dollars under the T3. The seat-saving dynamic orifice keeps the seat off the orifice between dives, which is why Atomic signs off on 2 years or 300 dives between rebuilds. Automatic Flow Control adjusts the venturi as depth changes, so there is no lever to set, and the 5 LP ports ride a swivel cap that takes the fight out of hose routing; yoke weight is 1.13 kg. The catch is the first stage: the standard version is unsealed, and the piston chamber floods with seawater whenever it sits unpressurized — fine for a primary you always keep charged, a real problem on stage bottles unless you pay for the factory-sealed variant. At roughly US$970 in yoke trim, it is priced against other brands&#x27; top models. The lifetime warranty is not contingent on annual servicing, which almost no competitor matches.</p><div class="gverdict"><div class="gv-pro"><h3>Where it wins</h3><ul><li>Second stage uses the same titanium design and materials as Atomic&#x27;s all-titanium T3, at several hundred dollars less than the flagship</li><li>Seat-saving dynamic orifice lifts the seat off the knife edge between dives — the basis for the 2-year / 300-dive service interval</li><li>5 LP ports sit on a swivel cap, so hoses route where you want them without adapters</li><li>Automatic Flow Control trims the venturi with depth; there is no pre-dive lever to forget</li><li>Lifetime warranty holds even if you skip annual service — rare among the major regulator brands</li></ul></div><div class="gv-con"><h3>Where it falls short</h3><ul><li>The standard first stage is unsealed and the piston chamber floods with seawater when it sits unpressurized — workable on a primary you always charge, a liability on stage or deco bottles unless you buy the factory-sealed variant</li><li>At roughly US$970 for the yoke version it costs flagship money from most other brands, and the sealed first stage adds more</li></ul></div></div><h2>Specs</h2><dl class="gspecs"><div><dt>First stage</dt><dd>Balanced piston, chrome-plated brass; optional factory-sealed</dd></div><div><dt>Second stage</dt><dd>Pneumatically balanced, titanium components</dd></div><div><dt>Venturi</dt><dd>Automatic Flow Control, depth-compensating</dd></div><div><dt>Seat</dt><dd>Seat-saving dynamic orifice</dd></div><div><dt>Nitrox</dt><dd>Up to 40% out of the box</dd></div><div><dt>Service interval</dt><dd>2 years or 300 dives</dd></div><div><dt>Connection</dt><dd>Yoke or DIN</dd></div><div><dt>Weight</dt><dd>1.13 kg (yoke)</dd></div><div><dt>Ports</dt><dd>2 HP fixed, 5 LP on swivel cap</dd></div><div><dt>First stage materials</dt><dd>Chrome-plated marine brass with 316 stainless steel components</dd></div><div><dt>Environmental sealing</dt><dd>Unsealed standard; factory-sealed version optional</dd></div><div><dt>Warranty</dt><dd>Limited lifetime for the original owner, not contingent on annual service</dd></div></dl><h2>Also in this guide</h2><ul class="grel"><li><a href="scubapro-mk25-evo-s620-ti.html">Scubapro MK25 EVO / S620 Ti</a> <small>from $1199</small></li><li><a href="atomic-aquatics-t3.html">Atomic Aquatics T3</a> <small>from $1799.95</small></li><li><a href="apeks-xtx50.html">Apeks XTX50</a> <small>from $617.49</small></li><li><a href="aqua-lung-leg3nd.html">Aqua Lung Leg3nd</a> <small>from $659</small></li></ul><p class="meta"><a href="regulators.html">&larr; Back to Top Regulators in 2026</a></p></main>
 <footer><div class="foot-mark">Dive<b>SZN</b></div><div class="foot-tag">Your diving buddy</div><div class="foot-nav"><a href="../index.html">Destinations</a><a href="../destinations/index.html">Season guides</a><a href="../months/index.html">Best by month</a><a href="../marine-life/index.html">Marine life</a><a href="../gear/index.html">Gear guides</a><a href="../how-we-score.html">How we score</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a></div><div>Seasonal dive planning, verified against dive operators, park authorities and liveaboard calendars. Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — always confirm with a local dive centre.</div></footer>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(!('IntersectionObserver' in window))return;
+  var els=[].slice.call(document.querySelectorAll('.rev'));
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var t=e.target;
+      t.style.opacity='1';t.style.transform='none';
+      setTimeout(function(){t.style.opacity='';t.style.transform='';t.style.transition=''},760);
+      io.unobserve(t);
+    });
+  },{threshold:.08});
+  els.forEach(function(t){
+    if(t.getBoundingClientRect().top<window.innerHeight*.9)return; // already in view — never hide
+    t.style.opacity='0';t.style.transform='translateY(26px)';
+    t.style.transition='opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
+    io.observe(t);
+  });
+})();
+</script>
 </body></html>
