@@ -1292,6 +1292,117 @@ destination&#8217;s best months to a wetsuit&#8217;s thickness, is framed around
     ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "About DiveSZN", "description": desc, "url": url}
     return content_shell("About DiveSZN — Seasonal Dive Planner & Gear Guide", desc, url, "", None, inner, ld)
 
+def privacy_page():
+    """Privacy policy through the shared v2 shell (legal copy preserved
+    verbatim) — generated so it can never drift from the design system again."""
+    url = BASE + "privacy.html"
+    inner = """
+<div class="legal">
+<div class="updated">Last updated: 6 July 2026</div>
+
+<div class="lead">DiveSZN has no accounts, no sign-up and no forms — we don't ask you for
+  personal information and we never sell any. The only data involved comes from our host's
+  standard server logs and from cookies set by the retailers and affiliate networks we link
+  to. This page explains that in full.</div>
+
+<p>DiveSZN ("we", "us", "the site") operates this website. This policy explains what
+  information is collected when you visit, how it is used, and the choices you have.</p>
+
+<h2>1. Information we collect</h2>
+<p><strong>Information you give us:</strong> None. There is no registration, login, newsletter
+  or contact form on DiveSZN. If you choose to email us, we receive whatever you include in
+  that message.</p>
+<p><strong>Information collected automatically:</strong> The site is hosted on GitHub Pages.
+  Like all web hosts, GitHub's servers automatically log basic technical data for each
+  request — such as your IP address, browser type, referring page and the pages you view.
+  This is handled by GitHub under
+  <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">its own privacy statement</a>;
+  we do not maintain a database of it.</p>
+<p><strong>Cookies:</strong> DiveSZN itself does not set advertising or analytics cookies.
+  Cookies may be set by the third-party affiliate networks below <strong>only when you click
+  an outbound "Buy" link</strong>.</p>
+
+<h2>2. Affiliate links</h2>
+<p>DiveSZN is reader-supported. Many "Buy" links are affiliate links: if you click through and
+  make a purchase, we may earn a commission <strong>at no extra cost to you</strong>. To credit
+  that referral, the retailer or affiliate network sets a cookie in your browser at the moment
+  you click. The networks we use are:</p>
+<ul>
+  <li><strong>Amazon Associates</strong> — as an Amazon Associate, DiveSZN earns from qualifying purchases.</li>
+  <li><strong>AvantLink</strong> (for retailers such as Scuba.com and LeisurePro)</li>
+  <li><strong>Awin</strong> (for retailers such as Tradeinn, Diveinn and Scubastore)</li>
+  <li><strong>eBay Partner Network</strong></li>
+  <li><strong>Skimlinks</strong>, which may affiliate other outbound retailer links automatically</li>
+</ul>
+<p>Each network processes click and purchase data under its own privacy policy. Prices shown on
+  DiveSZN are indicative; the retailer's live price and checkout are governed by that retailer.</p>
+
+<h2>3. Advertising</h2>
+<p>DiveSZN does not currently serve third-party advertising. If we introduce advertising in
+  future, we will update this policy to disclose the ad provider, the use of any advertising
+  cookies, how to manage them, and how consent is handled for visitors in the EU and UK.</p>
+
+<h2>4. Analytics</h2>
+<p>We do not use Google Analytics or any other third-party analytics or measurement cookies.
+  If that changes, this section will be updated to name the tool, describe what it collects,
+  and explain how to opt out.</p>
+
+<h2>5. How information is used</h2>
+<p>The limited data above is used only to keep the site running and secure (host logs) and to
+  credit affiliate referrals (network cookies). We do not build profiles of you, run email
+  marketing, or sell or rent any information to anyone.</p>
+
+<h2>6. Legal bases (EU and UK visitors — GDPR)</h2>
+<p>Where GDPR or UK GDPR applies, we rely on our <strong>legitimate interests</strong> for
+  essential hosting logs and site security, and on <strong>consent</strong> for affiliate
+  cookies, which are set only when you actively choose to click an outbound link.</p>
+
+<h2>7. Your rights</h2>
+<p>Depending on where you live, you may have the right to access, correct, delete or restrict
+  the processing of your personal data, and to object or withdraw consent (GDPR / UK GDPR), or
+  to know about and opt out of any "sale" or "sharing" of personal information (California
+  CCPA / CPRA). DiveSZN does not sell personal information. Because we hold no user database,
+  many requests are best directed to the relevant third party (GitHub or an affiliate network),
+  but you can contact us using the details below and we will help where we can.</p>
+
+<h2>8. International transfers</h2>
+<p>Our host and the affiliate networks operate globally, so data may be processed in countries
+  including the United States. Those providers maintain their own safeguards for such transfers.</p>
+
+<h2>9. Data retention</h2>
+<p>We keep no personal data of our own. Host logs and third-party cookies are retained according
+  to those providers' own schedules.</p>
+
+<h2>10. Children's privacy</h2>
+<p>DiveSZN is a scuba-diving resource intended for adults and is not directed at children under
+  13 (or 16 in the EU). We do not knowingly collect data from children.</p>
+
+<h2>11. Security</h2>
+<p>The site is static — no database and no user input — which removes most common data-security
+  risks, and it is served over HTTPS.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>We may update this policy as the site evolves, for example when advertising or analytics is
+  added. The "Last updated" date at the top reflects the current version.</p>
+
+<h2>13. Contact</h2>
+<p>Questions about this policy can be sent to
+  <a href="mailto:privacy@diveszn.com">privacy@diveszn.com</a>.</p>
+</div>
+"""
+    desc = ("How DiveSZN handles data: no accounts, no forms, no analytics — only standard host "
+            "logs and affiliate-network cookies set when you click a Buy link.")
+    ld = {"@context": "https://schema.org", "@type": "WebPage", "name": "Privacy Policy",
+          "description": desc, "url": url}
+    css = ("\n.legal{max-width:780px}"
+           ".legal .updated{color:var(--muted);font-size:.85rem;font-family:var(--mono);margin:2px 0 8px}"
+           ".legal .lead{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);"
+           "border-radius:12px;padding:16px 18px;margin:18px 0 6px;color:#33565e;"
+           "box-shadow:0 6px 22px rgba(18,51,47,.05)}"
+           ".legal p,.legal ul{color:#33565e;line-height:1.65}"
+           ".legal li{margin:5px 0}.legal h2{margin:30px 0 8px}.legal strong{color:var(--ink)}\n")
+    return content_shell("Privacy Policy | DiveSZN", desc, url, "", None, inner, ld, extra_css=css)
+
 def score_page():
     url = BASE + "how-we-score.html"
     inner = """
@@ -1905,6 +2016,8 @@ def main():
         f.write(about_page())
     with open(os.path.join(ROOT, "how-we-score.html"), "w", encoding="utf-8") as f:
         f.write(score_page())
+    with open(os.path.join(ROOT, "privacy.html"), "w", encoding="utf-8") as f:
+        f.write(privacy_page())
 
     urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html", BASE + "privacy.html",
              BASE + "destinations/index.html", BASE + "gear/index.html", BASE + "months/index.html"]
@@ -1923,7 +2036,7 @@ def main():
     with open(os.path.join(ROOT, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
     print(f"Wrote {len(dests)} destination pages + index, 12 month hubs + index, "
-          f"{len(gear_slugs)} gear pages + index, about + how-we-score, "
+          f"{len(gear_slugs)} gear pages + index, about + how-we-score + privacy, "
           f"sitemap.xml ({len(urls)} URLs), robots.txt")
 
 if __name__ == "__main__":
