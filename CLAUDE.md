@@ -41,8 +41,9 @@ single-file build stays in sync, then commit. Pushing deploys automatically.
   "Both" — spell options out. Full list in HANDOFF.md §3.
 - Everything published is **real and researched** — calendar/dive-site data,
   destination photos, monthly articles, the Gear guide (`gear-guide.json`,
-  indicative prices + real retailer links). No sample sections remain (the
-  Trip Planner tab is a "coming soon" placeholder; see HANDOFF §6).
+  indicative prices + real retailer links). No sample sections remain. The
+  **Dive Planner** tab is the filter + ranked results (cards/map/year calendar);
+  the **Destinations** tab is the browse directory + profiles (see HANDOFF §6).
 - Every finished change gets merged to `main` (auto-deploys); verify on
   desktop AND ~390px mobile viewports before merging.
 - Verify UI changes by serving locally (`python3 -m http.server`) — `index.html`
