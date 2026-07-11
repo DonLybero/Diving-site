@@ -313,20 +313,20 @@ DEST_CSS = """
 .pair .val{font-size:1rem;font-weight:600;color:var(--ink)}
 /* season calendar */
 .cal{margin-top:44px}
-.calgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:8px}
+.calgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;max-width:820px}
 .calm{appearance:none;-webkit-appearance:none;background:none;border:0;padding:0;margin:0;cursor:pointer;
   font:inherit;display:block;width:100%}
-.calbar{display:block;height:52px;border-radius:10px;border:2.5px solid transparent;
+.calbar{display:block;height:36px;border-radius:8px;border:2.5px solid transparent;
   transition:transform .2s ease,filter .2s ease,border-color .15s ease}
 .calm:hover .calbar{transform:translateY(-3px);filter:brightness(1.06)}
 .calm.on .calbar{border-color:var(--ink)}
 .calm:focus-visible .calbar{outline:2px solid var(--accent-deep);outline-offset:2px}
-.callab{display:block;text-align:center;margin-top:8px;font-family:var(--mono);font-size:.78rem;
+.callab{display:block;text-align:center;margin-top:6px;font-family:var(--mono);font-size:.68rem;
   letter-spacing:1px;color:var(--muted)}
 .calm.on .callab{color:var(--ink);font-weight:700}
-@media(max-width:640px){.calgrid{gap:4px}.calbar{height:40px;border-radius:7px;border-width:2px}
+@media(max-width:640px){.calgrid{gap:4px}.calbar{height:30px;border-radius:6px;border-width:2px}
   .callab{font-size:.58rem;letter-spacing:.3px}}
-.calread{margin-top:16px;background:#fff;border:1px solid #ddeeea;border-radius:14px;padding:18px 24px;
+.calread{margin-top:16px;max-width:820px;background:#fff;border:1px solid #ddeeea;border-radius:14px;padding:18px 24px;
   display:flex;align-items:center;gap:14px 40px;flex-wrap:wrap}
 .cr-id{display:flex;align-items:center;gap:12px}
 .cr-swatch{width:14px;height:14px;border-radius:4px;display:inline-block;flex:none}
@@ -335,7 +335,7 @@ DEST_CSS = """
 .cr-note{flex:1 1 240px}
 .cr-note .cr-val{font-weight:400;color:var(--ink-soft);font-size:.95rem}
 .cr-val{font-size:1rem;font-weight:600;color:var(--ink)}
-.callegend{margin-top:14px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap}
+.callegend{margin-top:14px;max-width:820px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap}
 .lg{display:flex;align-items:center;gap:7px;font-size:.85rem;color:var(--ink-soft)}
 .lg i{width:13px;height:13px;border-radius:4px;display:inline-block;border:1px solid rgba(18,51,47,.08)}
 .calmore{margin-top:10px}
