@@ -1195,6 +1195,35 @@ var TABS=['home','planner','trip','gear','destinations','marine','search'];
 // Legacy tab names now living inside the Dive Planner — each routes to a planner sub-view.
 var PLANNER_TOOLS={calendar:'calendar',period:'cards',plan:null,sites:'cards',map:'map'};
 
+/* ---------- URL state ----------
+   Every tab keeps its address in the hash via replaceState (no history spam),
+   so leaving for a destination page and pressing its back link returns the
+   user to the same tab — the Dive Planner with all filters intact.
+   Planner state reads like #trip/p=13;r=Caribbean;df=beginner;v=map and is
+   restored by handleHash on load. The Marine tab manages its own
+   #marine/<slug>/<mon> hash (openMarineArticle / marineSyncScrub). */
+var TAB_HASH={home:'',planner:'destinations',gear:'gear',destinations:'articles',search:'search'};
+function plannerHash(){
+  var p=[];
+  var per=val('planPeriod'); if(per)p.push('p='+per);
+  if(PLAN_RDEST)p.push('d='+encodeURIComponent(PLAN_RDEST));
+  else if(PLAN_RGROUP)p.push('r='+encodeURIComponent(PLAN_RGROUP));
+  var f={df:'planDiff',w:'planWater',c:'planCur',t:'planTemp'};
+  Object.keys(f).forEach(function(k){var v=val(f[k]); if(v)p.push(k+'='+encodeURIComponent(v));});
+  if(PLAN_SUB&&PLAN_SUB!=='cards')p.push('v='+PLAN_SUB);
+  return 'trip'+(p.length?'/'+p.join(';'):'');
+}
+function writeHash(t){
+  var h=t==='trip'?plannerHash():TAB_HASH[t];
+  if(h===undefined) return;
+  if(!h){ if(location.hash) history.replaceState(null,'',location.pathname+location.search); return; }
+  if(location.hash!=='#'+h) history.replaceState(null,'','#'+h);
+}
+function writePlannerHash(){
+  var v=document.getElementById('view-trip');
+  if(v&&!v.classList.contains('hidden')) writeHash('trip');
+}
+
 function showTab(t){
   var sub;
   if(t in PLANNER_TOOLS){
@@ -1211,6 +1240,7 @@ function showTab(t){
   if(t==='gear'){ updateCmpBar(); } else { closeCompare(); var cb=document.getElementById('cmpBar'); if(cb)cb.classList.add('hidden'); }
   if(t==='marine'){ renderMarine(); }
   if(t==='trip'){ showSub(sub||PLAN_SUB); }   // Dive Planner always opens on live results ("Now" period defaults)
+  if(t!=='marine') writeHash(t);
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -1225,6 +1255,7 @@ function showSub(v){
   if(v==='cards') renderPlanner();
   if(v==='calendar') renderCalendar();
   if(v==='map') setTimeout(function(){ initMap(); if(MAP)MAP.invalidateSize(); drawMarkers(); },60);
+  writePlannerHash();
 }
 function refreshPlanViews(){
   if(PLAN_SUB==='cards') renderPlanner();
@@ -1301,13 +1332,13 @@ function pickRegion(g){
   PLAN_RGROUP=g; PLAN_RDEST='';
   setRegionBtn();
   document.getElementById('regionMenu').classList.add('hidden');
-  planShown=3; refreshPlanViews(); scrollToMatches();
+  planShown=3; refreshPlanViews(); writePlannerHash(); scrollToMatches();
 }
 function pickDest(n){
   PLAN_RDEST=n; PLAN_RGROUP=DEST_GROUP[n]||'';
   setRegionBtn();
   document.getElementById('regionMenu').classList.add('hidden');
-  planShown=3; refreshPlanViews(); scrollToMatches();
+  planShown=3; refreshPlanViews(); writePlannerHash(); scrollToMatches();
 }
 document.addEventListener('click',function(e){
   var m=document.getElementById('regionMenu');
@@ -1342,10 +1373,10 @@ function initControls(){
       if(links[i].style.display!=='none'){location.href=links[i].href;break;}
     }
   });
-  // Any planner selection refreshes the active result view.
+  // Any planner selection refreshes the active result view (and the URL state).
   ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
-    var h=function(){planShown=3;refreshPlanViews();scrollToMatches();};
+    var h=function(){planShown=3;refreshPlanViews();writePlannerHash();scrollToMatches();};
     e.addEventListener('change',h); e.addEventListener('input',h);
   });
 }
@@ -1499,10 +1530,34 @@ function renderSearch(){
 
 function joinList(a){ return a.length<=1?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]; }
 // deep links: #marine/<slug>/<mon> (marine encounters — '/' separator keeps
-// hyphenated slugs intact), #gear-<cat>-<thickness>, #destinations
+// hyphenated slugs intact), #trip/<filters> (Dive Planner state),
+// #gear-<cat>-<thickness>, #destinations, #articles, #search
 function handleHash(){
   var h=(location.hash||'').replace(/^#/,''); if(!h) return;
   var mp=h.split('/');
+  if(mp[0]==='trip'){
+    // restore the planner: period, region/destination, filters, result view
+    var prm={};
+    mp.slice(1).join('/').split(';').forEach(function(kv){
+      var i=kv.indexOf('='); if(i>0) prm[kv.slice(0,i)]=decodeURIComponent(kv.slice(i+1));
+    });
+    document.getElementById('planPeriod').value=
+      (prm.p&&Number(prm.p)>=1&&Number(prm.p)<=24)?String(Number(prm.p)):'';
+    PLAN_RGROUP=''; PLAN_RDEST='';
+    if(prm.d&&DEST_GROUP[prm.d]){PLAN_RDEST=prm.d;PLAN_RGROUP=DEST_GROUP[prm.d];}
+    else if(prm.r&&REGION_GROUPS[prm.r]){PLAN_RGROUP=prm.r;}
+    setRegionBtn();
+    document.getElementById('planDiff').value=prm.df||'';
+    document.getElementById('planWater').value=prm.w||'';
+    document.getElementById('planCur').value=prm.c||'';
+    document.getElementById('planTemp').value=prm.t||'';
+    PLAN_SUB=(prm.v==='map'||prm.v==='calendar')?prm.v:'cards';
+    showTab('trip');
+    window.scrollTo({top:0});
+    return;
+  }
+  if(h==='articles'){showTab('destinations');window.scrollTo({top:0});return;}
+  if(h==='search'){showTab('search');window.scrollTo({top:0});return;}
   if(mp[0]==='marine'){
     var me=MARINE.filter(function(x){return x.slug===(mp[1]||'');})[0];
     MARINE_SLUG=me?me.slug:'';
@@ -2078,6 +2133,12 @@ function renderGear(){
     }
   }
   applyIcons(); updateCmpBar(); gearFilter();
+  // keep the gear address current (same format handleHash reads: #gear-<cat>-<thickness>)
+  var gv=document.getElementById('view-gear');
+  if(gv&&!gv.classList.contains('hidden')){
+    var gh='gear'+(cat?'-'+cat.toLowerCase().replace(/[^a-z0-9]/g,'')+(GEAR_THICK?'-'+GEAR_THICK:''):'');
+    if(location.hash!=='#'+gh) history.replaceState(null,'','#'+gh);
+  }
 }
 
 /* ---------------- Destinations: 12 monthly top-destination articles ----------------
