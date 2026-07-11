@@ -140,9 +140,9 @@
   .rsel-kids a:hover{background:rgba(14,156,146,.08);color:var(--accent-deep)}
   .rsel-row.sel>span,.rsel-kids a.sel{color:var(--accent-deep)}
 
-  /* Dive Planner — the two-part page shares a centered section intro */
-  #view-planner>.sec-head{justify-content:center;text-align:center}
-  #view-planner>.sec-sub{text-align:center;margin-left:auto;margin-right:auto}
+  /* Dive Planner + Destinations share a centered section intro */
+  #view-planner>.sec-head,#view-trip>.sec-head{justify-content:center;text-align:center}
+  #view-planner>.sec-sub,#view-trip>.sec-sub{text-align:center;margin-left:auto;margin-right:auto}
 
   .wrap{max-width:1180px;margin:0 auto;padding:30px 18px 70px}
   section{animation:fade .35s ease}
@@ -774,10 +774,7 @@
     .home-grid .featured{grid-column:span 2}
     .home-grid .featured .cover{height:320px}
   }
-  /* ---------- planner progressive disclosure ---------- */
-  .plan-intro{text-align:center;padding:44px 18px;border:1px dashed rgba(14,156,146,.35);border-radius:16px;
-       background:rgba(14,156,146,.05);margin-top:6px}
-  .plan-intro b{font-family:var(--serif);font-size:1.25rem;color:var(--ink)}
+  /* ---------- Dive Planner sub-nav (result views) ---------- */
   .subtabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0 16px}
   .subtabs.hidden{display:none}
   .subtabs button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;
@@ -806,7 +803,7 @@
     <button id="tab-planner" onclick="showTab('planner')">Destinations</button>
     <button id="tab-marine" onclick="MARINE_SLUG='';showTab('marine')">Marine Life</button>
     <button id="tab-destinations" onclick="showTab('destinations')">Articles</button>
-    <button id="tab-trip" onclick="showTab('trip')">Trip Planner</button>
+    <button id="tab-trip" onclick="showTab('trip')">Dive Planner</button>
     <button id="tab-search" onclick="showTab('search')">Search</button>
   </div>
 </div>
@@ -822,7 +819,7 @@
   <h1>Know your trip lands on great diving — before you book.</h1>
   <p class="tagline">Every destination is scored for all twelve months on the things that make a dive: season, marine life, visibility and currents. Tell DiveSZN when you can travel, and see exactly where the water is at its best.</p>
   <div class="hero-cta">
-    <a class="btn" href="#" onclick="showTab('planner');return false;">Plan your dive trip</a>
+    <a class="btn" href="#" onclick="showTab('trip');return false;">Plan your dive trip</a>
     <a class="btn ghost" href="how-we-score.html">How the score works</a>
   </div>
 </header>
@@ -832,55 +829,11 @@
   <!-- HOME -->
   <section id="view-home"></section>
 
-  <!-- DIVE SITES -->
-  <!-- GEAR -->
+  <!-- DIVE PLANNER: filter + ranked results as cards / map / year calendar -->
   <section id="view-trip" class="hidden">
-    <div class="sec-head">Trip Planner</div>
-    <p class="sec-sub">Something new is being built here.</p>
-    <div class="article" style="max-width:640px;margin:26px auto;text-align:center;padding:44px 30px">
-      <div style="font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px">Coming soon</div>
-      <h3 style="font-family:var(--serif);font-size:1.5rem;margin:0 0 10px">Plan a whole dive trip, end to end.</h3>
-      <p style="color:var(--muted);line-height:1.65;margin:0 0 20px">We're working on a tool that turns a season match into a full
-        itinerary. Until it lands, the Destinations tab finds where the diving is at its best for your dates.</p>
-      <a class="btn" href="#" onclick="showTab('planner');return false;">Browse destinations &rarr;</a>
-    </div>
-  </section>
-
-  <section id="view-gear" class="hidden">
-    <div class="controls">
-      <div class="field"><label>Category</label><select id="gearCat"><option value="">All categories</option></select></div>
-    </div>
-    <div id="gearGrid" class="grid"></div>
-  </section>
-
-  <!-- gear comparison: sticky picker bar + side-by-side modal -->
-  <div id="cmpBar" class="cmpbar hidden">
-    <span class="cmpbar-text" id="cmpBarText">Comparing 0 of 3</span>
-    <div class="cmpbar-actions">
-      <button class="btn ghost" onclick="clearCompare()">Clear</button>
-      <button class="btn" id="cmpGo" onclick="openCompare()" disabled>Compare</button>
-    </div>
-  </div>
-  <div id="cmpModal" class="cmpmodal hidden">
-    <div class="cmpmodal-inner">
-      <div class="cmpmodal-head"><b>Side-by-side</b>
-        <button class="cmpmodal-close" onclick="closeCompare()" aria-label="Close">&times;</button></div>
-      <div class="cmpmodal-body" id="cmpBody"></div>
-    </div>
-  </div>
-
-  <!-- DESTINATIONS: 12 monthly top-destination articles -->
-  <section id="view-destinations" class="hidden"><div id="destBody"></div></section>
-
-  <!-- MARINE LIFE: encounter articles with data-generated where & when -->
-  <section id="view-marine" class="hidden"><div id="marineBody"></div></section>
-
-
-  <!-- DIVE PLANNER — one progressive page: filters first, then results as cards / map / year calendar -->
-  <section id="view-planner" class="hidden">
-    <div class="sec-head">Destinations</div>
-    <p class="sec-sub">Browse the whole world below — every region, country and destination —
-      or use the filter to jump straight to ranked matches for your dates.</p>
+    <div class="sec-head">Dive Planner</div>
+    <p class="sec-sub">Set when you can travel and how you dive — every destination is ranked
+      for your dates, as best matches, a world map and a year calendar.</p>
 
     <div class="controls">
       <div class="field"><label>Period of travel</label><select id="planPeriod">
@@ -901,11 +854,8 @@
       <div class="field"><label>Min water °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
     </div>
 
-    <!-- browse-the-world directory: hover/tap a region to reveal its countries -->
-    <div id="browseDir"></div>
-
     <!-- result views: one at a time; opens on "Best matches" for the current period -->
-    <div id="planViews" class="subtabs hidden">
+    <div id="planViews" class="subtabs">
       <button id="sub-cards" class="active" onclick="showSub('cards')"><i class="ico" data-ico="fish"></i>Best matches</button>
       <button id="sub-map" onclick="showSub('map')"><i class="ico" data-ico="map"></i>Map</button>
       <button id="sub-calendar" onclick="showSub('calendar')"><i class="ico" data-ico="calendar"></i>Year calendar</button>
@@ -946,7 +896,50 @@
     </div>
   </section>
 
-  <!-- SEARCH / PROFILE -->
+  <!-- GEAR -->
+  <section id="view-gear" class="hidden">
+    <div class="controls">
+      <div class="field"><label>Category</label><select id="gearCat"><option value="">All categories</option></select></div>
+    </div>
+    <div id="gearGrid" class="grid"></div>
+  </section>
+
+  <!-- gear comparison: sticky picker bar + side-by-side modal -->
+  <div id="cmpBar" class="cmpbar hidden">
+    <span class="cmpbar-text" id="cmpBarText">Comparing 0 of 3</span>
+    <div class="cmpbar-actions">
+      <button class="btn ghost" onclick="clearCompare()">Clear</button>
+      <button class="btn" id="cmpGo" onclick="openCompare()" disabled>Compare</button>
+    </div>
+  </div>
+  <div id="cmpModal" class="cmpmodal hidden">
+    <div class="cmpmodal-inner">
+      <div class="cmpmodal-head"><b>Side-by-side</b>
+        <button class="cmpmodal-close" onclick="closeCompare()" aria-label="Close">&times;</button></div>
+      <div class="cmpmodal-body" id="cmpBody"></div>
+    </div>
+  </div>
+
+  <!-- DESTINATIONS: 12 monthly top-destination articles -->
+  <section id="view-destinations" class="hidden"><div id="destBody"></div></section>
+
+  <!-- MARINE LIFE: encounter articles with data-generated where & when -->
+  <section id="view-marine" class="hidden"><div id="marineBody"></div></section>
+
+
+  <!-- DESTINATIONS: browse-the-world directory + full destination profiles -->
+  <section id="view-planner" class="hidden">
+    <div class="sec-head">Destinations</div>
+    <p class="sec-sub">Browse the whole world below — every region, country and destination —
+      and open any of them for the full season-by-season profile.</p>
+
+    <!-- browse-the-world directory: hover/tap a region to reveal its countries -->
+    <div id="browseDir"></div>
+
+    <div id="profile" class="profile"></div>
+  </section>
+
+  <!-- SEARCH -->
   <section id="view-search" class="hidden">
     <div class="controls">
       <div class="field" style="flex:1">
@@ -955,7 +948,6 @@
       </div>
     </div>
     <div id="searchResults" class="grid"></div>
-    <div id="profile" class="profile"></div>
   </section>
 
   <footer id="foot"></footer>
@@ -1036,7 +1028,7 @@ function whyNow(rating, marine, vizM){
   return lead? lead.charAt(0).toUpperCase()+lead.slice(1)+'.' : '';
 }
 /* DiveIn-style browse directory: region cards that reveal countries and their
-   destinations on hover (desktop) or tap (touch). Sits under the planner filter. */
+   destinations on hover (desktop) or tap (touch). Fills the Destinations tab. */
 /* Use the baked image URL as-is for list thumbs: Wikimedia rejects rewritten
    thumb widths (ORB-blocked error page), and these only load lazily when a
    region card is opened. */
@@ -1198,13 +1190,13 @@ function setHeroPhoto(){
 }
 
 var TABS=['home','planner','trip','gear','destinations','marine','search'];
-// Legacy destinations now living inside the Dive Planner — each routes to a planner sub-view.
+// Legacy tab names now living inside the Dive Planner — each routes to a planner sub-view.
 var PLANNER_TOOLS={calendar:'calendar',period:'cards',plan:null,sites:'cards',map:'map'};
 
 function showTab(t){
   var sub;
   if(t in PLANNER_TOOLS){
-    sub=PLANNER_TOOLS[t]; t='planner';
+    sub=PLANNER_TOOLS[t]; t='trip';
   }
   TABS.forEach(function(x){
     document.getElementById('view-'+x).classList.toggle('hidden', x!==t);
@@ -1216,17 +1208,12 @@ function showTab(t){
   var hb=document.getElementById('heroBand'); if(hb) hb.classList.toggle('hidden', t!=='home');
   if(t==='gear'){ updateCmpBar(); } else { closeCompare(); var cb=document.getElementById('cmpBar'); if(cb)cb.classList.add('hidden'); }
   if(t==='marine'){ renderMarine(); }
-  if(t==='planner'){ planEngage(sub||PLAN_SUB); }   // planner always opens engaged: top 3 for the Now period
+  if(t==='trip'){ showSub(sub||PLAN_SUB); }   // Dive Planner always opens on live results ("Now" period defaults)
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-/* ---------- planner progressive disclosure ---------- */
-var PLAN_ENGAGED=false, PLAN_SUB='cards';
-function planEngage(sub){
-  PLAN_ENGAGED=true;
-  document.getElementById('planViews').classList.remove('hidden');
-  showSub(sub||PLAN_SUB);
-}
+/* ---------- Dive Planner result sub-views ---------- */
+var PLAN_SUB='cards';
 function showSub(v){
   PLAN_SUB=v;
   ['cards','map','calendar'].forEach(function(x){
@@ -1238,8 +1225,7 @@ function showSub(v){
   if(v==='map') setTimeout(function(){ initMap(); if(MAP)MAP.invalidateSize(); drawMarkers(); },60);
 }
 function refreshPlanViews(){
-  if(!PLAN_ENGAGED) planEngage('cards');
-  else if(PLAN_SUB==='cards') renderPlanner();
+  if(PLAN_SUB==='cards') renderPlanner();
   else if(PLAN_SUB==='calendar') renderCalendar();
   else if(PLAN_SUB==='map') drawMarkers();
 }
@@ -1350,7 +1336,7 @@ function initControls(){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
   document.getElementById('gearCat').addEventListener('change',function(){GEAR_ARTICLE='';renderGear();});
-  // Any planner selection reveals the result views and refreshes the active one.
+  // Any planner selection refreshes the active result view.
   ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){
     var e=document.getElementById(id);
     var h=function(){planShown=3;refreshPlanViews();scrollToMatches();};
@@ -1489,7 +1475,6 @@ function renderSearch(){
   var q=val('searchBox');
   var res=DivingCalendar.searchDestinations(DESTS,q);
   var sr=document.getElementById('searchResults');
-  document.getElementById('profile').innerHTML='';
   if(!q){sr.innerHTML='';return;}
   if(!res.length){sr.innerHTML='<div class="empty">No matches.</div>';return;}
   sr.innerHTML=res.slice(0,12).map(function(d){
@@ -1640,10 +1625,8 @@ function stayBox(d){
 /* Purnatur-style radical transparency: what we can't promise, as a proud
    structured section on the product page instead of buried fine print. */
 function openProfile(name){
-  showTab('search');
   var d=DivingCalendar.getDestination(DESTS,name); if(!d)return;
-  document.getElementById('searchResults').innerHTML='';
-  document.getElementById('searchBox').value=d.name;
+  showTab('planner');                       // profiles live on the Destinations tab
   var s=DivingCalendar.destinationSeasonSummary(d);
   var rows=DivingCalendar.MONTHS.map(function(m){
     var mm=d.monthly[m];
@@ -2470,7 +2453,7 @@ loadData().then(function(res){
   initControls();
   applyIcons(); setHeroPhoto();
   renderHome(); renderGear(); renderDestinations(); renderMarine(); buildBrowseDir();
-  // planner result views render on the diver's first selection (progressive disclosure)
+  // Dive Planner result views render on first open of the tab (showTab → showSub)
   document.getElementById('searchBox').addEventListener('input', renderSearch);
   handleHash();                                    // honor a #gear-<cat>-<thickness> deep link on load
   window.addEventListener('hashchange', handleHash);
