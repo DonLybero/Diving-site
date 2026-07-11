@@ -667,8 +667,6 @@
   .mcover.lead .mcover-title{font-size:clamp(1.6rem,4vw,2.4rem)}
   .mcover-deck{display:block;color:#e8f7f5;font-size:.9rem;line-height:1.45;max-width:60ch}
   .mstatus{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#bfe9e4;margin-top:8px}
-  .mp-micro{display:inline-flex;gap:2px;margin-top:8px}
-  .mp-micro i{width:6px;height:10px;border-radius:2px;display:inline-block}
   @media(max-width:640px){
     .mwall{grid-template-columns:1fr}
     .mcover,.mcover.lead{height:300px}
@@ -2553,15 +2551,6 @@ function marineStatus(e,rows){
   var nx=marineNearest(e,DivingCalendar.MONTHS[new Date().getMonth()]);
   return nx?'NEXT SEASON: '+nx.toUpperCase():'';
 }
-/* 12-tick micro-pulse preview (decorative — the article pulse is the real one) */
-function marineMicro(e){
-  var pulse=marinePulse(e.slug,e.keywords);
-  return '<span class="mp-micro" aria-hidden="true">'+pulse.map(function(p){
-    var c=p.count?(RCOLOR[MRANK_WORD[p.best]]||'#94a3b8'):'rgba(255,255,255,.28)';
-    return '<i style="background:'+c+'"></i>';
-  }).join('')+'</span>';
-}
-function marineNum(i){return ('0'+(i+1)).slice(-2);}
 function marineCoverCard(e,i,lead){
   var rows=marineWhereWhen(e.keywords);
   return '<a class="mcover'+(lead?' lead':'')+'" href="#marine/'+e.slug+'" onclick="openMarineArticle(\''+escq(e.slug)+'\');return false;">'+
@@ -2569,11 +2558,9 @@ function marineCoverCard(e,i,lead){
     (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+
     '<span class="mcover-scrim"></span>'+
     '<span class="mcover-txt">'+
-      '<span class="mkick">Encounter '+marineNum(i)+' / '+marineNum(MARINE.length-1)+'</span>'+
       '<span class="mcover-title">'+e.title+'</span>'+
       '<span class="mcover-deck">'+(e.hero_sub||'')+'</span>'+
       '<span class="mstatus">'+marineStatus(e,rows)+'</span>'+
-      marineMicro(e)+
     '</span></a>';
 }
 /* Cover: tall photo frame + scrim + kicker/title/deck; the mono credit
@@ -2583,7 +2570,7 @@ function marineCover(e,i){
     '<i class="ico" data-ico="fish"></i>'+
     (e.image?'<img src="'+e.image+'" alt="'+escAttr(e.title)+'" onerror="this.style.display=\'none\'">':'')+
     '<div class="mh-scrim"></div>'+
-    '<div class="mh-txt"><span class="mkick">Marine life · Encounter '+marineNum(i)+' / '+marineNum(MARINE.length-1)+'</span>'+
+    '<div class="mh-txt"><span class="mkick">Marine life</span>'+
     '<h2>'+e.title+'</h2>'+(e.hero_sub?'<p class="mh-deck">'+e.hero_sub+'</p>':'')+'</div>'+
     '</div>'+(e.image&&e.image_credit?'<figcaption>'+e.image_credit+'</figcaption>':'')+'</figure>';
 }

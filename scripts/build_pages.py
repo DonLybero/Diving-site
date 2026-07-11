@@ -1393,8 +1393,6 @@ def _marine_verb(short):
     w = words[-1] if words else ""
     return "show" if re.search(r"[^s]s$", w) else "shows"
 
-def _mnum(i):
-    return f"{i + 1:02d}"
 
 def mini_ribbon_html(x, months):
     """12-cell tonal season ribbon for one ledger row, with the dive-computer
@@ -1533,8 +1531,6 @@ MARINE_CSS = """
 .mcover.lead .mcover-title{font-size:clamp(1.6rem,4vw,2.4rem)}
 .mcover-deck{display:block;color:#e8f7f5;font-size:.9rem;line-height:1.45;max-width:60ch}
 .mstatus{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#bfe9e4;margin-top:8px}
-.mp-micro{display:inline-flex;gap:2px;margin-top:8px}
-.mp-micro i{width:6px;height:10px;border-radius:2px;display:inline-block}
 @media(max-width:640px){.mwall{grid-template-columns:1fr}.mcover,.mwall>.mcover.lead{height:300px}
   .mkick{font-size:.58rem}.mcover.lead .mcover-title{font-size:2.2rem}}
 .mstat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:18px 0 8px}
@@ -1633,7 +1629,7 @@ def marine_article(exp, dests, prefix="../"):
     inner = ('<div class="mfile">' + core
              + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>'
              + _marine_teasers(idx) + '</div>')
-    hero = photo_hero(f"Marine life · Encounter {_mnum(idx)} / {_mnum(len(EXPERIENCES) - 1)}",
+    hero = photo_hero("Marine life",
                       exp["title"], exp.get("hero_sub") or "",
                       exp.get("image") or "", exp.get("image_credit") or "")
     art = {"@type": "Article", "headline": exp["title"], "description": exp["desc"], "url": url,
@@ -1650,24 +1646,19 @@ def marine_index_page(dests, prefix="../"):
     url = BASE + "marine-life/index.html"
     def _mcover(e, i, lead=False):
         rows = where_when(dests, e["keywords"])
-        pulse = marine_pulse(dests, e["keywords"])
         if rows:
             status = f'SEASONS AT · {len(rows)} DESTINATION{"" if len(rows) == 1 else "S"}'
         else:
             modes = _marine_modes(e)
             status = " · ".join(modes) + " ONLY" if modes else ""
-        micro = "".join(
-            f'<i style="background:{TONAL[RANK_WORD[p["best"]]] if p["count"] else "rgba(255,255,255,.28)"}"></i>'
-            for p in pulse)
         img = (f'<img src="{esc(e["image"])}" alt="" loading="lazy" '
                f'onerror="this.style.display=\'none\'">' if e.get("image") else "")
         return (f'<a class="mcover{" lead" if lead else ""}" href="{e["slug"]}.html">{img}'
                 f'<span class="mcover-scrim"></span><span class="mcover-txt">'
-                f'<span class="mkick">Encounter {_mnum(i)} / {_mnum(len(EXPERIENCES) - 1)}</span>'
                 f'<span class="mcover-title">{esc(e["title"])}</span>'
                 f'<span class="mcover-deck">{esc(e.get("hero_sub") or "")}</span>'
                 + (f'<span class="mstatus">{status}</span>' if status else "")
-                + f'<span class="mp-micro" aria-hidden="true">{micro}</span></span></a>')
+                + '</span></a>')
     wall = (_mcover(EXPERIENCES[0], 0, lead=True)
             + "".join(_mcover(e, i + 1) for i, e in enumerate(EXPERIENCES[1:])))
     desc = ("Diving with the ocean's headline animals — whale sharks, manta rays, hammerheads, mola mola, "
