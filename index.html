@@ -799,7 +799,7 @@
     </div>
   </div>
   <div class="tabs">
-    <button id="tab-gear" onclick="showTab('gear')">Diving Gear</button>
+    <button id="tab-gear" onclick="showTab('gear')">Scuba Gear</button>
     <button id="tab-planner" onclick="showTab('planner')">Destinations</button>
     <button id="tab-marine" onclick="MARINE_SLUG='';showTab('marine')">Marine Life</button>
     <button id="tab-destinations" onclick="showTab('destinations')">Articles</button>
@@ -2157,8 +2157,7 @@ function renderGear(){
   if(!cat){
     cmpScope('',[]);
     g.innerHTML='<div class="article" style="grid-column:1/-1;margin-bottom:6px">'+
-      '<p class="gentry-review" style="max-width:80ch;margin-top:0">'+(GEAR_GUIDE.intro||'')+
-      ' Every product has its own page — photos, prices and specs. The ranked buyer’s guides live under <a href="#" onclick="showTab(\'destinations\');return false;">Articles</a>.</p>'+
+      '<p class="gentry-review" style="max-width:80ch;margin-top:0">'+(GEAR_GUIDE.intro||'')+'</p>'+
       gearBrandDir(sel.value)+'</div>';
   }else{
     var c=GEAR_GUIDE.categories.filter(function(x){return x.category===cat;})[0];
