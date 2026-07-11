@@ -2737,21 +2737,16 @@ function renderDestinations(month){
       '<h3 class="artlist-head" style="margin-top:30px">Gear buyer’s guides</h3>'+gearRows+'</div>';
   }else{
     var full=MONTH_FULL[month];
-    var mi=DivingCalendar.MONTHS.indexOf(month);
-    var prevM=DivingCalendar.MONTHS[(mi+11)%12], nextM=DivingCalendar.MONTHS[(mi+1)%12];
-    var pager='<p class="meta" style="display:flex;justify-content:space-between;gap:12px">'+
-      '<a href="#" onclick="openMonthArticle(\''+prevM+'\');return false;">← '+MONTH_FULL[prevM]+'</a>'+
-      '<a href="#" onclick="openMonthArticle(\'\');return false;">All monthly guides</a>'+
-      '<a href="#" onclick="openMonthArticle(\''+nextM+'\');return false;">'+MONTH_FULL[nextM]+' →</a></p>';
+    // Owner ruling: no prev/next month arrows — just a back link, top left.
+    var back='<p class="meta"><a href="#" onclick="openMonthArticle(\'\');return false;">← Back to articles</a></p>';
     var intro=MONTH_INTROS[month]||'';
     var cut=intro.indexOf('. ');
     var lede=cut>-1?intro.slice(0,cut+1):intro, rest=cut>-1?intro.slice(cut+2):'';
-    g.innerHTML='<div class="article gear-article">'+pager+
+    g.innerHTML='<div class="article gear-article">'+back+
       '<h2 style="margin:6px 0 10px">Where to dive in '+full+'</h2>'+
       (lede?'<p class="lede">'+lede+'</p>':'')+
       (rest?'<p class="gentry-review" style="max-width:80ch">'+rest+'</p>':'')+
-      monthRegionSections(month)+
-      '<div style="margin-top:16px">'+pager+'</div></div>';
+      monthRegionSections(month)+'</div>';
   }
   applyIcons();
 }
