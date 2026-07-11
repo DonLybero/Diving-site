@@ -1105,7 +1105,7 @@ def gear_item_page(cat, item, prefix="../"):
                   crumbs([("Home", BASE), ("Gear guides", BASE + "gear/index.html"),
                           (cat_title, BASE + "gear/" + cat_slug + ".html"), (item["name"], url)]),
                   product_ld(item))
-    return content_shell(f'{item["name"]} Review & Best Price | DiveSZN', desc, url, prefix,
+    return content_shell(f'{item["name"]} Review | DiveSZN', desc, url, prefix,
                          item.get("blurb") or "", inner, ld)
 
 
