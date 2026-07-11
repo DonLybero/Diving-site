@@ -85,6 +85,15 @@ A static diving website whose USP is answering **WHEN to dive WHERE**:
     corner tooltip only (rule 6).
 12. **A destination opens its own page** (`destinations/<slug>.html`) — same
     pattern as gear products — never an inline profile below the directory.
+13. **Photo heroes carry the name only** — no kicker sentences, no sub-lines
+    on any photo (destination pages: just the destination name; hubs may keep
+    a two-word section label).
+14. **Grandfathered vocabulary (owner-reviewed 2026-07-11):** the 10 existing
+    uses of "mecca" (Cocos, Galápagos highlights), "world-class" (Scapa Flow,
+    Apo/Dumaguete, Bali, Marsa Alam highlights + one dive-site blurb) and
+    "playground" (Mallorca, Tenerife descriptions + one blurb) were shown to
+    the owner, who ruled **they stay as written** — do NOT "fix" them. The
+    banned-vocabulary rule still applies in full to all NEW copy.
 
 ## 4. Architecture & file map
 
