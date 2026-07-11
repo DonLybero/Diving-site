@@ -210,24 +210,23 @@ footer{color:var(--muted);font-size:.74rem;text-align:center;padding:40px 16px 2
 .badge.sm{font-size:.66rem}
 """
 
-# ------------------------------------------------------- destination redesign
-# Owner-approved Tofo redesign (2026-07), applied to every destination page.
-# Scoped under body.dest2 so gear/month/marine pages keep the shared look.
-DEST_CSS = """
-.dest2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
-  --serif:'Fraunces',Georgia,'Iowan Old Style','Times New Roman',serif;
-  --sans:'Plus Jakarta Sans',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-  font-family:var(--sans);color:var(--ink);
+# ---------------------------------------------------- shared design language
+# The owner-approved destination redesign (2026-07) factored into a shared
+# block: page gradient, sticky blurred topbar, photo hero with scrim + mono
+# kicker + serif title, white 18px-radius cards with soft shadows and hover
+# lifts, mono kickers in --accent-deep, reveal hooks. A page opts in with
+# <body class="v2">; destination-only parts (season calendar, fact cards,
+# dive-site table…) stay in DEST_CSS under .dest2.
+V2_CSS = """
+body.v2{--muted:#4a6a71;--ink-soft:#33565e;--accent-deep:#0b7d75;
   background:linear-gradient(180deg,#eef7f6 0%,#f4f9fb 40%,#eef4f8 100%)}
-.dest2 a{color:var(--accent-deep)}
-.dest2 h1,.dest2 h2,.dest2 h3{font-family:var(--serif)}
-.dest2 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+.v2 a{color:var(--accent-deep)}
+.v2 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
   -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,117,105,.10)}
-.dest2 .wrap{max-width:1240px;padding:24px 32px 64px}
-.dest2 .sec-h{font-size:2rem;font-weight:600;letter-spacing:-.01em;margin:0 0 20px;color:var(--ink)}
 .rev{will-change:opacity,transform}
-/* hero */
+.kick{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent-deep);margin:16px 0 10px}
+/* photo hero — the gradient shows through if the photo 404s (onerror hides only the img) */
 .hero2{position:relative;margin-top:4px;border-radius:20px;overflow:hidden;height:520px;
   box-shadow:0 16px 44px rgba(18,51,47,.14);background:linear-gradient(160deg,#0e2f37,#0b7d75)}
 .hero2>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -237,6 +236,8 @@ DEST_CSS = """
 .hero2-kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:2.5px;color:#a8e6db;text-transform:uppercase;margin-bottom:8px}
 .hero2 h1{font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,3.6rem);font-weight:600;color:#fff;margin:0;
   line-height:1.05;text-shadow:0 2px 20px rgba(8,32,29,.4)}
+.hero2-sub{color:#e8f7f5;max-width:62ch;margin:10px 0 0;font-size:1.02rem;line-height:1.6;
+  text-shadow:0 1px 14px rgba(8,32,29,.5)}
 .hero2-pills{display:flex;gap:10px;padding-bottom:6px;flex-wrap:wrap}
 .hero2-pills span{background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
   border:1px solid rgba(255,255,255,.28);color:#fff;font-size:.88rem;font-weight:600;padding:8px 16px;
@@ -244,9 +245,55 @@ DEST_CSS = """
 .credit2{position:absolute;right:12px;top:12px;width:24px;height:24px;border-radius:50%;
   background:rgba(8,32,29,.45);color:rgba(255,255,255,.9);font-size:.74rem;font-family:var(--mono);
   display:flex;align-items:center;justify-content:center;cursor:help}
+.hero2-hub{height:400px;margin-bottom:26px}
+.hero2-hub h1{font-size:clamp(2rem,4.4vw,3rem)}
 @media(max-width:640px){.hero2{height:320px;border-radius:14px}
   .hero2-bar{left:18px;right:18px;bottom:16px;flex-direction:column;align-items:flex-start;gap:10px}
-  .hero2-pills{padding-bottom:0}.hero2-pills span{font-size:.78rem;padding:6px 12px}}
+  .hero2-pills{padding-bottom:0}.hero2-pills span{font-size:.78rem;padding:6px 12px}
+  .hero2-hub{height:300px;margin-bottom:18px}.hero2-sub{font-size:.88rem}}
+/* card language */
+.v2 .gentry{background:#fff;border:none;border-radius:18px;padding:20px 22px;margin:16px 0;
+  box-shadow:0 8px 30px rgba(18,51,47,.06);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .gentry:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(18,51,47,.10)}
+.v2 .gentry h3,.v2 .artlist h3{font-family:var(--serif)}
+.v2 .gphoto{border-radius:12px}
+.v2 .artlist li{background:#fff;border:none;border-radius:16px;margin:0 0 14px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05);transition:transform .25s ease,box-shadow .25s ease}
+.v2 .artlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .artlist a{padding:14px 16px}
+.v2 .artlist .th{border-radius:10px}
+.v2 .dirlist{gap:14px}
+.v2 .dirlist li{background:#fff;border:none;border-radius:16px;box-shadow:0 6px 22px rgba(18,51,47,.05);
+  transition:transform .25s ease,box-shadow .25s ease}
+.v2 .dirlist li:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(18,51,47,.09)}
+.v2 .dirlist a{padding:13px 16px}
+.v2 .dirlist b{font-family:var(--serif);font-size:1.02rem}
+.v2 .dirlist small{font-family:var(--mono);font-size:.68rem;margin-top:4px}
+.v2 .tipbox{background:#fff;border:none;border-radius:16px;padding:16px 20px;
+  box-shadow:0 6px 22px rgba(18,51,47,.05)}
+.v2 .tipbox>b{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep)}
+.tablecard{background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(18,51,47,.06);
+  padding:8px 20px 14px;overflow-x:auto;margin:14px 0}
+.v2 .region-head{border-top:none;padding-top:8px;margin:38px 0 2px}
+.v2 .region-head::before{content:"";display:block;width:64px;height:3px;border-radius:2px;
+  margin-bottom:12px;background:linear-gradient(90deg,var(--accent),transparent)}
+.v2 .cta,.v2 .pack-cta{background:var(--cta-deep);transition:background .2s ease,transform .2s ease}
+.v2 .cta{border-radius:12px;padding:13px 22px;color:#fff}
+.v2 .cta:hover,.v2 .pack-cta:hover{background:var(--cta);transform:translateY(-2px)}
+.v2 .pack-cta.ghost{background:#fff;color:#0e7569;border-color:#bfe0da}
+.v2 .pack-cta.ghost:hover{background:#0e7569;color:#fff;border-color:#0e7569}
+.v2 .hero.plain{background:linear-gradient(160deg,#0e2f37,#0b7d75)}
+@media(max-width:640px){.v2 .gentry{padding:16px 14px}.v2 .artlist a{padding:11px 12px}}
+@media(prefers-reduced-motion:reduce){.v2 .gentry,.v2 .artlist li,.v2 .dirlist li,.v2 .cta,.v2 .pack-cta{transition:none}}
+"""
+
+# ------------------------------------------------------- destination redesign
+# Owner-approved Tofo redesign (2026-07), applied to every destination page.
+# Destination-specific parts only — the shared language lives in V2_CSS.
+DEST_CSS = """
+.dest2 h1,.dest2 h2,.dest2 h3{font-family:var(--serif)}
+.dest2 .wrap{max-width:1240px;padding:24px 32px 64px}
+.dest2 .sec-h{font-size:2rem;font-weight:600;letter-spacing:-.01em;margin:0 0 20px;color:var(--ink)}
 /* intro */
 .lead2{font-size:1.22rem;line-height:1.75;color:var(--ink-soft);max-width:1160px;margin:34px 0 0}
 .lead2sub{font-size:1.02rem;line-height:1.7;color:var(--ink-soft);max-width:1160px;margin:14px 0 0}
@@ -350,7 +397,6 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
 .dots i.f{background:#0e7569}
 .s-level em{font-style:normal;font-size:.92rem;color:var(--ink-soft)}
 .s-why{font-size:.95rem;line-height:1.65;color:var(--ink-soft)}
-  margin:40px 0 0;box-shadow:0 8px 30px rgba(18,51,47,.05)}
 /* verification + permalink */
 .endnote{margin:30px 0 0;display:flex;flex-direction:column;gap:12px}
 .verline{font-size:.97rem;color:var(--muted)}
@@ -364,13 +410,40 @@ span.tag{color:var(--ink-soft);border-color:#d3e5e2}
 @media(prefers-reduced-motion:reduce){.dest2 .prof-essay,.fact,.calbar,.dest2 .pack-cta,.tag,.srow{transition:none}}
 """
 
-# Progressive enhancement: content is fully visible without JS (the readout is
-# server-rendered on January); JS re-points it at the visitor's current month,
-# wires hover/click/focus, and adds the entrance animations (skipped under
-# prefers-reduced-motion).
-DEST_JS = """
+# Shared scroll-in reveals (progressive enhancement): elements carrying .rev
+# fade/slide in on first intersection. Elements already in view are never
+# hidden (no flash), and prefers-reduced-motion switches the whole thing off.
+REVEAL_JS = """
 (function(){
   document.documentElement.classList.add('js');
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(!('IntersectionObserver' in window))return;
+  var els=[].slice.call(document.querySelectorAll('.rev'));
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var t=e.target;
+      t.style.opacity='1';t.style.transform='none';
+      setTimeout(function(){t.style.opacity='';t.style.transform='';t.style.transition=''},760);
+      io.unobserve(t);
+    });
+  },{threshold:.08});
+  els.forEach(function(t){
+    if(t.getBoundingClientRect().top<window.innerHeight*.9)return; // already in view — never hide
+    t.style.opacity='0';t.style.transform='translateY(26px)';
+    t.style.transition='opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
+    io.observe(t);
+  });
+})();
+"""
+
+# Progressive enhancement: content is fully visible without JS (the readout is
+# server-rendered on January); JS re-points it at the visitor's current month,
+# wires hover/click/focus, and adds the calendar entrance animation (skipped
+# under prefers-reduced-motion). Scroll reveals come from the shared REVEAL_JS.
+DEST_JS = """
+(function(){
   var C={Peak:'#0e7569',Good:'#5cb8ab',Shoulder:'#dfa826',Low:'#cfe4e0',Closed:'#b9c6c9'};
   var bars=[].slice.call(document.querySelectorAll('.calm'));
   function el(id){return document.getElementById(id)}
@@ -392,22 +465,6 @@ DEST_JS = """
   if(bars.length===12)set(new Date().getMonth());
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   if(!('IntersectionObserver' in window))return;
-  var els=[].slice.call(document.querySelectorAll('.rev'));
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(!e.isIntersecting)return;
-      var t=e.target;
-      t.style.opacity='1';t.style.transform='none';
-      setTimeout(function(){t.style.opacity='';t.style.transform='';t.style.transition=''},760);
-      io.unobserve(t);
-    });
-  },{threshold:.08});
-  els.forEach(function(t){
-    if(t.getBoundingClientRect().top<window.innerHeight*.9)return; // already in view — never hide
-    t.style.opacity='0';t.style.transform='translateY(26px)';
-    t.style.transition='opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
-    io.observe(t);
-  });
   var cbs=[].slice.call(document.querySelectorAll('.calbar'));
   if(cbs.length&&cbs[0].getBoundingClientRect().top>window.innerHeight*.95){
     cbs.forEach(function(b){
@@ -462,6 +519,21 @@ def footer_html(prefix="../"):
             'Water temperatures are typical monthly ranges (±1°C); marine-life timing shifts year to year — '
             'always confirm with a local dive centre.</div>'
             '</footer>')
+
+def photo_hero(kicker, title, sub="", img="", credit="", pills=""):
+    """Shared photo hero (hub variant of the destination hero2): photo with
+    scrim, mono kicker, serif title, optional sub-line/pills, tooltip-only
+    photo credit. Degrades gracefully — onerror hides only the <img>, the
+    gradient + scrim + title always render."""
+    credit_s = (f'<span class="credit2" title="{esc(credit)}">&#9432;</span>'
+                if img and credit else "")
+    img_s = (f'<img src="{esc(img)}" alt="" onerror="this.style.display=\'none\'">'
+             if img else "")
+    sub_s = f'<p class="hero2-sub">{esc(sub)}</p>' if sub else ""
+    pills_s = f'<div class="hero2-pills">{pills}</div>' if pills else ""
+    return (f'<header class="hero2 hero2-hub rev">{img_s}<div class="hero2-scrim"></div>{credit_s}'
+            f'<div class="hero2-bar"><div><div class="hero2-kicker">{esc(kicker)}</div>'
+            f'<h1>{esc(title)}</h1>{sub_s}</div>{pills_s}</div></header>')
 
 # Pluralised wording for site-type breakdowns (mirrors destIntro in index.html)
 SITE_PLURALS = {"Muck": "muck dives", "Shore": "shore dives", "Drift": "drift dives",
@@ -858,9 +930,9 @@ def page(d, top_month=None):
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{json.dumps(graph_ld(ld, crumbs([("Home", BASE), ("Destinations", BASE + "destinations/index.html"), (d["name"], url)])), ensure_ascii=False)}</script>
 {FONTS_LINK}
-<style>{CSS}{DEST_CSS}</style>
+<style>{CSS}{V2_CSS}{DEST_CSS}</style>
 </head>
-<body class="dest2">
+<body class="v2 dest2">
 {topbar()}
 <main class="wrap">
   {hero}
@@ -881,7 +953,7 @@ def page(d, top_month=None):
   <div class="related rev">{related_block(d)}</div>
 </main>
 {footer_html()}
-<script>{DEST_JS}</script>
+<script>{DEST_JS}{REVEAL_JS}</script>
 </body></html>"""
 
 def index_page(dests):
@@ -899,17 +971,19 @@ def index_page(dests):
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{BASE}destinations/index.html">
 {FONTS_LINK}
-<style>{CSS}</style>
+<style>{CSS}{V2_CSS}</style>
 </head>
-<body>
+<body class="v2">
 {topbar()}
 <main class="wrap">
-  <h1>Dive destination season guides</h1>
+  <p class="kick">Destination directory</p>
+  <h1 style="margin-top:0">Dive destination season guides</h1>
   <p class="meta">{desc}</p>
-  <ul class="dirlist">{items}</ul>
+  <ul class="dirlist rev">{items}</ul>
   <a class="cta" href="../index.html">Open the interactive dive planner &rarr;</a>
 </main>
 {footer_html()}
+<script>{REVEAL_JS}</script>
 </body></html>"""
 
 # ---------------------------------------------------------------- gear pages
@@ -1050,14 +1124,23 @@ def gear_entry(item, prefix):
                  + "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in item["specs"].items())
                  + "</dl>")
     slug = gear_slug(item["name"])
-    return (f'<div class="gentry"><div class="gphoto"><a href="{slug}.html">{imgtag}</a></div>'
+    return (f'<div class="gentry rev"><div class="gphoto"><a href="{slug}.html">{imgtag}</a></div>'
             f'<div><h3>{item.get("rank", "")}. <a class="gitem-link" href="{slug}.html">{esc(item["name"])}</a></h3>'
             f'<p class="greview">{esc(item.get("review") or item.get("blurb"))}</p>{specs}{buy_box(item)}'
             f'<p class="meta" style="margin-top:8px"><a href="{slug}.html">Full page: photos, specs &amp; prices &rarr;</a></p></div></div>')
 
-def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None):
+def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None, hero_html=None):
+    """Shared page shell. Default: plain gradient hero band with the page h1.
+    Pass hero_html (built with photo_hero) to get the photo-hero treatment
+    inside the content column instead — the plain hero is then skipped."""
     ldtag = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>' if ld else ""
     h1 = esc(title.split(" | ")[0].split(" — ")[0])
+    if hero_html:
+        body = f'<main class="wrap">{hero_html}{inner}</main>'
+    else:
+        body = (f'<header class="hero plain"><h1>{h1}</h1>'
+                f'{f"<p>{esc(hero_sub)}</p>" if hero_sub else ""}</header>'
+                f'<main class="wrap">{inner}</main>')
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1068,13 +1151,13 @@ def content_shell(title, desc, url, prefix, hero_sub, inner, ld=None):
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{esc(url)}">
 {ldtag}
 {FONTS_LINK}
-<style>{CSS}</style>
+<style>{CSS}{V2_CSS}</style>
 </head>
-<body>
+<body class="v2">
 {topbar(prefix)}
-<header class="hero plain"><h1>{h1}</h1>{f'<p>{esc(hero_sub)}</p>' if hero_sub else ''}</header>
-<main class="wrap">{inner}</main>
+{body}
 {footer_html(prefix)}
+<script>{REVEAL_JS}</script>
 </body></html>"""
 
 def gear_page(cat, prefix="../"):
@@ -1082,7 +1165,9 @@ def gear_page(cat, prefix="../"):
     title = f'{cat.get("title") or ("Top " + cat["category"])} | DiveSZN'
     url = BASE + "gear/" + slug + ".html"
     intro = cat.get("article_intro") or ""
-    parts = [f'<p class="greview" style="max-width:80ch">{esc(intro)}</p>'] if intro else []
+    parts = ['<p class="kick">Gear buyer&#8217;s guide</p>']
+    if intro:
+        parts.append(f'<p class="greview" style="max-width:80ch">{esc(intro)}</p>')
     if cat.get("thickness_groups"):
         for g in cat["thickness_groups"]:
             head = esc(g.get("label") or g["thickness"]) + (f' · {esc(g["water"])}' if g.get("water") else "")
@@ -1155,14 +1240,15 @@ def gear_index_page(gear, prefix="../"):
                           f'<span><b>{esc(it["name"])}</b><small>{frm}</small></span></a>')
             cols += f'<div class="gbcol"><b class="gbrand">{esc(b)}</b>{brows}</div>'
         gslug = gear_slug(cat["category"])
-        bsec += (f'<section class="dregion"><h3><span>{esc(cat["category"])}</span>'
+        bsec += (f'<section class="dregion rev"><h3><span>{esc(cat["category"])}</span>'
                  f'<span class="bcount">{n} product{"" if n == 1 else "s"} · '
                  f'<a href="{gslug}.html" style="color:var(--accent)">guide &rarr;</a></span></h3>'
                  f'<div class="gbgrid">{cols}</div></section>')
     desc = "DiveSZN scuba gear — every product under its brand, plus ranked buyer's guides for masks, fins, regulators, BCDs, dive computers and wetsuits."
-    inner = (f'<p class="greview" style="max-width:80ch">{esc(gear.get("intro") or "")}</p>'
+    inner = (f'<p class="kick">The gear hub</p>'
+             f'<p class="greview" style="max-width:80ch">{esc(gear.get("intro") or "")}</p>'
              f'{bsec}'
-             f'<h2 style="margin-top:40px">The buyer&#8217;s guides (articles)</h2><ul class="artlist">{rows}</ul>'
+             f'<h2 style="margin-top:40px">The buyer&#8217;s guides (articles)</h2><ul class="artlist rev">{rows}</ul>'
              f'<a class="cta" href="../index.html#gear">Open the interactive gear guide &rarr;</a>')
     ld = graph_ld({"@type": "CollectionPage", "name": "DiveSZN gear buyer's guides",
                    "description": desc, "url": url},
@@ -1271,7 +1357,7 @@ def marine_article(exp, dests, prefix="../"):
         table = (f'<h2>Where &amp; when to dive it</h2>'
                  f'<p class="greview" style="max-width:78ch">Pulled live from our seasonal data — the destinations where '
                  f'{esc(exp["short"])} shows in the water, and the months to catch it.</p>'
-                 f'<div style="overflow:auto"><table><thead><tr><th>Destination</th><th>Best months</th></tr></thead>'
+                 f'<div class="tablecard rev"><table><thead><tr><th>Destination</th><th>Best months</th></tr></thead>'
                  f'<tbody>{body_rows}</tbody></table></div>')
     else:
         table = (f'<h2>Where &amp; when to dive it</h2>'
@@ -1289,18 +1375,14 @@ def marine_article(exp, dests, prefix="../"):
             for b in exp["beyond_scuba"])
         beyond = (f'<h2>Beyond scuba — snorkel &amp; cage encounters</h2>'
                   f'<p class="greview" style="max-width:78ch">{esc(exp.get("beyond_intro") or "Some of the best encounters with this animal do not run on scuba — they are snorkel or cage-diving trips. If that is the experience you are after, these are the places to book it.")}</p>'
-                  f'<div style="overflow:auto"><table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead>'
+                  f'<div class="tablecard rev"><table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead>'
                   f'<tbody>{brows}</tbody></table></div>')
     tips = "".join(f"<li>{esc(t)}</li>" for t in exp.get("tips", []))
-    if exp.get("image"):
-        cap = f'<figcaption>{esc(exp["image_credit"])}</figcaption>' if exp.get("image_credit") else ""
-        hero_img = f'<figure class="marine-hero"><img src="{esc(exp["image"])}" alt="{esc(exp["title"])}">{cap}</figure>'
-    else:
-        hero_img = ""
-    inner = (hero_img
-             + f'<p class="greview" style="max-width:78ch">{esc(exp["intro"])}</p>'
+    hero = photo_hero("Marine life guide", exp["title"], exp.get("hero_sub") or "",
+                      exp.get("image") or "", exp.get("image_credit") or "")
+    inner = (f'<p class="greview" style="max-width:78ch">{esc(exp["intro"])}</p>'
              + table + beyond
-             + (f'<div class="tipbox"><b>Good to know</b><ul>{tips}</ul></div>' if tips else "")
+             + (f'<div class="tipbox rev"><b>Good to know</b><ul>{tips}</ul></div>' if tips else "")
              + f'<a class="cta" href="{prefix}index.html">Plan a trip around it — open the dive planner &rarr;</a>')
     art = {"@type": "Article", "headline": exp["title"], "description": exp["desc"], "url": url,
            "author": {"@type": "Organization", "name": "DiveSZN"},
@@ -1309,7 +1391,8 @@ def marine_article(exp, dests, prefix="../"):
         art["image"] = exp["image"]
     ld = graph_ld(art, crumbs([("Home", BASE), ("Marine life", BASE + "marine-life/index.html"),
                                (exp["title"], url)]))
-    return content_shell(exp["title"] + " | DiveSZN", exp["desc"], url, prefix, exp.get("hero_sub"), inner, ld)
+    return content_shell(exp["title"] + " | DiveSZN", exp["desc"], url, prefix, exp.get("hero_sub"), inner, ld,
+                         hero_html=hero)
 
 def marine_index_page(prefix="../"):
     url = BASE + "marine-life/index.html"
@@ -1325,13 +1408,18 @@ def marine_index_page(prefix="../"):
             "sea lions and more — with the best destinations and seasons for each.")
     inner = (f'<p class="greview" style="max-width:80ch">The ocean&#8217;s headline encounters — what they are, and '
              f'where and when to dive them, pulled live from DiveSZN&#8217;s seasonal data.</p>'
-             f'<h2>Encounters</h2><ul class="artlist">{rows}</ul>'
+             f'<h2>Encounters</h2><ul class="artlist rev">{rows}</ul>'
              f'<a class="cta" href="../index.html">Open the dive planner &rarr;</a>')
     ld = graph_ld({"@type": "CollectionPage", "name": "Marine life encounters",
                    "description": desc, "url": url},
                   crumbs([("Home", BASE), ("Marine life", url)]))
+    lead = next((e for e in EXPERIENCES if e.get("image")), None)
+    hero = photo_hero("Marine life guides", "Marine Life",
+                      "Whale sharks to orcas — what they are, and where and when to dive them.",
+                      (lead or {}).get("image", ""), (lead or {}).get("image_credit", ""))
     return content_shell("Marine Life — Dive With the Ocean's Icons | DiveSZN", desc, url, prefix,
-                         "Whale sharks to orcas — what they are, and where and when to dive them.", inner, ld)
+                         "Whale sharks to orcas — what they are, and where and when to dive them.", inner, ld,
+                         hero_html=hero)
 
 # ---------------------------------------------------------------- month hubs
 def month_ranked(rankings, month, dests_by_name):
@@ -1380,7 +1468,7 @@ def month_page(month, rankings, dests_by_name):
                  + (f' <span class="chip">{esc(r["current_strength"])} current</span>' if r.get("current_strength") else ""))
         expect = (f'<b>What to expect in {full}:</b> {esc(mm["marine_life"])}.'
                   + (f' <b>Conditions:</b> {esc(mm["conditions"])}.' if mm.get("conditions") else ""))
-        return (f'<div class="gentry">{photo}<div>'
+        return (f'<div class="gentry rev">{photo}<div>'
                 f'<h3><a href="../destinations/{d["slug"]}.html" style="text-decoration:none;color:inherit">{esc(r["name"])}</a>{ctry}</h3>'
                 f'<div class="chips" style="margin:2px 0 10px">{chips}</div>'
                 f'<p class="greview">{esc(d.get("description") or d.get("highlights") or "")}</p>'
@@ -1394,7 +1482,7 @@ def month_page(month, rankings, dests_by_name):
         lede = (f'{rs[0]["name"]} carries the region this month.' if len(rs) == 1 else
                 f'{len(rs)} picks, ' + ("all at peak season" if peak_n == len(rs) else f"{peak_n} at peak")
                 + f' — {rs[0]["name"]} leads.')
-        sections += (f'<h2 class="region-head">{esc(g)}</h2><p class="region-lede">{esc(lede)}</p>'
+        sections += (f'<h2 class="region-head rev">{esc(g)}</h2><p class="region-lede">{esc(lede)}</p>'
                      + "".join(block(r) for r in rs))
 
     mi = MONTHS.index(month)
@@ -1416,8 +1504,19 @@ def month_page(month, rankings, dests_by_name):
     ld = graph_ld({"@type": "CollectionPage", "name": f"Best scuba diving in {full}",
                    "description": desc, "url": url},
                   crumbs([("Home", BASE), ("Best diving by month", BASE + "months/index.html"), (full, url)]))
+    # photo hero: the month's lead destination photo (the top-ranked pick with one)
+    lead_img = lead_credit = ""
+    for r in rows:
+        d0 = dests_by_name[r["name"]]
+        if d0.get("image"):
+            lead_img, lead_credit = d0["image"], d0.get("image_credit") or ""
+            break
+    hero = photo_hero("Monthly dive guide", f"Best Scuba Diving in {full}",
+                      f"Where the water is at its best in {full}, region by region.",
+                      lead_img, lead_credit)
     return content_shell(f"Best Scuba Diving in {full} — Where to Dive | DiveSZN", desc, url, "../",
-                         f"Where the water is at its best in {full}, region by region.", inner, ld)
+                         f"Where the water is at its best in {full}, region by region.", inner, ld,
+                         hero_html=hero)
 
 def months_index_page(rankings, dests_by_name):
     url = BASE + "months/index.html"
@@ -1439,12 +1538,22 @@ def months_index_page(rankings, dests_by_name):
     desc = "Month-by-month guides to the world's best scuba diving — where the season, marine life and visibility line up for each month of the year."[:160]
     inner = (f'<p class="greview" style="max-width:80ch">Twelve guides, one per month — every destination scored for '
              f'that month and grouped by region, so your travel dates pick the spot.</p>'
-             f'<h2>Guides</h2><ul class="artlist">{rows}</ul>'
+             f'<h2>Guides</h2><ul class="artlist rev">{rows}</ul>'
              f'<a class="cta" href="../index.html">Open the dive planner &rarr;</a>')
     ld = graph_ld({"@type": "CollectionPage", "name": "Best scuba diving by month", "description": desc, "url": url},
                   crumbs([("Home", BASE), ("Best diving by month", url)]))
+    # hero photo: the current month's lead destination photo
+    now_m = MONTHS[datetime.date.today().month - 1]
+    hero_img = hero_credit = ""
+    for r in month_ranked(rankings, now_m, dests_by_name):
+        d0 = dests_by_name[r["name"]]
+        if d0.get("image"):
+            hero_img, hero_credit = d0["image"], d0.get("image_credit") or ""
+            break
+    hero = photo_hero("Best diving by month", "Best Scuba Diving by Month",
+                      "Where to dive in January through December.", hero_img, hero_credit)
     return content_shell("Best Scuba Diving by Month | DiveSZN", desc, url, "../",
-                         "Where to dive in January through December.", inner, ld)
+                         "Where to dive in January through December.", inner, ld, hero_html=hero)
 
 def main():
     with open(os.path.join(ROOT, "diving-destinations.json")) as f:
@@ -1514,7 +1623,7 @@ def main():
 <title>{esc(info["title"])} Diving — Now Split by Resort Town | DiveSZN</title>
 <meta name="description" content="Our {esc(info["title"])} guide is now split into dedicated destination guides.">
 <link rel="canonical" href="{esc(url)}">{FONTS_LINK}
-<style>{CSS}</style></head><body>
+<style>{CSS}{V2_CSS}</style></head><body class="v2">
 {topbar()}
 <main class="wrap"><h1>{esc(info["title"])} — now four destinations</h1>
 <p class="meta">We split this guide so each resort town gets its own season calendar, dive sites and photos.</p>
