@@ -13,25 +13,17 @@ from fetch_images import _get, strip_html, BAD_HINT
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-site)"}
-PER_DEST = 6
+PER_DEST = 10
 
 CANDIDATE_QUERIES = {
-    "bahamas": ["Exuma Cays aerial", "Pig Beach Bahamas", "Staniel Cay", "Paradise Island Bahamas aerial", "Eleuthera pink sand", "Bahamas sandbar turquoise"],
-    "bay-islands": ["Roatan West End", "Roatan aerial Honduras", "Cayos Cochinos", "Guanaja Honduras island", "Roatan Sandy Bay beach"],
-    "fiji": ["Monuriki island", "Malolo island Fiji", "Natadola Beach", "Yasawa Fiji beach", "Fiji island aerial lagoon", "Mamanuca"],
-    "layang-layang": ["Layang Layang island", "Swallow Reef", "Spratly Islands", "coral atoll aerial", "South China Sea atoll"],
-    "malapascua-island": ["Malapascua", "Bounty Beach Malapascua", "Malapascua lighthouse", "Cebu Philippines island beach", "Philippine white beach boats"],
-    "marsa-alam": ["Sharm El Luli", "Wadi el Gemal", "Marsa Mubarak", "Marsa Alam mangrove", "Egypt Red Sea beach south", "Qulaan islands"],
-    "muscat-daymaniyat-islands": ["Daymaniyat Islands nature reserve", "Bandar Khayran Oman", "Qantab beach", "Muscat aerial coast", "Oman sea cliffs"],
-    "protea-banks": ["Margate beach South Africa", "Ramsgate beach KwaZulu-Natal", "Hibberdene", "Umzumbe coast", "South Coast KwaZulu-Natal aerial"],
-    "sharm-el-sheikh": ["Ras Mohammed National Park", "Tiran island", "Sharm el-Sheikh aerial", "Sinai coast mountains sea", "Ras Um Sid"],
-    "sipadan-island": ["Sipadan aerial", "Bohey Dulang viewpoint", "Tun Sakaran Marine Park", "Semporna islands Sabah", "Sabah island turquoise"],
-    "tofo": ["Praia do Tofo", "Tofo Mozambique", "Barra Inhambane", "Inhambane bay dhow", "Mozambique dunes beach"],
-    "utila": ["Utila", "Utila cays", "Water Cay Utila", "Utila Honduras aerial", "Utila harbour boats"],
-    "yap": ["Yap islands aerial", "Yap lagoon Micronesia", "Yap beach", "Micronesia island lagoon", "Yap Colonia"],
+    # Owner round 2026-07: replace the Galápagos profile (underwater) photo.
+    "galapagos-islands": ["hammerhead sharks Galapagos", "Galapagos shark underwater",
+                          "sea lion underwater Galapagos", "marine iguana underwater",
+                          "whale shark Darwin Galapagos", "Galapagos diving underwater",
+                          "Galapagos penguin underwater", "eagle ray Galapagos"],
 }
 
-EXCLUDE = {}
+EXCLUDE = {"galapagos-islands": __import__("re").compile(r"(map|stamp|drawing|illustration|museum|taxiderm|specimen|aquarium|zoo\b|captive)", __import__("re").I)}
 OFFERED = {
     "bahamas": ["File:Bahamas 1989 (591) Great Exuma (24986096444).jpg", "File:Bahamas 1989 (589) Great Exuma (25497769082).jpg", "File:Bahamas 1989 (588) Great Exuma (25474038752).jpg", "File:Bahamas 1989 (592) Exuma (25249275789).jpg", "File:Bahamas 1989 (757) Exuma Islands (26229646886).jpg", "File:Bahamas 1989 (342) Eleuthera Harbour Island (24320422055).jpg", "File:Bahamas 1989 (343) Eleuthera Harbour Island (24211710172).jpg", "File:Bahamas 1989 (384) Eleuthera Spanish Wells, St. George's Cay (24470041926).jpg", "File:Bahamas 1989 (387) Eleuthera Spanish Wells, St. George's Cay (24422334811).jpg", "File:Bahamas 1989 (382) Eleuthera Spanish Wells, St. George's Cay (24484777015).jpg"],
     "bay-islands": ["File:Aerial view of West End, Roatan.jpg", "File:Aerial view of Coxen Hole, Roatan.jpg", "File:Roatan looking north towards West End.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-g.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-c.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-e.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-f.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-b.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-d.jpg"],
