@@ -620,7 +620,7 @@ def pack_box(d):
 
 
 LIVEABOARD_SLUG = {
- "Sharm El Sheikh": "egypt/red-sea", "Hurghada & El Gouna": "egypt/red-sea",
+ "Sharm El Sheikh": "egypt/red-sea", "Hurghada": "egypt/red-sea",
  "Marsa Alam": "egypt/red-sea", "Dahab": "egypt/red-sea", "Maldives": "maldives", "Raja Ampat": "indonesia",
  "Komodo National Park": "indonesia", "Cocos Island": "costa-rica", "Galapagos Islands": "galapagos",
  "Socorro Island": "mexico", "Sea of Cortez": "mexico", "Seychelles": "seychelles", "Palau": "palau",
