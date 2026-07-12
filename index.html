@@ -539,6 +539,14 @@
   .gbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 26px;margin-top:14px;align-items:start}
   .gbcol{min-width:0}
   .gbrand{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:4px 0 2px}
+  .gbline{display:flex;align-items:center;gap:2px}
+  .gbline .gbrow{flex:1;min-width:0}
+  .cmp-mini{flex:0 0 auto;width:32px;height:32px;border-radius:8px;border:1px solid var(--line-strong);
+       background:#fff;color:var(--accent-deep);font-size:.82rem;line-height:1;cursor:pointer;transition:all .15s}
+  .cmp-mini:hover{border-color:var(--accent)}
+  .cmp-mini.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .cmp-mini:focus-visible{outline:2px solid var(--accent-deep);outline-offset:2px}
+  @media(max-width:640px){.cmp-mini{width:38px;height:38px}}
   .gbrow{display:flex;align-items:center;gap:12px;padding:7px 0;color:var(--ink);text-decoration:none}
   .gbrow b{display:block;font-weight:600;font-size:.92rem}
   .gbrow small{display:block;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em}
@@ -2270,7 +2278,26 @@ function refreshCmpState(){
     b.classList.toggle('on',on);
     b.innerHTML=on?'&#10003; Added to compare':'&#8646; Compare';
   }
+  var minis=document.querySelectorAll('.cmp-mini');
+  for(var j=0;j<minis.length;j++){
+    var m=minis[j], mo=CMP.some(function(x){return x.name===m.getAttribute('data-name');});
+    m.classList.toggle('on',mo);
+    m.innerHTML=mo?'&#10003;':'&#8646;';
+    m.setAttribute('aria-pressed',mo?'true':'false');
+  }
   updateCmpBar();
+}
+/* Compare from the gear hub's brand directory: same CMP machinery, scoped to
+   one category — picking an item from a different category starts a fresh
+   set (masks only compare with masks). */
+function dirCompare(di){
+  var e=(window.GEAR_DIR||[])[di]; if(!e) return;
+  var scope='dir|'+e.category;
+  if(CMP_SCOPE!==scope){ CMP=[]; CMP_SCOPE=scope; }
+  var at=-1; CMP.forEach(function(x,i){if(x.name===e.item.name)at=i;});
+  if(at>-1) CMP.splice(at,1);
+  else{ if(CMP.length>=3){flashCmp();return;} CMP.push(e.item); }
+  refreshCmpState();
 }
 function updateCmpBar(){
   var bar=document.getElementById('cmpBar'); if(!bar) return;
@@ -2355,6 +2382,7 @@ function brandOf(name){
 }
 var GEAR_ARTICLE='';   /* set only when a buyer's-guide article is opened from Articles */
 function gearBrandDir(onlyCat){
+  window.GEAR_DIR=[];   // full item refs for the directory's compare toggles
   return GEAR_GUIDE.categories.filter(function(c){return !onlyCat||c.category===onlyCat;}).map(function(c){
     var seen={}, brands={}, n=0;
     var all=(c.items||[]).slice();
@@ -2363,13 +2391,17 @@ function gearBrandDir(onlyCat){
       if(seen[it.name])return; seen[it.name]=1; n++;
       var b=brandOf(it.name);
       var lo=null; (it.options||[]).forEach(function(o){if(lo===null||o.price_usd<lo)lo=o.price_usd;});
-      (brands[b]=brands[b]||[]).push({name:it.name,image:it.image,lo:lo});
+      var di=window.GEAR_DIR.push({item:it,category:c.category})-1;
+      (brands[b]=brands[b]||[]).push({name:it.name,image:it.image,lo:lo,di:di});
     });
     var cols=Object.keys(brands).sort().map(function(b){
       var rows=brands[b].sort(function(a,x){return a.name<x.name?-1:1;}).map(function(it){
         var th=it.image?'<span class="gbthumb"><img src="'+it.image+'" alt="" loading="lazy" onerror="this.style.display=\'none\'"></span>':'<span class="gbthumb"></span>';
-        return '<a class="gbrow" href="gear/'+gearSlug(it.name)+'.html">'+th+
-          '<span><b>'+it.name+'</b><small>'+(it.lo!==null?'from '+fmtPrice(it.lo):'')+'</small></span></a>';
+        return '<span class="gbline"><a class="gbrow" href="gear/'+gearSlug(it.name)+'.html">'+th+
+          '<span><b>'+it.name+'</b><small>'+(it.lo!==null?'from '+fmtPrice(it.lo):'')+'</small></span></a>'+
+          '<button type="button" class="cmp-mini" data-name="'+it.name.replace(/"/g,'&quot;')+'" data-di="'+it.di+'" '+
+          'onclick="dirCompare('+it.di+')" aria-pressed="false" title="Compare '+it.name.replace(/"/g,'&quot;')+'" '+
+          'aria-label="Add '+it.name.replace(/"/g,'&quot;')+' to compare">&#8646;</button></span>';
       }).join('');
       return '<div class="gbcol"><b class="gbrand">'+b+'</b>'+rows+'</div>';
     }).join('');
@@ -2389,7 +2421,7 @@ function gearFilter(){
     [].slice.call(sec.querySelectorAll('.gbcol')).forEach(function(col){
       var brand=((col.querySelector('.gbrand')||{}).textContent||'').toLowerCase();
       var any=false;
-      [].slice.call(col.querySelectorAll('.gbrow')).forEach(function(a){
+      [].slice.call(col.querySelectorAll('.gbline')).forEach(function(a){
         var hit=!q||a.textContent.toLowerCase().indexOf(q)>-1||brand.indexOf(q)>-1;
         a.style.display=hit?'':'none';
         if(hit)any=true;
@@ -2430,7 +2462,7 @@ function renderGear(){
   var cat=GEAR_ARTICLE, g=document.getElementById('gearGrid');
   function cmpScope(scope,items){ if(scope!==CMP_SCOPE){CMP=[];CMP_SCOPE=scope;} GEAR_VIEW={items:items||[]}; }
   if(!cat){
-    cmpScope('',[]);
+    if(String(CMP_SCOPE).indexOf('dir|')!==0) cmpScope('',[]);   // keep directory picks across re-renders
     // a category picked in the Category select: surface the compare feature,
     // which lives on the ranked guide's entries
     var onlyCat=sel.value;
@@ -2475,7 +2507,7 @@ function renderGear(){
         foot+'</div>';
     }
   }
-  applyIcons(); updateCmpBar(); gearFilter();
+  applyIcons(); refreshCmpState(); gearFilter();
   // keep the gear address current (same format handleHash reads: #gear-<cat>-<thickness>)
   var gv=document.getElementById('view-gear');
   if(gv&&!gv.classList.contains('hidden')){
