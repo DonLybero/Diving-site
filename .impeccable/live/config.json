@@ -1,0 +1,6 @@
+{
+  "files": ["index.html", "destinations/*.html", "gear/*.html", "marine-life/*.html", "months/*.html", "about.html", "how-we-score.html", "privacy.html"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}
