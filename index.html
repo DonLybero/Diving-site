@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="vendor/leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <style>
   :root{
     --bg:#f4f9f9; --bg2:#e8f1f2; --panel:#ffffff; --panel2:#f2f8f8;
@@ -279,7 +279,7 @@
   .btn.ghost:hover{background:rgba(47,224,214,.1);border-color:var(--accent);color:var(--accent-deep);box-shadow:none}
 
   /* ---------- section headings ---------- */
-  .sec-head{font-family:var(--serif);font-size:2rem;margin:8px 0 6px;color:var(--ink);display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+  .sec-head{font-family:var(--serif);font-weight:400;font-size:2rem;margin:8px 0 6px;color:var(--ink);display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
   section>.sec-head:first-child,#view-home .sec-head{margin-top:26px}
   .sec-sub{color:var(--muted);margin:0 0 26px;font-size:.98rem;line-height:1.65;max-width:62ch}
 
@@ -370,7 +370,8 @@
   .dcar{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
        margin-right:calc((min(1180px,100vw - 36px) - 100vw)/2);padding:4px 18px 8px 4px;scroll-behavior:smooth}
   .dcar::-webkit-scrollbar{display:none}
-  .dcard{flex:0 0 clamp(220px,23vw,290px);cursor:pointer}
+  .dcard{flex:0 0 clamp(220px,23vw,290px);cursor:pointer;color:inherit;text-decoration:none}
+  .dcard:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px;border-radius:10px}
   .dcard .dimg{height:clamp(300px,34vw,420px);border-radius:10px;overflow:hidden;position:relative;
        background:linear-gradient(135deg,#cfe6e9,#b3d5da)}
   .dcard .dimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
@@ -794,9 +795,9 @@
   .article{max-width:800px;margin:0 auto;font-size:1.02rem;line-height:1.75}
   .article h3{font-size:1.6rem;margin:24px 0 8px}
   .article p{color:var(--ink-soft)}
-  .pick{background:var(--glass);border:1px solid var(--line);border-left:3px solid var(--accent-deep);border-radius:var(--r-sm);
-       padding:16px 18px;margin:14px 0;transition:transform .18s,box-shadow .18s}
-  .pick:hover{transform:translateX(3px);box-shadow:var(--shadow)}
+  .pick{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line-strong);border-radius:var(--r-sm);
+       padding:16px 18px;margin:14px 0;transition:border-color .18s,box-shadow .18s}
+  .pick:hover{border-color:var(--accent);box-shadow:var(--shadow)}
   .pick h4{margin:0 0 5px;font-family:var(--serif);font-size:1.1rem}
   .crow{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--glass);border:1px solid var(--line);
        border-radius:var(--r);padding:16px 18px;margin:10px 0;flex-wrap:wrap;transition:border-color .18s,box-shadow .18s}
@@ -813,14 +814,7 @@
        display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:10px}
   .gear-ico svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
   .feature .gear-ico{margin-bottom:6px}
-  /* ---------- hero photo ---------- */
-  .hero.has-photo{background-size:cover;background-position:center 40%}
-  .hero.has-photo h1{background:linear-gradient(180deg,#ffffff,#bff0ea);-webkit-background-clip:text;background-clip:text}
-  .hero.has-photo .tagline{color:#e8f7f5}
-  .hero.has-photo .subtag{color:#bfe0dd}
-  .hero.has-photo .eyebrow{color:#7df0e8}
-  .hero.has-photo .eyebrow{background:rgba(4,26,34,.55);backdrop-filter:blur(2px)}
-  .hero .photo-credit{position:absolute;right:10px;bottom:6px;font-size:.62rem;color:rgba(233,247,246,.5);font-family:var(--mono)}
+  /* (the old .hero.has-photo variant was never applied by any JS — removed) */
   /* ---------- featured card ---------- */
   @media(min-width:760px){
     .home-grid .featured{grid-column:span 2}
@@ -876,14 +870,14 @@
   </div>
 </header>
 
-<div class="wrap">
+<main class="wrap">
 
   <!-- HOME -->
   <section id="view-home"></section>
 
   <!-- DIVE PLANNER: filter + ranked results as cards / map / year calendar -->
   <section id="view-trip" class="hidden">
-    <div class="sec-head">Dive Planner</div>
+    <h2 class="sec-head">Dive Planner</h2>
     <p class="sec-sub">Set when you can travel and how you dive — every destination is ranked
       for your dates, as best matches, a world map and a year calendar.</p>
 
@@ -982,7 +976,7 @@
 
   <!-- DESTINATIONS: browse-the-world directory + full destination profiles -->
   <section id="view-planner" class="hidden">
-    <div class="sec-head">Destinations</div>
+    <h2 class="sec-head">Destinations</h2>
 
     <!-- browse-the-world directory: hover/tap a region to reveal its countries -->
     <div id="browseDir"></div>
@@ -1020,9 +1014,9 @@
       at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price.
       We link only to authorised retailers and trusted operators, and commissions never influence our rankings.</div>
   </footer>
-</div>
+</main>
 
-<script src="vendor/leaflet.js"></script>
+<!-- standalone:leaflet -->
 <script src="diving-calendar.js"></script>
 <script>
 var DATA=null, DESTS=[], MAP=null, MARKERS=null, LAND=null, GEAR_GUIDE=null;
@@ -1272,6 +1266,18 @@ function setHeroPhoto(){
   // the full-screen intro plays once per visit; pin the band at half page after
   // so re-entering Home doesn't replay it (display:none restarts CSS animations)
   setTimeout(function(){var b=document.getElementById('heroBand'); if(b)b.classList.add('settled');},3100);
+  // the four looping videos pause whenever the band leaves the viewport (or
+  // the tab switches away from Home) — no background decode cost
+  var band=document.getElementById('heroBand');
+  if(band && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(en){
+      var vis=en[0].isIntersecting;
+      [].slice.call(band.querySelectorAll('video')).forEach(function(v){
+        if(vis){var pr=v.play(); if(pr&&pr.catch)pr.catch(function(){});}
+        else v.pause();
+      });
+    },{threshold:0}).observe(band);
+  }
   for(var i=0;i<HERO_PICKS.length;i++){
     var d=DivingCalendar.getDestination(DESTS,HERO_PICKS[i]);
     if(d&&d.image){
@@ -1357,7 +1363,7 @@ function showSub(v){
   });
   if(v==='cards') renderPlanner();
   if(v==='calendar') renderCalendar();
-  if(v==='map') setTimeout(function(){ initMap(); if(MAP)MAP.invalidateSize(); drawMarkers(); },60);
+  if(v==='map') setTimeout(function(){ withLeaflet(function(){ initMap(); if(MAP)MAP.invalidateSize(); drawMarkers(); }); },60);
   writePlannerHash();
 }
 function refreshPlanViews(){
@@ -1661,6 +1667,19 @@ function resetPlanFilters(){
   refreshPlanViews(); writePlannerHash();
 }
 
+/* Leaflet (148 KB) loads on demand, the first time the map view opens —
+   the homepage never pays for it. The standalone build inlines it instead. */
+var LEAFLET_LOADING=false;
+function withLeaflet(cb){
+  if(typeof L!=='undefined'){cb();return;}
+  if(LEAFLET_LOADING){setTimeout(function(){withLeaflet(cb);},120);return;}
+  LEAFLET_LOADING=true;
+  var s=document.createElement('script');
+  s.src='vendor/leaflet.js';
+  s.onload=cb;
+  s.onerror=function(){LEAFLET_LOADING=false;cb();};   // initMap shows the no-library note
+  document.head.appendChild(s);
+}
 function initMap(){
   if(typeof L==='undefined'){document.getElementById('mapNote').textContent='Map library could not load. Coordinates are still in the data.';return;}
   if(MAP) {MAP.invalidateSize();return;}
@@ -1813,22 +1832,22 @@ function renderHome(){
   pool.forEach(function(r){ if(topAug.length<8 && !seenC[r.country]){ seenC[r.country]=1; topAug.push(r); } });
   var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.map(function(c,i){
     var g=leadItem(c);
-    return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="location.href=\'gear/'+gearSlug(g.name)+'.html\'">'+
+    return '<a class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" href="gear/'+gearSlug(g.name)+'.html">'+
       '<div class="dimg">'+(g.image?'<img src="'+g.image+'" alt="'+esc(g.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<span class="dcap">'+g.name+'</span>'+
       '<div class="dmeta"><span class="score" style="font-size:.68rem">#1 '+c.category.replace(/s$/,'')+' on DiveSZN</span></div>'+
-      '</div>';
+      '</a>';
   }):GEAR.slice(0,6).map(function(g,i){
-    return '<div class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="showTab(\'gear\')">'+
+    return '<a class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" href="#gear" onclick="showTab(\'gear\');return false;">'+
       '<div class="dimg"></div><span class="dcap">'+g.name+'</span>'+
-      '<div class="dmeta"><span class="score" style="font-size:.68rem">our top pick</span></div></div>';})).join('');
+      '<div class="dmeta"><span class="score" style="font-size:.68rem">our top pick</span></div></a>';})).join('');
   var sitePrev=topAug.map(function(r,i){
     var dd=DivingCalendar.getDestination(DESTS,r.name)||{};
-    return '<div class="dcard rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" onclick="openProfile(\''+esc(r.name)+'\')">'+
+    return '<a class="dcard rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" href="destinations/'+(dd.slug||'index')+'.html">'+
       '<div class="dimg">'+((dd.image_dest||dd.image)?'<img src="'+(dd.image_dest||dd.image)+'" alt="'+esc(r.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
       '<span class="dcap">'+r.name+' · '+r.country+'</span>'+
       '<div class="dmeta">'+tempStr(r.water_temp_c)+' water · '+(r.visibility_m?r.visibility_m+' m viz':r.rating.toLowerCase()+' season')+'</div>'+
-      '</div>';}).join('');
+      '</a>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   var crew='<div class="crew-pin" id="crewPin"><div class="crew-slide" id="crewSlide">'+
     '<div class="crew-photo"><img src="'+CREW_IMG.src+'" alt="Divers preparing gear" '+
@@ -1844,7 +1863,7 @@ function renderHome(){
     '<div class="rotor"><hr class="r-line"><div class="r-word" id="rotorWord">Scored for '+MONTH_FULL[nowMonth]+', rechecked every season</div><hr class="r-line"></div>'+
     '<div class="dcar-wrap">'+
     '<div class="dcar-head">'+
-    '<div class="sec-head">Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</div>'+
+    '<h2 class="sec-head">Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</h2>'+
     '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it. Independent, no sponsored rankings.</p>'+
     '</div>'+
     '<div class="dcar-box"><div class="dcar" id="dcar">'+sitePrev+'</div>'+
@@ -1856,7 +1875,7 @@ function renderHome(){
     '<section class="hband rv"><div class="hb-in">'+
     '<div class="dcar-wrap">'+
     '<div class="dcar-head">'+
-    '<div class="sec-head">Everything you need to know about diving gear</div>'+
+    '<h2 class="sec-head">Everything you need to know about diving gear</h2>'+
     '<p class="sec-sub">Researched buyer’s guides for every piece of kit — real strengths, real weaknesses, and links to authorised dealers only, so your warranty stays valid.</p>'+
     '</div>'+
     '<div class="dcar-box"><div class="dcar" id="gcar">'+bestGear+'</div>'+
@@ -1868,7 +1887,7 @@ function renderHome(){
     // --- Methodology, demoted to an expander — credibility on demand, not in the way ---
     '<section class="hband rv"><div class="hb-in">'+
     '<div class="home-kicker">The method behind every number</div>'+
-    '<div class="sec-head">How does the score work?</div>'+
+    '<h2 class="sec-head">How does the score work?</h2>'+
     '<p class="sec-sub">One transparent score, the same for every destination, every month — so you compare like for like. '+
       '<a href="how-we-score.html">See the full method →</a></p>'+
     '<div class="method-eq">'+
@@ -2725,7 +2744,7 @@ function renderMarine(){
     var lead=marineCoverCard(MARINE[0],0,true);
     var grid=MARINE.slice(1).map(function(e,i){return marineCoverCard(e,i+1,false);}).join('');
     body.innerHTML='<div class="article" style="grid-column:1/-1">'+
-      '<div class="sec-head">Marine life</div>'+
+      '<h2 class="sec-head">Marine life</h2>'+
       '<p class="sec-sub">The ocean’s headline encounters — what they are, and, pulled live from our seasonal data, exactly where and when to dive them.</p>'+
       '<div class="mwall">'+lead+grid+'</div></div>';
   }else{
@@ -2809,7 +2828,7 @@ function renderDestinations(month){
         '<p>'+teaser+'</p></div></a>';
     }).join(''):'');
     g.innerHTML='<div class="article">'+
-      '<div class="sec-head">Articles</div>'+
+      '<h2 class="sec-head">Articles</h2>'+
       '<p class="sec-sub" style="text-align:left;margin:0 0 4px;max-width:80ch">One destination guide per month of the year, led by the month you are in now — plus the ranked gear buyer’s guides.</p>'+
       '<h3 class="artlist-head">Where to dive, month by month</h3>'+rows+
       '<h3 class="artlist-head" style="margin-top:30px">Gear buyer’s guides</h3>'+gearRows+'</div>';

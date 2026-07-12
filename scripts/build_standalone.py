@@ -57,7 +57,10 @@ embed = ('<script>window.__DEST_DATA__=' + json.dumps(data, ensure_ascii=False) 
          ';\nwindow.__LAND_DATA__=' + json.dumps(land, ensure_ascii=False) +
          ';\nwindow.__GEAR_DATA__=' + json.dumps(gear, ensure_ascii=False) +
          ';\nwindow.__MARINE_DATA__=' + json.dumps(marine, ensure_ascii=False) + ';</script>\n')
-html = html.replace('<script src="vendor/leaflet.js"></script>',
+# the app lazy-loads Leaflet from vendor/ on demand; the standalone build
+# inlines it at the marker instead (file:// can't fetch), so `typeof L` is
+# already defined and withLeaflet() short-circuits
+html = html.replace('<!-- standalone:leaflet -->',
                     embed + '<script>\n' + ljs + '\n</script>')
 html = html.replace('<script src="diving-calendar.js"></script>',
                     '<script>\n' + engine + '\n</script>')
