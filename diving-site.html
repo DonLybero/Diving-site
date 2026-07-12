@@ -1101,10 +1101,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   #view-home .home-grid{gap:22px;text-align:left}
   #view-home .feature .cover{height:240px}
   #view-home .trust{margin:0}
-  #view-home .trust div{background:#ffffff;text-align:left}
-  #view-home .trust .gear-ico{width:44px;height:44px;border-radius:12px;position:static;margin:0 0 12px}
-  #view-home .trust .gear-ico svg{width:22px;height:22px}
-  #view-home .trust .meta{font-size:.84rem;line-height:1.6;margin:6px 0 0}
+  #view-home .trust .tcard{text-align:left}
+  #view-home .trust .meta{font-size:.86rem;line-height:1.6;margin:0}
   .hband details.more{text-align:left}
   .rv-x{opacity:0;transform:translateX(72px);transition:opacity .65s ease,transform .65s ease}
   .rv-x.in{opacity:1;transform:none}
@@ -1242,9 +1240,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .feature .cover .badge,.card .cover .badge{position:relative;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.35)}
   .feature h4{margin:10px 0 5px;font-family:var(--serif);font-size:1.18rem;color:var(--ink)}
   .feature .big{font-size:2rem;line-height:1}
-  .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
-  .trust div{background:var(--glass);border:1px solid var(--line);border-radius:var(--r);padding:18px}
-  .trust b{color:var(--ink);font-family:var(--serif);font-size:1.05rem}
+  .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:24px 0}
+  .trust .tcard{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:22px;transition:border-color .2s ease,box-shadow .2s ease}
+  .trust .tcard:hover{border-color:var(--accent);box-shadow:0 8px 26px rgba(14,156,146,.10)}
+  .trust .tico{width:46px;height:46px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:rgba(47,224,214,.10);border:1px solid rgba(47,224,214,.28);color:var(--accent-deep);margin:0 0 14px}
+  .trust .tico .ico{font-size:24px}
+  .trust .tcard b{display:block;color:var(--ink);font-family:var(--serif);font-size:1.08rem;margin:0 0 6px}
+  .trust .tcard .meta{font-size:.9rem;line-height:1.62;color:var(--muted);margin:0}
   .pips{display:inline-flex;gap:3px;vertical-align:middle}
   .pips i{width:8px;height:8px;border-radius:50%;background:#c6dde1;display:inline-block}
   .pips i.on{background:var(--accent)}
@@ -2950,9 +2952,9 @@ function renderHome(){
     '<section class="hband hband-last rv"><div class="hb-in">'+
     '<div class="home-kicker">Why divers trust the scores</div>'+
     '<div class="trust">'+
-      '<div><div class="gear-ico"><svg viewBox="0 0 24 24">'+ICONS.compass+'</svg></div><b>Independent by design</b><br><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
-      '<div><div class="gear-ico"><svg viewBox="0 0 24 24">'+ICONS.store+'</svg></div><b>Authorised dealers only</b><br><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
-      '<div><div class="gear-ico"><svg viewBox="0 0 24 24">'+ICONS.medic+'</svg></div><b>Safety first</b><br><span class="meta">Every dive-site page lists difficulty, currents and the nearest recompression chamber.</span></div>'+
+      '<div class="tcard"><div class="tico">'+ico('compass',24)+'</div><b>Independent by design</b><span class="meta">We rank on conditions and value, not on who pays us. Affiliate links never change a score.</span></div>'+
+      '<div class="tcard"><div class="tico">'+ico('store',24)+'</div><b>Authorised dealers only</b><span class="meta">Gear links go to authorised retailers so your warranty stays valid — no grey-market resellers.</span></div>'+
+      '<div class="tcard"><div class="tico">'+ico('medic',24)+'</div><b>Safety first</b><span class="meta">Every dive-site page lists difficulty, currents and the nearest recompression chamber.</span></div>'+
     '</div>'+
     '</div></section>';
   fillDestCovers();
