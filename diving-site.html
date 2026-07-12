@@ -2151,19 +2151,32 @@ function crewScroll(){
   var p=(vh - r.top - el.offsetHeight*0.30)/(vh*0.5);
   p=Math.max(0,Math.min(1,p));
   el.style.setProperty('--cp',p.toFixed(3));
-  // the count rides the pinned stretch of scroll and finishes as it releases
-  var cnt=runway>0?Math.max(0,Math.min(1,(topH - r.top)/runway)):1;
-  crewCountSet(cnt,rm);
+  if(rm) return;
+  // rest the numbers at 0 as the section approaches, so the count starts clean
+  if(!window.__crewZeroed && p>0.02){
+    window.__crewZeroed=1;
+    [].slice.call(el.querySelectorAll('.crew-stat b')).forEach(function(b){
+      b.setAttribute('data-n',b.textContent); b.textContent='0';
+    });
+  }
+  if(p>=0.5) crewCount();
 }
-/* scrub-driven count: final values stay in the markup for no-JS and
-   reduced-motion readers; everyone else sees them climb with the scroll */
-function crewCountSet(p,rm){
+/* time-driven count: fires once as the cards arrive and always runs to
+   completion (2.4s) no matter what the scrolling does meanwhile. Final
+   values stay in the markup for no-JS and reduced-motion readers. */
+function crewCount(){
+  if(window.__crewCounted) return;
+  window.__crewCounted=true;
   [].slice.call(document.querySelectorAll('#crewSlide .crew-stat b')).forEach(function(b){
-    var t=b.getAttribute('data-n');
-    if(t==null){t=b.textContent;b.setAttribute('data-n',t);}
-    t=parseInt(t,10); if(!t) return;
-    if(rm){b.textContent=t;return;}
-    b.textContent=Math.round(t*(1-Math.pow(1-p,2)));   // gentle ease-out on the scrub
+    var target=parseInt(b.getAttribute('data-n')||b.textContent,10); if(!target) return;
+    var t0=null, dur=2400;
+    function step(ts){
+      if(t0==null)t0=ts;
+      var x=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-x,3);   // ease-out cubic
+      b.textContent=Math.round(target*e);
+      if(x<1) requestAnimationFrame(step); else b.textContent=target;
+    }
+    requestAnimationFrame(step);
   });
 }
 var HERO_VIDEO={webm:'https://donlybero.github.io/Diving-site/assets/video/hero-dive.webm', mp4:'https://donlybero.github.io/Diving-site/assets/video/hero-dive.mp4',
