@@ -93,7 +93,7 @@ DEST_QUERIES = {
                                     "Bandar Khayran Oman", "Muscat coast Oman", "Oman coast aerial sea"],
     "Sharm El Sheikh": ["Ras Muhammad underwater", "Ras Mohammed reef", "Tiran island reef",
                         "Sharm el-Sheikh reef underwater", "Naama Bay"],
-    "Hurghada & El Gouna": ["Giftun island", "Hurghada reef underwater", "Abu Nuhas wreck",
+    "Hurghada": ["Giftun island", "Hurghada reef underwater", "Abu Nuhas wreck",
                             "El Gouna lagoon aerial", "Hurghada coast Red Sea"],
     "Marsa Alam": ["Elphinstone Reef", "Abu Dabbab", "dugong Marsa Alam", "Marsa Alam reef underwater",
                    "spinner dolphins Sataya"],
@@ -128,7 +128,7 @@ DEST_REQUIRE = {
     "Mallorca": re.compile(r"(mallorca|majorca|formentor|calobra|cala|dragonera)", re.I),
     "Muscat & Daymaniyat Islands": re.compile(r"(daymaniyat|dimaniyat|bandar|muscat|oman)", re.I),
     "Sharm El Sheikh": re.compile(r"(sharm|ras.?m(o|u)hamm|tiran|naama)", re.I),
-    "Hurghada & El Gouna": re.compile(r"(hurghada|giftun|gouna|abu.?nuhas|carnatic|giannis)", re.I),
+    "Hurghada": re.compile(r"(hurghada|giftun|gouna|abu.?nuhas|carnatic|giannis)", re.I),
     "Marsa Alam": re.compile(r"(marsa.?alam|elphinstone|abu.?dabbab|sataya|dugong)", re.I),
     "Dahab": re.compile(r"(dahab|blue.?hole|sinai)", re.I),
 }
