@@ -130,6 +130,9 @@ footer .disclosure{max-width:780px;margin:14px auto 0;color:var(--muted);font-si
 .prof-essay{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 .prof-essay h2{margin:0 0 8px;font-size:1.12rem}
 .prof-essay p{margin:0;color:#33565e;line-height:1.7;font-size:.95rem}
+.dback{margin:0 0 12px;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+.dback a{color:var(--accent-deep);text-decoration:none}
+.dback a:hover{color:var(--cta-deep);text-decoration:underline}
 .gitem-kicker{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.68rem}
 .gitem-kicker a{color:var(--accent);text-decoration:none}
 .gitem-stage{margin:10px 0 26px}
@@ -1129,7 +1132,10 @@ def gear_item_page(cat, item, prefix="../"):
                    + (f'<div class="gv-pro"><h3>Where it wins</h3><ul>{pros_lis}</ul></div>' if pros_lis else "")
                    + (f'<div class="gv-con"><h3>Where it falls short</h3><ul>{cons_lis}</ul></div>' if cons_lis else "")
                    + '</div>')
-    inner = (f'<p class="meta gitem-kicker">{kicker}</p>'
+    inner = (f'<p class="dback"><a href="{prefix}index.html#gear" '
+             f'onclick="if(document.referrer.indexOf(location.host)>-1){{history.back();return false;}}">'
+             f'&larr; Back to scuba gear</a></p>'
+             f'<p class="meta gitem-kicker">{kicker}</p>'
              f'{stage_open}{photo_with_banner}{stage_close}'
              f'<h2>What makes it good?</h2>'
              f'<p class="greview" style="max-width:80ch">{esc(review)}</p>'
@@ -1205,7 +1211,10 @@ def gear_page(cat, prefix="../"):
     title = f'{cat.get("title") or ("Top " + cat["category"])} | DiveSZN'
     url = BASE + "gear/" + slug + ".html"
     intro = cat.get("article_intro") or ""
-    parts = ['<p class="kick">Gear buyer&#8217;s guide</p>']
+    parts = [f'<p class="dback"><a href="{prefix}index.html#gear" '
+             f'onclick="if(document.referrer.indexOf(location.host)>-1){{history.back();return false;}}">'
+             f'&larr; Back to scuba gear</a></p>',
+             '<p class="kick">Gear buyer&#8217;s guide</p>']
     if intro:
         parts.append(f'<p class="greview" style="max-width:80ch">{esc(intro)}</p>')
     if cat.get("thickness_groups"):
