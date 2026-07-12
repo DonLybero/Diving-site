@@ -22,9 +22,19 @@ ap.add_argument("--allow-removals", action="store_true",
                      "exist only in the canonical file are DROPPED")
 args = ap.parse_args()
 
+# Letters that NFD decomposition can't reduce to ASCII (they carry no
+# combining mark) — transliterate them first so names like "Kaş"→"kas",
+# "Bodø"→"bodo" never lose a letter. Verified 2026-07 against the full
+# 83-destination roster: no existing slug changes.
+_TRANSLIT = str.maketrans({
+    "ß": "ss", "æ": "ae", "Æ": "AE", "ø": "o", "Ø": "O", "œ": "oe", "Œ": "OE",
+    "đ": "d", "Đ": "D", "ð": "d", "Ð": "D", "þ": "th", "Þ": "TH",
+    "ł": "l", "Ł": "L", "ı": "i", "İ": "I",
+})
+
 def slugify(name):
-    s = unicodedata.normalize("NFD", name)
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")   # strip accents
+    s = unicodedata.normalize("NFD", str(name).translate(_TRANSLIT))
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")   # strip accents (ş→s, ü→u, é→e, ç→c…)
     s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
     return s
 

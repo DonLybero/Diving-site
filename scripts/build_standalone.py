@@ -50,8 +50,11 @@ html = html.replace('poster="assets/video/', 'poster="' + ASSET_BASE + 'assets/v
 html = html.replace("'assets/crew.jpg'", "'" + ASSET_BASE + "assets/crew.jpg'")
 
 # 1) inline Leaflet CSS
-html = html.replace('<link rel="stylesheet" href="vendor/leaflet.css">',
+html = html.replace('<!-- standalone:leaflet-css -->',
                     '<style>\n'+lcss+'\n</style>')
+# fetch preloads are meaningless on file:// — drop them from the standalone
+html = html.replace('<link rel="preload" href="diving-destinations.json" as="fetch" crossorigin>\n', '')
+html = html.replace('<link rel="preload" href="assets/video/hero-dive-poster.jpg" as="image">\n', '')
 # 2) embed data BEFORE leaflet/engine scripts, then inline leaflet + engine
 embed = ('<script>window.__DEST_DATA__=' + json.dumps(data, ensure_ascii=False) +
          ';\nwindow.__LAND_DATA__=' + json.dumps(land, ensure_ascii=False) +
