@@ -767,11 +767,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   @keyframes hbmB{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 40% 0 0)}}
   @keyframes hbmC{from{clip-path:inset(0 0 0 48.5%)}to{clip-path:inset(0 0 0 0)}}
   @media(prefers-reduced-motion:reduce){.hbm{animation:none;clip-path:none}}
-  .band-pause{position:absolute;left:10px;bottom:8px;z-index:3;background:rgba(4,26,34,.55);color:#d9f4f1;
-       border:1px solid rgba(255,255,255,.28);border-radius:999px;font-family:var(--mono);font-size:.6rem;
-       letter-spacing:.1em;padding:6px 12px;cursor:pointer}
-  .band-pause:hover{background:rgba(4,26,34,.75)}
-  .band-pause:focus-visible{outline:2px solid #7df0e8;outline-offset:2px}
+  /* (band pause control removed — owner call, July 2026; reduced-motion still
+     removes the videos entirely and off-viewport auto-pause remains) */
   .hero{position:relative;overflow:hidden;text-align:center;padding:clamp(56px,9vh,110px) 18px;
         display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:78vh;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
@@ -1553,7 +1550,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <div class="hbm hbm-coral"></div>
   <div class="hbm hbm-sage"></div>
   <div class="hbm hbm-lilac"></div>
-  <button class="band-pause" id="bandPause" aria-pressed="false" aria-label="Pause background video">PAUSE</button>
   <span class="photo-credit" id="heroCredit"></span>
 </div>
 </div>
@@ -2199,7 +2195,7 @@ function crewCount(){
   window.__crewCounted=true;
   [].slice.call(document.querySelectorAll('#crewSlide .crew-stat b')).forEach(function(b){
     var target=parseInt(b.getAttribute('data-n')||b.textContent,10); if(!target) return;
-    var t0=null, dur=2400;
+    var t0=null, dur=1800;
     function step(ts){
       if(t0==null)t0=ts;
       var x=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-x,3);   // ease-out cubic
@@ -2227,7 +2223,6 @@ function initHeroMedia(){
   if(v){
     if(rm){
       document.querySelectorAll('#heroBand .hbm').forEach(function(t){t.remove();});
-      var pb0=document.getElementById('bandPause'); if(pb0)pb0.remove();
       v.remove();
     }else{
       feedVideo(v);
@@ -2242,28 +2237,12 @@ function initHeroMedia(){
     var hh=document.getElementById('hero'); if(hh)hh.classList.add('settled');
   },3100);
   if(rm) return;
-  // user-facing pause control (WCAG 2.2.2) + auto-pause off-viewport
-  var pb=document.getElementById('bandPause');
-  window.__heroPaused=sessionStorage.getItem('heroPaused')==='1';
-  function applyPause(){
-    var vv=document.getElementById('heroVideo'); if(!vv)return;
-    if(window.__heroPaused){vv.pause();}
-    else{var pr=vv.play(); if(pr&&pr.catch)pr.catch(function(){});}
-    if(pb){pb.textContent=window.__heroPaused?'PLAY':'PAUSE';
-      pb.setAttribute('aria-pressed',window.__heroPaused?'true':'false');
-      pb.setAttribute('aria-label',(window.__heroPaused?'Play':'Pause')+' background video');}
-  }
-  if(pb) pb.addEventListener('click',function(){
-    window.__heroPaused=!window.__heroPaused;
-    sessionStorage.setItem('heroPaused',window.__heroPaused?'1':'0');
-    applyPause();
-  });
-  applyPause();
+  // auto-pause off-viewport: no background decode cost
   var band=document.getElementById('heroBand');
   if(band && 'IntersectionObserver' in window){
     new IntersectionObserver(function(en){
       var vv=document.getElementById('heroVideo'); if(!vv)return;
-      if(en[0].isIntersecting){ if(!window.__heroPaused){var pr=vv.play(); if(pr&&pr.catch)pr.catch(function(){});} }
+      if(en[0].isIntersecting){var pr=vv.play(); if(pr&&pr.catch)pr.catch(function(){});}
       else vv.pause();
     },{threshold:0}).observe(band);
   }
