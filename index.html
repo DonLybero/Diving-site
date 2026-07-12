@@ -2313,6 +2313,12 @@ function openCompare(){
   if(CMP.length<2) return;
   var items=CMP.slice(), keys=[];
   items.forEach(function(it){Object.keys(it.specs||{}).forEach(function(k){if(keys.indexOf(k)<0)keys.push(k);});});
+  // rows every pick can answer come first; one-product-only rows sink
+  keys.sort(function(a,b){
+    var ca=items.filter(function(it){return it.specs&&it.specs[a];}).length;
+    var cb=items.filter(function(it){return it.specs&&it.specs[b];}).length;
+    return cb-ca;
+  });
   var photo='<tr><td class="rowlab"></td>'+items.map(function(it){
     return '<td><div class="cmp-photo">'+(it.image?'<img src="'+it.image+'" alt="" onerror="this.style.display=\'none\'">':'')+'</div></td>';}).join('')+'</tr>';
   var name='<tr><td class="rowlab">Model</td>'+items.map(function(it){return '<td class="cmp-name">'+it.name+'</td>';}).join('')+'</tr>';
