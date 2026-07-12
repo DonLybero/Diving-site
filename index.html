@@ -241,6 +241,17 @@
        font-weight:600;transition:background .12s}
   .cal td.name:hover{background:#e2eef0}
   .cal td.name:focus-visible{outline:2px solid var(--accent-deep);outline-offset:-2px;background:#e2eef0}
+  /* hover card: month conditions + what you might encounter (replaces the raw title tooltip) */
+  .cal-tip{position:fixed;z-index:60;pointer-events:none;max-width:300px;background:#fff;
+       border:1px solid var(--line-strong);border-radius:10px;box-shadow:0 14px 34px -14px rgba(6,51,60,.4);
+       padding:10px 13px;opacity:0;transition:opacity .12s ease}
+  .cal-tip.on{opacity:1}
+  .cal-tip .ct-head{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;color:var(--muted);
+       display:flex;gap:8px;align-items:center;margin-bottom:5px;white-space:nowrap}
+  .cal-tip .ct-pill{padding:1px 8px;border-radius:999px;font-weight:700}
+  .cal-tip .ct-name{font-family:var(--serif);font-size:.95rem;color:var(--ink);margin:0 0 3px}
+  .cal-tip .ct-life{font-size:.8rem;color:var(--ink-soft);line-height:1.45;margin:0}
+  .cal-tip .ct-life::first-letter{text-transform:uppercase}
   .cal td.name small{color:var(--muted);display:block;font-size:.62rem;font-weight:400}
   .cal td.cell{width:40px;height:32px;text-align:center;color:#04202b;font-weight:700;border-radius:7px;cursor:pointer;
        font-family:var(--mono);transition:transform .12s}
@@ -1536,11 +1547,22 @@ function initControls(){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
   // keyboard: Enter/Space on a calendar destination name opens its profile
-  document.getElementById('calTable').addEventListener('keydown',function(e){
+  var calT=document.getElementById('calTable');
+  calT.addEventListener('keydown',function(e){
     if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('name')){
       e.preventDefault(); e.target.click();
     }
   });
+  // hover card on month cells (delegated); hide when leaving or scrolling
+  calT.addEventListener('mouseover',function(e){
+    var td=e.target.closest?e.target.closest('td.cell'):null;
+    if(td) calTipShow(td); else calTipHide();
+  });
+  calT.addEventListener('mouseleave',calTipHide);
+  calT.addEventListener('click',calTipHide);
+  var cw=document.querySelector('.cal-wrap');
+  if(cw) cw.addEventListener('scroll',calTipHide,{passive:true});
+  window.addEventListener('scroll',calTipHide,{passive:true});
   document.getElementById('gearCat').addEventListener('change',function(){GEAR_ARTICLE='';renderGear();});
   document.getElementById('gearSearch').addEventListener('input',gearFilter);
   document.getElementById('gearSearch').addEventListener('keydown',function(e){
@@ -1580,14 +1602,36 @@ function renderCalendar(){
       var mm=d.monthly[m], t=d.monthly_temp_c[m];
       var txt = show==='temp'?(t==null?'':t) : show==='viz'?(mm.visibility_m==null?'':mm.visibility_m) : mm.rating[0];
       if(mm.rating==='Closed') txt='✕';
-      var title=d.name+' — '+m+': '+mm.rating+' · '+tempStr(t)+' · '+vizStr(mm.visibility_m)+' · '+mm.marine_life;
-      return '<td class="cell'+(m===hlMonth?' hl':'')+'" style="background:'+RCOLOR[mm.rating]+';color:'+RTEXT[mm.rating]+'" title="'+title.replace(/"/g,'&quot;')+
-        '" onclick="openProfile(\''+esc(d.name)+'\')">'+txt+'</td>';
+      return '<td class="cell'+(m===hlMonth?' hl':'')+'" style="background:'+RCOLOR[mm.rating]+';color:'+RTEXT[mm.rating]+
+        '" data-n="'+escAttr(d.name)+'" data-m="'+m+'" onclick="openProfile(\''+esc(d.name)+'\')">'+txt+'</td>';
     }).join('');
     return '<tr><td class="name" role="button" tabindex="0" onclick="openProfile(\''+esc(d.name)+'\')">'+d.name+
       '<small>'+d.country+' · <span class="cur-'+d.current_strength+'">'+d.current_strength+' current</span></small></td>'+cells+'</tr>';
   }).join('');
   document.getElementById('calTable').innerHTML=head+'<tbody>'+body+'</tbody>';
+}
+
+/* Calendar hover card: leads with the month's marine life. Hover-capable
+   pointers only — on touch, a tap still opens the destination page, which
+   carries the same information. */
+var CAL_TIP=null;
+function calTipHide(){ if(CAL_TIP) CAL_TIP.classList.remove('on'); }
+function calTipShow(td){
+  if(!(window.matchMedia&&window.matchMedia('(hover: hover)').matches)) return;
+  var name=td.getAttribute('data-n'), m=td.getAttribute('data-m');
+  var d=DivingCalendar.getDestination(DESTS,name); if(!d||!d.monthly[m]) return;
+  var mm=d.monthly[m];
+  if(!CAL_TIP){CAL_TIP=document.createElement('div');CAL_TIP.className='cal-tip';document.body.appendChild(CAL_TIP);}
+  CAL_TIP.innerHTML='<div class="ct-head"><span class="ct-pill" style="background:'+RCOLOR[mm.rating]+';color:'+RTEXT[mm.rating]+'">'+mm.rating+'</span>'+
+    '<span>'+m.toUpperCase()+' · '+tempStr(d.monthly_temp_c[m])+' · '+vizStr(mm.visibility_m)+'</span></div>'+
+    '<div class="ct-name">'+d.name+'</div>'+
+    '<p class="ct-life">'+mm.marine_life+'</p>';
+  var r=td.getBoundingClientRect();
+  CAL_TIP.classList.add('on');
+  var tw=CAL_TIP.offsetWidth, th=CAL_TIP.offsetHeight;
+  var x=Math.max(8,Math.min(window.innerWidth-tw-8, r.left+r.width/2-tw/2));
+  var y=r.top-th-10; if(y<8) y=r.bottom+10;
+  CAL_TIP.style.left=Math.round(x)+'px'; CAL_TIP.style.top=Math.round(y)+'px';
 }
 
 /* Expandable dive-site list shown on every destination card (planner + search). */
