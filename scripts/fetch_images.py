@@ -137,6 +137,7 @@ DEST_REQUIRE = {
 # Visually-vetted exact Commons files, tried before any search (mirrors the
 # marine fetcher's PINNED map) — for destinations where search keeps missing.
 DEST_PINNED = {
+    "Protea Banks": ["File:Tide Pool, Ramsgate Beach.jpg"],
     # Genuine Fuvahmulah shot (photo audit 2026-07: the previous hero was a
     # Tiger Beach, Bahamas file). No genuine Fuvahmulah underwater photo
     # exists on Commons; this topside harbour shot is the honest choice.
@@ -170,8 +171,7 @@ DEST_PINNED = {
 # renders the branded gradient hero instead. Never auto-fill these — a
 # wrong-place photo is worse than none. Remove from this set only when the
 # owner supplies/approves a genuine shot.
-DEST_NO_HERO = {
-    "Protea Banks",   # submerged shoal, 8 km offshore; Commons has nothing genuine
+DEST_NO_HERO = {   # submerged shoal, 8 km offshore; Commons has nothing genuine
 }
 
 # Exact-file rejects per destination — visually-audited duds that pass the
