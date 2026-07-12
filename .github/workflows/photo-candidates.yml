@@ -6,6 +6,9 @@ name: Photo candidates (owner review)
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - scripts/photo_candidates.py
 
 permissions:
   contents: write

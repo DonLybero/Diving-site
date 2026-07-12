@@ -16,164 +16,19 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 10
 
 CANDIDATE_QUERIES = {
-    # Owner round 2026-07-12: 19 new touristic-city destinations - scenic hero candidates.
-    "antalya": ["Antalya harbour", "Kemer Antalya coast", "Antalya Kaleici marina", "Antalya cliffs coast"],
-    "bodrum": ["Bodrum castle harbour", "Bodrum marina", "Bodrum coast aerial", "Bodrum bay"],
-    "fethiye": ["Fethiye harbour", "Fethiye bay boats", "Oludeniz lagoon", "Fethiye coast"],
-    "rhodes": ["Mandraki harbour Rhodes", "Lindos bay Rhodes", "Anthony Quinn Bay", "Kallithea Springs Rhodes"],
-    "corfu": ["Paleokastritsa", "Paleokastritsa bay Corfu", "Corfu coast", "Corfu old town sea"],
-    "zakynthos": ["Keri Zakynthos", "Marathonisi Zakynthos", "Limni Keriou", "Zakynthos coast"],
-    "ibiza": ["Es Vedra Ibiza", "Cala d'Hort Ibiza", "Dalt Vila Ibiza sea", "Ibiza cala coast"],
-    "gran-canaria": ["Arinaga Gran Canaria coast", "Sardina Galdar Gran Canaria", "Gran Canaria coast", "Agaete Gran Canaria coast"],
-    "lanzarote": ["Puerto del Carmen Lanzarote", "Playa Chica Lanzarote", "Lanzarote volcanic coast", "Playa Blanca Lanzarote"],
-    "puerto-galera": ["Puerto Galera bay", "Sabang Beach Puerto Galera", "Muelle Puerto Galera", "Puerto Galera Mindoro"],
-    "coron": ["Coron Palawan lagoon", "Kayangan Lake Coron", "Coron limestone cliffs", "Busuanga coast"],
-    "panglao-balicasag": ["Balicasag Island", "Alona Beach Panglao", "Panglao Bohol coast", "Panglao beach"],
-    "moalboal": ["Moalboal Cebu", "Panagsama Beach Moalboal", "Pescador Island Cebu", "Moalboal coast"],
-    "naples": ["Gaiola Naples", "Posillipo coast Naples", "Baia castle gulf", "Gulf of Naples coast"],
-    "sorrento-capri": ["Sorrento Marina Grande", "Capri Faraglioni", "Punta Campanella", "Massa Lubrense coast"],
-    "taormina": ["Isola Bella Taormina", "Taormina bay", "Giardini Naxos bay", "Capo Taormina"],
-    "arraial-do-cabo": ["Arraial do Cabo", "Prainhas do Pontal Arraial do Cabo", "Pontal do Atalaia", "Ilha do Farol Arraial"],
-    "rio-de-janeiro": ["Ilhas Cagarras", "Cagarras Ipanema", "Rio de Janeiro coast islands", "Marina da Gloria Rio"],
-    "salvador": ["Farol da Barra Salvador", "Porto da Barra Salvador", "Baia de Todos os Santos", "Salvador Bahia coast"],
+    # Owner re-round 2026-07-12b: fresh angles for Rio & Salvador (first picks were 'none').
+    "rio-de-janeiro": ["Ilha Rasa Rio de Janeiro", "Cagarras Islands boat", "Cagarras Ipanema island", "Ilhas Tijucas Rio", "Rio de Janeiro islands ocean", "Praia Vermelha Rio", "Marina da Gloria Rio", "Guanabara Bay islands"],
+    "salvador": ["Baia de Todos os Santos boat", "Ilha dos Frades Bahia", "Ilha de Itaparica", "Salvador Bahia coastline", "Baia de Todos os Santos island", "Salvador Bahia sea", "Ribeira Salvador bay", "Bahia Todos os Santos aerial"],
 }
 
 # Exact Commons titles surfaced by the 2026-07 city research (fetched first, before queries).
-SEED = {
-    "puerto-galera": [
-        "File:Muelle Bay, Puerto Galera, Oriental Mindoro, April 2023.jpg",
-        "File:PH - Puerto Galera - White Beach - sunset 1.jpg",
-        "File:Puerto Galera Beach (Philippines).jpg",
-        "File:Coco Beach in Puerto Galera.jpg",
-        "File:Aninuan Beach, near Puerto Galera, Philippines.jpg",
-    ],
-    "coron": [
-        "File:Kayangan Lake, Coron - Palawan.jpg",
-        "File:Twin Lagoon, Coron, Palawan.jpg",
-        "File:Coron Palawan, Philippines 05.jpg",
-        "File:Barracuda Lake (Coron, Palawan; 03-17-2024).jpg",
-        "File:Entrance lagoon to Barracuda Lake, Coron, Palawan - panoramio.jpg",
-    ],
-    "moalboal": [
-        "File:White Beach Moalboal.JPG",
-        "File:High tide at White Beach in Moalboal (cropped).JPG",
-        "File:2014 11 Moalboal 21 sardine run (16024303526).jpg",
-        "File:2014 11 Moalboal 15 Sardine 1 S (15864306517).jpg",
-        "File:2014 11 Moalboal 16 Sardine 2 fuzzy ball (15864306527).jpg",
-    ],
-    "ibiza": [
-        "File:Es Vedra - panoramio - anibal amaro (2).jpg",
-        "File:Ibiza rock volcano (747230830).jpg",
-        "File:Dalt Vila.JPG",
-        "File:Dalt Vila 004.JPG",
-    ],
-    "gran-canaria": [
-        "File:Dunes of Maspalomas.JPG",
-        "File:Amazing Maspalomas Dunes.JPG",
-        "File:Las Canteras Beach - La Barra - Las Palmas Gran Canaria.jpg",
-        "File:Roque Nublo - Gran Canaria.JPG",
-        "File:El Roque Nublo, Gran Canaria.JPG",
-    ],
-    "lanzarote": [
-        "File:Squatina squatina lanzarote.jpg",
-        "File:Papagayo-Strände, Luftbild.JPG",
-        "File:Timanfaya - Lanzarote 01.JPG",
-        "File:El Diablo by César Manrique - Timanfaya - Lanzarote.JPG",
-    ],
-    "naples": [
-        "File:Isoletta della Gaiola (Napoli) 01.jpg",
-        "File:Isoletta della Gaiola (Napoli) 04.jpg",
-        "File:Parco archeologico di Baia - via herculanea.jpg",
-        "File:Parco archeologico di Baia - portus Julius 3.jpg",
-        "File:Parco archeologico di Baia - pilone e stella marina.jpg",
-    ],
-    "taormina": [
-        "File:Isola Bella-Taormina-Messina-Sicilia-Italy - Creative Commons by gnuckx (3811726530).jpg",
-        "File:Isola Bella-Taormina-Sicilia-Italy - Creative Commons by gnuckx (3667614402).jpg",
-        "File:DSCF7811-Dawn Sunset-Isola Bella-Taormina-Sicilia-Italy-gnuckx CC0 HQ (4277439920).jpg",
-        "File:Isola Bella-Taormina-Messina-Sicilia-Italy Creative Commons by gnuckx (3811732382).jpg",
-        "File:Sunrise in Isola Bella, Taormina.jpg",
-    ],
-    "antalya": [
-        "File:Roman Harbour of Antalya - 2014.10 - panoramio (1).jpg",
-        "File:Falezlerden Antalya Konyaaltı Plajına doğru bir görünüm.jpg",
-        "File:Kemer beach, Antalya.jpg",
-        "File:Antalya Clock Tower 01.jpg",
-        "File:Antalya Hafen.jpg",
-    ],
-    "bodrum": [
-        "File:Bodrum Hafen.jpg",
-        "File:Bodrum Castle (2017).jpg",
-        "File:Bodrum Castle 5.JPG",
-        "File:Turkey.Bodrum084.jpg",
-        "File:Sunset over Bodrum I.jpg",
-    ],
-    "fethiye": [
-        "File:Oludeniz-beach.JPG",
-        "File:Fethiye harbour (1092663484).jpg",
-        "File:The Gulf of Fethiye. Kizilada Restaurant and Kızılada Feneri.jpg",
-        "File:Butterfly Valley, Fethiye.jpg",
-        "File:Kabak Valley - Fethiye.jpg",
-    ],
-    "arraial-do-cabo": [
-        "File:Pôr do Sol na praia grande, Arraial do Cabo.jpg",
-        "File:Cavern in Arraial do Cabo.jpg",
-        "File:Praia do Farol - Arraial do cabo.JPG",
-        "File:Praia do Forno, Arraial do Cabo, RJ.JPG",
-        "File:Prainha Arraial do Cabo.jpg",
-    ],
-    "rio-de-janeiro": [
-        "File:Ilhas Cagarras em frente Ipanema.JPG",
-        "File:Ilhas Cagarras.jpg",
-        "File:Rio de Janeiro visto das Ilhas Cagarras.jpg",
-        "File:Ipanema beach and neighborhood - Rio de Janeiro Brazil (5269532812).jpg",
-        "File:Rio 08 2013 Ipanema beach panorama 6911.jpg",
-    ],
-    "salvador": [
-        "File:Vista do Farol da Barra Salvador Bahia 2021-1372.jpg",
-        "File:Praia do Porto da Barra (Salvador).jpg",
-        "File:Forte de Santo Antônio--Farol da Barra Salvador Bahia Vista Aérea 2021-0151.jpg",
-        "File:Baía de Todos os Santos.jpg",
-    ],
-    "rhodes": [
-        "File:Aerial view of Lindos, Rhodes, Greece (51698815608).jpg",
-        "File:Aerial view of Rhodes Old Town, Greece (51698566526).jpg",
-        "File:Aerial view of Lindos Beach and Pallas Beach, Rhodes, Greece (51699426960).jpg",
-        "File:Aerial view of Tsambika Monastery and Tsambika Beach, Rhodes, Greece (51698552836).jpg",
-        "File:Aerial view of Elli Beach and Akti Miaouli Beach, Rhodes, Greece (51698848208).jpg",
-    ],
-    "corfu": [
-        "File:Korfu (GR), Paleokastritsa -- 2018 -- 1254.jpg",
-        "File:Korfu (GR), Paleokastritsa, Kloster -- 2018 -- 1251.jpg",
-        "File:Korfu (GR), Korfu, Alte Festung -- 2018 -- 1352.jpg",
-        "File:Korfu (GR), Korfu, Ptichia -- 2018 -- 1112.jpg",
-        "File:Bay of Palaiokastritsa from Bellavista.JPG",
-    ],
-    "zakynthos": [
-        "File:Shipwreck at Navagio Beach Zakynthos Greece (45557496695).jpg",
-        "File:Aerial of Marathonisi island Zakynthos, Greece (31532464757).jpg",
-        "File:Mizithres Rocks, Keri, Zakynthos, Greece 01.jpg",
-        "File:Coast Xigia Beach Zakynthos, Greece (45564263815).jpg",
-        "File:Navagio Beach and Shipwreck of the Panagiotis at 'Smugglers Cove' Zakynthos.JPG",
-    ],
-    "panglao-balicasag": [
-        "File:Balicasag Marine Sanctuary, Bohol, Philippines 01.jpg",
-        "File:Balicasag Marine Sanctuary, Bohol, Philippines 03.jpg",
-        "File:Balicasag island, Bohol.jpg",
-        "File:Panglao banner Alona Beach.jpg",
-        "File:Alona beach - panoramio.jpg",
-    ],
-    "sorrento-capri": [
-        "File:Marina Grande, Sorrento.jpg",
-        "File:Capri farallones 01.JPG",
-        "File:CapriFaraglioni.JPG",
-        "File:Ferry and yacht port of Sorrento - Campania - Italy - July 12th 2013 - 03.jpg",
-        "File:Statue of Augustus & Faraglioni rocks, Capri.jpg",
-    ],
-}
+SEED = {}
 
 EXCLUDE = {"sharm-el-sheikh": __import__("re").compile(r"(map|stamp|drawing|illustration|museum|taxiderm|specimen|aquarium|zoo\b|captive)", __import__("re").I)}
 OFFERED = {
+    "rio-de-janeiro": ["File:Ilhas Cagarras.jpg", "File:Rio de Janeiro visto das Ilhas Cagarras.jpg", "File:Ipanema beach and neighborhood - Rio de Janeiro Brazil (5269532812).jpg", "File:Rio 08 2013 Ipanema beach panorama 6911.jpg", "File:Arquipélago das Cagarras – Leblon - panoramio.jpg", "File:Ilhas Cagarras - Baia de Guanabara - Rio (4512330782).jpg", "File:Rio de Janeiro 20040119 054.jpg", "File:Vista das Ilhas Cagarras.jpg", "File:Ilhas Cagarras- Duda Da Costa Fernandes.jpg", "File:Ilhas vistas do Cristo Redentor RJ.JPG"],
+    "salvador": ["File:Vista do Farol da Barra Salvador Bahia 2021-1372.jpg", "File:Praia do Porto da Barra (Salvador).jpg", "File:Forte de Santo Antônio--Farol da Barra Salvador Bahia Vista Aérea 2021-0151.jpg", "File:Baía de Todos os Santos.jpg", "File:Forte de Santo Antônio--Farol da Barra Salvador Bahia Vista Aérea 2021-0149.jpg", "File:Salvador-Brazil-Farol-da-Barra-sunset.jpg", "File:Farol da Barra ou Farol de Santo Antônio (4269513036).jpg", "File:Salvador Bus no Farol da Barra.jpg", "File:Farol da Barra - Salvador, Brazil.JPG", "File:Salvador Bahia farol da barra vista.jpg"],
+
     "bahamas": ["File:Bahamas 1989 (591) Great Exuma (24986096444).jpg", "File:Bahamas 1989 (589) Great Exuma (25497769082).jpg", "File:Bahamas 1989 (588) Great Exuma (25474038752).jpg", "File:Bahamas 1989 (592) Exuma (25249275789).jpg", "File:Bahamas 1989 (757) Exuma Islands (26229646886).jpg", "File:Bahamas 1989 (342) Eleuthera Harbour Island (24320422055).jpg", "File:Bahamas 1989 (343) Eleuthera Harbour Island (24211710172).jpg", "File:Bahamas 1989 (384) Eleuthera Spanish Wells, St. George's Cay (24470041926).jpg", "File:Bahamas 1989 (387) Eleuthera Spanish Wells, St. George's Cay (24422334811).jpg", "File:Bahamas 1989 (382) Eleuthera Spanish Wells, St. George's Cay (24484777015).jpg"],
     "bay-islands": ["File:Aerial view of West End, Roatan.jpg", "File:Aerial view of Coxen Hole, Roatan.jpg", "File:Roatan looking north towards West End.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-g.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-c.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-e.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-f.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-b.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-d.jpg"],
     "fiji": ["File:Denarau Island, Fiji, 2013 (4).jpg", "File:(Aerial view within Lau Islands, Fiji) - DPLA - 989763b50815d9f178c4fa35d37db744.jpg", "File:(Aerial view of island coastline within Lau Islands, Fiji) - DPLA - f5061f4c9d9bfc4e84d472836007c77c.jpg", "File:(Aerial view within Lau Islands, Fiji) - DPLA - 12024e0c8e93db30dd2768949350d564.jpg", "File:(Aerial view of island coastline within Lau Islands, Fiji) - DPLA - 8b343058f67792ba5d0f985d9f943a5b.jpg", "File:2004.03.20 Mamanucas Fiji.jpg", "File:Mamanuca island.jpg", "File:Mamanuca Islands - panoramio.jpg", "File:Mamanuca Islands.jpg", "File:Mamanuca Islands - panoramio (1).jpg"],
