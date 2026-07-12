@@ -137,6 +137,26 @@ DEST_REQUIRE = {
 # Visually-vetted exact Commons files, tried before any search (mirrors the
 # marine fetcher's PINNED map) — for destinations where search keeps missing.
 DEST_PINNED = {
+    "Rio de Janeiro": ["File:Farol da Ilha Rasa Baía da Guanabara-RJ (52078588124).jpg"],
+    "Salvador": ["File:Baia de Todos os Santos e Elevador Lacerda.jpg"],
+    # Owner picks, 2026-07-12 round (19 touristic-city additions).
+    "Antalya": ["File:Kemer beach, Antalya.jpg"],
+    "Bodrum": ["File:Bodrum Castle 5.JPG"],
+    "Fethiye": ["File:Kabak Valley - Fethiye.jpg"],
+    "Rhodes": ["File:Aerial view of Tsambika Monastery and Tsambika Beach, Rhodes, Greece (51698552836).jpg"],
+    "Corfu": ["File:Bay of Palaiokastritsa from Bellavista.JPG"],
+    "Zakynthos": ["File:Shipwreck at Navagio Beach Zakynthos Greece (45557496695).jpg"],
+    "Ibiza": ["File:Ibiza rock volcano (747230830).jpg"],
+    "Gran Canaria": ["File:Las Canteras Beach - La Barra - Las Palmas Gran Canaria.jpg"],
+    "Lanzarote": ["File:Papagayo-Strände, Luftbild.JPG"],
+    "Puerto Galera": ["File:Muelle Bay, Puerto Galera, Oriental Mindoro, April 2023.jpg"],
+    "Coron (Busuanga)": ["File:Kayangan Lake, Coron - Palawan.jpg"],
+    "Panglao & Balicasag": ["File:Alona beach - panoramio.jpg"],
+    "Moalboal": ["File:White Beach Moalboal.JPG"],
+    "Naples": ["File:Isoletta della Gaiola (Napoli) 01.jpg"],
+    "Sorrento & Capri": ["File:Ferry and yacht port of Sorrento - Campania - Italy - July 12th 2013 - 03.jpg"],
+    "Taormina": ["File:Isola Bella-Taormina-Messina-Sicilia-Italy Creative Commons by gnuckx (3811732382).jpg"],
+    "Arraial do Cabo": ["File:Oven S Beach Arraial Do Cabo (247765557).jpeg"],
     "Sharm El Sheikh": ["File:AlternativesCorals.jpg"],
     "Protea Banks": ["File:Tide Pool, Ramsgate Beach.jpg"],
     # Genuine Fuvahmulah shot (photo audit 2026-07: the previous hero was a

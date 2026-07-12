@@ -16,15 +16,19 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 10
 
 CANDIDATE_QUERIES = {
-    # Owner round 2026-07-11: Sharm El Sheikh page hero — underwater.
-    "sharm-el-sheikh": ["Ras Muhammad coral reef", "Ras Mohammed underwater",
-                        "Shark Reef Yolanda Ras Mohammed", "SS Thistlegorm wreck",
-                        "Red Sea anthias coral reef", "Sharm el-Sheikh diving",
-                        "Tiran island reef underwater", "Red Sea coral garden"],
+    # Owner re-round 2026-07-12b: fresh angles for Rio & Salvador (first picks were 'none').
+    "rio-de-janeiro": ["Ilha Rasa Rio de Janeiro", "Cagarras Islands boat", "Cagarras Ipanema island", "Ilhas Tijucas Rio", "Rio de Janeiro islands ocean", "Praia Vermelha Rio", "Marina da Gloria Rio", "Guanabara Bay islands"],
+    "salvador": ["Baia de Todos os Santos boat", "Ilha dos Frades Bahia", "Ilha de Itaparica", "Salvador Bahia coastline", "Baia de Todos os Santos island", "Salvador Bahia sea", "Ribeira Salvador bay", "Bahia Todos os Santos aerial"],
 }
+
+# Exact Commons titles surfaced by the 2026-07 city research (fetched first, before queries).
+SEED = {}
 
 EXCLUDE = {"sharm-el-sheikh": __import__("re").compile(r"(map|stamp|drawing|illustration|museum|taxiderm|specimen|aquarium|zoo\b|captive)", __import__("re").I)}
 OFFERED = {
+    "rio-de-janeiro": ["File:Ilhas Cagarras.jpg", "File:Rio de Janeiro visto das Ilhas Cagarras.jpg", "File:Ipanema beach and neighborhood - Rio de Janeiro Brazil (5269532812).jpg", "File:Rio 08 2013 Ipanema beach panorama 6911.jpg", "File:Arquipélago das Cagarras – Leblon - panoramio.jpg", "File:Ilhas Cagarras - Baia de Guanabara - Rio (4512330782).jpg", "File:Rio de Janeiro 20040119 054.jpg", "File:Vista das Ilhas Cagarras.jpg", "File:Ilhas Cagarras- Duda Da Costa Fernandes.jpg", "File:Ilhas vistas do Cristo Redentor RJ.JPG"],
+    "salvador": ["File:Vista do Farol da Barra Salvador Bahia 2021-1372.jpg", "File:Praia do Porto da Barra (Salvador).jpg", "File:Forte de Santo Antônio--Farol da Barra Salvador Bahia Vista Aérea 2021-0151.jpg", "File:Baía de Todos os Santos.jpg", "File:Forte de Santo Antônio--Farol da Barra Salvador Bahia Vista Aérea 2021-0149.jpg", "File:Salvador-Brazil-Farol-da-Barra-sunset.jpg", "File:Farol da Barra ou Farol de Santo Antônio (4269513036).jpg", "File:Salvador Bus no Farol da Barra.jpg", "File:Farol da Barra - Salvador, Brazil.JPG", "File:Salvador Bahia farol da barra vista.jpg"],
+
     "bahamas": ["File:Bahamas 1989 (591) Great Exuma (24986096444).jpg", "File:Bahamas 1989 (589) Great Exuma (25497769082).jpg", "File:Bahamas 1989 (588) Great Exuma (25474038752).jpg", "File:Bahamas 1989 (592) Exuma (25249275789).jpg", "File:Bahamas 1989 (757) Exuma Islands (26229646886).jpg", "File:Bahamas 1989 (342) Eleuthera Harbour Island (24320422055).jpg", "File:Bahamas 1989 (343) Eleuthera Harbour Island (24211710172).jpg", "File:Bahamas 1989 (384) Eleuthera Spanish Wells, St. George's Cay (24470041926).jpg", "File:Bahamas 1989 (387) Eleuthera Spanish Wells, St. George's Cay (24422334811).jpg", "File:Bahamas 1989 (382) Eleuthera Spanish Wells, St. George's Cay (24484777015).jpg"],
     "bay-islands": ["File:Aerial view of West End, Roatan.jpg", "File:Aerial view of Coxen Hole, Roatan.jpg", "File:Roatan looking north towards West End.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-g.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-c.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-e.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-f.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-b.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-d.jpg"],
     "fiji": ["File:Denarau Island, Fiji, 2013 (4).jpg", "File:(Aerial view within Lau Islands, Fiji) - DPLA - 989763b50815d9f178c4fa35d37db744.jpg", "File:(Aerial view of island coastline within Lau Islands, Fiji) - DPLA - f5061f4c9d9bfc4e84d472836007c77c.jpg", "File:(Aerial view within Lau Islands, Fiji) - DPLA - 12024e0c8e93db30dd2768949350d564.jpg", "File:(Aerial view of island coastline within Lau Islands, Fiji) - DPLA - 8b343058f67792ba5d0f985d9f943a5b.jpg", "File:2004.03.20 Mamanucas Fiji.jpg", "File:Mamanuca island.jpg", "File:Mamanuca Islands - panoramio.jpg", "File:Mamanuca Islands.jpg", "File:Mamanuca Islands - panoramio (1).jpg"],
@@ -146,6 +150,18 @@ def main():
     manifest = {}
     for slug, queries in CANDIDATE_QUERIES.items():
         picked, seen = [], set()
+        stitles = [t for t in SEED.get(slug, []) if not BAD_HINT.search(t)]
+        sinfo = file_info(stitles)
+        for t in stitles:
+            if t not in sinfo or len(picked) >= PER_DEST:
+                continue
+            url, credit = sinfo[t]
+            seen.add(t)
+            idx = len(picked) + 1
+            path = f"cands/{slug}_{idx}.jpg"
+            if grab(url, path):
+                picked.append({"title": t, "url": url, "credit": credit, "file": path, "seed": True})
+                print(f"  {slug} #{idx} (seed): {t[:70]}")
         for q in queries:
             if len(picked) >= PER_DEST:
                 break

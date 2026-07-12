@@ -14,7 +14,7 @@ Scuba divers planning their next trip. They arrive with a constraint — dates t
 
 ## Product Purpose
 
-DiveSZN is a seasonal dive-trip planner and dive hub: 83 destinations scored across all twelve months (996 destination-months, 620 documented dive sites), wrapped in researched gear buyer's guides, monthly destination articles and marine-life encounter pages. It exists so a diver never books a trip that lands in the wrong season. Success is affiliate revenue — booking and gear commissions earned because the research was good enough to act on.
+DiveSZN is a seasonal dive-trip planner and dive hub: 102 destinations scored across all twelve months (1,224 destination-months, 725 documented dive sites), wrapped in researched gear buyer's guides, monthly destination articles and marine-life encounter pages. It exists so a diver never books a trip that lands in the wrong season. Success is affiliate revenue — booking and gear commissions earned because the research was good enough to act on.
 
 ## Positioning
 
@@ -25,7 +25,7 @@ The most researched dive site on the internet. Every screen reinforces one claim
 - Primary CTA: book a stay via the booking links attached to destinations ("Stays near …"). Secondary: gear buy links through authorised dealers in the gear guide.
 - The line a visitor remembers after 10 seconds: "The most researched dive site on the internet."
 - Belief ladder: (1) this data is real research, not filler — the calendar, temps, visibility and named dive sites prove someone did the work; (2) this destination at this month is right for *my* dates; (3) booking the stay through the page I'm already on is the natural next step.
-- Proof on hand: the data itself — 996 scored destination-months, 620 named dive sites with depth/level/character, real attributed photography, a published scoring method (how-we-score page). No testimonials or press; the research is the proof.
+- Proof on hand: the data itself — 1,224 scored destination-months, 725 named dive sites with depth/level/character, real attributed photography, a published scoring method (how-we-score page). No testimonials or press; the research is the proof.
 
 ## Brand Personality
 
