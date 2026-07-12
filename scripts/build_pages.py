@@ -1652,9 +1652,9 @@ def _marine_beyond(exp):
         f'<td><a class="pack-cta ghost" href="https://www.getyourguide.com/s/?q={urllib.parse.quote(b["q"])}" '
         f'target="_blank" rel="noopener sponsored">Book &rarr;</a></td></tr>'
         for b in exp["beyond_scuba"])
-    return (f'<h2>Beyond scuba — snorkel &amp; cage encounters</h2>'
-            f'<p class="greview" style="max-width:78ch">{esc(exp.get("beyond_intro") or "Some of the best encounters with this animal do not run on scuba — they are snorkel or cage-diving trips. If that is the experience you are after, these are the places to book it.")}</p>'
-            f'<div class="tablecard rev"><table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead>'
+    # Owner ruling (2026-07): no "Beyond scuba" heading/intro — that context
+    # is merged into the species' main intro; the trips table stands alone.
+    return (f'<div class="tablecard rev"><table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead>'
             f'<tbody>{brows}</tbody></table></div>')
 
 def _marine_notes(exp):

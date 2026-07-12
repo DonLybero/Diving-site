@@ -1,269 +1,266 @@
 {
-  "experiences": [
+ "experiences": [
+  {
+   "slug": "whale-sharks",
+   "title": "Whale Sharks",
+   "keywords": [
+    "whale shark"
+   ],
+   "short": "whale sharks",
+   "hero_sub": "The biggest fish in the sea — and where to dive it.",
+   "intro": "The whale shark is the largest fish alive — a filter-feeding giant up to twelve metres long, spotted like a constellation and utterly harmless. It follows plankton blooms around the tropics, so catching one is all about timing. On scuba you meet them on the reef and in the blue; a few of the planet's greatest aggregations run as snorkel-only trips — no scuba allowed — and they're worth planning a whole trip around all the same. You'll find them below with their seasons.",
+   "desc": "Diving with whale sharks: where and when to dive with them, from DiveSZN's seasonal data.",
+   "beyond_scuba": [
     {
-      "slug": "whale-sharks",
-      "title": "Whale Sharks",
-      "keywords": [
-        "whale shark"
-      ],
-      "short": "whale sharks",
-      "hero_sub": "The biggest fish in the sea — and where to dive it.",
-      "intro": "The whale shark is the largest fish alive — a filter-feeding giant up to twelve metres long, spotted like a constellation and utterly harmless. It follows plankton blooms around the tropics, so catching one is all about timing. On scuba you meet them on the reef and in the blue; a few of the world's biggest gatherings, though, are legally snorkel-only.",
-      "desc": "Diving with whale sharks: where and when to dive with them, from DiveSZN's seasonal data.",
-      "beyond_intro": "A couple of the planet's greatest whale-shark aggregations are run as snorkel-only trips — no scuba allowed — but they're worth planning a whole trip around all the same:",
-      "beyond_scuba": [
-        {
-          "name": "Isla Mujeres & Holbox",
-          "country": "Mexico",
-          "mode": "snorkel",
-          "months": [
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep"
-          ],
-          "q": "whale shark snorkel tour Isla Mujeres Cancun"
-        },
-        {
-          "name": "Gladden Spit",
-          "country": "Belize",
-          "mode": "snorkel",
-          "months": [
-            "Apr",
-            "May",
-            "Jun"
-          ],
-          "q": "whale shark snorkel Gladden Spit Placencia Belize"
-        }
-      ],
-      "tips": [
-        "Whale sharks follow food — most seasons track plankton blooms, spawning aggregations or monsoon upwellings.",
-        "Keep the regulation distance and never touch or block them; a spooked whale shark simply dives and is gone.",
-        "They cruise near the surface, so a slow, calm approach and good buoyancy get you the longest encounters."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Similan_Dive_Center_-_great_whale_shark.jpg/960px-Similan_Dive_Center_-_great_whale_shark.jpg",
-      "image_credit": "Photo: Abe Khao Lak (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
+     "name": "Isla Mujeres & Holbox",
+     "country": "Mexico",
+     "mode": "snorkel",
+     "months": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+     ],
+     "q": "whale shark snorkel tour Isla Mujeres Cancun"
     },
     {
-      "slug": "manta-rays",
-      "title": "Manta Rays",
-      "keywords": [
-        "manta"
-      ],
-      "short": "manta rays",
-      "hero_sub": "Ocean acrobats at the cleaning stations and in the blue.",
-      "intro": "Few encounters match a manta ray banking overhead — a wingspan of up to seven metres moving with impossible grace. Reef mantas are resident and reliable, gathering at coral cleaning stations to be groomed and swirling into feeding chains when plankton blooms; the bigger oceanic mantas cruise the seamounts and current-swept points. Wherever they gather, they are the dive.",
-      "desc": "Diving with manta rays: where and when to dive with reef and oceanic mantas, from DiveSZN's seasonal data.",
-      "tips": [
-        "Hold still and low at a cleaning station — mantas approach calm divers and flee anyone who chases.",
-        "Keep your bubbles out of their path; a wall of bubbles turns a manta away.",
-        "Feeding aggregations follow plankton, so moon, tide and season all shift the timing."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Female_scuba_diver_swims_with_a_young_male_Manta_ray_-_Kona_district%2C_Hawaii.jpg/960px-Female_scuba_diver_swims_with_a_young_male_Manta_ray_-_Kona_district%2C_Hawaii.jpg",
-      "image_credit": "Photo: Steve Dunleavy from Lake Tahoe, NV, United States (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
-    },
-    {
-      "slug": "hammerhead-sharks",
-      "title": "Hammerhead Sharks",
-      "keywords": [
-        "hammerhead"
-      ],
-      "short": "hammerhead sharks",
-      "hero_sub": "A moving wall of sharks, hundreds strong in the blue.",
-      "intro": "A wall of scalloped hammerheads in the blue is one of diving's great spectacles — hundreds of sharks stacked head to tail, sweeping past a current-swept seamount. They favour cool, nutrient-rich upwellings and clean off at seamount stations by day, while the solitary great hammerheads cruise the shallows in winter. Both reward the diver who can hold position in the current and wait.",
-      "desc": "Diving with hammerhead sharks: where and when to dive the schools and the giants, from DiveSZN's seasonal data.",
-      "tips": [
-        "Hammerheads spook easily — control your bubbles, stay still, and let the school come to you.",
-        "The big schools live on current-swept seamounts, so good drift and negative-entry skills matter.",
-        "Dawn and the cooler upwelling months are usually when the numbers peak."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28223125973%29.jpeg/960px-Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28223125973%29.jpeg",
-      "image_credit": "Photo: Kris Mikael Krister (CC BY 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
-    },
-    {
-      "slug": "thresher-sharks",
-      "title": "Thresher Sharks",
-      "keywords": [
-        "thresher"
-      ],
-      "short": "thresher sharks",
-      "hero_sub": "Dawn on the seamount, where the whip-tails come to be cleaned.",
-      "intro": "The pelagic thresher is all elegance — a slender shark with an upper tail lobe as long as its body, which it cracks like a whip to stun fish. It spends its days in cool deep water and rises at dawn to seamount cleaning stations, where divers wait in the half-light for it to glide in. It is one of very few reliably-scheduled encounters with a truly open-ocean shark.",
-      "desc": "Diving with thresher sharks: where and when to catch the dawn cleaning stations, from DiveSZN's seasonal data.",
-      "tips": [
-        "It is a dawn dive — be on the seamount before sunrise when the threshers rise to be cleaned.",
-        "Stay behind the agreed line and keep still; threshers are shy and veer off at the first chase.",
-        "Cooler, deeper cleaning stations mean solid buoyancy and often a 5 mm suit."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Threshershark.jpg/960px-Threshershark.jpg",
-      "image_credit": "Photo: Petter Lindgren (CC BY-SA 3.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
-    },
-    {
-      "slug": "mola-mola",
-      "title": "Mola Mola",
-      "keywords": [
-        "mola"
-      ],
-      "short": "the ocean sunfish (mola mola)",
-      "hero_sub": "The strangest giant in the sea, up from the cold.",
-      "intro": "The mola mola — ocean sunfish — is the heaviest bony fish alive, a two-tonne silver disc that looks like a swimming head. It spends most of its life deep and cold, rising to reef cleaning stations where bannerfish pick off its parasites. Sightings ride cold upwellings, so mola season is a cool-water affair: thermoclines, a thicker suit, and a slow, patient hover while the giant is groomed.",
-      "desc": "Diving with mola mola (ocean sunfish): where and when they rise to the cleaning stations, from DiveSZN's seasonal data.",
-      "tips": [
-        "Mola ride cold upwellings — expect sharp thermoclines and pack extra exposure protection.",
-        "Approach slow and low; a spooked mola drops straight back into the deep.",
-        "They surface at cleaning stations, so find the cleaner fish and you often find the mola."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Nusa_Lembongan_Mola_Mola.jpg/960px-Nusa_Lembongan_Mola_Mola.jpg",
-      "image_credit": "Photo: Flickr user: Ilse Reijs and Jan-Noud Hutten  https://www.flickr.com/photos/39891373@N07/ (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
-    },
-    {
-      "slug": "sea-lions",
-  "image_pos": "50% 22%",
-      "title": "Sea Lions",
-      "keywords": [
-        "sea lion"
-      ],
-      "short": "playful sea lions",
-      "hero_sub": "The puppies of the sea — curious, fast, and full of mischief.",
-      "intro": "Diving with sea lions is pure play. Young ones barrel-roll around your fins, mouth your camera dome, blow bubbles in your face and dare you to keep up — all speed and curiosity. They haul out on rocky islets and colonies, and the bolder juveniles turn any dive into a game. It is the most joyful encounter in the ocean, and it asks for nothing but patience and a willingness to play along.",
-      "desc": "Diving with sea lions: where and when to dive the playful colonies, from DiveSZN's seasonal data.",
-      "tips": [
-        "Let them come to you and mirror their play — sea lions lose interest in stiff, staring divers.",
-        "Give the big bulls a wide berth, especially in breeding season when they guard their patch.",
-        "Most colonies are cool-water, so a 5-7 mm suit keeps the fun going longer."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/California_sea_lions_in_the_kelp_forest_off_San_Miguel_Island.jpg/960px-California_sea_lions_in_the_kelp_forest_off_San_Miguel_Island.jpg",
-      "image_credit": "Photo: Claire Fackler, CINMS, NOAA.\n\nCredit: NOAA/NOS/NMS/CINMS; National Marine Sanctuaries Media Library. (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
-    },
-    {
-      "slug": "sardine-run",
-      "title": "The Sardine Run",
-      "keywords": [
-        "sardine"
-      ],
-      "short": "the sardine run and its bait-ball feeding frenzies",
-      "hero_sub": "The greatest shoal on Earth — and the predators that chase it.",
-      "intro": "Each southern-hemisphere winter, billions of sardines push north along South Africa's east coast on a ribbon of cold water, and the ocean erupts. Dusky and bronze whaler sharks, pods of common dolphins, Bryde's whales and dive-bombing gannets corral the shoals into churning bait balls — and divers drop straight into the middle of it. It is fast, wild, open-water diving, and arguably the most electric big-animal spectacle you can put a regulator in the water for.",
-      "desc": "Diving the Sardine Run: what it is, and where and when to dive it, from DiveSZN's seasonal data.",
-      "tips": [
-        "The run is weather- and current-driven, so timing shifts year to year — build in flexible days.",
-        "Expect open-water entries and fast surface action; buoyancy and boat skills matter more than depth here.",
-        "Pack real exposure protection — the run rides cold water even in a warm country."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Multitude_in_Reef.jpg/960px-Multitude_in_Reef.jpg",
-      "image_credit": "Photo: Rauxilian (CC BY-SA 4.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
-    },
-    {
-      "slug": "great-white",
-      "title": "Great White Sharks",
-      "keywords": [
-        "great white"
-      ],
-      "short": "great white sharks",
-      "hero_sub": "The ocean's most famous predator — met from the cage.",
-      "intro": "No shark carries the mythology of the great white — a five-metre ambush predator with a presence you feel before you see it. It isn't a reef-diving animal: the encounter is cage diving, on a chum line in cold, green water, and the moment a white materialises alongside the cage is one of diving's great adrenaline hits. The map has shifted, though — some famous sites have gone quiet, and only a handful still deliver.",
-      "desc": "Great white shark cage diving in 2026: the sites still operating, and when to go.",
-      "no_data": "Great whites aren't a scuba animal — the encounter is cage diving — so no destination in our scuba guide carries a great-white season. The currently-operating cage sites are below.",
-      "beyond_intro": "Great white diving means cage diving — a surface or submerged cage on a bait line, not a reef dive. Mexico closed Guadalupe in 2023 and orca predation has emptied the old Cape hotspots, so the sites still reliably running are:",
-      "beyond_scuba": [
-        {
-          "name": "Neptune Islands (Port Lincoln)",
-          "country": "Australia",
-          "mode": "cage diving",
-          "months": [
-            "May",
-            "Jun",
-            "Jul",
-            "Aug"
-          ],
-          "q": "great white cage diving Port Lincoln Neptune Islands"
-        },
-        {
-          "name": "Mossel Bay",
-          "country": "South Africa",
-          "mode": "cage diving",
-          "months": [
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep"
-          ],
-          "q": "great white cage diving Mossel Bay South Africa"
-        },
-        {
-          "name": "Stewart Island (Foveaux Strait)",
-          "country": "New Zealand",
-          "mode": "cage diving",
-          "months": [
-            "Nov",
-            "Dec",
-            "Jan",
-            "Feb"
-          ],
-          "q": "great white cage diving Stewart Island New Zealand"
-        }
-      ],
-      "tips": [
-        "Cage diving needs no dive certification — but a warm layer and sea-sickness tablets both earn their keep.",
-        "Expect cold, often green water. Visibility and shark activity both peak in the cooler months, when the seal colonies that draw the whites are at their busiest.",
-        "Guadalupe (Mexico) has been closed to tourism since 2023, and South Africa's Gansbaai/False Bay whites have largely gone — check any operator is genuinely still seeing whites."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Great_White_Shark_%2814730796397%29.jpg/960px-Great_White_Shark_%2814730796397%29.jpg",
-      "image_credit": "Photo: Elias Levy (CC BY 2.0) via Wikimedia Commons",
-      "image_source": "wikimedia"
-    },
-    {
-      "slug": "orcas",
-      "title": "Orcas",
-      "keywords": [
-        "orca",
-        "killer whale"
-      ],
-      "short": "orca encounters",
-      "hero_sub": "The ocean's apex predator — the rarest encounter of all.",
-      "intro": "Orcas are the ocean's apex predator: fast, social and startlingly intelligent, hunting in tight family pods that pass techniques down the generations. Meeting one in the water is the rarest and most sought-after big-animal moment in diving — a five-metre black-and-white shape resolving out of the blue, sizing you up, and gone. They favour cold, productive water and gather where prey concentrates, most famously on the winter herring runs of the high north.",
-      "desc": "Diving with orcas: what makes them the ultimate encounter, and where DiveSZN is headed to cover them.",
-      "no_data": "Orca encounters happen on the surface, not on scuba, so no destination in our dive guide carries an orca season. The in-water trips that do run are snorkel-based and cold — they're listed below.",
-      "beyond_intro": "In-water orca encounters are snorkel-only — the water is too cold and the animals too fast for scuba. If a face-to-face with a wild orca is the dream, these are the trips that run it:",
-      "beyond_scuba": [
-        {
-          "name": "Skjervøy & the Tromsø fjords",
-          "country": "Norway",
-          "mode": "snorkel",
-          "months": [
-            "Nov",
-            "Dec",
-            "Jan"
-          ],
-          "q": "orca whale snorkeling Norway Tromso Skjervoy"
-        },
-        {
-          "name": "La Ventana / Sea of Cortez",
-          "country": "Mexico",
-          "mode": "snorkel",
-          "months": [
-            "Jan",
-            "Feb",
-            "Mar"
-          ],
-          "q": "orca encounter Baja La Ventana Sea of Cortez"
-        }
-      ],
-      "tips": [
-        "Orcas are wild and unpredictable — encounters are never guaranteed and hinge on weather and prey.",
-        "The good orca water is genuinely cold — a proper drysuit or thick hooded exposure kit is essential.",
-        "Give them space and let them choose the interaction — it's their ocean."
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Killerwhales_jumping.jpg/960px-Killerwhales_jumping.jpg",
-      "image_credit": "Photo: Robert Pittman (Public domain) via Wikimedia Commons",
-      "image_source": "wikimedia"
+     "name": "Gladden Spit",
+     "country": "Belize",
+     "mode": "snorkel",
+     "months": [
+      "Apr",
+      "May",
+      "Jun"
+     ],
+     "q": "whale shark snorkel Gladden Spit Placencia Belize"
     }
-  ]
+   ],
+   "tips": [
+    "Whale sharks follow food — most seasons track plankton blooms, spawning aggregations or monsoon upwellings.",
+    "Keep the regulation distance and never touch or block them; a spooked whale shark simply dives and is gone.",
+    "They cruise near the surface, so a slow, calm approach and good buoyancy get you the longest encounters."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Similan_Dive_Center_-_great_whale_shark.jpg/960px-Similan_Dive_Center_-_great_whale_shark.jpg",
+   "image_credit": "Photo: Abe Khao Lak (CC BY-SA 4.0) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  },
+  {
+   "slug": "manta-rays",
+   "title": "Manta Rays",
+   "keywords": [
+    "manta"
+   ],
+   "short": "manta rays",
+   "hero_sub": "Ocean acrobats at the cleaning stations and in the blue.",
+   "intro": "Few encounters match a manta ray banking overhead — a wingspan of up to seven metres moving with impossible grace. Reef mantas are resident and reliable, gathering at coral cleaning stations to be groomed and swirling into feeding chains when plankton blooms; the bigger oceanic mantas cruise the seamounts and current-swept points. Wherever they gather, they are the dive.",
+   "desc": "Diving with manta rays: where and when to dive with reef and oceanic mantas, from DiveSZN's seasonal data.",
+   "tips": [
+    "Hold still and low at a cleaning station — mantas approach calm divers and flee anyone who chases.",
+    "Keep your bubbles out of their path; a wall of bubbles turns a manta away.",
+    "Feeding aggregations follow plankton, so moon, tide and season all shift the timing."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Female_scuba_diver_swims_with_a_young_male_Manta_ray_-_Kona_district%2C_Hawaii.jpg/960px-Female_scuba_diver_swims_with_a_young_male_Manta_ray_-_Kona_district%2C_Hawaii.jpg",
+   "image_credit": "Photo: Steve Dunleavy from Lake Tahoe, NV, United States (CC BY 2.0) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  },
+  {
+   "slug": "hammerhead-sharks",
+   "title": "Hammerhead Sharks",
+   "keywords": [
+    "hammerhead"
+   ],
+   "short": "hammerhead sharks",
+   "hero_sub": "A moving wall of sharks, hundreds strong in the blue.",
+   "intro": "A wall of scalloped hammerheads in the blue is one of diving's great spectacles — hundreds of sharks stacked head to tail, sweeping past a current-swept seamount. They favour cool, nutrient-rich upwellings and clean off at seamount stations by day, while the solitary great hammerheads cruise the shallows in winter. Both reward the diver who can hold position in the current and wait.",
+   "desc": "Diving with hammerhead sharks: where and when to dive the schools and the giants, from DiveSZN's seasonal data.",
+   "tips": [
+    "Hammerheads spook easily — control your bubbles, stay still, and let the school come to you.",
+    "The big schools live on current-swept seamounts, so good drift and negative-entry skills matter.",
+    "Dawn and the cooler upwelling months are usually when the numbers peak."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28223125973%29.jpeg/960px-Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28223125973%29.jpeg",
+   "image_credit": "Photo: Kris Mikael Krister (CC BY 3.0) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  },
+  {
+   "slug": "thresher-sharks",
+   "title": "Thresher Sharks",
+   "keywords": [
+    "thresher"
+   ],
+   "short": "thresher sharks",
+   "hero_sub": "Dawn on the seamount, where the whip-tails come to be cleaned.",
+   "intro": "The pelagic thresher is all elegance — a slender shark with an upper tail lobe as long as its body, which it cracks like a whip to stun fish. It spends its days in cool deep water and rises at dawn to seamount cleaning stations, where divers wait in the half-light for it to glide in. It is one of very few reliably-scheduled encounters with a truly open-ocean shark.",
+   "desc": "Diving with thresher sharks: where and when to catch the dawn cleaning stations, from DiveSZN's seasonal data.",
+   "tips": [
+    "It is a dawn dive — be on the seamount before sunrise when the threshers rise to be cleaned.",
+    "Stay behind the agreed line and keep still; threshers are shy and veer off at the first chase.",
+    "Cooler, deeper cleaning stations mean solid buoyancy and often a 5 mm suit."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Threshershark.jpg/960px-Threshershark.jpg",
+   "image_credit": "Photo: Petter Lindgren (CC BY-SA 3.0) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  },
+  {
+   "slug": "mola-mola",
+   "title": "Mola Mola",
+   "keywords": [
+    "mola"
+   ],
+   "short": "the ocean sunfish (mola mola)",
+   "hero_sub": "The strangest giant in the sea, up from the cold.",
+   "intro": "The mola mola — ocean sunfish — is the heaviest bony fish alive, a two-tonne silver disc that looks like a swimming head. It spends most of its life deep and cold, rising to reef cleaning stations where bannerfish pick off its parasites. Sightings ride cold upwellings, so mola season is a cool-water affair: thermoclines, a thicker suit, and a slow, patient hover while the giant is groomed.",
+   "desc": "Diving with mola mola (ocean sunfish): where and when they rise to the cleaning stations, from DiveSZN's seasonal data.",
+   "tips": [
+    "Mola ride cold upwellings — expect sharp thermoclines and pack extra exposure protection.",
+    "Approach slow and low; a spooked mola drops straight back into the deep.",
+    "They surface at cleaning stations, so find the cleaner fish and you often find the mola."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Nusa_Lembongan_Mola_Mola.jpg/960px-Nusa_Lembongan_Mola_Mola.jpg",
+   "image_credit": "Photo: Flickr user: Ilse Reijs and Jan-Noud Hutten  https://www.flickr.com/photos/39891373@N07/ (CC BY 2.0) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  },
+  {
+   "slug": "sea-lions",
+   "image_pos": "50% 22%",
+   "title": "Sea Lions",
+   "keywords": [
+    "sea lion"
+   ],
+   "short": "playful sea lions",
+   "hero_sub": "The puppies of the sea — curious, fast, and full of mischief.",
+   "intro": "Diving with sea lions is pure play. Young ones barrel-roll around your fins, mouth your camera dome, blow bubbles in your face and dare you to keep up — all speed and curiosity. They haul out on rocky islets and colonies, and the bolder juveniles turn any dive into a game. It is the most joyful encounter in the ocean, and it asks for nothing but patience and a willingness to play along.",
+   "desc": "Diving with sea lions: where and when to dive the playful colonies, from DiveSZN's seasonal data.",
+   "tips": [
+    "Let them come to you and mirror their play — sea lions lose interest in stiff, staring divers.",
+    "Give the big bulls a wide berth, especially in breeding season when they guard their patch.",
+    "Most colonies are cool-water, so a 5-7 mm suit keeps the fun going longer."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/California_sea_lions_in_the_kelp_forest_off_San_Miguel_Island.jpg/960px-California_sea_lions_in_the_kelp_forest_off_San_Miguel_Island.jpg",
+   "image_credit": "Photo: Claire Fackler, CINMS, NOAA.\n\nCredit: NOAA/NOS/NMS/CINMS; National Marine Sanctuaries Media Library. (Public domain) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  },
+  {
+   "slug": "sardine-run",
+   "title": "The Sardine Run",
+   "keywords": [
+    "sardine"
+   ],
+   "short": "the sardine run and its bait-ball feeding frenzies",
+   "hero_sub": "The greatest shoal on Earth — and the predators that chase it.",
+   "intro": "Each southern-hemisphere winter, billions of sardines push north along South Africa's east coast on a ribbon of cold water, and the ocean erupts. Dusky and bronze whaler sharks, pods of common dolphins, Bryde's whales and dive-bombing gannets corral the shoals into churning bait balls — and divers drop straight into the middle of it. It is fast, wild, open-water diving, and arguably the most electric big-animal spectacle you can put a regulator in the water for.",
+   "desc": "Diving the Sardine Run: what it is, and where and when to dive it, from DiveSZN's seasonal data.",
+   "tips": [
+    "The run is weather- and current-driven, so timing shifts year to year — build in flexible days.",
+    "Expect open-water entries and fast surface action; buoyancy and boat skills matter more than depth here.",
+    "Pack real exposure protection — the run rides cold water even in a warm country."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Multitude_in_Reef.jpg/960px-Multitude_in_Reef.jpg",
+   "image_credit": "Photo: Rauxilian (CC BY-SA 4.0) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  },
+  {
+   "slug": "great-white",
+   "title": "Great White Sharks",
+   "keywords": [
+    "great white"
+   ],
+   "short": "great white sharks",
+   "hero_sub": "The ocean's most famous predator — met from the cage.",
+   "intro": "No shark carries the mythology of the great white — a five-metre ambush predator with a presence you feel before you see it. It isn't a reef-diving animal: the encounter is cage diving — a surface or submerged cage on a chum line in cold, green water — and the moment a white materialises alongside the cage is one of diving's great adrenaline hits. The map has shifted, though: Mexico closed Guadalupe in 2023 and orca predation has emptied the old Cape hotspots, so only the handful of sites below still reliably deliver.",
+   "desc": "Great white shark cage diving in 2026: the sites still operating, and when to go.",
+   "no_data": "Great whites aren't a scuba animal — the encounter is cage diving — so no destination in our scuba guide carries a great-white season. The currently-operating cage sites are below.",
+   "beyond_scuba": [
+    {
+     "name": "Neptune Islands (Port Lincoln)",
+     "country": "Australia",
+     "mode": "cage diving",
+     "months": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+     ],
+     "q": "great white cage diving Port Lincoln Neptune Islands"
+    },
+    {
+     "name": "Mossel Bay",
+     "country": "South Africa",
+     "mode": "cage diving",
+     "months": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+     ],
+     "q": "great white cage diving Mossel Bay South Africa"
+    },
+    {
+     "name": "Stewart Island (Foveaux Strait)",
+     "country": "New Zealand",
+     "mode": "cage diving",
+     "months": [
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb"
+     ],
+     "q": "great white cage diving Stewart Island New Zealand"
+    }
+   ],
+   "tips": [
+    "Cage diving needs no dive certification — but a warm layer and sea-sickness tablets both earn their keep.",
+    "Expect cold, often green water. Visibility and shark activity both peak in the cooler months, when the seal colonies that draw the whites are at their busiest.",
+    "Guadalupe (Mexico) has been closed to tourism since 2023, and South Africa's Gansbaai/False Bay whites have largely gone — check any operator is genuinely still seeing whites."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Great_White_Shark_%2814730796397%29.jpg/960px-Great_White_Shark_%2814730796397%29.jpg",
+   "image_credit": "Photo: Elias Levy (CC BY 2.0) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  },
+  {
+   "slug": "orcas",
+   "title": "Orcas",
+   "keywords": [
+    "orca",
+    "killer whale"
+   ],
+   "short": "orca encounters",
+   "hero_sub": "The ocean's apex predator — the rarest encounter of all.",
+   "intro": "Orcas are the ocean's apex predator: fast, social and startlingly intelligent, hunting in tight family pods that pass techniques down the generations. Meeting one in the water is the rarest and most sought-after big-animal moment in diving — a five-metre black-and-white shape resolving out of the blue, sizing you up, and gone. They favour cold, productive water and gather where prey concentrates, most famously on the winter herring runs of the high north. In-water encounters are snorkel-only — the water is too cold and the animals too fast for scuba — and the trips that run them are listed below.",
+   "desc": "Diving with orcas: what makes them the ultimate encounter, and where DiveSZN is headed to cover them.",
+   "no_data": "Orca encounters happen on the surface, not on scuba, so no destination in our dive guide carries an orca season. The in-water trips that do run are snorkel-based and cold — they're listed below.",
+   "beyond_scuba": [
+    {
+     "name": "Skjervøy & the Tromsø fjords",
+     "country": "Norway",
+     "mode": "snorkel",
+     "months": [
+      "Nov",
+      "Dec",
+      "Jan"
+     ],
+     "q": "orca whale snorkeling Norway Tromso Skjervoy"
+    },
+    {
+     "name": "La Ventana / Sea of Cortez",
+     "country": "Mexico",
+     "mode": "snorkel",
+     "months": [
+      "Jan",
+      "Feb",
+      "Mar"
+     ],
+     "q": "orca encounter Baja La Ventana Sea of Cortez"
+    }
+   ],
+   "tips": [
+    "Orcas are wild and unpredictable — encounters are never guaranteed and hinge on weather and prey.",
+    "The good orca water is genuinely cold — a proper drysuit or thick hooded exposure kit is essential.",
+    "Give them space and let them choose the interaction — it's their ocean."
+   ],
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Killerwhales_jumping.jpg/960px-Killerwhales_jumping.jpg",
+   "image_credit": "Photo: Robert Pittman (Public domain) via Wikimedia Commons",
+   "image_source": "wikimedia"
+  }
+ ]
 }

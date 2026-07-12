@@ -2577,9 +2577,7 @@ function marineNotes(e){
 }
 function marineBeyond(e){
   if(!e.beyond_scuba||!e.beyond_scuba.length) return '';
-  return '<h3 style="margin-top:22px">Beyond scuba — snorkel &amp; cage encounters</h3>'+
-    '<p style="color:#33565e;max-width:80ch">'+(e.beyond_intro||'Some of the best encounters with this animal are not on scuba — they run as snorkel or cage-diving trips.')+'</p>'+
-    '<table><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead><tbody>'+
+  return '<table style="margin-top:20px"><thead><tr><th>Where</th><th>Season</th><th></th></tr></thead><tbody>'+
     e.beyond_scuba.map(function(b){return '<tr><td><b>'+b.name+'</b><div class="meta">'+b.country+' · '+b.mode+'</div></td>'+
       '<td>'+b.months.join(', ')+'</td><td style="text-align:right"><a class="btn ghost" href="https://www.getyourguide.com/s/?q='+
       encodeURIComponent(b.q)+'" target="_blank" rel="noopener sponsored">Book</a></td></tr>';}).join('')+'</tbody></table>';
