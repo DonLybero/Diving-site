@@ -2147,7 +2147,7 @@ function crewCount(){
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   [].slice.call(document.querySelectorAll('#crewSlide .crew-stat b')).forEach(function(b){
     var target=parseInt(b.textContent,10); if(!target) return;
-    var t0=null, dur=1100;
+    var t0=null, dur=2400;
     function step(ts){
       if(t0==null)t0=ts;
       var x=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-x,3);   // ease-out cubic
