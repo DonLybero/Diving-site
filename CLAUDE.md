@@ -1,7 +1,7 @@
 # CLAUDE.md — DiveSZN
 
 DiveSZN is a static diving website: a seasonal **trip planner / calendar** for
-83 world dive destinations, wrapped in a dive-hub (gear buyer's guides with
+102 world dive destinations, wrapped in a dive-hub (gear buyer's guides with
 price comparison, 12 monthly destination hubs, marine-life encounter pages).
 No backend.
 
@@ -10,8 +10,8 @@ and backlog. Quick orientation:
 
 - **Site:** `index.html` is the entire app (HTML + CSS + inline JS) and is what
   GitHub Pages serves. The scoring/query engine is `diving-calendar.js`.
-- **Canonical data:** `diving-destinations.json` (83 destinations × 12 months,
-  620 named dive sites). Edit it directly — the `scripts/` sources only cover
+- **Canonical data:** `diving-destinations.json` (102 destinations × 12 months,
+  725 named dive sites). Edit it directly — the `scripts/` sources only cover
   the original 50 destinations, so `build_master.py` runs as a safe merge
   against the canonical file (see below).
 - **Live:** https://donlybero.github.io/Diving-site/ — auto-deploys on push to
@@ -32,7 +32,7 @@ about, and it refuses to drop anything without an explicit flag. Flags:
 `--dry-run` (report, write nothing), `--allow-additions` (let sources-only
 entries in), `--allow-removals` (DANGEROUS full regenerate — sources only
 describe the original 50 destinations). The old behaviour where a plain run
-could overwrite the 83-destination dataset with 50 is fixed (commit
+could overwrite the full dataset with 50 is fixed (commit
 `afc25e5`).
 
 After editing data or `index.html`, rerun `build_standalone.py` so the

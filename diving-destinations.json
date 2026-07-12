@@ -22,7 +22,7 @@
   "Nov",
   "Dec"
  ],
- "destination_count": 83,
+ "destination_count": 102,
  "destinations": [
   {
    "name": "Fernando de Noronha",
@@ -14865,6 +14865,3135 @@
    "encounters": "Summer brings the spawning aggregations: walls of bohar snapper, circular batfish and barracuda massing off Shark and Yolanda, with scalloped hammerheads hanging in the blue off Jackson Reef. The rest of the year leans on the residents - Napoleon wrasse, grey reef sharks, eagle rays and turtles - cruising reefs permanently carpeted in orange anthias.",
    "image_dest": "https://donlybero.github.io/Diving-site/assets/dest/sharm-el-sheikh.jpg",
    "image_dest_credit": "Photo via Pexels"
+  },
+  {
+   "name": "Arraial do Cabo",
+   "country": "Brazil",
+   "region": "South Atlantic / Brazil",
+   "water_type": "subtropical Atlantic with cold upwelling",
+   "difficulty": "all levels",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": -22.9661,
+    "lng": -42.0278
+   },
+   "best_months": "Sep-Apr",
+   "wetsuit": "5mm year-round; hooded vest for upwelling days",
+   "current_strength": "Moderate",
+   "current_note": "Sheltered inside-sea coves are near-still, but the outer points around Ilha do Cabo Frio and Ilha dos Porcos pick up current and surge when wind and upwelling kick in.",
+   "currents": "Calm in the protected coves of the inside sea; moderate flow and surge at the exposed points around Ilha do Cabo Frio and Ilha dos Porcos, strongest when the NE wind and the upwelling are running.",
+   "signature_species": [
+    "green sea turtle",
+    "spotted eagle ray",
+    "longsnout seahorse",
+    "dusky grouper",
+    "green moray",
+    "spotted moray"
+   ],
+   "highlights": "Brazil's Capital do Mergulho: around 40 sites minutes from Praia dos Anjos, where the Cabo Frio upwelling pumps cold clear water over a gorgonian forest, an 1827 frigate wreck and the light-flooded Gruta Azul.",
+   "monthly_temp_c": {
+    "Jan": 24,
+    "Feb": 25,
+    "Mar": 26,
+    "Apr": 25,
+    "May": 24,
+    "Jun": 23,
+    "Jul": 22,
+    "Aug": 22,
+    "Sep": 22,
+    "Oct": 22,
+    "Nov": 23,
+    "Dec": 24
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Peak",
+     "marine_life": "green turtles and eagle rays working the gorgonian gardens while grouper and morays hold the rocky points",
+     "conditions": "high summer with packed boats — an upwelling pulse can drop the water to 16-18°C overnight while the clarity jumps",
+     "visibility_m": 18
+    },
+    "Feb": {
+     "rating": "Peak",
+     "marine_life": "seahorses in the sheltered coves and turtles grazing while big reef-fish schools stack over Ilha dos Porcos",
+     "conditions": "warm settled summer sea, with the 5mm suit still earning its keep on upwelling days",
+     "visibility_m": 20
+    },
+    "Mar": {
+     "rating": "Peak",
+     "marine_life": "eagle rays gliding through the sea-fan forest at Anequim while grouper, morays and dense reef fish carry every dive",
+     "conditions": "warmest water of the year with lighter crowds after the holidays",
+     "visibility_m": 20
+    },
+    "Apr": {
+     "rating": "Good",
+     "marine_life": "turtles and grouper busy on the inside-sea reefs while morays hunt the boulders and seahorses hold the calm coves",
+     "conditions": "settled early autumn with comfortable seas and reliable boat schedules",
+     "visibility_m": 15
+    },
+    "May": {
+     "rating": "Shoulder",
+     "marine_life": "resident grouper, morays and reef fish steady on the points while the summer crowds of fish thin out",
+     "conditions": "cooling sea with the first SW fronts sending swell into the outer sites",
+     "visibility_m": 12
+    },
+    "Jun": {
+     "rating": "Shoulder",
+     "marine_life": "grouper and morays holding the rocky reefs while seahorses sit tight in the sheltered coves",
+     "conditions": "winter fronts and swell that can cut visibility, with quieter boats between systems",
+     "visibility_m": 10
+    },
+    "Jul": {
+     "rating": "Shoulder",
+     "marine_life": "turtles and reef fish on the calm inside sea while grouper station the deeper rocks",
+     "conditions": "cool winter water and passing swells — migrating whales start surfacing offshore, watched from the boat on the ride out",
+     "visibility_m": 10
+    },
+    "Aug": {
+     "rating": "Shoulder",
+     "marine_life": "morays, grouper and schooling reef fish concentrated on the sheltered reefs",
+     "conditions": "coldest stretch of the year with SW swell days; whale blows on the horizon from the boat",
+     "visibility_m": 10
+    },
+    "Sep": {
+     "rating": "Good",
+     "marine_life": "eagle rays returning over the gorgonians while turtles and grouper pick up across the reefs",
+     "conditions": "season building as spring NE winds start pulling clear upwelled water onto the sites",
+     "visibility_m": 15
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "turtles, eagle rays and thick reef-fish schools around Ilha dos Porcos",
+     "conditions": "clear-water windows widen with the upwelling — cold pulses reward the 5mm suit",
+     "visibility_m": 15
+    },
+    "Nov": {
+     "rating": "Good",
+     "marine_life": "seahorses in the coves, morays on the boulders and grouper thickening ahead of summer",
+     "conditions": "spring winds trade warmth for clarity as upwelling pulses sweep the cape",
+     "visibility_m": 15
+    },
+    "Dec": {
+     "rating": "Peak",
+     "marine_life": "green turtles and eagle rays back over the sea fans while big schools crowd the points",
+     "conditions": "high season opening with warm surface water and upwelling-driven clarity",
+     "visibility_m": 18
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Gruta Azul (Blue Grotto)",
+     "type": "cavern",
+     "level": "advanced",
+     "depth": "10-15m",
+     "blurb": "A 120 m-long grotto in Ilha do Cabo Frio whose entrance sits at about 10 m; sunlight filtering through the opening floods the chamber with electric-blue light. Reserved for divers comfortable in overhead environments."
+    },
+    {
+     "name": "Naufrágio Dona Paula",
+     "type": "wreck",
+     "level": "intermediate",
+     "depth": "5-25m",
+     "blurb": "Remains of a frigate lost in 1827 off Ilha dos Franceses near Praia Grande; wreckage is scattered from the shallows down to about 25 m and period cannons are still visible on the bottom."
+    },
+    {
+     "name": "Enseada do Cardeiros",
+     "type": "reef",
+     "level": "beginner",
+     "depth": "7-16m",
+     "blurb": "Sheltered cove on Arraial's calm inside sea and the classic first-dive and training spot, with rocky reef slopes and abundant small reef fish over 7-16 m."
+    },
+    {
+     "name": "Saco do Anequim",
+     "type": "reef",
+     "level": "beginner",
+     "depth": "8-16m",
+     "blurb": "Home to the region's largest colony of gorgonians — a genuine sea-fan forest patrolled by spotted eagle rays and dense reef-fish life on the sheltered side of the cape."
+    },
+    {
+     "name": "Ilha dos Porcos",
+     "type": "reef / wall",
+     "level": "all levels",
+     "depth": "9-23m",
+     "blurb": "Island with multiple moorings: easy 9-11 m platforms for novices and deeper rock formations, with points from 12 m to 35 m holding large fish schools for experienced divers."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "arraial-do-cabo",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Arraial do Cabo is Brazil's Capital do Mergulho — a town of about 30,000 that fills with visitors every summer weekend, with around 40 catalogued dive sites a 5-25 minute boat ride from Praia dos Anjos. The cape splits the diving in two: a calm inside sea of training coves and gorgonian gardens, and exposed points around Ilha do Cabo Frio where wind-driven upwelling pulls cold, clear South Atlantic water to the surface. Caverns, an 1827 frigate wreck and a genuine sea-fan forest fill out the roster.",
+   "underwater": "The upwelling writes the script: NE winds pull cold, clear South Atlantic Central Water to the surface, so a January dive that starts near 24°C can suddenly read 16-18°C while visibility jumps toward 25 m — hence the 5mm suit year-round. Saco do Anequim holds the region's largest gorgonian colony, patrolled by spotted eagle rays; the Gruta Azul runs 120 m into Ilha do Cabo Frio and floods with electric-blue light; and the frigate Dona Paula scatters cannons from the shallows to 25 m.",
+   "encounters": "Green turtles and dusky grouper anchor the reefs year-round, with green and spotted morays in the boulders and longsnout seahorses holding the calm coves. Spotted eagle rays patrol the sea-fan forest at Saco do Anequim, and big fish schools stack over the points at Ilha dos Porcos. From July to October, migrating humpback whales pass along this coast — a surface spectacle watched from the boat on the ride out, not an underwater encounter."
+  },
+  {
+   "name": "Rio de Janeiro",
+   "country": "Brazil",
+   "region": "South Atlantic / Brazil",
+   "water_type": "subtropical Atlantic",
+   "difficulty": "all levels",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": -22.9068,
+    "lng": -43.1729
+   },
+   "best_months": "Oct-Mar",
+   "wetsuit": "5mm most of the year; 3mm in midsummer",
+   "current_strength": "mild to moderate",
+   "current_note": "Sheltered channels like Ressurreta are easy; the outer sites — Ilha Rasa and the Buenos Aires wreck — commonly carry surface current, so descents go down the line.",
+   "currents": "Mild inside the protected Cagarras archipelago; moderate surface current is typical at Ilha Rasa and over the Buenos Aires wreck, where a line descent is standard.",
+   "signature_species": [
+    "green sea turtle",
+    "southern stingray",
+    "dusky grouper",
+    "moray eel",
+    "octopus",
+    "dolphin"
+   ],
+   "highlights": "Big-city diving with a protected twist: the Cagarras Islands natural monument sits 5 km off Ipanema, backed by Ilha Rasa's walls to 42 m and the scattered 1890s wreck of the steamer Buenos Aires.",
+   "monthly_temp_c": {
+    "Jan": 25,
+    "Feb": 26,
+    "Mar": 26,
+    "Apr": 26,
+    "May": 25,
+    "Jun": 24,
+    "Jul": 23,
+    "Aug": 22,
+    "Sep": 22,
+    "Oct": 23,
+    "Nov": 24,
+    "Dec": 25
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Peak",
+     "marine_life": "green turtles and stingrays on the Tijucas reefs while grouper and octopus work the Cagarras boulders",
+     "conditions": "warm summer sea with the calmest crossings and the year's best clarity at the outer islands",
+     "visibility_m": 15
+    },
+    "Feb": {
+     "rating": "Peak",
+     "marine_life": "big reef-fish schools around the monument with morays in the cracks and dolphins passing through",
+     "conditions": "warmest water of the year and steady boat schedules",
+     "visibility_m": 15
+    },
+    "Mar": {
+     "rating": "Peak",
+     "marine_life": "turtles, stingrays and dense schools over the island reefs while octopus hunt the shallows",
+     "conditions": "settled late-summer sea, still warm with long clear windows offshore",
+     "visibility_m": 15
+    },
+    "Apr": {
+     "rating": "Good",
+     "marine_life": "grouper and morays holding the walls while turtles graze the sheltered channels",
+     "conditions": "mild autumn water and generally workable seas for the offshore runs",
+     "visibility_m": 12
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "stingrays on the sand flats and reef fish thick in the Ressurreta channel",
+     "conditions": "cooling sea with decent windows between the first cold fronts",
+     "visibility_m": 12
+    },
+    "Jun": {
+     "rating": "Shoulder",
+     "marine_life": "resident grouper, morays and octopus steady on the rocky reefs while the schools thin",
+     "conditions": "winter fronts bring swell; weekend boats still run from Marina da Gloria",
+     "visibility_m": 10
+    },
+    "Jul": {
+     "rating": "Shoulder",
+     "marine_life": "morays and octopus in the boulders with grouper sitting deep on the Rasa walls",
+     "conditions": "coolest water of the year and SW swell that limits the outer islands",
+     "visibility_m": 8
+    },
+    "Aug": {
+     "rating": "Shoulder",
+     "marine_life": "reef fish and crustaceans carrying the sheltered sites while pelagics stay scarce",
+     "conditions": "winter swell and variable clarity, with the inner channels the safer call",
+     "visibility_m": 8
+    },
+    "Sep": {
+     "rating": "Shoulder",
+     "marine_life": "turtles reappearing at the Tijucas while grouper and morays hold station",
+     "conditions": "late-winter water still cool, with the seas gradually settling",
+     "visibility_m": 10
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "turtles and stingrays active again while the schools rebuild around the monument",
+     "conditions": "spring warming with more reliable crossings to Ilha Rasa",
+     "visibility_m": 12
+    },
+    "Nov": {
+     "rating": "Good",
+     "marine_life": "dolphins visiting the archipelago while turtles, grouper and octopus fill the reefs",
+     "conditions": "warming sea and lengthening calm spells before high summer",
+     "visibility_m": 12
+    },
+    "Dec": {
+     "rating": "Peak",
+     "marine_life": "turtles, stingrays and big schools across the islands with morays busy in the rocks",
+     "conditions": "summer season opening with warm water and clear outer-island days",
+     "visibility_m": 15
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Ilhas Cagarras (main island)",
+     "type": "island reef / drop-off",
+     "level": "intermediate",
+     "depth": "8-30m",
+     "blurb": "The flagship dive of the marine monument 5 km off Ipanema: starts shallow and sheltered, then walls and drop-offs past 30 m with reef fish, crustaceans and passing pelagics; dolphins visit through the year."
+    },
+    {
+     "name": "Ressurreta",
+     "type": "sheltered channel reef",
+     "level": "beginner",
+     "depth": "8-12m",
+     "blurb": "Calm channel between islets in the Cagarras archipelago used for first dives and even night dives — easy conditions inside the protected monument."
+    },
+    {
+     "name": "Ilha Rasa",
+     "type": "offshore island / wall",
+     "level": "advanced",
+     "depth": "8-42m",
+     "blurb": "Lighthouse island regarded as one of Rio's best dives, with rocky walls from 8 m down to 42 m. Conditions swing widely — 2-20 m visibility, 15-23°C — and the sheltered Portinho side offers easier profiles."
+    },
+    {
+     "name": "Naufrágio Buenos Aires",
+     "type": "wreck",
+     "level": "advanced",
+     "depth": "12-42m",
+     "blurb": "German steamer that struck Ilha Rasa in the early 1890s and sank on impact; wreckage is scattered from 12 m down to the propeller at about 42 m, usually under surface current — a dive for experienced divers."
+    },
+    {
+     "name": "Ilhas Tijucas",
+     "type": "island reef",
+     "level": "beginner",
+     "depth": "5-15m",
+     "blurb": "Archipelago minutes by boat from Barra da Tijuca, between Barra and São Conrado beaches; easy rocky reefs with big schools of fish, stingrays and green turtles."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "rio-de-janeiro",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Brazil's most visited city keeps a genuine dive scene on its doorstep: the Cagarras Islands, a federally protected natural monument where fishing is banned, rise just 5 km off Ipanema beach. Boats run from Marina da Gloria downtown and from Barra da Tijuca — mostly at weekends — to sheltered channels like Ressurreta, the easy turtle reefs of the Ilhas Tijucas, and, for experienced divers, Ilha Rasa's walls to 42 m and the scattered wreck of the steamer Buenos Aires, lost there in the early 1890s.",
+   "underwater": "The contrast is the appeal: drift a sheltered channel at Ressurreta over easy rock at 8-12 m, or drop the line at Ilha Rasa where walls fall from 8 m past 40 m and conditions swing hard — visibility from 2 m to 20 m, water from 15°C to 23°C. The Buenos Aires lies broken from 12 m down to its propeller near 42 m, usually under surface current. Summer brings 25-26°C water and the clearest outer-island days; winter fronts cool the sea to around 22°C and push swell into the exposed sites.",
+   "encounters": "Green turtles graze the Tijucas reefs and southern stingrays settle on the sand between the boulders, with dusky grouper, morays and octopus resident on the rocky structure year-round. Dolphins visit the protected Cagarras archipelago through the year, and passing pelagics sweep the drop-offs in season. Summer concentrates the schools around the islands; winter leaves the residents to carry quieter, cooler dives."
+  },
+  {
+   "name": "Salvador",
+   "country": "Brazil",
+   "region": "South Atlantic / Brazil",
+   "water_type": "tropical Atlantic bay",
+   "difficulty": "all levels",
+   "access": "shore / day-boat",
+   "coordinates": {
+    "lat": -12.9714,
+    "lng": -38.5014
+   },
+   "best_months": "Dec-Mar",
+   "wetsuit": "3mm or shorty year-round",
+   "current_strength": "Low",
+   "current_note": "The bay is sheltered and calm most days; tidal flow picks up at the bay-mouth wrecks near the Farol da Barra.",
+   "currents": "Generally light inside the Baía de Todos os Santos; tidal currents strengthen at the bay-mouth wrecks off the Farol da Barra, so the deep sites are planned for slack tide.",
+   "signature_species": [
+    "hawksbill sea turtle",
+    "longsnout seahorse",
+    "French angelfish",
+    "parrotfish",
+    "snapper",
+    "southern stingray"
+   ],
+   "highlights": "Brazil's historic-wreck bay: more than 25 sites in the warm, sheltered Baía de Todos os Santos, from a 6 m training wreck beside the lighthouse to a 1668 Portuguese galleon on white sand at 32 m.",
+   "monthly_temp_c": {
+    "Jan": 28,
+    "Feb": 28,
+    "Mar": 29,
+    "Apr": 28,
+    "May": 28,
+    "Jun": 27,
+    "Jul": 26,
+    "Aug": 26,
+    "Sep": 26,
+    "Oct": 26,
+    "Nov": 27,
+    "Dec": 27
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Peak",
+     "marine_life": "hawksbill turtles over the wrecks while angelfish, parrotfish and snapper schools fill the hulls",
+     "conditions": "dry-season calm with the bay at its clearest and warmest",
+     "visibility_m": 20
+    },
+    "Feb": {
+     "rating": "Peak",
+     "marine_life": "seahorses on the shallow wrecks and grunt schools packed inside the Blackadder",
+     "conditions": "hot settled weather with light winds across the bay",
+     "visibility_m": 22
+    },
+    "Mar": {
+     "rating": "Peak",
+     "marine_life": "stingrays on the sand around the galleon while turtles and reef fish crowd the shallow hulks",
+     "conditions": "warmest water of the year and long clear days before the rains",
+     "visibility_m": 20
+    },
+    "Apr": {
+     "rating": "Good",
+     "marine_life": "angelfish and parrotfish busy on the encrusted wrecks while snapper hold the shadows",
+     "conditions": "first rains arrive — inshore sites can silt up while the outer wrecks stay workable",
+     "visibility_m": 15
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "hawksbills and seahorses steady on the sheltered wrecks with grunt schools thick in the structure",
+     "conditions": "rainy-season showers with variable inshore clarity",
+     "visibility_m": 12
+    },
+    "Jun": {
+     "rating": "Shoulder",
+     "marine_life": "snapper and grunts packed into the hulls while stingrays settle on the sand",
+     "conditions": "heaviest rains cut inshore visibility; pick the bay-mouth wrecks on better days",
+     "visibility_m": 10
+    },
+    "Jul": {
+     "rating": "Shoulder",
+     "marine_life": "resident angelfish and parrotfish grazing the wreck growth while turtles pass through",
+     "conditions": "wet-season lows with runoff staining the inshore sites, water still warm",
+     "visibility_m": 8
+    },
+    "Aug": {
+     "rating": "Shoulder",
+     "marine_life": "seahorses holding the quiet shallow wrecks with snapper schools deep in the Cavo Artemidi",
+     "conditions": "rains easing late in the month with warm water throughout",
+     "visibility_m": 10
+    },
+    "Sep": {
+     "rating": "Good",
+     "marine_life": "hawksbill turtles back over the wrecks while grunt and snapper schools rebuild",
+     "conditions": "drying weather and steadily improving clarity across the bay",
+     "visibility_m": 12
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "stingrays, parrotfish and angelfish across the bay-mouth wrecks",
+     "conditions": "settled spring seas with slack-tide windows for the deep sites",
+     "visibility_m": 12
+    },
+    "Nov": {
+     "rating": "Good",
+     "marine_life": "turtles and seahorses on the shallow hulks while the fish schools thicken toward summer",
+     "conditions": "warm pre-season calm with clarity stretching out",
+     "visibility_m": 15
+    },
+    "Dec": {
+     "rating": "Peak",
+     "marine_life": "hawksbills, angelfish and dense snapper schools across the wrecks",
+     "conditions": "dry season returning with the year's best light on the shallow wrecks",
+     "visibility_m": 18
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Naufrágio Blackadder",
+     "type": "wreck",
+     "level": "beginner",
+     "depth": "8-12m",
+     "blurb": "Three-masted clipper lost in a 1905 storm off Boa Viagem beach; the roughly 70 m hull rests shallow at about 9 m with the structure still recognisable — Salvador's classic easy wreck."
+    },
+    {
+     "name": "Naufrágio Cavo Artemidi",
+     "type": "wreck",
+     "level": "advanced",
+     "depth": "20-31m",
+     "blurb": "160 m Greek cargo ship wrecked in September 1980, now lying at about 31 m — a big, fish-covered hulk in the bay's warm water and the marquee deep dive."
+    },
+    {
+     "name": "Galeão Sacramento",
+     "type": "historic wreck",
+     "level": "advanced",
+     "depth": "28-32m",
+     "blurb": "Portuguese galleon sunk on 5 May 1668 on the Banco de Santo Antônio, four nautical miles from Porto da Barra; cannons and period anchors rest on white sand at about 32 m — one of Brazil's most historic dives."
+    },
+    {
+     "name": "Germânia & Bretagne",
+     "type": "twin wrecks",
+     "level": "intermediate",
+     "depth": "6-12m",
+     "blurb": "Two wrecks entwined near the Farol da Barra rocks: the Germânia grounded in 1873 and the Bretagne collided with its remains in 1903. Boilers, masts and anchors are easy to identify in one shallow dive."
+    },
+    {
+     "name": "Naufrágio Maraldi",
+     "type": "wreck",
+     "level": "beginner",
+     "depth": "3-6m",
+     "blurb": "Very shallow wreck beside the lighthouse, maxing out at 6 m, with a photogenic boiler at its centre — Salvador's standard try-dive and training site."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "salvador",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Salvador faces the Baía de Todos os Santos, and the bay reads like a wreck ledger: more than 25 catalogued sites, most only minutes from the coast, spanning three centuries of losses. The Portuguese galleon Sacramento, sunk in 1668, rests with its cannons at about 32 m; the entwined Germânia (1873) and Bretagne (1903) share one shallow dive off the Farol da Barra; and the 160 m freighter Cavo Artemidi, lost in 1980, lies at 31 m. Shore entries around the Barra headland and 26-29°C water keep it easy.",
+   "underwater": "Wreck diving arranged by depth like a syllabus: the Maraldi's boiler at 6 m beside the lighthouse, the Blackadder's 70 m clipper hull still recognisable at about 9 m, the twin Germânia and Bretagne readable in a single shallow dive, then the galleon's cannons on white sand near 32 m and the fish-covered Cavo Artemidi at 31 m. The sheltered bay stays calm most days, though tidal flow at the bay mouth means planning the deep wrecks for slack tide. Peak-season visibility opens to 15-30 m.",
+   "encounters": "Hawksbill turtles work the encrusted hulls while French angelfish and parrotfish graze the growth, and longsnout seahorses hold the quiet shallow wrecks. Snapper and grunt schools pack the interiors — the wrecks act as fish magnets across the sandy bay — with southern stingrays settled on the bottom nearby. Life stays consistent through the year in the warm water; the dry summer simply lets you see more of it."
+  },
+  {
+   "name": "Rhodes",
+   "country": "Greece",
+   "region": "Aegean / Greece",
+   "water_type": "temperate/warm Mediterranean sea",
+   "difficulty": "beginner-friendly",
+   "access": "shore / day-boat",
+   "coordinates": {
+    "lat": 36.43,
+    "lng": 28.22
+   },
+   "best_months": "Jun-Sep",
+   "wetsuit": "5mm; 3mm Jul-Sep, 7mm out of season",
+   "current_strength": "low to moderate",
+   "current_note": "Mostly gentle; the summer meltemi raises surface chop and light current on exposed east-coast capes, while the bays at Kalithea and Lindos stay sheltered.",
+   "currents": "Generally light in the sheltered eastern bays; the summer meltemi can push chop and a light current across the exposed capes, but Kalithea and St Paul's Bay stay calm.",
+   "signature_species": [
+    "dusky grouper",
+    "Mediterranean moray eel",
+    "common octopus",
+    "barracuda",
+    "loggerhead turtle",
+    "lionfish"
+   ],
+   "highlights": "Sheltered limestone caverns at Kallithea, walls and amphora-strewn bays near Lindos, and the 110 m Giannoula K wreck at Plimiri — warm, clear Aegean diving from shore or day-boat, May through October.",
+   "monthly_temp_c": {
+    "Jan": 18,
+    "Feb": 17,
+    "Mar": 17,
+    "Apr": 18,
+    "May": 20,
+    "Jun": 23,
+    "Jul": 26,
+    "Aug": 27,
+    "Sep": 26,
+    "Oct": 24,
+    "Nov": 21,
+    "Dec": 19
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "grouper and moray holding deep on the quiet reefs with little moving through",
+     "conditions": "mild SE Aegean winter but boats rarely run and storms stir the shallows",
+     "visibility_m": 18
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "resident octopus and moray tucked into the limestone while the reefs sit near-empty",
+     "conditions": "coldest stretch of winter with dive centres shut",
+     "visibility_m": 15
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "grouper stirring on the walls as the water begins its slow climb",
+     "conditions": "late-winter seas still unsettled and centres yet to open",
+     "visibility_m": 17
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "grouper, moray and octopus getting active again across the Kalithea reefs",
+     "conditions": "first centres opening with cool water and thick suits",
+     "visibility_m": 20
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "grouper stationed on the walls while barracuda begin schooling off the capes",
+     "conditions": "season under way with warming water and settled seas",
+     "visibility_m": 22
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "barracuda schooling over the walls while grouper, moray and octopus fill the caverns",
+     "conditions": "warm clear water with calm mornings before the meltemi builds",
+     "visibility_m": 25
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "grouper and schooling barracuda on the walls, lionfish now regular on the reefs and the occasional loggerhead turtle passing",
+     "conditions": "hot settled weather; meltemi chop on exposed capes while the bays stay flat",
+     "visibility_m": 28
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "reefs at their busiest with barracuda, grouper, octopus and the odd loggerhead turtle cruising the caverns",
+     "conditions": "warmest water of the year with 30 m-plus visibility on the east coast",
+     "visibility_m": 30
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "grouper and barracuda thick over the walls while lionfish hunt the ledges",
+     "conditions": "still-warm sea, easing winds and some of the year's clearest water",
+     "visibility_m": 30
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "grouper, moray and octopus staying busy while the barracuda schools begin to thin",
+     "conditions": "pleasant water and quieter boats as the season winds down",
+     "visibility_m": 25
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "resident grouper, moray and octopus holding the reefs as the visiting fish depart",
+     "conditions": "last boats of the year before most centres close for winter",
+     "visibility_m": 20
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "octopus and moray tucked deep into the limestone while the reefs go quiet",
+     "conditions": "mild early-winter sea but dive operations effectively stopped",
+     "visibility_m": 18
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Kallithea Springs (Kalithea Bay)",
+     "type": "reef / cavern",
+     "level": "beginner",
+     "depth": "3-19m",
+     "blurb": "Rhodes' signature house-reef beside the 1920s spa rotunda: limestone swim-throughs and mushroom-shaped cave formations in sheltered, clear water, with caves reaching about 19 m. Most local centres teach and night-dive here."
+    },
+    {
+     "name": "The Wall, Kalithea",
+     "type": "wall",
+     "level": "intermediate",
+     "depth": "6-30m",
+     "blurb": "A steep wall just outside Kalithea Bay dropping from about 6 m to 30 m, known for lively marine life and the best visibility on the island's east coast."
+    },
+    {
+     "name": "Anthony Quinn Bay (Cave of the Seal)",
+     "type": "reef / cave",
+     "level": "intermediate-advanced",
+     "depth": "12-30m",
+     "blurb": "A boulder-strewn bay near Faliraki with ancient amphora fragments scattered through the rocks and the Cave of the Seal dropping past 30 m — one of the most dived spots on Rhodes."
+    },
+    {
+     "name": "MV Giannoula K Wreck, Plimiri",
+     "type": "wreck",
+     "level": "advanced",
+     "depth": "15-22m",
+     "blurb": "A 110 m Dutch-built cargo ship from 1953 that sank at Plimiri in 1981, lying mostly intact on 22 m with the upper deck at 15 m and the mast almost breaking the surface. Engine-room penetration is possible on a second dive."
+    },
+    {
+     "name": "St Paul's Bay, Lindos",
+     "type": "reef / cavern",
+     "level": "beginner",
+     "depth": "5-12m",
+     "blurb": "The almost-enclosed bay beneath the Lindos acropolis, with rock formations and shallow caverns to about 12 m in calm, very clear water."
+    },
+    {
+     "name": "Lindos Walls & Caverns",
+     "type": "wall / cavern",
+     "level": "intermediate",
+     "depth": "12-30m",
+     "blurb": "Boat dives out of Lindos run walls and caverns in the 12-30 m band with 20 m-plus visibility; grouper, moray eels, octopus and schooling barracuda are the standard cast."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "rhodes",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Rhodes spreads real variety along its sheltered east coast: limestone swim-throughs beside the 1920s spa rotunda at Kallithea, a steep wall dropping to 30 m just outside the bay, amphora fragments among the boulders of Anthony Quinn Bay and, at Plimiri in the south, the 110 m cargo ship Giannoula K resting on 22 m with its mast almost breaking the surface. Centres in Rhodes Town, Faliraki, Lindos and Pefkos work it all from shore and day-boat between spring and late autumn.",
+   "underwater": "The east coast sets the tone: sheltered, warm and clear, with visibility running 20-30 m through the season and often past 30 m in late summer. Kallithea's caverns and mushroom formations sit in the 3-19 m band, the Wall falls from 6 m to 30 m, and Lindos boats work walls and caverns to 30 m. At Plimiri the Giannoula K reads as a proper wreck dive — upper deck at 15 m, hull on 22 m, engine-room penetration for the trained. Summer water hits 27°C; winter bottoms out near 17°C.",
+   "encounters": "Dusky grouper, Mediterranean moray and common octopus are the dependable cast on every reef and inside the caverns, with barracuda schooling off the capes through summer. Lionfish, invasive and now regular across the Dodecanese, hunt the ledges. Loggerhead turtles are an occasional bonus rather than a promise. Winter thins everything out: the residents tuck into the limestone and the visiting schools disperse until the water warms again in May."
+  },
+  {
+   "name": "Corfu",
+   "country": "Greece",
+   "region": "Ionian / Greece",
+   "water_type": "temperate Mediterranean sea",
+   "difficulty": "beginner-friendly",
+   "access": "shore / day-boat",
+   "coordinates": {
+    "lat": 39.62,
+    "lng": 19.92
+   },
+   "best_months": "Jun-Sep",
+   "wetsuit": "5mm; 3mm Jul-Sep, 7mm out of season",
+   "current_strength": "low",
+   "current_note": "Sheltered west-coast bays are near-still; only the offshore rocks like Colovri pick up mild current, which is what brings in the jacks and barracuda.",
+   "currents": "Near-still inside the Paleokastritsa bays and cave systems; a mild flow around the offshore rocks at Colovri and Skeloudi is the exception, and it switches on the schooling fish.",
+   "signature_species": [
+    "dusky grouper",
+    "barracuda",
+    "Mediterranean moray eel",
+    "common octopus",
+    "common dentex",
+    "nudibranchs"
+   ],
+   "highlights": "Ionian cavern diving at its most concentrated — Colovri's wall and swim-throughs, the roofless Hole of Ha and the arch-and-tunnel Monastery site, all minutes from Paleokastritsa in visibility that often reaches 30 m.",
+   "monthly_temp_c": {
+    "Jan": 15,
+    "Feb": 14,
+    "Mar": 14,
+    "Apr": 16,
+    "May": 19,
+    "Jun": 22,
+    "Jul": 24,
+    "Aug": 26,
+    "Sep": 24,
+    "Oct": 21,
+    "Nov": 18,
+    "Dec": 16
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "grouper and moray sitting deep in the caverns with little else moving",
+     "conditions": "wet, windy Ionian winter with dive centres closed",
+     "visibility_m": 12
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "resident octopus and moray tucked into the limestone while the west coast sits empty",
+     "conditions": "cold rough mid-winter sea with no boats running",
+     "visibility_m": 10
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "grouper stirring in the caves as the coldest water of the year starts to warm",
+     "conditions": "sea at its 14°C minimum and operators still shut",
+     "visibility_m": 12
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "grouper, moray and octopus waking across the Paleokastritsa caverns with nudibranchs on the walls",
+     "conditions": "centres preparing to open; cool water, thick suits and rain-stirred visibility",
+     "visibility_m": 15
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "grouper on station at Colovri while dentex and the first barracuda patrol the drop-offs",
+     "conditions": "season opening with warming water and the west coast clearing",
+     "visibility_m": 20
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "barracuda and jacks pulled onto Colovri by the mild current while grouper hold the wall",
+     "conditions": "warm settled sea with long visibility through the cave systems",
+     "visibility_m": 25
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "grouper, dentex and schooling barracuda around the offshore rocks with octopus and nudibranchs in the caverns",
+     "conditions": "calm, clear high summer with the caves at their brightest",
+     "visibility_m": 28
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "barracuda schools, hunting dentex and grouper thick on Colovri's wall",
+     "conditions": "warmest water of the year and visibility often past 30 m offshore",
+     "visibility_m": 30
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "dentex and barracuda hunting over the walls while moray and octopus show on every cavern dive",
+     "conditions": "still-warm sea with settled early-autumn weather",
+     "visibility_m": 28
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "grouper, moray and octopus staying active while the schooling fish thin out",
+     "conditions": "mild water and the last full boat schedules of the year",
+     "visibility_m": 22
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "resident grouper, moray and octopus holding the caverns as autumn rain clouds the shallows",
+     "conditions": "centres closing down as wind and rain arrive",
+     "visibility_m": 15
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "octopus and moray tucked deep into the rock while the caves sit dark and quiet",
+     "conditions": "mild but wet and windy early winter with operators closed",
+     "visibility_m": 12
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Colovri Rock",
+     "type": "wall / cavern",
+     "level": "intermediate-advanced",
+     "depth": "5-40m",
+     "blurb": "An uninhabited islet off Paleokastritsa and Corfu's most famous dive: a maze of boulders, crevices and swim-throughs over a steep wall, with a cave and tunnel and dives to 40 m — the seabed beyond drops far deeper. Visibility regularly hits 30 m."
+    },
+    {
+     "name": "Hole of Ha",
+     "type": "cavern",
+     "level": "beginner",
+     "depth": "6-18m",
+     "blurb": "An easy cavern dive that goes inside the mountain to an open, roofless chamber where divers look up at trees ringing the skylight; stalactites and fossilised conch shells line the rock. Max depth about 18 m."
+    },
+    {
+     "name": "Monastery (Paleokastritsa)",
+     "type": "cave / arch",
+     "level": "all levels",
+     "depth": "3-22m",
+     "blurb": "100 m off the monastery headland: an impressive arch at 15 m leading to a 10 m tunnel, an open-roofed cave with its entrance at just 3 m, and a deeper, colour-packed second cave at 22 m."
+    },
+    {
+     "name": "Skeloudi",
+     "type": "reef / caves",
+     "level": "advanced",
+     "depth": "12-40m",
+     "blurb": "A rock near Paleokastritsa with underwater cave chambers and dramatic formations to 40 m, patrolled by barracuda, grouper, moray eels, octopus and crayfish; visibility often exceeds 30 m with low current."
+    },
+    {
+     "name": "Paleokastritsa Caves",
+     "type": "cavern system",
+     "level": "beginner-intermediate",
+     "depth": "8-25m",
+     "blurb": "The west coast's multi-chamber limestone cave systems carved into the cliffs around Paleokastritsa, dived in the 8-25 m band with 25 m-plus visibility — the reason the resort became Corfu's diving hub."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "corfu",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Corfu's diving concentrates on the west coast around Paleokastritsa, where the limestone cliffs continue underwater as a network of caves, arches and tunnels. Colovri, an uninhabited islet offshore, is the marquee dive — boulders, crevices and swim-throughs over a wall running to 40 m — while the Hole of Ha goes inside the mountain itself to a roofless chamber ringed by trees. Centres at Paleokastritsa, Ermones and Nissaki run roughly May to October, working some two dozen mapped sites from shore and day-boat.",
+   "underwater": "This is cavern country. The Monastery site stacks an arch at 15 m, a 10 m tunnel and an open-roofed cave whose entrance sits at just 3 m; the Hole of Ha ends in a skylight chamber lined with stalactites and fossilised conch shells. Offshore, Colovri and Skeloudi drop to 40 m in visibility that regularly reaches 30 m, while the bays stay near-still. Summer water reaches 26°C; the March sea bottoms out around 14°C, the coldest of the year.",
+   "encounters": "Dusky grouper hold the walls at Colovri and Skeloudi, with Mediterranean moray, common octopus and nudibranchs filling the caverns. When mild current brushes the offshore rocks it switches the fish on: barracuda and jacks arrive to hunt, and common dentex patrol the drop-offs through the warm months. In winter the west coast empties, the residents sit deep in the limestone, and the caves wait quietly for the boats to return in May."
+  },
+  {
+   "name": "Zakynthos",
+   "country": "Greece",
+   "region": "Ionian / Greece",
+   "water_type": "temperate Mediterranean sea",
+   "difficulty": "beginner-friendly",
+   "access": "shore / day-boat",
+   "coordinates": {
+    "lat": 37.78,
+    "lng": 20.9
+   },
+   "best_months": "Jun-Sep",
+   "wetsuit": "5mm; 3mm Jul-Sep, 7mm out of season",
+   "current_strength": "low",
+   "current_note": "The sheltered south coast inside the marine park is usually still; a modest current at Barracuda Reef is what switches on the schooling fish.",
+   "currents": "Generally still along the protected south coast and inside the Keri caves; Barracuda Reef is the exception, where a modest flow gathers the schools around the pinnacle.",
+   "signature_species": [
+    "loggerhead turtle",
+    "Mediterranean monk seal",
+    "barracuda",
+    "dusky grouper",
+    "Mediterranean moray eel",
+    "common octopus"
+   ],
+   "highlights": "Loggerhead turtle encounters over the marine-park reefs at Marathonisi, plus a cave-riddled Keri coast with a 75 m blue cavern, deep walls and a barracuda pinnacle — all worked from one small harbour.",
+   "monthly_temp_c": {
+    "Jan": 16,
+    "Feb": 15,
+    "Mar": 15,
+    "Apr": 16,
+    "May": 19,
+    "Jun": 23,
+    "Jul": 25,
+    "Aug": 27,
+    "Sep": 25,
+    "Oct": 23,
+    "Nov": 20,
+    "Dec": 18
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "moray and octopus deep in the limestone while the caves sit empty",
+     "conditions": "quiet winter island with no dive boats running",
+     "visibility_m": 12
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "resident grouper holding deep off Keri with little else moving",
+     "conditions": "coldest sea of the year and every dive base closed",
+     "visibility_m": 10
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "grouper and moray stirring along the Keri walls as the water slowly warms",
+     "conditions": "still winter-quiet with operators dark until spring",
+     "visibility_m": 12
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "grouper, moray and octopus getting active again along the cave walls",
+     "conditions": "bases readying for the season with cool water and thick suits",
+     "visibility_m": 15
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "loggerhead turtles possible around Marathonisi while grouper hold the Keri walls",
+     "conditions": "season opening with clearing water and calm seas inside the marine park",
+     "visibility_m": 22
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "loggerhead turtles cruising the Marathonisi shallows while barracuda gather on the pinnacle",
+     "conditions": "warm clear water with the Keri caves at their glass-clear best",
+     "visibility_m": 25
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "loggerhead turtles on the marine-park reefs, schooling barracuda when the current runs and the occasional monk seal resting in the Keri caverns",
+     "conditions": "hot flat-calm high season across the sheltered south coast",
+     "visibility_m": 28
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "turtles gliding over the Marathonisi reef while grouper, moray and octopus fill the cave walls",
+     "conditions": "warmest water of the year with superb clarity through the caverns",
+     "visibility_m": 30
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "loggerhead turtles still meeting divers at Marathonisi while barracuda and big fish work the deep pinnacle",
+     "conditions": "still-warm settled sea and clear caves as the crowds thin",
+     "visibility_m": 28
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "turtles still possible at Marathonisi while grouper, moray and octopus stay busy along the Keri walls",
+     "conditions": "pleasant water with the last boats of the season running",
+     "visibility_m": 22
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "resident grouper, moray and octopus holding the caves as the island empties",
+     "conditions": "bases closed or closing amid unsettled autumn weather",
+     "visibility_m": 15
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "octopus and moray tucked into the cave walls while the reefs rest",
+     "conditions": "mild but shut-down early winter with no dive operations",
+     "visibility_m": 12
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Keri Caves",
+     "type": "cavern / wall",
+     "level": "all levels",
+     "depth": "5-40m",
+     "blurb": "The signature dive of the island: reef walls, tunnels and caverns off Keri including a cathedral-like 75 m blue cavern; average depth about 18 m with the wall dropping past 40 m. Monk seals are occasionally found feeding or resting inside."
+    },
+    {
+     "name": "Marathonisi (Turtle Island)",
+     "type": "reef",
+     "level": "beginner",
+     "depth": "10-20m",
+     "blurb": "The islet in Laganas Bay inside the National Marine Park of Zakynthos, averaging about 10 m with a 20 m maximum — the place divers most often meet loggerhead turtles."
+    },
+    {
+     "name": "Barracuda Reef",
+     "type": "pinnacle / reef",
+     "level": "advanced at depth",
+     "depth": "5-45m",
+     "blurb": "A pinnacle whose tip just breaks the surface; when current runs, schools of barracuda feed around the deep rock, and some of the island's biggest fish — including tuna — patrol below 45 m."
+    },
+    {
+     "name": "Shrimp Cave",
+     "type": "cave",
+     "level": "advanced",
+     "depth": "30m",
+     "blurb": "A true overhead cave at 30 m near Keri whose walls crawl with shrimp; the depth plus the ceiling restrict it to experienced divers with overhead training."
+    },
+    {
+     "name": "Poseidon Cave",
+     "type": "cavern",
+     "level": "intermediate",
+     "depth": "10-25m",
+     "blurb": "One of the dozen or so named sites worked from Keri harbour, part of the limestone cave-and-tunnel coast between Keri and Marathia — the island counts some 400 sea caves in all."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "zakynthos",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Zakynthos concentrates its diving on the sheltered south coast, where about a dozen sites work out of little Keri harbour and Laganas Bay sits inside the National Marine Park of Zakynthos, nesting ground of the loggerhead turtle. Marathonisi — the islet divers call Turtle Island — is where loggerheads are most often met, while the Keri coast hides walls, tunnels and caverns including a cathedral-like 75 m blue cavern. The island counts some 400 sea caves; dive bases run May to October and shut for winter.",
+   "underwater": "Keri sets the standard: reef walls dropping past 40 m, tunnels and caverns averaging around 18 m, and the long blue cavern lit from its openings. Marathonisi is the easy counterpoint — roughly 10 m average over marine-park reef. Barracuda Reef's pinnacle tips the surface and falls past 45 m, and Shrimp Cave is a true overhead at 30 m for divers with cave training. The sheltered south coast stays near-still, and from May to September the water climbs from 19 to 27°C with the caves at their clearest.",
+   "encounters": "Loggerhead turtles are the headline: Laganas Bay sits inside their protected marine park, and dives at Marathonisi meet them more reliably than anywhere else on the island through the summer season. A Mediterranean monk seal is an occasional surprise, sometimes found resting or feeding in the Keri caves. Around them, dusky grouper, moray and octopus hold the walls, barracuda school the pinnacle when current runs, and tuna patrol below 45 m."
+  },
+  {
+   "name": "Naples",
+   "country": "Italy",
+   "region": "Tyrrhenian / Italy",
+   "water_type": "temperate/warm Mediterranean sea",
+   "difficulty": "beginner",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": 40.81,
+    "lng": 14.13
+   },
+   "best_months": "Jun-Sep",
+   "wetsuit": "5mm Jun-Oct; 7mm semi-dry or drysuit Nov-May",
+   "current_strength": "mild",
+   "current_note": "Sheltered inner-gulf sites carry little to no current; the shallow Baia park is dived at anchor over flat bottoms.",
+   "currents": "Little to no current inside the sheltered Gulf of Pozzuoli, where the Baia archaeological sites are dived at anchor over flat shallow bottoms; the Gaiola shoals off Posillipo are similarly gentle.",
+   "signature_species": [
+    "octopus",
+    "moray eel",
+    "conger eel",
+    "dusky grouper",
+    "saddled seabream",
+    "nudibranchs"
+   ],
+   "highlights": "Rome underwater in Italy's third most visited city: Emperor Claudius's sunken nymphaeum, an intact black-and-white villa mosaic and the drowned harbor of Portus Julius in the Baia submerged park, plus the Gaiola reserve's villa-strewn shoals off Posillipo.",
+   "monthly_temp_c": {
+    "Jan": 15,
+    "Feb": 14,
+    "Mar": 14,
+    "Apr": 15,
+    "May": 19,
+    "Jun": 23,
+    "Jul": 25,
+    "Aug": 26,
+    "Sep": 25,
+    "Oct": 22,
+    "Nov": 19,
+    "Dec": 16
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "octopus, moray and conger holding inside the drowned Roman walls while the sandy flats sit quiet",
+     "conditions": "cold water in thick suits, with winter swell often stirring the shallow archaeological sites",
+     "visibility_m": 8
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "residents tucked deep into the ancient masonry with little else moving over the cold sand",
+     "conditions": "coldest water of the year; centers dive weather permitting but swell can blow out the shallows",
+     "visibility_m": 8
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "octopus and nudibranchs beginning to stir among the sunken villa walls as the water bottoms out",
+     "conditions": "still-cold late-winter sea with unsettled weather and dives run only when the gulf lies flat",
+     "visibility_m": 8
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "nudibranchs showing on the encrusted masonry while octopus and moray grow active in the ruins",
+     "conditions": "cool water but calming spring seas — often clearer over the archaeological flats — as Gaiola tours resume",
+     "visibility_m": 10
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "saddled seabream shoaling over the mosaic floors while grouper appear on the Gaiola shoals",
+     "conditions": "warming water with settled spring weather and full schedules in both parks",
+     "visibility_m": 12
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "dusky grouper stationed on the Cavallara banks while seabream swarm the sunken harbor and octopus den among the pilae",
+     "conditions": "warm calm sea and easy long dives over the shallow ruins",
+     "visibility_m": 12
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "octopus, moray and conger busy in the ruins with saddled seabream thick over the archaeological flats",
+     "conditions": "warm settled water in the busiest season for the guided park itineraries",
+     "visibility_m": 12
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "grouper on the outer shoals and seabream clouding the drowned streets while nudibranchs work the encrusted walls",
+     "conditions": "warmest water of the year with flat seas across the sheltered gulf",
+     "visibility_m": 14
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "dusky grouper, moray and conger showing everywhere as seabream keep grazing the sunken villa gardens",
+     "conditions": "still-warm sea with late-summer calm bringing the year's cleanest water",
+     "visibility_m": 15
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "octopus and moray active in the masonry while grouper hold on the Gaiola banks into the autumn",
+     "conditions": "pleasant water and autumn calm that often gives the clearest archaeological dives",
+     "visibility_m": 15
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "residents settling back into the ruins as the seabream shoals thin over the cooling flats",
+     "conditions": "cooling sea with thicker suits and dives increasingly hostage to swell",
+     "visibility_m": 10
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "octopus, moray and conger tucked into the sunken walls while the shallows go quiet",
+     "conditions": "cold early-winter water; local centers still run weather permitting but days are lost to wind",
+     "visibility_m": 8
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Ninfeo di Claudio (Punta Epitaffio, Baia)",
+     "type": "archaeological",
+     "level": "beginner",
+     "depth": "5-7m",
+     "blurb": "Emperor Claudius's banquet nymphaeum, drowned by bradyseism and dived at about 5 m; replica statues now stand where the originals — displayed in the Baia castle museum — were found. Restored and reopened to divers in 2020."
+    },
+    {
+     "name": "Villa a Protiro (Baia)",
+     "type": "archaeological",
+     "level": "beginner",
+     "depth": "5-13m",
+     "blurb": "A Roman maritime villa whose courtyard keeps a large black-and-white geometric mosaic floor in remarkable condition — local divers rate it the highlight of the submerged park."
+    },
+    {
+     "name": "Portus Julius (Baia)",
+     "type": "archaeological",
+     "level": "beginner",
+     "depth": "3-10m",
+     "blurb": "The submerged Roman military harbor of 37 BC, with streets, warehouses and fish-tanks still traceable across the shallow seabed of the Gulf of Pozzuoli."
+    },
+    {
+     "name": "Secca delle Fumose (Baia)",
+     "type": "volcanic reef / archaeological",
+     "level": "beginner-intermediate",
+     "depth": "5-15m",
+     "blurb": "Roman pilae — harbor pillars — on a shoal where volcanic sulfur gas streams continuously through the sand: diving inside the active Campi Flegrei caldera."
+    },
+    {
+     "name": "Villa dei Pisoni (Baia)",
+     "type": "archaeological",
+     "level": "beginner",
+     "depth": "5-8m",
+     "blurb": "The drowned estate of the Pisoni family, its perimeter walls and the traces of a garden colonnade wrapped in sponges and sea grass."
+    },
+    {
+     "name": "Secca della Cavallara (Gaiola)",
+     "type": "reef / archaeological",
+     "level": "intermediate",
+     "depth": "12-30m",
+     "blurb": "Rocky shoal off the Gaiola islets on the Posillipo coast, inside the Gaiola MPA: guided itineraries to about 25 m over the Cavallara banks, past remains of maritime villas, fishponds and tuff quarries drowned by bradyseism."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "naples",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Italy's third most visited city dives its own drowned history. In the Baia submerged archaeological park — sunk by the slow volcanic breathing of the Campi Flegrei — Emperor Claudius's nymphaeum sits at about 5 m, a villa courtyard keeps its black-and-white mosaic floor, and the streets of Portus Julius, the Roman military harbor of 37 BC, run across the shallow seabed. Across the bay, the Gaiola underwater park off Posillipo adds villa-strewn shoals down to about 25 m, all guided-only on short day-boat runs from Baia and Pozzuoli.",
+   "underwater": "The Baia sites are shallow, flat and dived at anchor: replica statues in Claudius's nymphaeum at 5 m, mosaic floors brushed clear of sand, Roman pilae rising from a shoal where sulfur gas bubbles stream up through the seabed of the live caldera. Visibility is modest — 5-10 m on the sandy flats, 10-20 m out on the Gaiola shoals — and best in the calm of late summer and autumn. Water runs 14°C in winter to 26°C in August; currents are barely a factor in the sheltered gulf.",
+   "encounters": "This is a residents' destination: octopus, moray and conger eels have colonised the drowned walls and fish-tanks, nudibranchs graze the encrusted masonry, and saddled seabream shoal over the mosaic floors. Dusky grouper hold on the deeper Gaiola banks, thickening through the warm months. From June to September everything is active in warm water; in winter the residents tuck into the Roman stonework and the shallow flats go quiet."
+  },
+  {
+   "name": "Sorrento & Capri",
+   "country": "Italy",
+   "region": "Tyrrhenian / Italy",
+   "water_type": "temperate/warm Mediterranean sea",
+   "difficulty": "intermediate",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": 40.6,
+    "lng": 14.35
+   },
+   "best_months": "Jun-Oct",
+   "wetsuit": "5mm Jun-Oct; 7mm semi-dry in shoulder months; drysuit for rare winter dives",
+   "current_strength": "mild to strong",
+   "current_note": "Sheltered bays and the Vervece are usually gentle, but exposed points like Punta Campanella and Capri's Punta Carena funnel strong currents between the peninsula and the island.",
+   "currents": "Mostly gentle in the sheltered bays and around the Vervece, but the exposed points — Punta Campanella itself and Punta Carena on Capri — funnel strong tidal and wind-driven currents through the gap between the peninsula and the island.",
+   "signature_species": [
+    "dusky grouper",
+    "Mediterranean barracuda",
+    "dentex",
+    "john dory",
+    "moray eel",
+    "octopus"
+   ],
+   "highlights": "The Punta Campanella marine reserve between Sorrento and Capri: the Vervece islet's gorgonian walls falling to 50 m past a bronze Madonna at 12 m, the five fish-packed pinnacles of the Banco di Santa Croce, and current-swept points below Capri's lighthouse.",
+   "monthly_temp_c": {
+    "Jan": 15,
+    "Feb": 14,
+    "Mar": 14,
+    "Apr": 15,
+    "May": 19,
+    "Jun": 23,
+    "Jul": 25,
+    "Aug": 26,
+    "Sep": 25,
+    "Oct": 22,
+    "Nov": 19,
+    "Dec": 16
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "grouper sitting deep on the pinnacles while moray and octopus hold their dens through the cold",
+     "conditions": "most centers paused for winter; dives only by arrangement in cold, storm-prone seas",
+     "visibility_m": 12
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "resident moray and octopus tucked into the rock with little moving over the reefs",
+     "conditions": "coldest water of the year and operations still dormant outside special arrangement",
+     "visibility_m": 10
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "grouper and octopus stirring on the pinnacles as the water sits at its coldest",
+     "conditions": "late-winter seas with storms still passing and centers yet to reopen",
+     "visibility_m": 10
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "octopus and moray growing active on the reefs while grouper reclaim the pinnacle tops",
+     "conditions": "season opening around Easter with cool water, thick suits and spring plankton dimming the blue",
+     "visibility_m": 10
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "dentex patrolling the pinnacles while grouper station on the Vervece walls and bream shoal in the reserve",
+     "conditions": "warming water and full boat schedules from the three marinas",
+     "visibility_m": 12
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "barracuda schooling over the Banco di Santa Croce while grouper and dentex work the gorgonian walls",
+     "conditions": "warm settled sea with the reserve's sites at their busiest",
+     "visibility_m": 15
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "grouper near-guaranteed on the Vervece while barracuda and dentex hunt across the pinnacles",
+     "conditions": "warm calm water in high season; exposed Capri points still demand current planning",
+     "visibility_m": 18
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "barracuda thick over the pinnacle caps with grouper, moray and octopus showing on every wall",
+     "conditions": "warmest water of the year and long calm days on the reserve",
+     "visibility_m": 20
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "dentex and barracuda hunting the fish-crowded pinnacles while john dory hang along the deeper walls",
+     "conditions": "still-warm sea, thinning crowds and the year's clearest water arriving",
+     "visibility_m": 22
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "grouper, moray and octopus busy on the walls while late barracuda linger over the banks",
+     "conditions": "comfortable water with autumn clarity at its best before the season closes",
+     "visibility_m": 25
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "residents holding on the pinnacles as the visiting hunters thin out for winter",
+     "conditions": "cooling sea with the last boats of the season running into early November",
+     "visibility_m": 15
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "grouper, moray and octopus settled deep into the rock while the reserve sits quiet",
+     "conditions": "centers paused for winter with dives possible only by arrangement",
+     "visibility_m": 12
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Scoglio del Vervece",
+     "type": "pinnacle / wall",
+     "level": "intermediate",
+     "depth": "12-50m",
+     "blurb": "Rock islet 1 km off Marina della Lobra inside one of the MPA's two no-take zones; a bronze Madonna rests at 12 m and the walls drop to about 50 m through white, yellow and red gorgonian forests with near-guaranteed grouper and barracuda."
+    },
+    {
+     "name": "Banco di Santa Croce",
+     "type": "pinnacles",
+     "level": "advanced",
+     "depth": "9-50m",
+     "blurb": "Five rocky pinnacles rising from about 50 m to a cap at 9 m in the Gulf of Naples off Vico Equense — counted among the Mediterranean's richest dives for its density of gorgonians and fish life."
+    },
+    {
+     "name": "Punta Carena (Capri)",
+     "type": "wall / point",
+     "level": "advanced",
+     "depth": "12-40m",
+     "blurb": "Below Capri's lighthouse on the island's southwest tip; rated the island's most spectacular dive, but strong currents and constant boat traffic keep it for experienced divers."
+    },
+    {
+     "name": "Grotta di Mitigliano",
+     "type": "cavern",
+     "level": "intermediate",
+     "depth": "6-15m",
+     "blurb": "A cavern in the limestone of the Sorrento Peninsula near Punta Campanella — torch-lit swim-throughs with sponge- and coral-crusted walls."
+    },
+    {
+     "name": "Isca",
+     "type": "islet reef",
+     "level": "beginner-intermediate",
+     "depth": "8-25m",
+     "blurb": "Small islet off the Massa Lubrense coast toward Marina del Cantone with easy reef contours, octopus dens and schooling bream in the MPA's buffer zone."
+    },
+    {
+     "name": "Vetara",
+     "type": "islet reef",
+     "level": "intermediate",
+     "depth": "10-35m",
+     "blurb": "Isolated islet between Punta Campanella and the Li Galli islands; deeper rocky slopes with parazoanthus cover and pelagic fly-bys on the seaward side."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "sorrento-capri",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "The Sorrentine Peninsula points straight at Capri, and the Punta Campanella marine reserve fills the water between them. Day boats out of Marina Grande, Marina della Lobra and Marina del Cantone reach the Vervece islet — a no-take rock where a bronze Madonna rests at 12 m and gorgonian walls fall to about 50 m — the five pinnacles of the Banco di Santa Croce rising from 50 m to a 9 m cap, limestone caverns, and the current-swept wall under Capri's lighthouse. The season runs roughly Easter to early November with the resort trade.",
+   "underwater": "This is classic Tyrrhenian rock: pinnacles and walls carpeted in white, yellow and red gorgonians, torch-lit swim-throughs in the peninsula's limestone, and open blue on the seaward islets. The sheltered sites dive gently, but Punta Campanella and Capri's Punta Carena funnel strong currents through the strait and stay on the experienced-diver list. Visibility runs 10-25 m — best in late summer and autumn, dimmest in the spring bloom — on water from 14°C in winter to 26°C in August.",
+   "encounters": "Dusky grouper are the reserve's signature — near-guaranteed on the Vervece — with moray eels and octopus in every wall crack. The warm months bring the hunters: Mediterranean barracuda schooling over the Banco di Santa Croce's caps, dentex patrolling the pinnacles, john dory holding along the deeper walls into autumn. By late October the visitors thin out, and winter leaves the residents settled deep on the quiet rock."
+  },
+  {
+   "name": "Taormina",
+   "country": "Italy",
+   "region": "Ionian / Italy",
+   "water_type": "temperate/warm Mediterranean sea",
+   "difficulty": "beginner",
+   "access": "shore / day-boat",
+   "coordinates": {
+    "lat": 37.851,
+    "lng": 15.301
+   },
+   "best_months": "Jun-Oct",
+   "wetsuit": "3-5mm high summer; 5-7mm at the season's edges (May, October)",
+   "current_strength": "mild to moderate",
+   "current_note": "Most Isola Bella sites are minutes from shore and gently swept; exposed outer rocks like Mermaid Rock and the Capo Taormina slope pick up current when the Ionian wind swings.",
+   "currents": "Gentle around the Isola Bella reserve's inshore sites, but the exposed outer rocks — Mermaid Rock and the column slope off Capo Taormina — can pick up current when the Ionian wind swings.",
+   "signature_species": [
+    "dusky grouper",
+    "Mediterranean moray",
+    "octopus",
+    "Mediterranean parrotfish",
+    "amberjack",
+    "nudibranchs"
+   ],
+   "highlights": "Sicily's flagship resort dives the Isola Bella marine reserve at its feet — a light-flooded blue cavern, an easy house reef, and the cargo of a 2nd-century Roman stone-carrier: 37 marble columns still in situ at 22-29 m off Capo Taormina.",
+   "monthly_temp_c": {
+    "Jan": 16,
+    "Feb": 15,
+    "Mar": 15,
+    "Apr": 16,
+    "May": 18,
+    "Jun": 22,
+    "Jul": 26,
+    "Aug": 26,
+    "Sep": 25,
+    "Oct": 23,
+    "Nov": 21,
+    "Dec": 18
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Closed",
+     "marine_life": "resident grouper, moray and octopus wintering on the reserve's reefs with no one diving above them",
+     "conditions": "dive centers closed for the winter and the resort town largely shut",
+     "visibility_m": 12
+    },
+    "Feb": {
+     "rating": "Closed",
+     "marine_life": "octopus and moray holding their dens through the coldest water of the year",
+     "conditions": "no local operations running; the season resumes in spring",
+     "visibility_m": 12
+    },
+    "Mar": {
+     "rating": "Closed",
+     "marine_life": "reef residents stirring on the boulder fields as the Ionian slowly warms",
+     "conditions": "centers still shut ahead of the spring reopening",
+     "visibility_m": 12
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "octopus, moray and nudibranchs active over the Isola Bella boulders as the reefs wake up",
+     "conditions": "season opening in cool water with thicker suits and quiet sites",
+     "visibility_m": 15
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "grouper and parrotfish showing on the reserve's reefs while nudibranchs work the cavern walls",
+     "conditions": "fresh 18°C water with full schedules resuming from town and Giardini Naxos",
+     "visibility_m": 15
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "dusky grouper on the deeper contours while parrotfish graze the boulders and octopus den along the house reef",
+     "conditions": "warm settled Ionian with long days over the reserve",
+     "visibility_m": 18
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "amberjack passing the outer rocks while grouper, moray and octopus show on every reserve dive",
+     "conditions": "warm calm sea in the resort's busiest weeks",
+     "visibility_m": 20
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "amberjack sweeping Mermaid Rock's deeper contours while parrotfish and bream crowd the shallows",
+     "conditions": "warmest water of the year with flat seas and superb clarity",
+     "visibility_m": 25
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "grouper and amberjack busy on the outer rocks while octopus and nudibranchs fill the caverns",
+     "conditions": "still-warm sea with the clearest water of the year arriving",
+     "visibility_m": 28
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "grouper, moray and octopus staying active on the reefs as the last amberjack pass through",
+     "conditions": "still 23°C with autumn clarity as the season winds toward its close",
+     "visibility_m": 25
+    },
+    "Nov": {
+     "rating": "Closed",
+     "marine_life": "residents settling onto the quiet reefs after the last boats of October",
+     "conditions": "centers closed for winter at the end of the season",
+     "visibility_m": 15
+    },
+    "Dec": {
+     "rating": "Closed",
+     "marine_life": "grouper, moray and octopus tucked into the rock with the reserve left to itself",
+     "conditions": "no diving operations; the town itself largely shuts down",
+     "visibility_m": 12
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Greek/Roman Columns & Shrimp Cave",
+     "type": "archaeological / cavern",
+     "level": "intermediate",
+     "depth": "12-30m",
+     "blurb": "The cargo of a 2nd-century AD Roman stone-carrier: 37 marble columns and two blocks still in situ on the rocky slope at 22-29 m off Capo Taormina, combined with swim-throughs and a shrimp-filled cave."
+    },
+    {
+     "name": "Grotta Azzurra (Blue Cave)",
+     "type": "cavern / wall",
+     "level": "beginner-intermediate",
+     "depth": "12-25m",
+     "blurb": "Light-flooded cavern just north of Isola Bella, reached by a short boat ride; the dive follows a wall at about 12 m with the open Ionian blue on one side, to a maximum depth of about 25 m."
+    },
+    {
+     "name": "Isola Bella house reef",
+     "type": "reef",
+     "level": "beginner",
+     "depth": "5-18m",
+     "blurb": "Rocky reef ringing the pearl-shaped islet of the Isola Bella marine reserve, minutes from shore — the standard first dive and training site, with octopus, moray eels and bream over boulder fields."
+    },
+    {
+     "name": "Mermaid Rock",
+     "type": "pinnacle",
+     "level": "advanced",
+     "depth": "12-36m",
+     "blurb": "Offshore rock dropping to a maximum of about 36 m, with canyon-cut topography, parazoanthus-covered walls and passing pelagics on the deeper contours."
+    },
+    {
+     "name": "Naxos Wreck",
+     "type": "wreck",
+     "level": "beginner",
+     "depth": "3-15m",
+     "blurb": "Shallow wreckage lying between the surface and 15 m off Giardini Naxos — an easy second dive and a favorite for training and long, unhurried bottom times."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "taormina",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Sicily's flagship resort town looks straight down on its own dive sites: the Isola Bella marine reserve sits at the foot of the cliffs, dived from the bay itself and on 5-15 minute boat runs out of Giardini Naxos. The headline is Roman — the cargo of a 2nd-century AD stone-carrier, 37 marble columns still lying in situ at 22-29 m off Capo Taormina — backed by a light-flooded blue cavern, an easy boulder-field house reef, a shallow training wreck and the deeper canyons of Mermaid Rock. Centers run April or May to the end of October.",
+   "underwater": "Rocky Ionian seabeds in clear water — 10-30 m through the season, at its best in late summer and autumn. The house reef is boulder fields at 5-18 m, minutes from shore; the Blue Cave floods with light along a 12 m wall with open blue on one side; and on the Capo Taormina slope the Roman columns lie in rows at 22-29 m beside a shrimp-filled cave. Mermaid Rock drops to about 36 m for the deep end. Summer water peaks at 26°C in a 3-5 mm suit; May and October ask for 5-7 mm.",
+   "encounters": "Dusky grouper, Mediterranean moray and octopus are the reserve's dependable cast, joined by Mediterranean parrotfish grazing the boulder shallows and nudibranchs on the cavern walls. High summer adds movement, with amberjack sweeping the deeper contours of Mermaid Rock and the outer points. From November to March the centers close and the reefs are left to their residents until the spring reopening."
+  },
+  {
+   "name": "Puerto Galera",
+   "country": "Philippines",
+   "region": "Mindoro / Philippines",
+   "water_type": "tropical",
+   "difficulty": "beginner to advanced",
+   "access": "day-boat / shore",
+   "coordinates": {
+    "lat": 13.512,
+    "lng": 120.96
+   },
+   "best_months": "Mar-May",
+   "wetsuit": "3mm year-round; 5mm or hooded vest for the 27°C months (Dec-Feb)",
+   "current_strength": "moderate to strong",
+   "current_note": "Verde Island Passage tidal currents power the marquee drift dives like The Canyons; sheltered bay sites stay mild, and dive plans follow the tide tables.",
+   "currents": "Strong tidal flow at The Canyons and Verde Island Drop-Off, timed to the tables; the north-facing Sabang bays and wreck sites stay gentle.",
+   "signature_species": [
+    "nudibranchs",
+    "frogfish",
+    "ghost pipefish",
+    "giant trevally",
+    "chevron barracuda",
+    "green turtle"
+   ],
+   "highlights": "The Philippines' flagship dive town on the Verde Island Passage: the current-swept Canyons and the Verde Island Drop-Off for the drift crowd, scuttled wrecks and nudibranch-carpeted walls minutes from Sabang for everyone else, divable year-round from sheltered north-facing bays.",
+   "monthly_temp_c": {
+    "Jan": 27,
+    "Feb": 27,
+    "Mar": 27,
+    "Apr": 29,
+    "May": 30,
+    "Jun": 30,
+    "Jul": 29,
+    "Aug": 29,
+    "Sep": 29,
+    "Oct": 29,
+    "Nov": 28,
+    "Dec": 28
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Good",
+     "marine_life": "trevally and barracuda stacking in the passage current while nudibranchs and frogfish fill the sheltered walls",
+     "conditions": "dry-season amihan winds with cooler water and full boat schedules",
+     "visibility_m": 20
+    },
+    "Feb": {
+     "rating": "Good",
+     "marine_life": "sweetlips and snapper holding in the canyons while ghost pipefish and cuttlefish work the wreck sand",
+     "conditions": "coolest water of the year, calm and clear on the amihan pattern",
+     "visibility_m": 20
+    },
+    "Mar": {
+     "rating": "Peak",
+     "marine_life": "jacks, sweetlips and barracuda thick in the canyons while turtles cruise the walls and macro life crowds every ledge",
+     "conditions": "warming, settled seas at the start of the clearest months",
+     "visibility_m": 22
+    },
+    "Apr": {
+     "rating": "Peak",
+     "marine_life": "trevally schooling hard in the current while nudibranchs carpet the walls and batfish hang over the wrecks",
+     "conditions": "warm flat seas with the year's best clarity out to Verde Island",
+     "visibility_m": 25
+    },
+    "May": {
+     "rating": "Peak",
+     "marine_life": "barracuda, sweetlips and trevally packed into the canyons with turtles and cuttlefish on the quieter reefs",
+     "conditions": "warmest water of the year and calm seas before the monsoon turns",
+     "visibility_m": 25
+    },
+    "Jun": {
+     "rating": "Shoulder",
+     "marine_life": "canyon pelagics still stacking on the tides while frogfish and ghost pipefish hold on the sheltered sand",
+     "conditions": "habagat onset with building southwest swell; north-facing bays stay divable",
+     "visibility_m": 18
+    },
+    "Jul": {
+     "rating": "Low",
+     "marine_life": "frogfish, nudibranchs and scorpionfish on the sheltered wrecks while the exposed passage sites go quiet",
+     "conditions": "southwest-monsoon rain and swell with boats holding to sheltered bays",
+     "visibility_m": 12
+    },
+    "Aug": {
+     "rating": "Low",
+     "marine_life": "macro carrying the diving — ghost pipefish, nudibranchs and cuttlefish inside the protected bays",
+     "conditions": "peak habagat with rain, reduced visibility and typhoon watch",
+     "visibility_m": 12
+    },
+    "Sep": {
+     "rating": "Low",
+     "marine_life": "sweetlips and snapper waiting out the swell while the wreck sand keeps producing frogfish",
+     "conditions": "late-monsoon rain and typhoon risk; sheltered sites only on rough days",
+     "visibility_m": 13
+    },
+    "Oct": {
+     "rating": "Shoulder",
+     "marine_life": "trevally and barracuda returning to the tide lines as the walls busy up with nudibranchs",
+     "conditions": "transition month as habagat fades and boat schedules fill back out",
+     "visibility_m": 15
+    },
+    "Nov": {
+     "rating": "Good",
+     "marine_life": "jacks and sweetlips rebuilding in the canyons while turtles graze the walls",
+     "conditions": "amihan returning with drier weather and steadily clearing water",
+     "visibility_m": 18
+    },
+    "Dec": {
+     "rating": "Good",
+     "marine_life": "barracuda and trevally on the current lines with frogfish and nudibranchs dense on the walls",
+     "conditions": "cooling, clear dry-season water and busy holiday boats",
+     "visibility_m": 20
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "The Canyons",
+     "type": "drift / reef canyons",
+     "level": "advanced",
+     "depth": "20-30m",
+     "blurb": "Puerto Galera's signature drift: three current-swept canyons on the Verde Island Passage where trevally, sweetlips, snapper and barracuda stack up in the flow; strong currents and a blue-water ascent make it a genuinely advanced dive."
+    },
+    {
+     "name": "Verde Island Drop-Off",
+     "type": "wall / pinnacle",
+     "level": "intermediate to advanced",
+     "depth": "5-40m",
+     "blurb": "An hour's banca ride into the Verde Island Passage; a rock pinnacle and wall starting at 5m and plunging far beyond recreational depths, with the clearest water and densest reef-fish life in the area."
+    },
+    {
+     "name": "Sabang Wrecks",
+     "type": "wreck / muck",
+     "level": "beginner",
+     "depth": "16-22m",
+     "blurb": "Three small scuttled vessels — a steel yacht and two wooden boats — on sand right off Sabang Beach; a macro haven of frogfish, ghost pipefish, scorpionfish and nudibranchs at friendly depths."
+    },
+    {
+     "name": "Alma Jane Wreck",
+     "type": "wreck",
+     "level": "intermediate",
+     "depth": "18-30m",
+     "blurb": "A 30m steel cargo vessel scuttled off Sabang in 2003 as an artificial reef; sits upright at 30m with resident batfish schools and easy hold access for trained wreck divers."
+    },
+    {
+     "name": "Sinandigan Wall",
+     "type": "wall / macro",
+     "level": "all levels",
+     "depth": "12-30m",
+     "blurb": "A nudibranch-carpeted wall east of Sabang dropping to 30m — leaf fish, frogfish, crocodilefish and shrimp-filled mushroom corals make it a photographer's staple."
+    },
+    {
+     "name": "Hole in the Wall",
+     "type": "swim-through / reef",
+     "level": "intermediate",
+     "depth": "10-20m",
+     "blurb": "A narrow sponge-and-crinoid-lined swim-through at about 12m that funnels divers onto the coral shoulder next to The Canyons; often paired with it as a two-stage drift."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "puerto-galera",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "On the north coast of Mindoro, Puerto Galera fronts the Verde Island Passage — the 'center of the center' of marine shore-fish biodiversity — and its 60-plus dive shops work dozens of named sites from Sabang's sheltered bays. Tidal current makes the marquee dives: The Canyons' three swept bowls minutes from the beach and the Verde Island Drop-Off an hour out, while scuttled wrecks on the sand and nudibranch-carpeted walls keep macro divers busy at friendly depths year-round.",
+   "underwater": "The Canyons sets the tone: drop in on the tide, funnel through the sponge-lined Hole in the Wall at about 12 m, then hang in the flow as trevally, sweetlips, snapper and barracuda stack overhead before a blue-water ascent. Off Sabang the pace flips — three small scuttled boats on 16-22 m sand hide frogfish, ghost pipefish and scorpionfish, and Sinandigan Wall drops to 30 m under a carpet of nudibranchs. Water holds 27-30°C; dry-season visibility runs 15-25 m, past 30 m at Verde Island.",
+   "encounters": "Macro is the constant: the passage's walls and wreck sand produce nudibranchs, frogfish, ghost pipefish and cuttlefish year-round. The current sites add the action — giant trevally, chevron barracuda, sweetlips and batfish stacking in the flow at The Canyons, densest through the March-May clear season — while green and hawksbill turtles cruise the walls. The July-September monsoon pushes boats into the sheltered bays, where the small stuff never stops."
+  },
+  {
+   "name": "Coron (Busuanga)",
+   "country": "Philippines",
+   "region": "Palawan / Philippines",
+   "water_type": "tropical",
+   "difficulty": "intermediate to advanced",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": 11.999,
+    "lng": 120.204
+   },
+   "best_months": "Dec-Mar",
+   "wetsuit": "3mm year-round; a skin suffices in Barracuda Lake's 38°C layer",
+   "current_strength": "Low",
+   "current_note": "Most wrecks sit in sheltered bay water with little current; the Irako and outer sites can pull moderate tidal flow, so penetration dives are timed on slack.",
+   "currents": "Mild inside Coron Bay across most of the fleet; moderate tidal flow possible at the Irako and the outer sites, timed on slack for penetration dives.",
+   "signature_species": [
+    "dugong",
+    "great barracuda",
+    "batfish",
+    "hawksbill turtle",
+    "banded sea krait",
+    "scorpionfish"
+   ],
+   "highlights": "Southeast Asia's premier WWII wreck fleet: a Japanese support flotilla sunk on 24 September 1944 lies across Coron Bay at recreational depths, from the coral-crusted 160 m Okikawa Maru to the near-intact Irako, with the surreal 38°C thermocline of Barracuda Lake as the chaser.",
+   "monthly_temp_c": {
+    "Jan": 28,
+    "Feb": 27,
+    "Mar": 28,
+    "Apr": 29,
+    "May": 30,
+    "Jun": 30,
+    "Jul": 29,
+    "Aug": 29,
+    "Sep": 29,
+    "Oct": 29,
+    "Nov": 29,
+    "Dec": 28
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Peak",
+     "marine_life": "jacks and grouper patrolling the superstructures while turtles graze the bay reefs and sea kraits hunt the holds",
+     "conditions": "calm amihan seas with the year's most reliable wreck visibility",
+     "visibility_m": 18
+    },
+    "Feb": {
+     "rating": "Peak",
+     "marine_life": "scorpionfish and lionfish thick on the wreck decks with batfish schooling above the masts",
+     "conditions": "dry, settled weather and clear bay water in the prime season",
+     "visibility_m": 18
+    },
+    "Mar": {
+     "rating": "Peak",
+     "marine_life": "grouper and snapper inside the hulls while batfish school overhead and dugong day trips run to north Busuanga",
+     "conditions": "warm, flat dry-season seas with dependable boat schedules",
+     "visibility_m": 15
+    },
+    "Apr": {
+     "rating": "Good",
+     "marine_life": "wreck residents busy — giant puffers, sea kraits, lionfish — with turtles on the shallow bay reefs",
+     "conditions": "hot, calm late-dry-season days as the water peaks toward 30°C",
+     "visibility_m": 13
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "batfish and great barracuda hanging over the wrecks in the last of the settled season",
+     "conditions": "warmest water of the year with the dry pattern starting to break",
+     "visibility_m": 12
+    },
+    "Jun": {
+     "rating": "Shoulder",
+     "marine_life": "grouper and scorpionfish holding on the sheltered wrecks as the outer sites turn patchy",
+     "conditions": "habagat onset with rain squalls; the sheltered bay keeps wrecks divable",
+     "visibility_m": 10
+    },
+    "Jul": {
+     "rating": "Low",
+     "marine_life": "wreck life unchanged — snapper, giant puffers, sea kraits — under a silty rainy-season bay",
+     "conditions": "southwest-monsoon rain and swell cutting visibility and cancelling outer boats",
+     "visibility_m": 8
+    },
+    "Aug": {
+     "rating": "Low",
+     "marine_life": "residents only: grouper deep in the hulls and lionfish on the decks",
+     "conditions": "peak habagat rain with typhoon watch and sheltered-bay diving only",
+     "visibility_m": 8
+    },
+    "Sep": {
+     "rating": "Low",
+     "marine_life": "snapper and batfish inside the sheltered wrecks while outer trips wait on weather",
+     "conditions": "late-monsoon rain and swell with boats picking weather windows",
+     "visibility_m": 8
+    },
+    "Oct": {
+     "rating": "Shoulder",
+     "marine_life": "great barracuda and jacks returning over the wrecks as the bay begins to clear",
+     "conditions": "transition month with easing rain and improving schedules",
+     "visibility_m": 10
+    },
+    "Nov": {
+     "rating": "Good",
+     "marine_life": "batfish schools rebuilding over the fleet with turtles back on the bay reefs",
+     "conditions": "amihan returning with drying weather and steadily better visibility",
+     "visibility_m": 13
+    },
+    "Dec": {
+     "rating": "Peak",
+     "marine_life": "batfish and snapper schooling over the wrecks with dugongs possible on north-Busuanga day trips",
+     "conditions": "calm, clear early-dry-season water at the start of the best months",
+     "visibility_m": 15
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Irako Maru",
+     "type": "wreck",
+     "level": "advanced / tec",
+     "depth": "28-43m",
+     "blurb": "The most intact of Coron's WWII wrecks, a 147m refrigeration ship upright at 34-43m with engine-room and galley penetrations for trained wreck divers; jacks, grouper and scorpionfish patrol the superstructure."
+    },
+    {
+     "name": "Okikawa Maru",
+     "type": "wreck",
+     "level": "beginner to advanced",
+     "depth": "10-26m",
+     "blurb": "Coron's largest wreck, a roughly 160m oil tanker; the coral-crusted deck at 10-16m suits newer wreck divers while the bow break and hull reach 26m — a huge, forgiving introduction to the fleet."
+    },
+    {
+     "name": "Akitsushima",
+     "type": "wreck",
+     "level": "advanced",
+     "depth": "22-36m",
+     "blurb": "The only true warship of the group, a 114m seaplane tender lying on her side with the flying-boat crane still swung over the sand at 36m; big grouper and schooling snapper inside."
+    },
+    {
+     "name": "Kogyo Maru",
+     "type": "wreck",
+     "level": "advanced",
+     "depth": "22-34m",
+     "blurb": "A 129m freighter sunk carrying airfield-building materials — a bulldozer, cement mixer and cement sacks still sit in hold two; lies on her starboard side on a 34m seabed."
+    },
+    {
+     "name": "Morazan Maru",
+     "type": "wreck",
+     "level": "intermediate",
+     "depth": "12-25m",
+     "blurb": "Long misidentified as the Olympia Maru, this English-built freighter of about 90m rests at 25m with easy cargo-hold swim-throughs, banded sea kraits and huge puffers — the classic second wreck dive."
+    },
+    {
+     "name": "Barracuda Lake",
+     "type": "lake / novelty",
+     "level": "all levels (guided)",
+     "depth": "5-30m",
+     "blurb": "A cliff-ringed brackish sinkhole lake on Coron Island where a thermocline at about 14m jumps the water from 28°C to 38°C — a surreal hot-spring dive with a resident great barracuda, sacred to the Tagbanwa people."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "coron",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Coron Town on Busuanga Island fronts a bay holding Southeast Asia's densest WWII wreck fleet: a Japanese support flotilla caught by US carrier aircraft on 24 September 1944 and sunk at recreational depths. The roughly 160 m Okikawa Maru's coral-crusted deck starts at 10 m, the refrigeration ship Irako sits near-intact down to 43 m, and between them lie freighters still carrying their cargo. Barracuda Lake adds a 38°C thermocline novelty, and north-Busuanga day trips carry roughly even odds of a dugong.",
+   "underwater": "Wreck diving here is about scale and atmosphere: hulls of 90 to 160 m lying in sheltered, often silty bay water of 5-15 m visibility — 15-25 m on good dry-season days. Trained divers thread the Irako's engine room and the Kogyo Maru's holds, where a bulldozer and cement mixer still sit; newer divers get the Okikawa's shallow deck and the Morazan's easy swim-throughs. In Barracuda Lake a thermocline at about 14 m jumps the water from 28°C to a bathwater 38°C.",
+   "encounters": "The wrecks are their own reef: batfish and snapper school over the superstructures, grouper and giant puffers hold the cargo spaces, lionfish and scorpionfish crust the decks, and banded sea kraits hunt through the holds. Hawksbill and green turtles graze the bay reefs, Barracuda Lake keeps its single resident great barracuda, and dry-season day trips to north Busuanga's seagrass meet a dugong on roughly half of attempts."
+  },
+  {
+   "name": "Panglao & Balicasag",
+   "country": "Philippines",
+   "region": "Visayas / Philippines",
+   "water_type": "tropical",
+   "difficulty": "beginner to advanced",
+   "access": "day-boat / shore",
+   "coordinates": {
+    "lat": 9.549,
+    "lng": 123.774
+   },
+   "best_months": "Dec-Apr",
+   "wetsuit": "3mm year-round; 5mm comfortable for repetitive diving in the 27°C months (Jan-Feb)",
+   "current_strength": "mild to moderate",
+   "current_note": "Tidal flow runs along Balicasag's walls and at Doljo Point, so sanctuary dives are timed to neap and slack tides; most Alona-side sites stay gentle.",
+   "currents": "Mild on the Alona-side reefs; moderate tidal flow along Balicasag's sanctuary walls and at Doljo Point, with dives timed to neap and slack tides.",
+   "signature_species": [
+    "green turtle",
+    "hawksbill turtle",
+    "bigeye jacks",
+    "chevron barracuda",
+    "frogfish",
+    "nudibranchs"
+   ],
+   "highlights": "Balicasag Island's sanctuary walls — capped at 150 divers a day — deliver turtles on nearly every dive and a resident bigeye jack school over the Black Forest's black corals, with deep gorgonian points, an arch tunnel and a shore-reached sardine bait ball back on Panglao itself.",
+   "monthly_temp_c": {
+    "Jan": 27,
+    "Feb": 27,
+    "Mar": 28,
+    "Apr": 29,
+    "May": 30,
+    "Jun": 30,
+    "Jul": 29,
+    "Aug": 29,
+    "Sep": 29,
+    "Oct": 29,
+    "Nov": 29,
+    "Dec": 28
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Peak",
+     "marine_life": "turtles on nearly every sanctuary dive while the bigeye jack school wheels over Black Forest",
+     "conditions": "cool, calm amihan seas in the heart of the dry season",
+     "visibility_m": 25
+    },
+    "Feb": {
+     "rating": "Peak",
+     "marine_life": "jacks, barracuda and grazing turtles along the Balicasag walls in the year's clearest water",
+     "conditions": "coolest water of the year with flat seas and long visibility",
+     "visibility_m": 28
+    },
+    "Mar": {
+     "rating": "Peak",
+     "marine_life": "turtles at safety-stop depth, snapper and barracuda on the drop-offs, macro thick on the house reefs",
+     "conditions": "settled, warming dry-season water at its clearest",
+     "visibility_m": 30
+    },
+    "Apr": {
+     "rating": "Peak",
+     "marine_life": "the bigeye jack school dense over the black coral trees while turtles crowd the reef tops",
+     "conditions": "warm calm seas with excellent clarity late in the dry season",
+     "visibility_m": 28
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "turtles and barracuda steady on the walls with frogfish and nudibranchs on Panglao's slopes",
+     "conditions": "hot, mostly calm water as the dry pattern starts to break",
+     "visibility_m": 25
+    },
+    "Jun": {
+     "rating": "Shoulder",
+     "marine_life": "sanctuary walls still busy — turtles, snapper, jacks — as the first southwest swell arrives",
+     "conditions": "habagat onset with building swell; north-coast sites take over on rough days",
+     "visibility_m": 20
+    },
+    "Jul": {
+     "rating": "Low",
+     "marine_life": "turtles and reef fish holding on the sheltered north-coast walls while Balicasag crossings wait on weather",
+     "conditions": "southwest-monsoon rain and swell with operators shifting to Doljo and Napaling",
+     "visibility_m": 15
+    },
+    "Aug": {
+     "rating": "Low",
+     "marine_life": "the Napaling sardine bait ball and resident turtles carrying the diving through the rains",
+     "conditions": "peak habagat rain and typhoon watch; sheltered shore sites keep diving going",
+     "visibility_m": 12
+    },
+    "Sep": {
+     "rating": "Low",
+     "marine_life": "macro on the house reefs and turtles in the shallows between rain squalls",
+     "conditions": "late-monsoon rain and occasional swell with weather-window crossings",
+     "visibility_m": 15
+    },
+    "Oct": {
+     "rating": "Shoulder",
+     "marine_life": "jacks regrouping at Black Forest and barracuda back on the walls as seas settle",
+     "conditions": "transition month with easing rain and steadily clearing water",
+     "visibility_m": 18
+    },
+    "Nov": {
+     "rating": "Good",
+     "marine_life": "turtles, snapper and the bigeye jack school reliable again across the sanctuary sites",
+     "conditions": "amihan returning with drier weather and improving visibility",
+     "visibility_m": 20
+    },
+    "Dec": {
+     "rating": "Peak",
+     "marine_life": "turtles grazing at safety-stop depth while jacks and barracuda work the walls",
+     "conditions": "calm, clear early-dry-season water and busy holiday boats",
+     "visibility_m": 25
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Black Forest (Balicasag)",
+     "type": "slope / wall",
+     "level": "intermediate",
+     "depth": "8-40m",
+     "blurb": "Balicasag's famous slope where a 'forest' of black coral trees begins around 25m; the resident school of bigeye jacks and passing turtles are the headline act."
+    },
+    {
+     "name": "Diver's Heaven (Balicasag)",
+     "type": "wall",
+     "level": "all levels",
+     "depth": "8-30m",
+     "blurb": "A steep sanctuary wall with fans and crevices dropping past 55m; green turtles graze the reef top at safety-stop depth on almost every dive."
+    },
+    {
+     "name": "Cathedral Wall (Balicasag)",
+     "type": "wall",
+     "level": "intermediate",
+     "depth": "5-35m",
+     "blurb": "Sheer sanctuary-side wall cut with overhangs that catch shafts of light; snapper, barracuda and turtles along the drop."
+    },
+    {
+     "name": "Arco Point (Panglao)",
+     "type": "reef / cavern swim-through",
+     "level": "advanced",
+     "depth": "10-20m+",
+     "blurb": "Panglao's 'hole in the wall' — a natural arch tunnel entered around 10m and exiting deeper on the wall, lined with sponges and banded sea snakes."
+    },
+    {
+     "name": "Doljo Point (Panglao)",
+     "type": "point / deep wall",
+     "level": "advanced",
+     "depth": "6-40m+",
+     "blurb": "Current-brushed point on Panglao's northwest tip with gorgonian fans, elephant-ear sponges and black corals stretching beyond 65m — a favorite for deep and tec divers."
+    },
+    {
+     "name": "Napaling (Panglao)",
+     "type": "wall / bait ball",
+     "level": "all levels",
+     "depth": "5-30m",
+     "blurb": "Vertical wall with dramatic overhangs on Panglao's north coast, home to a resident sardine bait ball in the shallows — Bohol's answer to Moalboal, reachable from shore."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "panglao-balicasag",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Off Bohol's southwest tip, Panglao pairs a long-established dive strip at Alona Beach with Balicasag Island, a marine sanctuary 30-45 minutes offshore capped at 150 divers a day. Balicasag's walls — Black Forest's black-coral slope, Diver's Heaven, Cathedral — carry the reputation, while Panglao itself adds the Arco Point arch tunnel, the deep gorgonian point at Doljo and a resident sardine bait ball at Napaling, reachable from shore.",
+   "underwater": "Balicasag is wall diving at its most reliable: sheer sanctuary faces dropping past 35 m, green turtles grazing the reef tops at safety-stop depth and the bigeye jack school wheeling over Black Forest, where the black coral trees begin around 25 m. On Panglao, Arco Point's arch tunnel is entered at about 10 m and exits deeper on the wall, and Doljo's fans and sponges stretch beyond recreational depths. Dry-season water runs 27-29°C with 15-30 m visibility.",
+   "encounters": "Turtles are the signature — green and hawksbill graze Balicasag's reef tops on nearly every dive, all year. The resident bigeye jack school over Black Forest and chevron barracuda along the walls supply the schooling drama, frogfish and nudibranchs fill Panglao's house reefs, and the Napaling sardine bait ball swirls in the shallows. A passing whale shark is an occasional natural bonus rather than a promise."
+  },
+  {
+   "name": "Moalboal",
+   "country": "Philippines",
+   "region": "Visayas / Philippines",
+   "water_type": "tropical",
+   "difficulty": "beginner-friendly",
+   "access": "shore / day-boat",
+   "coordinates": {
+    "lat": 9.939,
+    "lng": 123.352
+   },
+   "best_months": "Jan-Apr",
+   "wetsuit": "3mm year-round; some divers prefer 5mm in the 27°C late-winter months",
+   "current_strength": "Low",
+   "current_note": "Mostly gentle along the shore walls; Pescador Island can see moderate current on tide changes — an easy destination for drift-shy divers.",
+   "currents": "Gentle on the Panagsama house-reef wall and sanctuary slopes; moderate tidal current possible around Pescador Island on the changes.",
+   "signature_species": [
+    "sardine bait ball",
+    "green turtle",
+    "pygmy seahorse",
+    "frogfish",
+    "whitetip reef shark",
+    "nudibranchs"
+   ],
+   "highlights": "A resident school of millions of sardines lives metres off Panagsama Beach all year — a shore-entry wall dive — backed by Pescador Island's cavern-cut walls, reliable green turtles and pygmy seahorses in the sea fans.",
+   "monthly_temp_c": {
+    "Jan": 27,
+    "Feb": 27,
+    "Mar": 28,
+    "Apr": 29,
+    "May": 29,
+    "Jun": 30,
+    "Jul": 29,
+    "Aug": 29,
+    "Sep": 29,
+    "Oct": 29,
+    "Nov": 29,
+    "Dec": 28
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Peak",
+     "marine_life": "the sardine bait ball swirling off Panagsama with turtles grazing the reef shoulder",
+     "conditions": "cool, calm amihan seas at the start of the clearest stretch",
+     "visibility_m": 25
+    },
+    "Feb": {
+     "rating": "Peak",
+     "marine_life": "millions of sardines in the year's clearest water while whitetip reef sharks rest on Pescador's ledges",
+     "conditions": "coolest water of the year with flat seas and superb clarity",
+     "visibility_m": 30
+    },
+    "Mar": {
+     "rating": "Peak",
+     "marine_life": "the sardine school shape-shifting along the wall, turtles below and pygmy seahorses in Pescador's fans",
+     "conditions": "settled dry-season weather with visibility at its long-range best",
+     "visibility_m": 30
+    },
+    "Apr": {
+     "rating": "Peak",
+     "marine_life": "sardines from the surface to 20 m with frogfish and nudibranchs dense on the walls",
+     "conditions": "warm flat seas late in the dry season with easy Pescador crossings",
+     "visibility_m": 28
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "the bait ball unmoved, turtles at Turtle Point and macro on the sanctuary slopes",
+     "conditions": "hot, mostly calm water as the dry pattern starts to break",
+     "visibility_m": 25
+    },
+    "Jun": {
+     "rating": "Shoulder",
+     "marine_life": "sardines and turtles as reliable as ever while the first swell tests the crossings to Pescador",
+     "conditions": "habagat onset with warm water and building southwest chop",
+     "visibility_m": 20
+    },
+    "Jul": {
+     "rating": "Low",
+     "marine_life": "the resident sardine school riding out the rains metres off the beach",
+     "conditions": "southwest-monsoon rain and chop; the shore wall usually stays divable",
+     "visibility_m": 15
+    },
+    "Aug": {
+     "rating": "Low",
+     "marine_life": "sardines, turtles and wall macro between squalls on the west-facing shore",
+     "conditions": "peak habagat rain with occasional typhoon disruption",
+     "visibility_m": 15
+    },
+    "Sep": {
+     "rating": "Low",
+     "marine_life": "the bait ball constant off Panagsama while boats pick weather windows for Pescador",
+     "conditions": "late-monsoon rain and swell with shore diving carrying the schedule",
+     "visibility_m": 16
+    },
+    "Oct": {
+     "rating": "Shoulder",
+     "marine_life": "sardines thick on the wall and whitetip reef sharks back in view at Pescador as visibility rebuilds",
+     "conditions": "transition month with easing rain and steadily clearing water",
+     "visibility_m": 18
+    },
+    "Nov": {
+     "rating": "Good",
+     "marine_life": "the sardine school, grazing turtles and Pescador's fan corals back in clearing water",
+     "conditions": "amihan returning with drier weather and calmer crossings",
+     "visibility_m": 20
+    },
+    "Dec": {
+     "rating": "Good",
+     "marine_life": "sardines swirling in cooling clear water with turtles on the seagrass",
+     "conditions": "early-dry-season calm with busy holiday boats and good clarity",
+     "visibility_m": 22
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Sardine Point (Talisay Wall)",
+     "type": "shore wall / bait ball",
+     "level": "all levels",
+     "depth": "2-20m",
+     "blurb": "A shape-shifting school of millions of sardines lives metres off Panagsama Beach year-round, swirling from the surface to about 20m along the wall — dived straight from shore."
+    },
+    {
+     "name": "Pescador Island",
+     "type": "wall / cavern",
+     "level": "intermediate",
+     "depth": "5-40m",
+     "blurb": "Moalboal's signature offshore pinnacle, ringed by a narrow shelf that drops in vertical walls past 35m; the sponge-lit 'Cathedral' cavern and dense fan corals are the highlights."
+    },
+    {
+     "name": "Airplane Wreck (Tuble)",
+     "type": "artificial reef / wreck",
+     "level": "intermediate",
+     "depth": "18-22m",
+     "blurb": "A two-seater light aircraft placed on the sandy slope as an artificial reef in the 1990s, sitting at about 22m beside a drop-off; frogfish and scorpionfish shelter in the frame."
+    },
+    {
+     "name": "Tuble Marine Sanctuary",
+     "type": "protected reef slope",
+     "level": "beginner",
+     "depth": "5-25m",
+     "blurb": "A no-take sanctuary on the Tuble reef flat with recovering hard corals, dense anthias clouds and reliable turtles — a favorite easy second dive."
+    },
+    {
+     "name": "Dolphin House (Ronda)",
+     "type": "sloping wall",
+     "level": "beginner",
+     "depth": "5-25m",
+     "blurb": "A gentle coral slope that steepens into a soft-coral and sea-fan wall around 20m; named for the resort onshore — the corals are the real draw."
+    },
+    {
+     "name": "Turtle Point / White Beach",
+     "type": "reef / wall",
+     "level": "beginner",
+     "depth": "5-25m",
+     "blurb": "Green turtles graze the seagrass and reef shoulder just north of Panagsama near White Beach — close to shore and dived on almost every itinerary."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "moalboal",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "On Cebu's southwest coast, Moalboal runs on a single extraordinary fact: a school of millions of sardines lives metres off Panagsama Beach all twelve months, dived straight from shore along the house-reef wall. Pescador Island, a 10-25 minute banca ride out, adds vertical walls, the sponge-lit Cathedral cavern and pygmy seahorses in the fans, while sanctuary slopes, a small airplane wreck and reliable turtles fill out an easy, shore-based week of diving.",
+   "underwater": "The wall starts where the sand ends: step off the beach at Panagsama and the sardines open around you, a shape-shifting mass from the surface to about 20 m against the drop-off. Pescador's narrow shelf falls away in vertical faces past 35 m, fan corals and the Cathedral's light shafts below, whitetip reef sharks resting on the ledges. Currents stay mostly mild, water holds 27-30°C, and dry-season visibility can reach 30 m.",
+   "encounters": "The sardine bait ball is the anchor — present every month, at its best in the clear December-May water — with green turtles grazing the seagrass at Turtle Point and along the Panagsama shoulder. The walls hold frogfish and nudibranchs, Pescador's sea fans hide pygmy seahorses, and whitetip reef sharks rest on the island's ledges. Thresher sharks and whale sharks turn up in the sardines only occasionally — a lucky-day event, not a schedule."
+  },
+  {
+   "name": "Ibiza",
+   "country": "Spain",
+   "region": "Mediterranean / Spain",
+   "water_type": "temperate/warm Mediterranean sea",
+   "difficulty": "beginner to advanced",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": 38.91,
+    "lng": 1.43
+   },
+   "best_months": "Jun-Sep",
+   "wetsuit": "3-5mm Jul-Sep; 5-7mm May-Jun and Oct; 7mm semi-dry plus hood in winter",
+   "current_strength": "mild",
+   "current_note": "Generally light around the coast, but the exposed offshore pinnacles — La Bota especially — can carry noticeably stronger flow across their flanks.",
+   "currents": "Light around most coastal reefs and coves; noticeably stronger at the offshore pinnacle of La Bota and around Es Vedrà, where the walls sit open to moving water.",
+   "signature_species": [
+    "dusky grouper",
+    "Mediterranean barracuda",
+    "common eagle ray",
+    "moray eel",
+    "common octopus",
+    "common dentex"
+   ],
+   "highlights": "A seasonal Mediterranean island with a heavyweight centrepiece: the 142 m Don Pedro — widely cited as the largest wreck in the Mediterranean accessible to recreational divers — plus the Es Vedrà nature reserve, the La Bota seamount and Posidonia-fed clarity of 20-30 m.",
+   "monthly_temp_c": {
+    "Jan": 15,
+    "Feb": 14,
+    "Mar": 15,
+    "Apr": 16,
+    "May": 18,
+    "Jun": 21,
+    "Jul": 25,
+    "Aug": 26,
+    "Sep": 25,
+    "Oct": 22,
+    "Nov": 19,
+    "Dec": 17
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "resident grouper and morays holding deep on the rock while the open water stays empty",
+     "conditions": "cold winter sea with most dive centres closed for the season",
+     "visibility_m": 25
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "octopus and scorpionfish tucked into the reef while grouper sit low and little else moves",
+     "conditions": "coldest water of the year on an island largely shut down",
+     "visibility_m": 25
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "morays and octopus stirring in the rock as the water slowly begins to warm",
+     "conditions": "still-cold sea before the season with very few boats running",
+     "visibility_m": 22
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "grouper and octopus turning active across the reserve walls while the first barracuda appear",
+     "conditions": "cool water and early boats as the first centres reopen",
+     "visibility_m": 22
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "barracuda gathering over the drop-offs while grouper station themselves on the Es Vedrà walls",
+     "conditions": "season opening properly with cool water and settling seas",
+     "visibility_m": 24
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "barracuda schooling over the walls while dentex hunt at La Bota and eagle rays cross the seagrass",
+     "conditions": "warming sea, long calm days and full boat schedules",
+     "visibility_m": 26
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "eagle rays over the Posidonia terraces while tuna and dentex patrol La Bota and barracuda wall up",
+     "conditions": "warm settled water with strong clarity in the busiest month",
+     "visibility_m": 28
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "tuna, dentex and horse mackerel sweeping the seamount while grouper and morays show on every wall",
+     "conditions": "warmest water of the year with flat seas and long sightlines",
+     "visibility_m": 28
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "barracuda and dentex hunting over abundant reef fish while eagle rays linger on the terraces",
+     "conditions": "still-warm sea, thinner crowds and often the year's best visibility",
+     "visibility_m": 30
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "grouper, morays and octopus busy on the walls while the last pelagics pass the pinnacles",
+     "conditions": "pleasant water and calm autumn seas as the season winds down",
+     "visibility_m": 28
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "resident grouper and octopus holding on while the visiting fish thin out",
+     "conditions": "cooling sea with most centres closing for the winter",
+     "visibility_m": 25
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "morays and scorpionfish tucked into the rock while the reefs sit quiet",
+     "conditions": "cold early-winter sea with the island's dive scene shut down",
+     "visibility_m": 24
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Don Pedro Wreck",
+     "type": "wreck",
+     "level": "advanced / technical",
+     "depth": "26-46m",
+     "blurb": "A 142 m ferry that struck the Dado Pequeño islet leaving Ibiza harbour and sank in July 2007; she now lies on her port side on sand at about 46 m — widely cited as the largest wreck in the Mediterranean accessible to recreational and technical divers."
+    },
+    {
+     "name": "Dado Pequeño",
+     "type": "islet reef",
+     "level": "all levels",
+     "depth": "5-30m",
+     "blurb": "A beacon-topped rock five minutes by boat from Ibiza harbour — the very islet the Don Pedro hit. Shallow rock gardens for novices drop away to deeper terraces with barracuda, grouper, octopus and scorpionfish."
+    },
+    {
+     "name": "Es Vedrà",
+     "type": "island pinnacle / wall",
+     "level": "all levels",
+     "depth": "10-40m",
+     "blurb": "The 380 m limestone islet off Cala d'Hort, a nature reserve above and below the water. Dramatic walls, caves and Posidonia seagrass terraces hold eagle rays, dusky grouper and scorpionfish, with shallow ground for beginners and deep walls for advanced divers."
+    },
+    {
+     "name": "La Bota",
+     "type": "offshore seamount",
+     "level": "advanced",
+     "depth": "5-50m",
+     "blurb": "A pinnacle about a mile northwest of Es Vedrà rising from beyond 50 m to within centimetres of the surface. Ibiza's big-fish dive: tuna, barracuda, dentex, grouper and horse mackerel patrol its current-swept flanks."
+    },
+    {
+     "name": "Ses Margalides",
+     "type": "arch / cavern",
+     "level": "beginner-intermediate",
+     "depth": "9-18m",
+     "blurb": "Twin islets off the cliffy northwest coast near Santa Agnès, dived from San Antonio. A shelf at about 9 m beside the rocks drops to 18 m, with a photogenic swim-through arch and rich fish life on the faces."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "ibiza",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Ibiza runs a classic seasonal Mediterranean operation, with day boats out of Ibiza Town, San Antonio and Santa Eulalia from May to October. The headline is the Don Pedro, a 142 m ferry that struck the Dado Pequeño islet leaving harbour in 2007 and now lies on her port side at 46 m — widely cited as the largest wreck in the Mediterranean open to recreational divers. Around it sit the Es Vedrà nature reserve, the La Bota seamount and Posidonia seagrass meadows that keep the water among the clearest in the western Mediterranean.",
+   "underwater": "Posidonia meadows keep the water clear — 20-30 m is common in season — so the drama registers in full: Es Vedrà's walls and caves dropping past seagrass terraces, the arch at Ses Margalides throwing light across its swim-through, and La Bota rising from beyond 50 m to graze the surface with big fish on its current-swept flanks. The Don Pedro is the deep set piece, a 142 m hull on sand at 46 m for advanced and technical divers. Summer water reaches 26°C; winter drops to 14°C.",
+   "encounters": "Dusky grouper hold the Es Vedrà reserve walls alongside morays and octopus, with scorpionfish on every rock face. Summer brings the traffic: barracuda school over the drop-offs, eagle rays cross the Posidonia terraces, and tuna, dentex and horse mackerel patrol La Bota's flanks. Through the 14-15°C winter the residents sit deep and most centres close until May."
+  },
+  {
+   "name": "Gran Canaria",
+   "country": "Spain",
+   "region": "Canary Islands / Spain",
+   "water_type": "subtropical Atlantic",
+   "difficulty": "beginner to advanced",
+   "access": "shore / day-boat",
+   "coordinates": {
+    "lat": 27.96,
+    "lng": -15.6
+   },
+   "best_months": "Sep-Nov",
+   "wetsuit": "5mm most of the year; 7mm or 5mm + hooded vest Jan-Apr; 3-5mm Sep-Oct",
+   "current_strength": "mild to moderate",
+   "current_note": "Weak at the sheltered bays and the Mogán wrecks, but Atlantic swell and occasional currents run at exposed headlands, the El Cabrón entry points and the offshore wrecks.",
+   "currents": "Generally weak inside the sheltered bays and on the Mogán wrecks; Atlantic swell and occasional currents at exposed headlands, the El Cabrón shore entries and offshore sites like the Arona.",
+   "signature_species": [
+    "angelshark",
+    "short-snouted seahorse",
+    "spiny butterfly ray",
+    "bastard grunt (roncador)",
+    "Atlantic trumpetfish",
+    "moray eel"
+   ],
+   "highlights": "Year-round Atlantic diving built around the El Cabrón marine reserve — the Canaries' most celebrated shore diving, with 400-plus recorded species — plus the 110 m Arona wreck, the grunt-swarmed Cermona II, seahorse bays and angelsharks on the sand from November to April.",
+   "monthly_temp_c": {
+    "Jan": 20,
+    "Feb": 19,
+    "Mar": 19,
+    "Apr": 19,
+    "May": 20,
+    "Jun": 21,
+    "Jul": 22,
+    "Aug": 23,
+    "Sep": 24,
+    "Oct": 24,
+    "Nov": 22,
+    "Dec": 21
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Good",
+     "marine_life": "angelsharks settled on the sand at El Cabrón and Tufia while morays and trumpetfish work the volcanic walls",
+     "conditions": "cool Atlantic water and thicker suits in the heart of angelshark season",
+     "visibility_m": 25
+    },
+    "Feb": {
+     "rating": "Good",
+     "marine_life": "angelsharks met regularly on the sand flats while grunt schools hold the wrecks",
+     "conditions": "coolest stretch of the year with 7mm suits and reliable diving",
+     "visibility_m": 25
+    },
+    "Mar": {
+     "rating": "Shoulder",
+     "marine_life": "late-season angelsharks still on the sand while seahorses and nudibranchs fill the sheltered bays",
+     "conditions": "cool spring water with occasional swell on exposed shore entries",
+     "visibility_m": 22
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "the last angelsharks of the season while butterfly rays cruise the sand and morays crowd the reef",
+     "conditions": "cool 19°C water with changeable spring conditions",
+     "visibility_m": 22
+    },
+    "May": {
+     "rating": "Shoulder",
+     "marine_life": "seahorses at Sardina and rays over the sand while the reef fish thicken",
+     "conditions": "coolest water of the year slowly warming, with settling seas",
+     "visibility_m": 20
+    },
+    "Jun": {
+     "rating": "Good",
+     "marine_life": "grunt schools swarming the Cermona II while trumpetfish and morays fill the reserve walls",
+     "conditions": "warming water, though trade winds can chop east-coast entries",
+     "visibility_m": 20
+    },
+    "Jul": {
+     "rating": "Good",
+     "marine_life": "roncador clouds on the wrecks, rays over the sand and eel gardens waving at depth",
+     "conditions": "warm water with summer trade winds limiting some shore days",
+     "visibility_m": 18
+    },
+    "Aug": {
+     "rating": "Good",
+     "marine_life": "reef life at full density with butterfly rays, trumpetfish and morays across the volcanic rock",
+     "conditions": "warm sea, though trade winds still chop exposed shore entries",
+     "visibility_m": 18
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "grunt schools, rays and seahorses everywhere as the reef hits full density",
+     "conditions": "warmest water of the year arriving with the calmest seas",
+     "visibility_m": 25
+    },
+    "Oct": {
+     "rating": "Peak",
+     "marine_life": "rays, seahorses and thick reef fish across the reserve in prime conditions",
+     "conditions": "23-24°C water, long visibility and settled autumn seas",
+     "visibility_m": 28
+    },
+    "Nov": {
+     "rating": "Peak",
+     "marine_life": "the first angelsharks of the season settling on the sand while warm water keeps the reef at full density",
+     "conditions": "warm sea, calm days and the start of angelshark season",
+     "visibility_m": 28
+    },
+    "Dec": {
+     "rating": "Good",
+     "marine_life": "angelsharks on the sand at the reserve while morays, trumpetfish and grunts hold the walls and wrecks",
+     "conditions": "mild winter water with reliable diving through the holidays",
+     "visibility_m": 25
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "El Cabrón Marine Reserve",
+     "type": "marine-reserve reef",
+     "level": "all levels",
+     "depth": "5-30m",
+     "blurb": "The Canaries' most celebrated shore diving, a protected reserve since 2001 on the east coast at Arinaga. Volcanic walls, arches and caves hold more than 400 recorded species, from eel gardens at 18 m to a gorgonian field near 30 m, and the sand flats are a focal area for angelshark encounters in winter."
+    },
+    {
+     "name": "Arona Wreck",
+     "type": "wreck",
+     "level": "advanced",
+     "depth": "25-35m",
+     "blurb": "A 110 m merchant ship that burned and sank in 1972, six nautical miles from Las Palmas' Puerto de la Luz. She lies on her side with the deck at 25 m and the seabed at 35 m, and often enjoys exceptional visibility away from the port."
+    },
+    {
+     "name": "Cermona II",
+     "type": "wreck",
+     "level": "all levels",
+     "depth": "16-20m",
+     "blurb": "A 32 m fishing boat scuttled in 2002 close to Puerto de Mogán marina, resting on her starboard side at 18-20 m. Thousands of bastard grunts swarm the hull alongside barracuda, morays, trumpetfish and rays; weak currents make it an easy wreck."
+    },
+    {
+     "name": "Sardina del Norte",
+     "type": "sheltered bay reef",
+     "level": "all levels",
+     "depth": "5-17m",
+     "blurb": "A fishing-village bay on the quieter northwest coast with a maximum depth of about 17 m. Famed for seahorses on the sand plus stingrays, moray eels and anemones — a favourite macro and night-dive spot."
+    },
+    {
+     "name": "Tufia",
+     "type": "reef / protected cove",
+     "level": "all levels",
+     "depth": "6-22m",
+     "blurb": "An east-coast marine protected area below a tiny clifftop hamlet. Gorgonian patches shelter seahorses and nudibranchs, while the sand flats turn up butterfly rays and, in season, angelsharks."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "gran-canaria",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "The second-busiest Canary island backs its resorts with a genuine year-round dive industry, and its centrepiece is shore-based: the El Cabrón marine reserve at Arinaga, protected since 2001, where volcanic walls, arches and caves hold more than 400 recorded species. Offshore lie the 110 m Arona, sunk in 1972 off Las Palmas, and the grunt-swarmed Cermona II at Mogán, while sheltered bays like Sardina del Norte and Tufia turn up seahorses, butterfly rays and — from November to April — angelsharks on the sand.",
+   "underwater": "This is volcanic Atlantic diving: black walls, arches and caves at El Cabrón dropping past eel gardens at 18 m to a gorgonian field near 30 m, sand flats where angelsharks lie buried in winter, and wrecks at both ends of the scale — the easy Cermona II at 18-20 m under clouds of roncadores, and the 110 m Arona on her side at 25-35 m in often exceptional visibility. Water runs 19°C in spring to 23-24°C in autumn, with 15-30 m visibility year-round.",
+   "encounters": "The angelshark is the headline: from roughly November to April, Squatina squatina settles on the sand at El Cabrón and Tufia, and meeting one is a realistic goal rather than a lottery. Year-round, seahorses hold the bays at Sardina and Tufia, butterfly rays cruise the flats, black, tiger and fangtooth morays crowd the rock, trumpetfish hang in the walls and bastard grunts swarm the wrecks in their thousands."
+  },
+  {
+   "name": "Lanzarote",
+   "country": "Spain",
+   "region": "Canary Islands / Spain",
+   "water_type": "subtropical Atlantic",
+   "difficulty": "beginner to advanced",
+   "access": "shore / day-boat",
+   "coordinates": {
+    "lat": 28.92,
+    "lng": -13.66
+   },
+   "best_months": "Sep-Nov",
+   "wetsuit": "5mm in summer and autumn; 7mm or 5mm + hooded vest Dec-Apr",
+   "current_strength": "weak to mild",
+   "current_note": "Little current inside the sheltered south-coast bays of Puerto del Carmen and Playa Blanca; tidal movement is noticeable on exposed sites and the boat wrecks.",
+   "currents": "Mostly slack inside the sheltered southern bays where the main sites sit; tidal movement shows on exposed sites and around the deeper harbour wrecks.",
+   "signature_species": [
+    "angelshark",
+    "common stingray",
+    "dusky grouper",
+    "barracuda",
+    "cuttlefish",
+    "short-snouted seahorse"
+   ],
+   "highlights": "Europe's first underwater sculpture museum plus the Cathedral cavern, the Blue Hole tunnel and Puerto del Carmen's harbour wrecks, all in calm clear Atlantic water — with angelsharks met almost daily through the winter season.",
+   "monthly_temp_c": {
+    "Jan": 19,
+    "Feb": 18,
+    "Mar": 18,
+    "Apr": 19,
+    "May": 19,
+    "Jun": 20,
+    "Jul": 21,
+    "Aug": 22,
+    "Sep": 23,
+    "Oct": 23,
+    "Nov": 21,
+    "Dec": 20
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Good",
+     "marine_life": "angelsharks met almost daily on the sand at Playa Chica while grouper hold the Cathedral",
+     "conditions": "cool 19°C water with winter clarity often beyond 30 m",
+     "visibility_m": 30
+    },
+    "Feb": {
+     "rating": "Good",
+     "marine_life": "angelsharks daily on the volcanic sand while cuttlefish and octopus work the shallows",
+     "conditions": "coldest water of the year but calm bays and superb visibility",
+     "visibility_m": 32
+    },
+    "Mar": {
+     "rating": "Good",
+     "marine_life": "angelsharks still showing daily on the sand while stingrays and barracuda pass the reef edge",
+     "conditions": "cool late-winter water with long sightlines and quiet sites",
+     "visibility_m": 30
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "the season's last angelsharks on the sand while seahorses hold the bay and grouper sit in the cavern",
+     "conditions": "cool spring water as the angelshark season tails off",
+     "visibility_m": 26
+    },
+    "May": {
+     "rating": "Shoulder",
+     "marine_life": "seahorses, cuttlefish and octopus in the bays while stingrays cruise the sand",
+     "conditions": "cool 19°C water in the quiet gap between seasons",
+     "visibility_m": 22
+    },
+    "Jun": {
+     "rating": "Shoulder",
+     "marine_life": "stingrays and barracuda over the slopes while grouper and cardinalfish pack the Cathedral",
+     "conditions": "warming water with early-summer plankton trimming visibility",
+     "visibility_m": 20
+    },
+    "Jul": {
+     "rating": "Good",
+     "marine_life": "barracuda over the reef edge while rays work the sand and reef fish swarm the harbour wrecks",
+     "conditions": "warm settled water in the busy summer season",
+     "visibility_m": 20
+    },
+    "Aug": {
+     "rating": "Good",
+     "marine_life": "rays and barracuda on the slopes while octopus and cuttlefish fill the shallows",
+     "conditions": "warm sea and calm south-coast bays at peak holiday traffic",
+     "visibility_m": 20
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "reef life at full density while stingrays cross the sand and grouper hold the cavern",
+     "conditions": "warmest water of the year with calm seas — the sweet spot",
+     "visibility_m": 24
+    },
+    "Oct": {
+     "rating": "Peak",
+     "marine_life": "the first angelsharks returning to the sand while barracuda and rays stay thick on the reef",
+     "conditions": "warm calm water as visibility begins its winter climb",
+     "visibility_m": 26
+    },
+    "Nov": {
+     "rating": "Peak",
+     "marine_life": "angelsharks near-daily again on the sand while grouper, rays and barracuda work the walls",
+     "conditions": "mild water, settled seas and angelshark season in full swing",
+     "visibility_m": 28
+    },
+    "Dec": {
+     "rating": "Good",
+     "marine_life": "angelsharks daily at Playa Chica and the wrecks while cuttlefish move into the shallows",
+     "conditions": "cooling water with winter clarity frequently beyond 30 m",
+     "visibility_m": 30
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Museo Atlántico",
+     "type": "underwater sculpture museum / artificial reef",
+     "level": "beginner",
+     "depth": "12-15m",
+     "blurb": "Europe's first underwater sculpture museum, opened in 2016 in a sheltered bay off Las Coloradas near Playa Blanca: more than 300 life-size pH-neutral casts arranged in ten installations across a 50 x 50 m sandy seabed at 12-15 m. Boat access only, and now colonising as an artificial reef."
+    },
+    {
+     "name": "Playa Chica",
+     "type": "sheltered bay / reef",
+     "level": "all levels",
+     "depth": "5-40m",
+     "blurb": "Puerto del Carmen's famous training-and-everything bay, giving direct shore access to the Cathedral, Blue Hole and Red Coral reefs. Depths run from 5 m sand to walls beyond 40 m, with seahorses, octopus and passing rays."
+    },
+    {
+     "name": "The Cathedral (La Catedral)",
+     "type": "cavern / wall",
+     "level": "advanced",
+     "depth": "18-30m",
+     "blurb": "A huge vaulted cave set into the reef wall off Playa Chica at around 30 m, roomy enough to enter like a church nave. Long-resident dusky grouper and shoals of cardinalfish shelter inside."
+    },
+    {
+     "name": "Blue Hole (Agujero Azul)",
+     "type": "tunnel / swim-through",
+     "level": "intermediate-advanced",
+     "depth": "18-30m",
+     "blurb": "A natural chimney-tunnel connecting the sandy plateau to the open reef wall, named for the glowing blue light at its exit. Rays, barracuda and angelsharks are regulars on the surrounding slope."
+    },
+    {
+     "name": "Old Harbour Wrecks",
+     "type": "wreck",
+     "level": "all levels to advanced",
+     "depth": "15-40m",
+     "blurb": "Up to six vessels — a metal transport ship and five wooden fishing boats — purposely sunk off Puerto del Carmen's old harbour wall in the 1970s-80s. The deepest, La Hélice, keeps her propeller and rudder at about 40 m; the shallower hulls swarm with reef fish, rays and angelsharks."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "lanzarote",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Lanzarote pairs one of Europe's most accessible dive coastlines with a genuine oddity: the Museo Atlántico off Playa Blanca, Europe's first underwater sculpture museum, where more than 300 life-size casts stand in ten installations on sand at 12-15 m. Puerto del Carmen's Playa Chica bay opens straight from shore onto the Cathedral cavern, the Blue Hole tunnel and the old-harbour wrecks — and from roughly October to April, divers here meet angelsharks almost daily on the volcanic sand.",
+   "underwater": "Most of the diving starts from the sand at Playa Chica and works outwards: down the reef to the Cathedral, a vaulted cave at around 30 m holding long-resident grouper and cardinalfish, through the Blue Hole's chimney to the glowing exit on the outer wall, or across to the harbour wrecks, where La Hélice keeps her propeller at 40 m. Off Playa Blanca the sculpture museum's ten installations sit in orderly rows at 12-15 m. Winter visibility often passes 30 m in 18-20°C water.",
+   "encounters": "The angelshark defines the calendar: from roughly October or November until April, Squatina squatina lies buried on the sand at Playa Chica, the Blue Hole slope and the harbour wrecks, and divers meet them almost daily at the season's height. The rest of the cast is steady year-round — common stingrays over the sand, barracuda off the reef edge, seahorses, cuttlefish and octopus in the shallows, and dusky grouper stationed in the Cathedral."
+  },
+  {
+   "name": "Antalya",
+   "country": "Turkey",
+   "region": "Mediterranean / Turkey",
+   "water_type": "temperate/warm Mediterranean sea",
+   "difficulty": "beginner to advanced",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": 36.8969,
+    "lng": 30.7133
+   },
+   "best_months": "Jun-Sep",
+   "wetsuit": "3mm Jul-Sep; 5mm May-Jun and Oct-Nov; 7mm semi-dry winter",
+   "current_strength": "mild",
+   "current_note": "Currents are generally low — the Paris II is dived down a fixed shotline in near-still water — with only occasional light current on the exposed corners of the Üç Adalar reefs.",
+   "currents": "Mild almost everywhere; the wrecks sit in near-still water and only the exposed reef corners at Üç Adalar occasionally carry light current.",
+   "signature_species": [
+    "loggerhead turtle",
+    "dusky grouper",
+    "Mediterranean barracuda",
+    "amberjack",
+    "common octopus",
+    "moray eel"
+   ],
+   "highlights": "Turkey's resort capital hides a genuine dive scene at Kemer and Tekirova: the 1917 Paris II steamer wreck, a scuttled C-47 Dakota, and the Üç Adalar reef complex — loggerhead habitat with big grouper — all in calm, clear Mediterranean water.",
+   "monthly_temp_c": {
+    "Jan": 18,
+    "Feb": 17,
+    "Mar": 17,
+    "Apr": 18,
+    "May": 21,
+    "Jun": 25,
+    "Jul": 28,
+    "Aug": 29,
+    "Sep": 28,
+    "Oct": 25,
+    "Nov": 22,
+    "Dec": 19
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "grouper holding the reef walls and octopus deep in the crevices while little else moves",
+     "conditions": "cool winter sea with 7mm semi-drys and only calm-day diving at the year-round centers",
+     "visibility_m": 15
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "resident morays and octopus tucked into the rock while grouper sit quiet on the walls",
+     "conditions": "coldest water of the year with winter storms cutting visibility",
+     "visibility_m": 12
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "grouper and octopus stirring on the reefs as the water slowly begins to warm",
+     "conditions": "still-cold sea recovering from winter storms with limited boat schedules",
+     "visibility_m": 15
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "grouper active across the reefs with moray and octopus showing before the season proper",
+     "conditions": "cool water and 5mm suits as the weather improves ahead of the May opening",
+     "visibility_m": 18
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "barracuda and amberjack returning to the reefs while grouper station on the walls",
+     "conditions": "Kemer boats opening the main season with comfortable water and settling seas",
+     "visibility_m": 20
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "loggerhead turtles moving through Üç Adalar while grouper thicken and barracuda school",
+     "conditions": "warm water, daily wreck and reef tours and lengthening visibility",
+     "visibility_m": 25
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "turtles on the Üç Adalar reefs with amberjack sweeping through and octopus on every dive",
+     "conditions": "hot calm days with 28°C water in the busiest weeks",
+     "visibility_m": 25
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "loggerheads and big grouper on the reefs while barracuda hunt over the wrecks",
+     "conditions": "warmest sea of the year, flat calm and clear",
+     "visibility_m": 28
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "turtles still on the reefs with amberjack and barracuda active over abundant reef fish",
+     "conditions": "still-warm water with settled weather and the year's best clarity",
+     "visibility_m": 30
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "grouper, moray and octopus busy while passing barracuda linger into the autumn",
+     "conditions": "pleasant sea with daily tours running to the end of the month",
+     "visibility_m": 28
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "resident grouper and octopus holding on as the visiting fish thin out",
+     "conditions": "cooling water with schedules shortening as the main season closes",
+     "visibility_m": 20
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "grouper and moray tucked into the reef structure while the sites sit quiet",
+     "conditions": "cool early-winter sea with year-round centers diving on calm days",
+     "visibility_m": 18
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Paris II Wreck",
+     "type": "wreck",
+     "level": "advanced",
+     "depth": "18-31m",
+     "blurb": "A French armed steamer, built 1913 and sunk by Turkish shore artillery in 1917, rediscovered in 1995 about 1.5 km off Kemer marina; it sits on a flat seabed with a buoyed shotline, near-still water and usually very good visibility, kept for experienced divers by its depth."
+    },
+    {
+     "name": "Üç Adalar (Three Islands)",
+     "type": "reef / wall complex",
+     "level": "intermediate",
+     "depth": "3-40m",
+     "blurb": "A marine area off Tekirova, about 45 minutes by boat from Kemer, with 17-plus dive spots across nine reefs and two underwater caves from 3 m to beyond 40 m — recognised habitat for protected loggerhead turtles and large dusky grouper."
+    },
+    {
+     "name": "C-47 Dakota (Kemer)",
+     "type": "wreck / artificial reef",
+     "level": "beginner-intermediate",
+     "depth": "15-22m",
+     "blurb": "A decommissioned military C-47 Dakota transport — 20 m long with a 29 m wingspan — scuttled as an artificial reef at 22 m; it sits upright on sand and even newer divers can be guided into the open cargo bay."
+    },
+    {
+     "name": "Aquarium Bay (Kemer)",
+     "type": "reef",
+     "level": "beginner",
+     "depth": "5-12m",
+     "blurb": "A sheltered cove about 20 minutes from Kemer's yacht harbour with a 12 m maximum depth and little wind or swell — the region's standard training and first-dive site."
+    },
+    {
+     "name": "Sıçan Adası (Rat Island)",
+     "type": "island reef",
+     "level": "beginner-advanced",
+     "depth": "5-30m",
+     "blurb": "A small island off central Antalya's Konyaaltı coast, reached in minutes by dive boat from the city, with abundant reef life and routes that suit both new and experienced divers."
+    },
+    {
+     "name": "Side Coast Guard Wreck",
+     "type": "wreck / artificial reef",
+     "level": "intermediate",
+     "depth": "20-25m",
+     "blurb": "A 30 m former coastguard boat sunk as an artificial reef in 2008, 3 km off Side on the eastern Antalya coast; just 10-15 minutes by boat, resting at a 25 m maximum depth."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "antalya",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Antalya is Turkey's resort capital, and its diving concentrates 40 km southwest at Kemer and Tekirova, with Sıçan Island only minutes from the city itself. History does the headlining: the Paris II, a French armed steamer sunk by shore artillery in 1917, rests at 31 m off Kemer, and a scuttled C-47 Dakota sits upright on sand nearby. Üç Adalar, 45 minutes from Kemer marina, spreads 17-plus spots over nine reefs and two caves — protected loggerhead habitat patrolled by large dusky grouper.",
+   "underwater": "The water is calm and clear — 20-30 m visibility is typical, best from late summer into autumn — and current rarely registers: the Paris II is dived down a fixed shotline in near-still water. Depths run from the 12 m training cove of Aquarium Bay to reef walls beyond 40 m at Üç Adalar. Summer water reaches 29°C and a 3 mm suit; winter drops to 16-19°C and 7 mm semi-drys for the centers that keep diving on calm days.",
+   "encounters": "Loggerhead turtles are the flagship — Üç Adalar is recognised habitat for them, along with the large dusky grouper that hold its reef walls. Moray eels and common octopus fill the crevices and colonise the wrecks, while summer brings the movement: amberjack sweeping the reefs and Mediterranean barracuda schooling above the islands. In winter the residents remain, but the visitors thin out with the boat schedules."
+  },
+  {
+   "name": "Bodrum",
+   "country": "Turkey",
+   "region": "Aegean / Turkey",
+   "water_type": "temperate Aegean sea",
+   "difficulty": "beginner to advanced",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": 37.0344,
+    "lng": 27.4305
+   },
+   "best_months": "Jun-Sep",
+   "wetsuit": "3mm Jun-Sep; 5mm May and Oct-Nov; 7mm semi-dry winter",
+   "current_strength": "mild",
+   "current_note": "Currents are mild throughout the year; only the exposed reef corners — Big Reef and the Orak Island wall — occasionally carry light current.",
+   "currents": "Mild year-round, with occasional light flow on the exposed corners of Big Reef and the Orak Island wall.",
+   "signature_species": [
+    "dusky grouper",
+    "moray eel",
+    "conger eel",
+    "Mediterranean barracuda",
+    "common octopus",
+    "sea bream"
+   ],
+   "highlights": "The most developed dive hub on the Turkish Aegean: sheer reef walls in the Kara Ada channel, three purpose-sunk wrecks including a C-47 Dakota falling away to 33 m, and the deep clear walls of Orak Island two hours east.",
+   "monthly_temp_c": {
+    "Jan": 17,
+    "Feb": 17,
+    "Mar": 17,
+    "Apr": 17,
+    "May": 20,
+    "Jun": 23,
+    "Jul": 26,
+    "Aug": 26,
+    "Sep": 25,
+    "Oct": 23,
+    "Nov": 21,
+    "Dec": 19
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "grouper holding deep on the walls with conger and moray tucked into the cracks",
+     "conditions": "16-17°C Aegean water with 7mm semi-drys and boats on demand only",
+     "visibility_m": 12
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "resident octopus and eels in the reef crevices while little moves in open water",
+     "conditions": "coldest water of the year with winter winds keeping most boats in the harbour",
+     "visibility_m": 10
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "grouper and bream stirring on the reefs as the water begins its slow warm-up",
+     "conditions": "still-cold sea and unsettled weather ahead of the April opening",
+     "visibility_m": 12
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "grouper active on the walls with octopus and moray showing across the reefs",
+     "conditions": "boat season opening with cool water and thick suits",
+     "visibility_m": 15
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "barracuda returning to the reef corners while grouper station on Big Reef's wall",
+     "conditions": "comfortable water and fuller schedules as the season builds",
+     "visibility_m": 18
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "grouper thick on the walls with barracuda schooling and bream shoaling over the reefs",
+     "conditions": "warm settled Aegean with daily two-tank boats",
+     "visibility_m": 22
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "barracuda hunting along the walls while grouper, moray and conger show on every dive",
+     "conditions": "warm calm sea in the busiest weeks of the season",
+     "visibility_m": 25
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "big grouper and passing barracuda over reefs busy with bream and octopus",
+     "conditions": "warmest water of the year, around 26°C, with long clear days",
+     "visibility_m": 25
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "grouper and bream abundant while barracuda work the reef edges",
+     "conditions": "still-warm sea with the year's best visibility on the Orak walls",
+     "visibility_m": 28
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "grouper, moray and octopus staying busy while the barracuda begin to disperse",
+     "conditions": "pleasant water with boats running to the end of the month",
+     "visibility_m": 25
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "resident eels and octopus holding the reefs as the open-water fish thin out",
+     "conditions": "cooling sea with shorter schedules as the boat season closes",
+     "visibility_m": 18
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "grouper, conger and moray tucked deep into the walls while the reefs sit quiet",
+     "conditions": "cool early-winter water with diving by arrangement at the year-round centers",
+     "visibility_m": 15
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Big Reef (Büyük Resif)",
+     "type": "reef / wall",
+     "level": "intermediate",
+     "depth": "7-34m",
+     "blurb": "A submerged reef in the channel between Bodrum and Kara Ada whose wall drops sheer from 7 m to 34 m, packed with Mediterranean reef life; its twin, Small Reef (5-26 m), lies just 200 m closer to town."
+    },
+    {
+     "name": "Kargı Adası (Kargı Island)",
+     "type": "wall / reef",
+     "level": "intermediate",
+     "depth": "8-30m",
+     "blurb": "A wall dive starting from the island's south-eastern cove off the Bodrum peninsula, its reef structures sheltering moray and conger eels, grouper and passing barracuda."
+    },
+    {
+     "name": "C-47 Dakota Plane Wreck",
+     "type": "wreck / artificial reef",
+     "level": "advanced",
+     "depth": "19-33m",
+     "blurb": "An ex-air-force Douglas C-47 Dakota — 20 m fuselage, 30 m wingspan — scuttled as an artificial reef; the airframe starts at 19 m and falls away to 33 m, making it Bodrum's signature deep dive."
+    },
+    {
+     "name": "Pınar 1 Wreck",
+     "type": "wreck",
+     "level": "advanced",
+     "depth": "20-30m",
+     "blurb": "A 37 m former navy water tanker resting with the stern at 20 m and the seabed around 30 m; a compact, photogenic wreck now well colonised by marine growth."
+    },
+    {
+     "name": "SG-115 Coast Guard Wreck",
+     "type": "wreck / artificial reef",
+     "level": "intermediate",
+     "depth": "17-26m",
+     "blurb": "An old coastguard vessel sunk in 2007 as an artificial reef off Kara Ada, stern at 17 m and bow at 26 m — an accessible first wreck."
+    },
+    {
+     "name": "Orak Adası (Orak Island)",
+     "type": "wall",
+     "level": "intermediate-advanced",
+     "depth": "10-40m",
+     "blurb": "An island about two hours east of Bodrum harbour famed for its deep, clear walls — generally the best visibility in the area and a favourite full-day two-tank boat trip."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "bodrum",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Bodrum is the most developed dive hub on the Turkish Aegean, its castle-fronted harbour sending day boats to reefs, walls and three purpose-sunk wrecks. Big Reef drops sheer from 7 m to 34 m in the Kara Ada channel, with its twin Small Reef 200 m closer to town; an ex-air-force C-47 Dakota lies between 19 m and 33 m, the Pınar 1 water tanker and the SG-115 coastguard boat give gentler steel, and Orak Island, two hours east, holds the deepest, clearest walls in the area.",
+   "underwater": "Expect Aegean rather than tropical: 23-26°C at the height of summer, visibility of 20-30 m in season within a 10-25 m year-round range, and mild currents that only brush the exposed corners of Big Reef and Orak. The wrecks stack neatly by experience — the SG-115's stern at 17 m makes an accessible first wreck, the Pınar 1 sits at 20-30 m, and the Dakota falls away to 33 m as the signature deep dive.",
+   "encounters": "Dusky grouper anchor the reef walls, with moray and conger eels sharing the cracks and common octopus working the rubble and wreck plating. Mediterranean barracuda pass along the walls in season, and sea bream — sargo and dentex — shoal over the reefs. Winter never quite empties the water: the Aegean here rarely drops much below 15-16°C and the residents stay put, though boats run on demand rather than schedule."
+  },
+  {
+   "name": "Fethiye",
+   "country": "Turkey",
+   "region": "Mediterranean / Turkey",
+   "water_type": "temperate/warm Mediterranean sea",
+   "difficulty": "beginner to advanced",
+   "access": "day-boat",
+   "coordinates": {
+    "lat": 36.6217,
+    "lng": 29.1164
+   },
+   "best_months": "Jun-Sep",
+   "wetsuit": "3mm Jun-Sep; 5mm May and Oct-Nov; 7mm semi-dry winter",
+   "current_strength": "mild",
+   "current_note": "The Gulf of Fethiye is well sheltered; currents are light on almost all sites, with only occasional surge on the exposed Afkule wall.",
+   "currents": "Light throughout the sheltered gulf; only the exposed Afkule wall picks up occasional surge.",
+   "signature_species": [
+    "loggerhead turtle",
+    "dusky grouper",
+    "moray eel",
+    "common octopus",
+    "cleaner shrimp",
+    "Mediterranean barracuda"
+   ],
+   "highlights": "A sheltered Turquoise-Coast gulf where the Afkule wall and cavern headline swim-through tunnels, a cave whose chamber walls carpet with thousands of cleaner shrimp, and shallow dives over sunken Byzantine bath ruins.",
+   "monthly_temp_c": {
+    "Jan": 18,
+    "Feb": 17,
+    "Mar": 17,
+    "Apr": 18,
+    "May": 21,
+    "Jun": 24,
+    "Jul": 28,
+    "Aug": 29,
+    "Sep": 28,
+    "Oct": 25,
+    "Nov": 22,
+    "Dec": 20
+   },
+   "monthly": {
+    "Jan": {
+     "rating": "Low",
+     "marine_life": "grouper quiet on the Afkule wall while cleaner shrimp still carpet the cave chambers",
+     "conditions": "cool winter gulf with diving by arrangement only",
+     "visibility_m": 12
+    },
+    "Feb": {
+     "rating": "Low",
+     "marine_life": "resident morays and octopus in the crevices while the shrimp hold their cave walls",
+     "conditions": "coldest water of the year with storms cutting visibility",
+     "visibility_m": 10
+    },
+    "Mar": {
+     "rating": "Low",
+     "marine_life": "grouper and octopus stirring on the reefs as the gulf slowly warms",
+     "conditions": "still-cold sea recovering from the winter storms",
+     "visibility_m": 13
+    },
+    "Apr": {
+     "rating": "Shoulder",
+     "marine_life": "grouper waking on the walls with moray and octopus active before the crowds arrive",
+     "conditions": "local season opening with cool water and thick suits",
+     "visibility_m": 15
+    },
+    "May": {
+     "rating": "Good",
+     "marine_life": "barracuda gathering off the headlands while grouper settle on the Afkule wall",
+     "conditions": "comfortable water above 20°C with daily boats resuming",
+     "visibility_m": 18
+    },
+    "Jun": {
+     "rating": "Peak",
+     "marine_life": "the first loggerhead turtles over the seagrass bays while grouper thicken on the walls",
+     "conditions": "warm settled sea with clarity building at Afkule",
+     "visibility_m": 25
+    },
+    "Jul": {
+     "rating": "Peak",
+     "marine_life": "turtles in the shallow bays, barracuda schooling and shrimp thick in the caves",
+     "conditions": "hot calm days with superb clarity across the gulf",
+     "visibility_m": 28
+    },
+    "Aug": {
+     "rating": "Peak",
+     "marine_life": "loggerheads over the seagrass with grouper, octopus and barracuda on every dive",
+     "conditions": "warmest water of the year and the Afkule wall at its clearest",
+     "visibility_m": 30
+    },
+    "Sep": {
+     "rating": "Peak",
+     "marine_life": "turtles feeding in the bays while barracuda hunt and grouper hold the walls",
+     "conditions": "still-warm 28°C water with settled seas and long visibility",
+     "visibility_m": 28
+    },
+    "Oct": {
+     "rating": "Good",
+     "marine_life": "grouper, moray and octopus busy while passing barracuda linger into the autumn",
+     "conditions": "pleasant water with daily boats running late into the month",
+     "visibility_m": 22
+    },
+    "Nov": {
+     "rating": "Shoulder",
+     "marine_life": "resident grouper and octopus holding on with the shrimp caves unchanged",
+     "conditions": "cooling gulf with the season winding down toward by-arrangement diving",
+     "visibility_m": 18
+    },
+    "Dec": {
+     "rating": "Low",
+     "marine_life": "grouper and moray tucked into the wall while the cave shrimp carry the interest",
+     "conditions": "cool early-winter sea with most daily boats stopped",
+     "visibility_m": 15
+    }
+   },
+   "dive_sites": [
+    {
+     "name": "Afkule (Aladdin's Cavern)",
+     "type": "wall / cavern",
+     "level": "advanced",
+     "depth": "12-30m",
+     "blurb": "A dramatic wall beneath the cliff-top Afkule monastery, with an upper cavern at 4-12 m and the 'Shrimp Hole' at 24 m; one of Turkey's most celebrated dives, and the wall continues past 30 m toward 50 m for suitably qualified divers."
+    },
+    {
+     "name": "Aquarium Bay",
+     "type": "reef",
+     "level": "beginner",
+     "depth": "5-12m",
+     "blurb": "A calm, glass-clear bay on the Fethiye peninsula used for training and first dives; sandy bottom with seagrass and reef patches around a 10 m maximum."
+    },
+    {
+     "name": "Turkish Bath (Hamam Bay)",
+     "type": "reef / submerged ruins",
+     "level": "beginner",
+     "depth": "5-10m",
+     "blurb": "A shallow reef beside sunken Byzantine bath ruins — the so-called 'Cleopatra's Hamam' — in the Gulf of Fethiye; a 10 m heritage-flavoured dive on the standard boat circuit."
+    },
+    {
+     "name": "Three Tunnels",
+     "type": "cavern / tunnels",
+     "level": "intermediate",
+     "depth": "10-20m",
+     "blurb": "A trio of swim-through rock tunnels between 10 m and 20 m in the cliffs outside Fethiye bay — torch-lit passages with soldierfish and shrimp, manageable for confident newer divers."
+    },
+    {
+     "name": "Shrimp Cave",
+     "type": "cave",
+     "level": "advanced",
+     "depth": "18-26m",
+     "blurb": "A cave with its entrance at 26 m rising to a shrimp-filled chamber at 18 m; thousands of cleaner shrimp carpet the walls, making it Fethiye's best-known specialist dive."
+    },
+    {
+     "name": "Dalyan Reef (Dalyan Bay)",
+     "type": "reef",
+     "level": "beginner",
+     "depth": "5-14m",
+     "blurb": "An easy reef and seagrass bay near Fethiye harbour, around 10 m deep, with octopus, bream and the occasional turtle — a staple second dive on daily two-tank trips."
+    }
+   ],
+   "data_confidence": "researched",
+   "last_verified": "2026-07",
+   "slug": "fethiye",
+   "dive_sites_researched": true,
+   "image": "",
+   "image_credit": "",
+   "image_source": "",
+   "description": "Fethiye sits on a sheltered gulf of Turkey's Turquoise Coast, its day boats reaching most sites within 30-60 minutes. Afkule is the headline — a wall beneath a cliff-top monastery with a cavern at 4-12 m, the 'Shrimp Hole' at 24 m and rock continuing toward 50 m — backed by the Three Tunnels swim-throughs, a cave whose chamber walls carpet with cleaner shrimp, and shallow heritage dives over the sunken Byzantine bath ruins of Hamam Bay.",
+   "underwater": "The gulf is well sheltered, so most dives are calm, with only occasional surge on the exposed Afkule wall. Visibility runs 15-30 m through the April-November season — up to 30 m at Afkule in summer — and drops to 10-15 m after winter storms. Depths suit every stage: 10 m seagrass bays at Aquarium and Dalyan, torch-lit tunnels at 10-20 m, and Shrimp Cave with its entrance at 26 m. The surface hits 29°C in August and 16-19°C in winter.",
+   "encounters": "Loggerhead turtles cruise the seagrass bays — Dalyan Reef often turns one up on a second dive — while dusky grouper hold the deeper walls at Afkule. Moray eels and common octopus fill the reef crevices year-round, and Mediterranean barracuda school off the headlands in summer. The signature is smaller: thousands of cleaner shrimp carpeting the chamber walls of Shrimp Cave at 18 m, picked out by torchlight."
   }
  ]
 }
