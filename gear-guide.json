@@ -178,7 +178,8 @@
       "Rx lenses": "No",
       "Weight": "159 g (0.35 lb)",
       "Light transmission": "Up to 96% (Schott Superwite glass, made in Germany)",
-      "Face-seal silicone": "Atomic 'Gummi Bear' UltraSoft inner seal co-molded with a firmer outer silicone"
+      "Face-seal silicone": "Atomic 'Gummi Bear' UltraSoft inner seal co-molded with a firmer outer silicone",
+      "Strap": "Squeeze-button buckles, soft-mounted to skirt"
      },
      "pros": [
       "Schott Superwite glass passes up to 96% of available light, so colors read brighter and truer than standard tempered lenses with their green iron cast",
@@ -281,7 +282,8 @@
       "Lens angle": "15° inclined, inverted-teardrop lenses",
       "Downward visibility": "More than 30% over a conventional flat dual-lens mask",
       "Buckles": "Mounted on elastomer tabs, fold through 180°",
-      "Made in": "Italy"
+      "Made in": "Italy",
+      "Strap": "Micrometric swivel buckles on elastomer tabs"
      },
      "colors": [
       "Clear/Blue",
@@ -571,7 +573,8 @@
       "Introduced": "1990",
       "Sizes": "Standard; Mini Frameless for small and narrow faces; Gorilla for wide faces",
       "Buckles": "Mounted on flexible skirt tabs that self-adjust strap angle",
-      "Storage": "Folds flat for a BC pocket; ships with a protective box"
+      "Storage": "Folds flat for a BC pocket; ships with a protective box",
+      "Strap": "Wide headband, buckles on flexible skirt tabs"
      },
      "pros": [
       "The wide rectangular single lens gives strong peripheral vision as well as straight-ahead view — the shape has stayed in production essentially unchanged since 1990",
@@ -624,7 +627,8 @@
       "Fits": "Regular and Medium (narrower faces)",
       "Bridge": "Removable stainless-steel nose bridge holding the lens retainer",
       "Light transmission": "About 98% with UltraClear glass; standard green float glass loses over 14%",
-      "ARC version": "Optional anti-reflective lens coating (SubFrame ARC)"
+      "ARC version": "Optional anti-reflective lens coating (SubFrame ARC)",
+      "Strap": "Buckles on flexible skirt tabs"
      },
      "pros": [
       "The rigid frame is molded beneath the silicone skirt instead of clipped around it, so there is no external plastic to crack in a dive bag — Atomic warrants the frame against breakage for life",
@@ -743,7 +747,9 @@
       "Lens tints": "Clear or Amber (amber cuts shallow-water glare, warms reds at depth)",
       "Strap": "X-shaped silicone strap spreading load across the back of the head",
       "Pressure zones": "Micromask pressure-reduction zones molded into the skirt",
-      "Fit": "One size, cut for medium-to-large faces"
+      "Fit": "One size, cut for medium-to-large faces",
+      "Frame": "Frameless",
+      "Rx lenses": "Yes, custom lenses via specialists"
      },
      "image": "assets/gear/studio/aqua-lung-plazma.jpg",
      "pros": [
@@ -801,7 +807,10 @@
       "Lens": "Two tempered-glass lenses; mirrored HD lenses on the Calibro SF variant",
       "Finish": "Matte coating on all components to prevent reflections",
       "Made in": "Italy",
-      "Includes": "Rigid protective mask box"
+      "Includes": "Rigid protective mask box",
+      "Frame": "Integrated Dual Frame (patented)",
+      "Strap": "Buckles integrated into skirt, flexible mounts",
+      "Rx lenses": "Yes, custom lenses via specialists"
      },
      "image": "assets/gear/studio/cressi-calibro.jpg",
      "pros": [
@@ -853,7 +862,9 @@
       "Fit": "Narrow to medium faces",
       "Buckles": "Skirt-mounted, fold-flat for packing",
       "Weight": "185 g",
-      "Skirt width": "120 mm"
+      "Skirt width": "120 mm",
+      "Frame": "Frameless, skirt molded onto lens",
+      "Strap": "Micrometric adjustable buckles"
      },
      "image": "assets/gear/studio/beuchat-maxlux-s.jpg",
      "pros": [
@@ -920,7 +931,10 @@
       "Included": "Spare neoprene strap, rigid case with clip",
       "Weight": "160 g",
       "Lens thickness": "4 mm tempered glass with anti-scratch coating",
-      "Lens versions": "Pure Clear (low-iron) or UV Cut (blue-light filtering)"
+      "Lens versions": "Pure Clear (low-iron) or UV Cut (blue-light filtering)",
+      "Frame": "Frameless",
+      "Strap": "Silicone strap, quick-release buckles; neoprene spare",
+      "Rx lenses": "Yes, custom lenses via specialists"
      },
      "image": "assets/gear/studio/apeks-vx1.jpg",
      "pros": [
@@ -976,7 +990,8 @@
       "Weight": "245 g",
       "Volume": "215 cm3",
       "Frame dimensions": "88 mm x 169 mm",
-      "UV protection": "UV 420 lens treatment against UV and high-energy visible light"
+      "UV protection": "UV 420 lens treatment against UV and high-energy visible light",
+      "Lens": "Twin CrystalView glass, UV 420, AR coated"
      },
      "image": "assets/gear/studio/tusa-paragon.jpg",
      "pros": [
@@ -1032,7 +1047,9 @@
       "Buckles": "Quick-adjust swivel buckles",
       "Strap": "Wide split-style silicone strap",
       "Rx lenses": "Optional corrective lenses, sold separately",
-      "Included": "Protective mask box"
+      "Included": "Protective mask box",
+      "Lens": "Twin low-iron tempered glass",
+      "Volume": "Low"
      },
      "image": "assets/gear/studio/hollis-m3.jpg",
      "pros": [
@@ -1665,7 +1682,10 @@
       "Blade": "Spring-effect side rails, flexible spoon tip",
       "Straps": "Quick-adjust buckles; spring straps available",
       "Sizes": "S, M, L, XL",
-      "Blade length": "39 cm"
+      "Blade length": "39 cm",
+      "Foot pocket": "Open heel",
+      "Material": "Tri-material construction",
+      "Strap": "Detachable rotating buckles"
      },
      "image": "assets/gear/studio/beuchat-powerjet.jpg",
      "pros": [
@@ -1716,7 +1736,8 @@
       "Sizes": "XS to XL",
       "Weight/fin": "1.67 kg per pair (manufacturer figure)",
       "Angle of attack": "40-50 degrees, held by Pivot Control hinges",
-      "Replacement blades": "Midi and Maxi sizes, sold separately"
+      "Replacement blades": "Midi and Maxi sizes, sold separately",
+      "Foot pocket": "Open heel, Socket-Lock modular pocket"
      },
      "image": "assets/gear/studio/scubapro-seawing-supernova.jpg",
      "pros": [
@@ -1766,7 +1787,9 @@
       "Foot pocket": "Oversized, fits rock boots and drysuit boots",
       "Sizes": "S to XXL",
       "Weight/fin": "1.47 kg per fin (size Regular)",
-      "Warranty": "2-year limited"
+      "Warranty": "2-year limited",
+      "Style": "Vented blade",
+      "Strap": "Spring heel straps"
      },
      "image": "assets/gear/studio/hollis-f1-bat-fin.jpg",
      "pros": [
@@ -1831,7 +1854,8 @@
       "2nd stage weight": "179 g without mouthpiece",
       "Airflow": ">8,500 l/min at 200 bar",
       "Intermediate pressure": "9.0-9.8 bar",
-      "Warranty": "Limited lifetime"
+      "Warranty": "Limited lifetime",
+      "Weight": "913 g (32.2 oz)"
      },
      "pros": [
       "The air-balanced flow-through piston moves more than 8,500 l/min at 200 bar, so delivery stays flat whether the tank reads 200 bar or 50.",
@@ -2035,7 +2059,8 @@
       "Weight (DIN 300)": "665 g (yoke version 885 g)",
       "Airflow at 200 bar": ">8,500 l/min",
       "Intermediate pressure": "9.2-9.8 bar",
-      "Warranty": "Scubapro limited lifetime"
+      "Warranty": "Scubapro limited lifetime",
+      "Weight": "665 g (DIN 1st) + 244 g (2nd)"
      },
      "pros": [
       "Dry-sealed MK19 EVO diaphragm first stage puts four high-flow LP ports on a swivel turret plus a fifth axial super-high-flow port, so long-hose, doubles and sidemount routings all lie flat",
@@ -2240,7 +2265,8 @@
       "Max cylinder pressure": "232 bar yoke, 300 bar DIN",
       "Mouthpiece": "Comfo-bite with reusable clamp",
       "Auto Closure Device": "Yes — inlet self-seals when the first stage is depressurised",
-      "Service interval": "Annual inspection, overhaul every 2 years or 100 dives (warranty condition)"
+      "Service interval": "Annual inspection, overhaul every 2 years or 100 dives (warranty condition)",
+      "Weight": "510 g (DIN 1st) + 178 g (2nd)"
      },
      "pros": [
       "The Auto Closure Device seals the first-stage inlet the moment it comes off the tank, so a forgotten dust cap or a rinse-tank dunk doesn't put water in the internals",
@@ -2344,7 +2370,8 @@
       "Weight": "1020 g (DIN 300 bar), 1173 g (yoke)",
       "MP hose": "Polyurethane",
       "Standard": "EN 250:2014",
-      "Quality control": "Each unit individually adjusted on a hyperbaric test bench"
+      "Quality control": "Each unit individually adjusted on a hyperbaric test bench",
+      "Nitrox": "Air only per published specs"
      },
      "image": "assets/gear/studio/beuchat-vr-300.jpg",
      "pros": [
@@ -2449,7 +2476,8 @@
       "Ports": "2 HP fixed, 5 LP on swivel cap",
       "First stage materials": "Chrome-plated marine brass with 316 stainless steel components",
       "Environmental sealing": "Unsealed standard; factory-sealed version optional",
-      "Warranty": "Limited lifetime for the original owner, not contingent on annual service"
+      "Warranty": "Limited lifetime for the original owner, not contingent on annual service",
+      "Cold water": "Yes with optional factory-sealed 1st stage"
      },
      "image": "assets/gear/studio/atomic-aquatics-b2.jpg",
      "pros": [
@@ -2504,7 +2532,8 @@
       "Nitrox": "Up to 40% O2 out of the box, 241 bar maximum",
       "Service interval": "2 years or 200 dives, with annual inspection",
       "Warranty": "Limited lifetime (original owner); hoses, O-rings, diaphragms and mouthpieces 2 years",
-      "First stage finish": "Black chrome plating over brass"
+      "First stage finish": "Black chrome plating over brass",
+      "Weight": "1.18 kg (2.6 lb) dry"
      },
      "image": "assets/gear/studio/zeagle-f8.jpg",
      "pros": [
@@ -2575,7 +2604,8 @@
       "Lift range": "15.9-18.1 kg depending on size",
       "Dry weight": "3.9-4.1 kg by size",
       "Harness": "Injection-molded Monprene gel, no absorbent fabric",
-      "Air cell": "Tri-bungee compressed bladder"
+      "Air cell": "Tri-bungee compressed bladder",
+      "Sizes": "S to XL/2XL (men's)"
      },
      "pros": [
       "The Monprene gel harness molds to the torso and carries no absorbent fabric, so the rig is nearly dry by the time you reach the rinse tank",
@@ -2635,7 +2665,8 @@
       "Bladder options": "5 L (5.4 kg lift) and 11 L (11.3 kg lift), interchangeable",
       "Size combinations": "27 via ModLock shoulder/back/waist modules",
       "Inherent buoyancy": "Zero",
-      "Weight integration": "SureLock II pockets sold separately (about $73 per pocket)"
+      "Weight integration": "SureLock II pockets sold separately (about $73 per pocket)",
+      "Sizes": "S, M, L (27 fit configurations)"
      },
      "pros": [
       "At 1.8 kg it is among the lightest full BCDs sold, and the harness has zero inherent buoyancy so you carry less lead",
@@ -2687,7 +2718,8 @@
       "Weight pockets": "2 x 4.5 kg quick-release plus 2 x 2.5 kg rear trim",
       "D-rings": "8",
       "Fabric": "210-denier nylon body, 420-denier bladder",
-      "Lift range": "6-16.3 kg by size"
+      "Lift range": "6-16.3 kg by size",
+      "Sizes": "XS to XL"
      },
      "colors": [
       "Black/Blue"
@@ -2736,7 +2768,8 @@
       "Travel": "Heavy",
       "Lift range": "130 N (XS) to 230 N (XL)",
       "Dry weight": "4.5 kg (L)",
-      "Fabric": "Cordura 420"
+      "Fabric": "Cordura 420",
+      "Sizes": "XS to XL"
      },
      "pros": [
       "The air cell separates from the shoulder harness as it inflates, so a full bladder does not squeeze the diver",
@@ -2788,7 +2821,8 @@
       "Dry weight": "3.8 kg",
       "Manufacture": "Made in the USA",
       "Custom program": "Factory-order panel colors and per-section sizing",
-      "Ripcord travel": "Cord stops after about 25 cm of pull"
+      "Ripcord travel": "Cord stops after about 25 cm of pull",
+      "Sizes": "XS to 3XL (XXL up custom)"
      },
      "pros": [
       "The Ripcord releases all ditchable lead from both sides with one hand, and the cord physically cannot fall out on its own",
@@ -2846,7 +2880,8 @@
       "Dry weight": "3.2 kg (M)",
       "Weight pockets": "2 x 5 kg quick-release plus 2 x 2 kg trim",
       "Bladder fabric": "EndurTex high-tenacity 420 nylon",
-      "Tank band": "Super Cinch single-motion buckle"
+      "Tank band": "Super Cinch single-motion buckle",
+      "Sizes": "XS to XL"
      },
      "pros": [
       "3.2 kg in size M is light for a fully-featured front-adjustable jacket",
@@ -3001,7 +3036,8 @@
       "Wing-only weight": "0.95 kg",
       "Set weight": "About 5.5 kg with steel backplate",
       "Backplate options": "Stainless steel (2.06 kg) or aluminium",
-      "Manufacture": "Made in Europe"
+      "Manufacture": "Made in Europe",
+      "Sizes": "One size, adjustable harness"
      },
      "pros": [
       "The toroidal wing is balanced so the centre of buoyancy sits over the gas load, holding flat trim without constant correction",
@@ -3051,7 +3087,8 @@
       "Wing fabric": "1000-denier nylon outer, 420-denier urethane-laminated bladder",
       "Integrated weights": "2 x 2.3 kg (5 lb) zip-top pockets",
       "D-rings": "Chest and hip positions for accessories or a sling bottle",
-      "Cylinder compatibility": "Single AL80s and steel 85s"
+      "Cylinder compatibility": "Single AL80s and steel 85s",
+      "Sizes": "S to XL"
      },
      "pros": [
       "2.3 kg dry with a genuine 13.6 kg of lift - most rigs this light give up several kilograms of buoyancy",
@@ -3147,7 +3184,9 @@
       "Weight": "3.1 kg",
       "Lift range": "13.3-22.9 kg by size",
       "Ditchable ballast": "9 kg quick-release plus 4.5 kg rear trim",
-      "Relief valves": "3 (inflator hose, right shoulder, lower right)"
+      "Relief valves": "3 (inflator hose, right shoulder, lower right)",
+      "Material": "420D nylon air cell",
+      "Sizes": "XS to XL"
      },
      "image": "assets/gear/studio/cressi-ace.jpg",
      "pros": [
@@ -3198,7 +3237,8 @@
       "Lift by size": "120 N (XS) to 310 N (XL)",
       "Weight": "4.6 kg (M)",
       "Trim pockets": "2 x 2.5 kg fixed on rear gussets",
-      "Padding": "Draining 3D foam at shoulders, back and hips"
+      "Padding": "Draining 3D foam at shoulders, back and hips",
+      "Material": "1000D Cordura single bladder"
      },
      "image": "assets/gear/studio/beuchat-masterlift-x-air-comfort.jpg",
      "pros": [
@@ -3250,7 +3290,8 @@
       "Weight": "4.6 kg",
       "D-rings": "Titanium-coated stainless steel",
       "Dump valves": "Kidney dump, shoulder dump and inflator pull-dump",
-      "List price": "About $1,700, inflator not included"
+      "List price": "About $1,700, inflator not included",
+      "Lift": "14.5 kg / 32 lb (M)"
      },
      "image": "assets/gear/studio/atomic-aquatics-bc1.jpg",
      "pros": [
@@ -3299,7 +3340,11 @@
       "Bladder": "Cordura 1100 dTEX single shell with 0.215 mm TPU coating",
       "Wing-only weight": "0.65 kg",
       "Deluxe harness": "ITW Nexus quick-release buckles, neutrally buoyant 3D mesh padding",
-      "Backplate hole spacing": "28 cm (11 in)"
+      "Backplate hole spacing": "28 cm (11 in)",
+      "Style": "Backplate and wing",
+      "Weight system": "Quick-release pockets, 6 kg or 12 kg",
+      "Material": "Cordura 1100 dtex, TPU coated",
+      "Sizes": "Harness S (under 175 cm) or L"
      },
      "image": "assets/gear/studio/xdeep-ghost-deluxe.jpg",
      "pros": [
@@ -3354,7 +3399,8 @@
       "Lift by size": "9-16.3 kg (XS-3XL)",
       "Releasable ballast": "7.3 kg (XS-S), 9 kg (M-XL), 11.8 kg (2XL-3XL), plus 4.5 kg fixed",
       "Material": "1000-denier nylon",
-      "Air cell": "3D-shaped wraparound design"
+      "Air cell": "3D-shaped wraparound design",
+      "Lift": "9 kg (XS) to 16.3 kg (XL)"
      },
      "image": "assets/gear/studio/sherwood-avid-cqr-3.jpg",
      "pros": [
@@ -3968,7 +4014,9 @@
       "Case material": "Stainless steel case with tempered glass lens",
       "Dive history": "Last 24 dives stored on the unit; full logs sync to the free DiverLog+ app",
       "Alarms": "Audible alarms plus a high-visibility LED warning light",
-      "Format": "Watch-style, small enough to wear topside between dives"
+      "Format": "Watch-style, small enough to wear topside between dives",
+      "Display": "Segmented LCD with matrix row",
+      "Algorithm": "Z+ (Bühlmann ZHL-16C based)"
      },
      "image": "assets/gear/studio/aqualung-i470tc.jpg",
      "pros": [
@@ -4020,7 +4068,8 @@
       "Compass": "Tilt-compensated digital compass with bearing memory and stopwatch",
       "Logbook": "Over 100 hours of dive profile storage on the unit",
       "Charging": "Wireless charging base included",
-      "Strap": "Three-piece quick-change silicone strap; replacement kits sold separately"
+      "Strap": "Three-piece quick-change silicone strap; replacement kits sold separately",
+      "Modes": "Scuba, Gauge (bottom timer)"
      },
      "image": "assets/gear/studio/mares-sirius.jpg",
      "pros": [
@@ -4460,7 +4509,8 @@
         "Neoprene base": "X-Foam, limestone-based and petroleum-free; complies with PAH and REACH chemical limits",
         "Zipper slider": "Brass YKK slider",
         "Cut": "Triathlon cut carried over from the Sport steamers",
-        "Sizes (men's)": "2XS-4XL"
+        "Sizes (men's)": "2XS-4XL",
+        "Sizes": "Men's S-4XL, women's 2XS-3XL"
        },
        "options": [
         {
@@ -4618,7 +4668,8 @@
         "Zipper hardware": "#10 YKK front zipper with stainless steel slider",
         "Warranty": "10-year limited, zipper included",
         "Sizes (men's)": "XS-6XL",
-        "Pattern origin": "Designed, patterned and fit-tested in the USA"
+        "Pattern origin": "Designed, patterned and fit-tested in the USA",
+        "Sizes": "Men's XS-6XL, women's 4-24"
        },
        "options": [
         {
@@ -4671,7 +4722,8 @@
         "Stretch": "Up to 250% more stretch than standard neoprene",
         "Seals": "O-ring seals at arm and thigh openings",
         "Chest panel": "Skin-out, wind-resistant chest panel",
-        "Zipper hardware": "#10 YKK back zip with pull-tab leash and zipper shield"
+        "Zipper hardware": "#10 YKK back zip with pull-tab leash and zipper shield",
+        "Sizes": "Men's XS-XXL; women's version available"
        },
        "options": [
         {
@@ -4843,7 +4895,8 @@
         "Accessory dock": "WPAD docking station on right hip; expandable pocket sold separately",
         "Knee pads": "Polyurethane-reinforced",
         "Reinforcement": "PU-embossed non-slip shoulder and seat panels",
-        "Edge finish": "Rolled-neoprene piping at neck, wrists and ankles, no seals"
+        "Edge finish": "Rolled-neoprene piping at neck, wrists and ankles, no seals",
+        "Material": "Microcell CR neoprene"
        },
        "image": "assets/gear/studio/waterproof-w30-2-5mm-women-s.jpg",
        "pros": [
@@ -5101,7 +5154,8 @@
         "Chest panel": "Rubberised smooth-skin, reduces drag",
         "Knee protection": "Anti-abrasion reinforced patches",
         "Collar": "Hook-and-loop closure with second tab to hold the zip pull flat",
-        "Versions": "Man, lady and junior cuts"
+        "Versions": "Man, lady and junior cuts",
+        "Sizes": "Men's S-XXL; women's version available"
        },
        "options": [
         {
@@ -5318,7 +5372,9 @@
         "Knee reinforcement": "Supratex 2 panels",
         "Wear protection": "PU prints on seat and shoulders",
         "Wrist/ankle finish": "Smooth-skin neoprene seals; ankle zips with Easy Wave wrist system",
-        "Sizes": "XS-XXXL with intermediate sizes"
+        "Sizes": "XS-XXXL with intermediate sizes",
+        "Material": "Elaskin X.6.2 stretch neoprene",
+        "Seams": "Glued edge-to-edge, inside/outside overlock"
        },
        "image": "assets/gear/studio/beuchat-optima-2.jpg",
        "pros": [
@@ -5367,7 +5423,8 @@
         "Pockets": "Two stretch hip pockets with drain valves and attachment loop",
         "Reinforcements": "Duratex abrasion panels on seat and elbows",
         "Wrist/ankle entry": "YKK zippered openings at arms and legs",
-        "Flex panels": "Wave-flex panels at arm and leg joints"
+        "Flex panels": "Wave-flex panels at arm and leg joints",
+        "Material": "100% microcell CR limestone neoprene"
        },
        "image": "assets/gear/studio/waterproof-w5-3-5mm.jpg",
        "pros": [
@@ -5418,7 +5475,9 @@
         "Spine pad": "5 mm pad along the back zipper",
         "Collar": "Rolled neck with hook-and-loop closure",
         "Knee pads": "Heavy-duty roughskin",
-        "Shoulder pads": "Printed rubber panels that grip BCD straps"
+        "Shoulder pads": "Printed rubber panels that grip BCD straps",
+        "Material": "Nylon-2 stretch neoprene",
+        "Lining": "Titanium thermal lining"
        },
        "image": "assets/gear/studio/pinnacle-cruiser-3mm.jpg",
        "pros": [
@@ -5522,7 +5581,8 @@
         "Wrist seals": "Glideskin skin-in seals",
         "Ankle seals": "internal PU dams",
         "Knee pads": "ultra-stretch abrasion panels",
-        "Adhesive": "water-based Aqua-X glue on limestone-derived neoprene"
+        "Adhesive": "water-based Aqua-X glue on limestone-derived neoprene",
+        "Sizes": "Men's XXS-XXL, women's 8-20 (short/tall options)"
        },
        "options": [
         {
@@ -5574,7 +5634,8 @@
         "Certification": "CE certified Class B dive suit",
         "Ankle zips": "YKK zippered ankles with brass KA sliders",
         "Recycled content": "interior and exterior linings spun from about 45 recycled plastic bottles per suit",
-        "Abrasion protection": "reinforced seat and shoulder linings plus printed knee and shoulder pads"
+        "Abrasion protection": "reinforced seat and shoulder linings plus printed knee and shoulder pads",
+        "Sizes": "Men's S-3XL+, women's 2XS-2XL+"
        },
        "options": [
         {
@@ -5905,7 +5966,9 @@
         "Certification": "CE thermal class B in the 5 mm version — the rating a plain 7 mm usually earns",
         "Panel count": "44 panels in 20 neoprene grades (collar version); hooded version uses 40 panels in 14 grades",
         "Versions": "Men's and women's cuts, each offered with attached hood or plain collar",
-        "Neoprene base": "Limestone-derived, petroleum-free"
+        "Neoprene base": "Limestone-derived, petroleum-free",
+        "Material": "Elaskin X8.8 stretch neoprene",
+        "Seams": "Glued edge-to-edge, inside/outside overlock"
        },
        "image": "assets/gear/studio/beuchat-focea-comfort-6.jpg",
        "pros": [
@@ -5955,7 +6018,9 @@
         "Knee protection": "Protekt abrasion-resistant knee panels",
         "Construction": "Progressive Full-Stretch — three full-stretch neoprene types zoned around the body, double-glued with Secure-Lock seams",
         "Interior": "OMNIRED thermal lining with 13 thermo-reactive minerals woven into the torso",
-        "Warranty": "2 years on materials and workmanship; seams covered for 7 years"
+        "Warranty": "2 years on materials and workmanship; seams covered for 7 years",
+        "Material": "Progressive full-stretch neoprene",
+        "Lining": "Omnired infrared thermal lining"
        },
        "image": "assets/gear/studio/bare-velocity-ultra-2-0-5mm.jpg",
        "pros": [
@@ -6049,7 +6114,8 @@
         "Knee pads": "Krypto Armor",
         "Neck": "Double Super Seal closure",
         "Exterior": "Wind-resistant smoothskin panels",
-        "Warranty": "1 year, materials and workmanship"
+        "Warranty": "1 year, materials and workmanship",
+        "Material": "100% UltraFlex neoprene"
        },
        "image": "assets/gear/studio/o-neill-epic-4-3mm.jpg",
        "pros": [
@@ -6538,7 +6604,8 @@
         "Lining": "QuikDry hydrophobic micro-fleece interior; dries in minutes rather than hours",
         "Exterior": "Aquasilk anti-pilling laminate",
         "System": "Double-layer roll-back wrist, ankle and neck openings interlock with Aqua Lock hoods, gloves and boots (silicone-sealed)",
-        "Seam finish": "Outer seams coated with Aqua Lock liquid-tape waterproof barrier"
+        "Seam finish": "Outer seams coated with Aqua Lock liquid-tape waterproof barrier",
+        "Material": "AquaSilk 250% stretch neoprene"
        },
        "image": "assets/gear/studio/henderson-aqua-lock-7mm.jpg",
        "pros": [
