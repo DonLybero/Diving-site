@@ -178,7 +178,8 @@
       "Rx lenses": "No",
       "Weight": "159 g (0.35 lb)",
       "Light transmission": "Up to 96% (Schott Superwite glass, made in Germany)",
-      "Face-seal silicone": "Atomic 'Gummi Bear' UltraSoft inner seal co-molded with a firmer outer silicone"
+      "Face-seal silicone": "Atomic 'Gummi Bear' UltraSoft inner seal co-molded with a firmer outer silicone",
+      "Strap": "Squeeze-button buckles, soft-mounted to skirt"
      },
      "pros": [
       "Schott Superwite glass passes up to 96% of available light, so colors read brighter and truer than standard tempered lenses with their green iron cast",
@@ -281,7 +282,8 @@
       "Lens angle": "15° inclined, inverted-teardrop lenses",
       "Downward visibility": "More than 30% over a conventional flat dual-lens mask",
       "Buckles": "Mounted on elastomer tabs, fold through 180°",
-      "Made in": "Italy"
+      "Made in": "Italy",
+      "Strap": "Micrometric swivel buckles on elastomer tabs"
      },
      "colors": [
       "Clear/Blue",
@@ -571,7 +573,8 @@
       "Introduced": "1990",
       "Sizes": "Standard; Mini Frameless for small and narrow faces; Gorilla for wide faces",
       "Buckles": "Mounted on flexible skirt tabs that self-adjust strap angle",
-      "Storage": "Folds flat for a BC pocket; ships with a protective box"
+      "Storage": "Folds flat for a BC pocket; ships with a protective box",
+      "Strap": "Wide headband, buckles on flexible skirt tabs"
      },
      "pros": [
       "The wide rectangular single lens gives strong peripheral vision as well as straight-ahead view — the shape has stayed in production essentially unchanged since 1990",
@@ -624,7 +627,8 @@
       "Fits": "Regular and Medium (narrower faces)",
       "Bridge": "Removable stainless-steel nose bridge holding the lens retainer",
       "Light transmission": "About 98% with UltraClear glass; standard green float glass loses over 14%",
-      "ARC version": "Optional anti-reflective lens coating (SubFrame ARC)"
+      "ARC version": "Optional anti-reflective lens coating (SubFrame ARC)",
+      "Strap": "Buckles on flexible skirt tabs"
      },
      "pros": [
       "The rigid frame is molded beneath the silicone skirt instead of clipped around it, so there is no external plastic to crack in a dive bag — Atomic warrants the frame against breakage for life",
@@ -743,7 +747,9 @@
       "Lens tints": "Clear or Amber (amber cuts shallow-water glare, warms reds at depth)",
       "Strap": "X-shaped silicone strap spreading load across the back of the head",
       "Pressure zones": "Micromask pressure-reduction zones molded into the skirt",
-      "Fit": "One size, cut for medium-to-large faces"
+      "Fit": "One size, cut for medium-to-large faces",
+      "Frame": "Frameless",
+      "Rx lenses": "Yes, custom lenses via specialists"
      },
      "image": "assets/gear/studio/aqua-lung-plazma.jpg",
      "pros": [
@@ -801,7 +807,10 @@
       "Lens": "Two tempered-glass lenses; mirrored HD lenses on the Calibro SF variant",
       "Finish": "Matte coating on all components to prevent reflections",
       "Made in": "Italy",
-      "Includes": "Rigid protective mask box"
+      "Includes": "Rigid protective mask box",
+      "Frame": "Integrated Dual Frame (patented)",
+      "Strap": "Buckles integrated into skirt, flexible mounts",
+      "Rx lenses": "Yes, custom lenses via specialists"
      },
      "image": "assets/gear/studio/cressi-calibro.jpg",
      "pros": [
@@ -847,13 +856,15 @@
      "review": "The Maxlux S is Beuchat's frameless single-lens mask, with the silicone skirt molded straight onto the tempered glass. That construction gets internal volume down to 127 cm3 — 10 cm3 under the standard Maxlux — and weight to 185 g, so it clears on a short exhale and folds flat in a BC pocket. The hypoallergenic skirt is unusually soft and does the sealing work itself, which means you can dive it with a loose strap. The number to check is the 120 mm skirt width: it fits narrow faces well and wide faces poorly. The single lens gives a bright, close view of the reef in front of you, though the horizontal spread is tighter than twin-lens designs. The micrometric buckles adjust in fine steps but their latches want two hands once you are in thick gloves. At roughly $44-58 from Diveinn and scuba.com, it is one of the cheapest ways into a genuinely low-volume mask.",
      "specs": {
       "Type": "Frameless, single lens",
-      "Internal volume": "127 cm3",
+      "Volume": "127 cm3",
       "Lens": "Tempered glass",
       "Skirt": "Soft silicone molded to the lens",
       "Fit": "Narrow to medium faces",
       "Buckles": "Skirt-mounted, fold-flat for packing",
       "Weight": "185 g",
-      "Skirt width": "120 mm"
+      "Skirt width": "120 mm",
+      "Frame": "Frameless, skirt molded onto lens",
+      "Strap": "Micrometric adjustable buckles"
      },
      "image": "assets/gear/studio/beuchat-maxlux-s.jpg",
      "pros": [
@@ -920,7 +931,10 @@
       "Included": "Spare neoprene strap, rigid case with clip",
       "Weight": "160 g",
       "Lens thickness": "4 mm tempered glass with anti-scratch coating",
-      "Lens versions": "Pure Clear (low-iron) or UV Cut (blue-light filtering)"
+      "Lens versions": "Pure Clear (low-iron) or UV Cut (blue-light filtering)",
+      "Frame": "Frameless",
+      "Strap": "Silicone strap, quick-release buckles; neoprene spare",
+      "Rx lenses": "Yes, custom lenses via specialists"
      },
      "image": "assets/gear/studio/apeks-vx1.jpg",
      "pros": [
@@ -972,11 +986,12 @@
       "Lenses": "CrystalView tempered glass, UV 420 + anti-reflective coating",
       "Skirt": "Freedom Fit II silicone with ridged seal zones",
       "Strap": "Five-position quick-adjust buckles",
-      "Prescription ready": "Yes, corrective lenses -1.0 to -8.0",
+      "Rx lenses": "Yes, corrective lenses -1.0 to -8.0",
       "Weight": "245 g",
-      "Internal volume": "215 cm3",
+      "Volume": "215 cm3",
       "Frame dimensions": "88 mm x 169 mm",
-      "UV protection": "UV 420 lens treatment against UV and high-energy visible light"
+      "UV protection": "UV 420 lens treatment against UV and high-energy visible light",
+      "Lens": "Twin CrystalView glass, UV 420, AR coated"
      },
      "image": "assets/gear/studio/tusa-paragon.jpg",
      "pros": [
@@ -1031,8 +1046,10 @@
       "Frame": "Rigid low-profile frame",
       "Buckles": "Quick-adjust swivel buckles",
       "Strap": "Wide split-style silicone strap",
-      "Prescription lenses": "Optional corrective lenses, sold separately",
-      "Included": "Protective mask box"
+      "Rx lenses": "Optional corrective lenses, sold separately",
+      "Included": "Protective mask box",
+      "Lens": "Twin low-iron tempered glass",
+      "Volume": "Low"
      },
      "image": "assets/gear/studio/hollis-m3.jpg",
      "pros": [
@@ -1090,7 +1107,7 @@
      "review": "The Avanti Quattro+ has been the default paddle fin on dive boats for two decades, and the design explains why. Four longitudinal channels flex into a scoop mid-stroke, holding water on a blade with roughly 780 cm2 of thrust area, so it rewards a steady cadence rather than a sprint kick. Blade lengths run 33-39 cm across four sizes and a size-R fin weighs about 0.9 kg, which packs into a checked bag without argument. The Hi-Flex blade compound handles flutter, frog and scissor kicks without technique changes. Bungee straps are now standard, retiring the buckle strap that was the weak point of earlier versions. It is not the fin for ripping drift dives, since strong legs outkick the blade, and the foot pocket has no drainage, so buy it snug.",
      "specs": {
       "Style": "Paddle",
-      "Foot": "Open heel",
+      "Foot pocket": "Open heel",
       "Material": "Tecralene techno-polymer",
       "Strap": "Bungee",
       "Weight/fin": "~0.9kg (R)",
@@ -1146,7 +1163,7 @@
      "review": "The Seawing Nova's defining feature is a hinge: the wing-shaped Monprene blade pivots on an articulated joint to hold roughly a 45-degree angle of attack regardless of how hard you kick, so cruising costs measurably less effort than a fixed paddle. The current generation molds the top of that joint solid after the first version's cracking problem, and the single-material construction leaves no bonded seams to fail. The footplate runs the full length of the heel with co-molded TPV grip pads, so standing on a wet ladder in full kit is less of a gamble. Bungee straps with an oversized finger loop make donning one-handed. Frog and back kicks work but feel vaguer than on a stiff paddle, which is why the stiffer Gorilla variant exists. Kicking harder past the design cadence buys little extra speed; this is a cruising fin, not a sprint fin. Sizes run XS-XL.",
      "specs": {
       "Style": "Hinged paddle",
-      "Foot": "Open heel or full foot",
+      "Foot pocket": "Open heel or full foot",
       "Material": "Monprene",
       "Strap": "Bungee",
       "Weight/fin": "~0.8kg (L)",
@@ -1203,7 +1220,7 @@
      "review": "The Jet Fin is a mid-1960s design Scubapro still sells essentially unchanged, because for one job nothing has displaced it. The short, stiff vented blade sheds water on the recovery stroke and loads up on the power stroke, which keeps frog kicks, back kicks and helicopter turns precise; that is why it remains standard kit with technical and public-safety divers. Each fin runs about -0.27 kg in fresh water in size XL, which pulls the floaty boots of a drysuit diver into flat trim. Stainless spring straps come standard and go on with thick gloves. The trade-offs are unambiguous: around 1.5 kg per fin is real luggage weight, the negative buoyancy sinks feet in a 3 mm tropical rig, and a long straight flutter kick will remind the legs how stiff the blade is. Sizes run M to 3XL and the foot pocket assumes boots. Buy it for cold water and precision, not for travel.",
      "specs": {
       "Style": "Vented paddle",
-      "Foot": "Open heel",
+      "Foot pocket": "Open heel",
       "Material": "Rubber",
       "Strap": "Spring or buckle",
       "Weight/fin": "~1.3kg (L)",
@@ -1263,7 +1280,7 @@
      "review": "The RK3 is Apeks's take on the military-issue vented rubber fin, and its brief is control in bad places rather than speed. The blade is short and wide, 49 cm in Medium up to 57 cm in Super, so it pivots in confined wreck spaces and holds a back kick without stirring the bottom. The standard thermoplastic compound floats slightly, which suits wetsuit divers; the higher-density RK3 HD flips negative for drysuit trim with the same geometry. The oversized foot pocket is cut for drysuit boots, and the spring straps mount on 316 stainless pin-and-nut hardware that replaces in the field with basic tools. Four sizes with no half steps means fit gets managed with boot thickness. The cost of the short blade is straight-line speed, and the flexible standard compound softens further when kicking hard against current.",
      "specs": {
       "Style": "Vented paddle",
-      "Foot": "Open heel",
+      "Foot pocket": "Open heel",
       "Material": "Thermoplastic rubber",
       "Strap": "Spring",
       "Weight/fin": "~1.0kg (M)",
@@ -1318,7 +1335,7 @@
      "review": "The Switch is TUSA's answer to the travel-fin problem: instead of shrinking the blade, it unbolts it. Two stainless screws with O-ring washers and an interlocking tab join the blade to the foot pocket, and with the blades off the whole kit packs to about 41 cm. Assembled, it dives like a conventional paddle — the polyurethane PuRiMaX blade snaps back faster than the soft EVA used in most compact fins, and molded vortex vents reduce drag on the upstroke. Divers report clean turning and backfinning and no cramping after repeated full-power finning against current, and ScubaBoard posters note that once bolted together you cannot tell the fin separates. The catch is mass: at roughly 1.8-2.0 kg per pair, the Switch saves volume rather than grams. Sizing is also coarse, four pockets covering EU 34-50 with everything above 44 lumped into one L/XL. If the joint bothers you, it is a reason to walk away; if it does not, this is one of the few travel fins that gives up nothing in the water. Divers wanting a harder kick can step up to the Switch Pro, whose blade compound is 20% stiffer.",
      "specs": {
       "Style": "Paddle",
-      "Foot": "Open heel",
+      "Foot pocket": "Open heel",
       "Material": "Polyurethane blade",
       "Strap": "Bungee",
       "Weight/fin": "~0.9kg (M)",
@@ -1375,7 +1392,7 @@
      "review": "The Go Sport is the boot-fit sibling of Scubapro's Go Travel, scaled up so a drysuit boot fits where the original only took bare feet. The whole fin is a single molding of Monprene, a thermoplastic elastomer with no laminated joints to peel apart, and Scubapro leans on that for its durability claim rather than marketing gloss. The blade is pre-angled 25° with a central power panel that stiffens it lengthwise and channels water off the tip; in pool testing it out-pulled larger fins for the effort spent. In size M each fin weighs about 0.7 kg and measures roughly 51 cm, so a pair packs inside IATA carry-on limits — rare for a fin that takes cold-water boots. Removable skegs bolt onto the blade to cut sideslip for divers who want more tracking. The honest weakness is stiffness: against a strong current the blade folds earlier than a full-size paddle, and the fix is buying the stiffer Gorilla variant instead. Fit discipline matters too, because the pocket is cut for a boot and swims on a thin sock. As a one-fin quiver for both tropical trips and temperate shore dives, little else covers the same range.",
      "specs": {
       "Style": "Paddle",
-      "Foot": "Open heel",
+      "Foot pocket": "Open heel",
       "Material": "Monprene",
       "Strap": "Bungee",
       "Weight/fin": "~0.7kg (M)",
@@ -1433,7 +1450,7 @@
      "review": "Atomic's SplitFin is the remaining serious argument for the split-blade concept: two flexible surfaces that twist into shallow propeller blades on each kick stroke. The point is efficiency, not power — a narrow, quick flutter kick holds cruising speed with noticeably less leg effort, which is why long-time owners talk about air consumption and the absence of calf cramps rather than sprint speed. Atomic controls the blade's flex with stiff battens and semi-rigid side rails, so the fin resists the total fold-up that gave split fins a bad name. The EZ-LOK buckles release with a single click and hold their adjustment between dives. The design's limits are real and well documented on ScubaBoard: frog kicks force a wait while the blade snaps back, reverse kicks go nowhere, and the fin has a hard ceiling on top speed no matter how hard you kick, which counts against it in strong current. At about 71 cm in size M it is also long for luggage, and the foot pocket runs narrow. Two compounds are offered — the standard power compound and a lighter high-energy version — with a one-year warranty on either. Buy it for relaxed reef and drift diving; buy a paddle for wrecks and current.",
      "specs": {
       "Style": "Split",
-      "Foot": "Open heel or full foot",
+      "Foot pocket": "Open heel or full foot",
       "Material": "Composite polymer",
       "Strap": "Spring or buckle",
       "Weight/fin": "~1.0kg (L)",
@@ -1492,7 +1509,7 @@
      "review": "The Frog Plus is Cressi's long-running budget open-heel fin, made in Italy by three-material injection molding: rubber over the foot pocket and side rails, a dual-density polymer blade, and softer channels that cup water down the centerline. Its one genuinely clever trick is geometry — the foot pocket sits under the blade instead of behind it, which adds about 20% working surface without making the fin longer, and keeps per-fin weight between 680 g and roughly 900 g depending on size. In the water it is a well-mannered mid-power paddle: comfortable pocket, predictable tracking, a grippy non-slip sole for boat decks, and enough thrust for ordinary reef diving. Push it hard, though, and the blade bends past its efficient curve and the thrust goes soft, so holding ground in a stiff current means fast kicking and tired ankles. The strap system is the other long-term annoyance — the buckle twist-locks into a socket in the fin body rather than onto a stud, so generic spring straps do not fit and Cressi's own replacements are chronically out of stock; buying the EBS bungee version up front sidesteps the problem. For divers who want a durable, packable fin at a fraction of premium money and do not dive heavy current, the trade is fair.",
      "specs": {
       "Style": "Paddle",
-      "Foot": "Open heel",
+      "Foot pocket": "Open heel",
       "Material": "3-material polymer",
       "Strap": "Buckle (bungee opt.)",
       "Weight/fin": "~0.9kg (M/L)",
@@ -1549,7 +1566,7 @@
      "review": "Aqua Lung molds the Storm from a single piece of Monprene TPV, which removes the bonded joints where cheap travel fins usually fail and shrugs off UV and cracking. An L/XL pair weighs about 1.4 kg and measures 56 cm end to end, so it stows flat in a carry-on with room left for a regulator. The open-heel pocket is cut for bare feet or thin neoprene socks - it fits like a full-foot fin but dons like an open-heel, with a fixed silicone bungee and heel pad instead of buckles. The blade is short and wide and behaves more like a channel fin than its paddle shape suggests; at cruising pace it is efficient, but in real current the short length forces a faster cadence than a full-size paddle. That makes it a boat and warm-water fin, not a cold-shore workhorse. Five sizes run 2XS to 2XL. At roughly $65 the compromise you accept is thrust ceiling, not build quality.",
      "specs": {
       "Style": "Paddle",
-      "Foot": "Open heel",
+      "Foot pocket": "Open heel",
       "Material": "Monprene",
       "Strap": "Bungee",
       "Weight/fin": "~0.7kg (L/XL)",
@@ -1607,7 +1624,7 @@
      "review": "The Power Plana LT takes the XR-Tech blade geometry of Mares' rubber tec fin and remolds it in TPV, dropping per-fin weight to 0.9-1.2 kg across the XS-XL run, with overall length between 51 and 56 cm. The result is slightly positive in the water, which suits wetsuit and travel divers and is precisely wrong for drysuit divers fighting floaty feet - they should stay with the rubber Power Plana. Test divers rate it smooth across flutter, frog and back kicks, with the stable blade profile holding a frog-kick glide without wobble. The blade runs directly into the foot pocket with no gap to snag a line, and the spring straps mount in multiple positions with a loop big enough for 5 mm gloves. The honest limit is output: the soft TPV works best at a relaxed cadence, and sprinting into current it folds earlier than the rubber version. At $217.95 MSRP it costs more than many all-rubber tec fins. As a travel-weight fin that still frog-kicks like a tec blade, it has few direct rivals.",
      "specs": {
       "Style": "Vented paddle",
-      "Foot": "Open heel",
+      "Foot pocket": "Open heel",
       "Material": "TPV compound",
       "Strap": "Spring",
       "Weight/fin": "~1.1kg (R)",
@@ -1658,14 +1675,17 @@
      ],
      "review": "The Powerjet is Beuchat's adjustable-heel paddle, built from three compounds with lateral ribs molded into a flexible frame so the 39 cm blade loads and releases like a spring on each kick. Beuchat sells it in two stiffness builds, Regular Flex and Powerful Flex. At 1,020 g per fin it sits mid-pack, heavier than TPV travel fins but lighter than classic all-rubber jets. Stainless spring straps come standard rather than as an upgrade, which is not a given at this price. Divers prone to calf cramps report the Regular Flex delivers usable thrust without the leg load of a stiff tec blade, and owners describe it as neither too stiff nor too flexible. The catch is distribution: North American dealers are thin, forum coverage is sparse, and spares are easier to source for Scubapro or Mares. Sizes run S to XL. For divers who want a spring-loaded paddle without a rubber fin's weight, it is a quiet, sensible pick.",
      "specs": {
-      "Type": "Open heel, adjustable strap",
+      "Style": "Open heel, adjustable strap",
       "Construction": "Tri-material blade and pocket",
-      "Weight": "About 1020 g per fin",
+      "Weight/fin": "About 1020 g per fin",
       "Stiffness options": "Regular Flex or Firm Flex",
       "Blade": "Spring-effect side rails, flexible spoon tip",
       "Straps": "Quick-adjust buckles; spring straps available",
       "Sizes": "S, M, L, XL",
-      "Blade length": "39 cm"
+      "Blade length": "39 cm",
+      "Foot pocket": "Open heel",
+      "Material": "Tri-material construction",
+      "Strap": "Detachable rotating buckles"
      },
      "image": "assets/gear/studio/beuchat-powerjet.jpg",
      "pros": [
@@ -1714,9 +1734,10 @@
       "Material": "Monprene elastomer, three-compound moulding",
       "Strap": "Heavy-duty bungee with pull loop",
       "Sizes": "XS to XL",
-      "Weight": "1.67 kg per pair (manufacturer figure)",
+      "Weight/fin": "1.67 kg per pair (manufacturer figure)",
       "Angle of attack": "40-50 degrees, held by Pivot Control hinges",
-      "Replacement blades": "Midi and Maxi sizes, sold separately"
+      "Replacement blades": "Midi and Maxi sizes, sold separately",
+      "Foot pocket": "Open heel, Socket-Lock modular pocket"
      },
      "image": "assets/gear/studio/scubapro-seawing-supernova.jpg",
      "pros": [
@@ -1765,8 +1786,10 @@
       "Straps": "Stainless steel spring straps included",
       "Foot pocket": "Oversized, fits rock boots and drysuit boots",
       "Sizes": "S to XXL",
-      "Weight": "1.47 kg per fin (size Regular)",
-      "Warranty": "2-year limited"
+      "Weight/fin": "1.47 kg per fin (size Regular)",
+      "Warranty": "2-year limited",
+      "Style": "Vented blade",
+      "Strap": "Spring heel straps"
      },
      "image": "assets/gear/studio/hollis-f1-bat-fin.jpg",
      "pros": [
@@ -1831,7 +1854,8 @@
       "2nd stage weight": "179 g without mouthpiece",
       "Airflow": ">8,500 l/min at 200 bar",
       "Intermediate pressure": "9.0-9.8 bar",
-      "Warranty": "Limited lifetime"
+      "Warranty": "Limited lifetime",
+      "Weight": "913 g (32.2 oz)"
      },
      "pros": [
       "The air-balanced flow-through piston moves more than 8,500 l/min at 200 bar, so delivery stays flat whether the tank reads 200 bar or 50.",
@@ -2035,7 +2059,8 @@
       "Weight (DIN 300)": "665 g (yoke version 885 g)",
       "Airflow at 200 bar": ">8,500 l/min",
       "Intermediate pressure": "9.2-9.8 bar",
-      "Warranty": "Scubapro limited lifetime"
+      "Warranty": "Scubapro limited lifetime",
+      "Weight": "665 g (DIN 1st) + 244 g (2nd)"
      },
      "pros": [
       "Dry-sealed MK19 EVO diaphragm first stage puts four high-flow LP ports on a swivel turret plus a fifth axial super-high-flow port, so long-hose, doubles and sidemount routings all lie flat",
@@ -2139,7 +2164,7 @@
       "Second stage body": "Pneumatically balanced, PVD-coated metal",
       "Hose": "Superflex high-flow, 75 cm",
       "Adjustments": "Cracking-effort knob + Twin Power VAD switch",
-      "First stage weight": "790 g DIN / 964 g yoke (second stage 329 g)"
+      "1st stage weight": "790 g DIN / 964 g yoke (second stage 329 g)"
      },
      "pros": [
       "82X first stage puts five LP ports on a 360-degree swivel turret with improved flow to every port, so rearranging hoses does not change breathing effort",
@@ -2236,11 +2261,12 @@
       "Cold water": "Yes (sealed, Supreme)",
       "Ports": "2 HP / 4 MP",
       "Nitrox": "40% out of box",
-      "First-stage weight": "510 g (DIN), 700 g (yoke)",
+      "1st stage weight": "510 g (DIN), 700 g (yoke)",
       "Max cylinder pressure": "232 bar yoke, 300 bar DIN",
       "Mouthpiece": "Comfo-bite with reusable clamp",
       "Auto Closure Device": "Yes — inlet self-seals when the first stage is depressurised",
-      "Service interval": "Annual inspection, overhaul every 2 years or 100 dives (warranty condition)"
+      "Service interval": "Annual inspection, overhaul every 2 years or 100 dives (warranty condition)",
+      "Weight": "510 g (DIN 1st) + 178 g (2nd)"
      },
      "pros": [
       "The Auto Closure Device seals the first-stage inlet the moment it comes off the tank, so a forgotten dust cap or a rinse-tank dunk doesn't put water in the internals",
@@ -2335,8 +2361,8 @@
      ],
      "review": "The VR 300 is Beuchat's top regulator, and unusually for the price bracket it is made entirely in the company's Marseille factory, with each unit adjusted individually on a hyperbaric test bench before shipping. The first stage is an over-balanced diaphragm design in bright chrome with Beuchat's cold-water system, so delivered pressure rises with depth instead of merely holding steady — useful insurance below 30 m in cold water. Port count is the standard serious layout: 2 HP and 4 MP, with a polyurethane MP hose to the second stage. That second stage is balanced, carries a venturi control, and wears a soft cover with a large dump zone for the exhaust. There is no inhalation-effort knob, so tuning beyond the venturi lever is a bench job. The DIN 300 bar version weighs 1020 g and the yoke 1173 g, which is heavier than travel-oriented rivals. Certification is EN 250:2014, and full sets run around 555 EUR in European shops. The catch for buyers outside Europe is logistics: Beuchat scuba gear has few North American dealers, so parts and annual service usually mean a European mail-order shop.",
      "specs": {
-      "First stage": "Balanced diaphragm, chrome-plated brass",
-      "Second stage": "Pneumatically balanced, adjustable Venturi",
+      "1st stage": "Balanced diaphragm, chrome-plated brass",
+      "2nd stage": "Pneumatically balanced, adjustable Venturi",
       "Ports": "2 HP, 4 MP",
       "Connection": "DIN 300 bar or yoke 232 bar",
       "Cold water": "Anti-icing design for water below 10 degrees C",
@@ -2344,7 +2370,8 @@
       "Weight": "1020 g (DIN 300 bar), 1173 g (yoke)",
       "MP hose": "Polyurethane",
       "Standard": "EN 250:2014",
-      "Quality control": "Each unit individually adjusted on a hyperbaric test bench"
+      "Quality control": "Each unit individually adjusted on a hyperbaric test bench",
+      "Nitrox": "Air only per published specs"
      },
      "image": "assets/gear/studio/beuchat-vr-300.jpg",
      "pros": [
@@ -2386,8 +2413,8 @@
      ],
      "review": "The XL4+ is the cold-water regulator Apeks builds for divers who fly to their dives: 905 g in DIN trim, with an environmentally sealed, over-balanced diaphragm first stage in a one-piece forged body. The over-moulded endcap and large heat-exchanger diaphragm clamp exist for one job — keeping ice from forming inside the first stage — and the pneumatically balanced second stage adds its own heat exchanger at the inlet. It ships on a white nylon-braided hose that stays supple in near-freezing water, with a Comfo-Bite mouthpiece and nitrox clearance to 40% O2 out of the box. The compromises are port count and adjustment: 2 HP and 4 MP ports fill quickly once a drysuit hose joins the rig, and the venturi lever is the only diver control — there is no inhalation-effort knob. Service is annual, and the second stage requires model-specific tools, so plan around a proper Apeks dealer rather than any bench. A handful of owners in very cold water have reported free-flows that took repeat service visits to cure, though the design record overall is strong. As a travel regulator that genuinely handles ice water, little else at this weight competes.",
      "specs": {
-      "First stage": "Over-balanced diaphragm, forged body, environmentally sealed",
-      "Second stage": "Pneumatically balanced with integrated venturi lever",
+      "1st stage": "Over-balanced diaphragm, forged body, environmentally sealed",
+      "2nd stage": "Pneumatically balanced with integrated venturi lever",
       "Cold water": "Rated for cold water; second-stage heat exchanger",
       "Ports": "2 HP (7/16\" UNF), 4 MP (3/8\" UNF)",
       "Weight": "905 g (DIN), 1041 g (yoke)",
@@ -2438,8 +2465,8 @@
      ],
      "review": "The B2 pairs Atomic's titanium second stage — the same design and materials as the all-titanium T3 — with a chrome-plated brass and 316 stainless first stage, which is how it gets near-flagship breathing at several hundred dollars under the T3. The seat-saving dynamic orifice keeps the seat off the orifice between dives, which is why Atomic signs off on 2 years or 300 dives between rebuilds. Automatic Flow Control adjusts the venturi as depth changes, so there is no lever to set, and the 5 LP ports ride a swivel cap that takes the fight out of hose routing; yoke weight is 1.13 kg. The catch is the first stage: the standard version is unsealed, and the piston chamber floods with seawater whenever it sits unpressurized — fine for a primary you always keep charged, a real problem on stage bottles unless you pay for the factory-sealed variant. At roughly US$970 in yoke trim, it is priced against other brands' top models. The lifetime warranty is not contingent on annual servicing, which almost no competitor matches.",
      "specs": {
-      "First stage": "Balanced piston, chrome-plated brass; optional factory-sealed",
-      "Second stage": "Pneumatically balanced, titanium components",
+      "1st stage": "Balanced piston, chrome-plated brass; optional factory-sealed",
+      "2nd stage": "Pneumatically balanced, titanium components",
       "Venturi": "Automatic Flow Control, depth-compensating",
       "Seat": "Seat-saving dynamic orifice",
       "Nitrox": "Up to 40% out of the box",
@@ -2449,7 +2476,8 @@
       "Ports": "2 HP fixed, 5 LP on swivel cap",
       "First stage materials": "Chrome-plated marine brass with 316 stainless steel components",
       "Environmental sealing": "Unsealed standard; factory-sealed version optional",
-      "Warranty": "Limited lifetime for the original owner, not contingent on annual service"
+      "Warranty": "Limited lifetime for the original owner, not contingent on annual service",
+      "Cold water": "Yes with optional factory-sealed 1st stage"
      },
      "image": "assets/gear/studio/atomic-aquatics-b2.jpg",
      "pros": [
@@ -2493,18 +2521,19 @@
      ],
      "review": "The F8 is the regulator Zeagle rebuilt from 20 accumulated design changes, and it shows most in the service ledger: a seat-saver orifice gives it a 2-year or 200-dive rebuild interval, and the second-stage service kits interchange with Atomic's, so any Atomic dealer can work on it. The balanced-diaphragm first stage uses a dry-sealed spring chamber to keep water and silt out, wears black chrome over brass, and carries 2 HP and 5 LP ports — four angled to the sides, the fifth aimed straight at the diver for sidemount or pony routing. The 227 g pneumatically balanced second stage has both a venturi switch and an inhalation-effort knob that work through 5 mm gloves. Long-term owners report unchanged breathing effort past 1,000 hours, and it is regularly compared to regulators several hundred dollars up the shelf. There is no swivel turret, so hose routing is fixed, and Zeagle's dealer network is thinner than the big brands', which matters when service is due. The warranty also still asks for an annual inspection even in the no-rebuild year.",
      "specs": {
-      "First stage": "Balanced diaphragm, environmentally dry-sealed",
-      "Second stage": "Pneumatically balanced",
+      "1st stage": "Balanced diaphragm, environmentally dry-sealed",
+      "2nd stage": "Pneumatically balanced",
       "Ports": "5 low-pressure, 2 high-pressure",
       "Adjustment": "Diver-adjustable venturi lever",
       "Hose": "Braided flex hose",
       "Connection": "Yoke or DIN 232 bar versions",
-      "Cold water rated": "Yes",
-      "Second stage weight": "227 g",
+      "Cold water": "Yes",
+      "2nd stage weight": "227 g",
       "Nitrox": "Up to 40% O2 out of the box, 241 bar maximum",
       "Service interval": "2 years or 200 dives, with annual inspection",
       "Warranty": "Limited lifetime (original owner); hoses, O-rings, diaphragms and mouthpieces 2 years",
-      "First stage finish": "Black chrome plating over brass"
+      "First stage finish": "Black chrome plating over brass",
+      "Weight": "1.18 kg (2.6 lb) dry"
      },
      "image": "assets/gear/studio/zeagle-f8.jpg",
      "pros": [
@@ -2567,15 +2596,16 @@
      "review": "The Hydros Pro replaces the usual Cordura-and-foam construction with injection-molded Monprene gel, and the difference is practical rather than cosmetic: nothing soaks up water, so the rig drips dry in minutes and loses no weight allowance to trapped moisture. The tri-bungee back bladder stays compressed at depth and opens up to between 15.9 and 18.1 kg of lift depending on size. The whole BCD is a kit of parts - weight systems, straps and pouches all detach. Dry weight is 3.9 to 4.1 kg, so it is portable rather than genuinely light. The weaknesses are specific: trim-pocket clip fabric frays early on some units, the roomy weight pouches let lead migrate, and getting a dropped pouch back in underwater is a two-handed job. It suits divers who want one adaptable harness for warm and temperate water and are willing to pay Scubapro's premium for it.",
      "specs": {
       "Style": "Back-inflate",
-      "Lift (M)": "~16.3kg / 36lb",
+      "Lift": "~16.3kg / 36lb",
       "Weight": "~3.9kg (M)",
-      "Wt-integrated": "Yes",
+      "Weight system": "Yes",
       "Material": "Monprene gel + nylon",
       "Travel": "Good",
       "Lift range": "15.9-18.1 kg depending on size",
       "Dry weight": "3.9-4.1 kg by size",
       "Harness": "Injection-molded Monprene gel, no absorbent fabric",
-      "Air cell": "Tri-bungee compressed bladder"
+      "Air cell": "Tri-bungee compressed bladder",
+      "Sizes": "S to XL/2XL (men's)"
      },
      "pros": [
       "The Monprene gel harness molds to the torso and carries no absorbent fabric, so the rig is nearly dry by the time you reach the rinse tank",
@@ -2626,16 +2656,17 @@
      "review": "The Outlaw is Aqua Lung's argument that most of a BCD can be deleted. What remains weighs 1.8 kg: a bare back-inflate harness with interchangeable 5 L or 11 L bladders and ModLock connectors that click apart with a pen tip, giving 27 size combinations from stock modules. Zero inherent buoyancy means no wasted lead offsetting padding that is not there. The economy is honest but real - integrated weights are SureLock II pockets bought separately, and storage amounts to roughly 20 webbing loops and a plastic carabiner rather than pockets or steel D-rings. There is also no right-shoulder exhaust, so venting habits from conventional jackets need adjusting. For warm-water travel with a light lead requirement it is hard to pack smaller; for divers who want cargo capacity or familiar hardware it will feel like a kit car sold without seats.",
      "specs": {
       "Style": "Back-inflate",
-      "Lift (M)": "~11.3kg / 25lb wing",
+      "Lift": "~11.3kg / 25lb wing",
       "Weight": "~1.8kg",
-      "Wt-integrated": "Optional",
+      "Weight system": "Optional",
       "Material": "Nylon bladder + webbing",
       "Travel": "Excellent",
       "Dry weight": "1.8 kg",
       "Bladder options": "5 L (5.4 kg lift) and 11 L (11.3 kg lift), interchangeable",
       "Size combinations": "27 via ModLock shoulder/back/waist modules",
       "Inherent buoyancy": "Zero",
-      "Weight integration": "SureLock II pockets sold separately (about $73 per pocket)"
+      "Weight integration": "SureLock II pockets sold separately (about $73 per pocket)",
+      "Sizes": "S, M, L (27 fit configurations)"
      },
      "pros": [
       "At 1.8 kg it is among the lightest full BCDs sold, and the harness has zero inherent buoyancy so you carry less lead",
@@ -2678,16 +2709,17 @@
      "review": "The Travelight's pitch is arithmetic: 2.5 kg in size M, folding into a 36 x 25 x 15 cm bag, while keeping eight D-rings, usable zip pockets and a full integrated-weight setup of two 4.5 kg quick-release pouches plus two 2.5 kg trim pockets. The 210-denier nylon body with a 420-denier bladder is how the weight was cut, and the trade shows with hard use - divers logging triple-digit annual dives report visible wear within a few seasons. Lift is the other compromise, running roughly a size behind the market at 6 to 16.3 kg across the range, which rules out cold-water steel-tank diving. The chest strap draws recurring fit complaints. Within its actual brief - warm-water trips on airline weight budgets - it gives up less than almost anything else this light. Buy it as a second, travelling BCD rather than an only one.",
      "specs": {
       "Style": "Jacket",
-      "Lift (M)": "~9kg / 20lb",
+      "Lift": "~9kg / 20lb",
       "Weight": "~2.5kg (M)",
-      "Wt-integrated": "Yes",
+      "Weight system": "Yes",
       "Material": "210D nylon",
       "Travel": "Excellent",
       "Packed size": "36 x 25 x 15 cm in its supplied carry bag",
       "Weight pockets": "2 x 4.5 kg quick-release plus 2 x 2.5 kg rear trim",
       "D-rings": "8",
       "Fabric": "210-denier nylon body, 420-denier bladder",
-      "Lift range": "6-16.3 kg by size"
+      "Lift range": "6-16.3 kg by size",
+      "Sizes": "XS to XL"
      },
      "colors": [
       "Black/Blue"
@@ -2729,15 +2761,15 @@
      "review": "The Dragon SLS is built around comfort at the expense of packability. Its trick is a bladder that inflates away from the shoulder harness, so buoyancy at the surface arrives without the chest squeeze conventional jackets produce. The SLS weight system uses a mechanical slide-and-lock with a green window that confirms each pouch is seated - a genuine reassurance, since half-clipped weight pouches are how lead gets lost. Cordura 420 construction and thick shoulder and lumbar padding make it a workhorse for boat seasons and training platforms. The costs are equally concrete: 4.5 kg dry in Large, pocket handles that stand proud of the jacket, and a proprietary inflator that ties servicing to Mares parts. Lift spans 130 N in XS to 230 N in XL, enough for temperate single-tank diving. Choose it for local diving comfort, not for the luggage scale.",
      "specs": {
       "Style": "Jacket",
-      "Lift (M)": "~15.4kg / 34lb",
+      "Lift": "~15.4kg / 34lb",
       "Weight": "~4.2kg (M)",
-      "Wt-integrated": "Yes, SLS",
+      "Weight system": "SLS slide-and-lock with green/red visual lock indicator",
       "Material": "420D Cordura",
       "Travel": "Heavy",
       "Lift range": "130 N (XS) to 230 N (XL)",
       "Dry weight": "4.5 kg (L)",
-      "Weight system": "SLS slide-and-lock with green/red visual lock indicator",
-      "Fabric": "Cordura 420"
+      "Fabric": "Cordura 420",
+      "Sizes": "XS to XL"
      },
      "pros": [
       "The air cell separates from the shoulder harness as it inflates, so a full bladder does not squeeze the diver",
@@ -2780,16 +2812,17 @@
      "review": "The Ranger is the back-inflate that much of the industry copied, and the current version still leads with its two defining features: 1050-denier ballistic nylon construction and the Ripcord weight system. One pull releases up to 16.3 kg of lead from both sides simultaneously with one hand, and a stopper limits cord travel to about 25 cm so it cannot work loose by accident. The penalty is symmetrical - everything drops at once, and rethreading the cord takes a few patient minutes before you can dive again. With 20 kg of lift and a modular harness whose shoulder and waist sections size independently, it fits cold-water and heavily-equipped divers that travel rigs refuse. It is made in the USA. At 3.8 kg dry and distinctly bulky, it is local-diving equipment; pack something else for the airport.",
      "specs": {
       "Style": "Back-inflate",
-      "Lift (M)": "20kg / 44lb (all sizes)",
+      "Lift": "20kg / 44lb (all sizes)",
       "Weight": "~3.8kg",
-      "Wt-integrated": "Yes, Ripcord",
+      "Weight system": "Yes, Ripcord",
       "Material": "1050D ballistic nylon",
       "Travel": "Heavy",
       "Ditchable ballast": "Up to 16.3 kg (36 lb) via single-pull Ripcord",
       "Dry weight": "3.8 kg",
       "Manufacture": "Made in the USA",
       "Custom program": "Factory-order panel colors and per-section sizing",
-      "Ripcord travel": "Cord stops after about 25 cm of pull"
+      "Ripcord travel": "Cord stops after about 25 cm of pull",
+      "Sizes": "XS to 3XL (XXL up custom)"
      },
      "pros": [
       "The Ripcord releases all ditchable lead from both sides with one hand, and the cord physically cannot fall out on its own",
@@ -2838,16 +2871,17 @@
      "review": "The Level is Scubapro's mid-priced jacket, and its spec sheet reads like a checklist of what divers actually ask for: two 5 kg quick-release weight pouches with flat 40 mm buckles, two 2 kg trim pockets as standard, twin octo pockets, and four stainless D-rings. The bladder is EndurTex 420 high-tenacity nylon, and dry weight holds to 3.2 kg in Medium - light enough to fly with, though it makes no folding-travel claims. The Super Cinch tank band tensions in a single motion; keep fingers clear of the buckle as it closes. Lift runs 10.2 to 17.3 kg from XS to XL, so smaller sizes are best kept to warm water and aluminium cylinders. It lacks the modularity and gel harness of the Hydros Pro above it in the range. As an unglamorous first-owned BCD that skips no essential feature, it is one of the easier recommendations in the lineup.",
      "specs": {
       "Style": "Jacket",
-      "Lift (M)": "~10.2kg / 22.5lb",
+      "Lift": "~10.2kg / 22.5lb",
       "Weight": "~3.2kg (M)",
-      "Wt-integrated": "Yes",
+      "Weight system": "Yes",
       "Material": "420D EndurTex nylon",
       "Travel": "Good",
       "Lift range": "10.2-17.3 kg (XS-XL)",
       "Dry weight": "3.2 kg (M)",
       "Weight pockets": "2 x 5 kg quick-release plus 2 x 2 kg trim",
       "Bladder fabric": "EndurTex high-tenacity 420 nylon",
-      "Tank band": "Super Cinch single-motion buckle"
+      "Tank band": "Super Cinch single-motion buckle",
+      "Sizes": "XS to XL"
      },
      "pros": [
       "3.2 kg in size M is light for a fully-featured front-adjustable jacket",
@@ -2889,9 +2923,9 @@
      "review": "The Pro HD is the definition of a first BCD: a wrap-around, weight-integrated jacket in six sizes, priced low and built from ResisteK fabric that tolerates salt and chlorinated pools without fading or delaminating. The SureLock II weight system is the standout feature at the price - pouches click audibly into place and release with one mechanical pull. The compromises are typical of the class. It is bulky in a dive bag, the padding holds water, and the jacket itself is positively buoyant, so you carry extra lead to sink it. Hardware economy shows in the details: no D-rings on the shoulder straps, and a threaded plastic tank buckle where dearer BCDs fit cam ratchets or steel. Sizing runs generous - most buyers should size down - and some divers feel the cylinder against the tailbone despite the back pad. As pool-to-ocean training equipment or a keep-it-simple local rig, it earns its reputation; as a travel BCD it does not apply.",
      "specs": {
       "Style": "Jacket",
-      "Lift (M)": "~12.2kg / 27lb",
+      "Lift": "~12.2kg / 27lb",
       "Weight": "~3.5kg (M)",
-      "Wt-integrated": "Yes, SureLock II",
+      "Weight system": "Yes, SureLock II",
       "Material": "ResisteK fabric",
       "Travel": "Heavy",
       "Fabric": "ResisteK salt- and chlorine-resistant material",
@@ -2941,12 +2975,11 @@
      "review": "The Exotec hangs its bladder on a rigid exoskeleton with a BioReact articulating waist joint and swivel shoulder buckles, so the frame flexes at the same points a torso does. In the water that translates to a rig that holds horizontal trim without wrestling, and four low-profile dump valves mean there is always an exhaust at the high point. Everything unbolts: straps, buckles and pads are individually replaceable modules, which reframes the roughly $1,000 price as a long-service investment. It is not without reported faults - some divers describe air trapping in the donut cell and rolling them until they vent, and the lower hook clasp draws durability doubts. At 4.2 to 4.4 kg dry and with only three crossover sizes, it is neither a travel rig nor a precise fit for every body. Divers who log heavy local seasons and keep gear for a decade are the intended audience, and for them the engineering case holds together.",
      "specs": {
       "Style": "Back-inflate",
-      "Lift (M)": "~17kg / 38lb (S/M)",
+      "Lift": "170 N (S/M), 220 N (L/XL)",
       "Weight": "~4.2kg (S/M)",
-      "Wt-integrated": "Yes",
+      "Weight system": "Yes",
       "Material": "GripTek + Armourguard",
       "Travel": "Heavy",
-      "Lift": "170 N (S/M), 220 N (L/XL)",
       "Dry weight": "4.2-4.4 kg",
       "Dump valves": "4 low-profile",
       "Sizes": "3 crossover sizes (S/M, M/L, L/XL)",
@@ -2994,16 +3027,17 @@
      "review": "The Zeos 28 is a recreational backplate-and-wing that concedes little to convention. Its 13 kg toroidal wing is double-shelled - Cordura 1100 dTEX outside, a 440 dTEX bladder inside - and shaped so the buoyancy sits directly over the cylinder's gas load, which is why owners talk about trim they stopped thinking about. The wing alone weighs 0.95 kg; the full set lands near 5.5 kg with the 2.06 kg stainless plate or considerably less with aluminium, and choosing between them is choosing between built-in ballast and airline weight. The Deluxe harness softens the technical-diving austerity with quick-release buckles and 3D mesh pads. Nothing is included that you did not order: weight pockets and cargo are add-ons. It is made in Europe and priced honestly for the materials. For divers ready to leave jackets, it is one of the most direct routes.",
      "specs": {
       "Style": "BP/wing",
-      "Lift (M)": "12.7kg / 28lb",
+      "Lift": "12.7kg / 28lb",
       "Weight": "~5.5kg (steel set)",
-      "Wt-integrated": "Optional",
+      "Weight system": "Optional",
       "Material": "Cordura 1100 dtex",
       "Travel": "Good",
       "Wing construction": "Double shell - Cordura 1100 dTEX outer, Nylon 440 dTEX bladder",
       "Wing-only weight": "0.95 kg",
       "Set weight": "About 5.5 kg with steel backplate",
       "Backplate options": "Stainless steel (2.06 kg) or aluminium",
-      "Manufacture": "Made in Europe"
+      "Manufacture": "Made in Europe",
+      "Sizes": "One size, adjustable harness"
      },
      "pros": [
       "The toroidal wing is balanced so the centre of buoyancy sits over the gas load, holding flat trim without constant correction",
@@ -3045,15 +3079,16 @@
      "review": "The LTS answers a narrow question well: how much wing can 2.3 kg buy. The answer is 13.6 kg of lift in a 1000-denier nylon shell with a 420-denier laminated bladder - fabric weights borrowed from heavy-duty BCDs rather than the thin cloth most travel rigs use. Integrated weight pockets carry 2.3 kg per side and open from the top with a zip, so routine unloading never touches the emergency Velcro dump. Chest and hip D-rings take accessories or a sling bottle, and the fixed, non-modular layout means there is nothing to configure at the dive site. The limits are equally plain: 4.6 kg of total ditchable lead confines it to warm water or thin suits, and there is no crotch strap, which divers coming from technical harnesses list as their first modification wish. As a fly-away wing for aluminium-tank destinations, it is one of the most durable options at its weight.",
      "specs": {
       "Style": "Back-inflate",
-      "Lift (M)": "~13.6kg / 30lb",
+      "Lift": "~13.6kg / 30lb",
       "Weight": "~2.7kg",
-      "Wt-integrated": "Yes",
+      "Weight system": "Yes",
       "Material": "1000D nylon shell",
       "Travel": "Excellent",
       "Wing fabric": "1000-denier nylon outer, 420-denier urethane-laminated bladder",
       "Integrated weights": "2 x 2.3 kg (5 lb) zip-top pockets",
       "D-rings": "Chest and hip positions for accessories or a sling bottle",
-      "Cylinder compatibility": "Single AL80s and steel 85s"
+      "Cylinder compatibility": "Single AL80s and steel 85s",
+      "Sizes": "S to XL"
      },
      "pros": [
       "2.3 kg dry with a genuine 13.6 kg of lift - most rigs this light give up several kilograms of buoyancy",
@@ -3146,10 +3181,12 @@
       "Backplate": "Rigid ultralight with carrying handle",
       "D-rings": "4 x 50 mm plus 4 x 25 mm",
       "Lift": "Approx. 130-225 N by size",
-      "Dry weight": "3.1 kg",
+      "Weight": "3.1 kg",
       "Lift range": "13.3-22.9 kg by size",
       "Ditchable ballast": "9 kg quick-release plus 4.5 kg rear trim",
-      "Relief valves": "3 (inflator hose, right shoulder, lower right)"
+      "Relief valves": "3 (inflator hose, right shoulder, lower right)",
+      "Material": "420D nylon air cell",
+      "Sizes": "XS to XL"
      },
      "image": "assets/gear/studio/cressi-ace.jpg",
      "pros": [
@@ -3190,7 +3227,7 @@
      ],
      "review": "Beuchat's Masterlift X-Air Comfort splits the difference between a recreational jacket and a harness-and-wing, with lateral back volumes that concentrate lift behind the diver while a rigid backpack and wraparound 3D foam padding carry the cylinder. The numbers are the story: lift climbs from 120 N in XS to 310 N in XL, which puts the top sizes in genuinely heavy-rig territory, and ballast comes fully fitted with two 5 kg quick-release pockets plus two 2.5 kg trim pockets on the rear gussets. Reviewers report effortless horizontal trim and a high, face-clear float at the surface. Eight attachment rings (six aluminium) and two double-zip gusseted pockets handle accessories. The costs are weight - 4.6 kg in Medium - and geography, since Beuchat support is far easier to find in Europe than in North America. A solid, meaty jacket for divers who drive to their diving.",
      "specs": {
-      "Type": "Jacket style, wraparound bladder",
+      "Style": "Jacket style, wraparound bladder",
       "Lift": "120 N (XS) to 310 N (XL)",
       "Weight system": "2 x 5 kg quick-release, 2 x 2.5 kg rear trim",
       "Cargo pockets": "2, gusseted with double-slider zips",
@@ -3198,9 +3235,10 @@
       "Backpack": "Rigid, foam-padded lumbar wrap",
       "Sizes": "XS to XL",
       "Lift by size": "120 N (XS) to 310 N (XL)",
-      "Dry weight": "4.6 kg (M)",
+      "Weight": "4.6 kg (M)",
       "Trim pockets": "2 x 2.5 kg fixed on rear gussets",
-      "Padding": "Draining 3D foam at shoulders, back and hips"
+      "Padding": "Draining 3D foam at shoulders, back and hips",
+      "Material": "1000D Cordura single bladder"
      },
      "image": "assets/gear/studio/beuchat-masterlift-x-air-comfort.jpg",
      "pros": [
@@ -3242,17 +3280,18 @@
      "review": "The BC1 is Atomic's attempt to build a jacket BCD with no cost ceiling, and the materials list reads accordingly: polyurethane-coated fabric that water cannot penetrate, engineering-grade plastics, and titanium-coated stainless D-rings on the shoulders, pockets and rear. Water runs off it like a plastic mac, so it comes out of the rinse tank nearly dry. The Cam-Lok tank band swaps threaded webbing for a ratchet - pull the red lever, fold, snap - and grips any cylinder diameter. Lift runs from 14 kg in Small to 21.8 kg in XL, with quick-release weight pockets, a kidney dump, shoulder dump and inflator pull-dump. The objections are the ones you would guess plus two you might not: roughly $1,700 before you add an inflator, 4.6 kg of dry weight, reports of weight-pocket clips not seating properly, and doubts about the thermoplastic cam band's long-term sun exposure. It is a superb jacket at a price most divers will decline to pay.",
      "specs": {
       "Style": "Jacket, weight-integrated",
-      "Fabric": "Double-laminated polyurethane-coated nylon, zero water absorption",
+      "Material": "Double-laminated polyurethane-coated nylon, zero water absorption",
       "Zippers": "Self-sealing",
       "Tank band": "Ratcheting cam-lock",
       "Weight system": "Mechanically latching releasable pockets",
       "Inflator": "Sold separately (standard, SS1 or Ai power inflator)",
       "Sizes": "S, M, L, XL",
       "Lift by size": "14 kg (S) to 21.8 kg (XL)",
-      "Dry weight": "4.6 kg",
+      "Weight": "4.6 kg",
       "D-rings": "Titanium-coated stainless steel",
       "Dump valves": "Kidney dump, shoulder dump and inflator pull-dump",
-      "List price": "About $1,700, inflator not included"
+      "List price": "About $1,700, inflator not included",
+      "Lift": "14.5 kg / 32 lb (M)"
      },
      "image": "assets/gear/studio/atomic-aquatics-bc1.jpg",
      "pros": [
@@ -3301,7 +3340,11 @@
       "Bladder": "Cordura 1100 dTEX single shell with 0.215 mm TPU coating",
       "Wing-only weight": "0.65 kg",
       "Deluxe harness": "ITW Nexus quick-release buckles, neutrally buoyant 3D mesh padding",
-      "Backplate hole spacing": "28 cm (11 in)"
+      "Backplate hole spacing": "28 cm (11 in)",
+      "Style": "Backplate and wing",
+      "Weight system": "Quick-release pockets, 6 kg or 12 kg",
+      "Material": "Cordura 1100 dtex, TPU coated",
+      "Sizes": "Harness S (under 175 cm) or L"
      },
      "image": "assets/gear/studio/xdeep-ghost-deluxe.jpg",
      "pros": [
@@ -3355,8 +3398,9 @@
       "Padding": "Neoprene-padded neck roll",
       "Lift by size": "9-16.3 kg (XS-3XL)",
       "Releasable ballast": "7.3 kg (XS-S), 9 kg (M-XL), 11.8 kg (2XL-3XL), plus 4.5 kg fixed",
-      "Fabric": "1000-denier nylon",
-      "Air cell": "3D-shaped wraparound design"
+      "Material": "1000-denier nylon",
+      "Air cell": "3D-shaped wraparound design",
+      "Lift": "9 kg (XS) to 16.3 kg (XL)"
      },
      "image": "assets/gear/studio/sherwood-avid-cqr-3.jpg",
      "pros": [
@@ -3970,7 +4014,9 @@
       "Case material": "Stainless steel case with tempered glass lens",
       "Dive history": "Last 24 dives stored on the unit; full logs sync to the free DiverLog+ app",
       "Alarms": "Audible alarms plus a high-visibility LED warning light",
-      "Format": "Watch-style, small enough to wear topside between dives"
+      "Format": "Watch-style, small enough to wear topside between dives",
+      "Display": "Segmented LCD with matrix row",
+      "Algorithm": "Z+ (Bühlmann ZHL-16C based)"
      },
      "image": "assets/gear/studio/aqualung-i470tc.jpg",
      "pros": [
@@ -4022,7 +4068,8 @@
       "Compass": "Tilt-compensated digital compass with bearing memory and stopwatch",
       "Logbook": "Over 100 hours of dive profile storage on the unit",
       "Charging": "Wireless charging base included",
-      "Strap": "Three-piece quick-change silicone strap; replacement kits sold separately"
+      "Strap": "Three-piece quick-change silicone strap; replacement kits sold separately",
+      "Modes": "Scuba, Gauge (bottom timer)"
      },
      "image": "assets/gear/studio/mares-sirius.jpg",
      "pros": [
@@ -4336,7 +4383,7 @@
       "Display": "Full-color LCD under scratch-resistant sapphire glass",
       "Housing": "Stainless steel, watch-style",
       "Battery": "Rechargeable lithium-ion",
-      "Algorithms": "ZHL-16 ADT MB PMG (predictive multi-gas) or ZHL-16 GF, selectable",
+      "Algorithm": "ZHL-16 ADT MB PMG (predictive multi-gas) or ZHL-16 GF, selectable",
       "Depth rating": "300 m in gauge mode",
       "Air integration": "Optional Smart+ Pro wireless transmitter",
       "Connectivity": "Bluetooth LE log download (iOS, Android, PC/Mac)",
@@ -4462,7 +4509,8 @@
         "Neoprene base": "X-Foam, limestone-based and petroleum-free; complies with PAH and REACH chemical limits",
         "Zipper slider": "Brass YKK slider",
         "Cut": "Triathlon cut carried over from the Sport steamers",
-        "Sizes (men's)": "2XS-4XL"
+        "Sizes (men's)": "2XS-4XL",
+        "Sizes": "Men's S-4XL, women's 2XS-3XL"
        },
        "options": [
         {
@@ -4620,7 +4668,8 @@
         "Zipper hardware": "#10 YKK front zipper with stainless steel slider",
         "Warranty": "10-year limited, zipper included",
         "Sizes (men's)": "XS-6XL",
-        "Pattern origin": "Designed, patterned and fit-tested in the USA"
+        "Pattern origin": "Designed, patterned and fit-tested in the USA",
+        "Sizes": "Men's XS-6XL, women's 4-24"
        },
        "options": [
         {
@@ -4673,7 +4722,8 @@
         "Stretch": "Up to 250% more stretch than standard neoprene",
         "Seals": "O-ring seals at arm and thigh openings",
         "Chest panel": "Skin-out, wind-resistant chest panel",
-        "Zipper hardware": "#10 YKK back zip with pull-tab leash and zipper shield"
+        "Zipper hardware": "#10 YKK back zip with pull-tab leash and zipper shield",
+        "Sizes": "Men's XS-XXL; women's version available"
        },
        "options": [
         {
@@ -4839,13 +4889,14 @@
         "Neoprene": "Aquatex stretch neoprene",
         "Seams": "Flatlock",
         "Zip": "YKK Vislon back zip",
-        "Water range": "25-29°C",
+        "Water temp": "25-29°C",
         "Cut": "Women's cut (men's version available)",
         "Sizes": "Women's XS-XL",
         "Accessory dock": "WPAD docking station on right hip; expandable pocket sold separately",
         "Knee pads": "Polyurethane-reinforced",
         "Reinforcement": "PU-embossed non-slip shoulder and seat panels",
-        "Edge finish": "Rolled-neoprene piping at neck, wrists and ankles, no seals"
+        "Edge finish": "Rolled-neoprene piping at neck, wrists and ankles, no seals",
+        "Material": "Microcell CR neoprene"
        },
        "image": "assets/gear/studio/waterproof-w30-2-5mm-women-s.jpg",
        "pros": [
@@ -5103,7 +5154,8 @@
         "Chest panel": "Rubberised smooth-skin, reduces drag",
         "Knee protection": "Anti-abrasion reinforced patches",
         "Collar": "Hook-and-loop closure with second tab to hold the zip pull flat",
-        "Versions": "Man, lady and junior cuts"
+        "Versions": "Man, lady and junior cuts",
+        "Sizes": "Men's S-XXL; women's version available"
        },
        "options": [
         {
@@ -5313,14 +5365,16 @@
         "Cut": "One-piece overall with collar, no hood",
         "Fit": "Preformed anatomical panels",
         "Neoprene dyeing": "Dope Dyed, 35-40% less water use",
-        "Entry": "Back zip with solo-reach leash",
-        "Water range": "Warm water, about 24-29 degrees C",
+        "Zip": "Back zip with solo-reach leash",
+        "Water temp": "Warm water, about 24-29 degrees C",
         "Other versions": "5 mm overall, 7 mm hooded",
         "Neoprene": "Elaskin X.6.2 stretch body, softer Elaskin X.6.4 under the arms; limestone and recycled-rubber base",
         "Knee reinforcement": "Supratex 2 panels",
         "Wear protection": "PU prints on seat and shoulders",
         "Wrist/ankle finish": "Smooth-skin neoprene seals; ankle zips with Easy Wave wrist system",
-        "Sizes": "XS-XXXL with intermediate sizes"
+        "Sizes": "XS-XXXL with intermediate sizes",
+        "Material": "Elaskin X.6.2 stretch neoprene",
+        "Seams": "Glued edge-to-edge, inside/outside overlock"
        },
        "image": "assets/gear/studio/beuchat-optima-2.jpg",
        "pros": [
@@ -5363,13 +5417,14 @@
         "Neoprene": "100% Microcell limestone CR, high-stretch linings",
         "Seams": "Glued and blind-stitched, handmade",
         "Zip": "Back zip with neck comfort zipper",
-        "Water range": "21-27°C",
+        "Water temp": "21-27°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's S-3XL+, women's XS-XL+",
         "Pockets": "Two stretch hip pockets with drain valves and attachment loop",
         "Reinforcements": "Duratex abrasion panels on seat and elbows",
         "Wrist/ankle entry": "YKK zippered openings at arms and legs",
-        "Flex panels": "Wave-flex panels at arm and leg joints"
+        "Flex panels": "Wave-flex panels at arm and leg joints",
+        "Material": "100% microcell CR limestone neoprene"
        },
        "image": "assets/gear/studio/waterproof-w5-3-5mm.jpg",
        "pros": [
@@ -5414,13 +5469,15 @@
         "Neoprene": "Titanium-lined, high-stretch arm and leg panels",
         "Seams": "Glued and sewn with smooth-skin seals",
         "Zip": "Back zip plus ankle zippers",
-        "Water range": "22-28°C",
+        "Water temp": "22-28°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's XS-3XL, women's XS-XL",
         "Spine pad": "5 mm pad along the back zipper",
         "Collar": "Rolled neck with hook-and-loop closure",
         "Knee pads": "Heavy-duty roughskin",
-        "Shoulder pads": "Printed rubber panels that grip BCD straps"
+        "Shoulder pads": "Printed rubber panels that grip BCD straps",
+        "Material": "Nylon-2 stretch neoprene",
+        "Lining": "Titanium thermal lining"
        },
        "image": "assets/gear/studio/pinnacle-cruiser-3mm.jpg",
        "pros": [
@@ -5524,7 +5581,8 @@
         "Wrist seals": "Glideskin skin-in seals",
         "Ankle seals": "internal PU dams",
         "Knee pads": "ultra-stretch abrasion panels",
-        "Adhesive": "water-based Aqua-X glue on limestone-derived neoprene"
+        "Adhesive": "water-based Aqua-X glue on limestone-derived neoprene",
+        "Sizes": "Men's XXS-XXL, women's 8-20 (short/tall options)"
        },
        "options": [
         {
@@ -5576,7 +5634,8 @@
         "Certification": "CE certified Class B dive suit",
         "Ankle zips": "YKK zippered ankles with brass KA sliders",
         "Recycled content": "interior and exterior linings spun from about 45 recycled plastic bottles per suit",
-        "Abrasion protection": "reinforced seat and shoulder linings plus printed knee and shoulder pads"
+        "Abrasion protection": "reinforced seat and shoulder linings plus printed knee and shoulder pads",
+        "Sizes": "Men's S-3XL+, women's 2XS-2XL+"
        },
        "options": [
         {
@@ -5902,12 +5961,14 @@
         "Seals": "Water Dam at neck, wrists, ankles",
         "Stretch zones": "Flex System 2, Free Flex Zone shoulders",
         "Reinforcements": "Supratex 2 knees, Black Shield panels",
-        "Entry": "Back zip with dorsal seal",
+        "Zip": "Back zip with dorsal seal",
         "Water temp": "10-18°C (50-64.5°F)",
         "Certification": "CE thermal class B in the 5 mm version — the rating a plain 7 mm usually earns",
         "Panel count": "44 panels in 20 neoprene grades (collar version); hooded version uses 40 panels in 14 grades",
         "Versions": "Men's and women's cuts, each offered with attached hood or plain collar",
-        "Neoprene base": "Limestone-derived, petroleum-free"
+        "Neoprene base": "Limestone-derived, petroleum-free",
+        "Material": "Elaskin X8.8 stretch neoprene",
+        "Seams": "Glued edge-to-edge, inside/outside overlock"
        },
        "image": "assets/gear/studio/beuchat-focea-comfort-6.jpg",
        "pros": [
@@ -5951,13 +6012,15 @@
         "Neoprene": "Progressive full-stretch with Omnired infrared lining",
         "Seams": "Glued and blind-stitched",
         "Zip": "Back zip with spine pad",
-        "Water range": "16-24°C",
+        "Water temp": "16-24°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's S-3XL (plus short/tall), women's 4-16",
         "Knee protection": "Protekt abrasion-resistant knee panels",
         "Construction": "Progressive Full-Stretch — three full-stretch neoprene types zoned around the body, double-glued with Secure-Lock seams",
         "Interior": "OMNIRED thermal lining with 13 thermo-reactive minerals woven into the torso",
-        "Warranty": "2 years on materials and workmanship; seams covered for 7 years"
+        "Warranty": "2 years on materials and workmanship; seams covered for 7 years",
+        "Material": "Progressive full-stretch neoprene",
+        "Lining": "Omnired infrared thermal lining"
        },
        "image": "assets/gear/studio/bare-velocity-ultra-2-0-5mm.jpg",
        "pros": [
@@ -5998,7 +6061,7 @@
         "Material": "Ocena plant-based natural rubber, recycled linings",
         "Seams": "Glued and blind-stitched",
         "Zip": "Back zip with anti-flush flap",
-        "Water range": "16-24°C",
+        "Water temp": "16-24°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's XS-XXXL, women's 6-18",
         "Bio-based content": "82% certified bio-based (Ocena natural rubber compound with recycled tyre content)",
@@ -6044,14 +6107,15 @@
         "Neoprene": "100% UltraFlex stretch neoprene",
         "Seams": "Glued and blind-stitched",
         "Zip": "Covert blackout back zip, double-seal neck",
-        "Water range": "15-21°C",
+        "Water temp": "15-21°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's S-3XL (plus tall), women's 4-14",
         "Lining": "FluidFlex Firewall thermal panels in chest and back",
         "Knee pads": "Krypto Armor",
         "Neck": "Double Super Seal closure",
         "Exterior": "Wind-resistant smoothskin panels",
-        "Warranty": "1 year, materials and workmanship"
+        "Warranty": "1 year, materials and workmanship",
+        "Material": "100% UltraFlex neoprene"
        },
        "image": "assets/gear/studio/o-neill-epic-4-3mm.jpg",
        "pros": [
@@ -6534,13 +6598,14 @@
         "Seams": "Double glued, blind-stitched, liquid-tape sealed",
         "Zip": "#10 back zip with water dam",
         "Seals": "Interlocking zipperless wrist, ankle and neck seals",
-        "Water range": "8-16°C",
+        "Water temp": "8-16°C",
         "Cut": "Men's and women's cuts",
         "Sizes": "Men's S-5XL (plus short/tall), women's 4-16",
         "Lining": "QuikDry hydrophobic micro-fleece interior; dries in minutes rather than hours",
         "Exterior": "Aquasilk anti-pilling laminate",
         "System": "Double-layer roll-back wrist, ankle and neck openings interlock with Aqua Lock hoods, gloves and boots (silicone-sealed)",
-        "Seam finish": "Outer seams coated with Aqua Lock liquid-tape waterproof barrier"
+        "Seam finish": "Outer seams coated with Aqua Lock liquid-tape waterproof barrier",
+        "Material": "AquaSilk 250% stretch neoprene"
        },
        "image": "assets/gear/studio/henderson-aqua-lock-7mm.jpg",
        "pros": [
