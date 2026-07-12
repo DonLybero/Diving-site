@@ -16,16 +16,14 @@ UA = {"User-Agent": "DiveSZNCandidates/1.0 (https://github.com/DonLybero/Diving-
 PER_DEST = 10
 
 CANDIDATE_QUERIES = {
-    # Owner round 2026-07-11 v2: Protea Banks hero — KZN south coast only.
-    # "Shelly Beach" alone is ambiguous on Commons (Sydney beaches) — use
-    # town names that only exist on this coast.
-    "protea-banks": ["Margate beach South Africa", "Uvongo Beach",
-                     "Uvongo KwaZulu-Natal", "Ramsgate KwaZulu-Natal",
-                     "Port Shepstone", "Hibberdene", "Umzumbe",
-                     "KwaZulu-Natal south coast"],
+    # Owner round 2026-07-11: Sharm El Sheikh page hero — underwater.
+    "sharm-el-sheikh": ["Ras Muhammad coral reef", "Ras Mohammed underwater",
+                        "Shark Reef Yolanda Ras Mohammed", "SS Thistlegorm wreck",
+                        "Red Sea anthias coral reef", "Sharm el-Sheikh diving",
+                        "Tiran island reef underwater", "Red Sea coral garden"],
 }
 
-EXCLUDE = {}
+EXCLUDE = {"sharm-el-sheikh": __import__("re").compile(r"(map|stamp|drawing|illustration|museum|taxiderm|specimen|aquarium|zoo\b|captive)", __import__("re").I)}
 OFFERED = {
     "bahamas": ["File:Bahamas 1989 (591) Great Exuma (24986096444).jpg", "File:Bahamas 1989 (589) Great Exuma (25497769082).jpg", "File:Bahamas 1989 (588) Great Exuma (25474038752).jpg", "File:Bahamas 1989 (592) Exuma (25249275789).jpg", "File:Bahamas 1989 (757) Exuma Islands (26229646886).jpg", "File:Bahamas 1989 (342) Eleuthera Harbour Island (24320422055).jpg", "File:Bahamas 1989 (343) Eleuthera Harbour Island (24211710172).jpg", "File:Bahamas 1989 (384) Eleuthera Spanish Wells, St. George's Cay (24470041926).jpg", "File:Bahamas 1989 (387) Eleuthera Spanish Wells, St. George's Cay (24422334811).jpg", "File:Bahamas 1989 (382) Eleuthera Spanish Wells, St. George's Cay (24484777015).jpg"],
     "bay-islands": ["File:Aerial view of West End, Roatan.jpg", "File:Aerial view of Coxen Hole, Roatan.jpg", "File:Roatan looking north towards West End.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-g.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-c.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-e.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-f.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-b.jpg", "File:West Bay Beach -Roatan -Honduras-23May2009-d.jpg"],
