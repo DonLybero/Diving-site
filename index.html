@@ -298,8 +298,13 @@
   .rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
   /* crew slide: photo full-bleed, stat boxes slide in from the right as you
      scroll (progress-driven via --cp, like the reference) */
-  .crew-slide{position:relative;height:clamp(560px,calc(100vh - 64px),1040px);overflow:hidden;
-       width:100vw;margin:-30px 0 0 calc(50% - 50vw);border-radius:0}
+  /* the slide pins below the topbar while its wrapper's extra height (the
+     "runway", set by JS) scrolls past — the section stands still and the
+     count climbs with the scroll, releasing exactly when it completes */
+  .crew-pin{position:relative;margin-top:-30px}
+  .crew-slide{position:sticky;top:64px;height:clamp(560px,calc(100vh - 64px),1040px);overflow:hidden;
+       width:100vw;margin:0 0 0 calc(50% - 50vw);border-radius:0}
+  @media(prefers-reduced-motion:reduce){.crew-slide{position:relative;top:0!important}}
   /* the near-native aspect keeps the photo wide rather than cropped-in */
   @media(max-width:640px){.crew-slide{height:clamp(340px,96vw,560px)}}
   .crew-photo{position:absolute;inset:0;background:#dbe9ec;overflow:hidden}
@@ -1197,29 +1202,33 @@ function escAttr(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/<
 var HERO_PICKS=["Fernando de Noronha","Sipadan Island","Maldives","Palau","Raja Ampat","Great Barrier Reef","Bonaire"];
 var CREW_IMG={src:'assets/crew.jpg', credit:''};
 function crewScroll(){
-  var el=document.getElementById('crewSlide'); if(!el) return;
-  var r=el.getBoundingClientRect(), vh=window.innerHeight||800;
-  var p=(vh - r.top - r.height*0.30)/(vh*0.5);
+  var el=document.getElementById('crewSlide'), pin=document.getElementById('crewPin');
+  if(!el||!pin) return;
+  var vh=window.innerHeight||800;
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var topH=(document.querySelector('.topbar')||{offsetHeight:64}).offsetHeight||64;
+  // runway: how much scrolling the pinned section absorbs before it releases
+  var runway=rm?0:Math.round(vh);
+  var need=el.offsetHeight+runway;
+  if(pin.__h!==need){pin.__h=need;pin.style.height=need+'px';el.style.top=topH+'px';}
+  var r=pin.getBoundingClientRect();
+  // cards slide in while the section approaches (pre-pin)
+  var p=(vh - r.top - el.offsetHeight*0.30)/(vh*0.5);
   p=Math.max(0,Math.min(1,p));
   el.style.setProperty('--cp',p.toFixed(3));
-  if(p>=0.15) crewCount();
+  // the count rides the pinned stretch of scroll and finishes as it releases
+  var cnt=runway>0?Math.max(0,Math.min(1,(topH - r.top)/runway)):1;
+  crewCountSet(cnt,rm);
 }
-/* the two headline numbers count up once, as their cards slide in; the final
-   value is in the markup so no-JS and reduced-motion readers see it as-is */
-function crewCount(){
-  if(window.__crewCounted) return;
-  window.__crewCounted=true;
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+/* scrub-driven count: final values stay in the markup for no-JS and
+   reduced-motion readers; everyone else sees them climb with the scroll */
+function crewCountSet(p,rm){
   [].slice.call(document.querySelectorAll('#crewSlide .crew-stat b')).forEach(function(b){
-    var target=parseInt(b.textContent,10); if(!target) return;
-    var t0=null, dur=2400;
-    function step(ts){
-      if(t0==null)t0=ts;
-      var x=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-x,3);   // ease-out cubic
-      b.textContent=Math.round(target*e);
-      if(x<1) requestAnimationFrame(step); else b.textContent=target;
-    }
-    requestAnimationFrame(step);
+    var t=b.getAttribute('data-n');
+    if(t==null){t=b.textContent;b.setAttribute('data-n',t);}
+    t=parseInt(t,10); if(!t) return;
+    if(rm){b.textContent=t;return;}
+    b.textContent=Math.round(t*(1-Math.pow(1-p,2)));   // gentle ease-out on the scrub
   });
 }
 var HERO_VIDEO={webm:'assets/video/hero-dive.webm', mp4:'assets/video/hero-dive.mp4',
@@ -1808,14 +1817,14 @@ function renderHome(){
       '<div class="dmeta">'+tempStr(r.water_temp_c)+' water · '+(r.visibility_m?r.visibility_m+' m viz':r.rating.toLowerCase()+' season')+'</div>'+
       '</div>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
-  var crew='<div class="crew-slide" id="crewSlide">'+
+  var crew='<div class="crew-pin" id="crewPin"><div class="crew-slide" id="crewSlide">'+
     '<div class="crew-photo"><img src="'+CREW_IMG.src+'" alt="Divers preparing gear" '+
     'onerror="this.style.display=\'none\'">'+
     (CREW_IMG.credit?'<span class="crew-credit">'+CREW_IMG.credit+'</span>':'')+'</div>'+
     '<div class="crew-stats">'+
     '<div class="crew-stat crew-a"><b>996</b><span>destination-months scored, rechecked every season</span></div>'+
     '<div class="crew-stat crew-b"><b>620</b><span>dive sites documented with depth, level and character</span></div>'+
-    '</div></div>';
+    '</div></div></div>';
   document.getElementById('view-home').innerHTML=
     crew+
     '<section class="hband rv"><div class="hb-in">'+
