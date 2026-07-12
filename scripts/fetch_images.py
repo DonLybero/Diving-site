@@ -137,6 +137,8 @@ DEST_REQUIRE = {
 # Visually-vetted exact Commons files, tried before any search (mirrors the
 # marine fetcher's PINNED map) — for destinations where search keeps missing.
 DEST_PINNED = {
+    "Rio de Janeiro": ["File:Farol da Ilha Rasa Baía da Guanabara-RJ (52078588124).jpg"],
+    "Salvador": ["File:Baia de Todos os Santos e Elevador Lacerda.jpg"],
     # Owner picks, 2026-07-12 round (19 touristic-city additions).
     "Antalya": ["File:Kemer beach, Antalya.jpg"],
     "Bodrum": ["File:Bodrum Castle 5.JPG"],
