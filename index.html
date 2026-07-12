@@ -17,7 +17,9 @@
 <meta name="twitter:description" content="Month-by-month dive-season planner: conditions, visibility, currents and marine life for the world's top dive destinations.">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"DiveSZN","url":"https://donlybero.github.io/Diving-site/"},{"@type":"Organization","name":"DiveSZN","url":"https://donlybero.github.io/Diving-site/"}]}</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 96'><rect width='120' height='96' rx='18' fill='%23062a36'/><path d='M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z' fill='%232fe0d6'/></svg>">
-<link rel="stylesheet" href="vendor/leaflet.css">
+<!-- standalone:leaflet-css -->
+<link rel="preload" href="diving-destinations.json" as="fetch" crossorigin>
+<link rel="preload" href="assets/video/hero-dive-poster.jpg" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -46,14 +48,15 @@
        background-attachment:fixed}
   h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.15}
   ::selection{background:rgba(47,224,214,.35);color:#06333b}
-  a{color:var(--accent);text-decoration:none;transition:color .15s}
+  a{color:var(--accent-deep);text-decoration:none;transition:color .15s}
   a:hover{color:#0b7d75}
 
   /* ---------- sticky top bar ---------- */
   .topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:14px;
        padding:12px 22px;background:rgba(255,255,255,.85);backdrop-filter:blur(16px) saturate(140%);
        -webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--line)}
-  .topbar .brand{display:inline-flex;align-items:center;gap:11px;cursor:pointer}
+  .topbar .brand{display:inline-flex;align-items:center;gap:11px;cursor:pointer;color:inherit;text-decoration:none}
+  .topbar .brand:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px;border-radius:8px}
   .topbar .fluke{width:56px;height:auto;filter:drop-shadow(0 3px 10px rgba(47,224,214,.4))}
   .topbar .brand-text{display:flex;flex-direction:column;line-height:1}
   .topbar .name{font-family:var(--serif);font-size:1.7rem;font-weight:600;letter-spacing:.2px;line-height:1;color:var(--ink)}
@@ -65,37 +68,49 @@
   @media(min-width:760px){.topbar .cta{display:inline-flex}}
   @media(max-width:820px){
     .topbar{flex-wrap:wrap;justify-content:center;padding:10px 12px}
-    .topbar .tabs{width:100%;order:3;justify-content:flex-start;margin-left:0;padding:4px 0 0}
+    .topbar .tabs{width:100%;order:3;justify-content:flex-start;margin-left:0;padding:4px 0 0;
+        -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent);
+        mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}   /* edge fade: the bar reads as scrollable */
   }
 
   /* ---------- hero ---------- */
   /* full-width media band above the headline (video, photo fallback) */
-  .hero-band{position:relative;width:100%;height:max(240px,50vh);overflow:hidden;
+  /* the slot reserves the band's final height in the document flow from first
+     paint; the band itself plays the full-screen intro position:fixed on top,
+     so nothing below ever shifts (zero CLS), then settles back into the slot */
+  .hero-band-slot{height:max(240px,50vh)}
+  .hero-band{position:fixed;top:var(--topbarH,64px);left:0;right:0;z-index:20;overflow:hidden;
+       height:calc(100vh - var(--topbarH,64px));
        background:#06222b center/cover no-repeat;border-bottom:1px solid var(--line);
        animation:bandIntro 1.7s cubic-bezier(.65,.05,.35,1) 1.1s both}
   /* first impression: the video owns the whole screen, then eases to half a page */
-  @keyframes bandIntro{from{height:calc(100vh - 64px)}to{height:max(240px,50vh)}}
-  .hero-band.settled{animation:none}
-  @media(prefers-reduced-motion:reduce){.hero-band{animation:none}}
+  @keyframes bandIntro{to{height:max(240px,50vh)}}
+  .hero-band.settled{animation:none;position:static;height:100%}
+  @media(prefers-reduced-motion:reduce){.hero-band{animation:none;position:static;height:100%}}
   .hero-band video{width:100%;height:100%;object-fit:cover;display:block}
   .hero-band .photo-credit{position:absolute;right:10px;bottom:6px;font-size:.62rem;
        color:rgba(233,247,246,.55);font-family:var(--mono)}
   /* hero mosaic — the whole band is graded blocks that resize like windows
      over a pale ghost base, faithful to the reference recording */
-  /* strips are fixed-size windows; only the clip edge moves (paint, not layout —
-     animating width re-laid-out and rescaled three videos every frame) */
-  .hbm{position:absolute;overflow:hidden}
-  .hbm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hbm-coral{left:9%;top:0;bottom:0;width:40%;z-index:1;animation:hbmB 9s ease-in-out infinite alternate}
-  .hbm-coral video{filter:sepia(1) saturate(2) hue-rotate(-16deg) brightness(1.12) contrast(1.1)}
-  .hbm-sage{left:0;top:0;bottom:0;width:30%;z-index:2;animation:hbmA 12s ease-in-out infinite alternate}
-  .hbm-sage video{filter:sepia(1) saturate(1.15) hue-rotate(100deg) brightness(1.16) contrast(1.06)}
-  .hbm-lilac{right:0;top:0;bottom:0;width:33%;z-index:1;animation:hbmC 10s ease-in-out infinite alternate}
-  .hbm-lilac video{filter:sepia(1) saturate(1.35) hue-rotate(205deg) brightness(1.2) contrast(1.02)}
+  /* tinted windows over the ONE video via backdrop-filter — no extra video
+     decodes (was: three cloned <video> elements); only the clip edge animates */
+  .hbm{position:absolute;overflow:hidden;pointer-events:none;
+       backdrop-filter:var(--hbm-f);-webkit-backdrop-filter:var(--hbm-f)}
+  .hbm-coral{--hbm-f:sepia(1) saturate(2) hue-rotate(-16deg) brightness(1.12) contrast(1.1);
+       left:9%;top:0;bottom:0;width:40%;z-index:1;animation:hbmB 9s ease-in-out infinite alternate}
+  .hbm-sage{--hbm-f:sepia(1) saturate(1.15) hue-rotate(100deg) brightness(1.16) contrast(1.06);
+       left:0;top:0;bottom:0;width:30%;z-index:2;animation:hbmA 12s ease-in-out infinite alternate}
+  .hbm-lilac{--hbm-f:sepia(1) saturate(1.35) hue-rotate(205deg) brightness(1.2) contrast(1.02);
+       right:0;top:0;bottom:0;width:33%;z-index:1;animation:hbmC 10s ease-in-out infinite alternate}
   @keyframes hbmA{from{clip-path:inset(0 53.3% 0 0)}to{clip-path:inset(0 0 0 0)}}
   @keyframes hbmB{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 40% 0 0)}}
   @keyframes hbmC{from{clip-path:inset(0 0 0 48.5%)}to{clip-path:inset(0 0 0 0)}}
   @media(prefers-reduced-motion:reduce){.hbm{animation:none;clip-path:none}}
+  .band-pause{position:absolute;left:10px;bottom:8px;z-index:3;background:rgba(4,26,34,.55);color:#d9f4f1;
+       border:1px solid rgba(255,255,255,.28);border-radius:999px;font-family:var(--mono);font-size:.6rem;
+       letter-spacing:.1em;padding:6px 12px;cursor:pointer}
+  .band-pause:hover{background:rgba(4,26,34,.75)}
+  .band-pause:focus-visible{outline:2px solid #7df0e8;outline-offset:2px}
   .hero{position:relative;overflow:hidden;text-align:center;padding:clamp(56px,9vh,110px) 18px;
         display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:78vh;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
@@ -116,6 +131,8 @@
   .hero h1{animation:heroRise .65s cubic-bezier(.2,.7,.2,1) 1.35s both}
   .hero .tagline{animation:heroRise .65s cubic-bezier(.2,.7,.2,1) 1.55s both}
   .hero .hero-cta{animation:heroRise .65s cubic-bezier(.2,.7,.2,1) 1.75s both}
+  /* once settled, returning to Home must not replay the entrance (display:none restarts CSS animations) */
+  .hero.settled h1,.hero.settled .tagline,.hero.settled .hero-cta{animation:none}
   @media(prefers-reduced-motion:reduce){.hero h1,.hero .tagline,.hero .hero-cta{animation:none}}
 
   /* ---------- nav tabs (inside the topbar: brand left, tabs right) ---------- */
@@ -204,7 +221,7 @@
   .hl{font-size:.9rem;margin-top:10px;color:var(--ink-soft);line-height:1.5}
   /* compact expandable dive-site list on destination cards */
   .sites{margin-top:9px;font-size:.78rem}
-  .sites summary{cursor:pointer;color:var(--accent);list-style:none;display:inline-flex;align-items:center;gap:5px;font-weight:600}
+  .sites summary{cursor:pointer;color:var(--accent-deep);list-style:none;display:inline-flex;align-items:center;gap:5px;font-weight:600}
   .sites summary::-webkit-details-marker{display:none}
   .sites summary::after{content:'▾';font-size:.7em;color:var(--muted);transition:transform .15s}
   .sites[open] summary::after{transform:rotate(180deg)}
@@ -480,16 +497,20 @@
   /* Expander used on cards / profile for progressive disclosure */
   details.more{margin:0}
   .card.photo-card details.more{margin:0 20px}
-  details.more>summary{cursor:pointer;font-size:.82rem;font-weight:600;color:var(--accent);list-style:none;padding:6px 0;display:inline-flex;align-items:center;gap:6px}
+  details.more>summary{cursor:pointer;font-size:.82rem;font-weight:600;color:var(--accent-deep);list-style:none;padding:6px 0;display:inline-flex;align-items:center;gap:6px}
   details.more>summary:hover{text-decoration:underline}
   details.more>summary::-webkit-details-marker{display:none}
   details.more>summary::before{content:"+";font-family:var(--mono);font-size:.85rem;line-height:1;transition:transform .15s ease}
   details.more[open]>summary::before{transform:rotate(45deg)}
   /* Contextual CTA row on result cards */
   .card-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:12px 20px 4px;padding-top:10px;border-top:1px solid var(--line);font-size:.82rem}
-  .card-cta a{text-decoration:none;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:4px}
-  .card-cta .stay-link{color:var(--muted);font-weight:500}
-  .card-cta .stay-link:hover{color:var(--accent)}
+  .card-cta a{text-decoration:none;color:var(--accent-deep);font-weight:500;display:inline-flex;align-items:center;gap:4px}
+  /* the booking link is the primary CTA (PRODUCT.md): it gets the CTA treatment,
+     the full-guide link stays quiet ink */
+  .card-cta .stay-link{background:linear-gradient(135deg,var(--cta),var(--cta-deep));color:#eafaf8;font-weight:700;
+       padding:10px 16px;min-height:40px;box-sizing:border-box;border-radius:10px;
+       box-shadow:0 8px 20px -8px rgba(6,51,60,.55);transition:transform .15s,box-shadow .15s}
+  .card-cta .stay-link:hover{color:#fff;transform:translateY(-1px);box-shadow:0 12px 26px -8px rgba(11,125,117,.6)}
   .aff-note{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:0 0 16px}
   /* browse-the-world directory: full-page regions -> countries -> destinations */
   .browse-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:26px 0 4px;text-align:center}
@@ -570,7 +591,7 @@
   .gear-photo{height:180px;display:flex;align-items:center;justify-content:center;background:#f4f8f8;border-radius:10px;overflow:hidden;position:relative}
   .gear-photo img{max-width:92%;max-height:92%;object-fit:contain}
   .gear-photo .gear-ico{position:static;margin:0}
-  .gear-rank{position:absolute;top:8px;left:8px;background:var(--ink);color:#e9f7f5;font-family:var(--mono);font-weight:800;border-radius:8px;padding:2px 9px;font-size:.8rem;z-index:1}
+  /* (.gear-rank overlay removed — rank is text in the entry heading) */
   /* magazine-style article list (index of buyer's guides) */
   .artlist-head{font-family:var(--serif);font-size:1.6rem;margin:26px 0 2px;padding-bottom:10px;border-bottom:2px solid var(--accent)}
   .artrow{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);align-items:center}
@@ -722,7 +743,7 @@
   .tipbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:14px 0;max-width:80ch}
   .tipbox ul{margin:8px 0 0;padding-left:20px;line-height:1.7;font-size:.9rem}
   .channels{margin:14px 0}
-  .channels summary{cursor:pointer;color:var(--accent);font-weight:600}
+  .channels summary{cursor:pointer;color:var(--accent-deep);font-weight:600}
   .channels ol{columns:2;column-gap:28px;margin:10px 0 0;padding-left:20px;font-size:.85rem;line-height:1.9}
   @media(max-width:700px){.channels ol{columns:1}}
   .ptable{width:100%;margin-top:12px;border-collapse:collapse;font-size:.86rem;background:transparent;border:none}
@@ -832,18 +853,18 @@
     .home-grid .featured .cover{height:320px}
   }
   /* ---------- Dive Planner sub-nav (result views) ---------- */
-  .subtabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0 16px}
+  .subtabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0 16px;scroll-margin-top:130px}
   .subtabs.hidden{display:none}
   .subtabs button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;
        padding:8px 16px;font-size:.88rem;cursor:pointer;display:inline-flex;align-items:center;transition:all .15s}
   .subtabs button .ico{font-size:15px;margin-right:6px}
   .subtabs button:hover{border-color:var(--accent);color:var(--ink)}
-  .subtabs button.active{background:rgba(47,224,214,.14);color:var(--accent);border-color:var(--accent);font-weight:700}
+  .subtabs button.active{background:rgba(47,224,214,.14);color:var(--accent-deep);border-color:var(--accent);font-weight:700}
 </style>
 </head>
 <body>
 <div class="topbar">
-  <div class="brand" onclick="showTab('home')">
+  <a class="brand" href="#" onclick="showTab('home');return false;" aria-label="DiveSZN — home">
     <svg class="fluke" viewBox="0 0 120 70" role="img" aria-label="DiveSZN fluke logo">
       <defs><linearGradient id="fl0" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stop-color="#5cf0e6"/><stop offset="1" stop-color="#179e98"/></linearGradient></defs>
@@ -854,23 +875,26 @@
     <div class="brand-text">
       <div class="name">Dive<b>SZN</b></div>
     </div>
-  </div>
+  </a>
   <div class="tabs">
-    <button id="tab-gear" onclick="showTab('gear')">Scuba Gear</button>
+    <button id="tab-trip" onclick="showTab('trip')">Dive Planner</button>
     <button id="tab-planner" onclick="showTab('planner')">Destinations</button>
+    <button id="tab-gear" onclick="showTab('gear')">Scuba Gear</button>
     <button id="tab-marine" onclick="openMarineIndex()">Marine Life</button>
     <button id="tab-destinations" onclick="showTab('destinations')">Articles</button>
-    <button id="tab-trip" onclick="showTab('trip')">Dive Planner</button>
     <button id="tab-search" onclick="showTab('search')">Search</button>
   </div>
 </div>
 
+<div class="hero-band-slot" id="heroSlot">
 <div class="hero-band" id="heroBand">
   <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-dive-poster.jpg"></video>
-  <div class="hbm hbm-coral"><video muted autoplay loop playsinline preload="metadata"></video></div>
-  <div class="hbm hbm-sage"><video muted autoplay loop playsinline preload="metadata"></video></div>
-  <div class="hbm hbm-lilac"><video muted autoplay loop playsinline preload="metadata"></video></div>
+  <div class="hbm hbm-coral"></div>
+  <div class="hbm hbm-sage"></div>
+  <div class="hbm hbm-lilac"></div>
+  <button class="band-pause" id="bandPause" aria-pressed="false" aria-label="Pause background video">PAUSE</button>
   <span class="photo-credit" id="heroCredit"></span>
+</div>
 </div>
 <header class="hero" id="hero">
   <h1>Know your trip lands on great diving — before you book.</h1>
@@ -893,22 +917,22 @@
       for your dates, as best matches, a world map and a year calendar.</p>
 
     <div class="controls">
-      <div class="field"><label>Period of travel</label><select id="planPeriod">
+      <div class="field"><label for="planPeriod">Period of travel</label><select id="planPeriod">
         <option value="">— any time —</option></select></div>
-      <div class="field"><label>Region</label>
+      <div class="field"><label id="regionLbl">Region</label>
         <div class="rsel" id="regionSel" onkeydown="regionKey(event)">
-          <button type="button" class="rsel-btn" id="regionBtn" aria-haspopup="true" aria-expanded="false" aria-controls="regionMenu" onclick="toggleRegionMenu(event)">Any region <span class="rsel-caret">&#9662;</span></button>
+          <button type="button" class="rsel-btn" id="regionBtn" aria-labelledby="regionLbl regionBtn" aria-haspopup="true" aria-expanded="false" aria-controls="regionMenu" onclick="toggleRegionMenu(event)">Any region <span class="rsel-caret">&#9662;</span></button>
           <div class="rsel-menu hidden" id="regionMenu"></div>
         </div>
       </div>
-      <div class="field"><label>Difficulty</label><select id="planDiff">
+      <div class="field"><label for="planDiff">Difficulty</label><select id="planDiff">
         <option value="">Any</option><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
-      <div class="field"><label>Water</label><select id="planWater">
+      <div class="field"><label for="planWater">Water</label><select id="planWater">
         <option value="">Any</option><option>tropical</option><option>subtropical</option><option>temperate</option>
         <option>saltwater</option><option>freshwater</option></select></div>
-      <div class="field"><label>Current</label><select id="planCur">
+      <div class="field"><label for="planCur">Current</label><select id="planCur">
         <option value="">Any</option><option>Low</option><option>Medium</option><option>Strong</option></select></div>
-      <div class="field"><label>Min water °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
+      <div class="field"><label for="planTemp">Min water °C</label><input id="planTemp" type="number" min="0" max="32" placeholder="any" style="width:90px"></div>
     </div>
 
     <!-- result views: one at a time; opens on "Best matches" for the current period -->
@@ -938,9 +962,9 @@
       <p class="sec-sub" style="text-align:center">Every matching destination, month by month — your travel period is highlighted.
         Click any destination or cell to open its full profile.</p>
       <div class="controls">
-        <div class="field"><label>Sort by</label><select id="calSort">
+        <div class="field"><label for="calSort">Sort by</label><select id="calSort">
           <option value="region">Region</option><option value="name">Name</option><option value="best">Best season first</option></select></div>
-        <div class="field"><label>Cell shows</label><select id="calShow">
+        <div class="field"><label for="calShow">Cell shows</label><select id="calShow">
           <option value="temp">Water °C</option><option value="viz">Visibility m</option><option value="rating">Rating</option></select></div>
       </div>
       <div class="legend" style="justify-content:center">
@@ -956,7 +980,7 @@
   <!-- GEAR -->
   <section id="view-gear" class="hidden">
     <div class="controls gear-controls">
-      <div class="field"><label>Category</label><select id="gearCat"><option value="">All categories</option></select></div>
+      <div class="field"><label for="gearCat">Category</label><select id="gearCat"><option value="">All categories</option></select></div>
       <div class="field gsearch-f"><input id="gearSearch" type="search" placeholder="Search scuba gear" autocomplete="off" aria-label="Search gear"></div>
     </div>
     <div id="gearGrid" class="grid"></div>
@@ -971,8 +995,8 @@
     </div>
   </div>
   <div id="cmpModal" class="cmpmodal hidden">
-    <div class="cmpmodal-inner">
-      <div class="cmpmodal-head"><b>Side-by-side</b>
+    <div class="cmpmodal-inner" role="dialog" aria-modal="true" aria-labelledby="cmpTitle">
+      <div class="cmpmodal-head"><b id="cmpTitle">Side-by-side</b>
         <button class="cmpmodal-close" onclick="closeCompare()" aria-label="Close">&times;</button></div>
       <div class="cmpmodal-body" id="cmpBody"></div>
     </div>
@@ -997,7 +1021,7 @@
   <section id="view-search" class="hidden">
     <div class="controls">
       <div class="field" style="flex:1">
-        <label>Search a destination, country, region or species (e.g. "Maldives", "hammerhead", "Mexico")</label>
+        <label for="searchBox">Search a destination, country, region or species (e.g. "Maldives", "hammerhead", "Mexico")</label>
         <input id="searchBox" type="search" placeholder="Type to search…" autocomplete="off">
       </div>
     </div>
@@ -1209,11 +1233,14 @@ var CREW_IMG={src:'assets/crew.jpg', credit:''};
 function crewScroll(){
   var el=document.getElementById('crewSlide'), pin=document.getElementById('crewPin');
   if(!el||!pin) return;
+  if(!el.offsetParent) return;   // Home hidden: rects read 0 and would silently consume the one-shot count
   var vh=window.innerHeight||800;
   var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var topH=(document.querySelector('.topbar')||{offsetHeight:64}).offsetHeight||64;
-  // runway: how much scrolling the pinned section absorbs before it releases
-  var runway=rm?0:Math.round(vh);
+  // runway: how much scrolling the pinned section absorbs before it releases —
+  // never more than the slide's own height, so small mobile slides don't pin
+  // against a mostly-blank viewport
+  var runway=rm?0:Math.min(Math.round(vh), el.offsetHeight);
   var need=el.offsetHeight+runway;
   if(pin.__h!==need){pin.__h=need;pin.style.height=need+'px';el.style.top=topH+'px';}
   var r=pin.getBoundingClientRect();
@@ -1256,19 +1283,20 @@ function feedVideo(v){
               '<source src="'+HERO_VIDEO.mp4+'" type="video/mp4">';
   v.load(); var p=v.play(); if(p&&p.catch)p.catch(function(){});
 }
-function setHeroPhoto(){
-  /* the band plays the dive-entry video; a destination photo paints beneath
-     it as the fallback (video missing or reduced motion) */
+/* Video + intro choreography boots immediately at parse time — it does not
+   wait for the JSON payload. One video feeds the band; the tinted strips are
+   backdrop-filter windows over it. */
+function initHeroMedia(){
+  var tb=document.querySelector('.topbar');
+  document.documentElement.style.setProperty('--topbarH',((tb&&tb.offsetHeight)||64)+'px');
   var v=document.getElementById('heroVideo');
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(v){
-    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    if(rm){
       document.querySelectorAll('#heroBand .hbm').forEach(function(t){t.remove();});
+      var pb0=document.getElementById('bandPause'); if(pb0)pb0.remove();
       v.remove();
     }else{
-      document.querySelectorAll('#heroBand .hbm video').forEach(function(tv){
-        tv.poster=HERO_VIDEO.poster;
-        feedVideo(tv);
-      });
       feedVideo(v);
       var vc=document.getElementById('heroCredit');
       if(HERO_VIDEO.credit){vc.textContent='\u24D8';vc.title=HERO_VIDEO.credit;vc.style.cursor='help';}
@@ -1276,19 +1304,40 @@ function setHeroPhoto(){
   }
   // the full-screen intro plays once per visit; pin the band at half page after
   // so re-entering Home doesn't replay it (display:none restarts CSS animations)
-  setTimeout(function(){var b=document.getElementById('heroBand'); if(b)b.classList.add('settled');},3100);
-  // the four looping videos pause whenever the band leaves the viewport (or
-  // the tab switches away from Home) — no background decode cost
+  setTimeout(function(){
+    var b=document.getElementById('heroBand'); if(b)b.classList.add('settled');
+    var hh=document.getElementById('hero'); if(hh)hh.classList.add('settled');
+  },3100);
+  if(rm) return;
+  // user-facing pause control (WCAG 2.2.2) + auto-pause off-viewport
+  var pb=document.getElementById('bandPause');
+  window.__heroPaused=sessionStorage.getItem('heroPaused')==='1';
+  function applyPause(){
+    var vv=document.getElementById('heroVideo'); if(!vv)return;
+    if(window.__heroPaused){vv.pause();}
+    else{var pr=vv.play(); if(pr&&pr.catch)pr.catch(function(){});}
+    if(pb){pb.textContent=window.__heroPaused?'PLAY':'PAUSE';
+      pb.setAttribute('aria-pressed',window.__heroPaused?'true':'false');
+      pb.setAttribute('aria-label',(window.__heroPaused?'Play':'Pause')+' background video');}
+  }
+  if(pb) pb.addEventListener('click',function(){
+    window.__heroPaused=!window.__heroPaused;
+    sessionStorage.setItem('heroPaused',window.__heroPaused?'1':'0');
+    applyPause();
+  });
+  applyPause();
   var band=document.getElementById('heroBand');
   if(band && 'IntersectionObserver' in window){
     new IntersectionObserver(function(en){
-      var vis=en[0].isIntersecting;
-      [].slice.call(band.querySelectorAll('video')).forEach(function(v){
-        if(vis){var pr=v.play(); if(pr&&pr.catch)pr.catch(function(){});}
-        else v.pause();
-      });
+      var vv=document.getElementById('heroVideo'); if(!vv)return;
+      if(en[0].isIntersecting){ if(!window.__heroPaused){var pr=vv.play(); if(pr&&pr.catch)pr.catch(function(){});} }
+      else vv.pause();
     },{threshold:0}).observe(band);
   }
+}
+function setHeroPhoto(){
+  /* the band plays the dive-entry video; a destination photo paints beneath
+     it as the fallback (video missing or reduced motion) */
   for(var i=0;i<HERO_PICKS.length;i++){
     var d=DivingCalendar.getDestination(DESTS,HERO_PICKS[i]);
     if(d&&d.image){
@@ -1354,7 +1403,7 @@ function showTab(t){
   });
   // The full-height hero anchors the landing/home view only; collapse it on working tabs.
   document.getElementById('hero').classList.toggle('hidden', t!=='home');
-  var hb=document.getElementById('heroBand'); if(hb) hb.classList.toggle('hidden', t!=='home');
+  var hb=document.getElementById('heroSlot'); if(hb) hb.classList.toggle('hidden', t!=='home');
   if(t==='gear'){ updateCmpBar(); } else { closeCompare(); var cb=document.getElementById('cmpBar'); if(cb)cb.classList.add('hidden'); }
   if(t==='marine'){ renderMarine(); }
   if(t==='trip'){ showSub(sub||PLAN_SUB); }   // Dive Planner always opens on live results ("Now" period defaults)
@@ -1508,7 +1557,12 @@ function scrollBehavior(){
 }
 function scrollToMatches(){
   var pv=document.getElementById('planViews');
-  if(pv&&!pv.classList.contains('hidden')) pv.scrollIntoView({behavior:scrollBehavior(),block:'start'});
+  if(!pv||pv.classList.contains('hidden')) return;
+  // only pull the results into view when they aren't already visible —
+  // repeated filter tweaks shouldn't yank the page around
+  var r=pv.getBoundingClientRect(), vh=window.innerHeight||800;
+  if(r.top>=0 && r.top<vh*0.5) return;
+  pv.scrollIntoView({behavior:scrollBehavior(),block:'start'});
 }
 function pickRegion(g){
   PLAN_RGROUP=g; PLAN_RDEST='';
@@ -1711,13 +1765,17 @@ function resetPlanFilters(){
   refreshPlanViews(); writePlannerHash();
 }
 
-/* Leaflet (148 KB) loads on demand, the first time the map view opens —
-   the homepage never pays for it. The standalone build inlines it instead. */
+/* Leaflet (148 KB JS + 15 KB CSS) loads on demand, the first time the map
+   view opens — the homepage never pays for it. The standalone build inlines
+   both instead. */
 var LEAFLET_LOADING=false;
 function withLeaflet(cb){
   if(typeof L!=='undefined'){cb();return;}
   if(LEAFLET_LOADING){setTimeout(function(){withLeaflet(cb);},120);return;}
   LEAFLET_LOADING=true;
+  var lk=document.createElement('link');
+  lk.rel='stylesheet'; lk.href='vendor/leaflet.css';
+  document.head.appendChild(lk);
   var s=document.createElement('script');
   s.src='vendor/leaflet.js';
   s.onload=cb;
@@ -1729,7 +1787,7 @@ function initMap(){
   if(MAP) {MAP.invalidateSize();return;}
   MAP=L.map('map',{worldCopyJump:true,minZoom:1,maxZoom:6}).setView([12,15],2);
   // Default basemap: embedded vector land outline (no external tile server).
-  if(LAND) L.geoJSON(LAND,{style:{fillColor:'#b9d4d9',fillOpacity:1,color:'#8fb4bb',weight:0.6}}).addTo(MAP);
+  if(LAND){ window.__landAdded=1; L.geoJSON(LAND,{style:{fillColor:'#b9d4d9',fillOpacity:1,color:'#8fb4bb',weight:0.6}}).addTo(MAP); }
   MARKERS=L.layerGroup().addTo(MAP);
   drawMarkers();
 }
@@ -1870,11 +1928,10 @@ function diffPips(d){
   var s=''; for(var i=0;i<3;i++) s+='<i class="'+(i<n?'on':'')+'"></i>'; return '<span class="pips">'+s+'</span>';
 }
 
-function renderHome(){
-  var pool=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:16});
-  var seenC={}, topAug=[];
-  pool.forEach(function(r){ if(topAug.length<8 && !seenC[r.country]){ seenC[r.country]=1; topAug.push(r); } });
-  var bestGear=(GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.map(function(c,i){
+/* home gear-carousel cards; also used to patch #gcar when the gear guide
+   streams in after first paint */
+function homeGearCards(){
+  return (GEAR_GUIDE&&GEAR_GUIDE.categories?GEAR_GUIDE.categories.map(function(c,i){
     var g=leadItem(c);
     return '<a class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" href="gear/'+gearSlug(g.name)+'.html">'+
       '<div class="dimg">'+(g.image?'<img src="'+g.image+'" alt="'+esc(g.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+'</div>'+
@@ -1885,6 +1942,12 @@ function renderHome(){
     return '<a class="dcard dcard-gear rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" href="#gear" onclick="showTab(\'gear\');return false;">'+
       '<div class="dimg"></div><span class="dcap">'+g.name+'</span>'+
       '<div class="dmeta"><span class="score" style="font-size:.68rem">our top pick</span></div></a>';})).join('');
+}
+function renderHome(){
+  var pool=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:16});
+  var seenC={}, topAug=[];
+  pool.forEach(function(r){ if(topAug.length<8 && !seenC[r.country]){ seenC[r.country]=1; topAug.push(r); } });
+  var bestGear=homeGearCards();
   var sitePrev=topAug.map(function(r,i){
     var dd=DivingCalendar.getDestination(DESTS,r.name)||{};
     return '<a class="dcard rv-x" style="transition-delay:'+Math.min(i*110,440)+'ms" href="destinations/'+(dd.slug||'index')+'.html">'+
@@ -2023,9 +2086,12 @@ function initDcar(id,dotsId){
   var n=c.children.length, marks=Math.min(n,8), html='';
   for(var i=0;i<marks;i++) html+='<span'+(i===0?' class="on"':'')+'></span>';
   dots.innerHTML=html;
+  if(c.__dcarBound) return;   // re-init only rebuilds the dots; one listener per carousel
+  c.__dcarBound=true;
   c.addEventListener('scroll',function(){
+    var m=dots.children.length;
     var max=c.scrollWidth-c.clientWidth;
-    var k=max>0?Math.round(c.scrollLeft/max*(marks-1)):0;
+    var k=max>0?Math.round(c.scrollLeft/max*(m-1)):0;
     [].forEach.call(dots.children,function(s,j){s.classList.toggle('on',j===k);});
   },{passive:true});
 }
@@ -2151,9 +2217,10 @@ var CAT_ICON={'Masks':'mask','Fins':'fins','Regulators':'regulator','BCDs':'bcd'
 function fmtPrice(p){return '$'+(p%1?p.toFixed(2):p);}
 function gearPhoto(item,cat){
   var fallback='<div class="gear-ico"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[CAT_ICON[cat]]||ICONS.tank)+'</svg></div>';
-  return '<div class="gear-photo"><span class="gear-rank">#'+item.rank+'</span>'+
+  // rank lives in the entry heading ("1. Model") — nothing is drawn on product photos (owner ruling)
+  return '<div class="gear-photo">'+
     (item.image?'<img src="'+item.image+'" alt="'+item.name.replace(/"/g,'&quot;')+'" loading="lazy" '+
-      'onerror="this.parentNode.innerHTML=this.parentNode.querySelector(\'.gear-rank\').outerHTML+'+"'"+fallback.replace(/'/g,"\\'").replace(/"/g,'&quot;')+"'"+';">':fallback)+'</div>';
+      'onerror="this.parentNode.innerHTML='+"'"+fallback.replace(/'/g,"\\'").replace(/"/g,'&quot;')+"'"+';">':fallback)+'</div>';
 }
 // Retailers reachable through a named affiliate network rank ahead of
 // Skimlinks-only stores, so on near-equal prices we surface a partner first.
@@ -2250,9 +2317,34 @@ function openCompare(){
     return '<tr class="'+(differ?'diff':'')+'"><td class="rowlab">'+k+'</td>'+vals.map(function(v){return '<td>'+v+'</td>';}).join('')+'</tr>';
   }).join('');
   document.getElementById('cmpBody').innerHTML='<table class="cmptable"><tbody>'+photo+name+price+rows+'</tbody></table>';
-  document.getElementById('cmpModal').classList.remove('hidden');
+  var modal=document.getElementById('cmpModal');
+  modal.classList.remove('hidden');
+  // dialog behaviour: focus moves in, Tab cycles inside, Esc / backdrop close,
+  // focus returns to the trigger on close (same contract as the region picker)
+  window.__cmpReturnFocus=document.activeElement;
+  var closeBtn=modal.querySelector('.cmpmodal-close');
+  if(closeBtn)closeBtn.focus();
+  if(!modal.__wired){
+    modal.__wired=true;
+    modal.addEventListener('click',function(e){ if(e.target===modal) closeCompare(); });
+    modal.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){ e.preventDefault(); closeCompare(); return; }
+      if(e.key!=='Tab') return;
+      var f=[].slice.call(modal.querySelectorAll('button,a[href],input,select,[tabindex]:not([tabindex="-1"])'))
+        .filter(function(el){return el.offsetParent;});
+      if(!f.length) return;
+      var first=f[0], last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey&&document.activeElement===last){ e.preventDefault(); first.focus(); }
+    });
+  }
 }
-function closeCompare(){var m=document.getElementById('cmpModal'); if(m)m.classList.add('hidden');}
+function closeCompare(){
+  var m=document.getElementById('cmpModal'); if(m)m.classList.add('hidden');
+  var r=window.__cmpReturnFocus;
+  if(r&&r.focus&&document.contains(r)) r.focus();
+  window.__cmpReturnFocus=null;
+}
 var GEAR_THICK=null;
 function leadItem(c){return (c.items&&c.items[0])||(c.thickness_groups&&c.thickness_groups[0].items[0])||{};}
 function pickThickness(t){GEAR_THICK=t; renderGear(); window.scrollTo({top:0,behavior:'smooth'});}
@@ -2894,17 +2986,51 @@ function renderDestinations(month){
 
 // Prefer data embedded by the single-file build; otherwise fetch from disk.
 function loadData(){
-  if(window.__DEST_DATA__) return Promise.resolve([window.__DEST_DATA__, window.__LAND_DATA__||null, window.__GEAR_DATA__||null, window.__MARINE_DATA__||null]);
-  return Promise.all([
-    fetch('diving-destinations.json').then(function(r){return r.json();}),
-    fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
-    fetch('gear-guide.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
-    fetch('marine-life.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
-  ]);
+  if(window.__DEST_DATA__) return Promise.resolve(window.__DEST_DATA__);
+  return fetch('diving-destinations.json').then(function(r){return r.json();});
 }
-loadData().then(function(res){
-  var j=res[0]; LAND=res[1]; GEAR_GUIDE=res[2]; MARINE=(res[3]&&res[3].experiences)||[];
+/* First paint waits only on the destinations payload; the gear guide, marine
+   articles and map basemap stream in behind it and patch their views on
+   arrival (renderGear/renderMarine/initMap all tolerate their data being
+   absent). Deep links that need a late payload re-run handleHash on load.
+   The single-file build has everything embedded, so loadRest is synchronous. */
+function loadRest(){
+  if(window.__DEST_DATA__){
+    LAND=window.__LAND_DATA__||null;
+    GEAR_GUIDE=window.__GEAR_DATA__||null;
+    MARINE=(window.__MARINE_DATA__&&window.__MARINE_DATA__.experiences)||[];
+    return;
+  }
+  fetch('gear-guide.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+    .then(function(g){
+      GEAR_GUIDE=g; renderGear();
+      var gc=document.getElementById('gcar');
+      if(gc&&g){ gc.innerHTML=homeGearCards().replace(/rv-x/g,'rv-x in'); initDcar('gcar','gcarDots'); }
+      // a #gear-<cat> deep link arrived before the guide: showTab already
+      // collapsed the hash to #gear, so replay the original one
+      var h0=window.__initialHash||'';
+      if(h0.indexOf('#gear')===0){ window.__initialHash=''; history.replaceState(null,'',h0); handleHash(); }
+    });
+  fetch('marine-life.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+    .then(function(x){
+      MARINE=(x&&x.experiences)||[];
+      if(!document.getElementById('view-marine').classList.contains('hidden')) renderMarine();
+      if((location.hash||'').indexOf('#marine')===0) handleHash();
+    });
+  fetch('vendor/world-land.geojson').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+    .then(function(j){
+      LAND=j;
+      if(j&&MAP&&typeof L!=='undefined'&&!window.__landAdded){
+        window.__landAdded=1;
+        L.geoJSON(LAND,{style:{fillColor:'#b9d4d9',fillOpacity:1,color:'#8fb4bb',weight:0.6}}).addTo(MAP);
+      }
+    });
+}
+window.__initialHash=location.hash||'';
+initHeroMedia();
+loadData().then(function(j){
   DATA=j; DESTS=j.destinations;
+  loadRest();                                      // standalone: fills the embedded payloads synchronously
   initControls();
   applyIcons(); setHeroPhoto();
   renderHome(); renderGear(); renderDestinations(); renderMarine(); buildBrowseDir();

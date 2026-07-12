@@ -189,7 +189,7 @@ footer .disclosure{max-width:780px;margin:14px auto 0;color:var(--muted);font-si
 .gentry{display:grid;grid-template-columns:230px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
 .gphoto{height:170px;border-radius:10px;background:#f4f8f8;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .gphoto img{max-width:92%;max-height:92%;object-fit:contain}
-.gentry h3{margin:0 0 8px;font-size:1.3rem}
+.gentry h2,.gentry h3{margin:0 0 8px;font-size:1.3rem;font-weight:700}
 .greview{color:#33565e;line-height:1.7;margin:0 0 10px}
 .lede{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.45;color:var(--ink);max-width:34ch;margin:14px 0;letter-spacing:-.01em}
 .lede::after{content:"";display:block;width:64px;height:3px;border-radius:2px;margin-top:16px;background:linear-gradient(90deg,var(--accent),transparent)}
@@ -634,13 +634,18 @@ LIVEABOARD_SLUG = {
  "Whitsunday Islands": "australia",
 }
 
-def stay_box(d):
-    """Where-to-stay cross-sell — Booking.com search deep-link (raw; the SPA wraps
-    with the affiliate id) + LiveAboard.com page for liveaboard-oriented sites."""
+def booking_link(d):
+    """(display name, Booking.com search deep-link) for a destination — the one
+    URL builder behind both the hero-adjacent CTA and the where-to-stay box."""
     name = re.sub(r"\s*\(.*?\)\s*", " ", d["name"]).strip()
     country = re.sub(r"\s*\(.*?\)\s*", " ", d.get("country", "")).strip()
     q = (name + ((" " + country) if country and country != name else "")).strip()
-    booking = f"https://www.booking.com/searchresults.html?ss={urllib.parse.quote(q)}&selected_currency=USD"
+    return name, f"https://www.booking.com/searchresults.html?ss={urllib.parse.quote(q)}&selected_currency=USD"
+
+def stay_box(d):
+    """Where-to-stay cross-sell — Booking.com search deep-link (raw; the SPA wraps
+    with the affiliate id) + LiveAboard.com page for liveaboard-oriented sites."""
+    name, booking = booking_link(d)
     access = (d.get("access") or "").lower()
     live = "liveaboard" in access
     board_only = bool(re.match(r"^\s*liveaboard(\s*/\s*day-boat)?\s*$", access))
@@ -792,7 +797,7 @@ def _level_dots(level):
     l = (level or "intermediate").lower()
     n = 3 if ("tec" in l or "advanced" in l) else (2 if "intermediate" in l else 1)
     dots = "".join('<i class="f"></i>' if k <= n else "<i></i>" for k in (1, 2, 3))
-    return f'<span class="s-level"><span class="dots">{dots}</span><em>{esc(level or "intermediate")}</em></span>'
+    return f'<span class="s-level" role="cell"><span class="dots">{dots}</span><em>{esc(level or "intermediate")}</em></span>'
 
 def _species_tag(s):
     """Signature-species chip; links to the marine-life guide when one exists."""
@@ -836,6 +841,12 @@ def page(d, top_month=None):
         hero = (f'<header class="hero plain" style="border-radius:20px">'
                 f'<h1>{esc(d["name"])}</h1></header>')
 
+    # ---- primary booking CTA, hero-adjacent (same URL builder as the
+    # where-to-stay box further down — one quiet button, not a banner)
+    stay_name, stay_url = booking_link(d)
+    hero_cta = (f'<a class="cta" style="margin:18px 0 0" href="{esc(stay_url)}" '
+                f'target="_blank" rel="noopener sponsored">Find stays near {esc(stay_name)} &rarr;</a>')
+
     # ---- season calendar: 12 tonal bars + interactive readout
     cells = ""
     for i, m in enumerate(MONTHS):
@@ -854,7 +865,7 @@ def page(d, top_month=None):
     j = d["monthly"]["Jan"]; jt = d["monthly_temp_c"].get("Jan")
     jtemp = f"{jt}°C" if jt is not None else "—"
     jviz = f'{j.get("visibility_m")} m' if j.get("visibility_m") else "—"
-    readout = (f'<div class="calread">'
+    readout = (f'<div class="calread" aria-live="polite">'
                f'<div class="cr-id"><span class="cr-swatch" id="crSwatch" style="background:{TONAL[j["rating"]]}"></span>'
                f'<span class="cr-month" id="crMonth">January</span>'
                f'<span class="cr-chip" id="crChip">{j["rating"]}</span></div>'
@@ -916,20 +927,22 @@ def page(d, top_month=None):
     sites = d.get("dive_sites") or []
     sites_block = ""
     if sites:
-        head = ('<div class="srow head">'
-                + "".join(f'<span class="lbl">{h}</span>' for h in
+        # ARIA table semantics on the existing CSS grid (visual layout unchanged)
+        head = ('<div class="srow head" role="row">'
+                + "".join(f'<span class="lbl" role="columnheader">{h}</span>' for h in
                           ("Site", "Type", "Depth", "Level", "Why it&#8217;s known"))
                 + "</div>")
         srows = "".join(
-            f'<div class="srow rev"><span class="s-name">{esc(s.get("name"))}</span>'
-            f'<span class="s-type"><span>{esc(_cap(s.get("type") or "Reef"))}</span></span>'
-            f'<span class="s-depth">{esc(s.get("depth") or "—")}</span>'
+            f'<div class="srow rev" role="row"><span class="s-name" role="cell">{esc(s.get("name"))}</span>'
+            f'<span class="s-type" role="cell"><span>{esc(_cap(s.get("type") or "Reef"))}</span></span>'
+            f'<span class="s-depth" role="cell">{esc(s.get("depth") or "—")}</span>'
             f'{_level_dots(s.get("level"))}'
-            f'<span class="s-why">{esc(s.get("blurb"))}</span></div>'
+            f'<span class="s-why" role="cell">{esc(s.get("blurb"))}</span></div>'
             for s in sites)
         sites_block = (f'<section class="sites2 rev"><h2 class="sec-h">Recognised dive sites <em>({len(sites)})</em></h2>'
                        f'<p class="sub">Depths are typical published ranges — always confirm with your operator.</p>'
-                       f'<div class="sitewrap"><div class="sitetable">{head}{srows}</div></div></section>')
+                       f'<div class="sitewrap"><div class="sitetable" role="table" '
+                       f'aria-label="Recognised dive sites at {esc(d["name"])}">{head}{srows}</div></div></section>')
 
     # ---- structured data (unchanged)
     ld = {
@@ -964,6 +977,7 @@ def page(d, top_month=None):
 <main class="wrap">
   <p class="dback"><a href="../index.html#destinations" onclick="if(document.referrer.indexOf(location.host)>-1){{history.back();return false;}}">&larr; Back to destinations</a></p>
   {hero}
+  {hero_cta}
   {f'<p class="lead2 rev">{esc(d["description"])}</p>' if d.get("description") else ""}
   <p class="lead2sub rev">{esc(dest_intro(d))}</p>
   {essays_block(d)}
@@ -1157,7 +1171,10 @@ def _cat_items(cat):
         items += g.get("items") or []
     return items
 
-def gear_entry(item, prefix):
+def gear_entry(item, prefix, htag="h2"):
+    """Ranked-product card. htag: h2 on flat category pages (h1 → h2), h3 when
+    the card sits under an h2 thickness-group heading — keeps heading levels
+    sequential either way. Styling is shared (.gentry h2/.gentry h3 in CSS)."""
     img = item.get("image") or ""
     imgtag = (f'<img src="{prefix}{esc(img)}" alt="{esc(item["name"])}" loading="lazy" '
               f'onerror="this.style.display=\'none\'">' if img else "")
@@ -1168,7 +1185,7 @@ def gear_entry(item, prefix):
                  + "</dl>")
     slug = gear_slug(item["name"])
     return (f'<div class="gentry rev"><div class="gphoto"><a href="{slug}.html">{imgtag}</a></div>'
-            f'<div><h3>{item.get("rank", "")}. <a class="gitem-link" href="{slug}.html">{esc(item["name"])}</a></h3>'
+            f'<div><{htag}>{item.get("rank", "")}. <a class="gitem-link" href="{slug}.html">{esc(item["name"])}</a></{htag}>'
             f'<p class="greview">{esc(item.get("review") or item.get("blurb"))}</p>{specs}{buy_box(item)}'
             f'<p class="meta" style="margin-top:8px"><a href="{slug}.html">Full page: photos, specs &amp; prices &rarr;</a></p></div></div>')
 
@@ -1226,7 +1243,7 @@ def gear_page(cat, prefix="../"):
             tips = "".join(f"<li>{esc(t)}</li>" for t in (g.get("tips") or []))
             if tips:
                 parts.append(f'<div class="tipbox"><b>What to look for</b><ul>{tips}</ul></div>')
-            parts += [gear_entry(it, prefix) for it in g["items"]]
+            parts += [gear_entry(it, prefix, htag="h3") for it in g["items"]]
     else:
         tips = "".join(f"<li>{esc(t)}</li>" for t in (cat.get("tips") or []))
         if tips:
@@ -1488,6 +1505,41 @@ conditions with a local dive centre.</p>
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": "How DiveSZN scores dive destinations",
           "description": desc, "url": url}
     return content_shell("How We Score Dive Destinations | DiveSZN", desc, url, "", None, inner, ld)
+
+def notfound_page():
+    """Branded /404.html for GitHub Pages. Served at ANY depth, so every link —
+    topbar, footer and body — must be root-absolute (the site lives under
+    /Diving-site/, taken from BASE, never hard-coded twice)."""
+    prefix = urllib.parse.urlparse(BASE).path            # "/Diving-site/"
+    links = (
+        (prefix + "index.html", "Dive planner", "Score any destination for your travel dates"),
+        (prefix + "destinations/index.html", "Destination guides", "Season calendars, A to Z"),
+        (prefix + "months/index.html", "Best diving by month", "Twelve monthly guides"),
+        (prefix + "marine-life/index.html", "Marine life", "The encounter files"),
+        (prefix + "gear/index.html", "Scuba gear", "Ranked buyer&#8217;s guides"),
+    )
+    items = "".join(f'<li><a href="{u}"><b>{t}</b><small>{s}</small></a></li>'
+                    for u, t, s in links)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Not Found | DiveSZN</title>
+<meta name="robots" content="noindex">
+{FONTS_LINK}
+<style>{CSS}{V2_CSS}</style>
+</head>
+<body class="v2">
+{topbar(prefix)}
+<header class="hero plain"><h1>Page not found</h1>
+<p>That address does not match any page on DiveSZN — the link may be out of date, or the guide may have moved.</p></header>
+<main class="wrap">
+  <p class="kick">Back on course</p>
+  <ul class="dirlist">{items}</ul>
+  <a class="cta" href="{prefix}index.html">Open the dive planner &rarr;</a>
+</main>
+{footer_html(prefix)}
+</body></html>"""
 
 # ---------------------------------------------------------------- marine life
 # "The encounter files": nine numbered cover stories over the seasonal data.
@@ -2057,6 +2109,23 @@ def main():
         with open(os.path.join(outdir, old_slug + ".html"), "w", encoding="utf-8") as f:
             f.write(stub)
 
+    # renamed slugs (keep old inbound links alive) — meta-refresh + canonical
+    # stub at the old address, pointing at the destination's current page
+    RENAMED = {"ka": "kas"}   # Kaş: pre-transliteration slug (2026-07)
+    for old_slug, new_slug in RENAMED.items():
+        if not any(d["slug"] == new_slug for d in dests):
+            continue
+        new_url = BASE + "destinations/" + new_slug + ".html"
+        with open(os.path.join(outdir, old_slug + ".html"), "w", encoding="utf-8") as f:
+            f.write(f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta http-equiv="refresh" content="0;url={new_slug}.html">
+<link rel="canonical" href="{new_url}">
+<meta name="robots" content="noindex">
+<title>Moved | DiveSZN</title></head>
+<body><p>This guide moved to <a href="{new_slug}.html">{new_url}</a>.</p></body></html>
+""")
+
     # month hubs ("best diving in January" ... one per month)
     monthdir = os.path.join(ROOT, "months")
     os.makedirs(monthdir, exist_ok=True)
@@ -2073,6 +2142,8 @@ def main():
         f.write(score_page())
     with open(os.path.join(ROOT, "privacy.html"), "w", encoding="utf-8") as f:
         f.write(privacy_page())
+    with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8") as f:
+        f.write(notfound_page())
 
     urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html", BASE + "privacy.html",
              BASE + "destinations/index.html", BASE + "gear/index.html", BASE + "months/index.html"]
@@ -2091,7 +2162,7 @@ def main():
     with open(os.path.join(ROOT, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
     print(f"Wrote {len(dests)} destination pages + index, 12 month hubs + index, "
-          f"{len(gear_slugs)} gear pages + index, about + how-we-score + privacy, "
+          f"{len(gear_slugs)} gear pages + index, about + how-we-score + privacy + 404, "
           f"sitemap.xml ({len(urls)} URLs), robots.txt")
 
 if __name__ == "__main__":
