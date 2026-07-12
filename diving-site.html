@@ -879,7 +879,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   th{color:var(--muted);font-weight:700;text-transform:uppercase;font-size:.66rem;letter-spacing:.06em;
        background:rgba(14,110,120,.05)}
   .empty{color:var(--muted);text-align:center;padding:48px 30px;background:var(--glass);
-       border:1px dashed var(--line-strong);border-radius:var(--r)}
+       border:1px dashed var(--line-strong);border-radius:var(--r);grid-column:1/-1}
 
   /* ---------- calendar ---------- */
   .cal-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);
@@ -894,6 +894,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
        z-index:1;max-width:210px;overflow:hidden;text-overflow:ellipsis;padding:6px 10px;border-radius:8px;
        font-weight:600;transition:background .12s}
   .cal td.name:hover{background:#e2eef0}
+  .cal td.name:focus-visible{outline:2px solid var(--accent-deep);outline-offset:-2px;background:#e2eef0}
   .cal td.name small{color:var(--muted);display:block;font-size:.62rem;font-weight:400}
   .cal td.cell{width:40px;height:32px;text-align:center;color:#04202b;font-weight:700;border-radius:7px;cursor:pointer;
        font-family:var(--mono);transition:transform .12s}
@@ -1550,13 +1551,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
     <!-- result views: one at a time; opens on "Best matches" for the current period -->
     <div id="planViews" class="subtabs">
-      <button id="sub-cards" class="active" onclick="showSub('cards')"><i class="ico" data-ico="fish"></i>Best matches</button>
-      <button id="sub-map" onclick="showSub('map')"><i class="ico" data-ico="map"></i>Map</button>
-      <button id="sub-calendar" onclick="showSub('calendar')"><i class="ico" data-ico="calendar"></i>Year calendar</button>
+      <button id="sub-cards" class="active" aria-pressed="true" onclick="showSub('cards')"><i class="ico" data-ico="fish"></i>Best matches</button>
+      <button id="sub-map" aria-pressed="false" onclick="showSub('map')"><i class="ico" data-ico="map"></i>Map</button>
+      <button id="sub-calendar" aria-pressed="false" onclick="showSub('calendar')"><i class="ico" data-ico="calendar"></i>Year calendar</button>
     </div>
 
     <div id="sv-cards" class="subview hidden">
-      <p id="planInfo" class="meta" style="text-align:center"></p>
+      <p id="planInfo" class="meta" style="text-align:center" aria-live="polite"></p>
       <div id="planGrid" class="grid"></div>
       <div id="planMore" style="text-align:center;margin-top:20px"></div>
     </div>
@@ -1568,7 +1569,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         <span><i style="background:#b9c6c9"></i>Closed</span>
       </div>
       <div id="map"></div>
-      <p id="mapNote" class="meta" style="text-align:center"></p>
+      <p id="mapNote" class="meta" style="text-align:center" aria-live="polite"></p>
     </div>
 
     <div id="sv-calendar" class="subview hidden">
@@ -2220,7 +2221,7 @@ function showTab(t){
   if(t==='marine'){ renderMarine(); }
   if(t==='trip'){ showSub(sub||PLAN_SUB); }   // Dive Planner always opens on live results ("Now" period defaults)
   if(t!=='marine') writeHash(t);
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo({top:0,behavior:scrollBehavior()});
 }
 
 /* ---------- Dive Planner result sub-views ---------- */
@@ -2229,7 +2230,9 @@ function showSub(v){
   PLAN_SUB=v;
   ['cards','map','calendar'].forEach(function(x){
     document.getElementById('sv-'+x).classList.toggle('hidden', x!==v);
-    document.getElementById('sub-'+x).classList.toggle('active', x===v);
+    var b=document.getElementById('sub-'+x);
+    b.classList.toggle('active', x===v);
+    b.setAttribute('aria-pressed', x===v?'true':'false');
   });
   if(v==='cards') renderPlanner();
   if(v==='calendar') renderCalendar();
@@ -2362,9 +2365,12 @@ function setRegionBtn(){
   document.getElementById('regionBtn').innerHTML=
     (PLAN_RDEST||PLAN_RGROUP||'Any region')+' <span class="rsel-caret">&#9662;</span>';
 }
+function scrollBehavior(){
+  return (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)?'auto':'smooth';
+}
 function scrollToMatches(){
   var pv=document.getElementById('planViews');
-  if(pv&&!pv.classList.contains('hidden')) pv.scrollIntoView({behavior:'smooth',block:'start'});
+  if(pv&&!pv.classList.contains('hidden')) pv.scrollIntoView({behavior:scrollBehavior(),block:'start'});
 }
 function pickRegion(g){
   PLAN_RGROUP=g; PLAN_RDEST='';
@@ -2402,6 +2408,12 @@ function initControls(){
   ['calSort','calShow'].forEach(function(id){
     document.getElementById(id).addEventListener('change',renderCalendar);
   });
+  // keyboard: Enter/Space on a calendar destination name opens its profile
+  document.getElementById('calTable').addEventListener('keydown',function(e){
+    if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('name')){
+      e.preventDefault(); e.target.click();
+    }
+  });
   document.getElementById('gearCat').addEventListener('change',function(){GEAR_ARTICLE='';renderGear();});
   document.getElementById('gearSearch').addEventListener('input',gearFilter);
   document.getElementById('gearSearch').addEventListener('keydown',function(e){
@@ -2412,11 +2424,15 @@ function initControls(){
     }
   });
   // Any planner selection refreshes the active result view (and the URL state).
-  ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){
-    var e=document.getElementById(id);
-    var h=function(){planShown=3;refreshPlanViews();writePlannerHash();scrollToMatches();};
-    e.addEventListener('change',h); e.addEventListener('input',h);
+  // The free-typed °C field debounces so results don't re-rank on every keystroke.
+  var h=function(){planShown=3;refreshPlanViews();writePlannerHash();scrollToMatches();};
+  ['planPeriod','planDiff','planWater','planCur'].forEach(function(id){
+    document.getElementById(id).addEventListener('change',h);
   });
+  var tempTimer;
+  var te=document.getElementById('planTemp');
+  te.addEventListener('input',function(){clearTimeout(tempTimer);tempTimer=setTimeout(h,350);});
+  te.addEventListener('change',function(){clearTimeout(tempTimer);h();});
 }
 
 function renderCalendar(){
@@ -2441,7 +2457,7 @@ function renderCalendar(){
       return '<td class="cell'+(m===hlMonth?' hl':'')+'" style="background:'+RCOLOR[mm.rating]+';color:'+RTEXT[mm.rating]+'" title="'+title.replace(/"/g,'&quot;')+
         '" onclick="openProfile(\''+esc(d.name)+'\')">'+txt+'</td>';
     }).join('');
-    return '<tr><td class="name" onclick="openProfile(\''+esc(d.name)+'\')">'+d.name+
+    return '<tr><td class="name" role="button" tabindex="0" onclick="openProfile(\''+esc(d.name)+'\')">'+d.name+
       '<small>'+d.country+' · <span class="cur-'+d.current_strength+'">'+d.current_strength+' current</span></small></td>'+cells+'</tr>';
   }).join('');
   document.getElementById('calTable').innerHTML=head+'<tbody>'+body+'</tbody>';
@@ -2500,7 +2516,8 @@ function renderPlanner(){
   });
   if(!full.length){
     document.getElementById('planInfo').textContent='';
-    g.innerHTML='<div class="empty">No destinations match these filters for '+pinfo.label+'.</div>';
+    g.innerHTML='<div class="empty">No destinations match these filters for '+pinfo.label+'.'+
+      '<div style="margin-top:14px"><button class="btn ghost" onclick="resetPlanFilters()">Reset filters</button></div></div>';
     more.innerHTML=''; return;
   }
   var cap=Math.min(planShown, full.length);
@@ -2510,11 +2527,18 @@ function renderPlanner(){
   g.innerHTML=shown.map(function(r){return plannerCard(r,pinfo.month);}).join('');
   if(cap<full.length){
     var nextLabel = planShown<10 ? 'See more — top 10' : 'See more — next '+Math.min(5,full.length-cap);
-    more.innerHTML='<a class="btn ghost" href="#" onclick="planMoreClick();return false;">'+nextLabel+' '+ico('chevron',14)+'</a>';
+    more.innerHTML='<button class="btn ghost" onclick="planMoreClick()">'+nextLabel+' '+ico('chevron',14)+'</button>';
   } else more.innerHTML='';
   fillDestCovers();
 }
 function planMoreClick(){ planShown = planShown<10 ? 10 : planShown+5; renderPlanner(); }
+function resetPlanFilters(){
+  ['planPeriod','planDiff','planWater','planCur','planTemp'].forEach(function(id){document.getElementById(id).value='';});
+  PLAN_RGROUP=''; PLAN_RDEST='';
+  setRegionBtn();
+  planShown=(window.innerWidth>820)?10:3;
+  refreshPlanViews(); writePlannerHash();
+}
 
 function initMap(){
   if(typeof L==='undefined'){document.getElementById('mapNote').textContent='Map library could not load. Coordinates are still in the data.';return;}
