@@ -137,6 +137,7 @@ DEST_REQUIRE = {
 # Visually-vetted exact Commons files, tried before any search (mirrors the
 # marine fetcher's PINNED map) — for destinations where search keeps missing.
 DEST_PINNED = {
+    "Sharm El Sheikh": ["File:AlternativesCorals.jpg"],
     "Protea Banks": ["File:Tide Pool, Ramsgate Beach.jpg"],
     # Genuine Fuvahmulah shot (photo audit 2026-07: the previous hero was a
     # Tiger Beach, Bahamas file). No genuine Fuvahmulah underwater photo
