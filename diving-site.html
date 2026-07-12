@@ -745,18 +745,20 @@ svg.leaflet-image-layer.leaflet-interactive path {
        color:rgba(233,247,246,.55);font-family:var(--mono)}
   /* hero mosaic — the whole band is graded blocks that resize like windows
      over a pale ghost base, faithful to the reference recording */
+  /* strips are fixed-size windows; only the clip edge moves (paint, not layout —
+     animating width re-laid-out and rescaled three videos every frame) */
   .hbm{position:absolute;overflow:hidden}
   .hbm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hbm-coral{left:9%;top:0;bottom:0;width:34%;z-index:1;animation:hbmB 9s ease-in-out infinite alternate}
+  .hbm-coral{left:9%;top:0;bottom:0;width:40%;z-index:1;animation:hbmB 9s ease-in-out infinite alternate}
   .hbm-coral video{filter:sepia(1) saturate(2) hue-rotate(-16deg) brightness(1.12) contrast(1.1)}
-  .hbm-sage{left:0;top:0;bottom:0;width:22%;z-index:2;animation:hbmA 12s ease-in-out infinite alternate}
+  .hbm-sage{left:0;top:0;bottom:0;width:30%;z-index:2;animation:hbmA 12s ease-in-out infinite alternate}
   .hbm-sage video{filter:sepia(1) saturate(1.15) hue-rotate(100deg) brightness(1.16) contrast(1.06)}
-  .hbm-lilac{right:0;top:0;bottom:0;width:26%;z-index:1;animation:hbmC 10s ease-in-out infinite alternate}
+  .hbm-lilac{right:0;top:0;bottom:0;width:33%;z-index:1;animation:hbmC 10s ease-in-out infinite alternate}
   .hbm-lilac video{filter:sepia(1) saturate(1.35) hue-rotate(205deg) brightness(1.2) contrast(1.02)}
-  @keyframes hbmA{from{width:14%}to{width:30%}}
-  @keyframes hbmB{from{width:40%}to{width:24%}}
-  @keyframes hbmC{from{width:17%}to{width:33%}}
-  @media(prefers-reduced-motion:reduce){.hbm{animation:none}}
+  @keyframes hbmA{from{clip-path:inset(0 53.3% 0 0)}to{clip-path:inset(0 0 0 0)}}
+  @keyframes hbmB{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 40% 0 0)}}
+  @keyframes hbmC{from{clip-path:inset(0 0 0 48.5%)}to{clip-path:inset(0 0 0 0)}}
+  @media(prefers-reduced-motion:reduce){.hbm{animation:none;clip-path:none}}
   .hero{position:relative;overflow:hidden;text-align:center;padding:clamp(56px,9vh,110px) 18px;
         display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:78vh;
         background:radial-gradient(1100px 460px at 50% -180px,rgba(47,224,214,.22) 0%,rgba(14,156,146,.08) 50%,transparent 100%)}
@@ -771,6 +773,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .tagline{color:var(--muted);margin:24px auto 4px;font-size:1.04rem;line-height:1.65;max-width:60ch}
   .subtag{color:var(--muted);font-size:.82rem;margin:0;font-family:var(--mono);letter-spacing:.04em}
   .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  /* the headline follows the band intro in: one orchestrated arrival, staggered
+     like a breath out — plays once per page load, same as the band */
+  @keyframes heroRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .hero h1{animation:heroRise .65s cubic-bezier(.2,.7,.2,1) 1.35s both}
+  .hero .tagline{animation:heroRise .65s cubic-bezier(.2,.7,.2,1) 1.55s both}
+  .hero .hero-cta{animation:heroRise .65s cubic-bezier(.2,.7,.2,1) 1.75s both}
+  @media(prefers-reduced-motion:reduce){.hero h1,.hero .tagline,.hero .hero-cta{animation:none}}
 
   /* ---------- nav tabs (inside the topbar: brand left, tabs right) ---------- */
   .tabs{display:flex;gap:6px;align-items:center;margin-left:auto;min-width:0;
@@ -956,17 +965,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
        width:100vw;margin:-30px 0 0 calc(50% - 50vw);border-radius:0}
   /* the near-native aspect keeps the photo wide rather than cropped-in */
   @media(max-width:640px){.crew-slide{height:clamp(340px,96vw,560px)}}
-  .crew-photo{position:absolute;inset:0;background:#dbe9ec}
-  .crew-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .crew-photo{position:absolute;inset:0;background:#dbe9ec;overflow:hidden}
+  /* the photo settles from a slight zoom as the slide is scrolled in (transform-only) */
+  .crew-photo img{width:100%;height:100%;object-fit:cover;display:block;
+       transform:scale(calc(1.07 - min(1,var(--cp,0)*1.1)*.07))}
   .crew-stats{position:absolute;top:0;right:0;bottom:0;width:clamp(200px,34%,420px);
-       display:grid;grid-template-rows:1fr 1fr;transform:translateX(calc((1 - var(--cp,0))*112%))}
+       display:grid;grid-template-rows:1fr 1fr}
+  /* each stat card rides its own slice of the scroll progress — the second
+     trails the first, so the panel arrives as two beats instead of one block */
+  .crew-a{transform:translateX(calc((1 - min(1,var(--cp,0)*1.18))*112%))}
+  .crew-b{transform:translateX(calc((1 - max(0,min(1,var(--cp,0)*1.35 - .35)))*118%))}
   .crew-stat{padding:clamp(16px,2.4vw,30px);display:flex;flex-direction:column;justify-content:flex-start}
   .crew-stat b{font-family:var(--mono);font-weight:600;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1;color:#10242a}
   .crew-stat span{font-size:clamp(.72rem,1.1vw,.9rem);color:#22383d;margin-top:10px;max-width:24ch;line-height:1.5}
   .crew-a{background:#d9c8f0}
   .crew-b{background:#dcead9}
   .crew-credit{position:absolute;left:10px;bottom:8px;font-family:var(--mono);font-size:.58rem;color:rgba(255,255,255,.75)}
-  @media(prefers-reduced-motion:reduce){.crew-stats{transform:none}}
+  @media(prefers-reduced-motion:reduce){.crew-stats,.crew-stat,.crew-photo img{transform:none}}
   /* home sections: full-bleed editorial bands so the whole page reads like the
      hero + crew slide — alternating washes, centered serif heads, mono kickers */
   .hband{width:100vw;margin:0 0 0 calc(50% - 50vw);padding:clamp(64px,11vh,120px) 18px;
@@ -2122,6 +2137,25 @@ function crewScroll(){
   var p=(vh - r.top - r.height*0.30)/(vh*0.5);
   p=Math.max(0,Math.min(1,p));
   el.style.setProperty('--cp',p.toFixed(3));
+  if(p>=0.15) crewCount();
+}
+/* the two headline numbers count up once, as their cards slide in; the final
+   value is in the markup so no-JS and reduced-motion readers see it as-is */
+function crewCount(){
+  if(window.__crewCounted) return;
+  window.__crewCounted=true;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  [].slice.call(document.querySelectorAll('#crewSlide .crew-stat b')).forEach(function(b){
+    var target=parseInt(b.textContent,10); if(!target) return;
+    var t0=null, dur=1100;
+    function step(ts){
+      if(t0==null)t0=ts;
+      var x=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-x,3);   // ease-out cubic
+      b.textContent=Math.round(target*e);
+      if(x<1) requestAnimationFrame(step); else b.textContent=target;
+    }
+    requestAnimationFrame(step);
+  });
 }
 var HERO_VIDEO={webm:'https://donlybero.github.io/Diving-site/assets/video/hero-dive.webm', mp4:'https://donlybero.github.io/Diving-site/assets/video/hero-dive.mp4',
   poster:'https://donlybero.github.io/Diving-site/assets/video/hero-dive-poster.jpg', credit:'Video via Pexels'};
