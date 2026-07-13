@@ -58,93 +58,90 @@ function seRing(cx0, cy0, z, a, b, n, count){
   return r;
 }
 
-// ---- mask body: lofted skirt from small front frame to wide face seal ----
-const RING_CT = 76;
-const K = 8;                       // loft segments
-const zFront = 0.55, zBack = -0.85;
-const frontA = 1.16, frontB = 0.82;
-const backScale = 1.34;
-const rings = [];
-for (let k=0;k<=K;k++){
-  const t = k/K;
-  const sc = 1 + (backScale-1)*t;
-  const z  = zFront + (zBack-zFront)*t;
-  // sink the whole thing slightly as it goes back (face contour)
-  const yo = -0.02 * t;
-  const ring = seRing(0, yo, z, frontA*sc, frontB*sc, 4.0, RING_CT);
-  rings.push(ring);
-  poly(ring, true, k===0 ? 1.25 : (k===K ? 0.85 : 0.6));   // frame rim brightest
-}
-// longitudinal rails across the skirt
-for (let i=0;i<RING_CT;i+=6){
-  const rail = rings.map(r => r[i]);
-  poly(rail, false, 0.5);
-}
+// =====  SCUBA DIVE MASK  (single tempered lens + nose pocket)  =====
+//  Anatomy that makes it read as a dive mask, not goggles:
+//   1. one wide domed lens up top   2. a nose-pocket pouch bulging
+//   forward + down below it   3. a soft skirt tapering back to a
+//   face-seal oval   4. a split head strap on side buckles.
+const CT = 84;                     // points per ring
+const nRR = 3.0;                   // rounded-rectangle exponent (lens/frame)
 
-// ---- twin lenses on the front frame ----
-function lens(ox){
-  const zL = 0.60, apexZ = 0.74;
-  const a = 0.44, b = 0.54;
-  // concentric domed rings (front glass)
-  for (let ci=0; ci<3; ci++){
-    const s = 1 - ci*0.33;
-    const zz = zL + (apexZ - zL) * (ci/3) * 0.9;
-    poly(seRing(ox, -0.02, zz, a*s, b*s, 3.4, 48), true, ci===0?1.1:0.7);
-  }
-  // radial spokes from apex to outer ring
-  const outer = seRing(ox, -0.02, zL, a, b, 3.4, 48);
-  const apex = [ox, -0.02, apexZ];
-  for (let i=0;i<48;i+=6){ poly([apex, outer[i]], false, 0.5); }
+// ---- front frame plane + the lens ----
+const zF = 0.46;                   // frame front plane
+const fw = 1.12, fh = 0.66;        // frame half-size (wider than tall)
+const frameRing = seRing(0, 0, zF, fw, fh, nRR, CT);
+poly(frameRing, true, 1.35);                                  // bright bezel
+const lensRing  = seRing(0, 0, zF+0.02, fw*0.90, fh*0.85, nRR, CT);
+poly(lensRing, true, 1.05);                                   // glass edge
+// domed glass: concentric rings + radial spokes toward a forward apex
+const gApex = [0, 0, zF+0.22];
+for (let c=1;c<=2;c++){
+  const s  = 1 - c*0.30;
+  const zz = (zF+0.02) + (gApex[2]-(zF+0.02))*(c/3);
+  poly(seRing(0, 0, zz, fw*0.90*s, fh*0.85*s, nRR, 56), true, 0.5);
 }
-lens(-0.505);
-lens( 0.505);
+const gEdge = seRing(0, 0, zF+0.02, fw*0.90, fh*0.85, nRR, 56);
+for (let i=0;i<56;i+=7) poly([gApex, gEdge[i]], false, 0.38);
 
-// nose bridge between lenses
-for (let j=-1;j<=1;j++){
-  const y = -0.02 + j*0.16;
-  poly([[-0.10, y, 0.60],[0.10, y, 0.60]], false, 0.55);
+// ---- skirt: loft frame -> face-seal oval, with a soft silicone bulge ----
+const zB = -0.62;                  // face-seal plane
+const sealW = 1.30, sealH = 1.08;  // seal half-size (taller -> covers cheeks)
+const sealYo = -0.16;              // seal centre drops over the nose
+const SK = 7;
+const skirtRings = [];
+for (let k=0;k<=SK;k++){
+  const t = k/SK;
+  const bulge = Math.sin(t*Math.PI)*0.09;          // barrel out then seal
+  const w = fw + (sealW-fw)*t + bulge;
+  const h = fh + (sealH-fh)*t + bulge;
+  const z = zF + (zB-zF)*t;
+  const ring = seRing(0, sealYo*t, z, w, h, nRR - 0.7*t, CT); // softens to oval
+  skirtRings.push(ring);
+  poly(ring, true, k===SK ? 1.05 : 0.34);          // sealing lip brighter
 }
+for (let i=0;i<CT;i+=7)                              // sparse soft rails
+  poly(skirtRings.map(r=>r[i]), false, 0.30);
 
-// ---- nose pocket (pouch protruding forward, below the bridge) ----
-const npZ = 0.80;
-const npRing = seRing(0, -0.30, npZ, 0.34, 0.30, 2.6, 40);
-poly(npRing, true, 0.8);
-// connect pocket back to the front frame
-const frame0 = rings[0];
-for (let i=0;i<40;i+=5){
-  // nearest frame point on the lower-front band
-  const src = npRing[i];
-  const dst = [src[0]*1.05, -0.62 + src[1]*0.15, 0.56];
-  poly([src, dst], false, 0.4);
+// ---- nose pocket: pouch bulging forward + downward from lower frame ----
+const NP = 6;
+const npRings = [];
+for (let k=0;k<=NP;k++){
+  const t  = k/NP;
+  const cyv = -fh*0.86 - t*0.70;                    // travels down
+  const czv = zF + Math.sin(t*Math.PI*0.85)*0.36;   // forward belly then tip
+  const w = 0.54*(1-0.74*t) + 0.05;
+  const h = 0.17*(1-0.45*t) + 0.05;
+  const ring = seRing(0, cyv, czv, w, h, 2.5, 40);
+  npRings.push(ring);
+  poly(ring, true, k===0 ? 0.5 : 0.78);
 }
+for (let i=0;i<40;i+=5)
+  poly(npRings.map(r=>r[i]), false, 0.42);
 
-// ---- split head strap: two arcs wrapping behind ----
+// ---- split head strap + side buckles ----
 function strapArc(y){
   const pts = [];
-  const cxo=0, czo=-0.80, rx=1.02, rz=1.10;
-  // sweep the BACK ~250deg, leaving a gap at the front (mask side)
-  const a0 = -0.30*Math.PI, a1 = 1.30*Math.PI;
-  const seg = 60;
+  const cxo=0, czo=-0.95, rx=1.16, rz=1.12;
+  const a0 = -0.20*Math.PI, a1 = 1.20*Math.PI, seg = 54;
   for (let i=0;i<=seg;i++){
     const t = a0 + (a1-a0)*i/seg;
     pts.push([cxo + rx*Math.cos(t), y, czo + rz*Math.sin(t)]);
   }
-  poly(pts, false, 0.55);
+  poly(pts, false, 0.5);
 }
-strapArc( 0.28);
+strapArc( 0.18);
 strapArc(-0.28);
-// buckle tabs connecting frame sides to strap ends
-[[1],[-1]].forEach(([sgn])=>{
-  const fx = sgn*frontA*1.02;
-  poly([[fx,0.30,0.30],[sgn*1.30,0.30,-0.55]], false, 0.5);
-  poly([[fx,-0.30,0.30],[sgn*1.30,-0.30,-0.55]], false, 0.5);
+[1,-1].forEach(sgn=>{                                // buckle tab at each side
+  const bx = sgn*1.22, bz = -0.16;
+  poly([[bx,0.20,bz+0.06],[bx,-0.30,bz+0.06],
+        [bx+sgn*0.14,-0.30,bz-0.10],[bx+sgn*0.14,0.20,bz-0.10]], true, 0.55);
 });
 
 // ============================================================
 //  Transform + project
 // ============================================================
-const MODEL_SCALE = 0.60;   // shrink so the hologram floats above the stand
-const MODEL_LIFT  = 0.42;   // raise it clear of the emitter
+const MODEL_SCALE = 0.56;   // shrink so the hologram floats above the stand
+const MODEL_LIFT  = 0.54;   // raise it clear of the emitter (nose pocket hangs low)
 function xform(p, ang, bob){
   let x = p[0]*MODEL_SCALE, y = p[1]*MODEL_SCALE, z = p[2]*MODEL_SCALE;
   // spin about Y
@@ -392,7 +389,7 @@ function drawVignette(){
 // ============================================================
 function renderFrame(i){
   const p = (i % TOTAL) / TOTAL;          // 0..1
-  const ang = p * Math.PI * 2;            // full revolution -> seamless loop
+  const ang = -0.55 + p * Math.PI * 2;    // start on a 3/4 view; seamless loop
   const bob = Math.sin(p*Math.PI*2) * 0.05;
   const cy  = cyBase - bob*focal/(camZ)*0.0;  // (bob handled in model Y)
   // holographic flicker (integer cycles -> loops)
