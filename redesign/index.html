@@ -5,338 +5,334 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DiveSZN — Know when to dive where</title>
 <meta name="description" content="A seasonal scuba dive-trip planner: pick a month and see which destinations are at their best — season rating, water temperature, visibility and marine life.">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="dark">
 </head>
 <body>
 <style>
 /* ============================================================================
-   DiveSZN — homepage redesign
-   Deliberate SINGLE (light) theme: DiveSZN is a light/white dive publication
-   (the deep-teal dark theme was retired by the owner, 2026-07). "Depth" is
-   expressed as tonal teal deepening within the light palette, never light→black.
-   Fonts use the brand's own system-fallback stacks (CSP blocks font CDNs), so
-   the serif reads as Georgia-class, sans as system-ui, mono as ui-monospace.
+   DiveSZN — homepage redesign · "Deep Water" edition
+   A deliberately DARK, cinematic single-theme cut: full-bleed underwater video,
+   real dive-site photography, deep-ocean grounds with luminous teal. Brand DNA
+   kept: whale-fluke mark, Dive<b>SZN</b> wordmark, serif/sans/mono three-voice
+   type, and the tonal season palette (Peak..Closed) used verbatim on chips.
+   Fonts use the brand's system-fallback stacks (CSP blocks font CDNs).
    ========================================================================== */
 :root{
-  --bg:#f4f9f9; --bg2:#e8f1f2; --panel:#ffffff; --panel2:#f2f8f8;
-  --ink:#0e2f37; --ink-soft:#33565e; --muted:#4a6a71;
+  --abyss:#03141a; --deep:#06222b; --deep2:#0a2c37; --deep3:#0e3742;
+  --panel:rgba(210,245,242,.045); --panel2:rgba(210,245,242,.07);
+  --glass:rgba(6,30,37,.55); --glass2:rgba(8,36,44,.72);
+  --ink:#eaf7f5; --soft:#a7cec9; --muted:#6f9a95; --faint:#4d716d;
   --peak:#0e7569; --good:#5cb8ab; --shoulder:#dfa826; --low:#cfe4e0; --closed:#b9c6c9;
-  --accent:#0e9c92; --accent-deep:#0b7d75; --aqua:#2fe0d6; --aqua-soft:#7fe6dd;
-  --coral:#ff7a59;                 /* buy/booking CTAs ONLY — unused on homepage */
-  --line:rgba(13,80,90,.14); --line-strong:rgba(13,80,90,.26);
-  --shadow:0 18px 40px -18px rgba(13,60,70,.16);
-  --shadow-glow:0 0 0 1px rgba(14,156,146,.14),0 24px 54px -22px rgba(13,60,70,.24);
+  --aqua:#2fe0d6; --aqua2:#57ece3; --accent:#25c3b8; --accent-deep:#0e9c92;
+  --coral:#ff7a59;                     /* buy/booking only — unused on homepage */
+  --line:rgba(120,220,214,.14); --line-2:rgba(120,220,214,.26);
+  --glow:0 0 0 1px rgba(47,224,214,.14),0 30px 70px -30px rgba(0,0,0,.7);
   --serif:'Fraunces',Georgia,'Iowan Old Style','Times New Roman',serif;
   --sans:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-  --r:18px; --r-sm:12px; --r-lg:26px;
+  --r:16px; --r-sm:11px; --r-lg:26px;
   --ease:cubic-bezier(.22,.61,.36,1); --ease-out:cubic-bezier(.16,1,.3,1);
-  --dur:.5s;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;font-family:var(--sans);color:var(--ink);line-height:1.55;
-  background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  background:var(--deep);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
   overflow-x:hidden;padding-bottom:38px}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;line-height:1.1;
-  text-wrap:balance;margin:0}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.018em;line-height:1.06;
+  text-wrap:balance;margin:0;color:#fff}
 p{margin:0}
-a{color:var(--accent-deep);text-decoration:none;transition:color .16s var(--ease)}
-a:hover{color:var(--ink)}
-img,svg{max-width:100%}
-:focus-visible{outline:2.5px solid var(--accent-deep);outline-offset:3px;border-radius:6px}
+a{color:var(--aqua2);text-decoration:none;transition:color .16s var(--ease)}
+a:hover{color:#fff}
+img{max-width:100%;display:block}
+:focus-visible{outline:2.5px solid var(--aqua);outline-offset:3px;border-radius:6px}
 .mono{font-family:var(--mono)}
-.kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;
-  color:var(--accent-deep);display:inline-flex;align-items:center;gap:9px}
-.kicker::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--accent))}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;
-  border-radius:8px;z-index:200}
+.kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--aqua);display:inline-flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:1px;background:linear-gradient(90deg,transparent,var(--aqua))}
+.skip{position:absolute;left:-999px;top:8px;background:var(--aqua);color:#04202a;padding:10px 16px;
+  border-radius:8px;z-index:200;font-weight:700}
 .skip:focus{left:12px}
-.wrap{width:min(1160px,92vw);margin:0 auto}
+.wrap{width:min(1180px,92vw);margin:0 auto}
 
-/* ---------- depth gauge (fixed scroll indicator) ---------- */
-.gauge{position:fixed;top:50%;right:16px;transform:translateY(-50%);z-index:60;
+/* ---------- depth gauge ---------- */
+.gauge{position:fixed;top:50%;right:15px;transform:translateY(-50%);z-index:60;
   display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none;
   opacity:0;transition:opacity .6s var(--ease)}
 .gauge.on{opacity:1}
-.gauge .rail{width:2px;height:190px;background:var(--line-strong);border-radius:2px;position:relative;overflow:hidden}
+.gauge .rail{width:2px;height:200px;background:rgba(120,220,214,.16);border-radius:2px;position:relative;overflow:hidden}
 .gauge .fill{position:absolute;left:0;top:0;width:100%;height:0;
   background:linear-gradient(180deg,var(--aqua),var(--accent-deep))}
-.gauge .depth{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--muted);
+.gauge .depth{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:var(--soft);
   font-variant-numeric:tabular-nums;writing-mode:vertical-rl;text-orientation:mixed}
 @media(max-width:900px){.gauge{display:none}}
 
 /* ---------- top bar ---------- */
-.topbar{position:sticky;top:0;z-index:70;display:flex;align-items:center;gap:16px;
-  padding:13px clamp(14px,4vw,30px);
-  background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(150%);
-  -webkit-backdrop-filter:blur(16px) saturate(150%);border-bottom:1px solid transparent;
-  transition:border-color .3s,background .3s}
-.topbar.scrolled{border-bottom-color:var(--line);background:rgba(255,255,255,.86)}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;align-items:center;gap:16px;
+  padding:15px clamp(14px,4vw,34px);transition:background .35s,backdrop-filter .35s,padding .35s,border-color .35s;
+  border-bottom:1px solid transparent}
+.topbar.scrolled{background:rgba(4,22,28,.72);backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);border-bottom-color:var(--line);padding-top:11px;padding-bottom:11px}
 .brand{display:inline-flex;align-items:center;gap:11px;color:inherit;cursor:pointer}
-.brand .fluke{width:46px;filter:drop-shadow(0 3px 9px rgba(14,156,146,.35))}
-.brand .name{font-family:var(--serif);font-size:1.5rem;font-weight:600;letter-spacing:.2px}
-.brand .name b{color:var(--accent);font-weight:600}
-.topbar .brand .tag{display:block;font-family:var(--mono);font-size:.54rem;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--muted);margin-top:2px}
-.nav{margin-left:auto;display:flex;align-items:center;gap:4px}
-.nav a{font-size:.9rem;font-weight:500;color:var(--ink-soft);padding:8px 12px;border-radius:9px;
-  transition:background .16s,color .16s}
-.nav a:hover{background:var(--panel2);color:var(--ink)}
-.nav .btn{margin-left:6px}
-.topbar{flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;
-  font-size:.92rem;padding:11px 20px;border-radius:999px;cursor:pointer;border:1px solid transparent;
-  transition:transform .18s var(--ease),box-shadow .22s,background .2s,color .2s}
-.btn-primary{background:var(--accent-deep);color:#fff;box-shadow:0 12px 26px -12px rgba(11,125,117,.7)}
-.btn-primary:hover{transform:translateY(-2px);color:#fff;box-shadow:0 18px 34px -14px rgba(11,125,117,.8)}
-.btn-ghost{background:rgba(255,255,255,.6);color:var(--ink);border-color:var(--line-strong)}
-.btn-ghost:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--ink)}
-@media(max-width:820px){.nav a:not(.btn){display:none}}
-@media(max-width:620px){.nav{display:none}.topbar{justify-content:space-between}}
+.brand .fluke{width:46px;filter:drop-shadow(0 3px 12px rgba(47,224,214,.5))}
+.brand .name{font-family:var(--serif);font-size:1.5rem;font-weight:600;letter-spacing:.2px;color:#fff}
+.brand .name b{color:var(--aqua);font-weight:600}
+.brand .tag{display:block;font-family:var(--mono);font-size:.54rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--soft);margin-top:2px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.nav a{font-size:.9rem;font-weight:500;color:var(--soft);padding:9px 13px;border-radius:9px;transition:background .16s,color .16s}
+.nav a:hover{background:var(--panel2);color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:.92rem;
+  padding:11px 20px;border-radius:999px;cursor:pointer;border:1px solid transparent;
+  transition:transform .18s var(--ease),box-shadow .22s,background .2s,color .2s,border-color .2s}
+.btn-primary{background:var(--aqua);color:#04202a;box-shadow:0 12px 30px -12px rgba(47,224,214,.6)}
+.btn-primary:hover{transform:translateY(-2px);color:#04202a;box-shadow:0 18px 40px -14px rgba(47,224,214,.8)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:var(--line-2);backdrop-filter:blur(6px)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:var(--aqua);color:#fff}
+.nav .btn{margin-left:8px}
+@media(max-width:860px){.nav a:not(.btn){display:none}}
+@media(max-width:600px){.nav{display:none}}
 
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;
-  overflow:hidden;padding:60px clamp(14px,4vw,30px) 40px;margin-top:-64px;padding-top:120px}
-#ocean{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
-.hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(244,249,249,.35) 0%,rgba(244,249,249,0) 22%,rgba(244,249,249,.05) 70%,var(--bg) 100%)}
-.hero-in{position:relative;z-index:2;width:100%;max-width:1160px;margin:0 auto;display:grid;
-  grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+/* ---------- hero (video) ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;
+  padding:120px clamp(14px,4vw,34px) 90px}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-media video,.hero-media img{position:absolute;inset:0;width:100%;height:118%;object-fit:cover;
+  will-change:transform}
+.hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+   radial-gradient(120% 90% at 20% 30%,rgba(3,20,26,.35),transparent 60%),
+   linear-gradient(180deg,rgba(3,20,26,.55) 0%,rgba(3,20,26,.25) 30%,rgba(4,22,28,.55) 70%,var(--deep) 100%),
+   linear-gradient(90deg,rgba(3,20,26,.75) 0%,rgba(3,20,26,.2) 45%,transparent 70%)}
+#bubbles{position:absolute;inset:0;z-index:2;pointer-events:none}
+.hero-in{position:relative;z-index:3;width:min(1180px,92vw);margin:0 auto;display:grid;
+  grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 .hero-in>*{min-width:0}
-.now-card{max-width:100%}
-.hero-copy .eyebrow{margin-bottom:22px}
-.hero h1{font-size:clamp(2.5rem,6.2vw,4.6rem);line-height:1.02;letter-spacing:-.03em;overflow-wrap:break-word}
-.hero h1 .em{font-style:italic;color:var(--accent-deep)}
-.hero .sub{margin-top:22px;font-size:clamp(1.02rem,1.6vw,1.22rem);color:var(--ink-soft);
-  max-width:34ch;line-height:1.5}
-.hero .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
-.hero .btn-primary{padding:14px 26px;font-size:1rem}
-.hero .btn-ghost{padding:14px 24px;font-size:1rem}
-.hero .stats{margin-top:34px;display:flex;gap:28px;flex-wrap:wrap}
-.hero .stat b{font-family:var(--serif);font-size:1.7rem;display:block;line-height:1}
-.hero .stat span{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--muted)}
-/* live "in season now" card */
-.now-card{background:rgba(255,255,255,.78);backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);border:1px solid var(--line-strong);border-radius:var(--r-lg);
-  padding:22px;box-shadow:var(--shadow-glow)}
-.now-card .nc-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
-.now-card .nc-badge{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--accent-deep);display:inline-flex;align-items:center;gap:7px}
-.pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--peak);
-  box-shadow:0 0 0 0 rgba(14,117,105,.55);animation:dot 2.4s var(--ease) infinite}
-@keyframes dot{0%{box-shadow:0 0 0 0 rgba(14,117,105,.5)}70%{box-shadow:0 0 0 9px rgba(14,117,105,0)}100%{box-shadow:0 0 0 0 rgba(14,117,105,0)}}
+.hero .eyebrow{margin-bottom:22px;animation:fadeUp .8s var(--ease-out) both}
+.hero h1{font-size:clamp(2.7rem,6.6vw,5.4rem);line-height:.98;letter-spacing:-.035em;color:#fff;
+  overflow-wrap:break-word;text-shadow:0 4px 40px rgba(0,0,0,.4)}
+.hero h1 .em{font-style:italic;color:var(--aqua)}
+.hero h1 span{display:inline-block;animation:fadeUp .9s var(--ease-out) both}
+.hero h1 .l2{animation-delay:.08s}.hero h1 .l3{animation-delay:.16s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero .sub{margin-top:24px;font-size:clamp(1.04rem,1.5vw,1.24rem);color:var(--soft);max-width:36ch;
+  line-height:1.55;animation:fadeUp 1s var(--ease-out) .24s both}
+.hero .cta-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:13px;animation:fadeUp 1s var(--ease-out) .34s both}
+.hero .btn-primary,.hero .btn-ghost{padding:15px 27px;font-size:1rem}
+.hero .stats{margin-top:38px;display:flex;gap:30px;flex-wrap:wrap;animation:fadeUp 1s var(--ease-out) .44s both}
+.hero .stat b{font-family:var(--serif);font-size:1.8rem;display:block;line-height:1;color:#fff}
+.hero .stat span{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){.hero .eyebrow,.hero h1 span,.hero .sub,.hero .cta-row,.hero .stats,.now-card{animation:none}}
+
+/* live in-season card */
+.now-card{background:var(--glass2);backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);border:1px solid var(--line-2);border-radius:var(--r-lg);
+  padding:22px;box-shadow:var(--glow);max-width:100%;animation:fadeUp 1s var(--ease-out) .5s both}
+.now-card .nc-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+.nc-badge{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua);
+  display:inline-flex;align-items:center;gap:8px}
+.pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 0 rgba(47,224,214,.6);
+  animation:dot 2.4s var(--ease) infinite}
+@keyframes dot{0%{box-shadow:0 0 0 0 rgba(47,224,214,.5)}70%{box-shadow:0 0 0 10px rgba(47,224,214,0)}100%{box-shadow:0 0 0 0 rgba(47,224,214,0)}}
 @media(prefers-reduced-motion:reduce){.pulse-dot{animation:none}}
-.now-card .nc-month{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
-.nc-list{display:flex;flex-direction:column;gap:9px}
-.nc-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;
-  padding:8px 6px;border-radius:10px;transition:background .16s}
+.nc-month{font-family:var(--mono);font-size:.72rem;color:var(--soft)}
+.nc-list{display:flex;flex-direction:column;gap:4px}
+.nc-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;padding:9px 6px;border-radius:10px;transition:background .16s}
 .nc-row:hover{background:var(--panel2)}
 .nc-rank{font-family:var(--mono);font-size:.7rem;color:var(--muted);width:1.4em}
-.nc-name{font-weight:600;font-size:.95rem;line-height:1.15}
-.nc-name small{display:block;font-weight:500;color:var(--muted);font-size:.72rem;font-family:var(--mono)}
-.nc-bar{grid-column:1/-1;height:5px;border-radius:3px;background:var(--bg2);overflow:hidden}
+.nc-name{font-weight:600;font-size:.96rem;line-height:1.15;color:#fff}
+.nc-name small{display:block;font-weight:500;color:var(--muted);font-size:.7rem;font-family:var(--mono)}
+.nc-bar{grid-column:1/-1;height:5px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden}
 .nc-bar i{display:block;height:100%;border-radius:3px;width:0;transition:width 1s var(--ease-out)}
-.chip{font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.04em;padding:4px 9px;
-  border-radius:999px;white-space:nowrap}
-.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:2;
-  font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+.chip{font-family:var(--mono);font-size:.62rem;font-weight:600;letter-spacing:.03em;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.scroll-cue{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:3;
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);
   display:flex;flex-direction:column;align-items:center;gap:8px}
-.scroll-cue .ln{width:1px;height:34px;background:linear-gradient(180deg,var(--accent),transparent);
-  animation:cue 2.2s var(--ease) infinite}
+.scroll-cue .ln{width:1px;height:36px;background:linear-gradient(180deg,var(--aqua),transparent);animation:cue 2.2s var(--ease) infinite}
 @keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
-@media(prefers-reduced-motion:reduce){.scroll-cue .ln{animation:none;opacity:.6}
-  .track i,.nc-bar i{transition:none}}
-@media(max-width:860px){
-  .hero-in{grid-template-columns:1fr;gap:30px}
-  .hero .sub{max-width:46ch}
-  .now-card{order:2}
-}
+@media(prefers-reduced-motion:reduce){.scroll-cue .ln{animation:none;opacity:.6}}
+@media(max-width:880px){.hero-in{grid-template-columns:1fr;gap:32px}.hero .sub{max-width:48ch}.now-card{order:2}}
 @media(max-width:560px){
-  .hero{padding-top:84px}
-  .hero h1{font-size:clamp(2rem,8.5vw,3rem)}
+  .hero{padding-top:96px;padding-bottom:70px}
+  .hero h1{font-size:clamp(2.2rem,9vw,3.2rem)}
   .hero .stats{gap:20px}
-  .band-head h2{font-size:clamp(1.6rem,7vw,2rem)}
+  .band-head h2{font-size:clamp(1.7rem,7.5vw,2.2rem)}
   .months{grid-template-columns:repeat(6,1fr)}
-  .rrow{grid-template-columns:2.2ch 1fr auto;gap:9px}
-  .rrow .nm{font-size:.94rem}.rrow .nm small{display:block;margin-left:0}
+  .rrow{gap:9px}.rrow .nm{font-size:.96rem}
+  .fcard .body{margin-top:-44px}
 }
 
 /* ---------- section frame ---------- */
-.band{position:relative;padding:clamp(66px,10vh,120px) 0}
-.band-head{max-width:640px;margin-bottom:40px}
-.band-head h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:16px 0 14px}
-.band-head p{color:var(--ink-soft);font-size:1.06rem;max-width:52ch}
-/* progressive depth tints (still light, on-brand) */
-.d1{background:linear-gradient(180deg,var(--bg),#eef6f5)}
-.d2{background:linear-gradient(180deg,#eef6f5,#e4f1f0)}
-.d3{background:linear-gradient(180deg,#e4f1f0,#dcedec)}
-.d4{background:linear-gradient(180deg,#dcedec,#eaf4f3)}
-.d5{background:linear-gradient(180deg,#eaf4f3,var(--bg))}
-
-/* reveal on scroll */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+.band{position:relative;padding:clamp(72px,11vh,130px) 0}
+.band-head{max-width:660px;margin-bottom:46px}
+.band-head h2{font-size:clamp(2rem,4vw,3.2rem);margin:18px 0 16px}
+.band-head p{color:var(--soft);font-size:1.08rem;max-width:54ch}
+.d-deep{background:linear-gradient(180deg,var(--deep),var(--deep2))}
+.d-deeper{background:linear-gradient(180deg,var(--deep2),var(--abyss))}
+.d-mid{background:linear-gradient(180deg,var(--deep2),var(--deep))}
+.d-back{background:linear-gradient(180deg,var(--abyss),var(--deep))}
+.band::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:radial-gradient(1000px 500px at 85% 0%,rgba(47,224,214,.06),transparent 60%)}
+.band>.wrap{position:relative}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
 .rv.in{opacity:1;transform:none}
-.rv.d-1{transition-delay:.06s}.rv.d-2{transition-delay:.12s}.rv.d-3{transition-delay:.18s}
-.rv.d-4{transition-delay:.24s}.rv.d-5{transition-delay:.3s}.rv.d-6{transition-delay:.36s}
+.rv.d-1{transition-delay:.07s}.rv.d-2{transition-delay:.14s}.rv.d-3{transition-delay:.21s}
+.rv.d-4{transition-delay:.28s}.rv.d-5{transition-delay:.35s}.rv.d-6{transition-delay:.42s}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
-/* ---------- planner (month scrubber) ---------- */
-.scrub{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
-  box-shadow:var(--shadow);padding:clamp(20px,3vw,34px);display:grid;grid-template-columns:1fr;gap:26px}
+/* ---------- planner ---------- */
+.scrub{background:var(--glass);border:1px solid var(--line);border-radius:var(--r-lg);
+  box-shadow:var(--glow);padding:clamp(20px,3vw,36px);display:grid;gap:26px;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .months{display:grid;grid-template-columns:repeat(12,1fr);gap:6px}
-.mbtn{font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;padding:12px 0;border-radius:10px;
-  border:1px solid var(--line);background:var(--panel2);color:var(--ink-soft);cursor:pointer;
-  transition:all .18s var(--ease);text-align:center;font-weight:500}
-.mbtn:hover{border-color:var(--accent);color:var(--ink);transform:translateY(-2px)}
-.mbtn.active{background:var(--accent-deep);color:#fff;border-color:var(--accent-deep);
-  box-shadow:0 10px 22px -12px rgba(11,125,117,.8)}
+.mbtn{font-family:var(--mono);font-size:.74rem;padding:13px 0;border-radius:10px;border:1px solid var(--line);
+  background:var(--panel);color:var(--soft);cursor:pointer;transition:all .18s var(--ease);text-align:center;font-weight:500}
+.mbtn:hover{border-color:var(--aqua);color:#fff;transform:translateY(-2px)}
+.mbtn.active{background:var(--aqua);color:#04202a;border-color:var(--aqua);font-weight:700;
+  box-shadow:0 10px 24px -12px rgba(47,224,214,.8)}
 .scrub-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.scrub-head .big{font-family:var(--serif);font-size:1.5rem}
-.scrub-head .hint{font-family:var(--mono);font-size:.68rem;color:var(--muted);letter-spacing:.06em}
-.rank{display:flex;flex-direction:column;gap:4px}
-.rrow{display:grid;grid-template-columns:2.2ch 1fr auto;align-items:center;gap:14px;
-  padding:13px 12px;border-radius:12px;transition:background .16s;position:relative}
+.scrub-head .big{font-family:var(--serif);font-size:1.55rem;color:#fff}
+.scrub-head .hint{font-family:var(--mono);font-size:.66rem;color:var(--muted);letter-spacing:.05em}
+.rank{display:flex;flex-direction:column;gap:2px}
+.rrow{display:grid;grid-template-columns:2.4ch 1fr auto;align-items:center;gap:14px;padding:14px 12px;border-radius:12px;
+  transition:background .16s}
 .rrow:hover{background:var(--panel2)}
 .rrow .rk{font-family:var(--mono);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
-.rrow .nm{font-weight:600;font-size:1.02rem}
+.rrow .nm{font-weight:600;font-size:1.04rem;color:#fff}
 .rrow .nm small{font-family:var(--mono);font-weight:500;font-size:.7rem;color:var(--muted);margin-left:8px}
-.rrow .rt{display:flex;align-items:center;gap:10px}
-.rrow .sc{font-family:var(--mono);font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums;
-  width:3ch;text-align:right}
-.track{grid-column:1/-1;height:6px;border-radius:4px;background:var(--bg2);overflow:hidden;margin-top:2px}
-.track i{display:block;height:100%;border-radius:4px;width:0;transition:width .8s var(--ease-out)}
+.rrow .rt{display:flex;align-items:center;gap:12px}
+.rrow .sc{font-family:var(--mono);font-size:.72rem;color:var(--soft);font-variant-numeric:tabular-nums;width:3ch;text-align:right}
+.track{grid-column:1/-1;height:6px;border-radius:4px;background:rgba(255,255,255,.07);overflow:hidden;margin-top:3px}
+.track i{display:block;height:100%;border-radius:4px;width:0;transition:width .85s var(--ease-out);box-shadow:0 0 14px rgba(47,224,214,.4)}
 .rrow.dim{opacity:.5}
+@media(prefers-reduced-motion:reduce){.track i,.nc-bar i{transition:none}}
 
-/* ---------- destination cards ---------- */
-.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:22px}
-.dcard{background:linear-gradient(165deg,#ffffff,#f2f9f9);border:1px solid var(--line);
-  border-radius:var(--r);padding:20px;box-shadow:var(--shadow);position:relative;overflow:hidden;
-  transition:transform .28s var(--ease),box-shadow .28s,border-color .28s}
-.dcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-glow);border-color:rgba(14,156,146,.35)}
-.dcard .scene{height:120px;border-radius:12px;overflow:hidden;position:relative;margin-bottom:16px}
-.dcard .dc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-.dcard h3{font-size:1.28rem;line-height:1.05}
-.dcard .ctry{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);margin-top:5px}
-.dcard .blurb{color:var(--ink-soft);font-size:.9rem;margin:12px 0 14px;line-height:1.5}
-.dcard .specs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.spec{font-family:var(--mono);font-size:.64rem;color:var(--ink-soft);background:var(--panel2);
-  border:1px solid var(--line);border-radius:8px;padding:5px 8px;display:inline-flex;gap:5px;align-items:center}
-.spec b{color:var(--ink);font-weight:600}
-/* season calendar — 12 tonal bars */
-.cal{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;height:40px;align-items:end;
-  margin-bottom:8px}
-.cal .cb{border-radius:4px 4px 3px 3px;height:100%;position:relative;cursor:pointer;
-  transform-origin:bottom;transition:transform .18s var(--ease),filter .18s;
-  animation:calRise .7s var(--ease-out) both}
-.cal .cb:hover{transform:scaleY(1.06);filter:brightness(1.06)}
-@keyframes calRise{from{transform:scaleY(.06)}to{transform:scaleY(1)}}
+/* ---------- featured photo destinations ---------- */
+.feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(400px,100%),1fr));gap:26px}
+.fcard{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);
+  background:var(--glass2);box-shadow:var(--glow);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.fcard:hover{transform:translateY(-5px);border-color:var(--line-2);box-shadow:0 0 0 1px rgba(47,224,214,.25),0 40px 80px -30px rgba(0,0,0,.8)}
+.fcard .photo{position:relative;aspect-ratio:16/10;overflow:hidden}
+.fcard .photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease-out)}
+.fcard:hover .photo img{transform:scale(1.06)}
+.fcard .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(6,30,37,.9))}
+.fcard .body{position:relative;padding:20px 22px 22px;margin-top:-52px;z-index:2}
+.fcard .fc-top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.fcard h3{font-size:1.55rem;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.fcard .ctry{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua2);margin-top:5px}
+.fcard .peakflag{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;padding:5px 10px;border-radius:999px;
+  background:var(--peak);color:#fff;white-space:nowrap}
+.fcard .blurb{color:var(--soft);font-size:.9rem;margin:14px 0 16px;line-height:1.5}
+.cal{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;height:38px;align-items:end;margin-bottom:9px}
+.cal .cb{border-radius:4px 4px 3px 3px;height:100%;cursor:pointer;transform-origin:bottom;
+  transition:transform .18s var(--ease),filter .18s;animation:calRise .7s var(--ease-out) both}
+.cal .cb:hover{transform:scaleY(1.08);filter:brightness(1.12)}
+@keyframes calRise{from{transform:scaleY(.05)}to{transform:scaleY(1)}}
 @media(prefers-reduced-motion:reduce){.cal .cb{animation:none}}
-.cal-read{display:flex;align-items:center;justify-content:space-between;gap:8px;
-  font-family:var(--mono);font-size:.66rem;color:var(--muted);min-height:1.4em}
+.cal-read{display:flex;align-items:center;justify-content:space-between;gap:8px;font-family:var(--mono);
+  font-size:.66rem;color:var(--muted);min-height:1.4em}
 .cal-read b{color:var(--ink)}
-.species{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
-.sp{font-size:.72rem;color:var(--ink-soft);background:rgba(14,156,146,.08);
-  border:1px solid rgba(14,156,146,.18);border-radius:999px;padding:4px 10px}
+.species{display:flex;gap:6px;flex-wrap:wrap;margin-top:13px}
+.sp{font-size:.72rem;color:var(--soft);background:rgba(47,224,214,.09);border:1px solid rgba(47,224,214,.2);border-radius:999px;padding:4px 10px}
+
+/* more waters (compact data cards) */
+.more-head{margin:56px 0 22px;font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:16px}
+.mcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 17px;transition:border-color .24s,background .24s}
+.mcard:hover{border-color:var(--line-2);background:var(--panel2)}
+.mcard .mc-top{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px}
+.mcard h4{font-family:var(--serif);font-size:1.1rem;color:#fff;font-weight:600}
+.mcard .mc-c{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mcard .cal{height:26px;margin-bottom:6px}
+.mcard .mc-r{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.lg{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.68rem;color:var(--soft)}
+.lg i{width:14px;height:14px;border-radius:4px}
 
 /* ---------- marine pulse ---------- */
-.marine{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
-.pulse-wrap{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
-  padding:26px;box-shadow:var(--shadow)}
+.marine{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
+.pulse-wrap{background:var(--glass);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;box-shadow:var(--glow)}
 .pulse-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
-.pulse-head h3{font-size:1.4rem}
-.pulse-svg{width:100%;height:130px;display:block}
+.pulse-head h3{font-size:1.45rem;color:#fff}
+.pulse-svg{width:100%;height:140px;display:block}
 .pulse-months{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin-top:12px}
-.pm{font-family:var(--mono);font-size:.6rem;text-align:center;color:var(--muted);padding:10px 0;
-  border-radius:7px;cursor:pointer;transition:all .16s;border:0;background:transparent;line-height:1}
-.pm:hover{background:var(--panel2);color:var(--ink)}
-.pm.on{background:var(--accent-deep);color:#fff}
-.pulse-read{margin-top:16px;font-size:.92rem;color:var(--ink-soft);min-height:3em;line-height:1.5}
-.pulse-read b{color:var(--ink);font-family:var(--mono);font-size:.8rem}
-.species-menu{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.smenu{font-family:var(--sans);font-size:.82rem;font-weight:500;padding:8px 14px;border-radius:999px;
-  border:1px solid var(--line);background:var(--panel);color:var(--ink-soft);cursor:pointer;transition:all .16s}
-.smenu:hover{border-color:var(--accent);color:var(--ink)}
-.smenu.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-@media(max-width:820px){.marine{grid-template-columns:1fr}}
+.pm{font-family:var(--mono);font-size:.6rem;text-align:center;color:var(--muted);padding:10px 0;border-radius:7px;
+  cursor:pointer;transition:all .16s;border:0;background:transparent;line-height:1}
+.pm:hover{background:var(--panel2);color:#fff}
+.pm.on{background:var(--aqua);color:#04202a;font-weight:700}
+.pulse-read{margin-top:16px;font-size:.94rem;color:var(--soft);min-height:3.1em;line-height:1.55}
+.pulse-read b{color:#fff;font-family:var(--mono);font-size:.8rem}
+.species-menu{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.smenu{font-family:var(--sans);font-size:.84rem;font-weight:500;padding:9px 15px;border-radius:999px;border:1px solid var(--line);
+  background:var(--panel);color:var(--soft);cursor:pointer;transition:all .16s}
+.smenu:hover{border-color:var(--aqua);color:#fff}
+.smenu.on{background:#fff;color:#06222b;border-color:#fff;font-weight:600}
+@media(max-width:840px){.marine{grid-template-columns:1fr}}
 
-/* ---------- gear band ---------- */
-.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
-.gcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px;
-  position:relative;overflow:hidden;transition:transform .26s var(--ease),box-shadow .26s,border-color .26s;
-  cursor:pointer;min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
-.gcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-glow);border-color:rgba(14,156,146,.35)}
-.gcard .gsvg{width:64px;height:64px;color:var(--accent-deep);opacity:.9;
-  transition:transform .3s var(--ease)}
-.gcard:hover .gsvg{transform:translateY(-3px) rotate(-4deg)}
-.gcard h3{font-size:1.16rem;margin-top:16px}
-.gcard p{color:var(--ink-soft);font-size:.86rem;margin-top:6px;line-height:1.45}
-.gcard .go{margin-top:14px;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--accent-deep);display:inline-flex;align-items:center;gap:6px;
-  transition:gap .2s}
+/* ---------- gear (real photos) ---------- */
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:20px}
+.gcard{background:var(--glass);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:transform .28s var(--ease),box-shadow .28s,border-color .28s;cursor:pointer}
+.gcard:hover{transform:translateY(-5px);border-color:var(--line-2);box-shadow:var(--glow)}
+.gcard .gimg{aspect-ratio:16/10;background:linear-gradient(160deg,#f3faf9,#dcecea);display:grid;place-items:center;overflow:hidden}
+.gcard .gimg img{width:82%;height:82%;object-fit:contain;transition:transform .4s var(--ease);filter:drop-shadow(0 12px 20px rgba(0,0,0,.18))}
+.gcard:hover .gimg img{transform:scale(1.05) rotate(-2deg)}
+.gcard .gbody{padding:18px 20px 20px;position:relative}
+.gcard .gnum{position:absolute;top:-14px;right:18px;font-family:var(--mono);font-size:.62rem;color:var(--aqua);
+  background:var(--deep2);border:1px solid var(--line);border-radius:999px;padding:4px 9px}
+.gcard h3{font-size:1.16rem;color:#fff}
+.gcard p{color:var(--soft);font-size:.86rem;margin-top:7px;line-height:1.45}
+.gcard .go{margin-top:14px;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua);
+  display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
 .gcard:hover .go{gap:11px}
-.gcard .gnum{position:absolute;top:16px;right:20px;font-family:var(--mono);font-size:.66rem;color:var(--muted)}
 
-/* ---------- score / trust band ---------- */
-.score-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+/* ---------- how we score ---------- */
+.score-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
 .formula{display:flex;flex-direction:column;gap:14px}
-.frow{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;
-  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;
-  box-shadow:var(--shadow)}
-.frow .fi{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;flex-shrink:0}
-.frow h4{font-size:1.02rem;font-family:var(--sans);font-weight:700}
+.frow{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--panel);
+  border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.frow .fi{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;flex-shrink:0}
+.frow h4{font-size:1.02rem;font-family:var(--sans);font-weight:700;color:#fff}
 .frow p{color:var(--muted);font-size:.84rem;margin-top:3px}
-.frow .fw{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:auto;white-space:nowrap}
+.frow .fw{font-family:var(--mono);font-size:.72rem;color:var(--soft);white-space:nowrap}
 .gaugeviz{aspect-ratio:1;max-width:340px;margin:0 auto;position:relative}
 .gaugeviz svg{width:100%;height:100%;transform:rotate(-90deg)}
 .gaugeviz .gv-center{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
-.gaugeviz .gv-center b{font-family:var(--serif);font-size:3rem;line-height:1;display:block}
-.gaugeviz .gv-center span{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--muted);margin-top:4px;display:block}
-@media(max-width:820px){.score-grid{grid-template-columns:1fr;gap:28px}}
-
-/* ---------- legend ---------- */
-.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.lg{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.68rem;color:var(--ink-soft)}
-.lg i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.gaugeviz .gv-center b{font-family:var(--serif);font-size:3.2rem;line-height:1;display:block;color:#fff}
+.gaugeviz .gv-center span{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px;display:block}
+@media(max-width:840px){.score-grid{grid-template-columns:1fr;gap:30px}}
 
 /* ---------- footer ---------- */
-.foot{background:linear-gradient(180deg,#0d353d,#082830);color:#cfe6e4;padding:60px 0 34px}
-.foot a{color:#a9d6d0}.foot a:hover{color:#fff}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.foot{background:var(--abyss);color:var(--soft);padding:64px 0 40px;border-top:1px solid var(--line)}
+.foot a{color:var(--soft)}.foot a:hover{color:#fff}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
 .foot .brand .name{color:#fff}.foot .brand .name b{color:var(--aqua)}
-.foot .tag{color:#8fb8b3;margin-top:14px;max-width:34ch;font-size:.92rem;line-height:1.5}
-.foot h4{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#7fb0aa;margin-bottom:14px;font-weight:500}
-.foot ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;font-size:.9rem}
-.foot .rule{height:1px;background:rgba(255,255,255,.1);margin:34px 0 20px}
-.foot .fine{font-family:var(--mono);font-size:.68rem;color:#6f9a95;letter-spacing:.04em;
+.foot .ftag{color:var(--muted);margin-top:16px;max-width:36ch;font-size:.92rem;line-height:1.55}
+.foot h4{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:15px;font-weight:500}
+.foot ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;font-size:.9rem}
+.foot .rule{height:1px;background:var(--line);margin:38px 0 22px}
+.foot .fine{font-family:var(--mono);font-size:.66rem;color:var(--faint);letter-spacing:.03em;
   display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}.foot .brand{grid-column:1/-1}}
 
 /* preview ribbon */
-.ribbon{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--ink);color:#cdeeea;
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;padding:8px 16px;display:flex;
-  align-items:center;justify-content:center;gap:10px;text-align:center}
+.ribbon{position:fixed;bottom:0;left:0;right:0;z-index:80;background:#020e12;color:var(--soft);
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.03em;padding:9px 16px;display:flex;
+  align-items:center;justify-content:center;gap:10px;text-align:center;border-top:1px solid var(--line)}
 .ribbon b{color:var(--aqua)}
-@media(max-width:600px){.ribbon{font-size:.6rem}}
+@media(max-width:600px){.ribbon{font-size:.58rem}}
 </style>
 
 <a class="skip" href="#planner-band">Skip to the planner</a>
 
-<!-- depth gauge -->
 <div class="gauge" id="gauge" aria-hidden="true">
   <div class="depth" id="depthLabel">0 m</div>
   <div class="rail"><div class="fill" id="gaugeFill"></div></div>
 </div>
 
-<!-- top bar -->
 <header class="topbar" id="topbar">
   <a class="brand" href="#top" aria-label="DiveSZN home">
-    <svg class="fluke" viewBox="0 0 120 96" aria-hidden="true"><path d="M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z" fill="#0e9c92"/></svg>
+    <svg class="fluke" viewBox="0 0 120 96" aria-hidden="true"><path d="M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z" fill="#2fe0d6"/></svg>
     <span><span class="name">Dive<b>SZN</b></span><span class="tag">Dive Season</span></span>
   </a>
   <nav class="nav" aria-label="Primary">
@@ -352,26 +348,28 @@ img,svg{max-width:100%}
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
-  <canvas id="ocean" aria-hidden="true"></canvas>
-  <div class="hero-veil"></div>
+  <div class="hero-media" id="heroMedia">
+    <video id="heroVid" autoplay muted loop playsinline preload="metadata"
+           poster="../assets/video/hero-dive-poster.jpg" aria-hidden="true">
+      <source src="../assets/video/hero-dive.webm" type="video/webm">
+    </video>
+  </div>
+  <div class="hero-scrim"></div>
+  <canvas id="bubbles" aria-hidden="true"></canvas>
   <div class="hero-in">
     <div class="hero-copy">
       <span class="kicker eyebrow">Dive season, decoded</span>
-      <h1>Know <span class="em">when</span> to dive <span class="em">where</span>.</h1>
-      <p class="sub" id="heroSub">Pick a month and see which destinations are at their best — water temperature, visibility, currents and the marine life you'll actually meet. Every rating is built from researched dive-site data, not guesswork.</p>
+      <h1><span class="l1">Know <span class="em">when</span></span> <span class="l2">to dive</span> <span class="l3"><span class="em">where</span>.</span></h1>
+      <p class="sub">Pick a month and see which destinations are at their best — water temperature, visibility, currents and the marine life you'll actually meet. Built from researched dive-site data, not guesswork.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#planner-band">Open the planner
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-ghost" href="#dest-band">Browse destinations</a>
       </div>
       <div class="stats" id="heroStats"></div>
     </div>
-    <aside class="now-card" id="nowCard" aria-live="polite">
-      <div class="nc-top">
-        <span class="nc-badge"><span class="pulse-dot"></span>In season now</span>
-        <span class="nc-month" id="nowMonth"></span>
-      </div>
+    <aside class="now-card" id="nowCard">
+      <div class="nc-top"><span class="nc-badge"><span class="pulse-dot"></span>In season now</span><span class="nc-month" id="nowMonth"></span></div>
       <div class="nc-list" id="nowList"></div>
     </aside>
   </div>
@@ -379,7 +377,7 @@ img,svg{max-width:100%}
 </section>
 
 <!-- ============ PLANNER ============ -->
-<section class="band d1" id="planner-band">
+<section class="band d-deep" id="planner-band">
   <div class="wrap">
     <div class="band-head rv">
       <span class="kicker">Plan by month</span>
@@ -389,10 +387,7 @@ img,svg{max-width:100%}
     <div class="scrub rv d-1">
       <div class="months" id="months" role="tablist" aria-label="Choose a month"></div>
       <div>
-        <div class="scrub-head">
-          <span class="big" id="scrubTitle">Best diving in —</span>
-          <span class="hint">hover a row for the season read-out</span>
-        </div>
+        <div class="scrub-head"><span class="big" id="scrubTitle">Best diving in —</span><span class="hint">hover a row for the season read-out</span></div>
         <div class="rank" id="rank"></div>
       </div>
     </div>
@@ -400,37 +395,33 @@ img,svg{max-width:100%}
 </section>
 
 <!-- ============ DESTINATIONS ============ -->
-<section class="band d2" id="dest-band">
+<section class="band d-mid" id="dest-band">
   <div class="wrap">
     <div class="band-head rv">
-      <span class="kicker">Flagship waters</span>
-      <h2>Where the diving earns the airfare</h2>
-      <p>A season calendar for each — twelve tonal bars, Peak to Closed. Hover any month to read the water temperature and visibility behind the colour.</p>
+      <span class="kicker">Featured waters</span>
+      <h2>Real dives, real seasons</h2>
+      <p>A photograph, a season calendar and the marine life you can expect — hover any month to read the water temperature and visibility behind the colour.</p>
     </div>
-    <div class="dgrid" id="dgrid"></div>
+    <div class="feat" id="feat"></div>
+    <div class="more-head rv">More waters in the planner</div>
+    <div class="mgrid" id="mgrid"></div>
     <div class="legend rv" id="legend"></div>
   </div>
 </section>
 
-<!-- ============ MARINE LIFE ============ -->
-<section class="band d3" id="marine-band">
+<!-- ============ MARINE ============ -->
+<section class="band d-deeper" id="marine-band">
   <div class="wrap">
     <div class="band-head rv">
       <span class="kicker">Encounter files</span>
       <h2>Track the animal, find the month</h2>
-      <p>Month-by-month files on mantas, hammerheads, whale sharks and turtles — where each species gathers, and when your odds of an encounter are highest.</p>
+      <p>The big animals keep a calendar too. Scrub the year to see when each species is most reliably in the water.</p>
     </div>
     <div class="marine rv d-1">
-      <div>
-        <div class="species-menu" id="speciesMenu"></div>
-        <div class="pulse-read" id="pulseRead"></div>
-      </div>
+      <div><div class="species-menu" id="speciesMenu"></div><div class="pulse-read" id="pulseRead"></div></div>
       <div class="pulse-wrap">
-        <div class="pulse-head">
-          <h3 id="pulseName">—</h3>
-          <span class="nc-month" id="pulsePeak"></span>
-        </div>
-        <svg class="pulse-svg" id="pulseSvg" viewBox="0 0 480 130" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="pulse-head"><h3 id="pulseName">—</h3><span class="nc-month" id="pulsePeak"></span></div>
+        <svg class="pulse-svg" id="pulseSvg" viewBox="0 0 480 140" preserveAspectRatio="none" aria-hidden="true"></svg>
         <div class="pulse-months" id="pulseMonths"></div>
       </div>
     </div>
@@ -438,7 +429,7 @@ img,svg{max-width:100%}
 </section>
 
 <!-- ============ GEAR ============ -->
-<section class="band d4" id="gear-band">
+<section class="band d-back" id="gear-band">
   <div class="wrap">
     <div class="band-head rv">
       <span class="kicker">Scuba gear</span>
@@ -449,8 +440,8 @@ img,svg{max-width:100%}
   </div>
 </section>
 
-<!-- ============ HOW WE SCORE ============ -->
-<section class="band d5" id="score-band">
+<!-- ============ SCORE ============ -->
+<section class="band d-deep" id="score-band">
   <div class="wrap">
     <div class="band-head rv">
       <span class="kicker">How we score</span>
@@ -465,7 +456,6 @@ img,svg{max-width:100%}
 </section>
 </main>
 
-<!-- ============ FOOTER ============ -->
 <footer class="foot">
   <div class="wrap">
     <div class="foot-grid">
@@ -474,192 +464,111 @@ img,svg{max-width:100%}
           <svg class="fluke" style="width:44px" viewBox="0 0 120 96" aria-hidden="true"><path d="M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z" fill="#2fe0d6"/></svg>
           <span class="name">Dive<b>SZN</b></span>
         </span>
-        <p class="tag">Plan the dive before you book the flight — the best months, waters and marine life, worked out from real seasonal data.</p>
+        <p class="ftag">Plan the dive before you book the flight — the best months, waters and marine life, worked out from real seasonal data.</p>
       </div>
-      <div><h4>Plan</h4><ul>
-        <li><a href="#planner-band">Dive planner</a></li>
-        <li><a href="#dest-band">Destinations</a></li>
-        <li><a href="#score-band">How we score</a></li>
-      </ul></div>
-      <div><h4>Explore</h4><ul>
-        <li><a href="#marine-band">Marine life</a></li>
-        <li><a href="#gear-band">Scuba gear</a></li>
-      </ul></div>
-      <div><h4>Dive</h4><ul>
-        <li><a href="#dest-band">Flagship waters</a></li>
-        <li><a href="#planner-band">In season now</a></li>
-      </ul></div>
+      <div><h4>Plan</h4><ul><li><a href="#planner-band">Dive planner</a></li><li><a href="#dest-band">Destinations</a></li><li><a href="#score-band">How we score</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="#marine-band">Marine life</a></li><li><a href="#gear-band">Scuba gear</a></li></ul></div>
+      <div><h4>Dive</h4><ul><li><a href="#dest-band">Featured waters</a></li><li><a href="#planner-band">In season now</a></li></ul></div>
     </div>
     <div class="rule"></div>
-    <div class="fine">
-      <span>DiveSZN — seasonal dive-trip planner</span>
-      <span>Scuba only · metric units · figures indicative — confirm with your operator</span>
-    </div>
+    <div class="fine"><span>DiveSZN — seasonal dive-trip planner</span><span>Scuba only · metric units · conditions indicative — confirm with your operator</span></div>
   </div>
 </footer>
 
 <div class="ribbon">Redesign preview — <b>not live</b>. This concept is not merged to the DiveSZN homepage.</div>
 
 <script>
-const DATA={"legend":{"Peak":"Best conditions and/or signature marine life","Good":"Reliable, enjoyable diving","Shoulder":"Transitional - variable conditions","Low":"Divable but rough / low-viz / off-season","Closed":"Not accessible (park closure or no operators)"},"months":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"destinations":[{"name":"Raja Ampat","country":"Indonesia","region":"Coral Triangle / SE Asia","slug":"raja-ampat","temps":[29,28,28,28,27,28,28,28,28,29,29,30],"ratings":["Peak","Peak","Peak","Good","Shoulder","Low","Low","Low","Shoulder","Good","Good","Peak"],"viz":[30,18,30,18,10,18,18,18,16,32,18,30],"best":"Oct-Apr (Dec-Feb peak)","species":["manta ray","wobbegong shark","walking (epaulette) shark","pygmy seahorse"],"highlights":"Most biodiverse reefs on Earth; manta peak Dec-Mar.","wetsuit":"3mm","difficulty":"intermediate","sites":9,"coords":{"lat":-0.23,"lng":130.52}},{"name":"Cocos Island","country":"Costa Rica","region":"Eastern Pacific","slug":"cocos-island","temps":[28,28,28,29,28,26,25,25,25,25,26,27],"ratings":["Good","Good","Good","Good","Good","Peak","Peak","Peak","Peak","Peak","Good","Good"],"viz":[30,32,30,18,18,18,10,18,18,10,18,16],"best":"Jun-Nov (hammerheads) / Dec-May (visibility)","species":["scalloped hammerhead","whale shark","tiger shark","mobula ray","silky shark"],"highlights":"Hammerhead-school mecca; remote 36h crossing, strong currents/thermoclines.","wetsuit":"5-7mm + hood","difficulty":"advanced","sites":8,"coords":{"lat":5.52,"lng":-87.06}},{"name":"Sipadan Island","country":"Malaysia","region":"Celebes Sea / SE Asia","slug":"sipadan-island","temps":[28,28,29,30,30,30,30,29,28,28,28,28],"ratings":["Good","Good","Peak","Peak","Peak","Peak","Peak","Good","Peak","Peak","Closed","Good"],"viz":[15,16,30,32,32,35,18,18,30,50,18,18],"best":"Mar-Jun & Sep-Oct (CLOSED November)","species":["green turtle","hawksbill turtle","chevron barracuda","bumphead parrotfish","reef shark"],"highlights":"Turtle & barracuda-tornado wall; island closed every November.","wetsuit":"3mm","difficulty":"intermediate","sites":9,"coords":{"lat":4.11,"lng":118.63}},{"name":"Palau","country":"Palau","region":"Micronesia / Pacific","slug":"palau","temps":[28,28,29,29,30,30,29,29,29,29,29,28],"ratings":["Good","Peak","Peak","Peak","Good","Good","Low","Low","Shoulder","Good","Good","Good"],"viz":[30,40,30,40,18,18,18,10,18,18,18,30],"best":"Dec-Apr (Feb-Apr peak)","species":["grey reef shark","manta ray","bumphead parrotfish","spawning red snapper","whale shark"],"highlights":"Blue Corner drift & reef-hook diving; lunar spawning aggregations.","wetsuit":"3mm","difficulty":"intermediate-advanced","sites":9,"coords":{"lat":7.34,"lng":134.48}},{"name":"Socorro Island","country":"Mexico","region":"Eastern Pacific","slug":"socorro-island","temps":[25,24,23,24,25,26,27,28,28,28,27,26],"ratings":["Peak","Peak","Peak","Peak","Peak","Shoulder","Closed","Closed","Closed","Closed","Good","Peak"],"viz":[18,24,18,32,30,18,18,18,18,18,24,24],"best":"Nov-May","species":["giant oceanic manta","humpback whale","scalloped hammerhead","silvertip shark","bottlenose dolphin"],"highlights":"Liveaboard-only Revillagigedo with friendly giant oceanic mantas","wetsuit":"5mm","difficulty":"advanced","sites":6,"coords":{"lat":18.79,"lng":-110.97}},{"name":"Maldives","country":"Maldives","region":"Indian Ocean","slug":"maldives","temps":[28,28,29,30,30,29,29,29,29,29,28,28],"ratings":["Peak","Peak","Peak","Peak","Good","Good","Peak","Peak","Peak","Peak","Good","Peak"],"viz":[35,32,24,18,18,20,10,18,10,16,16,35],"best":"Dec-Apr (clear water) / May-Nov (mantas & whale sharks)","species":["manta ray","whale shark","grey reef shark","scalloped hammerhead","tiger shark"],"highlights":"Monsoon-driven channel drifts; Hanifaru manta aggregation Jul-Oct.","wetsuit":"3mm","difficulty":"beginner-intermediate","sites":10,"coords":{"lat":3.2,"lng":73.0}},{"name":"Silfra Fissure","country":"Iceland","region":"North Atlantic / Europe","slug":"silfra-fissure","temps":[2,2,2,3,3,4,4,4,3,3,2,2],"ratings":["Shoulder","Shoulder","Good","Good","Good","Peak","Peak","Peak","Good","Good","Shoulder","Shoulder"],"viz":[100,100,100,100,100,100,100,100,100,100,100,100],"best":"Jun-Aug","species":["None - geology dive","'Troll hair' algae"],"highlights":"Crystal 100m+ viz freshwater dive between tectonic plates","wetsuit":"Drysuit only (near-freezing year-round)","difficulty":"intermediate","sites":5,"coords":{"lat":64.26,"lng":-21.12}},{"name":"Great Barrier Reef","country":"Australia","region":"Coral Sea / Australia","slug":"great-barrier-reef","temps":[30,29,28,27,26,24,23,23,24,25,27,28],"ratings":["Good","Good","Good","Good","Peak","Peak","Peak","Peak","Peak","Peak","Good","Good"],"viz":[18,18,18,18,18,24,32,70,24,18,18,18],"best":"Jun-Oct","species":["dwarf minke whale","potato cod","green turtle","reef shark","manta ray"],"highlights":"World's largest reef; dwarf minke whales Jun-Jul; coral spawning Nov.","wetsuit":"3mm summer / 5mm winter","difficulty":"beginner","sites":9,"coords":{"lat":-16.9,"lng":146.1}},{"name":"Komodo National Park","country":"Indonesia","region":"Coral Triangle / SE Asia","slug":"komodo-national-park","temps":[29,29,29,28,28,28,27,27,27,28,28,29],"ratings":["Good","Good","Good","Peak","Peak","Peak","Peak","Peak","Peak","Peak","Good","Good"],"viz":[30,10,16,18,24,24,18,30,18,24,10,30],"best":"Apr-Oct (May best) / Dec-Feb (south mantas)","species":["manta ray","mola mola","reef shark","macro critters"],"highlights":"Strong tidal drifts; warm north vs cold-upwelling south; mantas year-round by zone.","wetsuit":"5mm","difficulty":"intermediate-advanced","sites":9,"coords":{"lat":-8.55,"lng":119.49}},{"name":"Fernando de Noronha","country":"Brazil","region":"Atlantic Ocean / Brazil","slug":"fernando-de-noronha","temps":[28,28,28,28,28,27,27,26,26,27,27,28],"ratings":["Good","Shoulder","Shoulder","Shoulder","Shoulder","Good","Good","Peak","Peak","Peak","Peak","Good"],"viz":[24,16,10,16,16,16,24,30,32,32,32,24],"best":"Aug-Dec (dry season, best viz)","species":["spinner dolphin","green turtle","hawksbill turtle","lemon shark","nurse shark"],"highlights":"Huge spinner dolphin pods with sharks, turtles and 30m+ visibility","wetsuit":"3mm","difficulty":"beginner","sites":8,"coords":{"lat":-3.85,"lng":-32.42}},{"name":"Bali","country":"Indonesia","region":"Coral Triangle / Indonesia","slug":"bali","temps":[29,29,29,29,28,28,27,26,27,28,29,29],"ratings":["Shoulder","Shoulder","Good","Peak","Peak","Peak","Peak","Good","Good","Peak","Peak","Shoulder"],"viz":[12,12,15,20,25,25,25,20,20,30,30,15],"best":"Apr-Jul & Oct-Nov","species":["Bumphead parrotfish","Pygmy seahorse","Harlequin shrimp","Mimic octopus","Blue-ringed octopus"],"highlights":"A coral-encrusted WWII wreck you can walk into off a pebble beach, world-class black-sand muck at Seraya and Padang Bai, and Menjangan's sheer gorgonian walls — all shore- or short-boat accessible year-round.","wetsuit":"3mm full year-round; 5mm for the cooler Jul-Sep water and repetitive days","difficulty":"beginner-friendly","sites":6,"coords":{"lat":-8.274,"lng":115.593}},{"name":"Tubbataha Reefs Natural Park","country":"Philippines","region":"Southeast Asia","slug":"tubbataha-reefs-natural-park","temps":[28,28,28,29,30,30,29,29,29,29,29,28],"ratings":["Closed","Closed","Good","Peak","Peak","Good","Closed","Closed","Closed","Closed","Closed","Closed"],"viz":[18,18,18,32,30,18,18,18,18,18,18,18],"best":"Apr-Jun","species":["grey reef shark","manta ray","whitetip shark","whale shark","schooling jacks"],"highlights":"UNESCO atoll with sharks, mantas and pristine walls, liveaboard-only short season","wetsuit":"3mm","difficulty":"advanced","sites":8,"coords":{"lat":8.85,"lng":119.92}},{"name":"Malpelo Island","country":"Colombia","region":"Eastern Pacific / Colombia","slug":"malpelo-island","temps":[24,24,24,25,25,26,27,27,28,28,27,25],"ratings":["Peak","Peak","Peak","Good","Good","Peak","Peak","Peak","Peak","Good","Good","Peak"],"viz":[15,15,12,18,20,25,25,30,30,28,22,18],"best":"Dec-Mar (peak hammerhead schools)","species":["scalloped hammerhead","silky shark","whale shark","Galapagos shark","smalltooth sand tiger shark"],"highlights":"Walls of 200-plus schooling scalloped hammerheads, silky shark hordes and the rare smalltooth sand tiger on a remote volcanic seamount 500km offshore.","wetsuit":"5mm (7mm or hooded for Dec-May thermoclines down to ~14C)","difficulty":"advanced","sites":7,"coords":{"lat":3.98,"lng":-81.61}}]};
+const DATA={"legend":{"Peak":"Best conditions and/or signature marine life","Good":"Reliable, enjoyable diving","Shoulder":"Transitional - variable conditions","Low":"Divable but rough / low-viz / off-season","Closed":"Not accessible (park closure or no operators)"},"months":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"destinations":[{"name":"Fiji","country":"Fiji","region":"South Pacific","slug":"fiji","temps":[29,29,29,28,27,26,25,25,26,27,28,29],"ratings":["Shoulder","Shoulder","Shoulder","Good","Good","Good","Peak","Peak","Peak","Peak","Good","Shoulder"],"viz":[10,18,18,16,24,24,30,18,32,24,18,18],"best":"Jul-Oct","species":["soft corals","bull shark","grey reef shark","tiger shark","manta ray"],"wetsuit":"3mm","sites":9,"img":"../assets/dest/fiji.jpg"},{"name":"Ningaloo Reef","country":"Australia","region":"Indian Ocean / Western Australia","slug":"ningaloo-reef","temps":[28,29,28,27,26,24,23,22,22,23,25,27],"ratings":["Shoulder","Shoulder","Good","Peak","Peak","Peak","Peak","Good","Good","Good","Good","Shoulder"],"viz":[16,18,16,18,32,24,32,18,24,24,18,18],"best":"Mar-Jul (whale sharks)","species":["whale shark","humpback whale","manta ray","green turtle","reef shark"],"wetsuit":"3mm, 5mm winter","sites":7,"img":"../assets/dest/ningaloo-reef.jpg"},{"name":"Protea Banks","country":"South Africa","region":"Indian Ocean / South Africa","slug":"protea-banks","temps":[26,26,25,24,22,21,20,20,21,22,24,25],"ratings":["Good","Good","Shoulder","Shoulder","Good","Peak","Peak","Peak","Peak","Good","Peak","Peak"],"viz":[20,20,18,20,22,25,25,24,22,20,22,22],"best":"Jun-Sep & Nov-Dec","species":["bull shark","ragged-tooth shark","tiger shark","hammerhead","oceanic blacktip shark"],"wetsuit":"5mm full year-round; 7mm or hooded 5mm in winter for cold thermoclines, 3mm possible on warmest summer days","sites":6,"img":"../assets/dest/protea-banks.jpg"},{"name":"Sharm El Sheikh","country":"Egypt","region":"Red Sea / Egypt","slug":"sharm-el-sheikh","temps":[23,22,22,24,25,27,28,29,28,27,25,24],"ratings":["Shoulder","Shoulder","Shoulder","Good","Good","Peak","Peak","Peak","Peak","Good","Good","Shoulder"],"viz":[25,25,22,25,25,28,30,30,28,25,25,25],"best":"Jun-Sep","species":["Twin-spot (bohar) snapper","Scalloped hammerhead","Napoleon wrasse","Sea goldie (anthias)","Circular batfish"],"wetsuit":"3mm full Jun-Oct; 5mm in spring and autumn; 7mm (or 5mm + hooded vest) Dec-Mar at 22-23C","sites":6,"img":"../assets/dest/sharm-el-sheikh.jpg"},{"name":"Raja Ampat","country":"Indonesia","region":"Coral Triangle / SE Asia","slug":"raja-ampat","temps":[29,28,28,28,27,28,28,28,28,29,29,30],"ratings":["Peak","Peak","Peak","Good","Shoulder","Low","Low","Low","Shoulder","Good","Good","Peak"],"viz":[30,18,30,18,10,18,18,18,16,32,18,30],"best":"Oct-Apr (Dec-Feb peak)","species":["manta ray","wobbegong shark","walking (epaulette) shark","pygmy seahorse"],"wetsuit":"3mm","sites":9},{"name":"Cocos Island","country":"Costa Rica","region":"Eastern Pacific","slug":"cocos-island","temps":[28,28,28,29,28,26,25,25,25,25,26,27],"ratings":["Good","Good","Good","Good","Good","Peak","Peak","Peak","Peak","Peak","Good","Good"],"viz":[30,32,30,18,18,18,10,18,18,10,18,16],"best":"Jun-Nov (hammerheads) / Dec-May (visibility)","species":["scalloped hammerhead","whale shark","tiger shark","mobula ray","silky shark"],"wetsuit":"5-7mm + hood","sites":8},{"name":"Sipadan Island","country":"Malaysia","region":"Celebes Sea / SE Asia","slug":"sipadan-island","temps":[28,28,29,30,30,30,30,29,28,28,28,28],"ratings":["Good","Good","Peak","Peak","Peak","Peak","Peak","Good","Peak","Peak","Closed","Good"],"viz":[15,16,30,32,32,35,18,18,30,50,18,18],"best":"Mar-Jun & Sep-Oct (CLOSED November)","species":["green turtle","hawksbill turtle","chevron barracuda","bumphead parrotfish","reef shark"],"wetsuit":"3mm","sites":9},{"name":"Palau","country":"Palau","region":"Micronesia / Pacific","slug":"palau","temps":[28,28,29,29,30,30,29,29,29,29,29,28],"ratings":["Good","Peak","Peak","Peak","Good","Good","Low","Low","Shoulder","Good","Good","Good"],"viz":[30,40,30,40,18,18,18,10,18,18,18,30],"best":"Dec-Apr (Feb-Apr peak)","species":["grey reef shark","manta ray","bumphead parrotfish","spawning red snapper","whale shark"],"wetsuit":"3mm","sites":9},{"name":"Socorro Island","country":"Mexico","region":"Eastern Pacific","slug":"socorro-island","temps":[25,24,23,24,25,26,27,28,28,28,27,26],"ratings":["Peak","Peak","Peak","Peak","Peak","Shoulder","Closed","Closed","Closed","Closed","Good","Peak"],"viz":[18,24,18,32,30,18,18,18,18,18,24,24],"best":"Nov-May","species":["giant oceanic manta","humpback whale","scalloped hammerhead","silvertip shark","bottlenose dolphin"],"wetsuit":"5mm","sites":6},{"name":"Maldives","country":"Maldives","region":"Indian Ocean","slug":"maldives","temps":[28,28,29,30,30,29,29,29,29,29,28,28],"ratings":["Peak","Peak","Peak","Peak","Good","Good","Peak","Peak","Peak","Peak","Good","Peak"],"viz":[35,32,24,18,18,20,10,18,10,16,16,35],"best":"Dec-Apr (clear water) / May-Nov (mantas & whale sharks)","species":["manta ray","whale shark","grey reef shark","scalloped hammerhead","tiger shark"],"wetsuit":"3mm","sites":10},{"name":"Silfra Fissure","country":"Iceland","region":"North Atlantic / Europe","slug":"silfra-fissure","temps":[2,2,2,3,3,4,4,4,3,3,2,2],"ratings":["Shoulder","Shoulder","Good","Good","Good","Peak","Peak","Peak","Good","Good","Shoulder","Shoulder"],"viz":[100,100,100,100,100,100,100,100,100,100,100,100],"best":"Jun-Aug","species":["None - geology dive","'Troll hair' algae"],"wetsuit":"Drysuit only (near-freezing year-round)","sites":5},{"name":"Great Barrier Reef","country":"Australia","region":"Coral Sea / Australia","slug":"great-barrier-reef","temps":[30,29,28,27,26,24,23,23,24,25,27,28],"ratings":["Good","Good","Good","Good","Peak","Peak","Peak","Peak","Peak","Peak","Good","Good"],"viz":[18,18,18,18,18,24,32,70,24,18,18,18],"best":"Jun-Oct","species":["dwarf minke whale","potato cod","green turtle","reef shark","manta ray"],"wetsuit":"3mm summer / 5mm winter","sites":9},{"name":"Komodo National Park","country":"Indonesia","region":"Coral Triangle / SE Asia","slug":"komodo-national-park","temps":[29,29,29,28,28,28,27,27,27,28,28,29],"ratings":["Good","Good","Good","Peak","Peak","Peak","Peak","Peak","Peak","Peak","Good","Good"],"viz":[30,10,16,18,24,24,18,30,18,24,10,30],"best":"Apr-Oct (May best) / Dec-Feb (south mantas)","species":["manta ray","mola mola","reef shark","macro critters"],"wetsuit":"5mm","sites":9},{"name":"Fernando de Noronha","country":"Brazil","region":"Atlantic Ocean / Brazil","slug":"fernando-de-noronha","temps":[28,28,28,28,28,27,27,26,26,27,27,28],"ratings":["Good","Shoulder","Shoulder","Shoulder","Shoulder","Good","Good","Peak","Peak","Peak","Peak","Good"],"viz":[24,16,10,16,16,16,24,30,32,32,32,24],"best":"Aug-Dec (dry season, best viz)","species":["spinner dolphin","green turtle","hawksbill turtle","lemon shark","nurse shark"],"wetsuit":"3mm","sites":8},{"name":"Bali","country":"Indonesia","region":"Coral Triangle / Indonesia","slug":"bali","temps":[29,29,29,29,28,28,27,26,27,28,29,29],"ratings":["Shoulder","Shoulder","Good","Peak","Peak","Peak","Peak","Good","Good","Peak","Peak","Shoulder"],"viz":[12,12,15,20,25,25,25,20,20,30,30,15],"best":"Apr-Jul & Oct-Nov","species":["Bumphead parrotfish","Pygmy seahorse","Harlequin shrimp","Mimic octopus","Blue-ringed octopus"],"wetsuit":"3mm full year-round; 5mm for the cooler Jul-Sep water and repetitive days","sites":6},{"name":"Tubbataha Reefs Natural Park","country":"Philippines","region":"Southeast Asia","slug":"tubbataha-reefs-natural-park","temps":[28,28,28,29,30,30,29,29,29,29,29,28],"ratings":["Closed","Closed","Good","Peak","Peak","Good","Closed","Closed","Closed","Closed","Closed","Closed"],"viz":[18,18,18,32,30,18,18,18,18,18,18,18],"best":"Apr-Jun","species":["grey reef shark","manta ray","whitetip shark","whale shark","schooling jacks"],"wetsuit":"3mm","sites":8},{"name":"Malpelo Island","country":"Colombia","region":"Eastern Pacific / Colombia","slug":"malpelo-island","temps":[24,24,24,25,25,26,27,27,28,28,27,25],"ratings":["Peak","Peak","Peak","Good","Good","Peak","Peak","Peak","Peak","Good","Good","Peak"],"viz":[15,15,12,18,20,25,25,30,30,28,22,18],"best":"Dec-Mar (peak hammerhead schools)","species":["scalloped hammerhead","silky shark","whale shark","Galapagos shark","smalltooth sand tiger shark"],"wetsuit":"5mm (7mm or hooded for Dec-May thermoclines down to ~14C)","sites":7}],"photoNames":["Fiji","Ningaloo Reef","Protea Banks","Sharm El Sheikh"]};
 (function(){
 "use strict";
-var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-var M = DATA.months;
-var TONAL = {Peak:'#0e7569',Good:'#5cb8ab',Shoulder:'#dfa826',Low:'#cfe4e0',Closed:'#b9c6c9'};
-var TTEXT = {Peak:'#ffffff',Good:'#08333b',Shoulder:'#3a2c04',Low:'#0e2f37',Closed:'#0e2f37'};
-var RBASE = {Peak:100,Good:72,Shoulder:48,Low:22,Closed:0};
-var MONTH_FULL = {Jan:'January',Feb:'February',Mar:'March',Apr:'April',May:'May',Jun:'June',Jul:'July',Aug:'August',Sep:'September',Oct:'October',Nov:'November',Dec:'December'};
-function vizBonus(v){ if(!v) return 0; var t=Math.max(5,Math.min(35,v)); return Math.round((t-5)/30*18); }
-function marineBonus(d){ return Math.min(25,(d.species?d.species.length:0)*5); }
-function scoreFor(d,mi){ var r=d.ratings[mi]; if(r==='Closed') return 0; return RBASE[r]+vizBonus(d.viz[mi])+marineBonus(d); }
-var SCORE_MAX = 143;
-function rankFor(mi){
-  return DATA.destinations.map(function(d){return {d:d,s:scoreFor(d,mi)};})
-    .sort(function(a,b){return b.s-a.s;});
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+var M=DATA.months, PHOTO=new Set(DATA.photoNames||[]);
+var TONAL={Peak:'#0e7569',Good:'#5cb8ab',Shoulder:'#dfa826',Low:'#cfe4e0',Closed:'#b9c6c9'};
+var TTEXT={Peak:'#ffffff',Good:'#08333b',Shoulder:'#3a2c04',Low:'#0e2f37',Closed:'#0e2f37'};
+var RBASE={Peak:100,Good:72,Shoulder:48,Low:22,Closed:0};
+var MF={Jan:'January',Feb:'February',Mar:'March',Apr:'April',May:'May',Jun:'June',Jul:'July',Aug:'August',Sep:'September',Oct:'October',Nov:'November',Dec:'December'};
+function vizBonus(v){if(!v)return 0;var t=Math.max(5,Math.min(35,v));return Math.round((t-5)/30*18);}
+function marineBonus(d){return Math.min(25,(d.species?d.species.length:0)*5);}
+function scoreFor(d,mi){var r=d.ratings[mi];if(r==='Closed')return 0;return RBASE[r]+vizBonus(d.viz[mi])+marineBonus(d);}
+var SCORE_MAX=143;
+function rankFor(mi){return DATA.destinations.map(function(d){return {d:d,s:scoreFor(d,mi)};}).sort(function(a,b){return b.s-a.s;});}
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+function peakIdx(d){var i=d.ratings.indexOf('Peak');return i<0?0:i;}
+function calBars(d){return d.ratings.map(function(r,mi){return '<div class="cb" data-m="'+mi+'" title="'+M[mi]+'" style="background:'+TONAL[r]+'"></div>';}).join('');}
+function wireCal(card,d){
+  var read=card.querySelector('.cal-read'); if(!read)return;
+  var L=read.querySelector('.cr-l'),R=read.querySelector('.cr-r');
+  [].forEach.call(card.querySelectorAll('.cb'),function(cb){
+    cb.style.animationDelay=(parseInt(cb.dataset.m)*0.03)+'s';
+    function show(){var mi=+cb.dataset.m,r=d.ratings[mi];L.innerHTML='<b>'+MF[M[mi]]+'</b> · '+r;R.innerHTML=(d.temps[mi]||'—')+'°C · '+(d.viz[mi]||'—')+' m';}
+    function clr(){L.textContent=d.name;R.textContent='Jan–Dec';}
+    cb.addEventListener('mouseenter',show);cb.addEventListener('mouseleave',clr);cb.addEventListener('touchstart',show,{passive:true});
+  });
 }
-function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
-function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+var curMonth=(new Date()).getMonth();
+document.getElementById('nowMonth').textContent=MF[M[curMonth]];
 
-/* ---------- hero: live "in season now" ---------- */
-var curMonth = (new Date()).getMonth(); // 0-11
-document.getElementById('nowMonth').textContent = MONTH_FULL[M[curMonth]];
+/* hero in-season + stats */
 (function(){
-  var list = document.getElementById('nowList');
-  var top = rankFor(curMonth).slice(0,4);
-  top.forEach(function(o,i){
-    var d=o.d, r=d.ratings[curMonth];
+  var list=document.getElementById('nowList');
+  rankFor(curMonth).slice(0,4).forEach(function(o,i){
+    var d=o.d,r=d.ratings[curMonth];
     var row=el('div','nc-row');
-    row.innerHTML =
-      '<span class="nc-rank">'+(i+1)+'</span>'+
+    row.innerHTML='<span class="nc-rank">'+(i+1)+'</span>'+
       '<span class="nc-name">'+esc(d.name)+'<small>'+esc(d.country)+'</small></span>'+
       '<span class="chip" style="background:'+TONAL[r]+';color:'+TTEXT[r]+'">'+r+'</span>'+
-      '<span class="nc-bar"><i data-w="'+Math.round(o.s/SCORE_MAX*100)+'" style="background:'+TONAL[r]+'"></i></span>';
+      '<span class="nc-bar"><i data-w="'+Math.round(o.s/SCORE_MAX*100)+'" style="background:linear-gradient(90deg,'+TONAL[r]+',var(--aqua))"></i></span>';
     list.appendChild(row);
   });
-  // stats
-  var peakCount = DATA.destinations.filter(function(d){return d.ratings[curMonth]==='Peak';}).length;
-  var stats=[['12','months mapped'],['5','season ratings'],['°C · m','temp + visibility']];
-  var wrap=document.getElementById('heroStats');
-  stats.forEach(function(s){var b=el('div','stat','<b>'+s[0]+'</b><span>'+s[1]+'</span>');wrap.appendChild(b);});
-})();
-
-/* ---------- ocean canvas ---------- */
-(function(){
-  var cv=document.getElementById('ocean'), ctx=cv.getContext('2d');
-  var W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2);
-  var bubbles=[], rays=[];
-  function resize(){
-    W=cv.clientWidth; H=cv.clientHeight;
-    cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
-    bubbles=[]; var n=Math.round(W*H/26000);
-    for(var i=0;i<n;i++) bubbles.push(mkBubble(true));
-    rays=[]; var rn=5;
-    for(var j=0;j<rn;j++) rays.push({x:(j+0.5)/rn*W + (Math.random()-.5)*80, w:60+Math.random()*120, o:0.05+Math.random()*0.07, ph:Math.random()*6.28, sp:0.2+Math.random()*0.3});
-  }
-  function mkBubble(init){
-    return {x:Math.random()*W, y:init?Math.random()*H:H+10, r:0.8+Math.random()*3.4,
-      s:0.25+Math.random()*0.9, drift:(Math.random()-.5)*0.4, ph:Math.random()*6.28, o:0.15+Math.random()*0.4};
-  }
-  function bg(){
-    var g=ctx.createLinearGradient(0,0,0,H);
-    g.addColorStop(0,'#eafcfa'); g.addColorStop(.35,'#c7f0ec'); g.addColorStop(.72,'#8fd9d2'); g.addColorStop(1,'#4bb5ac');
-    ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
-  }
-  function drawStatic(){ bg();
-    for(var j=0;j<5;j++){var x=(j+0.5)/5*W; ctx.save(); ctx.globalCompositeOperation='screen';
-      var gr=ctx.createLinearGradient(x,0,x-40,H); gr.addColorStop(0,'rgba(255,255,255,.16)'); gr.addColorStop(1,'rgba(255,255,255,0)');
-      ctx.fillStyle=gr; ctx.beginPath(); ctx.moveTo(x-30,0); ctx.lineTo(x+30,0); ctx.lineTo(x+90,H); ctx.lineTo(x-90,H); ctx.closePath(); ctx.fill(); ctx.restore();}
-  }
-  var t=0, raf=0, running=false;
-  function frame(){
-    t+=0.012; bg();
-    // god rays from surface
-    ctx.save(); ctx.globalCompositeOperation='screen';
-    rays.forEach(function(r){
-      var sway=Math.sin(t*r.sp+r.ph)*40;
-      var x=r.x+sway;
-      var gr=ctx.createLinearGradient(x,0,x-30,H);
-      var op=r.o*(0.7+0.3*Math.sin(t*0.8+r.ph));
-      gr.addColorStop(0,'rgba(255,255,255,'+op+')'); gr.addColorStop(1,'rgba(200,255,250,0)');
-      ctx.fillStyle=gr; ctx.beginPath();
-      ctx.moveTo(x-r.w*0.12,0); ctx.lineTo(x+r.w*0.12,0);
-      ctx.lineTo(x+r.w*0.6,H); ctx.lineTo(x-r.w*0.6,H); ctx.closePath(); ctx.fill();
-    });
-    ctx.restore();
-    // caustic shimmer near surface
-    ctx.save(); ctx.globalCompositeOperation='screen'; ctx.strokeStyle='rgba(255,255,255,.05)'; ctx.lineWidth=2;
-    for(var k=0;k<3;k++){ ctx.beginPath();
-      for(var x2=0;x2<=W;x2+=14){ var y=40+k*26+Math.sin(x2*0.02+t*1.4+k)*10+Math.sin(x2*0.05-t)*5;
-        if(x2===0)ctx.moveTo(x2,y); else ctx.lineTo(x2,y);} ctx.stroke(); }
-    ctx.restore();
-    // bubbles rising
-    ctx.save();
-    bubbles.forEach(function(b){
-      b.y-=b.s; b.x+=Math.sin(t+b.ph)*0.3+b.drift;
-      if(b.y< -10){ b.y=H+10; b.x=Math.random()*W; }
-      ctx.beginPath(); ctx.arc(b.x,b.y,b.r,0,6.2832);
-      ctx.fillStyle='rgba(255,255,255,'+b.o*0.5+')'; ctx.fill();
-      ctx.beginPath(); ctx.arc(b.x-b.r*0.3,b.y-b.r*0.3,b.r*0.4,0,6.2832);
-      ctx.fillStyle='rgba(255,255,255,'+b.o+')'; ctx.fill();
-    });
-    ctx.restore();
-    raf=requestAnimationFrame(frame);
-  }
-  function start(){ if(running||reduce)return; running=true; raf=requestAnimationFrame(frame); }
-  function stop(){ running=false; cancelAnimationFrame(raf); }
-  resize();
-  if(reduce){ drawStatic(); }
-  else { start();
-    // pause when hero off-screen
-    if('IntersectionObserver' in window){
-      new IntersectionObserver(function(es){es.forEach(function(e){ e.isIntersecting?start():stop(); });},{threshold:0.02})
-        .observe(document.getElementById('hero'));
-    }
-  }
-  var rt; window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){resize(); if(reduce)drawStatic();},180);});
-})();
-
-/* ---------- planner month scrubber ---------- */
-(function(){
-  var monthsEl=document.getElementById('months'), rankEl=document.getElementById('rank'),
-      titleEl=document.getElementById('scrubTitle');
-  var active=curMonth;
-  M.forEach(function(m,i){
-    var b=el('button','mbtn'+(i===active?' active':''),m);
-    b.setAttribute('role','tab'); b.setAttribute('aria-selected',i===active);
-    b.addEventListener('click',function(){ setMonth(i); });
-    monthsEl.appendChild(b);
+  [['12','months mapped'],['5','season ratings'],['°C · m','temp + visibility']].forEach(function(s){
+    document.getElementById('heroStats').appendChild(el('div','stat','<b>'+s[0]+'</b><span>'+s[1]+'</span>'));
   });
-  function setMonth(i){
-    active=i;
-    [].forEach.call(monthsEl.children,function(c,ci){c.classList.toggle('active',ci===i);c.setAttribute('aria-selected',ci===i);});
-    titleEl.textContent='Best diving in '+MONTH_FULL[M[i]];
-    render(i);
-  }
+})();
+
+/* hero: video + bubbles + parallax */
+(function(){
+  var vid=document.getElementById('heroVid'), media=document.getElementById('heroMedia');
+  if(reduce&&vid){ try{vid.removeAttribute('autoplay');vid.pause();}catch(e){} }
+  // rising bubbles over video
+  var cv=document.getElementById('bubbles'),ctx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2),bs=[],raf=0,run=false;
+  function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:H+8,r:0.6+Math.random()*2.6,s:0.2+Math.random()*0.7,ph:Math.random()*6.28,o:0.1+Math.random()*0.32};}
+  function resize(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);bs=[];var n=Math.round(W*H/32000);for(var i=0;i<n;i++)bs.push(mk(true));}
+  var t=0;
+  function frame(){t+=0.01;ctx.clearRect(0,0,W,H);bs.forEach(function(b){b.y-=b.s;b.x+=Math.sin(t+b.ph)*0.3;if(b.y<-8){b.y=H+8;b.x=Math.random()*W;}ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,6.2832);ctx.fillStyle='rgba(255,255,255,'+b.o*0.5+')';ctx.fill();ctx.beginPath();ctx.arc(b.x-b.r*0.3,b.y-b.r*0.3,b.r*0.4,0,6.2832);ctx.fillStyle='rgba(255,255,255,'+b.o+')';ctx.fill();});raf=requestAnimationFrame(frame);}
+  function start(){if(run||reduce)return;run=true;raf=requestAnimationFrame(frame);}
+  function stop(){run=false;cancelAnimationFrame(raf);}
+  resize();start();
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(resize,180);});
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?start():stop();if(vid){e.isIntersecting&&!reduce?vid.play().catch(function(){}):vid.pause();}});},{threshold:0.05}).observe(document.getElementById('hero'));}
+  // parallax
+  if(!reduce){var ticking=false;window.addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){var y=window.scrollY;if(y<window.innerHeight){media.style.transform='translateY('+(y*0.28)+'px)';}ticking=false;});},{passive:true});}
+})();
+
+/* planner */
+(function(){
+  var monthsEl=document.getElementById('months'),rankEl=document.getElementById('rank'),titleEl=document.getElementById('scrubTitle'),active=curMonth;
+  M.forEach(function(m,i){var b=el('button','mbtn'+(i===active?' active':''),m);b.setAttribute('role','tab');b.setAttribute('aria-selected',i===active);b.addEventListener('click',function(){setMonth(i);});monthsEl.appendChild(b);});
+  function setMonth(i){active=i;[].forEach.call(monthsEl.children,function(c,ci){c.classList.toggle('active',ci===i);c.setAttribute('aria-selected',ci===i);});titleEl.textContent='Best diving in '+MF[M[i]];render(i);}
   function render(mi){
-    var ranked=rankFor(mi).slice(0,7);
-    rankEl.innerHTML='';
+    var ranked=rankFor(mi).slice(0,7);rankEl.innerHTML='';
     ranked.forEach(function(o,idx){
-      var d=o.d, r=d.ratings[mi], closed=(r==='Closed');
+      var d=o.d,r=d.ratings[mi],closed=(r==='Closed');
       var row=el('div','rrow'+(closed?' dim':''));
-      row.innerHTML=
-        '<span class="rk">'+(idx+1<10?'0':'')+(idx+1)+'</span>'+
+      row.innerHTML='<span class="rk">'+(idx+1<10?'0':'')+(idx+1)+'</span>'+
         '<span class="nm">'+esc(d.name)+'<small>'+esc(d.country)+'</small></span>'+
-        '<span class="rt"><span class="chip" style="background:'+TONAL[r]+';color:'+TTEXT[r]+'">'+r+'</span>'+
-        '<span class="sc">'+o.s+'</span></span>'+
-        '<span class="track"><i style="background:'+TONAL[r]+'"></i></span>';
+        '<span class="rt"><span class="chip" style="background:'+TONAL[r]+';color:'+TTEXT[r]+'">'+r+'</span><span class="sc">'+o.s+'</span></span>'+
+        '<span class="track"><i style="background:linear-gradient(90deg,'+TONAL[r]+',var(--aqua))"></i></span>';
       rankEl.appendChild(row);
-      var bar=row.querySelector('.track i');
-      requestAnimationFrame(function(){ setTimeout(function(){ bar.style.width=Math.round(o.s/SCORE_MAX*100)+'%'; },30*idx); });
+      var bar=row.querySelector('.track i');requestAnimationFrame(function(){setTimeout(function(){bar.style.width=Math.round(o.s/SCORE_MAX*100)+'%';},reduce?0:30*idx);});
     });
   }
   setMonth(active);
 })();
 
-/* ---------- destination cards + season calendars ---------- */
+/* featured photo destinations + more grid */
 (function(){
-  var grid=document.getElementById('dgrid');
+  var feat=document.getElementById('feat'),mgrid=document.getElementById('mgrid');
   var BLURB={
     'Raja Ampat':'Soft-coral reefs and cruising mantas in 28-30°C water, visibility reaching 30 m.',
     'Cocos Island':'Offshore Pacific pinnacles patrolled by schooling hammerheads and silky sharks.',
@@ -673,207 +582,115 @@ document.getElementById('nowMonth').textContent = MONTH_FULL[M[curMonth]];
     'Fernando de Noronha':'Clear Atlantic water shared with resident spinner dolphins and reef sharks.',
     'Bali':'Wreck, wall and cool upwellings — mola mola in season off the south-east.',
     'Tubbataha Reefs Natural Park':'A liveaboard-only marine park of sheer walls in the Sulu Sea.',
-    'Malpelo Island':'A remote rock ringed by schooling hammerhead and silky sharks.'
+    'Malpelo Island':'A remote rock ringed by schooling hammerhead and silky sharks.',
+    'Fiji':'Soft-coral channels and shark dives in warm 26-29°C South Pacific water.',
+    'Ningaloo Reef':'A fringing reef where whale sharks cruise the drop-off through the cooler months.',
+    'Protea Banks':'A deep offshore reef known for baited shark dives and the winter sardine run.',
+    'Sharm El Sheikh':'Red Sea walls and reefs with warm water and reliable visibility year-round.'
   };
-  DATA.destinations.forEach(function(d,idx){
-    var card=el('article','dcard rv d-'+((idx%3)+1));
-    var peak=d.ratings.indexOf('Peak'); if(peak<0)peak=0;
+  DATA.destinations.forEach(function(d){
+    if(!PHOTO.has(d.name)||!d.img)return;
+    var pk=peakIdx(d);
     var species=(d.species||[]).slice(0,4).map(function(s){return '<span class="sp">'+esc(s)+'</span>';}).join('');
-    var bars=d.ratings.map(function(r,mi){
-      return '<div class="cb" data-m="'+mi+'" title="'+M[mi]+'" style="background:'+TONAL[r]+'"></div>';
-    }).join('');
+    var card=el('article','fcard rv');
     card.innerHTML=
-      '<div class="dc-top"><div><h3>'+esc(d.name)+'</h3><div class="ctry">'+esc(d.country)+'</div></div></div>'+
+      '<div class="photo"><img src="'+d.img+'" alt="Diving at '+esc(d.name)+'" loading="lazy"></div>'+
+      '<div class="body"><div class="fc-top"><div><h3>'+esc(d.name)+'</h3><div class="ctry">'+esc(d.country)+'</div></div>'+
+        '<span class="peakflag">peak '+M[pk]+' · '+(d.temps[pk]||'—')+'°C</span></div>'+
       '<p class="blurb">'+(BLURB[d.name]||'')+'</p>'+
-      '<div class="specs">'+
-        '<span class="spec">peak <b>'+M[peak]+'</b></span>'+
-        '<span class="spec">water <b>'+(d.temps[peak]||'—')+'°C</b></span>'+
-        '<span class="spec">viz <b>'+(d.viz[peak]||'—')+' m</b></span>'+
-        (d.sites?'<span class="spec">sites <b>'+d.sites+'</b></span>':'')+
-      '</div>'+
-      '<div class="cal">'+bars+'</div>'+
-      '<div class="cal-read" data-def="'+esc(d.name)+' — hover the calendar">'+
-        '<span class="cr-l">'+esc(d.name)+'</span><span class="cr-r">Jan–Dec season</span></div>'+
-      '<div class="species">'+species+'</div>';
-    grid.appendChild(card);
-    // calendar hover read-out
-    var read=card.querySelector('.cal-read'), L=read.querySelector('.cr-l'), R=read.querySelector('.cr-r');
-    var cbs=card.querySelectorAll('.cb');
-    [].forEach.call(cbs,function(cb){
-      cb.style.animationDelay=(parseInt(cb.dataset.m)*0.03)+'s';
-      function show(){ var mi=+cb.dataset.m, r=d.ratings[mi];
-        L.innerHTML='<b>'+MONTH_FULL[M[mi]]+'</b> · '+r;
-        R.innerHTML=(d.temps[mi]||'—')+'°C · '+(d.viz[mi]||'—')+' m viz';
-      }
-      function clear(){ L.textContent=d.name; R.textContent='Jan–Dec season'; }
-      cb.addEventListener('mouseenter',show);
-      cb.addEventListener('mouseleave',clear);
-      cb.addEventListener('touchstart',function(e){show();},{passive:true});
-    });
+      '<div class="cal">'+calBars(d)+'</div>'+
+      '<div class="cal-read"><span class="cr-l">'+esc(d.name)+'</span><span class="cr-r">Jan–Dec</span></div>'+
+      '<div class="species">'+species+'</div></div>';
+    feat.appendChild(card);wireCal(card,d);
   });
-  // legend
+  DATA.destinations.forEach(function(d){
+    if(PHOTO.has(d.name))return;
+    var pk=peakIdx(d);
+    var card=el('article','mcard rv');
+    card.innerHTML='<div class="mc-top"><h4>'+esc(d.name)+'</h4><span class="mc-c">'+esc(d.country)+'</span></div>'+
+      '<div class="cal">'+calBars(d)+'</div>'+
+      '<div class="cal-read"><span class="cr-l">'+esc(d.name)+'</span><span class="cr-r">peak '+M[pk]+'</span></div>';
+    mgrid.appendChild(card);wireCal(card,d);
+  });
   var lg=document.getElementById('legend');
-  ['Peak','Good','Shoulder','Low','Closed'].forEach(function(r){
-    lg.appendChild(el('span','lg','<i style="background:'+TONAL[r]+'"></i>'+r));
-  });
+  ['Peak','Good','Shoulder','Low','Closed'].forEach(function(r){lg.appendChild(el('span','lg','<i style="background:'+TONAL[r]+'"></i>'+r));});
 })();
 
-/* ---------- marine pulse ---------- */
+/* marine pulse */
 (function(){
-  // Encounter data grounded in flagship species/seasonality (0-3 reliability per month)
   var SPECIES=[
-    {name:'Manta ray',peak:'Maldives · Socorro',c:[3,3,2,2,2,1,1,1,2,3,3,3],
-     note:'Cleaning stations and plankton blooms bring mantas in — strongest through the Maldivian and Socorro high season.'},
-    {name:'Hammerhead',peak:'Cocos · Malpelo',c:[1,1,1,2,3,3,3,3,3,2,1,1],
-     note:'Schooling scalloped hammerheads hold on the seamounts off Cocos and Malpelo through the middle of the year.'},
-    {name:'Whale shark',peak:'Maldives',c:[2,2,2,1,1,1,1,3,3,3,2,2],
-     note:'The ocean\'s biggest fish tracks plankton — most reliable around the Maldivian atolls late in the year.'},
-    {name:'Green turtle',peak:'Sipadan',c:[3,3,3,3,3,3,3,3,3,3,3,3],
-     note:'Resident on healthy reefs year-round — Sipadan is turtles on essentially every dive.'},
-    {name:'Reef shark',peak:'Palau · Fernando',c:[2,2,2,2,2,2,2,2,2,2,2,2],
-     note:'Grey and blacktip reef sharks patrol current-swept channels through the year in Palau and off Fernando de Noronha.'}
+    {name:'Manta ray',peak:'Maldives · Socorro',c:[3,3,2,2,2,1,1,1,2,3,3,3],note:'Cleaning stations and plankton blooms bring mantas in — strongest through the Maldivian and Socorro high season.'},
+    {name:'Hammerhead',peak:'Cocos · Malpelo',c:[1,1,1,2,3,3,3,3,3,2,1,1],note:'Schooling scalloped hammerheads hold on the seamounts off Cocos and Malpelo through the middle of the year.'},
+    {name:'Whale shark',peak:'Ningaloo · Maldives',c:[1,1,2,3,3,3,3,3,2,2,2,1],note:'The ocean\'s biggest fish tracks plankton — reliable along Ningaloo Reef through the cooler months and around the Maldivian atolls.'},
+    {name:'Green turtle',peak:'Sipadan',c:[3,3,3,3,3,3,3,3,3,3,3,3],note:'Resident on healthy reefs year-round — Sipadan is turtles on essentially every dive.'},
+    {name:'Reef shark',peak:'Palau · Fiji',c:[2,2,2,2,2,2,2,2,2,2,2,2],note:'Grey and blacktip reef sharks patrol current-swept channels through the year in Palau and across Fiji.'}
   ];
-  var menu=document.getElementById('speciesMenu'), svg=document.getElementById('pulseSvg'),
-      monthsEl=document.getElementById('pulseMonths'), nameEl=document.getElementById('pulseName'),
-      peakEl=document.getElementById('pulsePeak'), readEl=document.getElementById('pulseRead');
-  var active=0, hoverM=-1;
-  SPECIES.forEach(function(s,i){
-    var b=el('button','smenu'+(i===0?' on':''),s.name);
-    b.addEventListener('click',function(){ active=i;
-      [].forEach.call(menu.children,function(c,ci){c.classList.toggle('on',ci===i);}); draw(); });
-    menu.appendChild(b);
-  });
-  M.forEach(function(m,i){
-    var p=el('button','pm',m); p.dataset.m=i; p.type='button';
-    p.setAttribute('aria-label',MONTH_FULL[m]+' encounter odds');
-    p.addEventListener('mouseenter',function(){hoverM=i;draw();});
-    p.addEventListener('mouseleave',function(){hoverM=-1;draw();});
-    p.addEventListener('focus',function(){hoverM=i;draw();});
-    p.addEventListener('blur',function(){hoverM=-1;draw();});
-    p.addEventListener('click',function(){hoverM=i;draw();});
-    monthsEl.appendChild(p);
-  });
+  var menu=document.getElementById('speciesMenu'),svg=document.getElementById('pulseSvg'),monthsEl=document.getElementById('pulseMonths'),nameEl=document.getElementById('pulseName'),peakEl=document.getElementById('pulsePeak'),readEl=document.getElementById('pulseRead');
+  var active=0,hoverM=-1;
+  SPECIES.forEach(function(s,i){var b=el('button','smenu'+(i===0?' on':''),s.name);b.addEventListener('click',function(){active=i;[].forEach.call(menu.children,function(c,ci){c.classList.toggle('on',ci===i);});draw();});menu.appendChild(b);});
+  M.forEach(function(m,i){var p=el('button','pm',m);p.dataset.m=i;p.type='button';p.setAttribute('aria-label',MF[m]+' encounter odds');p.addEventListener('mouseenter',function(){hoverM=i;draw();});p.addEventListener('mouseleave',function(){hoverM=-1;draw();});p.addEventListener('focus',function(){hoverM=i;draw();});p.addEventListener('blur',function(){hoverM=-1;draw();});p.addEventListener('click',function(){hoverM=i;draw();});monthsEl.appendChild(p);});
   function draw(){
-    var s=SPECIES[active];
-    nameEl.textContent=s.name; peakEl.textContent='peak: '+s.peak;
-    // build area path
-    var W=480,H=130,pad=6, n=12, max=3;
-    function xy(i){ var x=pad+i/(n-1)*(W-2*pad); var v=s.c[i]/max; var y=H-8-v*(H-30); return [x,y]; }
-    var pts=[]; for(var i=0;i<n;i++)pts.push(xy(i));
+    var s=SPECIES[active];nameEl.textContent=s.name;peakEl.textContent='peak: '+s.peak;
+    var W=480,H=140,pad=6,n=12,max=3;
+    function xy(i){var x=pad+i/(n-1)*(W-2*pad);var v=s.c[i]/max;var y=H-10-v*(H-34);return[x,y];}
+    var pts=[];for(var i=0;i<n;i++)pts.push(xy(i));
     var line='M'+pts[0][0]+' '+pts[0][1];
-    for(var j=1;j<n;j++){ var p0=pts[j-1],p1=pts[j],cx=(p0[0]+p1[0])/2;
-      line+=' C'+cx+' '+p0[1]+' '+cx+' '+p1[1]+' '+p1[0]+' '+p1[1]; }
+    for(var j=1;j<n;j++){var p0=pts[j-1],p1=pts[j],cx=(p0[0]+p1[0])/2;line+=' C'+cx+' '+p0[1]+' '+cx+' '+p1[1]+' '+p1[0]+' '+p1[1];}
     var area=line+' L'+pts[n-1][0]+' '+H+' L'+pts[0][0]+' '+H+' Z';
-    var dots=pts.map(function(p,i){ var on=(i===hoverM);
-      return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+(on?5:3)+'" fill="'+(on?'#0e7569':'#0e9c92')+'"/>';}).join('');
-    var vline=hoverM>=0?'<line x1="'+pts[hoverM][0]+'" y1="0" x2="'+pts[hoverM][0]+'" y2="'+H+'" stroke="rgba(14,156,146,.35)" stroke-width="1.5" stroke-dasharray="3 3"/>':'';
-    svg.innerHTML=
-      '<defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">'+
-      '<stop offset="0" stop-color="#2fe0d6" stop-opacity=".5"/>'+
-      '<stop offset="1" stop-color="#2fe0d6" stop-opacity="0"/></linearGradient></defs>'+
-      '<path d="'+area+'" fill="url(#pg)"/>'+
-      '<path d="'+line+'" fill="none" stroke="#0b7d75" stroke-width="2.5" stroke-linecap="round"/>'+
-      vline+dots;
+    var dots=pts.map(function(p,i){var on=(i===hoverM);return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+(on?5.5:3)+'" fill="'+(on?'#2fe0d6':'#57ece3')+'"/>';}).join('');
+    var vline=hoverM>=0?'<line x1="'+pts[hoverM][0]+'" y1="0" x2="'+pts[hoverM][0]+'" y2="'+H+'" stroke="rgba(47,224,214,.4)" stroke-width="1.5" stroke-dasharray="3 3"/>':'';
+    svg.innerHTML='<defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2fe0d6" stop-opacity=".55"/><stop offset="1" stop-color="#2fe0d6" stop-opacity="0"/></linearGradient></defs><path d="'+area+'" fill="url(#pg)"/><path d="'+line+'" fill="none" stroke="#2fe0d6" stroke-width="2.5" stroke-linecap="round"/>'+vline+dots;
     [].forEach.call(monthsEl.children,function(c,ci){c.classList.toggle('on',ci===hoverM);});
-    var lvl=['none','low','good','peak'];
-    if(hoverM>=0){ readEl.innerHTML='<b>'+MONTH_FULL[M[hoverM]]+'</b> — '+lvl[s.c[hoverM]]+' odds. '+esc(s.note); }
-    else { readEl.innerHTML=esc(s.note); }
+    var lvl=['none','low','good','peak'];readEl.innerHTML=hoverM>=0?('<b>'+MF[M[hoverM]]+'</b> — '+lvl[s.c[hoverM]]+' odds. '+esc(s.note)):esc(s.note);
   }
   draw();
 })();
 
-/* ---------- gear band ---------- */
+/* gear (photos) */
 (function(){
   var grid=document.getElementById('ggrid');
-  var G_ICON={
-    mask:'<svg class="gsvg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 24c0-6 4-8 20-8s20 2 20 8c0 8-2 16-8 16-4 0-5-4-12-4s-8 4-12 4c-6 0-8-8-8-16Z"/><path d="M20 44c-2 4-2 8 0 10"/></svg>',
-    fins:'<svg class="gsvg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M24 8h10c2 0 4 2 4 6v10l10 26c2 6-2 8-8 8H22c-6 0-8-4-6-10l8-30V14c0-4 0-6 0-6Z"/><path d="M22 24h16"/></svg>',
-    reg:'<svg class="gsvg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="34" r="14"/><path d="M18 34h12"/><path d="M38 30l14-10c3-2 6 0 6 4v0c0 4-3 6-6 6l-14 4"/></svg>',
-    bcd:'<svg class="gsvg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h20v10c8 2 12 8 12 18s-6 14-14 14H32c-8 0-14-6-14-14s4-16 12-18V12Z"/><path d="M28 12v8M36 12v8"/></svg>',
-    comp:'<svg class="gsvg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="16" y="16" width="32" height="32" rx="8"/><path d="M32 24v8l6 4"/><path d="M22 16l-2-6M42 16l2-6M22 48l-2 6M42 48l2 6"/></svg>',
-    suit:'<svg class="gsvg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M24 8h16v8l6 6v22c0 6-2 12-6 12h-2l-2-16h-8l-2 16h-2c-4 0-6-6-6-12V22l6-6V8Z"/></svg>'
-  };
   var GEAR=[
-    {k:'mask',n:'Masks',d:'Low-volume fits and a clear field of view for long dives.'},
-    {k:'fins',n:'Fins',d:'Blade and channel designs matched to current and kick style.'},
-    {k:'reg',n:'Regulators',d:'Reliable, easy breathing across depth and cold-water conditions.'},
-    {k:'bcd',n:'BCDs',d:'Jacket and backplate options weighed on lift, trim and travel weight.'},
-    {k:'comp',n:'Dive Computers',d:'Algorithms, air integration and readability compared for planning.'},
-    {k:'suit',n:'Wetsuits',d:'Thickness and seams matched to real water temperatures.'}
+    {n:'Masks',img:'../assets/gear/studio/atomic-aquatics-venom-frameless.jpg',d:'Low-volume fits and a clear field of view for long dives.'},
+    {n:'Fins',img:'../assets/gear/studio/apeks-rk3.jpg',d:'Blade and channel designs matched to current and kick style.'},
+    {n:'Regulators',img:'../assets/gear/studio/apeks-mtx-rc.jpg',d:'Reliable, easy breathing across depth and cold-water conditions.'},
+    {n:'BCDs',img:'../assets/gear/studio/scubapro-hydros-pro.jpg',d:'Jacket and backplate options weighed on lift, trim and travel weight.'},
+    {n:'Dive Computers',img:'../assets/gear/studio/garmin-descent-mk3i.jpg',d:'Algorithms, air integration and readability compared for planning.'},
+    {n:'Wetsuits',img:'../assets/gear/studio/aqua-lung-aquaflex.jpg',d:'Thickness and seams matched to real water temperatures.'}
   ];
   GEAR.forEach(function(g,i){
     var c=el('article','gcard rv d-'+((i%3)+1));
-    c.innerHTML=G_ICON[g.k]+
-      '<span class="gnum">'+(i<9?'0':'')+(i+1)+'</span>'+
-      '<h3>'+g.n+'</h3><p>'+g.d+'</p>'+
-      '<span class="go">Read the guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>';
+    c.innerHTML='<div class="gimg"><img src="'+g.img+'" alt="'+esc(g.n)+'" loading="lazy"></div>'+
+      '<div class="gbody"><span class="gnum">'+(i<9?'0':'')+(i+1)+'</span><h3>'+g.n+'</h3><p>'+g.d+'</p>'+
+      '<span class="go">Read the guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>';
     grid.appendChild(c);
   });
 })();
 
-/* ---------- how we score ---------- */
+/* how we score */
 (function(){
   var f=document.getElementById('formula');
   var rows=[
-    {c:'#0e7569',w:'up to 100',t:'Season rating',p:'Conditions that month, Peak to Low — the backbone of the score.',
-     ic:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>'},
-    {c:'#0e9c92',w:'up to 18',t:'Visibility',p:'How far you can see — 5 m of murk or 30 m of blue water.',
-     ic:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>'},
-    {c:'#5cb8ab',w:'up to 25',t:'Marine life',p:'What\'s likely to be swimming past when you drop in.',
-     ic:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 12c4-6 12-6 16 0-4 6-12 6-16 0Z"/><path d="M16 12l4-3v6l-4-3Z"/></svg>'}
+    {c:'#0e7569',w:'up to 100',t:'Season rating',p:'Conditions that month, Peak to Low — the backbone of the score.',ic:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>'},
+    {c:'#0e9c92',w:'up to 18',t:'Visibility',p:'How far you can see — 5 m of murk or 30 m of blue water.',ic:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>'},
+    {c:'#5cb8ab',w:'up to 25',t:'Marine life',p:'What\'s likely to be swimming past when you drop in.',ic:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#04202a" stroke-width="2"><path d="M4 12c4-6 12-6 16 0-4 6-12 6-16 0Z"/><path d="M16 12l4-3v6l-4-3Z"/></svg>'}
   ];
-  rows.forEach(function(r){
-    var row=el('div','frow');
-    row.innerHTML='<span class="fi" style="background:'+r.c+'">'+r.ic+'</span>'+
-      '<div><h4>'+r.t+'</h4><p>'+r.p+'</p></div><span class="fw">'+r.w+'</span>';
-    f.appendChild(row);
-  });
-  // score dial
-  var dial=document.getElementById('scoreDial');
-  var pct=0.86, C=2*Math.PI*54;
-  dial.innerHTML='<svg viewBox="0 0 128 128">'+
-    '<circle cx="64" cy="64" r="54" fill="none" stroke="#e0efee" stroke-width="12"/>'+
-    '<circle id="dialArc" cx="64" cy="64" r="54" fill="none" stroke="#0e7569" stroke-width="12" stroke-linecap="round" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'"/></svg>'+
-    '<div class="gv-center"><b id="dialNum">0</b><span>Peak-season score</span></div>';
-  var arc=dial.querySelector('#dialArc'), num=dial.querySelector('#dialNum'), done=false;
-  function run(){ if(done)return; done=true;
-    if(reduce){ arc.style.strokeDashoffset=C*(1-pct); num.textContent=Math.round(pct*143); return; }
-    var t0=null, dur=1400;
-    function step(ts){ if(!t0)t0=ts; var k=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-k,3);
-      arc.style.strokeDashoffset=C*(1-pct*e); num.textContent=Math.round(pct*143*e);
-      if(k<1)requestAnimationFrame(step); }
-    requestAnimationFrame(step);
-  }
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)run();});},{threshold:.4}).observe(dial);
-  } else run();
+  rows.forEach(function(r){var row=el('div','frow');row.innerHTML='<span class="fi" style="background:'+r.c+'">'+r.ic+'</span><div><h4>'+r.t+'</h4><p>'+r.p+'</p></div><span class="fw">'+r.w+'</span>';f.appendChild(row);});
+  var dial=document.getElementById('scoreDial'),pct=0.86,C=2*Math.PI*54;
+  dial.innerHTML='<svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="54" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="12"/><circle id="dialArc" cx="64" cy="64" r="54" fill="none" stroke="#2fe0d6" stroke-width="12" stroke-linecap="round" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'" style="filter:drop-shadow(0 0 8px rgba(47,224,214,.5))"/></svg><div class="gv-center"><b id="dialNum">0</b><span>Peak-season score</span></div>';
+  var arc=dial.querySelector('#dialArc'),num=dial.querySelector('#dialNum'),done=false;
+  function run(){if(done)return;done=true;if(reduce){arc.style.strokeDashoffset=C*(1-pct);num.textContent=Math.round(pct*143);return;}var t0=null,dur=1400;function step(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-k,3);arc.style.strokeDashoffset=C*(1-pct*e);num.textContent=Math.round(pct*143*e);if(k<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)run();});},{threshold:.4}).observe(dial);}else run();
 })();
 
-/* ---------- scroll reveals + topbar + depth gauge ---------- */
+/* reveals + topbar + gauge */
 (function(){
   var io;
-  if('IntersectionObserver' in window && !reduce){
-    io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);} });},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
-    [].forEach.call(document.querySelectorAll('.rv'),function(n){io.observe(n);});
-  } else { [].forEach.call(document.querySelectorAll('.rv'),function(n){n.classList.add('in');}); }
-  // animate hero now-bars after load
-  requestAnimationFrame(function(){ setTimeout(function(){
-    [].forEach.call(document.querySelectorAll('#nowList .nc-bar i'),function(i,ix){ setTimeout(function(){i.style.width=i.dataset.w+'%';},120*ix); });
-  },300); });
-  // topbar + gauge
-  var topbar=document.getElementById('topbar'), gauge=document.getElementById('gauge'),
-      fill=document.getElementById('gaugeFill'), depth=document.getElementById('depthLabel');
-  var doc=document.documentElement;
-  function onScroll(){
-    var y=window.scrollY||doc.scrollTop;
-    topbar.classList.toggle('scrolled',y>40);
-    gauge.classList.toggle('on',y>window.innerHeight*0.6);
-    var max=doc.scrollHeight-window.innerHeight;
-    var p=max>0?y/max:0;
-    fill.style.height=(p*100)+'%';
-    depth.textContent=Math.round(p*40)+' m';
-  }
-  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  if('IntersectionObserver' in window && !reduce){io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});[].forEach.call(document.querySelectorAll('.rv'),function(n){io.observe(n);});}
+  else{[].forEach.call(document.querySelectorAll('.rv'),function(n){n.classList.add('in');});}
+  requestAnimationFrame(function(){setTimeout(function(){[].forEach.call(document.querySelectorAll('#nowList .nc-bar i'),function(i,ix){setTimeout(function(){i.style.width=i.dataset.w+'%';},reduce?0:120*ix);});},300);});
+  var topbar=document.getElementById('topbar'),gauge=document.getElementById('gauge'),fill=document.getElementById('gaugeFill'),depth=document.getElementById('depthLabel'),doc=document.documentElement;
+  function onScroll(){var y=window.scrollY||doc.scrollTop;topbar.classList.toggle('scrolled',y>40);gauge.classList.toggle('on',y>window.innerHeight*0.6);var max=doc.scrollHeight-window.innerHeight,p=max>0?y/max:0;fill.style.height=(p*100)+'%';depth.textContent=Math.round(p*42)+' m';}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 })();
 })();
 </script>

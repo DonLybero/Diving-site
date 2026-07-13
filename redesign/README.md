@@ -1,48 +1,43 @@
-# DiveSZN — homepage redesign concept
+# DiveSZN — homepage redesign concept · "Deep Water" edition
 
-An interactive, animated concept for the DiveSZN homepage. **Not merged to
-`main`** and not part of the deployed site — it lives only here on the
+A cinematic, video-and-photo-led concept for the DiveSZN homepage. **Not merged
+to `main`** and not part of the deployed site — it lives only on the
 `claude/website-redesign-ai-agents-fmwv9t` branch and as a private hosted
 preview.
 
 ## What it is
 
-A single-file, self-contained redesign of the homepage built around the
-product's core promise — *know when to dive where*:
+A single-file redesign built around the product's core promise — *know when to
+dive where* — with a dark, immersive "descent through the water column" look:
 
-- **Animated ocean hero** — a generative Canvas caustics / light-shaft /
-  bubble field (pure code, no photos), with a live "in season now" panel that
-  ranks the best destinations for the current real-world month.
-- **Month scrubber planner** — pick any month and destinations re-rank live by
+- **Full-bleed underwater video hero** (`assets/video/hero-dive.webm`) with a
+  live "in season now" panel that ranks destinations for the current real month.
+- **Month-scrubber planner** — pick any month and destinations re-rank live by
   the real season score (rating base + visibility bonus + marine-life bonus).
-- **Flagship destinations** — cards with the canonical 12-bar tonal season
-  calendar and an on-hover water-temp / visibility read-out.
+- **Featured waters** — large real dive-site photography (Fiji, Ningaloo Reef,
+  Protea Banks, Sharm El Sheikh) paired with the canonical 12-bar tonal season
+  calendar and an on-hover water-temp / visibility read-out; the rest of the
+  flagship destinations follow as compact calendar cards.
 - **Marine-life encounter pulse** — scrub the year to see when each species is
   most reliably in the water.
-- **Scuba gear guides**, **how-we-score** trust band, and a footer link tree.
-- A right-edge **depth gauge** tracks the scroll as a descent through the water
-  column, all within the brand's light/white identity and tonal palette.
+- **Scuba gear** — real product photography across the six buyer's-guide
+  categories.
+- **How-we-score** trust band, a right-edge **depth gauge**, scroll reveals,
+  hero parallax, and full reduced-motion + mobile support.
 
-Everything honours the brand system and the non-negotiable editorial rules
-(scuba-only, no banned vocabulary, tonal rating palette, no prices on the
-homepage, coral reserved for buy/booking CTAs). Fully responsive and
-reduced-motion aware.
-
-## How it was built
-
-A small "studio team" of agents: a creative director (motion / scroll
-choreography), a copywriter (all homepage copy under the editorial rules), the
-build (this file), then a QA pass (brand + editorial compliance, and
-accessibility + responsive + reduced-motion).
+Brand DNA is kept (whale-fluke mark, `Dive`**`SZN`** wordmark, serif/sans/mono
+type, the exact tonal season palette) and the editorial rules are respected
+(scuba-only, no banned vocabulary, no homepage prices, coral reserved for buy
+CTAs). This is a deliberate single dark theme — the "deep water" cut.
 
 ## Files
 
-- **`index.html`** — the full standalone page (open directly or serve). Real
-  destination / season data is inlined, so it works over `file://` too.
-- **`artifact.html`** — the same page as body-only content for the hosted
-  private preview (CSP-safe: all CSS/JS inline, generated visuals only). Derived
-  from `index.html` — regenerate by copying everything between `<body>…</body>`
-  and prefixing a `<title>`.
+- **`index.html`** — the full page. References the real media in `../assets/…`,
+  so **serve it** to view (relative asset paths need HTTP, not `file://`).
+- **`artifact.html`** — the same page for the hosted private preview, with the
+  video and all photos inlined as `data:` URIs (self-contained, CSP-safe, ~3.4 MB).
+  Regenerate it from `index.html` by base64-embedding every `../assets/…`
+  reference and keeping the `<body>` contents.
 
 ## View locally
 
@@ -50,4 +45,5 @@ accessibility + responsive + reduced-motion).
 python3 -m http.server        # then open http://localhost:8000/redesign/
 ```
 
-Or just open `redesign/index.html` in a browser.
+Because the hero uses video and the cards use real photography, view it over
+HTTP (the assets live at the repo root under `assets/`).
