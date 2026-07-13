@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;background:#02080a;overflow:hidden}
+  #stage{display:block}
+</style>
+</head>
+<body>
+<canvas id="stage"></canvas>
+<script>
+// ============================================================
+//  DiveSZN — 3D wireframe dive-mask hologram, projected from a stand.
+//  Deterministic frame renderer: window.renderFrame(i) draws a perfect
+//  360-degree loop across window.TOTAL frames.  Pure canvas 2D, no deps.
+// ============================================================
+
+const W = 1080, H = 1350;
+const TOTAL = 180;                 // 6s @ 30fps, one full revolution
+window.W = W; window.H = H; window.TOTAL = TOTAL;
+
+const cv = document.getElementById('stage');
+cv.width = W; cv.height = H;
+cv.style.width = W + 'px'; cv.style.height = H + 'px';
+const ctx = cv.getContext('2d');
+
+// ---- palette (DiveSZN teal) ----
+const INK  = '14,117,105';         // #0e7569  peak teal
+const GLOW = '92,222,204';         // bright cyan-teal
+const CORE = '196,255,244';        // near-white core
+
+// ---- camera / projection ----
+const camZ = 6.2;
+const focal = W * 2.35;
+const cx = W / 2;
+const cyBase = H * 0.395;          // hologram vertical centre
+const tiltX = -0.14;               // look slightly down onto the piece
+
+// ============================================================
+//  Geometry  (model space, +z toward viewer, mask faces +z)
+//  Everything is a polyline: {pts:[[x,y,z]...], closed, w}
+//    w = base intensity weight
+// ============================================================
+const P = [];   // polylines
+function poly(pts, closed, w){ P.push({pts, closed:!!closed, w:w==null?1:w}); }
+
+// superellipse ring (rounded-rectangle-ish loop) in a plane z=const
+function seRing(cx0, cy0, z, a, b, n, count){
+  const r = [];
+  for (let i=0;i<count;i++){
+    const t = i/count*Math.PI*2;
+    const c = Math.cos(t), s = Math.sin(t);
+    const x = cx0 + a * Math.sign(c) * Math.pow(Math.abs(c), 2/n);
+    const y = cy0 + b * Math.sign(s) * Math.pow(Math.abs(s), 2/n);
+    r.push([x, y, z]);
+  }
+  return r;
+}
+
+// ---- mask body: lofted skirt from small front frame to wide face seal ----
+const RING_CT = 76;
+const K = 8;                       // loft segments
+const zFront = 0.55, zBack = -0.85;
+const frontA = 1.16, frontB = 0.82;
+const backScale = 1.34;
+const rings = [];
+for (let k=0;k<=K;k++){
+  const t = k/K;
+  const sc = 1 + (backScale-1)*t;
+  const z  = zFront + (zBack-zFront)*t;
+  // sink the whole thing slightly as it goes back (face contour)
+  const yo = -0.02 * t;
+  const ring = seRing(0, yo, z, frontA*sc, frontB*sc, 4.0, RING_CT);
+  rings.push(ring);
+  poly(ring, true, k===0 ? 1.25 : (k===K ? 0.85 : 0.6));   // frame rim brightest
+}
+// longitudinal rails across the skirt
+for (let i=0;i<RING_CT;i+=6){
+  const rail = rings.map(r => r[i]);
+  poly(rail, false, 0.5);
+}
+
+// ---- twin lenses on the front frame ----
+function lens(ox){
+  const zL = 0.60, apexZ = 0.74;
+  const a = 0.44, b = 0.54;
+  // concentric domed rings (front glass)
+  for (let ci=0; ci<3; ci++){
+    const s = 1 - ci*0.33;
+    const zz = zL + (apexZ - zL) * (ci/3) * 0.9;
+    poly(seRing(ox, -0.02, zz, a*s, b*s, 3.4, 48), true, ci===0?1.1:0.7);
+  }
+  // radial spokes from apex to outer ring
+  const outer = seRing(ox, -0.02, zL, a, b, 3.4, 48);
+  const apex = [ox, -0.02, apexZ];
+  for (let i=0;i<48;i+=6){ poly([apex, outer[i]], false, 0.5); }
+}
+lens(-0.505);
+lens( 0.505);
+
+// nose bridge between lenses
+for (let j=-1;j<=1;j++){
+  const y = -0.02 + j*0.16;
+  poly([[-0.10, y, 0.60],[0.10, y, 0.60]], false, 0.55);
+}
+
+// ---- nose pocket (pouch protruding forward, below the bridge) ----
+const npZ = 0.80;
+const npRing = seRing(0, -0.30, npZ, 0.34, 0.30, 2.6, 40);
+poly(npRing, true, 0.8);
+// connect pocket back to the front frame
+const frame0 = rings[0];
+for (let i=0;i<40;i+=5){
+  // nearest frame point on the lower-front band
+  const src = npRing[i];
+  const dst = [src[0]*1.05, -0.62 + src[1]*0.15, 0.56];
+  poly([src, dst], false, 0.4);
+}
+
+// ---- split head strap: two arcs wrapping behind ----
+function strapArc(y){
+  const pts = [];
+  const cxo=0, czo=-0.80, rx=1.02, rz=1.10;
+  // sweep the BACK ~250deg, leaving a gap at the front (mask side)
+  const a0 = -0.30*Math.PI, a1 = 1.30*Math.PI;
+  const seg = 60;
+  for (let i=0;i<=seg;i++){
+    const t = a0 + (a1-a0)*i/seg;
+    pts.push([cxo + rx*Math.cos(t), y, czo + rz*Math.sin(t)]);
+  }
+  poly(pts, false, 0.55);
+}
+strapArc( 0.28);
+strapArc(-0.28);
+// buckle tabs connecting frame sides to strap ends
+[[1],[-1]].forEach(([sgn])=>{
+  const fx = sgn*frontA*1.02;
+  poly([[fx,0.30,0.30],[sgn*1.30,0.30,-0.55]], false, 0.5);
+  poly([[fx,-0.30,0.30],[sgn*1.30,-0.30,-0.55]], false, 0.5);
+});
+
+// ============================================================
+//  Transform + project
+// ============================================================
+const MODEL_SCALE = 0.60;   // shrink so the hologram floats above the stand
+const MODEL_LIFT  = 0.42;   // raise it clear of the emitter
+function xform(p, ang, bob){
+  let x = p[0]*MODEL_SCALE, y = p[1]*MODEL_SCALE, z = p[2]*MODEL_SCALE;
+  // spin about Y
+  const cA=Math.cos(ang), sA=Math.sin(ang);
+  let x1 =  x*cA + z*sA;
+  let z1 = -x*sA + z*cA;
+  let y1 =  y + bob + MODEL_LIFT;
+  // tilt about X
+  const cB=Math.cos(tiltX), sB=Math.sin(tiltX);
+  let y2 = y1*cB - z1*sB;
+  let z2 = y1*sB + z1*cB;
+  return [x1, y2, z2];
+}
+function project(p, cy){
+  const s = focal/(camZ - p[2]);
+  return [cx + p[0]*s, cy - p[1]*s, p[2]];
+}
+
+// ============================================================
+//  Drawing helpers
+// ============================================================
+function strokePoly(scr, closed, alpha, wide, colWide, colCore){
+  ctx.beginPath();
+  ctx.moveTo(scr[0][0], scr[0][1]);
+  for (let i=1;i<scr.length;i++) ctx.lineTo(scr[i][0], scr[i][1]);
+  if (closed) ctx.closePath();
+  // soft halo pass
+  ctx.lineJoin='round'; ctx.lineCap='round';
+  ctx.shadowColor = 'rgba('+GLOW+','+(0.9*alpha)+')';
+  ctx.shadowBlur = 16;
+  ctx.strokeStyle = 'rgba('+colWide+','+(0.28*alpha)+')';
+  ctx.lineWidth = wide;
+  ctx.stroke();
+  // bright core pass
+  ctx.shadowBlur = 5;
+  ctx.strokeStyle = 'rgba('+colCore+','+(0.92*alpha)+')';
+  ctx.lineWidth = 1.15;
+  ctx.stroke();
+  ctx.shadowBlur = 0;
+}
+
+function drawBackground(p){
+  // deep radial well
+  const g = ctx.createRadialGradient(cx, H*0.52, 60, cx, H*0.52, H*0.85);
+  g.addColorStop(0, '#06171a');
+  g.addColorStop(0.55, '#040f12');
+  g.addColorStop(1, '#01070a');
+  ctx.fillStyle = g;
+  ctx.fillRect(0,0,W,H);
+}
+
+function drawFloorGrid(p){
+  // perspective grid on the stand's plane
+  const fy = H*0.815;             // floor line at pedestal base
+  const vanish = H*0.60;
+  ctx.save();
+  ctx.globalCompositeOperation = 'screen';
+  ctx.strokeStyle = 'rgba('+INK+',0.16)';
+  ctx.lineWidth = 1;
+  // radial lines
+  for (let i=-6;i<=6;i++){
+    const x = cx + i*90;
+    ctx.beginPath();
+    ctx.moveTo(cx + (x-cx)*0.12, vanish);
+    ctx.lineTo(x, H);
+    ctx.stroke();
+  }
+  // depth rings (ellipses)
+  for (let r=1;r<=7;r++){
+    const t = r/7;
+    const yy = vanish + (H-vanish)*t;
+    const rw = 40 + 620*t*t;
+    const rh = rw*0.20;
+    ctx.beginPath();
+    ctx.ellipse(cx, yy, rw, rh, 0, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba('+INK+','+(0.05+0.10*t)+')';
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function drawCone(p, flick){
+  // volumetric projection cone from emitter up to hologram
+  const emY = H*0.735, emHalf = 78;
+  const topY = H*0.235, topHalf = 470;
+  ctx.save();
+  ctx.globalCompositeOperation = 'screen';
+  const g = ctx.createLinearGradient(0, emY, 0, topY);
+  g.addColorStop(0, 'rgba('+GLOW+','+(0.20*flick)+')');
+  g.addColorStop(0.4, 'rgba('+INK+','+(0.09*flick)+')');
+  g.addColorStop(1, 'rgba('+INK+',0)');
+  ctx.beginPath();
+  ctx.moveTo(cx-emHalf, emY);
+  ctx.lineTo(cx+emHalf, emY);
+  ctx.lineTo(cx+topHalf, topY);
+  ctx.lineTo(cx-topHalf, topY);
+  ctx.closePath();
+  ctx.fillStyle = g;
+  ctx.fill();
+  // shimmer beams
+  ctx.strokeStyle = 'rgba('+GLOW+','+(0.10*flick)+')';
+  ctx.lineWidth = 1;
+  for (let i=-3;i<=3;i++){
+    const bx = i/3;
+    ctx.beginPath();
+    ctx.moveTo(cx + bx*emHalf, emY);
+    ctx.lineTo(cx + bx*topHalf, topY);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function drawStand(p, flick){
+  const topY = H*0.735;
+  const botY = H*0.815;
+  const topHalf = 96, botHalf = 150;
+  ctx.save();
+  // pedestal body
+  ctx.beginPath();
+  ctx.moveTo(cx-topHalf, topY);
+  ctx.lineTo(cx+topHalf, topY);
+  ctx.lineTo(cx+botHalf, botY);
+  ctx.lineTo(cx-botHalf, botY);
+  ctx.closePath();
+  const bg = ctx.createLinearGradient(0, topY, 0, botY);
+  bg.addColorStop(0, '#0b1c1f');
+  bg.addColorStop(1, '#051012');
+  ctx.fillStyle = bg;
+  ctx.fill();
+  ctx.strokeStyle = 'rgba('+INK+',0.55)';
+  ctx.lineWidth = 1.4;
+  ctx.stroke();
+  // side edges highlight
+  ctx.strokeStyle = 'rgba('+GLOW+',0.35)';
+  ctx.beginPath(); ctx.moveTo(cx-topHalf,topY); ctx.lineTo(cx-botHalf,botY);
+  ctx.moveTo(cx+topHalf,topY); ctx.lineTo(cx+botHalf,botY); ctx.stroke();
+  // base ellipse
+  ctx.beginPath();
+  ctx.ellipse(cx, botY, botHalf, botHalf*0.16, 0, 0, Math.PI*2);
+  ctx.strokeStyle = 'rgba('+INK+',0.5)';
+  ctx.stroke();
+  // emitter disk (glowing top)
+  ctx.globalCompositeOperation = 'screen';
+  const eg = ctx.createRadialGradient(cx, topY, 2, cx, topY, topHalf*1.2);
+  eg.addColorStop(0, 'rgba('+CORE+','+(0.95*flick)+')');
+  eg.addColorStop(0.35, 'rgba('+GLOW+','+(0.6*flick)+')');
+  eg.addColorStop(1, 'rgba('+INK+',0)');
+  ctx.fillStyle = eg;
+  ctx.beginPath();
+  ctx.ellipse(cx, topY, topHalf, topHalf*0.26, 0, 0, Math.PI*2);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba('+CORE+','+(0.8*flick)+')';
+  ctx.lineWidth = 1.4;
+  ctx.beginPath();
+  ctx.ellipse(cx, topY, topHalf, topHalf*0.26, 0, 0, Math.PI*2);
+  ctx.stroke();
+  ctx.restore();
+}
+
+// scanlines + flicker overlay confined to the hologram band
+function drawScanlines(p, cy){
+  ctx.save();
+  ctx.globalCompositeOperation = 'screen';
+  // static faint scanlines
+  ctx.fillStyle = 'rgba('+GLOW+',0.045)';
+  for (let y=Math.round(H*0.10); y<H*0.78; y+=4){ ctx.fillRect(0,y,W,1.4); }
+  // moving bright scan band (loops)
+  const band = (p*1.0)%1;
+  const by = H*0.10 + (H*0.66)*band;
+  const bg = ctx.createLinearGradient(0, by-40, 0, by+40);
+  bg.addColorStop(0,'rgba('+GLOW+',0)');
+  bg.addColorStop(0.5,'rgba('+CORE+',0.10)');
+  bg.addColorStop(1,'rgba('+GLOW+',0)');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, by-40, W, 80);
+  ctx.restore();
+}
+
+function drawHUD(p, ang){
+  ctx.save();
+  ctx.globalCompositeOperation = 'screen';
+  ctx.font = '15px ui-monospace, Menlo, monospace';
+  ctx.fillStyle = 'rgba('+GLOW+',0.75)';
+  ctx.textBaseline = 'top';
+  // corner brackets
+  const m=34, L=26;
+  ctx.strokeStyle='rgba('+INK+',0.6)'; ctx.lineWidth=1.4;
+  const brk=(x,y,dx,dy)=>{ctx.beginPath();ctx.moveTo(x+dx*L,y);ctx.lineTo(x,y);ctx.lineTo(x,y+dy*L);ctx.stroke();};
+  brk(m,m,1,1); brk(W-m,m,-1,1); brk(m,H-m,1,-1); brk(W-m,H-m,-1,-1);
+  // labels
+  ctx.fillText('DIVESZN // DIVE-MASK  PROTOTYPE', m+14, m+8);
+  ctx.fillText('REV 0.1  —  WIREFRAME', m+14, m+30);
+  const deg = ((ang*180/Math.PI)%360+360)%360;
+  ctx.textAlign='right';
+  ctx.fillText('AZ '+deg.toFixed(0).padStart(3,'0')+'°', W-m-14, m+8);
+  ctx.fillText('PROJECTION ACTIVE', W-m-14, m+30);
+  // blink dot
+  const on = (Math.floor(p*TOTAL/12)%2)===0;
+  ctx.fillStyle = on ? 'rgba('+CORE+',0.9)' : 'rgba('+INK+',0.3)';
+  ctx.beginPath(); ctx.arc(W-m-150, m+16, 4, 0, Math.PI*2); ctx.fill();
+  ctx.textAlign='left';
+  ctx.fillStyle='rgba('+GLOW+',0.6)';
+  ctx.fillText('SCAN', W-m-138, m+9);
+  // baseline caption near stand
+  ctx.textAlign='center';
+  ctx.fillStyle='rgba('+GLOW+',0.55)';
+  ctx.font='13px ui-monospace, Menlo, monospace';
+  ctx.fillText('HOLO-PROJECTOR  ·  MK-I  ·  SCALE 1:1', cx, H*0.845);
+  ctx.restore();
+}
+
+// light film grain (loop-stable: phase driven by frame)
+let grainCv=null, grainCtx=null;
+function buildGrain(){
+  grainCv=document.createElement('canvas'); grainCv.width=160; grainCv.height=160;
+  grainCtx=grainCv.getContext('2d');
+  const id=grainCtx.createImageData(160,160);
+  for (let i=0;i<id.data.length;i+=4){
+    const v=(Math.sin(i*12.9898)*43758.5453)%1; const n=Math.abs(v)*255;
+    id.data[i]=id.data[i+1]=id.data[i+2]=n; id.data[i+3]=255;
+  }
+  grainCtx.putImageData(id,0,0);
+}
+buildGrain();
+function drawGrain(p){
+  ctx.save();
+  ctx.globalCompositeOperation='screen';
+  ctx.globalAlpha=0.035;
+  const off=(p*160)|0;
+  for (let x=-off%160; x<W; x+=160)
+    for (let y=-off%160; y<H; y+=160)
+      ctx.drawImage(grainCv, x, y);
+  ctx.restore();
+}
+
+function drawVignette(){
+  const g=ctx.createRadialGradient(cx,H*0.5,H*0.3, cx,H*0.5,H*0.75);
+  g.addColorStop(0,'rgba(0,0,0,0)');
+  g.addColorStop(1,'rgba(0,0,0,0.55)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+}
+
+// ============================================================
+//  Master frame renderer
+// ============================================================
+function renderFrame(i){
+  const p = (i % TOTAL) / TOTAL;          // 0..1
+  const ang = p * Math.PI * 2;            // full revolution -> seamless loop
+  const bob = Math.sin(p*Math.PI*2) * 0.05;
+  const cy  = cyBase - bob*focal/(camZ)*0.0;  // (bob handled in model Y)
+  // holographic flicker (integer cycles -> loops)
+  const flick = 0.90 + 0.06*Math.sin(p*2*Math.PI*6) + 0.04*Math.sin(p*2*Math.PI*13);
+
+  drawBackground(p);
+  drawFloorGrid(p);
+  drawCone(p, flick);
+
+  // ---- hologram: transform + depth-sort polylines, draw back-to-front ----
+  const draw = [];
+  for (const pl of P){
+    const scr = pl.pts.map(pt => project(xform(pt, ang, bob), cyBase));
+    let zsum=0; for (const s of scr) zsum+=s[2];
+    draw.push({scr, closed:pl.closed, w:pl.w, z:zsum/scr.length});
+  }
+  draw.sort((a,b)=>a.z-b.z);              // far first
+  ctx.save();
+  ctx.globalCompositeOperation='screen';
+  for (const d of draw){
+    // depth cue: nearer (higher z) brighter
+    const depth = Math.max(0, Math.min(1, (d.z + 1.6)/3.2));
+    const alpha = (0.35 + 0.65*depth) * d.w * flick;
+    strokePoly(d.scr, d.closed, Math.min(1, alpha), 3.0, GLOW, CORE);
+  }
+  ctx.restore();
+
+  drawScanlines(p, cy);
+  drawStand(p, flick);
+  drawHUD(p, ang);
+  drawGrain(p);
+  drawVignette();
+}
+window.renderFrame = renderFrame;
+
+// initial paint + ready flag
+renderFrame(0);
+window.__ready = true;
+</script>
+</body>
+</html>
