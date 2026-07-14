@@ -320,7 +320,8 @@
   .hero-note{margin-top:16px;font-size:.82rem;color:var(--muted)}
   .hero-note b{color:var(--ink)}
   /* one orchestrated reveal on Home: bands rise in as they enter the viewport */
-  .rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+  /* reveals are transform-only: content is never invisible, the rise just settles */
+  .rv{transform:translateY(18px);transition:transform .6s cubic-bezier(.22,.7,.25,1)}
   /* crew slide: photo full-bleed, stat boxes slide in from the right as you
      scroll (progress-driven via --cp, like the reference) */
   /* the slide pins below the topbar while its wrapper's extra height (the
@@ -443,10 +444,10 @@
   #view-home .trust .tcard{text-align:left}
   #view-home .trust .meta{font-size:.86rem;line-height:1.6;margin:0}
   .hband details.more{text-align:left}
-  .rv-x{opacity:0;transform:translateX(72px);transition:opacity .65s ease,transform .65s ease}
-  .rv-x.in{opacity:1;transform:none}
-  .rv-l{opacity:0;transform:translateX(-72px);transition:opacity .65s ease,transform .65s ease}
-  .rv-l.in{opacity:1;transform:none}
+  .rv-x{transform:translateX(56px);transition:transform .65s cubic-bezier(.22,.7,.25,1)}
+  .rv-x.in{transform:none}
+  .rv-l{transform:translateX(-56px);transition:transform .65s cubic-bezier(.22,.7,.25,1)}
+  .rv-l.in{transform:none}
   /* suggestion cards slide in like the crew stat boxes (needs to outrank
      .feature's own transition, which comes later in the sheet) */
   .home-grid .rv-x,.home-grid .rv-l{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -880,7 +881,7 @@
   background:
     radial-gradient(120% 90% at 18% 28%,rgba(3,20,26,.4),transparent 60%),
     linear-gradient(90deg,rgba(3,20,26,.82) 0%,rgba(3,20,26,.5) 34%,rgba(3,20,26,.12) 62%,transparent 80%),
-    linear-gradient(180deg,rgba(3,20,26,.62) 0%,rgba(3,20,26,.2) 22%,transparent 50%,rgba(4,18,26,.42) 76%,#04121a 96%)}
+    linear-gradient(180deg,rgba(3,20,26,.62) 0%,rgba(3,20,26,.2) 22%,transparent 50%,rgba(10,54,72,.45) 76%,#0d4257 97%)}
 .vhero-in{position:relative;z-index:2;width:min(1200px,94vw);margin:0 auto;display:grid;
   grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
 .vhero-in>*{min-width:0}
@@ -938,21 +939,24 @@ body.vhero-on .topbar .name{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.4)}
 body.vhero-on .topbar .name b{color:#2fe0d6}
 body.vhero-on .topbar .tabs button{color:rgba(233,247,245,.86);text-shadow:0 1px 8px rgba(0,0,0,.35)}
 body.vhero-on .topbar .tabs button:hover{background:rgba(255,255,255,.12);color:#fff}
-body.vhero-on .topbar.scrolled{background:rgba(255,255,255,.85);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom-color:var(--line)}
-body.vhero-on .topbar.scrolled .name{color:var(--ink);text-shadow:none}
-body.vhero-on .topbar.scrolled .name b{color:var(--accent)}
-body.vhero-on .topbar.scrolled .tabs button{color:var(--ink-soft);text-shadow:none}
-body.vhero-on .topbar.scrolled .tabs button:hover{background:rgba(255,255,255,.5);color:var(--ink)}
+body.vhero-on .topbar.scrolled{background:rgba(5,24,34,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom-color:rgba(150,235,226,.16)}
+body.vhero-on .topbar.scrolled .name{color:#f2fbf9;text-shadow:none}
+body.vhero-on .topbar.scrolled .name b{color:#2fe0d6}
+body.vhero-on .topbar.scrolled .tabs button{color:rgba(233,247,245,.82);text-shadow:none}
+body.vhero-on .topbar.scrolled .tabs button:hover{background:rgba(255,255,255,.1);color:#fff}
 </style>
 <style>
 /* ===== "diving deeper": the home page darkens with scroll depth ===== */
 body.vhero-on{--dp:0;--hd:0;
-  --dg:clamp(0,var(--dp)*1.3 - .06,1);      /* ground darkness: fully deep by dp .82 */
-  --flip:clamp(0,(var(--dp) - .44)*20,1)}   /* ink crossover: dark until .44, light by .49 */
-/* the whole page ground descends from surface light to deep ocean:
-   a fixed depth overlay that fills in as you scroll (reliable; no color-mix bg) */
+  --dg:clamp(0,var(--dp)*1.3 - .06,1);      /* light fades out of the water by dp .82 */
+  --flip:1}                                  /* one dark water body -> light ink throughout */
+/* the whole home page is ONE body of water: the divers video fills section 1,
+   then the same water continues beneath every section and darkens with depth.
+   Base water (z:-3) + a deepening layer (z:-2) that fills in as you scroll. */
+body.vhero-on::after{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background:linear-gradient(180deg,#0d4257 0%,#0a3547 46%,#062434 100%)}
 body.vhero-on::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
-  background:radial-gradient(120% 120% at 50% 6%,#0b3444,#03141d);opacity:var(--dg)}
+  background:radial-gradient(120% 120% at 50% 6%,#052736,#020d15);opacity:var(--dg)}
 /* the abyss: a single bioluminescent jellyfish drifts through the deep water and
    brightens as you scroll to the bottom. Background only — sits above the dark
    ground (z:-2) and below every section of content (z:auto/0). */
@@ -990,15 +994,15 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
 /* ===== redesigned stat band (replaces the crew photo panel) ===== */
 .statband .sec-head{justify-content:center;text-align:center}
 .statband .sec-sub{text-align:center;margin-left:auto;margin-right:auto}
-.statband{position:relative;padding-top:clamp(88px,14vh,160px)}
+.statband{position:relative;padding-top:clamp(56px,8vh,96px)}
 .statband::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
   width:min(520px,70vw);height:1px;
-  background:linear-gradient(90deg,transparent,rgba(14,156,146,.55),transparent)}
-.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:40px auto 0;max-width:1020px}
-/* deep-glass cards: self-lit, readable on surface light and deep water alike */
+  background:linear-gradient(90deg,transparent,rgba(94,228,216,.5),transparent)}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:34px auto 0;max-width:1020px}
+/* deep-glass cards: lit from within so they stand off the dark water */
 .statcard{position:relative;overflow:hidden;border-radius:16px;padding:28px 24px 26px;
-  background:linear-gradient(160deg,rgba(8,34,45,.9),rgba(4,17,25,.94));
-  border:1px solid rgba(94,228,216,.2);
+  background:linear-gradient(160deg,rgba(17,58,76,.72),rgba(7,28,40,.88));
+  border:1px solid rgba(94,228,216,.32);
   backdrop-filter:blur(10px) saturate(130%);-webkit-backdrop-filter:blur(10px) saturate(130%);
   box-shadow:inset 0 1px 0 rgba(150,235,226,.1),0 26px 52px -26px rgba(2,12,18,.6);
   animation:scFloat 9s ease-in-out infinite;
@@ -1573,7 +1577,7 @@ function initDeepLife(){
     for(var k=0;k<snow.length;k++){
       var p=snow[k];if(front!==(p.z>0.8))continue;
       var tw=0.55+0.45*Math.sin(t*0.9+p.ph);
-      var a=op*(0.10+0.30*deep)*tw*p.z, r=(1.3+4.5*p.z*p.z);
+      var a=op*(0.16+0.30*deep)*tw*p.z, r=(1.3+4.5*p.z*p.z);
       if(front){r*=1.9;a*=0.55;}
       ctx.globalAlpha=a;ctx.drawImage(snowSpr,p.x-r,p.y-r,r*2,r*2);
     }
@@ -1728,24 +1732,50 @@ function initDeepLife(){
     ctx.fillStyle=ctx.createPattern(grain,'repeat');ctx.fillRect(0,0,W+128,H+128);
     ctx.restore();ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
   }
+  function drawRays(k){
+    // sun shafts slanting down through the water; they sway slowly and die with depth
+    ctx.globalCompositeOperation='lighter';
+    for(var i=0;i<5;i++){
+      var bx=W*(0.14+0.19*i)+Math.sin(t*0.07+i*1.7)*W*0.02;
+      var ang=-0.14+0.05*Math.sin(t*0.05+i);
+      var len=H*1.15, wT=W*(0.010+(i%2)*0.008), wB=wT*4.5;
+      var a=k*(0.045+0.05*Math.abs(Math.sin(t*0.11+i*2.1)));
+      ctx.save();ctx.translate(bx,-H*0.06);ctx.rotate(ang);
+      var g=ctx.createLinearGradient(0,0,0,len);
+      g.addColorStop(0,'rgba(190,240,250,'+(a*1.25).toFixed(3)+')');
+      g.addColorStop(0.55,'rgba(150,225,240,'+(a*0.55).toFixed(3)+')');
+      g.addColorStop(1,'rgba(130,205,230,0)');
+      ctx.fillStyle=g;
+      ctx.beginPath();ctx.moveTo(-wT,0);ctx.lineTo(wT,0);ctx.lineTo(wB,len);ctx.lineTo(-wB,len);ctx.closePath();ctx.fill();
+      ctx.restore();
+    }
+    var sg=ctx.createLinearGradient(0,0,0,H*0.5);
+    sg.addColorStop(0,'rgba(160,230,242,'+(k*0.10).toFixed(3)+')');
+    sg.addColorStop(1,'rgba(160,230,242,0)');
+    ctx.fillStyle=sg;ctx.fillRect(0,0,W,H*0.5);
+    ctx.globalCompositeOperation='source-over';
+  }
   function drawScene(dp){
     ctx.clearRect(0,0,W,H);
-    var life=sm(0.76,0.88,dp);          // the jellyfish appears only once you reach the abyss
-    if(life<=0.01) return;
-    var deep=sm(0.80,1,dp);             // and keeps brightening all the way to the bottom
     if(snowW!==W||snowH!==H)seedSnow();
     jellyUpdate(0.016);moveSnow(0.016);
-    drawWater(life,deep);
-    drawSnow(life,deep,false);
-    // drift in the content gutter (desktop) / page edge (mobile) so the nearly-
-    // opaque cards in the centre column never hide it
-    var gut=W>=1024?0.90:0.82, amp=W>=1024?0.04:0.06;
-    var R=Math.min(H*0.085,W*0.11)*(0.9+0.25*deep);
-    var cx=Math.min(W*(gut+wanderX(t)*amp),W-R*1.15);
-    var cy=H*jy - R*0.14*J.cs + Math.sin(t*0.5)*R*0.05;
-    drawJelly(cx,cy,R,life,deep);
-    drawSnow(life,deep,true);
-    drawFinish(life);
+    var life=sm(0.76,0.88,dp);          // the jellyfish appears only once you reach the abyss
+    var deep=sm(0.80,1,dp);             // and keeps brightening all the way to the bottom
+    var ray=1-sm(0.06,0.55,dp);         // the light fades from the water as you descend
+    if(life>0.01)drawWater(life,deep);
+    if(ray>0.01)drawRays(ray);
+    drawSnow(Math.max(life,0.5),deep,false);   // faint drifting snow says "water" at every depth
+    if(life>0.01){
+      // drift in the content gutter (desktop) / page edge (mobile) so the
+      // cards in the centre column never hide it
+      var gut=W>=1024?0.90:0.82, amp=W>=1024?0.04:0.06;
+      var R=Math.min(H*0.085,W*0.11)*(0.9+0.25*deep);
+      var cx=Math.min(W*(gut+wanderX(t)*amp),W-R*1.15);
+      var cy=H*jy - R*0.14*J.cs + Math.sin(t*0.5)*R*0.05;
+      drawJelly(cx,cy,R,life,deep);
+      drawSnow(life,deep,true);
+      drawFinish(life);
+    }
   }
   function draw(dp){drawScene(dp);}     // keep the existing frame()/rm callers working
 
