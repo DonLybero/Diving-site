@@ -1566,9 +1566,28 @@ svg.leaflet-image-layer.leaflet-interactive path {
 @media(prefers-reduced-motion:reduce){.pulse-dot{animation:none}}
 .nc-month{font-family:var(--mono);font-size:.72rem;color:rgba(233,247,245,.6)}
 .nc-list{display:flex;flex-direction:column;gap:2px}
-.hm-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;padding:11px 6px;border-radius:10px;transition:background .16s}
-.hm-row:hover{background:rgba(255,255,255,.06)}
-.hm-fish{color:#2fe0d6;flex-shrink:0}
+.hm-row{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;
+  padding:12px 10px 12px 15px;border-radius:11px;transition:background .3s,transform .3s;
+  opacity:0;transform:translateY(10px);animation:hmIn .55s cubic-bezier(.2,.7,.2,1) forwards}
+.hm-row:nth-child(1){animation-delay:.5s}.hm-row:nth-child(2){animation-delay:.62s}
+.hm-row:nth-child(3){animation-delay:.74s}.hm-row:nth-child(4){animation-delay:.86s}
+@keyframes hmIn{to{opacity:1;transform:none}}
+.hm-row::before{content:"";position:absolute;left:2px;top:9px;bottom:9px;width:3px;border-radius:3px;
+  background:linear-gradient(180deg,#2fe0d6,#0e9c92);opacity:0;transform:scaleY(.25);transition:opacity .35s,transform .35s}
+.hm-row::after{content:"";position:absolute;left:15px;right:10px;bottom:5px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,rgba(47,224,214,.9),rgba(47,224,214,0));transform:scaleX(0);transform-origin:left;opacity:0}
+.hm-row.on{background:rgba(47,224,214,.09);transform:translateX(2px)}
+.hm-row.on::before{opacity:1;transform:scaleY(1)}
+.hm-row.on::after{opacity:1;animation:hmDwell 2.6s linear}
+.hm-row:hover{background:rgba(255,255,255,.07)}
+.hm-fish{color:#2fe0d6;flex-shrink:0;transition:transform .3s}
+.hm-row.on .hm-fish{color:#57ece3;animation:hmSwim 1.7s ease-in-out infinite}
+.hm-row.on .chip{animation:hmChip 1.8s ease-in-out infinite}
+@keyframes hmSwim{0%,100%{transform:translateX(0) rotate(0)}30%{transform:translateX(2.5px) rotate(4deg)}70%{transform:translateX(-1.5px) rotate(-4deg)}}
+@keyframes hmChip{0%,100%{box-shadow:0 0 0 0 rgba(47,224,214,0)}50%{box-shadow:0 0 0 4px rgba(47,224,214,.16)}}
+@keyframes hmDwell{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.hm-row{opacity:1;transform:none;animation:none}
+  .hm-row.on::after,.hm-row.on .hm-fish,.hm-row.on .chip{animation:none}}
 .hm-animal{color:#fff;font-weight:600;font-size:.98rem;line-height:1.18;min-width:0}
 .hm-animal small{display:block;font-weight:500;color:rgba(233,247,245,.55);font-size:.7rem;font-family:var(--mono);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .now-card .chip{font-family:var(--mono);font-size:.62rem;font-weight:600;letter-spacing:.03em;padding:4px 9px;border-radius:999px;white-space:nowrap}
@@ -2322,6 +2341,23 @@ function renderInSeasonNow(){
       '<small>'+esc(d.name)+' · '+(p.temp!=null?p.temp:'—')+'°C</small></span>'+
       '<span class="chip" style="background:'+TONAL[r]+';color:'+TTEXT[r]+'">'+r+'</span></div>';
   }).join('');
+  // give the card life: a spotlight that auto-advances through the rows, pausing on hover
+  var rows=host.querySelectorAll('.hm-row');
+  if(window.__nowTimer){clearInterval(window.__nowTimer);window.__nowTimer=null;}
+  var reduceM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rows.length){
+    var idx=0;
+    var setA=function(i){for(var k=0;k<rows.length;k++)rows[k].classList.toggle('on',k===i);idx=i;};
+    setA(0);
+    if(!reduceM){
+      var adv=function(){setA((idx+1)%rows.length);};
+      window.__nowTimer=setInterval(adv,2600);
+      for(var j=0;j<rows.length;j++){(function(k){
+        rows[k].addEventListener('mouseenter',function(){clearInterval(window.__nowTimer);setA(k);});
+        rows[k].addEventListener('mouseleave',function(){clearInterval(window.__nowTimer);window.__nowTimer=setInterval(adv,2600);});
+      })(j);}
+    }
+  }
 }
 function initHeroMedia(){
   var tb=document.querySelector('.topbar');
