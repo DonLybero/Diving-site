@@ -949,8 +949,13 @@ body.vhero-on .topbar.scrolled .tabs button:hover{background:rgba(255,255,255,.5
 body.vhero-on{--dp:0;--hd:0}
 /* the whole page ground descends from surface light to deep ocean:
    a fixed depth overlay that fills in as you scroll (reliable; no color-mix bg) */
-body.vhero-on::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+body.vhero-on::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:radial-gradient(120% 120% at 50% 6%,#0a2a34,#03121a);opacity:var(--dp)}
+/* the abyss: a single bioluminescent jellyfish drifts through the deep water and
+   brightens as you scroll to the bottom. Background only — sits above the dark
+   ground (z:-2) and below every section of content (z:auto/0). */
+#deepLife{position:fixed;inset:0;z-index:-1;pointer-events:none}
+body:not(.vhero-on) #deepLife{display:none}
 /* hero video takes on depth as you start to descend */
 .vhero-media::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:radial-gradient(120% 100% at 50% 0%,rgba(4,20,28,.15),#04121a);opacity:calc(var(--hd)*.82)}
@@ -991,6 +996,7 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
 </style>
 </head>
 <body>
+<canvas id="deepLife" aria-hidden="true"></canvas>
 <div class="topbar">
   <a class="brand" href="#" onclick="showTab('home');return false;" aria-label="DiveSZN — home">
     <svg class="fluke" viewBox="0 0 120 70" role="img" aria-label="DiveSZN fluke logo">
@@ -1471,6 +1477,68 @@ function renderInSeasonNow(){
     }
   }
 }
+/* The abyss: one bioluminescent jellyfish that drifts up through the deep and
+   brightens as you scroll toward the bottom of the home page. Pure background —
+   a fixed canvas below all content, driven by the same full-page depth (--dp)
+   signal. Touches no section markup. */
+function initDeepLife(){
+  if(window.__deepLifeOn) return; window.__deepLifeOn=1;
+  var cv=document.getElementById('deepLife'); if(!cv||!cv.getContext) return;
+  var ctx=cv.getContext('2d');
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2),spark=[],t=0,jy=1.2;
+  function resize(){
+    W=window.innerWidth;H=window.innerHeight;
+    cv.width=Math.round(W*DPR);cv.height=Math.round(H*DPR);
+    cv.style.width=W+'px';cv.style.height=H+'px';
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    spark=[];var m=Math.round(W*H/24000);
+    for(var k=0;k<m;k++)spark.push({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.9,ph:Math.random()*6.28,sp:.12+Math.random()*.5});
+  }
+  resize();window.addEventListener('resize',resize);
+  function sm(a,b,x){x=Math.max(0,Math.min(1,(x-a)/(b-a)));return x*x*(3-2*x);}
+  function dpNow(){var y=window.scrollY||0,vh=window.innerHeight||800,max=(document.documentElement.scrollHeight||0)-vh;return max>0?Math.min(Math.max(y/max,0),1):0;}
+  function jelly(x,y,s,glowA){
+    ctx.save();ctx.translate(x,y);ctx.scale(s,s);
+    ctx.shadowColor='rgba(90,240,235,'+(0.85*glowA).toFixed(3)+')';ctx.shadowBlur=30*glowA+8;
+    ctx.fillStyle='rgba(150,244,238,'+(0.4+0.45*glowA).toFixed(3)+')';
+    ctx.beginPath();ctx.moveTo(-22,0);ctx.quadraticCurveTo(-22,-28,0,-28);ctx.quadraticCurveTo(22,-28,22,0);
+    ctx.quadraticCurveTo(12,7,0,3);ctx.quadraticCurveTo(-12,7,-22,0);ctx.closePath();ctx.fill();
+    ctx.shadowBlur=0;ctx.strokeStyle='rgba(120,230,225,'+(0.4+0.45*glowA).toFixed(3)+')';ctx.lineWidth=2.1;
+    for(var i=-3;i<=3;i++){ctx.beginPath();ctx.moveTo(i*5,3);ctx.quadraticCurveTo(i*5+Math.sin(t*2+i)*6,26,i*5+Math.sin(t*1.4+i)*3,52);ctx.stroke();}
+    ctx.restore();
+  }
+  function draw(dp){
+    ctx.clearRect(0,0,W,H);
+    var life=sm(0.55,0.82,dp);          // fades in as you enter the abyss
+    if(life<=0.01) return;
+    var deep=sm(0.72,1,dp);             // still brightening down to the very bottom
+    var bright=life*(0.4+0.6*deep);
+    ctx.globalCompositeOperation='lighter';
+    for(var k=0;k<spark.length;k++){var p=spark[k];
+      var tw=0.4+0.6*Math.abs(Math.sin(t*1.4+p.ph));
+      var a=life*(0.14+0.5*deep)*tw;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.2832);ctx.fillStyle='rgba(120,240,235,'+a.toFixed(3)+')';ctx.fill();}
+    var cx=W*(0.5+Math.sin(t*0.18)*0.17);
+    jelly(cx,H*jy,(H/600)*(1+Math.sin(t*1.2)*0.05),bright);
+    ctx.globalCompositeOperation='source-over';
+  }
+  if(rm){
+    var stat=function(){jy=0.4;draw(dpNow());};
+    window.addEventListener('scroll',stat,{passive:true});stat();return;
+  }
+  function frame(){
+    t+=0.016;
+    if(document.body.classList.contains('vhero-on')){
+      var dp=dpNow();
+      var targetY=0.3+(1-sm(0.55,1,dp))*0.9;   // rises higher on screen as it gets deeper
+      jy+=(targetY-jy)*0.04;
+      draw(dp);
+    }else if(W){ctx.clearRect(0,0,W,H);}
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
 function initHeroMedia(){
   var tb=document.querySelector('.topbar');
   document.documentElement.style.setProperty('--topbarH',((tb&&tb.offsetHeight)||64)+'px');
@@ -1497,6 +1565,7 @@ function initHeroMedia(){
   };
   window.addEventListener('scroll',onDepth,{passive:true});
   window.addEventListener('resize',onDepth); onDepth();
+  initDeepLife();
   if(rm) return;
   // auto-pause off-viewport: no background decode cost
   var hero=document.getElementById('hero');
