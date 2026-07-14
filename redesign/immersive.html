@@ -11,7 +11,6 @@
 :root{
   --ink:#eaf7f5; --soft:#a7cec9; --muted:#6f9a95;
   --aqua:#2fe0d6; --accent:#25c3b8; --accent-deep:#0e9c92;
-  --peak:#0e7569; --good:#5cb8ab; --shoulder:#dfa826;
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -19,15 +18,24 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;font-family:var(--sans);color:var(--ink);background:#020c12;
+body{margin:0;font-family:var(--sans);color:var(--ink);background:#03121a;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.55}
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;margin:0;text-wrap:balance}
 p{margin:0}
-/* fixed immersive canvas behind everything */
-#scene{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
-.veil{position:fixed;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(120% 80% at 50% 0%,rgba(2,12,18,0),rgba(2,12,18,.35) 70%,rgba(2,12,18,.6))}
-main{position:relative;z-index:2}
+
+/* ===== fixed divers video as the whole-page background; it darkens with depth ===== */
+#bg{position:fixed;inset:0;z-index:0;overflow:hidden;background:#03121a}
+#bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:brightness(1.14) saturate(1.06);will-change:filter}
+/* depth darkening overlay — opacity rises as you descend */
+#darken{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0;
+  background:radial-gradient(130% 100% at 50% 0%,rgba(8,40,52,.35),rgba(3,14,20,.9) 70%,#020a10)}
+/* left/bottom legibility scrim (constant) */
+.scrim{position:fixed;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(90deg,rgba(3,14,20,.5),rgba(3,14,20,.12) 46%,transparent 72%),
+    linear-gradient(180deg,rgba(3,14,20,.28),transparent 24%,transparent 68%,rgba(2,10,16,.66))}
+main{position:relative;z-index:3}
+
 /* depth gauge */
 .gauge{position:fixed;top:0;right:20px;bottom:0;z-index:5;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:12px;pointer-events:none}
@@ -37,32 +45,26 @@ main{position:relative;z-index:2}
 .gauge .zone{font-family:var(--mono);font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua);
   writing-mode:vertical-rl;text-orientation:mixed;min-height:8em;text-align:center}
 @media(max-width:760px){.gauge{display:none}}
+
 /* top bar */
 .bar{position:fixed;top:0;left:0;right:0;z-index:6;display:flex;align-items:center;gap:12px;
-  padding:16px 26px;background:linear-gradient(180deg,rgba(3,16,22,.55),transparent)}
+  padding:16px 26px;background:linear-gradient(180deg,rgba(3,16,22,.5),transparent)}
 .bar .fluke{width:44px;filter:drop-shadow(0 3px 12px rgba(47,224,214,.5))}
 .bar .name{font-family:var(--serif);font-size:1.4rem;color:#fff}
 .bar .name b{color:var(--aqua);font-weight:600}
 .bar .tag{font-family:var(--mono);font-size:.52rem;letter-spacing:.24em;text-transform:uppercase;color:var(--soft);display:block;margin-top:2px}
+
 /* sections */
 section{min-height:100vh;display:flex;align-items:center;padding:110px clamp(20px,6vw,70px)}
-/* section 1: the real divers video hero, kept light */
-.hero{position:relative;overflow:hidden}
-.hero .herovid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
-  filter:brightness(1.14) saturate(1.06)}
-.hero .hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(90deg,rgba(4,18,24,.5),rgba(4,18,24,.16) 44%,transparent 70%),
-    linear-gradient(180deg,rgba(6,22,28,.22),transparent 26%,transparent 62%,rgba(3,14,20,.9))}
-.hero .wrap{position:relative;z-index:2}
 .wrap{width:min(1100px,100%);margin:0 auto}
 .kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--aqua);
   display:inline-flex;align-items:center;gap:10px;margin-bottom:20px}
 .kicker::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--aqua))}
 .zonechip{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:#04202a;background:var(--aqua);
   border-radius:999px;padding:3px 9px;margin-left:4px}
-h1{font-size:clamp(2.6rem,6.4vw,5rem);letter-spacing:-.03em;text-shadow:0 4px 40px rgba(0,0,0,.5)}
+h1{font-size:clamp(2.6rem,6.4vw,5rem);letter-spacing:-.03em;text-shadow:0 4px 40px rgba(0,0,0,.55)}
 h1 .em{font-style:italic;color:var(--aqua)}
-h2{font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.02em;text-shadow:0 3px 30px rgba(0,0,0,.5)}
+h2{font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.02em;text-shadow:0 3px 30px rgba(0,0,0,.55)}
 .lead{margin-top:22px;font-size:clamp(1.02rem,1.5vw,1.2rem);color:var(--soft);max-width:52ch;line-height:1.6}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
 .reveal.in{opacity:1;transform:none}
@@ -71,19 +73,17 @@ h2{font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.02em;text-shadow:0 3px 30
   padding:14px 26px;border-radius:999px;background:var(--aqua);color:#04202a;text-decoration:none;
   box-shadow:0 14px 34px -14px rgba(47,224,214,.7);transition:transform .2s}
 .cta:hover{transform:translateY(-2px)}
-/* stat grid */
 .statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:40px}
-.statcard{position:relative;overflow:hidden;background:rgba(6,28,35,.5);border:1px solid rgba(120,220,214,.2);
-  border-radius:16px;padding:26px 22px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.statcard{position:relative;overflow:hidden;background:rgba(6,28,35,.42);border:1px solid rgba(120,220,214,.22);
+  border-radius:16px;padding:26px 22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .statcard::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;border-radius:3px;
   background:linear-gradient(180deg,var(--aqua),var(--accent-deep))}
 .statcard b{display:block;font-family:var(--mono);font-weight:700;font-size:clamp(2.2rem,4.6vw,3.2rem);
   line-height:1;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .statcard span{display:block;margin-top:12px;font-size:.84rem;color:var(--soft);line-height:1.5}
-/* species cards */
 .spwrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:36px}
-.spcard{background:rgba(6,28,35,.5);border:1px solid rgba(120,220,214,.18);border-radius:16px;padding:20px;
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.spcard{background:rgba(6,28,35,.42);border:1px solid rgba(120,220,214,.2);border-radius:16px;padding:20px;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .spcard .n{font-family:var(--serif);font-size:1.2rem;color:#fff}
 .spcard .d{font-family:var(--mono);font-size:.66rem;color:var(--soft);margin-top:6px;letter-spacing:.05em}
 .foot{min-height:auto;padding:60px clamp(20px,6vw,70px) 90px;color:var(--soft);font-family:var(--mono);font-size:.72rem}
@@ -101,8 +101,10 @@ h2{font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.02em;text-shadow:0 3px 30
 @media(prefers-reduced-motion:reduce){.scrollcue .ln{animation:none}}
 </style>
 
-<canvas id="scene" aria-hidden="true"></canvas>
-<div class="veil"></div>
+<div id="bg"><video id="bgvid" autoplay muted loop playsinline preload="metadata" poster="../assets/video/hero-dive-poster.jpg" aria-hidden="true">
+  <source src="../assets/video/hero-dive.webm" type="video/webm"></video></div>
+<div id="darken"></div>
+<div class="scrim"></div>
 
 <div class="bar">
   <svg class="fluke" viewBox="0 0 120 96" aria-hidden="true"><path d="M60 76 C56 65 53 60 46 55 C35 46 18 38 6 36 C16 42 33 51 48 55 C53 56 56 57 60 61 C64 57 67 56 72 55 C87 51 104 42 114 36 C102 38 85 46 74 55 C67 60 64 65 60 76 Z" fill="#2fe0d6"/></svg>
@@ -116,256 +118,101 @@ h2{font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.02em;text-shadow:0 3px 30
 </div>
 
 <main>
-  <!-- ZONE 0 — SURFACE: the divers video hero (kept light) -->
-  <section class="hero" data-zone="0">
-    <video class="herovid" autoplay muted loop playsinline poster="../assets/video/hero-dive-poster.jpg" aria-hidden="true">
-      <source src="../assets/video/hero-dive.webm" type="video/webm">
-    </video>
-    <div class="hero-scrim"></div>
-    <div class="wrap">
-      <div class="reveal">
-        <span class="kicker">Dive season, decoded <span class="zonechip">0–5 m · surface</span></span>
-        <h1>Know <span class="em">when</span> to dive <span class="em">where</span>.</h1>
-        <p class="lead">Pick a month and see which destinations are at their best. Then scroll to descend — the water darkens and the life changes with every metre.</p>
-        <a class="cta" href="#reef">Begin the descent
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
-      </div>
-    </div>
+  <section data-zone="0">
+    <div class="wrap"><div class="reveal">
+      <span class="kicker">Dive season, decoded <span class="zonechip">0–5 m · surface</span></span>
+      <h1>Know <span class="em">when</span> to dive <span class="em">where</span>.</h1>
+      <p class="lead">Pick a month and see which destinations are at their best. Then scroll to descend — the water darkens with every metre.</p>
+      <a class="cta" href="#reef">Begin the descent
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    </div></div>
   </section>
 
-  <!-- ZONE 1 — REEF -->
   <section data-zone="1" id="reef">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="kicker">The reef <span class="zonechip">5–20 m · reef</span></span>
-        <h2>The numbers behind every recommendation</h2>
-        <p class="lead">DiveSZN runs on verified data, rechecked every season — no invented seasons, no sponsored ranks. A manta and a wall of fish drift the reef around you.</p>
-        <div class="statgrid">
-          <div class="statcard"><b data-count="102">102</b><span>dive destinations, scored across all twelve months</span></div>
-          <div class="statcard"><b data-count="1224">1224</b><span>destination-months scored and rechecked every season</span></div>
-          <div class="statcard"><b data-count="725">725</b><span>named dive sites documented with depth and character</span></div>
-          <div class="statcard"><b data-count="118">118</b><span>pieces of scuba gear reviewed across every category</span></div>
-        </div>
+    <div class="wrap"><div class="reveal">
+      <span class="kicker">Down the wall <span class="zonechip">5–20 m</span></span>
+      <h2>The numbers behind every recommendation</h2>
+      <p class="lead">DiveSZN runs on verified data, rechecked every season — no invented seasons, no sponsored ranks. Here is the ground it stands on.</p>
+      <div class="statgrid">
+        <div class="statcard"><b data-count="102">102</b><span>dive destinations, scored across all twelve months</span></div>
+        <div class="statcard"><b data-count="1224">1224</b><span>destination-months scored and rechecked every season</span></div>
+        <div class="statcard"><b data-count="725">725</b><span>named dive sites documented with depth and character</span></div>
+        <div class="statcard"><b data-count="118">118</b><span>pieces of scuba gear reviewed across every category</span></div>
       </div>
-    </div>
+    </div></div>
   </section>
 
-  <!-- ZONE 2 — OPEN WATER -->
   <section data-zone="2">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="kicker">Open water <span class="zonechip">20–40 m · blue</span></span>
-        <h2>Where the big animals patrol</h2>
-        <p class="lead">Out in the blue, the reef falls away and the pelagics take over — schooling sharks holding on the current, hunting in the cooler, darker water.</p>
-        <div class="spwrap">
-          <div class="spcard"><div class="n">Grey reef shark</div><div class="d">Palau · Fiji · year-round</div></div>
-          <div class="spcard"><div class="n">Hammerhead</div><div class="d">Cocos · Malpelo · May–Sep</div></div>
-          <div class="spcard"><div class="n">Silky shark</div><div class="d">Open ocean · liveaboard</div></div>
-        </div>
+    <div class="wrap"><div class="reveal">
+      <span class="kicker">Into the blue <span class="zonechip">20–40 m</span></span>
+      <h2>Where the big animals patrol</h2>
+      <p class="lead">Out past the reef the light thins and the pelagics take over — schooling sharks holding on the current in the cooler, darker water.</p>
+      <div class="spwrap">
+        <div class="spcard"><div class="n">Grey reef shark</div><div class="d">Palau · Fiji · year-round</div></div>
+        <div class="spcard"><div class="n">Hammerhead</div><div class="d">Cocos · Malpelo · May–Sep</div></div>
+        <div class="spcard"><div class="n">Whale shark</div><div class="d">Ningaloo · Maldives · seasonal</div></div>
       </div>
-    </div>
+    </div></div>
   </section>
 
-  <!-- ZONE 3 — DEEP -->
   <section data-zone="3">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="kicker">The deep <span class="zonechip">40 m+ · abyss</span></span>
-        <h2>Into the quiet dark</h2>
-        <p class="lead">Little light reaches here. A whale passes overhead as a slow silhouette; jellyfish pulse with their own cold light. This is the floor of the dive.</p>
-        <a class="cta" href="#top">Back to the surface
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
-      </div>
-    </div>
+    <div class="wrap"><div class="reveal">
+      <span class="kicker">The deep <span class="zonechip">40 m+</span></span>
+      <h2>Into the quiet dark</h2>
+      <p class="lead">Little light reaches here. The water goes to ink and sound carries further than sight. This is the floor of the dive — plan it before you book it.</p>
+      <a class="cta" href="#top">Back to the surface
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+    </div></div>
   </section>
 
   <div class="foot">
-    <span class="ft-brand">Dive<b>SZN</b></span> — immersive depth concept · the background descends with your scroll
+    <span class="ft-brand">Dive<b>SZN</b></span> — immersive depth concept · the same water, darkening as you descend
   </div>
 </main>
 
 <div class="scrollcue" id="cue"><span>Scroll to dive</span><span class="ln"></span></div>
-<div class="ribbon">Concept preview — <b>not live</b>. Marine life is rendered live in the background; it deepens as you scroll.</div>
+<div class="ribbon">Concept preview — <b>not live</b>. One dive video, darkening with depth as you scroll.</div>
 
 <script>
 (function(){
 "use strict";
 var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-var cv=document.getElementById('scene'), ctx=cv.getContext('2d');
-var W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2);
-function resize(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
-resize();
-// ---- depth 0..1 from scroll ----
-var depth=0, depthTarget=0;
-function onScroll(){var max=document.documentElement.scrollHeight-window.innerHeight;
-  depthTarget=max>0?Math.min(Math.max(window.scrollY/max,0),1):0;}
-window.addEventListener('scroll',onScroll,{passive:true});
-window.addEventListener('resize',function(){resize();onScroll();});
-onScroll();
-
-// ---- palette by depth (surface -> abyss) ----
-function lerp(a,b,t){return a+(b-a)*t;}
-function mix(c1,c2,t){return[Math.round(lerp(c1[0],c2[0],t)),Math.round(lerp(c1[1],c2[1],t)),Math.round(lerp(c1[2],c2[2],t))];}
-function rgba(c,a){return'rgba('+c[0]+','+c[1]+','+c[2]+','+a+')';}
-// depth colour stops (top of water column and deep)
-var TOP=[[150,224,224],[70,168,175],[14,74,84],[6,32,42]];      // surface..deep top colour
-var BOT=[[52,150,150],[16,86,96],[7,40,50],[3,12,18]];          // surface..deep bottom colour
-function stop(arr,d){var n=arr.length-1,x=Math.min(d,0.999)*n,i=Math.floor(x);return mix(arr[i],arr[i+1],x-i);}
-
-// ---- particles (marine snow / bubbles) ----
-var parts=[];
-function seedParts(){parts=[];var n=Math.round(W*H/16000);for(var i=0;i<n;i++)parts.push({x:Math.random()*W,y:Math.random()*H,r:.5+Math.random()*2.4,s:.15+Math.random()*.7,ph:Math.random()*6.28,z:Math.random()});}
-seedParts();
-window.addEventListener('resize',seedParts);
-
-// ---- god rays ----
-function drawRays(alpha){if(alpha<=0)return;ctx.save();ctx.globalCompositeOperation='screen';
-  for(var i=0;i<5;i++){var x=(i+0.5)/5*W+Math.sin(t*0.2+i)*40;var g=ctx.createLinearGradient(x,0,x-40,H);
-    g.addColorStop(0,rgba([220,255,250],0.10*alpha));g.addColorStop(1,rgba([220,255,250],0));
-    ctx.fillStyle=g;ctx.beginPath();ctx.moveTo(x-26,0);ctx.lineTo(x+26,0);ctx.lineTo(x+90,H);ctx.lineTo(x-90,H);ctx.closePath();ctx.fill();}
-  ctx.restore();}
-
-/* ============ marine creature silhouettes ============
-   each drawn centred, facing +x, roughly unit-scaled; call within a save/translate/scale/rotate. */
-function body(ctx){ctx.fill();}
-function drawTurtle(c){
-  c.beginPath();c.ellipse(0,0,26,20,0,0,6.2832);c.fill();                    // shell
-  c.beginPath();c.ellipse(30,0,7,5,0,0,6.2832);c.fill();                     // head
-  [[-16,-18,-10],[16,-18,14],[-14,18,-12],[14,18,12]].forEach(function(f){   // flippers
-    c.save();c.translate(f[0],f[1]);c.rotate(f[2]*0.03);c.beginPath();c.ellipse(0,0,13,6,f[1]<0?-0.6:0.6,0,6.2832);c.fill();c.restore();});
-}
-function drawDolphin(c){
-  c.beginPath();c.moveTo(-34,2);c.quadraticCurveTo(-6,-16,34,-3);c.quadraticCurveTo(40,-1,34,3);
-  c.quadraticCurveTo(-4,14,-34,6);c.quadraticCurveTo(-40,4,-34,2);c.fill();  // body
-  c.beginPath();c.moveTo(2,-9);c.quadraticCurveTo(10,-24,16,-8);c.closePath();c.fill();        // dorsal
-  c.beginPath();c.moveTo(-30,3);c.quadraticCurveTo(-46,-6,-40,8);c.quadraticCurveTo(-46,14,-30,7);c.closePath();c.fill(); // fluke
-}
-function drawManta(c){
-  c.beginPath();c.moveTo(0,-6);
-  c.quadraticCurveTo(-52,-30,-70,2);c.quadraticCurveTo(-40,-2,-6,10);          // left wing
-  c.quadraticCurveTo(0,12,6,10);
-  c.quadraticCurveTo(40,-2,70,2);c.quadraticCurveTo(52,-30,0,-6);c.closePath();c.fill(); // right wing
-  c.beginPath();c.rect(-6,-8,12,16);c.fill();                                 // centre body
-  c.beginPath();c.moveTo(2,8);c.lineTo(5,44);c.lineTo(-1,44);c.closePath();c.fill();     // tail
-  [[-9,-9],[9,-9]].forEach(function(p){c.beginPath();c.ellipse(p[0],-11,3,7,0,0,6.2832);c.fill();}); // cephalic fins
-}
-function drawShark(c){
-  c.beginPath();c.moveTo(-40,0);c.quadraticCurveTo(-6,-14,36,-2);c.quadraticCurveTo(44,0,36,3);
-  c.quadraticCurveTo(-6,13,-40,2);c.quadraticCurveTo(-46,1,-40,0);c.fill();   // body
-  c.beginPath();c.moveTo(0,-10);c.quadraticCurveTo(8,-30,20,-6);c.closePath();c.fill();  // tall dorsal
-  c.beginPath();c.moveTo(-4,8);c.quadraticCurveTo(2,20,12,9);c.closePath();c.fill();      // pelvic
-  c.beginPath();c.moveTo(-38,2);c.lineTo(-56,-12);c.lineTo(-50,2);c.lineTo(-56,14);c.closePath();c.fill(); // caudal
-  c.beginPath();c.moveTo(4,5);c.quadraticCurveTo(16,20,22,7);c.closePath();c.fill();      // pectoral
-}
-function drawWhale(c){
-  c.beginPath();c.moveTo(-70,0);c.quadraticCurveTo(-10,-30,60,-8);c.quadraticCurveTo(78,-2,60,6);
-  c.quadraticCurveTo(-10,26,-70,6);c.quadraticCurveTo(-84,3,-70,0);c.fill();  // big body
-  c.beginPath();c.moveTo(-64,4);c.lineTo(-96,-16);c.lineTo(-84,4);c.lineTo(-96,22);c.closePath();c.fill(); // fluke
-  c.beginPath();c.moveTo(6,14);c.quadraticCurveTo(26,54,44,18);c.closePath();c.fill();    // long pectoral (humpback)
-  c.beginPath();c.arc(52,-4,2.4,0,6.2832);c.fill();                                        // eye
-}
-function drawJelly(c,glow){
-  if(glow){c.shadowColor='rgba(120,240,235,0.9)';c.shadowBlur=18;}
-  c.beginPath();c.moveTo(-22,0);c.quadraticCurveTo(-22,-26,0,-26);c.quadraticCurveTo(22,-26,22,0);
-  c.quadraticCurveTo(12,6,0,3);c.quadraticCurveTo(-12,6,-22,0);c.closePath();c.fill();     // bell
-  c.shadowBlur=0;
-  for(var i=-3;i<=3;i++){c.beginPath();c.moveTo(i*5,2);
-    c.quadraticCurveTo(i*5+Math.sin(t*2+i)*5,24,i*5,44);c.lineWidth=2.2;c.stroke();}       // tentacles
-}
-function drawFish(c){c.beginPath();c.moveTo(-6,0);c.quadraticCurveTo(0,-3.4,7,0);c.quadraticCurveTo(0,3.4,-6,0);c.fill();
-  c.beginPath();c.moveTo(-6,0);c.lineTo(-10,-3);c.lineTo(-10,3);c.closePath();c.fill();}
-
-// ---- creature instances: band = target depth, layer = parallax (0 far..1 near) ----
-var C=[
-  {t:'turtle',band:0.04,x:0.66,y:0.42,s:1.7,sp:0.10,dir:1,ph:0,layer:.8},
-  {t:'dolphin',band:0.06,x:0.30,y:0.30,s:1.3,sp:0.22,dir:1,ph:1,layer:.6},
-  {t:'dolphin',band:0.10,x:0.80,y:0.62,s:1.0,sp:0.20,dir:-1,ph:2,layer:.45},
-  {t:'school',band:0.30,x:0.5,y:0.5,s:1,sp:0.0,dir:1,ph:0,layer:.5},
-  {t:'manta',band:0.34,x:0.40,y:0.44,s:2.0,sp:0.09,dir:1,ph:0,layer:.85},
-  {t:'shark',band:0.58,x:0.62,y:0.40,s:1.7,sp:0.16,dir:-1,ph:0,layer:.8},
-  {t:'shark',band:0.64,x:0.24,y:0.60,s:1.2,sp:0.14,dir:1,ph:1.5,layer:.55},
-  {t:'shark',band:0.55,x:0.85,y:0.66,s:0.9,sp:0.13,dir:-1,ph:3,layer:.4},
-  {t:'whale',band:0.86,x:0.5,y:0.28,s:2.4,sp:0.06,dir:1,ph:0,layer:.9},
-  {t:'jelly',band:0.9,x:0.24,y:0.6,s:1.2,sp:0.02,dir:1,ph:0,layer:.7},
-  {t:'jelly',band:0.94,x:0.74,y:0.52,s:1.5,sp:0.02,dir:1,ph:2,layer:.85},
-  {t:'jelly',band:0.82,x:0.5,y:0.74,s:0.9,sp:0.02,dir:1,ph:4,layer:.5}
-];
-// school of small fish (generated once)
-var school=[];for(var i=0;i<26;i++)school.push({dx:(Math.random()-.5)*260,dy:(Math.random()-.5)*120,ph:Math.random()*6.28});
-
-function zoneAlpha(band,d){var a=1-Math.abs(d-band)/0.24;return a<0?0:a>1?1:a;}
-
-function drawCreature(o,d){
-  var a=zoneAlpha(o.band,d);if(a<=0.01)return;
-  var driftX=((o.sp*t*o.dir*W*0.06)%(W+300));
-  var px=((o.x*W + driftX*o.dir) % (W+300)); if(px<-150)px+=W+300; if(px>W+150)px-=W+300;
-  var py=o.y*H + Math.sin(t*0.5+o.ph)*14*o.layer;
-  var sc=(0.5+o.layer)* (H/760) * o.s;
-  // colour: backlit dark near surface, cool aqua-grey deeper
-  var lit=1-Math.min(d*1.3,1);
-  var col=mix([6,26,32],[120,180,182],lit*0.5);   // silhouette tone
-  var alpha=a*(0.34+o.layer*0.4);
-  ctx.save();ctx.translate(px,py);ctx.scale(o.dir*sc,sc);
-  ctx.globalAlpha=alpha;ctx.fillStyle=rgba(col,1);ctx.strokeStyle=rgba(col,1);
-  if(o.t==='turtle')drawTurtle(ctx);
-  else if(o.t==='dolphin')drawDolphin(ctx);
-  else if(o.t==='manta')drawManta(ctx);
-  else if(o.t==='shark')drawShark(ctx);
-  else if(o.t==='whale')drawWhale(ctx);
-  else if(o.t==='jelly'){ctx.fillStyle=rgba([150,240,235],1);ctx.strokeStyle=rgba([120,220,220],0.7);drawJelly(ctx,true);}
-  else if(o.t==='school'){for(var k=0;k<school.length;k++){var f=school[k];ctx.save();
-    ctx.translate(f.dx+Math.sin(t*1.4+f.ph)*10,f.dy+Math.cos(t+f.ph)*6);ctx.scale(2.2,2.2);drawFish(ctx);ctx.restore();}}
-  ctx.restore();
-}
-
-var t=0,last=0,raf;
-function frame(ts){
-  if(!last)last=ts;var dt=Math.min((ts-last)/1000,0.05);last=ts;t+=dt;
-  if(window.__forceDepth!=null){depthTarget=window.__forceDepth;if(window.__snap)depth=window.__forceDepth;}   /* preview/testing hook only */
-  depth+=(depthTarget-depth)*Math.min(dt*4,1);
-  // background gradient
-  var g=ctx.createLinearGradient(0,0,0,H);
-  g.addColorStop(0,rgba(stop(TOP,depth),1));g.addColorStop(1,rgba(stop(BOT,depth),1));
-  ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
-  drawRays(Math.max(0,1-depth*2.2));
-  // creatures behind particles
-  for(var i=0;i<C.length;i++)drawCreature(C[i],depth);
-  // particles
-  ctx.save();
-  for(var p=0;p<parts.length;p++){var b=parts[p];b.y-=b.s*(0.5+b.z);b.x+=Math.sin(t+b.ph)*0.25;
-    if(b.y<-6){b.y=H+6;b.x=Math.random()*W;}
-    var pa=(0.12+b.z*0.4)*(1-depth*0.3);
-    ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,6.2832);ctx.fillStyle=rgba([220,248,246],pa);ctx.fill();}
-  ctx.restore();
-  // vignette deepens
-  var vg=ctx.createRadialGradient(W/2,H*0.4,H*0.2,W/2,H*0.5,H*0.9);
-  vg.addColorStop(0,'rgba(2,10,15,0)');vg.addColorStop(1,rgba([2,8,12],0.35+depth*0.4));
-  ctx.fillStyle=vg;ctx.fillRect(0,0,W,H);
-  updateHUD();
-  raf=requestAnimationFrame(frame);
-}
-function drawStatic(){var g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,rgba(stop(TOP,depthTarget),1));
-  g.addColorStop(1,rgba(stop(BOT,depthTarget),1));ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
-  for(var i=0;i<C.length;i++)drawCreature(C[i],depthTarget);updateHUD();}
-
-// ---- HUD (depth gauge + zone + count-up + reveals + cue) ----
+var vid=document.getElementById('bgvid'), darken=document.getElementById('darken');
+var fill=document.getElementById('depthFill'), depthM=document.getElementById('depthM'),
+    zoneName=document.getElementById('zoneName'), cue=document.getElementById('cue');
+if(reduce&&vid){try{vid.removeAttribute('autoplay');vid.pause();}catch(e){}}
 var ZONES=[[0,'Surface'],[0.28,'Reef'],[0.55,'Open water'],[0.8,'The deep']];
-var fill=document.getElementById('depthFill'),depthM=document.getElementById('depthM'),zoneName=document.getElementById('zoneName'),cue=document.getElementById('cue');
-function updateHUD(){var d=depth;fill.style.height=(d*100)+'%';depthM.textContent=Math.round(d*60)+' m';
+var depth=0,target=0,ticking=false;
+function read(){var max=document.documentElement.scrollHeight-window.innerHeight;
+  target=max>0?Math.min(Math.max(window.scrollY/max,0),1):0;
+  if(!ticking){ticking=true;requestAnimationFrame(apply);}}
+function ease(x){return x*x*(3-2*x);}                 // smoothstep
+function apply(){
+  ticking=false;
+  if(window.__fd!=null){depth=target=window.__fd;}   /* preview hook only */
+  depth+=(target-depth)*(reduce?1:0.18);
+  if(Math.abs(target-depth)>0.001&&!reduce){ticking=true;requestAnimationFrame(apply);}
+  var d=depth, e=ease(d);
+  // the dive video darkens and cools as you descend
+  if(vid)vid.style.filter='brightness('+(1.14-e*0.98).toFixed(3)+') saturate('+(1.06-e*0.55).toFixed(3)+')';
+  darken.style.opacity=Math.min(e*1.05,0.94).toFixed(3);
+  fill.style.height=(d*100)+'%';
+  depthM.textContent=Math.round(d*60)+' m';
   var z='Surface';for(var i=0;i<ZONES.length;i++)if(d>=ZONES[i][0])z=ZONES[i][1];zoneName.textContent=z;
-  if(cue)cue.style.opacity=d>0.04?0:1;}
-// reveals
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){
-  if(e.isIntersecting){e.target.classList.add('in');
-    if(!e.target.__counted){e.target.__counted=1;e.target.querySelectorAll('[data-count]').forEach(countUp);}}});},{threshold:.3});
-  document.querySelectorAll('.reveal').forEach(function(n){io.observe(n);});}
-else document.querySelectorAll('.reveal').forEach(function(n){n.classList.add('in');});
+  if(cue)cue.style.opacity=d>0.04?0:1;
+}
+window.addEventListener('scroll',read,{passive:true});
+window.addEventListener('resize',read);read();apply();
+
+// reveals + count-up
 function countUp(b){var target=+b.getAttribute('data-count')||0;if(reduce){b.textContent=target;return;}
   var t0=null;function s(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/1300,1),e=1-Math.pow(1-k,3);
     b.textContent=Math.round(target*e);if(k<1)requestAnimationFrame(s);}requestAnimationFrame(s);}
-
-if(reduce){drawStatic();window.addEventListener('scroll',drawStatic,{passive:true});}
-else raf=requestAnimationFrame(frame);
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){e.target.classList.add('in');
+    if(!e.target.__c){e.target.__c=1;e.target.querySelectorAll('[data-count]').forEach(countUp);}}});},{threshold:.3});
+  document.querySelectorAll('.reveal').forEach(function(n){io.observe(n);});}
+else document.querySelectorAll('.reveal').forEach(function(n){n.classList.add('in');n.querySelectorAll('[data-count]').forEach(countUp);});
 })();
 </script>
 </body>
