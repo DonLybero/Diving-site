@@ -1536,13 +1536,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   margin-top:calc(-1*var(--topbarH,64px))}
 .vhero::after{display:none}
 .vhero-media{position:absolute;inset:0;z-index:0;overflow:hidden;background:#06222b center/cover no-repeat}
-.vhero-media video{position:absolute;inset:0;width:100%;height:116%;object-fit:cover;display:block}
+.vhero-media video{position:absolute;inset:0;width:100%;height:116%;object-fit:cover;display:block;
+  filter:brightness(1.09) saturate(1.04)}
 .vhero-media .photo-credit{position:absolute;right:10px;bottom:6px;font-size:.62rem;color:rgba(233,247,246,.6);font-family:var(--mono);z-index:3}
 .vhero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
-    radial-gradient(120% 90% at 18% 28%,rgba(3,20,26,.4),transparent 60%),
-    linear-gradient(90deg,rgba(3,20,26,.82) 0%,rgba(3,20,26,.5) 34%,rgba(3,20,26,.12) 62%,transparent 80%),
-    linear-gradient(180deg,rgba(3,20,26,.62) 0%,rgba(3,20,26,.2) 22%,transparent 50%,rgba(10,54,72,.45) 76%,#0d4257 97%)}
+    radial-gradient(120% 90% at 18% 28%,rgba(3,20,26,.32),transparent 60%),
+    linear-gradient(90deg,rgba(3,20,26,.72) 0%,rgba(3,20,26,.42) 34%,rgba(3,20,26,.1) 62%,transparent 80%),
+    linear-gradient(180deg,rgba(3,20,26,.5) 0%,rgba(3,20,26,.16) 22%,transparent 50%,rgba(10,54,72,.45) 76%,#0d4257 97%)}
 .vhero-in{position:relative;z-index:2;width:min(1200px,94vw);margin:0 auto;display:grid;
   grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
 .vhero-in>*{min-width:0}
@@ -1625,7 +1626,7 @@ body.vhero-on::before{content:"";position:fixed;inset:0;z-index:-2;pointer-event
 body:not(.vhero-on) #deepLife{display:none}
 /* hero video takes on depth as you start to descend */
 .vhero-media::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(120% 100% at 50% 0%,rgba(4,20,28,.15),#04121a);opacity:calc(var(--hd)*.82)}
+  background:radial-gradient(120% 100% at 50% 0%,rgba(4,20,28,.15),#04121a);opacity:calc(var(--hd)*.68)}
 /* depth-adaptive palette for the entire home view (components already use these tokens) */
 body.vhero-on #view-home{
   --ink:color-mix(in srgb,#0e2f37,#f2fbf9 calc(var(--flip)*100%));
@@ -2472,7 +2473,7 @@ function initDeepLife(){
      Replaces jelly() + draw() inside initDeepLife(). Uses the existing
      ctx, W, H, t, jy, sm() and the life/deep curves. `spark` and its
      seeding in resize() become unused (snow re-seeds itself on resize). */
-  var snow=[],snowW=0,snowH=0,J={cs:0,lastC:0};
+  var snow=[],bub=[],snowW=0,snowH=0,J={cs:0,lastC:0};
   var snowSpr=document.createElement('canvas');snowSpr.width=snowSpr.height=32;
   (function(){var g=snowSpr.getContext('2d'),rg=g.createRadialGradient(16,16,0,16,16,16);
     rg.addColorStop(0,'rgba(210,235,240,0.9)');rg.addColorStop(0.35,'rgba(170,210,225,0.38)');
@@ -2485,6 +2486,34 @@ function initDeepLife(){
     snowW=W;snowH=H;snow=[];var m=Math.min(150,Math.round(W*H/9500));
     for(var k=0;k<m;k++)snow.push({x:Math.random()*W,y:Math.random()*H,
       z:0.25+Math.random()*0.75,ph:Math.random()*6.28,sd:Math.random()*6.28});
+    bub=[];var nb=Math.max(6,Math.round(W/150));
+    for(var j=0;j<nb;j++)bub.push({x:Math.random()*W,y:Math.random()*H,
+      r:1.1+Math.random()*2.4,sp:16+Math.random()*26,ph:Math.random()*6.28});
+  }
+  function moveBub(dt){
+    for(var k=0;k<bub.length;k++){var b=bub[k];
+      b.y-=b.sp*dt;b.x+=Math.sin(t*1.1+b.ph)*10*dt;
+      if(b.y<-6){b.y=H+6;b.x=Math.random()*W;}}
+  }
+  function drawBub(op){
+    if(op<=0.01)return;
+    ctx.globalCompositeOperation='lighter';
+    for(var k=0;k<bub.length;k++){var b=bub[k];
+      var a=op*(0.10+0.08*Math.abs(Math.sin(t*1.6+b.ph)));
+      ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,6.2832);
+      ctx.strokeStyle='rgba(200,240,250,'+a.toFixed(3)+')';ctx.lineWidth=1;ctx.stroke();
+      ctx.beginPath();ctx.arc(b.x-b.r*0.3,b.y-b.r*0.3,b.r*0.32,0,6.2832);
+      ctx.fillStyle='rgba(220,250,255,'+(a*0.9).toFixed(3)+')';ctx.fill();}
+    ctx.globalCompositeOperation='source-over';
+  }
+  function drawHaze(k){
+    if(k<=0.01)return;
+    var hx=W*(0.5+0.26*Math.sin(t*0.04)),hy=H*(0.45+0.12*Math.sin(t*0.031+1.4));
+    var hr=Math.max(W,H)*0.5,rg=ctx.createRadialGradient(hx,hy,0,hx,hy,hr);
+    rg.addColorStop(0,'rgba(120,200,220,'+(k*0.06).toFixed(3)+')');
+    rg.addColorStop(1,'rgba(60,140,170,0)');
+    ctx.globalCompositeOperation='lighter';ctx.fillStyle=rg;ctx.fillRect(0,0,W,H);
+    ctx.globalCompositeOperation='source-over';
   }
   function pulseC(tt){var s=(Math.sin(tt*1.6)+1)/2;return Math.pow(s,2.6);} // sharp squeeze, slow relax (~3.9s)
   function jellyUpdate(dt){var c=pulseC(t);J.lastC=c;J.cs+=(c-J.cs)*2.4*dt;}
@@ -2691,13 +2720,15 @@ function initDeepLife(){
   function drawScene(dp){
     ctx.clearRect(0,0,W,H);
     if(snowW!==W||snowH!==H)seedSnow();
-    jellyUpdate(0.016);moveSnow(0.016);
+    jellyUpdate(0.016);moveSnow(0.016);moveBub(0.016);
     var life=sm(0.76,0.88,dp);          // the jellyfish appears only once you reach the abyss
     var deep=sm(0.80,1,dp);             // and keeps brightening all the way to the bottom
     var ray=1-sm(0.06,0.55,dp);         // the light fades from the water as you descend
     if(life>0.01)drawWater(life,deep);
     if(ray>0.01)drawRays(ray);
-    drawSnow(Math.max(life,0.5),deep,false);   // faint drifting snow says "water" at every depth
+    drawHaze(0.5+0.5*ray);                     // a slow current of light drifting at every depth
+    drawSnow(Math.max(life,0.65),deep,false);  // drifting snow says "water" at every depth
+    drawBub(0.3+0.55*ray);                     // bubbles rise while there is light above
     if(life>0.01){
       // drift in the content gutter (desktop) / page edge (mobile) so the
       // cards in the centre column never hide it
@@ -2735,6 +2766,10 @@ function initDeepLife(){
 function initHeroMedia(){
   var tb=document.querySelector('.topbar');
   document.documentElement.style.setProperty('--topbarH',((tb&&tb.offsetHeight)||64)+'px');
+  // the hero is exactly one full screen: pin it to the real measured viewport
+  // so nothing of the next section shows on open (svh lies in some embeds)
+  var fitHero=function(){var h=document.getElementById('hero');if(h)h.style.minHeight=window.innerHeight+'px';};
+  fitHero();window.addEventListener('resize',fitHero);
   var v=document.getElementById('heroVideo');
   var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(v){
@@ -2751,7 +2786,7 @@ function initHeroMedia(){
   var onDepth=function(){
     var y=window.scrollY||0, vh=window.innerHeight||800;
     var tb=document.querySelector('.topbar');
-    if(tb)tb.classList.toggle('scrolled',y>vh*0.7);
+    if(tb)tb.classList.toggle('scrolled',y>16);   // glass on immediately: content never mixes with the tab titles
     var max=(document.documentElement.scrollHeight||0)-vh;
     document.body.style.setProperty('--hd',Math.min(y/vh,1).toFixed(3));
     document.body.style.setProperty('--dp',(max>0?Math.min(y/max,1):0).toFixed(3));
