@@ -1543,7 +1543,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   background:
     radial-gradient(120% 90% at 18% 28%,rgba(3,20,26,.32),transparent 60%),
     linear-gradient(90deg,rgba(3,20,26,.72) 0%,rgba(3,20,26,.42) 34%,rgba(3,20,26,.1) 62%,transparent 80%),
-    linear-gradient(180deg,rgba(3,20,26,.5) 0%,rgba(3,20,26,.16) 22%,transparent 50%,rgba(10,54,72,.45) 76%,#0d4257 97%)}
+    linear-gradient(180deg,rgba(3,20,26,.5) 0%,rgba(3,20,26,.16) 22%,transparent 50%,rgba(6,34,47,.5) 76%,#082a39 97%)}
 .vhero-in{position:relative;z-index:2;width:min(1200px,94vw);margin:0 auto;display:grid;
   grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
 .vhero-in>*{min-width:0}
@@ -1616,7 +1616,7 @@ body.vhero-on{--dp:0;--hd:0;
    then the same water continues beneath every section and darkens with depth.
    Base water (z:-3) + a deepening layer (z:-2) that fills in as you scroll. */
 body.vhero-on::after{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;
-  background:#0d4257}   /* flat water base = zero seams; depth comes from the smooth layer above */
+  background:#082a39}   /* flat water base = zero seams; darker than the hero so the descent never lightens */
 body.vhero-on::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:radial-gradient(120% 120% at 50% 6%,#052736,#020d15);opacity:var(--dg)}
 /* the abyss: a single bioluminescent jellyfish drifts through the deep water and
@@ -1659,7 +1659,7 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
 /* ===== redesigned stat band (replaces the crew photo panel) ===== */
 .statband .sec-head{justify-content:center;text-align:center}
 .statband .sec-sub{text-align:center;margin-left:auto;margin-right:auto}
-.statband{position:relative;padding-top:clamp(72px,11vh,128px)}   /* a breath of open water, but the heading stays anchored to its section */
+.statband{position:relative;padding-top:clamp(110px,16vh,180px)}   /* the heading sits down in the water, clear of the section edge */
 .statband::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
   width:min(520px,70vw);height:1px;
   background:linear-gradient(90deg,transparent,rgba(94,228,216,.5),transparent)}
@@ -2513,7 +2513,7 @@ function initDeepLife(){
     if(k<=0.01)return;
     var hx=W*(0.5+0.26*Math.sin(t*0.04)),hy=H*(0.45+0.12*Math.sin(t*0.031+1.4));
     var hr=Math.max(W,H)*0.5,rg=ctx.createRadialGradient(hx,hy,0,hx,hy,hr);
-    rg.addColorStop(0,'rgba(120,200,220,'+(k*0.06).toFixed(3)+')');
+    rg.addColorStop(0,'rgba(120,200,220,'+(k*0.038).toFixed(3)+')');
     rg.addColorStop(1,'rgba(60,140,170,0)');
     ctx.globalCompositeOperation='lighter';ctx.fillStyle=rg;ctx.fillRect(0,0,W,H);
     ctx.globalCompositeOperation='source-over';
@@ -2723,7 +2723,7 @@ function initDeepLife(){
     }
     ctx.globalAlpha=1;
     var sg=ctx.createLinearGradient(0,0,0,H*0.45);
-    sg.addColorStop(0,'rgba(170,225,240,'+(k*0.07).toFixed(3)+')');
+    sg.addColorStop(0,'rgba(170,225,240,'+(k*0.05).toFixed(3)+')');
     sg.addColorStop(1,'rgba(170,225,240,0)');
     ctx.fillStyle=sg;ctx.fillRect(0,0,W,H*0.45);
     ctx.globalCompositeOperation='source-over';
@@ -3457,7 +3457,6 @@ function renderHome(){
       '</a>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   var crew='<section class="hband statband rv"><div class="hb-in">'+
-    '<div class="home-kicker">Researched, not generated</div>'+
     '<h2 class="sec-head">The numbers behind every recommendation</h2>'+
     '<p class="sec-sub">DiveSZN runs on verified data, rechecked every season — no invented seasons, no sponsored ranks. Here is the ground it stands on.</p>'+
     '<div class="statgrid">'+
