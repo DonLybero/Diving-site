@@ -1616,7 +1616,7 @@ body.vhero-on{--dp:0;--hd:0;
    then the same water continues beneath every section and darkens with depth.
    Base water (z:-3) + a deepening layer (z:-2) that fills in as you scroll. */
 body.vhero-on::after{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;
-  background:linear-gradient(180deg,#0d4257 0%,#0a3547 46%,#062434 100%)}
+  background:#0d4257}   /* flat water base = zero seams; depth comes from the smooth layer above */
 body.vhero-on::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:radial-gradient(120% 120% at 50% 6%,#052736,#020d15);opacity:var(--dg)}
 /* the abyss: a single bioluminescent jellyfish drifts through the deep water and
@@ -1656,7 +1656,7 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
 /* ===== redesigned stat band (replaces the crew photo panel) ===== */
 .statband .sec-head{justify-content:center;text-align:center}
 .statband .sec-sub{text-align:center;margin-left:auto;margin-right:auto}
-.statband{position:relative;padding-top:clamp(56px,8vh,96px)}
+.statband{position:relative;padding-top:clamp(120px,20vh,200px)}   /* open water above section 2: nothing but sea shows past the fold */
 .statband::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
   width:min(520px,70vw);height:1px;
   background:linear-gradient(90deg,transparent,rgba(94,228,216,.5),transparent)}
@@ -2486,7 +2486,7 @@ function initDeepLife(){
     snowW=W;snowH=H;snow=[];var m=Math.min(150,Math.round(W*H/9500));
     for(var k=0;k<m;k++)snow.push({x:Math.random()*W,y:Math.random()*H,
       z:0.25+Math.random()*0.75,ph:Math.random()*6.28,sd:Math.random()*6.28});
-    bub=[];var nb=Math.max(6,Math.round(W/150));
+    bub=[];var nb=Math.max(5,Math.round(W/190));
     for(var j=0;j<nb;j++)bub.push({x:Math.random()*W,y:Math.random()*H,
       r:1.1+Math.random()*2.4,sp:16+Math.random()*26,ph:Math.random()*6.28});
   }
@@ -2499,7 +2499,7 @@ function initDeepLife(){
     if(op<=0.01)return;
     ctx.globalCompositeOperation='lighter';
     for(var k=0;k<bub.length;k++){var b=bub[k];
-      var a=op*(0.10+0.08*Math.abs(Math.sin(t*1.6+b.ph)));
+      var a=op*(0.07+0.05*Math.abs(Math.sin(t*1.6+b.ph)));
       ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,6.2832);
       ctx.strokeStyle='rgba(200,240,250,'+a.toFixed(3)+')';ctx.lineWidth=1;ctx.stroke();
       ctx.beginPath();ctx.arc(b.x-b.r*0.3,b.y-b.r*0.3,b.r*0.32,0,6.2832);
@@ -2694,27 +2694,35 @@ function initDeepLife(){
     ctx.fillStyle=ctx.createPattern(grain,'repeat');ctx.fillRect(0,0,W+128,H+128);
     ctx.restore();ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
   }
+  // one soft-edged light beam, pre-rendered: cross-fade x length-fade, so the
+  // shafts have feathered film-like edges instead of hard CG triangles
+  var beamSpr=document.createElement('canvas');beamSpr.width=256;beamSpr.height=1024;
+  (function(){var g=beamSpr.getContext('2d');
+    var gx=g.createLinearGradient(0,0,256,0);
+    gx.addColorStop(0,'rgba(190,235,248,0)');gx.addColorStop(0.5,'rgba(190,235,248,1)');gx.addColorStop(1,'rgba(190,235,248,0)');
+    g.fillStyle=gx;g.fillRect(0,0,256,1024);
+    var gy=g.createLinearGradient(0,0,0,1024);
+    gy.addColorStop(0,'rgba(0,0,0,1)');gy.addColorStop(0.7,'rgba(0,0,0,0.35)');gy.addColorStop(1,'rgba(0,0,0,0)');
+    g.globalCompositeOperation='destination-in';g.fillStyle=gy;g.fillRect(0,0,256,1024);
+  })();
   function drawRays(k){
-    // sun shafts slanting down through the water; they sway slowly and die with depth
+    // three wide parallel shafts from one sun, breathing slowly — like footage
     ctx.globalCompositeOperation='lighter';
-    for(var i=0;i<5;i++){
-      var bx=W*(0.14+0.19*i)+Math.sin(t*0.07+i*1.7)*W*0.02;
-      var ang=-0.14+0.05*Math.sin(t*0.05+i);
-      var len=H*1.15, wT=W*(0.010+(i%2)*0.008), wB=wT*4.5;
-      var a=k*(0.045+0.05*Math.abs(Math.sin(t*0.11+i*2.1)));
-      ctx.save();ctx.translate(bx,-H*0.06);ctx.rotate(ang);
-      var g=ctx.createLinearGradient(0,0,0,len);
-      g.addColorStop(0,'rgba(190,240,250,'+(a*1.25).toFixed(3)+')');
-      g.addColorStop(0.55,'rgba(150,225,240,'+(a*0.55).toFixed(3)+')');
-      g.addColorStop(1,'rgba(130,205,230,0)');
-      ctx.fillStyle=g;
-      ctx.beginPath();ctx.moveTo(-wT,0);ctx.lineTo(wT,0);ctx.lineTo(wB,len);ctx.lineTo(-wB,len);ctx.closePath();ctx.fill();
+    for(var i=0;i<3;i++){
+      var bx=W*(0.24+0.27*i)+Math.sin(t*0.05+i*2.1)*W*0.015;
+      var ang=-0.13+0.02*i+0.012*Math.sin(t*0.04+i);
+      var bw=W*(0.10+0.05*i);
+      var a=k*(0.055+0.03*Math.sin(t*0.09+i*1.7)+0.03);
+      ctx.save();ctx.translate(bx,-H*0.08);ctx.rotate(ang);
+      ctx.globalAlpha=Math.max(0,a);
+      ctx.drawImage(beamSpr,-bw/2,0,bw,H*1.25);
       ctx.restore();
     }
-    var sg=ctx.createLinearGradient(0,0,0,H*0.5);
-    sg.addColorStop(0,'rgba(160,230,242,'+(k*0.10).toFixed(3)+')');
-    sg.addColorStop(1,'rgba(160,230,242,0)');
-    ctx.fillStyle=sg;ctx.fillRect(0,0,W,H*0.5);
+    ctx.globalAlpha=1;
+    var sg=ctx.createLinearGradient(0,0,0,H*0.45);
+    sg.addColorStop(0,'rgba(170,225,240,'+(k*0.07).toFixed(3)+')');
+    sg.addColorStop(1,'rgba(170,225,240,0)');
+    ctx.fillStyle=sg;ctx.fillRect(0,0,W,H*0.45);
     ctx.globalCompositeOperation='source-over';
   }
   function drawScene(dp){
@@ -2738,8 +2746,8 @@ function initDeepLife(){
       var cy=H*jy - R*0.14*J.cs + Math.sin(t*0.5)*R*0.05;
       drawJelly(cx,cy,R,life,deep);
       drawSnow(life,deep,true);
-      drawFinish(life);
     }
+    drawFinish(0.35+0.65*life);   // gentle grain + vignette at every depth: reads as footage
   }
   function draw(dp){drawScene(dp);}     // keep the existing frame()/rm callers working
 
@@ -2770,6 +2778,9 @@ function initHeroMedia(){
   // so nothing of the next section shows on open (svh lies in some embeds)
   var fitHero=function(){var h=document.getElementById('hero');if(h)h.style.minHeight=window.innerHeight+'px';};
   fitHero();window.addEventListener('resize',fitHero);
+  // browsers restore old scroll positions on revisit — always open at the surface
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  if(!location.hash)window.scrollTo(0,0);
   var v=document.getElementById('heroVideo');
   var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(v){
