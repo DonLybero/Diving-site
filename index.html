@@ -978,10 +978,13 @@ body.vhero-on #view-home{
   --card-bg:color-mix(in srgb,#ffffff,rgba(8,33,43,.92) calc(var(--flip)*100%));
 }
 body.vhero-on #view-home .sec-sub{color:var(--ink-soft)}
-/* dark halo rides in with the flip so light text holds on mid-depth water */
-body.vhero-on #view-home :is(.sec-head,.sec-sub,.home-kicker,.r-word,.dcap,.dmeta){
-  text-shadow:0 1px 2px rgba(3,18,26,calc(min(var(--flip)*1.6,1)*.5)),
-              0 2px 22px rgba(3,18,26,calc(min(var(--flip)*1.6,1)*.6))}
+/* serif needs more weight reversed out of dark water, and balanced ragging */
+body.vhero-on #view-home .sec-head{font-weight:600;text-wrap:balance}
+/* halo only where it earns its keep: full on display type, hairline on small text */
+body.vhero-on #view-home :is(.sec-head,.r-word){
+  text-shadow:0 1px 2px rgba(3,18,26,.45),0 2px 24px rgba(3,18,26,.45)}
+body.vhero-on #view-home :is(.sec-sub,.home-kicker,.dcap,.dmeta){
+  text-shadow:0 1px 2px rgba(3,18,26,.5)}
 /* bands go transparent so the descending ground shows through */
 body.vhero-on #view-home .hband{background:transparent}
 body.vhero-on #view-home .rotor .r-word{color:var(--ink)}
@@ -995,7 +998,7 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
 /* ===== redesigned stat band (replaces the crew photo panel) ===== */
 .statband .sec-head{justify-content:center;text-align:center}
 .statband .sec-sub{text-align:center;margin-left:auto;margin-right:auto}
-.statband{position:relative;padding-top:clamp(120px,20vh,200px)}   /* open water above section 2: nothing but sea shows past the fold */
+.statband{position:relative;padding-top:clamp(72px,11vh,128px)}   /* a breath of open water, but the heading stays anchored to its section */
 .statband::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
   width:min(520px,70vw);height:1px;
   background:linear-gradient(90deg,transparent,rgba(94,228,216,.5),transparent)}
