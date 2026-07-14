@@ -1405,7 +1405,7 @@ function renderInSeasonNow(){
   var FISH='<svg class="hm-fish" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 12c3.5-5.5 11-5.5 14.5 0-3.5 5.5-11 5.5-14.5 0Z"/><path d="M18 12l3.5-2.6v5.2L18 12Z"/><circle cx="8" cy="10.6" r=".9" fill="currentColor" stroke="none"/></svg>';
   host.innerHTML=top.map(function(p){var d=p.d,r=p.r;
     return '<div class="hm-row">'+FISH+'<span class="hm-animal">'+cap(esc(p.name))+
-      '<small>'+esc(d.name)+' · '+(p.temp!=null?p.temp:'—')+'°C</small></span>'+
+      '<small>'+esc(d.name)+(d.country?', '+esc(d.country):'')+' · '+(p.temp!=null?p.temp:'—')+'°C</small></span>'+
       '<span class="chip" style="background:'+TONAL[r]+';color:'+TTEXT[r]+'">'+r+'</span></div>';
   }).join('');
   // give the card life: a spotlight that auto-advances through the rows, pausing on hover
