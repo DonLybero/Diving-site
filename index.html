@@ -944,6 +944,51 @@ body.vhero-on .topbar.scrolled .name b{color:var(--accent)}
 body.vhero-on .topbar.scrolled .tabs button{color:var(--ink-soft);text-shadow:none}
 body.vhero-on .topbar.scrolled .tabs button:hover{background:rgba(255,255,255,.5);color:var(--ink)}
 </style>
+<style>
+/* ===== "diving deeper": the home page darkens with scroll depth ===== */
+body.vhero-on{--dp:0;--hd:0}
+/* the whole page ground descends from surface light to deep ocean:
+   a fixed depth overlay that fills in as you scroll (reliable; no color-mix bg) */
+body.vhero-on::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(120% 120% at 50% 6%,#0a2a34,#03121a);opacity:var(--dp)}
+/* hero video takes on depth as you start to descend */
+.vhero-media::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(120% 100% at 50% 0%,rgba(4,20,28,.15),#04121a);opacity:calc(var(--hd)*.82)}
+/* depth-adaptive palette for the entire home view (components already use these tokens) */
+body.vhero-on #view-home{
+  --ink:color-mix(in srgb,#0e2f37,#eef8f6 calc(var(--dp)*100%));
+  --ink-soft:color-mix(in srgb,#33565e,#c2ded9 calc(var(--dp)*100%));
+  --muted:color-mix(in srgb,#4a6a71,#93bbb5 calc(var(--dp)*100%));
+  --line:color-mix(in srgb,rgba(13,80,90,.14),rgba(150,235,226,.24) calc(var(--dp)*100%));
+  --line-strong:color-mix(in srgb,rgba(13,80,90,.28),rgba(150,235,226,.36) calc(var(--dp)*100%));
+  --accent-deep:color-mix(in srgb,#0b7d75,#3fe0d4 calc(var(--dp)*70%));
+  --cta:color-mix(in srgb,#0b7d75,#3fe0d4 calc(var(--dp)*70%));
+  --card-bg:color-mix(in srgb,#ffffff,rgba(9,36,44,.94) calc(var(--dp)*100%));
+}
+/* bands go transparent so the descending ground shows through */
+body.vhero-on #view-home .hband{background:transparent}
+body.vhero-on #view-home .rotor .r-word{color:var(--ink)}
+/* trust ("stat") cards ride the depth palette instead of hard white */
+body.vhero-on #view-home .trust .tcard{background:var(--card-bg);border-color:var(--line)}
+body.vhero-on #view-home .trust .tcard b{color:var(--ink)}
+body.vhero-on #view-home .trust .tcard .meta{color:var(--muted)}
+body.vhero-on #view-home .trust .tnum{color:var(--accent-deep);border-bottom-color:var(--line)}
+body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
+
+/* ===== redesigned stat band (replaces the crew photo panel) ===== */
+.statband .sec-head{justify-content:center;text-align:center}
+.statband .sec-sub{text-align:center;margin-left:auto;margin-right:auto}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:40px auto 0;max-width:1020px}
+.statcard{position:relative;overflow:hidden;background:var(--card-bg);border:1px solid var(--line);
+  border-radius:16px;padding:28px 24px 26px;transition:transform .3s,border-color .3s,box-shadow .3s}
+.statcard:hover{transform:translateY(-4px);border-color:var(--accent-deep);box-shadow:0 20px 44px -22px rgba(4,20,28,.4)}
+.statcard::before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:3px;border-radius:3px;
+  background:linear-gradient(180deg,#2fe0d6,var(--accent-deep))}
+.statcard b{display:block;font-family:var(--mono);font-weight:700;font-size:clamp(2.3rem,4.8vw,3.4rem);
+  line-height:1;letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums}
+.statcard span{display:block;margin-top:14px;font-size:.85rem;line-height:1.5;color:var(--muted)}
+@media(max-width:520px){.statgrid{grid-template-columns:1fr 1fr;gap:12px}.statcard{padding:20px 16px}}
+</style>
 </head>
 <body>
 <div class="topbar">
@@ -1440,11 +1485,18 @@ function initHeroMedia(){
       if(HERO_VIDEO.credit){vc.textContent='\u24D8';vc.title=HERO_VIDEO.credit;vc.style.cursor='help';}
     }
   }
-  // solidify the overlay header once the hero scrolls away
-  window.addEventListener('scroll',function(){
+  // solidify the overlay header, and drive the "diving deeper" darkening:
+  // --hd darkens the hero video over the first screen; --dp darkens the page with depth
+  var onDepth=function(){
+    var y=window.scrollY||0, vh=window.innerHeight||800;
     var tb=document.querySelector('.topbar');
-    if(tb)tb.classList.toggle('scrolled',(window.scrollY||0)>window.innerHeight*0.7);
-  },{passive:true});
+    if(tb)tb.classList.toggle('scrolled',y>vh*0.7);
+    var max=(document.documentElement.scrollHeight||0)-vh;
+    document.body.style.setProperty('--hd',Math.min(y/vh,1).toFixed(3));
+    document.body.style.setProperty('--dp',(max>0?Math.min(y/max,1):0).toFixed(3));
+  };
+  window.addEventListener('scroll',onDepth,{passive:true});
+  window.addEventListener('resize',onDepth); onDepth();
   if(rm) return;
   // auto-pause off-viewport: no background decode cost
   var hero=document.getElementById('hero');
@@ -2065,6 +2117,21 @@ function homeGearCards(){
       '<div class="dimg"></div><span class="dcap">'+g.name+'</span>'+
       '<div class="dmeta"><span class="score" style="font-size:.68rem">our top pick</span></div></a>';})).join('');
 }
+/* count the stat numbers up when the panel first scrolls into view */
+function initStatCount(){
+  var nums=document.querySelectorAll('.statcard b[data-count]');
+  if(!nums.length) return;
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm||!('IntersectionObserver' in window)){nums.forEach(function(b){b.textContent=b.getAttribute('data-count');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return; io.unobserve(e.target);
+    var b=e.target, target=parseInt(b.getAttribute('data-count'),10)||0, t0=null, dur=1400;
+    function step(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/dur,1),e2=1-Math.pow(1-k,3);
+      b.textContent=Math.round(target*e2); if(k<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  });},{threshold:.5});
+  nums.forEach(function(b){b.textContent='0';io.observe(b);});
+}
 function renderHome(){
   var pool=DivingCalendar.rankPeriod(DESTS, new Date().getMonth()*2+1, {limit:16});
   var seenC={}, topAug=[];
@@ -2078,14 +2145,17 @@ function renderHome(){
       '<div class="dmeta">'+tempStr(r.water_temp_c)+' water · '+(r.visibility_m?r.visibility_m+' m viz':r.rating.toLowerCase()+' season')+'</div>'+
       '</a>';}).join('');
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
-  var crew='<div class="crew-pin" id="crewPin"><div class="crew-slide" id="crewSlide">'+
-    '<div class="crew-photo"><img src="'+CREW_IMG.src+'" alt="Divers preparing gear" '+
-    'onerror="this.style.display=\'none\'">'+
-    (CREW_IMG.credit?'<span class="crew-credit">'+CREW_IMG.credit+'</span>':'')+'</div>'+
-    '<div class="crew-stats">'+
-    '<div class="crew-stat crew-a"><b>1224</b><span>destination-months scored, rechecked every season</span></div>'+
-    '<div class="crew-stat crew-b"><b>725</b><span>dive sites documented with depth, level and character</span></div>'+
-    '</div></div></div>';
+  var crew='<section class="hband statband rv"><div class="hb-in">'+
+    '<div class="home-kicker">Researched, not generated</div>'+
+    '<h2 class="sec-head">The numbers behind every recommendation</h2>'+
+    '<p class="sec-sub">DiveSZN runs on verified data, rechecked every season — no invented seasons, no sponsored ranks. Here is the ground it stands on.</p>'+
+    '<div class="statgrid">'+
+      '<div class="statcard"><b data-count="102">102</b><span>dive destinations, each scored across all twelve months</span></div>'+
+      '<div class="statcard"><b data-count="1224">1224</b><span>destination-months scored and rechecked every season</span></div>'+
+      '<div class="statcard"><b data-count="725">725</b><span>named dive sites documented with depth, level and character</span></div>'+
+      '<div class="statcard"><b data-count="118">118</b><span>pieces of scuba gear reviewed across every category</span></div>'+
+    '</div>'+
+    '</div></section>';
   document.getElementById('view-home').innerHTML=
     crew+
     '<section class="hband rv"><div class="hb-in">'+
@@ -2124,6 +2194,7 @@ function renderHome(){
     '</div></section>';
   fillDestCovers();
   initReveal();
+  initStatCount();
   initRotor(nowMonth);
   initDcar();
   initDcar('gcar','gcarDots');
