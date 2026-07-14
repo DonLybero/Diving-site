@@ -50,7 +50,6 @@ img{max-width:100%;display:block}
 .kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
   color:var(--aqua);display:inline-flex;align-items:center;gap:10px}
 .kicker::before{content:"";width:28px;height:1px;background:linear-gradient(90deg,transparent,var(--aqua))}
-.kicker-live::before{display:none}
 .skip{position:absolute;left:-999px;top:8px;background:var(--aqua);color:#04202a;padding:10px 16px;
   border-radius:8px;z-index:200;font-weight:700}
 .skip:focus{left:12px}
@@ -145,6 +144,11 @@ img{max-width:100%;display:block}
 .nc-name small{display:block;font-weight:500;color:var(--muted);font-size:.7rem;font-family:var(--mono)}
 .nc-bar{grid-column:1/-1;height:5px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden}
 .nc-bar i{display:block;height:100%;border-radius:3px;width:0;transition:width 1s var(--ease-out)}
+.hm-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;padding:11px 6px;border-radius:10px;transition:background .16s}
+.hm-row:hover{background:var(--panel2)}
+.hm-fish{color:var(--aqua);flex-shrink:0}
+.hm-animal{color:#fff;font-weight:600;font-size:.98rem;line-height:1.18;min-width:0}
+.hm-animal small{display:block;font-weight:500;color:var(--muted);font-size:.7rem;font-family:var(--mono);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chip{font-family:var(--mono);font-size:.62rem;font-weight:600;letter-spacing:.03em;padding:4px 9px;border-radius:999px;white-space:nowrap}
 .scroll-cue{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:3;
   font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);
@@ -235,31 +239,6 @@ img{max-width:100%;display:block}
 .cal-read b{color:var(--ink)}
 .species{display:flex;gap:6px;flex-wrap:wrap;margin-top:13px}
 .sp{font-size:.72rem;color:var(--soft);background:rgba(47,224,214,.09);border:1px solid rgba(47,224,214,.2);border-radius:999px;padding:4px 10px}
-
-/* live marine-life table (top species in season this month) */
-.mlchip{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:#04202a;background:var(--aqua);
-  border-radius:999px;padding:3px 9px;margin-left:2px}
-.mltable-wrap{overflow-x:auto;border-radius:var(--r-lg);box-shadow:var(--glow);-webkit-overflow-scrolling:touch}
-.mlife{width:100%;min-width:560px;border-collapse:collapse;background:var(--glass);border:1px solid var(--line);
-  border-radius:var(--r-lg);overflow:hidden;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.mlife th{font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
-  text-align:left;padding:16px 22px;border-bottom:1px solid var(--line);font-weight:500;background:rgba(3,20,26,.4)}
-.mlife td{padding:15px 22px;border-bottom:1px solid var(--line);vertical-align:middle}
-.mlife tbody tr:last-child td{border-bottom:0}
-.mlife tbody tr{transition:background .16s}
-.mlife tbody tr:hover{background:var(--panel2)}
-.ml-animal{font-family:var(--serif);font-weight:600;color:#fff;font-size:1.12rem;display:inline-flex;align-items:center;gap:12px}
-.ml-fish{color:var(--aqua);display:inline-flex;flex-shrink:0}
-.ml-dest{display:flex;align-items:center;gap:13px}
-.ml-thumb{width:48px;height:48px;border-radius:10px;object-fit:cover;flex-shrink:0;border:1px solid var(--line-2)}
-.ml-thumb-x{width:48px;height:48px;border-radius:10px;flex-shrink:0;border:1px solid var(--line);
-  background:radial-gradient(circle at 60% 35%,rgba(47,224,214,.22),var(--panel2));display:grid;place-items:center}
-.ml-dest .ml-name{color:#fff;font-weight:600;font-size:1rem}
-.ml-dest small{display:block;font-family:var(--mono);font-size:.64rem;color:var(--muted);margin-top:2px}
-.ml-cond{display:inline-flex;align-items:center;gap:11px;justify-content:flex-end;width:100%}
-.ml-temp{font-family:var(--mono);font-size:.74rem;color:var(--soft);font-variant-numeric:tabular-nums}
-.ml-th-r{text-align:right}
-.ml-empty{padding:26px 22px;color:var(--muted);font-family:var(--mono);font-size:.8rem;text-align:center}
 
 /* more waters (compact data cards) */
 .more-head{margin:56px 0 22px;font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
@@ -424,12 +403,10 @@ img{max-width:100%;display:block}
 <section class="band d-mid" id="dest-band">
   <div class="wrap">
     <div class="band-head rv">
-      <span class="kicker kicker-live"><span class="pulse-dot"></span>In season now <span class="mlchip" id="mlMonthChip"></span></span>
-      <h2>What's diving with you this month</h2>
-      <p>The species most worth getting in the water for right now — each with the single best destination to find it, shown only where conditions are Shoulder or better.</p>
+      <span class="kicker">Featured waters</span>
+      <h2>Real dives, real seasons</h2>
+      <p>A photograph, a season calendar and the marine life you can expect — hover any month to read the water temperature and visibility behind the colour.</p>
     </div>
-    <div class="mltable-wrap rv d-1"><table class="mlife" id="mlife" aria-label="Top marine life in season this month"></table></div>
-    <div class="more-head rv">Featured waters</div>
     <div class="feat" id="feat"></div>
     <div class="more-head rv">More waters in the planner</div>
     <div class="mgrid" id="mgrid"></div>
@@ -520,6 +497,19 @@ function marineBonus(d){return Math.min(25,(d.species?d.species.length:0)*5);}
 function scoreFor(d,mi){var r=d.ratings[mi];if(r==='Closed')return 0;return RBASE[r]+vizBonus(d.viz[mi])+marineBonus(d);}
 var SCORE_MAX=143;
 function rankFor(mi){return DATA.destinations.map(function(d){return {d:d,s:scoreFor(d,mi)};}).sort(function(a,b){return b.s-a.s;});}
+var FISH='<svg class="hm-fish" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 12c3.5-5.5 11-5.5 14.5 0-3.5 5.5-11 5.5-14.5 0Z"/><path d="M18 12l3.5-2.6v5.2L18 12Z"/><circle cx="8" cy="10.6" r=".9" fill="currentColor" stroke="none"/></svg>';
+var SPX=null;
+function capf(s){return s.charAt(0).toUpperCase()+s.slice(1);}
+/* top-4 marine species this month, each at a distinct best diveable (Shoulder+) destination */
+function topMarine(mi){
+  if(!SPX){SPX={};DATA.destinations.forEach(function(d){(d.species||[]).forEach(function(s){if(/coral|anemone|sponge|seagrass|kelp/i.test(s))return;var k=s.toLowerCase();if(!SPX[k])SPX[k]={name:s,dests:[]};SPX[k].dests.push(d);});});}
+  var RANK={Peak:3,Good:2,Shoulder:1,Low:0,Closed:-1},pairs=[];
+  Object.keys(SPX).forEach(function(k){SPX[k].dests.forEach(function(d){var r=d.ratings[mi];if(RANK[r]<1)return;pairs.push({name:SPX[k].name,key:k,d:d,r:r,sc:scoreFor(d,mi)});});});
+  pairs.sort(function(a,b){return (RANK[b.r]-RANK[a.r])||(b.sc-a.sc);});
+  var uSp={},uD={},top=[];
+  for(var i=0;i<pairs.length&&top.length<4;i++){var p=pairs[i];if(uSp[p.key]||uD[p.d.name])continue;uSp[p.key]=1;uD[p.d.name]=1;top.push(p);}
+  return top;
+}
 function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
 function peakIdx(d){var i=d.ratings.indexOf('Peak');return i<0?0:i;}
@@ -540,13 +530,12 @@ document.getElementById('nowMonth').textContent=MF[M[curMonth]];
 /* hero in-season + stats */
 (function(){
   var list=document.getElementById('nowList');
-  rankFor(curMonth).slice(0,4).forEach(function(o,i){
-    var d=o.d,r=d.ratings[curMonth];
-    var row=el('div','nc-row');
-    row.innerHTML='<span class="nc-rank">'+(i+1)+'</span>'+
-      '<span class="nc-name">'+esc(d.name)+'<small>'+esc(d.country)+'</small></span>'+
-      '<span class="chip" style="background:'+TONAL[r]+';color:'+TTEXT[r]+'">'+r+'</span>'+
-      '<span class="nc-bar"><i data-w="'+Math.round(o.s/SCORE_MAX*100)+'" style="background:linear-gradient(90deg,'+TONAL[r]+',var(--aqua))"></i></span>';
+  topMarine(curMonth).forEach(function(p){
+    var d=p.d,r=p.r;
+    var row=el('div','hm-row');
+    row.innerHTML=FISH+
+      '<span class="hm-animal">'+capf(esc(p.name))+'<small>'+esc(d.name)+' · '+(d.temps[curMonth]||'—')+'°C</small></span>'+
+      '<span class="chip" style="background:'+TONAL[r]+';color:'+TTEXT[r]+'">'+r+'</span>';
     list.appendChild(row);
   });
   [['12','months mapped'],['5','season ratings'],['°C · m','temp + visibility']].forEach(function(s){
@@ -626,8 +615,10 @@ document.getElementById('nowMonth').textContent=MF[M[curMonth]];
       '<div class="body"><div class="fc-top"><div><h3>'+esc(d.name)+'</h3><div class="ctry">'+esc(d.country)+'</div></div>'+
         '<span class="peakflag">peak '+M[pk]+' · '+(d.temps[pk]||'—')+'°C</span></div>'+
       '<p class="blurb">'+(BLURB[d.name]||'')+'</p>'+
+      '<div class="cal">'+calBars(d)+'</div>'+
+      '<div class="cal-read"><span class="cr-l">'+esc(d.name)+'</span><span class="cr-r">Jan–Dec</span></div>'+
       '<div class="species">'+species+'</div></div>';
-    feat.appendChild(card);
+    feat.appendChild(card);wireCal(card,d);
   });
   DATA.destinations.forEach(function(d){
     if(PHOTO.has(d.name))return;
@@ -640,56 +631,6 @@ document.getElementById('nowMonth').textContent=MF[M[curMonth]];
   });
   var lg=document.getElementById('legend');
   ['Peak','Good','Shoulder','Low','Closed'].forEach(function(r){lg.appendChild(el('span','lg','<i style="background:'+TONAL[r]+'"></i>'+r));});
-})();
-
-/* live marine-life table: top species this month + best diveable destination now */
-(function(){
-  var RANK={Peak:3,Good:2,Shoulder:1,Low:0,Closed:-1};
-  var FISH='<svg class="ml-fish" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 12c3.5-5.5 11-5.5 14.5 0-3.5 5.5-11 5.5-14.5 0Z"/><path d="M18 12l3.5-2.6v5.2L18 12Z"/><circle cx="8" cy="10.6" r=".9" fill="currentColor" stroke="none"/></svg>';
-  // index species -> destinations where they are signature (drop non-animals)
-  var SPX={};
-  DATA.destinations.forEach(function(d){
-    (d.species||[]).forEach(function(s){
-      if(/coral|anemone|sponge|seagrass|kelp/i.test(s))return;
-      var k=s.toLowerCase();
-      if(!SPX[k])SPX[k]={name:s,dests:[]};
-      SPX[k].dests.push(d);
-    });
-  });
-  var table=document.getElementById('mlife'), chip=document.getElementById('mlMonthChip');
-  if(chip)chip.textContent=MF[M[curMonth]];
-  function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
-  function build(mi){
-    // every diveable (species, destination) pairing this month, best first
-    var pairs=[];
-    Object.keys(SPX).forEach(function(k){
-      SPX[k].dests.forEach(function(d){
-        var r=d.ratings[mi]; if(RANK[r]<1)return;                // Shoulder or better only
-        pairs.push({name:SPX[k].name,key:k,d:d,r:r,sc:scoreFor(d,mi)});
-      });
-    });
-    pairs.sort(function(a,b){return (RANK[b.r]-RANK[a.r])||(b.sc-a.sc);});
-    // greedily take the top 4 with a distinct animal AND a distinct destination
-    var usedSp={},usedD={},top=[];
-    for(var i=0;i<pairs.length&&top.length<4;i++){
-      var p=pairs[i];
-      if(usedSp[p.key]||usedD[p.d.name])continue;
-      usedSp[p.key]=1;usedD[p.d.name]=1;top.push(p);
-    }
-    if(!top.length){table.innerHTML='<tbody><tr><td class="ml-empty">No destinations are in Shoulder-or-better conditions this month.</td></tr></tbody>';return;}
-    var h='<thead><tr><th>Species</th><th>Best destination now</th><th class="ml-th-r">Conditions</th></tr></thead><tbody>';
-    top.forEach(function(p){
-      var d=p.d,r=p.r;
-      var thumb=d.img?'<img class="ml-thumb" src="'+d.img+'" alt="">':'<span class="ml-thumb-x">'+FISH+'</span>';
-      h+='<tr>'+
-        '<td><span class="ml-animal">'+FISH+cap(esc(p.name))+'</span></td>'+
-        '<td><span class="ml-dest">'+thumb+'<span><span class="ml-name">'+esc(d.name)+'</span><small>'+esc(d.country)+'</small></span></span></td>'+
-        '<td><span class="ml-cond"><span class="chip" style="background:'+TONAL[r]+';color:'+TTEXT[r]+'">'+r+'</span><span class="ml-temp">'+(d.temps[mi]||'—')+'°C</span></span></td>'+
-      '</tr>';
-    });
-    table.innerHTML=h+'</tbody>';
-  }
-  build(curMonth);
 })();
 
 /* marine pulse */
