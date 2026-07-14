@@ -46,6 +46,14 @@ main{position:relative;z-index:2}
 .bar .tag{font-family:var(--mono);font-size:.52rem;letter-spacing:.24em;text-transform:uppercase;color:var(--soft);display:block;margin-top:2px}
 /* sections */
 section{min-height:100vh;display:flex;align-items:center;padding:110px clamp(20px,6vw,70px)}
+/* section 1: the real divers video hero, kept light */
+.hero{position:relative;overflow:hidden}
+.hero .herovid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+  filter:brightness(1.14) saturate(1.06)}
+.hero .hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(4,18,24,.5),rgba(4,18,24,.16) 44%,transparent 70%),
+    linear-gradient(180deg,rgba(6,22,28,.22),transparent 26%,transparent 62%,rgba(3,14,20,.9))}
+.hero .wrap{position:relative;z-index:2}
 .wrap{width:min(1100px,100%);margin:0 auto}
 .kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--aqua);
   display:inline-flex;align-items:center;gap:10px;margin-bottom:20px}
@@ -108,13 +116,17 @@ h2{font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.02em;text-shadow:0 3px 30
 </div>
 
 <main>
-  <!-- ZONE 0 — SURFACE -->
-  <section data-zone="0">
+  <!-- ZONE 0 — SURFACE: the divers video hero (kept light) -->
+  <section class="hero" data-zone="0">
+    <video class="herovid" autoplay muted loop playsinline poster="../assets/video/hero-dive-poster.jpg" aria-hidden="true">
+      <source src="../assets/video/hero-dive.webm" type="video/webm">
+    </video>
+    <div class="hero-scrim"></div>
     <div class="wrap">
       <div class="reveal">
         <span class="kicker">Dive season, decoded <span class="zonechip">0–5 m · surface</span></span>
         <h1>Know <span class="em">when</span> to dive <span class="em">where</span>.</h1>
-        <p class="lead">Scroll to descend. The water — and the life in it — changes with every metre. Turtles and dolphins ride the sunlit shallows up here.</p>
+        <p class="lead">Pick a month and see which destinations are at their best. Then scroll to descend — the water darkens and the life changes with every metre.</p>
         <a class="cta" href="#reef">Begin the descent
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
       </div>
