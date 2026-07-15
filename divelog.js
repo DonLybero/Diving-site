@@ -685,6 +685,10 @@ async function boot() {
   state.units = (await state.store.getSetting('units')) === 'imperial' ? 'imperial' : 'metric';
   window.addEventListener('hashchange', render);
   render();
+  // offline shell: narrow service worker, only ever answers for dive log assets
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('divelog-sw.js').catch(() => { /* http or unsupported — fine */ });
+  }
 }
 
 boot();
