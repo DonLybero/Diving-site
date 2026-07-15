@@ -1,0 +1,56 @@
+<divelog program='subsurface' version='3'>
+<settings>
+<divecomputerid model='Shearwater Petrel' deviceid='64cb6f5d' serial='39384572' firmware='28'/>
+<divecomputerid model='Suunto Vyper' deviceid='e9237b0a' nickname='Suunto Vyper (e9237b0a)'/>
+</settings>
+<divesites>
+<site uuid='473e90be' name='Zenobia, Larnaca, Cyprus' gps='34.897333 33.656417'>
+</site>
+<site uuid='96837d9f' name='Sund Rock, Hoodsport, WA, USA' gps='47.400200 -123.142299'>
+  <notes>South wall entry, watch the boat traffic </notes>
+</site>
+</divesites>
+<dives>
+<dive number='94' rating='5' visibility='4' tags='boat, wreck' divesiteid='473e90be' date='2011-10-21' time='12:58:49' duration='65:36 min'>
+  <divemaster>Jason</divemaster>
+  <buddy>Linus, Scott</buddy>
+  <notes>second dive on the Zenobia - this time with correct computer settings</notes>
+  <suit>wet, 5mm</suit>
+  <cylinder size='24.0 l' workpressure='232.0 bar' description='D12 232 bar' o2='32.0%' start='200.0 bar' end='68.0 bar' />
+  <cylinder size='7.0 l' workpressure='202.6 bar' description='AL49' o2='51.0%' start='230.0 bar' end='160.0 bar' />
+  <weightsystem weight='4.5 kg' description='belt' />
+  <divecomputer model='Shearwater Petrel' deviceid='64cb6f5d' diveid='00000033'>
+  <depth max='36.01 m' mean='20.217 m' />
+  <temperature air='27.5 C' water='25.2 C' />
+  <surface pressure='1.031 bar' />
+  <water salinity='1020 g/l' />
+  <event time='51:30 min' type='25' value='51' name='gaschange' cylinder='1' o2='51.0%' />
+  <sample time='0:06 min' depth='2.38 m' temp='27.5 C' pressure='196.14 bar' ndl='99:00 min' cns='1%' />
+  <sample time='0:36 min' depth='5.57 m' temp='26.3 C' pressure='195.34 bar' />
+  <sample time='1:06 min' depth='9.6 m' pressure='193.83 bar' />
+  <sample time='2:10 min' depth='21.33 m' temp='25.9 C' pressure='189.55 bar' ndl='34:00 min' cns='2%' />
+  <sample time='14:20 min' depth='30.49 m' pressure='151.46 bar' stopdepth='9.04 m' cns='8%' />
+  <sample time='30:00 min' depth='20.75 m' temp='25.2 C' pressure='127.15 bar' cns='14%' />
+  <sample time='60:06 min' depth='5.02 m' pressure='72.5 bar' ndl='99:00 min' stopdepth='0.0 m' />
+  <sample time='65:36 min' depth='0.0 m' pressure='68.4 bar' />
+  </divecomputer>
+</dive>
+<dive number='95' rating='4' divesiteid='96837d9f' date='2011-10-22' time='09:14:00' duration='42:10 min'>
+  <divetemperature air='18.0 C' water='11.0 C'/>
+  <buddy>David</buddy>
+  <notes>Cold but great viz. Octopus under the ledge at 15m.</notes>
+  <suit>dry, trilam</suit>
+  <cylinder size='11.1 l' workpressure='232.0 bar' description='AL80' o2='32.0%' start='210.0 bar' end='62.0 bar' />
+  <divecomputer model='Suunto Vyper' deviceid='e9237b0a' diveid='0000004c'>
+  <depth max='18.2 m' mean='12.1 m' />
+  <temperature water='11.0 C' />
+  <sample time='0:20 min' depth='2.4 m' temp='12.0 C' pressure='208.0 bar' />
+  <sample time='1:00 min' depth='8.6 m' />
+  <sample time='2:00 min' depth='14.3 m' temp='11.0 C' pressure='198.0 bar' />
+  <sample time='21:00 min' depth='18.2 m' pressure='120.0 bar' />
+  <sample time='40:00 min' depth='5.0 m' pressure='70.0 bar' ndl='99:00 min' />
+  <sample time='42:10 min' depth='0.0 m' pressure='62.0 bar' />
+  </divecomputer>
+</dive>
+</dives>
+</divelog>
