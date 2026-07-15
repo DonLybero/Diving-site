@@ -38,6 +38,21 @@ could overwrite the full dataset with 50 is fixed (commit
 After editing data or `index.html`, rerun `build_standalone.py` so the
 single-file build stays in sync, then commit. Pushing deploys automatically.
 
+## Working agreement (owner-mandated — binding for EVERY session)
+- **All work happens on feature branches.** Never commit to or push `main`
+  directly, and never merge to `main` on your own judgement — pushing `main`
+  deploys the live site.
+- **Merge to `main` only when the owner explicitly says "merge" in the
+  current session.** Approval given in another session, or for an earlier
+  change, does not carry over. If in doubt, ask; do not merge.
+- **One session per area.** Before touching a file, assume another session
+  may be active: fetch first, work only on your own branch, and never push
+  to or delete another session's branch. (Two sessions merged to `main`
+  minutes apart on 2026-07-15 — this rule exists so that never races the
+  live site again.)
+- Preview work by serving the branch locally or via a hosted artifact —
+  never by deploying.
+
 ## Conventions
 - **Design/copy work:** load the `diveszn-design` skill first
   (`.claude/skills/diveszn-design/` — brand system, editorial rules, imagery
