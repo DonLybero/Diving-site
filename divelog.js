@@ -87,7 +87,7 @@ async function renderLog() {
       el('p', { text: 'Bring your history across: export your dives from your dive computer\'s app and drop the file here. Old computer, new computer, spreadsheet — the log reads them all into one place.' }),
       el('a', { class: 'btn', href: '#import', text: 'Import dives' }),
       ' ',
-      el('a', { class: 'btn ghost', href: '#add', text: 'Add a dive manually' }),
+      el('a', { class: 'btn ghost', href: '#add', text: 'Log your first dive' }),
       el('div', { class: 'chips' },
         ['UDDF (.uddf)', 'Subsurface (.ssrf/.xml)', 'Suunto DM4/DM5 (.sml)', 'Garmin FIT (.fit)', 'CSV / spreadsheet'].map((f) => el('span', { class: 'chip', text: f }))),
     ));
@@ -107,7 +107,7 @@ async function renderLog() {
 
   app.append(el('div', { class: 'toolbar' },
     el('a', { class: 'btn', href: '#import', text: 'Import dives' }),
-    el('a', { class: 'btn ghost', href: '#add', text: 'Add dive' }),
+    el('a', { class: 'btn ghost', href: '#add', text: 'Log a dive' }),
     el('button', { class: 'btn ghost', text: 'Export UDDF', onclick: () => downloadUddf(dives) }),
     el('span', { class: 'spacer' }),
     unitToggle(),
@@ -545,8 +545,16 @@ async function renderForm(id) {
     return;
   }
 
+  // the log continues from the imported history: next number, known sites/buddies
+  const allDives = await state.store.listDives();
+  const nextNumber = allDives.reduce((max, d) => Math.max(max, d.number || 0), 0) + 1;
+  const suggest = (pick) => [...new Set(allDives.flatMap(pick).filter(Boolean))].slice(0, 100);
+  const knownSites = suggest((d) => [d.site?.name]);
+  const knownBuddies = suggest((d) => (d.buddy || '').split(',').map((s) => s.trim()));
+  const knownGuides = suggest((d) => [d.diveMaster]);
+
   app.append(el('a', { class: 'backlink', href: existing ? '#dive/' + encodeURIComponent(id) : '#', text: '← Back' }));
-  app.append(el('h2', { text: existing ? 'Edit dive' : 'Add a dive' }));
+  app.append(el('h2', { text: existing ? 'Edit dive' : 'Log a dive' }));
 
   const f = {};
   const field = (key, label, type = 'text', attrs = {}) => {
@@ -557,16 +565,22 @@ async function renderForm(id) {
   const startISO = existing?.startedAt || '';
   const tank = existing?.tanks?.[0] || {};
 
+  const datalist = (idName, values) => el('datalist', { id: idName }, values.map((v) => el('option', { value: v })));
+
   const form = el('form', { class: 'dform' },
+    field('number', 'Dive number', 'number', { min: '1', step: '1', inputmode: 'numeric' }),
     field('date', 'Date *', 'date'),
     field('time', 'Time in', 'time'),
     field('duration', 'Duration (minutes) *', 'number', { min: '1', step: '1', inputmode: 'numeric' }),
     field('maxDepth', `Max depth (${sys() === 'imperial' ? 'ft' : 'm'})`, 'number', { min: '0', step: '0.1', inputmode: 'decimal' }),
     field('waterTemp', `Water temp (°${sys() === 'imperial' ? 'F' : 'C'})`, 'number', { step: '0.5', inputmode: 'decimal' }),
-    field('site', 'Dive site'),
+    field('site', 'Dive site', 'text', { list: 'dl-sites' }),
+    datalist('dl-sites', knownSites),
     field('country', 'Country'),
-    field('buddy', 'Buddy'),
-    field('diveMaster', 'Divemaster / guide'),
+    field('buddy', 'Buddy', 'text', { list: 'dl-buddies' }),
+    datalist('dl-buddies', knownBuddies),
+    field('diveMaster', 'Divemaster / guide', 'text', { list: 'dl-guides' }),
+    datalist('dl-guides', knownGuides),
     field('equipment', 'Suit / equipment'),
     field('tankSize', 'Tank size (L)', 'number', { min: '0', step: '0.1' }),
     field('o2', 'O₂ %', 'number', { min: '1', max: '100', step: '1' }),
@@ -582,7 +596,12 @@ async function renderForm(id) {
     el('div', { class: 'full' }, el('label', { text: 'Notes', for: 'df-notes' }), (f.notes = el('textarea', { id: 'df-notes' }))),
   );
 
+  if (!existing) {
+    f.number.value = String(nextNumber);
+    f.date.value = new Date().toLocaleDateString('en-CA'); // today, local (YYYY-MM-DD)
+  }
   if (existing) {
+    f.number.value = existing.number ?? '';
     f.date.value = startISO.slice(0, 10);
     f.time.value = /T(\d{2}:\d{2})/.test(startISO) ? startISO.match(/T(\d{2}:\d{2})/)[1] : '';
     f.duration.value = existing.durationSec ? Math.round(existing.durationSec / 60) : '';
@@ -626,6 +645,7 @@ async function renderForm(id) {
     };
     const raw = {
       ...(existing || {}),
+      number: numv(f.number) !== undefined ? Math.round(numv(f.number)) : undefined,
       startedAt: existing && !changed('date') && !changed('time')
         ? existing.startedAt
         : (f.date.value ? `${f.date.value}T${f.time.value || '00:00'}:00` : ''),
@@ -661,15 +681,14 @@ async function renderForm(id) {
     const { dive, problems } = validateDive(raw);
     if (!dive) { errBox.replaceChildren(el('div', { class: 'msg error', text: problems.join(', ') })); return; }
     dive.id = existing?.id || (crypto.randomUUID ? crypto.randomUUID() : 'id-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8));
-    if (existing?.number !== undefined) dive.number = existing.number;
     dive.source = existing?.source || { parserId: 'manual' };
     await state.store.putDives([dive]);
-    state.lastSummary = existing ? 'Dive updated.' : 'Dive added to the log.';
+    state.lastSummary = existing ? 'Dive updated.' : 'Dive logged.';
     go(existing ? 'dive/' + encodeURIComponent(dive.id) : '');
   };
 
   app.append(form, errBox, el('div', { class: 'formactions' },
-    el('button', { class: 'btn', text: existing ? 'Save changes' : 'Add dive', onclick: save }),
+    el('button', { class: 'btn', text: existing ? 'Save changes' : 'Log dive', onclick: save }),
     el('a', { class: 'btn ghost', href: existing ? '#dive/' + encodeURIComponent(id) : '#', text: 'Cancel' }),
   ));
 }
