@@ -1228,9 +1228,8 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
     <div class="disclosure">Seasonal data is compiled from dive operators, liveaboard calendars and ocean sea-temperature sources;
       water temperatures are typical monthly ranges (±1°C) and marine-life timing shifts year to year with plankton and lunar cycles.
       Always confirm current conditions with a local dive centre before travelling.</div>
-    <div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear or book a trip through our links,
-      at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price.
-      We favour authorised dealers, and note where a listing is a general marketplace; commissions never influence our rankings.</div>
+    <div class="disclosure">Gear prices are indicative as of our research date — the retailer shows the live price.
+      We favour authorised dealers, and note where a listing is a general marketplace; nothing we link to changes our rankings.</div>
   </footer>
 </main>
 
@@ -2573,7 +2572,7 @@ function renderHome(){
     '<section class="hband hband-last rv"><div class="hb-in">'+
     '<div class="home-kicker">Why divers trust our research</div>'+
     '<div class="trust">'+
-      '<div class="tcard"><span class="tnum">01</span><b>No pay-to-rank</b><span class="meta">We rank on conditions and value alone. Affiliate links earn us a commission — they never change our reviews.</span></div>'+
+      '<div class="tcard"><span class="tnum">01</span><b>No pay-to-rank</b><span class="meta">We rank on conditions and value alone — no destination or brand can pay for a better place.</span></div>'+
       '<div class="tcard"><span class="tnum">02</span><b>Real and researched</b><span class="meta">Every calendar, dive site and price is verified, not generated — 102 destinations, 725 named sites, rechecked each season.</span></div>'+
       '<div class="tcard"><span class="tnum">03</span><b>Conditions, not just seasons</b><span class="meta">Each destination is rated for difficulty and lists its water type, access and the currents and visibility to expect month by month.</span></div>'+
     '</div>'+
@@ -3039,7 +3038,7 @@ function renderGear(){
     if(!c){g.innerHTML='';return;}
     var head='<p class="meta"><a href="#" onclick="showTab(\'destinations\');return false;">← All articles</a> &nbsp;·&nbsp; <a href="#" onclick="openGearArticle(\'\');return false;">Browse gear by category →</a></p>';
     var foot='<p class="meta" style="margin-top:16px"><a href="#" onclick="showTab(\'destinations\');return false;">← Back to all articles</a></p>';
-    var affNote='<p class="aff-note">'+ico('current',12)+' Prices are indicative — check the live price at the retailer. We may earn a commission at no extra cost to you, and it never changes a ranking.</p>';
+    var affNote='<p class="aff-note">'+ico('current',12)+' Prices are indicative — check the live price at the retailer. Nothing we link to changes a ranking.</p>';
     if(c.thickness_groups){
       // one buyer's guide split into thickness pages, chosen with a pill nav
       var groups=c.thickness_groups;

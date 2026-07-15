@@ -549,10 +549,9 @@ def footer_html(prefix="../"):
             'sea-temperature sources; water temperatures are typical monthly ranges (±1°C) and marine-life timing '
             'shifts year to year with plankton and lunar cycles. Always confirm current conditions with a local '
             'dive centre before travelling.</div>'
-            '<div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear '
-            'or book a trip through our links, at no extra cost to you. Gear prices are indicative as of our '
-            'research date — the retailer shows the live price. We favour authorised dealers, and note where a '
-            'listing is a general marketplace; commissions never influence our rankings.</div>'
+            '<div class="disclosure">Gear prices are indicative as of our research date — the retailer shows the '
+            'live price. We favour authorised dealers, and note where a listing is a general marketplace; nothing '
+            'we link to changes our rankings.</div>'
             '</footer>')
 
 def photo_hero(kicker, title, sub="", img="", credit="", pills="", pos=""):
@@ -1346,9 +1345,8 @@ guides</a> — where and when to dive whale sharks, mantas, hammerheads and more
 <a href="months/index.html">month-by-month guides</a> that rank where diving is at its best for any travel date.</p>
 <h2>Our gear guides</h2>
 <p class="greview" style="max-width:78ch">Gear picks are researched independently and chosen on the merits.
-Prices shown are indicative as of our research date — the retailer always shows the live price. DiveSZN is
-reader-supported: some &#8220;Buy&#8221; links are affiliate links and we may earn a commission at no extra cost
-to you. Commissions never influence our rankings.</p>
+Prices shown are indicative as of our research date — the retailer always shows the live price. We favour
+authorised dealers, and note where a listing is a general marketplace; nothing we link to changes our rankings.</p>
 <h2>Scuba only</h2>
 <p class="greview" style="max-width:78ch">DiveSZN is written for scuba divers. Every recommendation, from a
 destination&#8217;s best months to a wetsuit&#8217;s thickness, is framed around scuba diving.</p>
@@ -1372,9 +1370,9 @@ def privacy_page():
 
 <div class="lead">DiveSZN has no accounts and no sign-up — we don't ask you for
   personal information and we never sell any. Tools like the dive log keep their data in
-  your own browser, never on a server. The data that is involved comes from our host's
-  standard server logs, from the web-font service that renders our type, and from cookies
-  set by the retailers and affiliate networks we link to. This page explains that in full.</div>
+  your own browser, never on a server. The only data involved comes from our host's
+  standard server logs and from the web-font service that renders our type. This page
+  explains that in full.</div>
 
 <p>DiveSZN ("we", "us", "the site") operates this website. This policy explains what
   information is collected when you visit, how it is used, and the choices you have.</p>
@@ -1393,85 +1391,70 @@ def privacy_page():
   font files, Google receives your IP address and browser type on each page load; Google states
   it does not use these requests to build advertising profiles. See
   <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">Google Fonts &amp; privacy</a>.</p>
-<p><strong>Cookies:</strong> DiveSZN itself does not set advertising or analytics cookies.
-  Cookies may be set by the third-party affiliate networks below <strong>only when you click
-  an outbound "Buy" link</strong>.</p>
+<p><strong>Cookies:</strong> DiveSZN sets no cookies of its own — no advertising, no analytics,
+  no tracking. If you follow a link to an external retailer or other website, that site may set
+  its own cookies under its own privacy policy, but only once you have left DiveSZN.</p>
 <p><strong>The dive log:</strong> the <a href="divelog.html">dive log</a> runs entirely in
   your browser. Dives you import or type in are stored on your own device (browser IndexedDB)
   and are never uploaded, transmitted or visible to us. The log's "Delete all dives" button —
   or clearing your browser data — removes them permanently; the UDDF export is your portable
   copy.</p>
 
-<h2>2. Affiliate links</h2>
-<p>DiveSZN is reader-supported. Many "Buy" links are affiliate links: if you click through and
-  make a purchase, we may earn a commission <strong>at no extra cost to you</strong>. To credit
-  that referral, the retailer or affiliate network sets a cookie in your browser at the moment
-  you click. The networks we use are:</p>
-<ul>
-  <li><strong>Amazon Associates</strong> — as an Amazon Associate, DiveSZN earns from qualifying purchases.</li>
-  <li><strong>AvantLink</strong> (for retailers such as Scuba.com and LeisurePro)</li>
-  <li><strong>Awin</strong> (for retailers such as Tradeinn, Diveinn and Scubastore)</li>
-  <li><strong>eBay Partner Network</strong></li>
-  <li><strong>Skimlinks</strong>, which may affiliate other outbound retailer links automatically</li>
-</ul>
-<p>Each network processes click and purchase data under its own privacy policy. Prices shown on
-  DiveSZN are indicative; the retailer's live price and checkout are governed by that retailer.</p>
-
-<h2>3. Advertising</h2>
-<p>DiveSZN does not currently serve third-party advertising. If we introduce advertising in
+<h2>2. Advertising</h2>
+<p>DiveSZN does not serve third-party advertising. If we introduce advertising in
   future, we will update this policy to disclose the ad provider, the use of any advertising
   cookies, how to manage them, and how consent is handled for visitors in the EU and UK.</p>
 
-<h2>4. Analytics</h2>
+<h2>3. Analytics</h2>
 <p>We do not use Google Analytics or any other third-party analytics or measurement cookies.
   If that changes, this section will be updated to name the tool, describe what it collects,
   and explain how to opt out.</p>
 
-<h2>5. How information is used</h2>
+<h2>4. How information is used</h2>
 <p>The limited data above is used only to keep the site running and secure (host logs) and to
-  credit affiliate referrals (network cookies). We do not build profiles of you, run email
-  marketing, or sell or rent any information to anyone.</p>
+  render our pages (web fonts). We do not build profiles of you, run email marketing, or sell
+  or rent any information to anyone.</p>
 
-<h2>6. Legal bases (EU and UK visitors — GDPR)</h2>
+<h2>5. Legal bases (EU and UK visitors — GDPR)</h2>
 <p>Where GDPR or UK GDPR applies, we rely on our <strong>legitimate interests</strong> for
-  essential hosting logs and site security, and on <strong>consent</strong> for affiliate
-  cookies, which are set only when you actively choose to click an outbound link.</p>
+  essential hosting logs, site security and serving our web fonts. We set no cookies of our own
+  and do not process personal data for marketing.</p>
 
-<h2>7. Your rights</h2>
+<h2>6. Your rights</h2>
 <p>Depending on where you live, you may have the right to access, correct, delete or restrict
   the processing of your personal data, and to object or withdraw consent (GDPR / UK GDPR), or
   to know about and opt out of any "sale" or "sharing" of personal information (California
   CCPA / CPRA). DiveSZN does not sell personal information. Because we hold no user database,
-  many requests are best directed to the relevant third party (GitHub or an affiliate network),
+  many requests are best directed to the relevant third party (our host or web-font provider),
   but you can contact us using the details below and we will help where we can.</p>
 
-<h2>8. International transfers</h2>
-<p>Our host and the affiliate networks operate globally, so data may be processed in countries
+<h2>7. International transfers</h2>
+<p>Our host and web-font provider operate globally, so data may be processed in countries
   including the United States. Those providers maintain their own safeguards for such transfers.</p>
 
-<h2>9. Data retention</h2>
-<p>We keep no personal data of our own. Host logs and third-party cookies are retained according
-  to those providers' own schedules.</p>
+<h2>8. Data retention</h2>
+<p>We keep no personal data of our own. Host logs and any third-party cookies are retained
+  according to those providers' own schedules.</p>
 
-<h2>10. Children's privacy</h2>
+<h2>9. Children's privacy</h2>
 <p>DiveSZN is a scuba-diving resource intended for adults and is not directed at children under
   13 (or 16 in the EU). We do not knowingly collect data from children.</p>
 
-<h2>11. Security</h2>
+<h2>10. Security</h2>
 <p>The site is static — no database and no user input — which removes most common data-security
   risks, and it is served over HTTPS.</p>
 
-<h2>12. Changes to this policy</h2>
-<p>We may update this policy as the site evolves, for example when advertising or analytics is
-  added. The "Last updated" date at the top reflects the current version.</p>
+<h2>11. Changes to this policy</h2>
+<p>We may update this policy as the site evolves, for example when advertising, analytics or
+  affiliate links are added. The "Last updated" date at the top reflects the current version.</p>
 
-<h2>13. Contact</h2>
+<h2>12. Contact</h2>
 <p>Questions about this policy can be sent to
   <a href="mailto:privacy@diveszn.com">privacy@diveszn.com</a>.</p>
 </div>
 """
-    desc = ("How DiveSZN handles data: no accounts, no forms, no analytics — only standard host "
-            "logs and affiliate-network cookies set when you click a Buy link.")
+    desc = ("How DiveSZN handles data: no accounts, no forms, no analytics and no cookies of our own "
+            "— only standard host logs and the web-font service that renders our pages.")
     ld = {"@context": "https://schema.org", "@type": "WebPage", "name": "Privacy Policy",
           "description": desc, "url": url}
     css = ("\n.legal{max-width:780px}"

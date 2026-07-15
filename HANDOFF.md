@@ -195,6 +195,17 @@ score = rating_base (Peak 100 / Good 72 / Shoulder 48 / Low 22; Closed excluded)
   (Tradeinn/Diveinn/Scubastore), eBay EPN (`ebay_campid`), optional Skimlinks.
   **Empty values leave links raw — safe in production.** After pasting IDs,
   rerun `build_standalone.py`.
+- **Affiliate/commission COPY was removed site-wide (2026-07, owner call)** —
+  the site earns no commission yet, so it claims none: the footer affiliate
+  disclosure, the homepage trust-card commission line, the gear-article note,
+  and the privacy policy's "Affiliate links" section (§2, with cookie
+  consent/legal-basis wording) were all stripped. The `AFFILIATE` code wiring
+  stays dormant. **When you activate affiliate IDs, the FTC/ASA disclosure is
+  legally required again** — restore: (1) the footer `<div class="disclosure">`
+  affiliate line in `index.html` + `footer_html()` in `build_pages.py`; (2) the
+  privacy `Affiliate links` section + the cookie/legal-basis mentions in
+  `privacy_page()`; (3) the gear-guide note in `about_page()` and the SPA
+  `affNote`. Git history at this commit has the exact prior wording.
 - All buy links: `rel="noopener sponsored"`, cheapest-first tables.
 - `AFFILIATE.liveaboard_aff` is configured but currently **unreferenced in
   the app** (its only consumer was the inline profile, deleted as dead code)
