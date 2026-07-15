@@ -1072,7 +1072,7 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
   <div class="vhero-in">
     <div class="vhero-copy">
       <h1>Know your trip lands on great diving — before you book.</h1>
-      <p class="tagline">Every destination is scored for all twelve months on the things that make a dive: season, marine life, visibility and currents. Tell DiveSZN when you can travel, and see exactly where the water is at its best.</p>
+      <p class="tagline">The same reef can be electric in March and a murky washout by June. DiveSZN scores every destination month by month — season, marine life, visibility, current — so you name the dates you can travel and see where the water is actually diving well.</p>
       <div class="hero-cta">
         <a class="btn" href="#" onclick="showTab('trip');return false;">Plan your dive trip</a>
         <a class="btn ghost" href="how-we-score.html">How the score works</a>
@@ -2533,7 +2533,7 @@ function renderHome(){
   var nowMonth=DivingCalendar.MONTHS[new Date().getMonth()];
   var crew='<section class="hband statband rv"><div class="hb-in">'+
     '<h2 class="sec-head">The numbers behind every recommendation</h2>'+
-    '<p class="sec-sub">DiveSZN runs on verified data, rechecked every season — no invented seasons, no sponsored ranks. Here is the ground it stands on.</p>'+
+    '<p class="sec-sub">None of it is generated. Every season we go back through the calendars, the dive-site notes and the prices, and check the numbers again.</p>'+
     '<div class="statgrid">'+
       '<div class="statcard"><b data-count="102">102</b><span>dive destinations, each scored across all twelve months</span></div>'+
       '<div class="statcard"><b data-count="1224">1224</b><span>destination-months scored and rechecked every season</span></div>'+
@@ -2548,7 +2548,7 @@ function renderHome(){
     '<div class="dcar-wrap">'+
     '<div class="dcar-head">'+
     '<h2 class="sec-head">Where&rsquo;s diving best in '+MONTH_FULL[nowMonth]+'?</h2>'+
-    '<p class="sec-sub">The destinations diving at their best this month — pick one and plan around it. Independent, no sponsored rankings.</p>'+
+    '<p class="sec-sub">The places hitting their peak right now — pick one and build the trip around it. Nobody pays to make this list.</p>'+
     '</div>'+
     '<div class="dcar-box"><div class="dcar" id="dcar">'+sitePrev+'</div>'+
     '<div class="dcar-nav"><button onclick="dcarStep(-1)" aria-label="Previous"><svg width="9" height="16" viewBox="0 0 9 16" fill="none"><path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
@@ -2559,8 +2559,8 @@ function renderHome(){
     '<section class="hband rv"><div class="hb-in">'+
     '<div class="dcar-wrap">'+
     '<div class="dcar-head">'+
-    '<h2 class="sec-head">Everything you need to know about diving gear</h2>'+
-    '<p class="sec-sub">Researched buyer’s guides for every piece of kit — real strengths, real weaknesses, and links to authorised dealers only, so your warranty stays valid.</p>'+
+    '<h2 class="sec-head">Scuba gear, minus the sales pitch</h2>'+
+    '<p class="sec-sub">Guides that say where a regulator or a fin falls short, not only where it shines — and every buy link points to an authorised dealer, so your warranty holds.</p>'+
     '</div>'+
     '<div class="dcar-box"><div class="dcar" id="gcar">'+bestGear+'</div>'+
     '<div class="dcar-nav"><button onclick="dcarStep(-1,\'gcar\')" aria-label="Previous"><svg width="9" height="16" viewBox="0 0 9 16" fill="none"><path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
@@ -2598,7 +2598,7 @@ function initRotor(nowMonth){
   var words=['Scored for '+MONTH_FULL[nowMonth]+', rechecked every season',
              'Independent — no sponsored rankings',
              'Season, marine life, visibility, currents',
-             'The water at its best, found for you'];
+             'When to go, and where'];
   var i=0;
   window.__rotor=setInterval(function(){
     if(!document.getElementById('rotorWord')) return;
