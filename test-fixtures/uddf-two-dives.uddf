@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uddf xmlns="http://www.streit.cc/uddf/3.2/" version="3.2.1">
+  <generator>
+    <name>DiveSZN Dive Log</name>
+    <type>logbook</type>
+    <manufacturer id="diveszn">
+      <name>DiveSZN</name>
+      <contact>
+        <homepage>https://donlybero.github.io/Diving-site/</homepage>
+      </contact>
+    </manufacturer>
+    <version>1.0</version>
+    <datetime>2026-07-15T12:00:00</datetime>
+  </generator>
+  <diver>
+    <owner id="owner">
+      <personal>
+        <firstname/>
+        <lastname/>
+      </personal>
+      <equipment/>
+    </owner>
+    <buddy id="buddy_1">
+      <personal>
+        <firstname>Maria</firstname>
+        <lastname>Santos</lastname>
+      </personal>
+    </buddy>
+  </diver>
+  <divesite>
+    <site id="site_1">
+      <name>Blue Corner</name>
+      <geography>
+        <location>Blue Corner, Palau</location>
+        <latitude>7.134500</latitude>
+        <longitude>134.220800</longitude>
+      </geography>
+    </site>
+  </divesite>
+  <gasdefinitions>
+    <mix id="mix_air">
+      <name>air</name>
+      <o2>0.21</o2>
+      <he>0.00</he>
+    </mix>
+    <mix id="mix_ean32">
+      <name>EANx 32</name>
+      <o2>0.32</o2>
+      <he>0.00</he>
+    </mix>
+  </gasdefinitions>
+  <profiledata>
+    <repetitiongroup id="rg_1">
+      <dive id="dive_1">
+        <informationbeforedive>
+          <link ref="buddy_1"/>
+          <link ref="site_1"/>
+          <divenumber>42</divenumber>
+          <datetime>2026-03-14T09:30:00</datetime>
+          <airtemperature>301.15</airtemperature>
+        </informationbeforedive>
+        <tankdata>
+          <link ref="mix_ean32"/>
+          <tankvolume>0.012</tankvolume>
+          <tankpressurebegin>20000000</tankpressurebegin>
+          <tankpressureend>6500000</tankpressureend>
+        </tankdata>
+        <samples>
+          <waypoint>
+            <depth>0.00</depth>
+            <divetime>0</divetime>
+            <switchmix ref="mix_ean32"/>
+            <tankpressure>20000000</tankpressure>
+            <temperature>302.15</temperature>
+          </waypoint>
+          <waypoint>
+            <depth>10.40</depth>
+            <divetime>120</divetime>
+            <tankpressure>18700000</tankpressure>
+            <temperature>301.35</temperature>
+          </waypoint>
+          <waypoint>
+            <depth>24.60</depth>
+            <divetime>600</divetime>
+            <tankpressure>15400000</tankpressure>
+            <temperature>300.15</temperature>
+          </waypoint>
+          <waypoint>
+            <depth>5.00</depth>
+            <divetime>2400</divetime>
+            <tankpressure>7800000</tankpressure>
+            <temperature>301.65</temperature>
+          </waypoint>
+          <waypoint>
+            <depth>0.00</depth>
+            <divetime>2700</divetime>
+            <tankpressure>6500000</tankpressure>
+          </waypoint>
+        </samples>
+        <informationafterdive>
+          <greatestdepth>24.60</greatestdepth>
+          <averagedepth>14.30</averagedepth>
+          <diveduration>2700</diveduration>
+          <lowesttemperature>300.15</lowesttemperature>
+          <notes>
+            <para>Strong current at the corner; grey reef sharks on the hook.</para>
+          </notes>
+          <rating>
+            <ratingvalue>9</ratingvalue>
+          </rating>
+          <visibility>30</visibility>
+        </informationafterdive>
+      </dive>
+      <dive id="dive_2">
+        <informationbeforedive>
+          <link ref="site_1"/>
+          <divenumber>43</divenumber>
+          <datetime>2026-03-14T14:05:00</datetime>
+        </informationbeforedive>
+        <tankdata>
+          <link ref="mix_air"/>
+          <tankvolume>0.012</tankvolume>
+          <tankpressurebegin>19500000</tankpressurebegin>
+          <tankpressureend>8000000</tankpressureend>
+        </tankdata>
+        <samples>
+          <waypoint>
+            <depth>0.00</depth>
+            <divetime>0</divetime>
+            <switchmix ref="mix_air"/>
+          </waypoint>
+          <waypoint>
+            <depth>12.20</depth>
+            <divetime>300</divetime>
+            <temperature>301.15</temperature>
+          </waypoint>
+          <waypoint>
+            <depth>0.00</depth>
+            <divetime>1800</divetime>
+          </waypoint>
+        </samples>
+        <informationafterdive>
+          <greatestdepth>12.20</greatestdepth>
+          <diveduration>1800</diveduration>
+          <notes>
+            <para>Easy repeat dive on the plateau.</para>
+          </notes>
+        </informationafterdive>
+      </dive>
+    </repetitiongroup>
+  </profiledata>
+</uddf>

@@ -1,0 +1,9 @@
+{
+  "name": "diveszn-site",
+  "private": true,
+  "type": "module",
+  "description": "Static site — npm is used only to run the dive log tests (node --test, zero dependencies).",
+  "scripts": {
+    "test": "node --test"
+  }
+}

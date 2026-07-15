@@ -541,6 +541,7 @@ def footer_html(prefix="../"):
             f'<a href="{prefix}months/index.html">Best by month</a>'
             f'<a href="{prefix}marine-life/index.html">Marine life</a>'
             f'<a href="{prefix}gear/index.html">Gear guides</a>'
+            f'<a href="{prefix}divelog.html">Dive log</a>'
             f'<a href="{prefix}how-we-score.html">How we score</a>'
             f'<a href="{prefix}about.html">About</a>'
             f'<a href="{prefix}privacy.html">Privacy</a></div>'
@@ -1367,10 +1368,11 @@ def privacy_page():
     url = BASE + "privacy.html"
     inner = """
 <div class="legal">
-<div class="updated">Last updated: 6 July 2026</div>
+<div class="updated">Last updated: 15 July 2026</div>
 
-<div class="lead">DiveSZN has no accounts, no sign-up and no forms — we don't ask you for
-  personal information and we never sell any. The only data involved comes from our host's
+<div class="lead">DiveSZN has no accounts and no sign-up — we don't ask you for
+  personal information and we never sell any. Tools like the dive log keep their data in
+  your own browser, never on a server. The only data involved comes from our host's
   standard server logs and from cookies set by the retailers and affiliate networks we link
   to. This page explains that in full.</div>
 
@@ -1390,6 +1392,11 @@ def privacy_page():
 <p><strong>Cookies:</strong> DiveSZN itself does not set advertising or analytics cookies.
   Cookies may be set by the third-party affiliate networks below <strong>only when you click
   an outbound "Buy" link</strong>.</p>
+<p><strong>The dive log:</strong> the <a href="divelog.html">dive log</a> runs entirely in
+  your browser. Dives you import or type in are stored on your own device (browser IndexedDB)
+  and are never uploaded, transmitted or visible to us. The log's "Delete all dives" button —
+  or clearing your browser data — removes them permanently; the UDDF export is your portable
+  copy.</p>
 
 <h2>2. Affiliate links</h2>
 <p>DiveSZN is reader-supported. Many "Buy" links are affiliate links: if you click through and
@@ -2146,6 +2153,7 @@ def main():
         f.write(notfound_page())
 
     urls = ([BASE, BASE + "about.html", BASE + "how-we-score.html", BASE + "privacy.html",
+             BASE + "divelog.html",
              BASE + "destinations/index.html", BASE + "gear/index.html", BASE + "months/index.html"]
             + [BASE + "months/" + MONTH_FULL[m].lower() + ".html" for m in MONTHS]
             + [BASE + "gear/" + s + ".html" for s in gear_slugs]

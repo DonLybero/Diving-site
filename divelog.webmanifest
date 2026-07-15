@@ -1,0 +1,16 @@
+{
+  "id": "divelog",
+  "name": "DiveSZN Dive Log",
+  "short_name": "Dive Log",
+  "description": "A brand-neutral dive logbook: import your dive computer's export files, keep every dive with its depth profile, export everything as UDDF.",
+  "start_url": "divelog.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f9f9",
+  "theme_color": "#0b7d75",
+  "icons": [
+    { "src": "assets/divelog-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/divelog-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/divelog-icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
