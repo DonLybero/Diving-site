@@ -37,13 +37,15 @@ function el(tag, attrs, ...children) {
   return node;
 }
 
+// Show the wall-clock time as recorded at the dive site (never shifted into
+// the viewer's timezone — a dive logged at 10:12+03:00 reads "10:12").
 function fmtDate(iso, withTime = true) {
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso;
-  const date = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-  if (!withTime) return date;
-  const hasTime = /T\d/.test(iso);
-  return hasTime ? `${date} · ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}` : date;
+  const m = /^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2}))?/.exec(String(iso));
+  if (!m) return String(iso);
+  const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+  const date = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+  if (!withTime || !m[4]) return date;
+  return `${date} · ${m[4]}:${m[5]}`;
 }
 
 const sys = () => state.units;
@@ -87,7 +89,7 @@ async function renderLog() {
       ' ',
       el('a', { class: 'btn ghost', href: '#add', text: 'Add a dive manually' }),
       el('div', { class: 'chips' },
-        ['UDDF (.uddf)', 'Subsurface (.ssrf/.xml)', 'Suunto DM4/DM5 (.sml)', 'CSV / spreadsheet'].map((f) => el('span', { class: 'chip', text: f }))),
+        ['UDDF (.uddf)', 'Subsurface (.ssrf/.xml)', 'Suunto DM4/DM5 (.sml)', 'Garmin FIT (.fit)', 'CSV / spreadsheet'].map((f) => el('span', { class: 'chip', text: f }))),
     ));
     return;
   }
@@ -204,7 +206,7 @@ async function renderImport() {
       el('p', { style: 'margin:6px 0;color:#33565e;font-size:.92rem;line-height:1.65' },
         'Most dive apps have an export or backup option that writes one of these files. If yours only offers a format we don\'t read yet, import it as CSV via a spreadsheet — or tell us which app it came from and we\'ll add it to the list.'),
       el('div', { class: 'chips' },
-        ['UDDF (.uddf)', 'Subsurface (.ssrf/.xml)', 'Suunto DM4/DM5 (.sml)', 'CSV / spreadsheet'].map((f) => el('span', { class: 'chip', text: f }))),
+        ['UDDF (.uddf)', 'Subsurface (.ssrf/.xml)', 'Suunto DM4/DM5 (.sml)', 'Garmin FIT (.fit)', 'CSV / spreadsheet'].map((f) => el('span', { class: 'chip', text: f }))),
     ));
     return;
   }

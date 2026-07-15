@@ -45,7 +45,9 @@ requests with user data.
 **Adding a parser** (one module, never touches existing code):
 1. Create `lib/divelog/parsers/<format>.js` exporting a `ParserModule`
    (`{id, displayName, extensions, sniff(bytes,text), parse(bytes,text,opts)}`
-   — see `types.js`). `parse` never throws: file-level failures → `errors[]`,
+   — see `types.js`). `parse` never throws and may be async (the pipeline
+   awaits it — FIT lazy-loads its 400 KB vendored SDK this way): file-level
+   failures → `errors[]`,
    per-dive salvage → `warnings[]`, dives in metric canonical form
    (`validateDive` runs later in the pipeline). Base field semantics on
    Subsurface/libdivecomputer reference code, not guesswork.

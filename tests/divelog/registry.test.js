@@ -11,13 +11,12 @@ test('empty file is rejected with a clear message', () => {
   assert.match(detectFormat(new Uint8Array(0), 'log.uddf').error, /empty/);
 });
 
-test('Garmin FIT magic gets a specific, actionable rejection', () => {
+test('Garmin FIT magic routes to the garmin-fit parser', () => {
   const fit = new Uint8Array(32);
   fit.set([0x0e, 0x10, 0x8b, 0x07], 0);
   fit.set([0x2e, 0x46, 0x49, 0x54], 8); // '.FIT'
-  const { error } = detectFormat(fit, 'activity.fit');
-  assert.match(error, /Garmin FIT/);
-  assert.match(error, /DM5/);
+  const det = detectFormat(fit, 'activity.fit');
+  assert.equal(det.parser.id, 'garmin-fit');
 });
 
 test('zip (SDE) and SQLite files get pointed to the right export', () => {
