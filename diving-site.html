@@ -1541,15 +1541,21 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .vhero-media .photo-credit{position:absolute;right:10px;bottom:6px;font-size:.62rem;color:rgba(233,247,246,.6);font-family:var(--mono);z-index:3}
 .vhero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
-    radial-gradient(120% 90% at 18% 28%,rgba(3,20,26,.32),transparent 60%),
-    linear-gradient(90deg,rgba(3,20,26,.72) 0%,rgba(3,20,26,.42) 34%,rgba(3,20,26,.1) 62%,transparent 80%),
+    radial-gradient(120% 90% at 18% 28%,rgba(3,20,26,.4),transparent 60%),
+    linear-gradient(90deg,rgba(3,20,26,.84) 0%,rgba(3,20,26,.52) 34%,rgba(3,20,26,.12) 62%,transparent 80%),
     linear-gradient(180deg,rgba(3,20,26,.5) 0%,rgba(3,20,26,.16) 22%,transparent 50%,rgba(6,34,47,.5) 76%,#082a39 97%)}
+/* the hero's last stretch dissolves into the shared water: no edge can exist */
+.vhero-media,.vhero-scrim{
+  -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 100%);
+          mask-image:linear-gradient(180deg,#000 78%,transparent 100%)}
 .vhero-in{position:relative;z-index:2;width:min(1200px,94vw);margin:0 auto;display:grid;
   grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
 .vhero-in>*{min-width:0}
-.vhero h1{color:#fff;max-width:16ch;margin:0;text-align:left;text-shadow:0 3px 30px rgba(0,0,0,.4);
+.vhero h1{color:#fff;max-width:16ch;margin:0;text-align:left;
+  text-shadow:0 2px 6px rgba(2,14,20,.6),0 6px 40px rgba(2,14,20,.55);
   animation:heroRise .65s cubic-bezier(.2,.7,.2,1) .1s both}
-.vhero .tagline{color:rgba(233,247,245,.86);margin:22px 0 0;max-width:52ch;text-align:left;
+.vhero .tagline{color:rgba(238,250,248,.94);margin:22px 0 0;max-width:52ch;text-align:left;
+  text-shadow:0 1px 3px rgba(2,14,20,.6),0 2px 18px rgba(2,14,20,.45);
   animation:heroRise .65s cubic-bezier(.2,.7,.2,1) .2s both}
 .vhero .hero-cta{justify-content:flex-start;margin-top:28px;
   animation:heroRise .65s cubic-bezier(.2,.7,.2,1) .3s both}
@@ -1664,38 +1670,30 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
   width:min(520px,70vw);height:1px;
   background:linear-gradient(90deg,transparent,rgba(94,228,216,.5),transparent)}
 .statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:34px auto 0;max-width:1020px}
-/* deep-glass cards: lit from within so they stand off the dark water */
-.statcard{position:relative;overflow:hidden;border-radius:16px;padding:28px 24px 26px;
-  background:linear-gradient(160deg,rgba(17,58,76,.72),rgba(7,28,40,.88));
-  border:1px solid rgba(94,228,216,.32);
-  backdrop-filter:blur(10px) saturate(130%);-webkit-backdrop-filter:blur(10px) saturate(130%);
-  box-shadow:inset 0 1px 0 rgba(150,235,226,.1),0 26px 52px -26px rgba(2,12,18,.6);
-  animation:scFloat 9s ease-in-out infinite;
-  transition:translate .3s,border-color .3s,box-shadow .3s}
-.statcard:nth-child(2){animation-delay:-1.7s}
-.statcard:nth-child(3){animation-delay:-3.5s}
-.statcard:nth-child(4){animation-delay:-5.2s}
-.statcard:hover{translate:0 -6px;border-color:rgba(94,228,216,.55);
-  box-shadow:inset 0 1px 0 rgba(150,235,226,.14),0 0 26px rgba(47,224,214,.16),0 30px 56px -26px rgba(2,12,18,.7)}
-.statcard::before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:3px;border-radius:3px;
-  background:linear-gradient(180deg,#5ef0e4,#0e9c92);animation:scGlow 3.8s ease-in-out infinite}
-.statcard:nth-child(2)::before{animation-delay:-.9s}
-.statcard:nth-child(3)::before{animation-delay:-1.9s}
-.statcard:nth-child(4)::before{animation-delay:-2.8s}
-.statcard::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:linear-gradient(115deg,transparent 32%,rgba(94,228,216,.12) 50%,transparent 68%) 0 0/260% 100%;
-  animation:scSheen 8s linear infinite}
-.statcard:nth-child(2)::after{animation-delay:-2s}
-.statcard:nth-child(3)::after{animation-delay:-4s}
-.statcard:nth-child(4)::after{animation-delay:-6s}
-.statcard b{display:block;font-family:var(--mono);font-weight:700;font-size:clamp(2.3rem,4.8vw,3.4rem);
-  line-height:1;letter-spacing:-.02em;color:#5ef0e4;font-variant-numeric:tabular-nums;
-  text-shadow:0 0 24px rgba(47,224,214,.35)}
-.statcard span{display:block;margin-top:14px;font-size:.85rem;line-height:1.5;color:#a9cdc7}
-@keyframes scFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-@keyframes scGlow{0%,100%{box-shadow:0 0 8px rgba(47,224,214,.2)}50%{box-shadow:0 0 18px rgba(47,224,214,.55)}}
-@keyframes scSheen{from{background-position:130% 0}to{background-position:-130% 0}}
-@media(prefers-reduced-motion:reduce){.statcard,.statcard::before,.statcard::after{animation:none}}
+/* dive-instrument readouts: dark glass, white mono numerals, and one visible
+   animation — a light running along the gauge line under each number */
+.statcard{position:relative;overflow:hidden;border-radius:14px;padding:26px 24px 40px;
+  background:linear-gradient(165deg,rgba(9,32,44,.86),rgba(4,16,24,.92));
+  border:1px solid rgba(150,235,226,.18);
+  box-shadow:inset 0 1px 0 rgba(240,255,253,.06),0 24px 48px -28px rgba(1,8,12,.8);
+  transition:transform .25s,border-color .25s,box-shadow .25s}
+.statcard:hover{transform:translateY(-5px);border-color:rgba(94,228,216,.5);
+  box-shadow:inset 0 1px 0 rgba(240,255,253,.08),0 0 30px rgba(47,224,214,.14),0 30px 54px -28px rgba(1,8,12,.85)}
+.statcard b{display:block;font-family:var(--mono);font-weight:700;font-size:clamp(2.3rem,4.8vw,3.3rem);
+  line-height:1;letter-spacing:-.02em;color:#f2fbf9;font-variant-numeric:tabular-nums;
+  text-shadow:0 0 18px rgba(120,235,225,.22)}
+.statcard span{display:block;margin-top:12px;font-size:.85rem;line-height:1.5;color:#b9d8d2}
+/* the gauge: track + a sweeping light, all in one pseudo-element */
+.statcard::before{content:"";position:absolute;left:24px;right:24px;bottom:20px;height:3px;border-radius:2px;
+  background:
+    linear-gradient(90deg,transparent,rgba(87,236,227,.95),transparent) no-repeat -40% 0/34% 100%,
+    linear-gradient(90deg,rgba(94,228,216,.10),rgba(94,228,216,.22),rgba(94,228,216,.10));
+  animation:scSweep 3.4s cubic-bezier(.45,0,.55,1) infinite}
+.statcard:nth-child(2)::before{animation-delay:.45s}
+.statcard:nth-child(3)::before{animation-delay:.9s}
+.statcard:nth-child(4)::before{animation-delay:1.35s}
+@keyframes scSweep{0%{background-position:-40% 0,0 0}62%,100%{background-position:140% 0,0 0}}
+@media(prefers-reduced-motion:reduce){.statcard::before{animation:none;background-position:50% 0,0 0}}
 @media(max-width:520px){.statgrid{grid-template-columns:1fr 1fr;gap:12px}.statcard{padding:20px 16px}}
 </style>
 </head>
@@ -2732,20 +2730,23 @@ function initDeepLife(){
     ctx.clearRect(0,0,W,H);
     if(snowW!==W||snowH!==H)seedSnow();
     jellyUpdate(0.016);moveSnow(0.016);moveBub(0.016);
-    var life=sm(0.76,0.88,dp);          // the jellyfish appears only once you reach the abyss
-    var deep=sm(0.80,1,dp);             // and keeps brightening all the way to the bottom
+    var life=sm(0.52,0.68,dp);          // the jellyfish drifts in a section early, still dim
+    var deep=sm(0.80,1,dp);             // its glow only ignites in the final section
     var ray=1-sm(0.06,0.55,dp);         // the light fades from the water as you descend
-    if(life>0.01)drawWater(life,deep);
+    var aw=sm(0.72,0.90,dp);            // the near-black abyss water arrives on its own curve
+    if(aw>0.01)drawWater(aw,deep);
     if(ray>0.01)drawRays(ray);
     drawHaze(0.5+0.5*ray);                     // a slow current of light drifting at every depth
     drawSnow(Math.max(life,0.65),deep,false);  // drifting snow says "water" at every depth
     drawBub(0.3+0.55*ray);                     // bubbles rise while there is light above
     if(life>0.01){
-      // drift in the content gutter (desktop) / page edge (mobile) so the
-      // cards in the centre column never hide it
+      // dim phase: drift in the open water on the LEFT (under the section
+      // headings); as the abyss arrives it crosses to the right gutter
       var gut=W>=1024?0.90:0.82, amp=W>=1024?0.04:0.06;
+      var side=sm(0.72,0.90,dp);
+      var gx=0.13+(gut-0.13)*side;
       var R=Math.min(H*0.085,W*0.11)*(0.9+0.25*deep);
-      var cx=Math.min(W*(gut+wanderX(t)*amp),W-R*1.15);
+      var cx=Math.min(Math.max(W*(gx+wanderX(t)*amp),R*1.15),W-R*1.15);
       var cy=H*jy - R*0.14*J.cs + Math.sin(t*0.5)*R*0.05;
       drawJelly(cx,cy,R,life,deep);
       drawSnow(life,deep,true);
@@ -2754,7 +2755,7 @@ function initDeepLife(){
   }
   function draw(dp){drawScene(dp);}     // keep the existing frame()/rm callers working
 
-  function yFor(dp){return 0.86-sm(0.76,1,dp)*0.66;}   // emerges low in the frame, rises as you sink
+  function yFor(dp){return 0.86-sm(0.52,1,dp)*0.66;}   // emerges low in the frame, rises as you sink
   if(rm){
     var stat=function(){jy=yFor(dpNow());draw(dpNow());};
     window.addEventListener('scroll',stat,{passive:true});
@@ -2766,7 +2767,7 @@ function initDeepLife(){
       var dp=dpNow(), targetY=yFor(dp);
       // while invisible, park at target so it always surfaces in position —
       // even after a fast flick straight to the bottom
-      if(sm(0.76,0.88,dp)<=0.01) jy=targetY;
+      if(sm(0.52,0.68,dp)<=0.01) jy=targetY;
       else jy+=(targetY-jy)*0.06;
       draw(dp);
     }else if(W){ctx.clearRect(0,0,W,H);}
