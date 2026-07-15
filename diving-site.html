@@ -2576,7 +2576,7 @@ function initDeepLife(){
     ctx.lineTo(pts[pts.length-1][0],pts[pts.length-1][1]);
   }
   function drawJelly(cx,cy,R,op,deep){
-    var c=J.lastC,sx=1-0.15*c,sy=1+0.11*c,vx=wanderVX(t);
+    var c=J.lastC,sx=1-0.22*c,sy=1+0.16*c,vx=wanderVX(t);
     var rot=0.09*Math.sin(t*0.21+1)+vx*2.0;
     var G=0.20+0.80*deep,G2=G*G;
     ctx.save();ctx.translate(cx,cy);ctx.rotate(rot);
@@ -2592,17 +2592,17 @@ function initDeepLife(){
         pts.push([x0*(1-0.22*f)+xw-vx*R*f*f*9,
                   y0+len*f+Math.sin(t*0.9+phi)*R*0.02*f-c*R*0.10*(1-f)]);
       }
-      var aB=op*(0.13+0.30*G)*(0.8+0.2*Math.sin(i*1.7));
+      var aB=op*(0.10+0.45*G)*(0.8+0.2*Math.sin(i*1.7));
       ribbonPath(pts);
       ctx.strokeStyle='rgba(150,225,235,'+(aB*0.20).toFixed(3)+')';ctx.lineWidth=4.5;ctx.stroke();
-      ctx.strokeStyle='rgba(185,238,244,'+(aB*0.65).toFixed(3)+')';ctx.lineWidth=0.9;ctx.stroke();
+      ctx.strokeStyle='rgba(185,238,244,'+(aB*0.75).toFixed(3)+')';ctx.lineWidth=0.9;ctx.stroke();
       ribbonPath(pts.slice(0,Math.ceil(K*0.55)));
-      ctx.strokeStyle='rgba(195,242,246,'+(aB*0.55).toFixed(3)+')';ctx.lineWidth=1.8;ctx.stroke();
-      if(deep>0.15&&(i%3)===1){
-        var bf=((t*0.11+i*0.37)%1),bp=pts[Math.max(1,Math.round(bf*K))];
-        ctx.globalAlpha=op*0.5*G*(0.5+0.5*Math.sin(t*3+i));
-        ctx.drawImage(snowSpr,bp[0]-3,bp[1]-3,6,6);ctx.globalAlpha=1;
-      }
+      ctx.strokeStyle='rgba(195,242,246,'+(aB*0.6).toFixed(3)+')';ctx.lineWidth=1.8;ctx.stroke();
+      // a bioluminescent pulse flows down EVERY strand
+      var bf=((t*0.16+i*0.37)%1),bp=pts[Math.max(1,Math.round(bf*K))];
+      ctx.globalAlpha=op*(0.22+0.6*G)*(0.55+0.45*Math.sin(t*2.4+i));
+      var br=4+4*G;
+      ctx.drawImage(snowSpr,bp[0]-br,bp[1]-br,br*2,br*2);ctx.globalAlpha=1;
     }
     for(i=0;i<3;i++){
       var uu=-0.30+0.30*i,phi2=i*2.1,len2=R*(1.85+0.45*Math.sin(i*3.1));
@@ -2622,7 +2622,7 @@ function initDeepLife(){
       ctx.fillStyle='rgba(160,225,235,'+(op*(0.05+0.09*G)).toFixed(3)+')';ctx.fill();
       var mid=[];for(k=0;k<left.length;k++)mid.push([(left[k][0]+right[k][0])/2,left[k][1]]);
       ribbonPath(mid);
-      ctx.strokeStyle='rgba(200,245,248,'+(op*(0.05+0.14*G)).toFixed(3)+')';ctx.lineWidth=0.9;ctx.stroke();
+      ctx.strokeStyle='rgba(200,245,248,'+(op*(0.08+0.26*G)).toFixed(3)+')';ctx.lineWidth=0.9;ctx.stroke();
     }
     ctx.globalCompositeOperation='source-over';
     var sub=ctx.createRadialGradient(0,-0.18*R*sy,0,0,-0.18*R*sy,R*0.82);
@@ -2638,11 +2638,18 @@ function initDeepLife(){
     bg.addColorStop(1,'rgba(200,240,255,0)');
     ctx.fillStyle=bg;ctx.fill();
     ctx.globalCompositeOperation='lighter';
-    ctx.strokeStyle='rgba(140,215,235,'+(op*(0.05+0.11*G)).toFixed(3)+')';ctx.lineWidth=1;
+    ctx.lineWidth=1;
     for(i=-4;i<=4;i++){
       var ux=i/4.6;
-      ctx.beginPath();ctx.moveTo(ux*R*0.10*sx,-0.88*R*sy);
-      ctx.quadraticCurveTo(ux*R*0.75*sx,-0.42*R*sy,ux*R*0.92*sx,0.07*R*sy);ctx.stroke();
+      var qx0=ux*R*0.10*sx,qy0=-0.88*R*sy,qcx=ux*R*0.75*sx,qcy=-0.42*R*sy,qx1=ux*R*0.92*sx,qy1=0.07*R*sy;
+      ctx.strokeStyle='rgba(150,230,240,'+(op*(0.08+0.30*G)).toFixed(3)+')';
+      ctx.beginPath();ctx.moveTo(qx0,qy0);ctx.quadraticCurveTo(qcx,qcy,qx1,qy1);ctx.stroke();
+      // fluorescence flows down every canal of the bell
+      var qf=((t*0.32)+(i+4)*0.11)%1,qm=1-qf;
+      var px=qm*qm*qx0+2*qf*qm*qcx+qf*qf*qx1, py=qm*qm*qy0+2*qf*qm*qcy+qf*qf*qy1;
+      ctx.globalAlpha=op*(0.15+0.7*G)*(0.6+0.4*Math.sin(t*2+i));
+      var qr=2.5+3*G;
+      ctx.drawImage(snowSpr,px-qr,py-qr,qr*2,qr*2);ctx.globalAlpha=1;
     }
     var LOB=[[-0.30,-0.46,0.11],[-0.11,-0.52,0.14],[0.09,-0.51,0.13],[0.28,-0.45,0.10]];
     for(i=0;i<4;i++){
@@ -2673,7 +2680,7 @@ function initDeepLife(){
     ctx.fillStyle=cg;ctx.beginPath();ctx.arc(0,-0.48*R*sy,cr,0,6.2832);ctx.fill();
     var rimg=ctx.createRadialGradient(0,-0.42*R*sy,R*0.7,0,-0.42*R*sy,R*1.05);
     rimg.addColorStop(0,'rgba(160,240,250,0)');
-    rimg.addColorStop(1,'rgba(200,250,255,'+(op*(0.09+0.24*G+0.24*G2)).toFixed(3)+')');
+    rimg.addColorStop(1,'rgba(200,250,255,'+(op*(0.14+0.30*G+0.30*G2)).toFixed(3)+')');
     ctx.lineCap='round';domePath(R,sx,sy);
     ctx.strokeStyle=rimg;ctx.lineWidth=3.6;ctx.globalAlpha=0.4;ctx.stroke();
     ctx.globalAlpha=1;ctx.lineWidth=1.1;ctx.stroke();
@@ -2740,14 +2747,12 @@ function initDeepLife(){
     drawSnow(Math.max(life,0.65),deep,false);  // drifting snow says "water" at every depth
     drawBub(0.3+0.55*ray);                     // bubbles rise while there is light above
     if(life>0.01){
-      // dim phase: drift in the open water on the LEFT (under the section
-      // headings); as the abyss arrives it crosses to the right gutter
-      var gut=W>=1024?0.90:0.82, amp=W>=1024?0.04:0.06;
-      var side=sm(0.72,0.90,dp);
-      var gx=0.13+(gut-0.13)*side;
+      // it lives on the LEFT, drifting in the open water under the headings,
+      // swimming slowly: the bell's jet lifts it, then it sinks and drifts
+      var amp=0.05;
       var R=Math.min(H*0.085,W*0.11)*(0.9+0.25*deep);
-      var cx=Math.min(Math.max(W*(gx+wanderX(t)*amp),R*1.15),W-R*1.15);
-      var cy=H*jy - R*0.14*J.cs + Math.sin(t*0.5)*R*0.05;
+      var cx=Math.min(Math.max(W*(0.13+wanderX(t)*amp),R*1.15),W-R*1.15);
+      var cy=H*jy - R*0.42*J.cs + Math.sin(t*0.18)*R*0.28;
       drawJelly(cx,cy,R,life,deep);
       drawSnow(life,deep,true);
     }
@@ -2755,7 +2760,7 @@ function initDeepLife(){
   }
   function draw(dp){drawScene(dp);}     // keep the existing frame()/rm callers working
 
-  function yFor(dp){return 0.86-sm(0.52,1,dp)*0.66;}   // emerges low in the frame, rises as you sink
+  function yFor(dp){return 0.86-sm(0.52,1,dp)*0.44;}   // emerges low in the frame, rises as you sink
   if(rm){
     var stat=function(){jy=yFor(dpNow());draw(dpNow());};
     window.addEventListener('scroll',stat,{passive:true});
