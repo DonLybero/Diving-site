@@ -27,6 +27,11 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Strip non-published files from the deploy artifact
+        # These stay in the repo but must not ship to the live site:
+        # redesign/ is a WIP concept, and dev tooling isn't web content.
+        # Operates on the ephemeral runner checkout only.
+        run: rm -rf redesign node_modules tests test-fixtures package.json package-lock.json
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

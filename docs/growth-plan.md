@@ -4,7 +4,7 @@
 
 ## Positioning
 
-DiveSZN's edge is the one asset no incumbent has: 996 comparable, scored destination-months across 83 destinations and 620 named sites, with a published formula. Every competitor season page is prose written by someone selling the trip — Liveaboard.com's calendar is a lead-gen veneer, ZuBlu's finder is a lead form, PADI's ratings aren't comparable across destinations. DiveSZN holds no inventory and books nothing, so independence is a positioning claim none of them can copy without breaking their business model. The strategy: expose the dataset as crawlable, extractable pages at every query intersection (destination × month × species), make the planner queryable and re-visitable, and monetize in trust order — gear affiliate first, stay/liveaboard links second — while measuring everything with free, cookieless tools.
+DiveSZN's edge is the one asset no incumbent has: 1224 comparable, scored destination-months across 102 destinations and 725 named sites, with a published formula. Every competitor season page is prose written by someone selling the trip — Liveaboard.com's calendar is a lead-gen veneer, ZuBlu's finder is a lead form, PADI's ratings aren't comparable across destinations. DiveSZN holds no inventory and books nothing, so independence is a positioning claim none of them can copy without breaking their business model. The strategy: expose the dataset as crawlable, extractable pages at every query intersection (destination × month × species), make the planner queryable and re-visitable, and monetize in trust order — gear affiliate first, stay/liveaboard links second — while measuring everything with free, cookieless tools.
 
 ## Fix the foundation (before growth work)
 
@@ -27,13 +27,13 @@ Timebox: two focused weeks. Nothing in "Now" ships until session-code and seo ar
 
 **3. Register the diveszn.com domain property in Search Console** the day DNS resolves, and submit the regenerated sitemap.
 
-**4. Verdict sentences + structured data.** Add one machine-generated, extractable sentence per destination-month ("March in Socorro: Peak — 26°C, 30m visibility, humpbacks and giant mantas") to all 83 destination pages and 12 month hubs, generated from the canonical JSON so it never drifts. Add `Dataset`, `FAQPage`, and `BreadcrumbList` JSON-LD in `build_pages.py`. Travel AI Overview presence grew +381% after the March 2025 core update, and AIOs cite structured month data, not paragraphs — this is the cheapest high-leverage move on the list.
+**4. Verdict sentences + structured data.** Add one machine-generated, extractable sentence per destination-month ("March in Socorro: Peak — 26°C, 30m visibility, humpbacks and giant mantas") to all 102 destination pages and 12 month hubs, generated from the canonical JSON so it never drifts. Add `Dataset`, `FAQPage`, and `BreadcrumbList` JSON-LD in `build_pages.py`. Travel AI Overview presence grew +381% after the March 2025 core update, and AIOs cite structured month data, not paragraphs — this is the cheapest high-leverage move on the list.
 
 ## 90 days
 
 Generator sprints first (one build, hundreds of pages), then the two front-end features that make the data shareable.
 
-**5. "Best time to dive [destination]" pages — 83 pages from `build_pages.py`.** The highest-intent query family is held by commercially conflicted prose (Liveaboard.com, individual operators). Emit `best-time/<slug>.html`: 12-month tonal calendar, per-month verdict sentences, computed best/shoulder/avoid windows, visible score breakdown, FAQ schema. Link each from its destination page and its top-3 month hubs.
+**5. "Best time to dive [destination]" pages — 102 pages from `build_pages.py`.** The highest-intent query family is held by commercially conflicted prose (Liveaboard.com, individual operators). Emit `best-time/<slug>.html`: 12-month tonal calendar, per-month verdict sentences, computed best/shoulder/avoid windows, visible score breakdown, FAQ schema. Link each from its destination page and its top-3 month hubs.
 
 **6. Month hubs become queryable, not listicles.** The "where to dive in [month]" SERP is rotating 5-item listicles (scubadiving.com, PADI Blog) with no persistent tool. Upgrade the 12 `months/*.html` pages to full scored rankings of all non-Closed destinations, with region and marine-life sub-sections rendered from the existing keyword matching. Refresh titles annually with the year — ZuBlu's Dive Annual proves the pattern.
 
@@ -63,9 +63,9 @@ Generator sprints first (one build, hundreds of pages), then the two front-end f
 
 ## 12 months
 
-**18. Dive-site pages, staged.** Generate pages for the top ~150 of 620 sites where data is rich (depth, level, character, parent seasonality), batching ~25/month, starting with the destinations analytics shows earning traffic. Site-level queries are operator-held and thin; 620 researched sites is the moat competitors can't script. Extend toward site-level seasonality (which sites work in which months) as research hours allow — pure labor, exactly what a scored-data brand defends.
+**18. Dive-site pages, staged.** Generate pages for the top ~150 of 725 sites where data is rich (depth, level, character, parent seasonality), batching ~25/month, starting with the destinations analytics shows earning traffic. Site-level queries are operator-held and thin; 725 researched sites is the moat competitors can't script. Extend toward site-level seasonality (which sites work in which months) as research hours allow — pure labor, exactly what a scored-data brand defends.
 
-**19. Trip-window optimizer.** "10 days in November, medium budget, want mantas" → ranked windows across all 996 destination-months, URL-shareable. This is the tool ScubaBoard threads prove nobody built, and it feeds stay links directly.
+**19. Trip-window optimizer.** "10 days in November, medium budget, want mantas" → ranked windows across all 1224 destination-months, URL-shareable. This is the tool ScubaBoard threads prove nobody built, and it feeds stay links directly.
 
 **20. Curated liveaboard/stay listings inside the Dive Planner**, held to gear-guide research standard: per-destination, per-season, cheapest-first, quiet ink-mono prices. Converts the product people actually use into the primary booking surface.
 
@@ -80,7 +80,7 @@ Generator sprints first (one build, hundreds of pages), then the two front-end f
 - **No paid acquisition.** The dataset compounds; ad spend doesn't.
 - **No thin pages.** Skip species-months with fewer than 3 destinations, sites without rich data. Concrete or silent.
 - **No forum or community build-out.** Participate in existing ones via shareable URLs instead.
-- **No new destinations before depth.** 83 well-scored beats 120 shallow; expand only after site-level work proves out.
+- **No new destinations before depth.** 102 well-scored beats 150 shallow; expand only after site-level work proves out.
 - **Honor the editorial rules throughout:** scuba only, no third parties named in site copy, no destination counts in taglines, prices in quiet ink mono, coral only for buy/booking CTAs.
 
 ## Measurement (free tier only)
@@ -107,7 +107,7 @@ Decision rule: any surface (page type or feature) that shows no click growth aft
 Confirmed but deferred (need network access or an owner decision):
 
 - **P0 (a11y)** Gear compare modal has no focus management, dialog semantics, or Escape handling: opening leaves keyboard focus behind the overlay, there is no focus trap, no focus return to the trigger, no role="dialog"/aria-modal, and
-- **P2 (perf)** All 83 destination static pages hotlink their single hero image from upload.wikimedia.org (960px, eager-loaded, no width/height attributes) — a third-party DNS+TLS handshake on the critical path of every SEO landing page
+- **P2 (perf)** All 102 destination static pages hotlink their single hero image from upload.wikimedia.org (960px, eager-loaded, no width/height attributes) — a third-party DNS+TLS handshake on the critical path of every SEO landing page
 - **P2 (seo)** Destination hero images, og:image and JSON-LD image all hotlink upload.wikimedia.org (homepage og:image too), so rich-result/image-search eligibility depends on a third-party host that rate-limits hotlinking, and image-s
 - **P2 (brand)** Brand contract vs implementation mismatch on the revenue CTA color: docs mandate coral #ff7a59 strictly for buy/booking CTAs (the primary success metric per PRODUCT.md), but coral exists nowhere in the codebase — buy/boo
 - **P0 (ux-flows)** The primary money CTA ('Stays near X' booking link) is styled as the visually weakest element on every planner and search result card - muted gray, 13px, weight 500, 20px tall - while the secondary 'Full guide' link righ

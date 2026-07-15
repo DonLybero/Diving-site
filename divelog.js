@@ -51,6 +51,7 @@ function fmtDate(iso, withTime = true) {
 const sys = () => state.units;
 
 /* ------------------------------ router ------------------------------ */
+let firstRender = true;
 async function render() {
   const hash = location.hash.replace(/^#/, '');
   if (hash !== 'import') state.imp = null; // navigating away abandons an in-flight import
@@ -65,6 +66,14 @@ async function render() {
     app.replaceChildren(el('div', { class: 'msg error', text: `Something went wrong: ${e.message}` }));
   }
   window.scrollTo(0, 0);
+  // move keyboard focus into the new view so it isn't dropped to <body> on
+  // every navigation (skip the initial page load so we don't steal focus)
+  if (!firstRender) {
+    const target = app.querySelector('h2, .backlink') || app;
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+  }
+  firstRender = false;
 }
 
 function go(hash) { if (('#' + hash === location.hash) || (hash === '' && !location.hash)) render(); else location.hash = hash; }
@@ -331,7 +340,7 @@ function renderPreview(imp) {
     boxes.push(box);
     const d = entry.dive;
     return el('tr', {},
-      el('td', {}, box),
+      el('td', {}, el('label', { class: 'preview-check' }, box)),
       el('td', { text: fmtDate(d.startedAt) }),
       el('td', {}, el('div', { class: 'sitecell', text: d.site?.name || '—' })),
       el('td', { class: 'num', text: formatDepth(d.maxDepthM, sys()) }),
@@ -558,6 +567,7 @@ async function renderForm(id) {
 
   const f = {};
   const field = (key, label, type = 'text', attrs = {}) => {
+    if (/\*/.test(label)) attrs = { ...attrs, 'aria-required': 'true' }; // "Date *" / "Duration *"
     f[key] = el('input', { type, id: 'df-' + key, ...attrs });
     return el('div', {}, el('label', { text: label, for: 'df-' + key }), f[key]);
   };

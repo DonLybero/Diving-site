@@ -11,7 +11,7 @@ slot it into this framework rather than inventing a parallel one.
 
 A static diving website whose USP is answering **WHEN to dive WHERE**:
 
-- **Core product — Dive Planner:** a seasonal trip planner over 83 world dive
+- **Core product — Dive Planner:** a seasonal trip planner over 102 world dive
   destinations × 12 months of researched data (season rating, water temp,
   visibility, marine life, conditions, currents). Results render three ways:
   ranked cards, world map, year calendar — and the tab + filter state lives

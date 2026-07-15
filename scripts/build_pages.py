@@ -551,8 +551,8 @@ def footer_html(prefix="../"):
             'dive centre before travelling.</div>'
             '<div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear '
             'or book a trip through our links, at no extra cost to you. Gear prices are indicative as of our '
-            'research date — the retailer shows the live price. We link only to authorised retailers and trusted '
-            'operators, and commissions never influence our rankings.</div>'
+            'research date — the retailer shows the live price. We favour authorised dealers, and note where a '
+            'listing is a general marketplace; commissions never influence our rankings.</div>'
             '</footer>')
 
 def photo_hero(kicker, title, sub="", img="", credit="", pills="", pos=""):
@@ -1372,9 +1372,9 @@ def privacy_page():
 
 <div class="lead">DiveSZN has no accounts and no sign-up — we don't ask you for
   personal information and we never sell any. Tools like the dive log keep their data in
-  your own browser, never on a server. The only data involved comes from our host's
-  standard server logs and from cookies set by the retailers and affiliate networks we link
-  to. This page explains that in full.</div>
+  your own browser, never on a server. The data that is involved comes from our host's
+  standard server logs, from the web-font service that renders our type, and from cookies
+  set by the retailers and affiliate networks we link to. This page explains that in full.</div>
 
 <p>DiveSZN ("we", "us", "the site") operates this website. This policy explains what
   information is collected when you visit, how it is used, and the choices you have.</p>
@@ -1389,6 +1389,10 @@ def privacy_page():
   This is handled by GitHub under
   <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">its own privacy statement</a>;
   we do not maintain a database of it.</p>
+<p><strong>Web fonts:</strong> our pages load their typefaces from Google Fonts. To serve the
+  font files, Google receives your IP address and browser type on each page load; Google states
+  it does not use these requests to build advertising profiles. See
+  <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">Google Fonts &amp; privacy</a>.</p>
 <p><strong>Cookies:</strong> DiveSZN itself does not set advertising or analytics cookies.
   Cookies may be set by the third-party affiliate networks below <strong>only when you click
   an outbound "Buy" link</strong>.</p>

@@ -53,6 +53,14 @@ test('parseDateTime separate date + time, regional formats', () => {
   assert.equal(parseDateTime('not a date'), undefined);
 });
 
+test('parseDateTime rejects impossible calendar dates (no silent rollover)', () => {
+  assert.equal(parseDateTime('31.02.2024'), undefined); // Feb 31
+  assert.equal(parseDateTime('31/04/2024'), undefined); // Apr 31
+  assert.equal(parseDateTime('29/02/2023'), undefined); // Feb 29 in a common year
+  assert.equal(parseDateTime('29/02/2024'), '2024-02-29T00:00:00'); // valid leap day survives
+  assert.equal(parseDateTime('30/02/2024'), undefined);
+});
+
 test('parseDateTime combined "date time" cells (Excel exports)', () => {
   assert.equal(parseDateTime('14/03/2024 09:42'), '2024-03-14T09:42:00');
   assert.equal(parseDateTime('3/14/2024 9:42', undefined, { dayFirst: false }), '2024-03-14T09:42:00');

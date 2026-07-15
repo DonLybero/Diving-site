@@ -798,10 +798,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
         overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;justify-content:flex-end}
   .tabs::-webkit-scrollbar{display:none}
   .tabs button{background:transparent;color:var(--ink-soft);border:1px solid transparent;border-radius:999px;
-       padding:8px 15px;font-size:.9rem;font-weight:600;font-family:var(--sans);cursor:pointer;white-space:nowrap;
+       padding:9px 15px;min-height:40px;font-size:.9rem;font-weight:600;font-family:var(--sans);cursor:pointer;white-space:nowrap;
        transition:all .18s ease;display:inline-flex;align-items:center;gap:6px}
   .tabs button:hover{background:rgba(47,224,214,.08);color:var(--ink);border-color:var(--line)}
-  .tabs button.active{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#04202b;
+  /* white text on a deep-teal gradient — both ends clear 4.5:1 (audit 2026-07) */
+  .tabs button.active{background:linear-gradient(135deg,#0c8378,#0a6157);color:#ffffff;
        font-weight:700;box-shadow:0 6px 18px -6px rgba(47,224,214,.6)}
   /* ---------- cascading region picker (planner) ---------- */
   .rsel{position:relative}
@@ -1524,7 +1525,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .subtabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0 16px;scroll-margin-top:130px}
   .subtabs.hidden{display:none}
   .subtabs button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;
-       padding:8px 16px;font-size:.88rem;cursor:pointer;display:inline-flex;align-items:center;transition:all .15s}
+       padding:9px 16px;min-height:40px;font-size:.88rem;cursor:pointer;display:inline-flex;align-items:center;transition:all .15s}
   .subtabs button .ico{font-size:15px;margin-right:6px}
   .subtabs button:hover{border-color:var(--accent);color:var(--ink)}
   .subtabs button.active{background:rgba(47,224,214,.14);color:var(--accent-deep);border-color:var(--accent);font-weight:700}
@@ -1890,7 +1891,7 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
       Always confirm current conditions with a local dive centre before travelling.</div>
     <div class="disclosure"><b>Affiliate disclosure:</b> DiveSZN may earn a commission when you buy gear or book a trip through our links,
       at no extra cost to you. Gear prices are indicative as of our research date — the retailer shows the live price.
-      We link only to authorised retailers and trusted operators, and commissions never influence our rankings.</div>
+      We favour authorised dealers, and note where a listing is a general marketplace; commissions never influence our rankings.</div>
   </footer>
 </main>
 
@@ -3493,7 +3494,7 @@ function renderHome(){
     '<div class="dcar-wrap">'+
     '<div class="dcar-head">'+
     '<h2 class="sec-head">Scuba gear, minus the sales pitch</h2>'+
-    '<p class="sec-sub">Guides that say where a regulator or a fin falls short, not only where it shines — and every buy link points to an authorised dealer, so your warranty holds.</p>'+
+    '<p class="sec-sub">Guides that say where a regulator or a fin falls short, not only where it shines — each with a price table across retailers, so you see what it really costs before you buy.</p>'+
     '</div>'+
     '<div class="dcar-box"><div class="dcar" id="gcar">'+bestGear+'</div>'+
     '<div class="dcar-nav"><button onclick="dcarStep(-1,\'gcar\')" aria-label="Previous"><svg width="9" height="16" viewBox="0 0 9 16" fill="none"><path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
@@ -3507,7 +3508,7 @@ function renderHome(){
     '<div class="trust">'+
       '<div class="tcard"><span class="tnum">01</span><b>No pay-to-rank</b><span class="meta">We rank on conditions and value alone. Affiliate links earn us a commission — they never change our reviews.</span></div>'+
       '<div class="tcard"><span class="tnum">02</span><b>Real and researched</b><span class="meta">Every calendar, dive site and price is verified, not generated — 102 destinations, 725 named sites, rechecked each season.</span></div>'+
-      '<div class="tcard"><span class="tnum">03</span><b>Safety on every page</b><span class="meta">Each destination lists difficulty, water conditions and the nearest recompression chamber.</span></div>'+
+      '<div class="tcard"><span class="tnum">03</span><b>Conditions, not just seasons</b><span class="meta">Each destination is rated for difficulty and lists its water type, access and the currents and visibility to expect month by month.</span></div>'+
     '</div>'+
     '</div></section>';
   fillDestCovers();
