@@ -1,0 +1,12 @@
+name = "diveszn-trip-concierge"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+[vars]
+# Lock CORS to the site. Change to https://diveszn.com after the domain move.
+ALLOWED_ORIGIN = "https://donlybero.github.io"
+# Optional model override; defaults to claude-haiku-4-5-20251001 in worker.js.
+# MODEL = "claude-sonnet-5"
+
+# The API key is a secret, never a var:
+#   wrangler secret put ANTHROPIC_API_KEY
