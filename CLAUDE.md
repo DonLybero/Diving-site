@@ -25,7 +25,36 @@ python3 scripts/build_rankings.py    # diving-rankings.json
 python3 scripts/build_standalone.py  # diving-site.html (offline single file)
 python3 scripts/build_pages.py       # destinations/gear/marine-life/months/*.html
                                      #   + about/how-we-score/privacy + sitemap
+npm test                             # dive log test suite (node --test, zero deps)
 ```
+
+## Dive log (divelog.html — client-side, no backend)
+PRD + every architecture decision: `docs/divelog-prd.md`. Shape: `divelog.html`
++ `divelog.js` (UI) over `lib/divelog/` (plain ES modules, browser + node —
+no build step, no TypeScript). Dives live in the visitor's IndexedDB behind a
+swappable store interface (`store.js` — Phase 2 accounts/sync replaces only
+that module); import pipeline is detect → parse → validate → dedupe (±3 min
+start/±2 min duration) → preview → commit; the UDDF exporter is the
+portability guarantee (round-trip test must always flag 100% duplicates).
+Security invariants: all user XML goes through `lib/divelog/xml.js`, which
+rejects any DTD/ENTITY markup before parsing (XXE + billion-laughs); 20 MB
+cap + sample/dive caps in `types.js`; never render imported text as HTML
+(`divelog.js` builds DOM via textContent only); the page makes no network
+requests with user data.
+
+**Adding a parser** (one module, never touches existing code):
+1. Create `lib/divelog/parsers/<format>.js` exporting a `ParserModule`
+   (`{id, displayName, extensions, sniff(bytes,text), parse(bytes,text,opts)}`
+   — see `types.js`). `parse` never throws: file-level failures → `errors[]`,
+   per-dive salvage → `warnings[]`, dives in metric canonical form
+   (`validateDive` runs later in the pipeline). Base field semantics on
+   Subsurface/libdivecomputer reference code, not guesswork.
+2. Register it in `lib/divelog/parsers/index.js` (`PARSERS` — order matters:
+   strongest sniffs first, CSV stays last).
+3. Add a realistic fixture in `test-fixtures/` + a test file in
+   `tests/divelog/` (dive count, first/last dive fields, samples length, one
+   salvage case), and extend the UDDF export round-trip check.
+4. `npm test`, then verify in the browser (serve locally, import the fixture).
 `build_master.py` **safe-merges by default**: the canonical file's roster and
 order are authoritative, sources only refresh the destinations they know
 about, and it refuses to drop anything without an explicit flag. Flags:
