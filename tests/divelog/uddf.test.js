@@ -61,6 +61,33 @@ test('a malformed dive is salvaged around, not fatal', () => {
   assert.deepEqual(res.errors, []);
 });
 
+test('multi-cylinder waypoints with several <tankpressure> keep the first pressure', () => {
+  const xml = `<uddf version="3.2.1"><profiledata><repetitiongroup><dive id="x">
+    <informationbeforedive><datetime>2025-01-01T10:00:00</datetime></informationbeforedive>
+    <samples>
+      <waypoint><depth>10</depth><divetime>60</divetime>
+        <tankpressure ref="t1">18000000</tankpressure>
+        <tankpressure ref="t2">21000000</tankpressure>
+      </waypoint>
+      <waypoint><depth>5</depth><divetime>120</divetime><tankpressure>17000000</tankpressure></waypoint>
+    </samples>
+    <informationafterdive><greatestdepth>10</greatestdepth><diveduration>120</diveduration></informationafterdive>
+  </dive></repetitiongroup></profiledata></uddf>`;
+  const res = uddfParser.parse(new TextEncoder().encode(xml), xml);
+  assert.deepEqual(res.errors, []);
+  assert.equal(res.dives[0].samples[0].pressureBar, 180);
+  assert.equal(res.dives[0].samples[1].pressureBar, 170);
+});
+
+test('control characters in imported text never reach the export', () => {
+  const dives = [{ startedAt: '2025-01-01T10:00:00', durationSec: 1200, maxDepthM: 10, diveType: 'scuba', visibility: 'private', site: { name: 'Reef\u001fX' }, notes: 'ok\ttab\nline' }];
+  const xml = exportUddf(dives, { generatedAt: '2026-07-15T12:00:00' });
+  assert.ok(!/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/.test(xml));
+  const rt = uddfParser.parse(new TextEncoder().encode(xml), xml);
+  assert.deepEqual(rt.errors, []);
+  assert.equal(rt.dives[0].site.name, 'ReefX');
+});
+
 test('empty profiledata reports a file-level error', () => {
   const empty = '<?xml version="1.0"?><uddf xmlns="http://www.streit.cc/uddf/3.2/" version="3.2.1"><profiledata/></uddf>';
   const res = uddfParser.parse(new TextEncoder().encode(empty), empty);

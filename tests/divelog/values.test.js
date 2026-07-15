@@ -2,13 +2,16 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { num, kelvinToC, pascalToBar, parseDuration, parseDateTime } from '../../lib/divelog/values.js';
 
-test('num handles unit suffixes, decimal comma, junk', () => {
+test('num handles unit suffixes, decimal comma, thousands separators, junk', () => {
   assert.equal(num('18.2 m'), 18.2);
   assert.equal(num('32,0'), 32);
+  assert.equal(num('18,4'), 18.4);       // decimal comma
   assert.equal(num('200.0 bar'), 200);
   assert.equal(num('-1.5'), -1.5);
   assert.equal(num(7), 7);
-  assert.equal(num('1,234.5'), 1); // ambiguous thousands separators are not guessed
+  assert.equal(num('1,234.5'), 1234.5);  // dot present → commas are thousands
+  assert.equal(num('3,000'), 3000);      // 3-digit groups → thousands (US psi)
+  assert.equal(num('1,234,567'), 1234567);
   assert.equal(num(''), undefined);
   assert.equal(num('abc'), undefined);
   assert.equal(num(undefined), undefined);
@@ -48,4 +51,12 @@ test('parseDateTime separate date + time, regional formats', () => {
   assert.equal(parseDateTime('12 Mar 2025', '2:05 pm'), '2025-03-12T14:05:00');
   assert.equal(parseDateTime('Mar 12, 2025'), '2025-03-12T00:00:00');
   assert.equal(parseDateTime('not a date'), undefined);
+});
+
+test('parseDateTime combined "date time" cells (Excel exports)', () => {
+  assert.equal(parseDateTime('14/03/2024 09:42'), '2024-03-14T09:42:00');
+  assert.equal(parseDateTime('3/14/2024 9:42', undefined, { dayFirst: false }), '2024-03-14T09:42:00');
+  assert.equal(parseDateTime('2024-03-14 9:42'), '2024-03-14T09:42:00'); // 1-digit hour
+  assert.equal(parseDateTime('12 Mar 2025 2:05 pm'), '2025-03-12T14:05:00');
+  assert.equal(parseDateTime('14.03.2024 09:42:15'), '2024-03-14T09:42:15');
 });

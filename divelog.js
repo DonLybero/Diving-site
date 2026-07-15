@@ -72,17 +72,17 @@ async function renderLog() {
   const dives = await state.store.listDives();
 
   if (state.memoryOnly) {
-    app.append(el('div', { class: 'msg warn', text: 'This browser is blocking local storage, so the log lives in this tab only — export as UDDF before closing.' }));
+    app.append(el('div', { class: 'msg warn', role: 'status', text: 'This browser is blocking local storage, so the log lives in this tab only — export as UDDF before closing.' }));
   }
   if (state.lastSummary) {
-    app.append(el('div', { class: 'msg okay', text: state.lastSummary }));
+    app.append(el('div', { class: 'msg okay', role: 'status', text: state.lastSummary }));
     state.lastSummary = null;
   }
 
   if (!dives.length) {
     app.append(el('div', { class: 'panel tint empty' },
       el('h2', { text: 'No dives yet' }),
-      el('p', { text: 'Bring your history across: export your dives from your dive computer’s app and drop the file here. Old computer, new computer, spreadsheet — the log reads them all into one place.' }),
+      el('p', { text: 'Bring your history across: export your dives from your dive computer\'s app and drop the file here. Old computer, new computer, spreadsheet — the log reads them all into one place.' }),
       el('a', { class: 'btn', href: '#import', text: 'Import dives' }),
       ' ',
       el('a', { class: 'btn ghost', href: '#add', text: 'Add a dive manually' }),
@@ -147,14 +147,20 @@ function unitToggle() {
   for (const [key, label] of [['metric', 'm · °C'], ['imperial', 'ft · °F']]) {
     wrap.append(el('button', {
       class: state.units === key ? 'on' : '', text: label, 'aria-pressed': String(state.units === key),
-      onclick: async () => { state.units = key; await state.store.setSetting('units', key); render(); },
+      onclick: async () => {
+        state.units = key;
+        await state.store.setSetting('units', key);
+        await render();
+        const btn = app.querySelector('.unit-toggle button.on');
+        if (btn) btn.focus(); // the re-render replaced the focused element
+      },
     }));
   }
   return wrap;
 }
 
 async function deleteAll() {
-  const answer = prompt('This deletes every dive and import record on this device. Type DELETE to confirm.');
+  const answer = prompt('This deletes every dive, import record and remembered CSV mapping on this device. Type DELETE to confirm.');
   if (answer !== 'DELETE') return;
   await state.store.clearAll();
   state.lastSummary = 'Logbook cleared.';
@@ -196,7 +202,7 @@ async function renderImport() {
     app.append(el('div', { class: 'panel' },
       el('div', { class: 'kicker', text: 'Where to find your export' }),
       el('p', { style: 'margin:6px 0;color:#33565e;font-size:.92rem;line-height:1.65' },
-        'Most dive apps have an export or backup option that writes one of these files. If yours only offers a format we don’t read yet, import it as CSV via a spreadsheet — or tell us which app it came from and we’ll add it to the list.'),
+        'Most dive apps have an export or backup option that writes one of these files. If yours only offers a format we don\'t read yet, import it as CSV via a spreadsheet — or tell us which app it came from and we\'ll add it to the list.'),
       el('div', { class: 'chips' },
         ['UDDF (.uddf)', 'Subsurface (.ssrf/.xml)', 'Suunto DM4/DM5 (.sml)', 'CSV / spreadsheet'].map((f) => el('span', { class: 'chip', text: f }))),
     ));
@@ -205,7 +211,7 @@ async function renderImport() {
 
   const imp = state.imp;
   if (imp.error && !imp.needsMapping) {
-    app.append(el('div', { class: 'msg error', text: imp.error }));
+    app.append(el('div', { class: 'msg error', role: 'alert', text: imp.error }));
     app.append(el('button', { class: 'btn ghost', text: 'Try another file', onclick: () => { state.imp = null; render(); } }));
     return;
   }
@@ -249,7 +255,11 @@ function renderMapping(imp) {
     app.append(el('button', { class: 'btn ghost', text: 'Try another file', onclick: () => { state.imp = null; render(); } }));
     return;
   }
-  app.append(el('div', { class: 'msg warn', text: `We couldn't match all of this CSV's columns automatically — tell us what each column holds. At minimum, map the date plus a duration or max depth.` }));
+  if (imp.error) {
+    app.append(el('div', { class: 'msg error', role: 'alert', text: imp.error }));
+    imp.error = null;
+  }
+  app.append(el('div', { class: 'msg warn', role: 'status', text: `We couldn't match all of this CSV's columns automatically — tell us what each column holds. At minimum, map the date plus a duration or max depth.` }));
 
   const selects = [];
   const grid = el('div', { class: 'mapgrid' });
@@ -260,7 +270,7 @@ function renderMapping(imp) {
     select.value = imp.mapping['#' + i] || intro.autoMap[i] || 'ignore';
     selects.push(select);
     grid.append(
-      el('div', { class: 'colname', title: h }, el('b', { text: h || `(column ${i + 1})` }), sample ? el('span', { style: 'color:var(--muted)' }, ` — e.g. “${sample.slice(0, 28)}”`) : null),
+      el('div', { class: 'colname', title: h }, el('b', { text: h || `(column ${i + 1})` }), sample ? el('span', { style: 'color:var(--muted)' }, ` — e.g. "${sample.slice(0, 28)}"`) : null),
       select,
     );
   });
@@ -283,8 +293,7 @@ function renderMapping(imp) {
           if (!preview.ok) {
             imp.needsMapping = !!preview.error.includes(NEEDS_MAPPING);
             imp.error = preview.error.replace(NEEDS_MAPPING + ': ', '');
-            if (imp.needsMapping) app.prepend(el('div', { class: 'msg error', text: imp.error }));
-            render();
+            render(); // renderMapping/renderImport display imp.error
             return;
           }
           await state.store.setSetting('csvMapping:' + mapSignature(imp.intro.headers), { mapping, dayFirst: imp.dayFirst });
@@ -367,7 +376,7 @@ function renderPreview(imp) {
 async function renderDive(id) {
   const d = await state.store.getDive(id);
   if (!d) {
-    app.append(el('div', { class: 'msg error', text: 'That dive isn’t in the log any more.' }));
+    app.append(el('div', { class: 'msg error', text: 'That dive isn\'t in the log any more.' }));
     app.append(el('a', { class: 'btn ghost', href: '#', text: 'Back to logbook' }));
     return;
   }
@@ -398,7 +407,7 @@ async function renderDive(id) {
     app.append(el('div', { class: 'kicker', text: 'Depth profile' }));
     app.append(profileChart(d.samples));
   } else {
-    app.append(el('div', { class: 'panel', text: 'No depth profile in this dive’s source data — the summary numbers above are everything the file carried.' }));
+    app.append(el('div', { class: 'panel', text: 'No depth profile in this dive\'s source data — the summary numbers above are everything the file carried.' }));
   }
 
   if (d.tanks && d.tanks.length) {
@@ -469,7 +478,9 @@ function profileChart(samples) {
     S('text', { x: L - 6, y: yy + 3, 'text-anchor': 'end', 'font-size': 10, fill: '#4a6a71', 'font-family': 'JetBrains Mono,monospace' })
       .textContent = i === 0 ? '0' : Math.round(val) + (imperial ? ' ft' : ' m');
   }
-  const everyMin = tMax > 3600 ? 20 : tMax > 1500 ? 10 : 5;
+  // pick a tick step that always yields ≤12 gridlines, whatever tMax is
+  const totalMin = tMax / 60;
+  const everyMin = [1, 2, 5, 10, 20, 30, 60, 120, 240].find((st) => totalMin / st <= 12) || Math.ceil(totalMin / 12);
   for (let m = 0; m * 60 <= tMax; m += everyMin) {
     const xx = x(m * 60);
     const nearRightEdge = xx > W - R - 24;
@@ -527,7 +538,7 @@ function profileChart(samples) {
 async function renderForm(id) {
   const existing = id ? await state.store.getDive(id) : null;
   if (id && !existing) {
-    app.append(el('div', { class: 'msg error', text: 'That dive isn’t in the log any more.' }));
+    app.append(el('div', { class: 'msg error', text: 'That dive isn\'t in the log any more.' }));
     app.append(el('a', { class: 'btn ghost', href: '#', text: 'Back to logbook' }));
     return;
   }
@@ -537,8 +548,8 @@ async function renderForm(id) {
 
   const f = {};
   const field = (key, label, type = 'text', attrs = {}) => {
-    f[key] = el('input', { type, ...attrs });
-    return el('div', {}, el('label', { text: label, for: '' }), f[key]);
+    f[key] = el('input', { type, id: 'df-' + key, ...attrs });
+    return el('div', {}, el('label', { text: label, for: 'df-' + key }), f[key]);
   };
 
   const startISO = existing?.startedAt || '';
@@ -560,13 +571,13 @@ async function renderForm(id) {
     field('startBar', `Start pressure (${sys() === 'imperial' ? 'psi' : 'bar'})`, 'number', { min: '0' }),
     field('endBar', `End pressure (${sys() === 'imperial' ? 'psi' : 'bar'})`, 'number', { min: '0' }),
     (() => {
-      f.diveType = el('select', {},
+      f.diveType = el('select', { id: 'df-diveType' },
         el('option', { value: 'scuba', text: 'Scuba' }),
         el('option', { value: 'freedive', text: 'Freedive' }),
         el('option', { value: 'other', text: 'Other' }));
-      return el('div', {}, el('label', { text: 'Dive type' }), f.diveType);
+      return el('div', {}, el('label', { text: 'Dive type', for: 'df-diveType' }), f.diveType);
     })(),
-    el('div', { class: 'full' }, el('label', { text: 'Notes' }), (f.notes = el('textarea', {}))),
+    el('div', { class: 'full' }, el('label', { text: 'Notes', for: 'df-notes' }), (f.notes = el('textarea', { id: 'df-notes' }))),
   );
 
   if (existing) {
@@ -589,18 +600,36 @@ async function renderForm(id) {
     f.notes.value = existing.notes || '';
   }
 
+  // snapshot the prefilled values: untouched fields keep their exact stored
+  // value, so display rounding (imperial ft/°F/psi) never drifts the data
+  // and a startedAt with a UTC offset survives an unrelated edit
+  const initial = {};
+  for (const k of Object.keys(f)) initial[k] = f[k].value;
+  const changed = (k) => f[k].value !== initial[k];
+
+  if (existing?.tanks && existing.tanks.length > 1) {
+    app.append(el('div', { class: 'msg warn', role: 'status', text: `This dive has ${existing.tanks.length} tanks — the fields below edit tank 1; the others stay unchanged.` }));
+  }
+
   const errBox = el('div', {});
   const save = async (e) => {
     e.preventDefault();
     errBox.replaceChildren();
+    const imperial = sys() === 'imperial';
     const numv = (input) => (input.value.trim() === '' ? undefined : parseFloat(input.value));
-    const fromUnit = (v) => (v === undefined ? undefined : sys() === 'imperial' ? v * 0.3048 : v);
+    const keep = (key, existingVal, conv) => {
+      if (existing && !changed(key)) return existingVal;
+      const v = numv(f[key]);
+      return v === undefined ? undefined : conv(v);
+    };
     const raw = {
       ...(existing || {}),
-      startedAt: f.date.value ? `${f.date.value}T${f.time.value || '00:00'}:00` : '',
-      durationSec: numv(f.duration) !== undefined ? numv(f.duration) * 60 : undefined,
-      maxDepthM: fromUnit(numv(f.maxDepth)),
-      waterTempC: numv(f.waterTemp) === undefined ? undefined : sys() === 'imperial' ? (numv(f.waterTemp) - 32) * 5 / 9 : numv(f.waterTemp),
+      startedAt: existing && !changed('date') && !changed('time')
+        ? existing.startedAt
+        : (f.date.value ? `${f.date.value}T${f.time.value || '00:00'}:00` : ''),
+      durationSec: keep('duration', existing?.durationSec, (v) => Math.round(v * 60)),
+      maxDepthM: keep('maxDepth', existing?.maxDepthM, (v) => (imperial ? v * 0.3048 : v)),
+      waterTempC: keep('waterTemp', existing?.waterTempC, (v) => (imperial ? ((v - 32) * 5) / 9 : v)),
       site: f.site.value.trim() ? { ...(existing?.site || {}), name: f.site.value.trim(), country: f.country.value.trim() || undefined } : undefined,
       buddy: f.buddy.value.trim() || undefined,
       diveMaster: f.diveMaster.value.trim() || undefined,
@@ -608,15 +637,24 @@ async function renderForm(id) {
       notes: f.notes.value.trim() || undefined,
       diveType: f.diveType.value,
     };
-    const t = {
-      volumeL: numv(f.tankSize),
-      gasO2Pct: numv(f.o2),
-      startBar: numv(f.startBar) === undefined ? undefined : sys() === 'imperial' ? numv(f.startBar) / 14.5038 : numv(f.startBar),
-      endBar: numv(f.endBar) === undefined ? undefined : sys() === 'imperial' ? numv(f.endBar) / 14.5038 : numv(f.endBar),
+    // tank 1 merges edited fields over the stored tank (He and any fields the
+    // form doesn't expose survive); tanks 2+ pass through untouched
+    const tank0 = { ...(existing?.tanks?.[0] || {}) };
+    const setTank = (key, prop, conv) => {
+      if (existing && !changed(key)) return;
+      const v = numv(f[key]);
+      if (v === undefined) delete tank0[prop];
+      else tank0[prop] = conv(v);
     };
-    raw.tanks = Object.values(t).some((v) => v !== undefined) ? [t] : existing?.tanks;
-    if (!raw.startedAt) { errBox.replaceChildren(el('div', { class: 'msg error', text: 'The dive needs a date.' })); return; }
-    if (!raw.durationSec) { errBox.replaceChildren(el('div', { class: 'msg error', text: 'The dive needs a duration.' })); return; }
+    setTank('tankSize', 'volumeL', (v) => v);
+    setTank('o2', 'gasO2Pct', (v) => v);
+    setTank('startBar', 'startBar', (v) => (imperial ? v / 14.503773773 : v));
+    setTank('endBar', 'endBar', (v) => (imperial ? v / 14.503773773 : v));
+    const restTanks = (existing?.tanks || []).slice(1);
+    const tanks = [tank0, ...restTanks].filter((t) => Object.keys(t).length);
+    raw.tanks = tanks.length ? tanks : undefined;
+    if (!raw.startedAt) { errBox.replaceChildren(el('div', { class: 'msg error', role: 'alert', text: 'The dive needs a date.' })); return; }
+    if (!raw.durationSec) { errBox.replaceChildren(el('div', { class: 'msg error', role: 'alert', text: 'The dive needs a duration.' })); return; }
 
     const { dive, problems } = validateDive(raw);
     if (!dive) { errBox.replaceChildren(el('div', { class: 'msg error', text: problems.join(', ') })); return; }

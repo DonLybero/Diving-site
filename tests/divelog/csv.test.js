@@ -128,6 +128,34 @@ test('profile CSV (one sample per row) groups into dives with samples', () => {
   assert.equal(res.dives[1].samples.length, 2);
 });
 
+test('decimal-comma numerics never mangle free text in ";" files', () => {
+  const text = 'Datum;Divetime;Max Depth;Notes\n05.09.2024;48;18,4;Sicht 8,5m, Thermokline bei 12m\n';
+  const res = csvParser.parse(new TextEncoder().encode(text), text);
+  assert.equal(res.dives[0].maxDepthM, 18.4);
+  assert.equal(res.dives[0].notes, 'Sicht 8,5m, Thermokline bei 12m'); // untouched
+});
+
+test('combined Date/Time column in Excel format', () => {
+  const text = 'Date/Time,Duration,Max Depth\n14/03/2024 09:42,45,18.2\n15/03/2024 10:05,40,12.0\n';
+  const res = csvParser.parse(new TextEncoder().encode(text), text);
+  assert.deepEqual(res.errors, []);
+  assert.equal(res.dives[0].startedAt, '2024-03-14T09:42:00');
+  assert.equal(res.dives.length, 2);
+});
+
+test('US thousands pressures convert correctly', () => {
+  const text = 'Date,Duration,Max Depth (ft),Start Pressure\n2024-03-14,40,60,"3,000"\n';
+  const res = csvParser.parse(new TextEncoder().encode(text), text);
+  assert.equal(Math.round(res.dives[0].tanks[0].startBar), 207); // 3000 psi, heuristic
+});
+
+test('hot-climate air temps are not mistaken for °F', () => {
+  const text = 'Date,Duration,Max Depth,Air Temp,Water Temp\n2024-08-01,40,18,48,31\n';
+  const res = csvParser.parse(new TextEncoder().encode(text), text);
+  assert.equal(res.dives[0].airTempC, 48); // Red Sea summer, plausible °C
+  assert.equal(res.dives[0].waterTempC, 31);
+});
+
 test('rows with broken dates are salvaged around', () => {
   const text = 'Date,Duration\n2024-03-14,40\nnot-a-date,45\n2024-03-15,50\n';
   const res = csvParser.parse(new TextEncoder().encode(text), text);

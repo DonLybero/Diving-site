@@ -44,15 +44,17 @@ test('imports and settings', async () => {
   assert.deepEqual(await store.getSetting('csvMapping'), { Date: 'date', 'Max Depth': 'maxDepthM' });
 });
 
-test('clearAll wipes dives and imports but keeps settings', async () => {
+test('clearAll wipes dives, imports and CSV mappings but keeps the unit preference', async () => {
   const store = await new MemoryStore().init();
   await store.putDives([dive('a', '2025-03-12T09:30:00')]);
   await store.putImport({ id: 'i1', createdAt: '2025-03-12T10:00:00Z' });
   await store.setSetting('units', 'imperial');
+  await store.setSetting('csvMapping:datedurationdepth', { mapping: { '#0': 'date' } });
   await store.clearAll();
   assert.equal((await store.listDives()).length, 0);
   assert.equal((await store.listImports()).length, 0);
   assert.equal(await store.getSetting('units'), 'imperial');
+  assert.equal(await store.getSetting('csvMapping:datedurationdepth'), undefined);
 });
 
 test('putDives without id throws', async () => {

@@ -236,9 +236,11 @@ say so; parser warnings → visible before commit.
   with user data; files are read locally and dives stay in IndexedDB.
 - **Dives are private by default** (`visibility: 'private'`), and in v1 private
   by construction.
-- **GDPR-friendly:** "Delete all my dives" button wipes the IndexedDB database;
-  nothing is stored server-side. (DiveSZN is UK/EU-facing.) State this plainly
-  on the page and in the privacy policy.
+- **GDPR-friendly:** the "Delete all my dives" button wipes all dives, import
+  records and remembered CSV column mappings from IndexedDB (the metric/imperial
+  preference is not personal data and survives); nothing is stored server-side.
+  (DiveSZN is UK/EU-facing.) State this plainly on the page and in the privacy
+  policy.
 - Phase 2 (accounts/sync) re-inherits the original draft's server rules:
   auth on every route, queries scoped by session `userId`, parameterized
   queries only, originals stored privately, secrets in env vars.

@@ -62,6 +62,24 @@ test('drops junk fields instead of failing the dive', () => {
   assert.equal(dive.tanks, undefined);
 });
 
+test('drops avg depth exceeding max depth and implausible sample times', () => {
+  const { dive, problems } = validateDive({ startedAt: '2025-03-12T09:30:00', durationSec: 2880, maxDepthM: 18, avgDepthM: 25 });
+  assert.equal(dive.avgDepthM, undefined);
+  assert.ok(problems.some((p) => /average depth/.test(p)));
+  const { dive: d2, problems: p2 } = validateDive({
+    startedAt: '2025-03-12T09:30:00', durationSec: 2880, maxDepthM: 10,
+    samples: [{ tSec: 0, depthM: 0 }, { tSec: 60, depthM: 10 }, { tSec: 1e9, depthM: 5 }],
+  });
+  assert.equal(d2.samples.length, 2);
+  assert.ok(p2.some((p) => /48 h/.test(p)));
+});
+
+test('strips XML-illegal control characters from text fields', () => {
+  const { dive } = validateDive({ startedAt: '2025-03-12T09:30:00', durationSec: 60, notes: 'ab\u0007c', site: { name: 'X\u001fY' } });
+  assert.equal(dive.notes, 'abc');
+  assert.equal(dive.site.name, 'XY');
+});
+
 test('caps oversized inputs', () => {
   const samples = Array.from({ length: LIMITS.maxSamplesPerDive + 50 }, (_, i) => ({ tSec: i, depthM: 10 }));
   const { dive, problems } = validateDive({ startedAt: '2025-03-12T09:30:00', durationSec: 2880, maxDepthM: 10, samples });

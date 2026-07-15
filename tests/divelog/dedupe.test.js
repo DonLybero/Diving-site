@@ -45,6 +45,26 @@ test('invalid dates never match', () => {
   assert.equal(flags[0], null);
 });
 
+test('same dive with UTC offset vs naive wall time still matches', () => {
+  // Shearwater UDDF writes offsets, Subsurface writes naive local — same dive
+  const offset = dive('2025-03-12T09:30:00+07:00', 2880);
+  const naive = dive('2025-03-12T09:30:00', 2880);
+  assert.ok(isDuplicate(offset, naive));
+  const flags = findDuplicates([naive], [offset]);
+  assert.equal(flags[0].kind, 'existing');
+});
+
+test('date-only (midnight) dives need exact duration + depth to be duplicates', () => {
+  const a = dive('2024-05-05T00:00:00', 45 * 60, { maxDepthM: 18 });
+  const b = dive('2024-05-05T00:00:00', 46 * 60, { maxDepthM: 22 }); // distinct same-day dive
+  assert.ok(!isDuplicate(a, b));
+  const rerun = dive('2024-05-05T00:00:00', 45 * 60, { maxDepthM: 18 }); // true re-import
+  assert.ok(isDuplicate(a, rerun));
+  const flags = findDuplicates([b, rerun], [a]);
+  assert.equal(flags[0], null);
+  assert.equal(flags[1].kind, 'existing');
+});
+
 test('scales: 500 candidates against 1000 existing', () => {
   const existing = Array.from({ length: 1000 }, (_, i) => dive(new Date(Date.UTC(2020, 0, 1 + i, 10)).toISOString(), 3000));
   const candidates = Array.from({ length: 500 }, (_, i) => dive(new Date(Date.UTC(2020, 0, 1 + i * 2, 10)).toISOString(), 3000));
