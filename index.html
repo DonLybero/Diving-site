@@ -883,11 +883,12 @@
   background:
     radial-gradient(120% 90% at 18% 28%,rgba(3,20,26,.4),transparent 60%),
     linear-gradient(90deg,rgba(3,20,26,.84) 0%,rgba(3,20,26,.52) 34%,rgba(3,20,26,.12) 62%,transparent 80%),
-    linear-gradient(180deg,rgba(3,20,26,.5) 0%,rgba(3,20,26,.16) 22%,transparent 50%,rgba(6,34,47,.5) 76%,#082a39 97%)}
-/* the hero's last stretch dissolves into the shared water: no edge can exist */
+    linear-gradient(180deg,rgba(3,20,26,.5) 0%,rgba(3,20,26,.16) 22%,transparent 55%)}
+/* the hero's last stretch dissolves into the light page below — clean fade,
+   no dark water to bleed into any more */
 .vhero-media,.vhero-scrim{
-  -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 100%);
-          mask-image:linear-gradient(180deg,#000 78%,transparent 100%)}
+  -webkit-mask-image:linear-gradient(180deg,#000 74%,transparent 100%);
+          mask-image:linear-gradient(180deg,#000 74%,transparent 100%)}
 .vhero-in{position:relative;z-index:2;width:min(1200px,94vw);margin:0 auto;display:grid;
   grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
 .vhero-in>*{min-width:0}
@@ -947,60 +948,26 @@ body.vhero-on .topbar .name{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.4)}
 body.vhero-on .topbar .name b{color:#2fe0d6}
 body.vhero-on .topbar .tabs button{color:rgba(233,247,245,.86);text-shadow:0 1px 8px rgba(0,0,0,.35)}
 body.vhero-on .topbar .tabs button:hover{background:rgba(255,255,255,.12);color:#fff}
-body.vhero-on .topbar.scrolled{background:rgba(5,24,34,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom-color:rgba(150,235,226,.16)}
-body.vhero-on .topbar.scrolled .name{color:#f2fbf9;text-shadow:none}
-body.vhero-on .topbar.scrolled .name b{color:#2fe0d6}
-body.vhero-on .topbar.scrolled .tabs button{color:rgba(233,247,245,.82);text-shadow:none}
-body.vhero-on .topbar.scrolled .tabs button:hover{background:rgba(255,255,255,.1);color:#fff}
+/* scrolled past the hero video, the page is light — so the header turns to
+   the same light glass the rest of the site uses (dark ink, teal accent). */
+body.vhero-on .topbar.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom-color:var(--line)}
+body.vhero-on .topbar.scrolled .name{color:var(--ink);text-shadow:none}
+body.vhero-on .topbar.scrolled .name b{color:var(--accent)}
+body.vhero-on .topbar.scrolled .tabs button{color:var(--ink-soft);text-shadow:none}
+body.vhero-on .topbar.scrolled .tabs button:hover{background:rgba(47,224,214,.08);color:var(--ink)}
+body.vhero-on .topbar.scrolled .tabs button.active{color:#fff}
 </style>
 <style>
-/* ===== "diving deeper": the home page darkens with scroll depth ===== */
-body.vhero-on{--dp:0;--hd:0;
-  --dg:clamp(0,var(--dp)*1.3 - .06,1);      /* light fades out of the water by dp .82 */
-  --flip:1}                                  /* one dark water body -> light ink throughout */
-/* the whole home page is ONE body of water: the divers video fills section 1,
-   then the same water continues beneath every section and darkens with depth.
-   Base water (z:-3) + a deepening layer (z:-2) that fills in as you scroll. */
-body.vhero-on::after{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;
-  background:#082a39}   /* flat water base = zero seams; darker than the hero so the descent never lightens */
-body.vhero-on::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
-  background:radial-gradient(120% 120% at 50% 6%,#052736,#020d15);opacity:var(--dg)}
-/* the abyss: a single bioluminescent jellyfish drifts through the deep water and
-   brightens as you scroll to the bottom. Background only — sits above the dark
-   ground (z:-2) and below every section of content (z:auto/0). */
-#deepLife{position:fixed;inset:0;z-index:-1;pointer-events:none}
-body:not(.vhero-on) #deepLife{display:none}
-/* hero video takes on depth as you start to descend */
-.vhero-media::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(120% 100% at 50% 0%,rgba(4,20,28,.15),#04121a);opacity:calc(var(--hd)*.68)}
-/* depth-adaptive palette for the entire home view (components already use these tokens) */
-body.vhero-on #view-home{
-  --ink:color-mix(in srgb,#0e2f37,#f2fbf9 calc(var(--flip)*100%));
-  --ink-soft:color-mix(in srgb,#33565e,#d7ebe5 calc(var(--flip)*100%));
-  --muted:color-mix(in srgb,#4a6a71,#b0d3cd calc(var(--flip)*100%));
-  --line:color-mix(in srgb,rgba(13,80,90,.14),rgba(150,235,226,.26) calc(var(--flip)*100%));
-  --line-strong:color-mix(in srgb,rgba(13,80,90,.28),rgba(150,235,226,.4) calc(var(--flip)*100%));
-  --accent-deep:color-mix(in srgb,#0b7d75,#3fe0d4 calc(var(--flip)*80%));
-  --cta:color-mix(in srgb,#0b7d75,#3fe0d4 calc(var(--flip)*80%));
-  --card-bg:color-mix(in srgb,#ffffff,rgba(8,33,43,.92) calc(var(--flip)*100%));
-}
-body.vhero-on #view-home .sec-sub{color:var(--ink-soft)}
-/* serif needs more weight reversed out of dark water, and balanced ragging */
-body.vhero-on #view-home .sec-head{font-weight:600;text-wrap:balance}
-/* halo only where it earns its keep: full on display type, hairline on small text */
-body.vhero-on #view-home :is(.sec-head,.r-word){
-  text-shadow:0 1px 2px rgba(3,18,26,.45),0 2px 24px rgba(3,18,26,.45)}
-body.vhero-on #view-home :is(.sec-sub,.home-kicker,.dcap,.dmeta){
-  text-shadow:0 1px 2px rgba(3,18,26,.5)}
-/* bands go transparent so the descending ground shows through */
-body.vhero-on #view-home .hband{background:transparent}
-body.vhero-on #view-home .rotor .r-word{color:var(--ink)}
-/* trust ("stat") cards ride the depth palette instead of hard white */
-body.vhero-on #view-home .trust .tcard{background:var(--card-bg);border-color:var(--line)}
-body.vhero-on #view-home .trust .tcard b{color:var(--ink)}
-body.vhero-on #view-home .trust .tcard .meta{color:var(--muted)}
-body.vhero-on #view-home .trust .tnum{color:var(--accent-deep);border-bottom-color:var(--line)}
-body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
+/* ===== light brand background: soft teal caustics on white =====
+   A fixed canvas paints the dappled sunlight of a shallow reef in pale
+   teal — the fluke-teal brand at rest. It sits behind every view and
+   replaces the old scroll-darkening abyss + jellyfish. Home keeps the
+   video hero; the header floats over the footage, then turns to light
+   glass once you scroll past it. #view-home now uses the normal light
+   palette (dark teal ink on white), same as the rest of the site. */
+#brandBg{position:fixed;inset:0;z-index:-1;pointer-events:none}
+body.vhero-on #view-home .sec-head{text-wrap:balance}
+body.vhero-on #view-home .hband{background:transparent}   /* let the caustic light show through */
 
 /* ===== redesigned stat band (replaces the crew photo panel) ===== */
 .statband .sec-head{justify-content:center;text-align:center}
@@ -1038,7 +1005,7 @@ body.vhero-on #view-home .dcar-dots span{background:var(--ink)}
 </style>
 </head>
 <body>
-<canvas id="deepLife" aria-hidden="true"></canvas>
+<canvas id="brandBg" aria-hidden="true"></canvas>
 <div class="topbar">
   <a class="brand" href="#" onclick="showTab('home');return false;" aria-label="DiveSZN — home">
     <svg class="fluke" viewBox="0 0 120 70" role="img" aria-label="DiveSZN fluke logo">
@@ -1520,331 +1487,52 @@ function renderInSeasonNow(){
     }
   }
 }
-/* The abyss: one bioluminescent jellyfish that drifts up through the deep and
-   brightens as you scroll toward the bottom of the home page. Pure background —
-   a fixed canvas below all content, driven by the same full-page depth (--dp)
-   signal. Touches no section markup. */
-function initDeepLife(){
-  if(window.__deepLifeOn) return; window.__deepLifeOn=1;
-  var cv=document.getElementById('deepLife'); if(!cv||!cv.getContext) return;
+/* Light brand background: the dappled sunlight of a shallow reef, painted in
+   pale fluke-teal. A low-res caustic field is recomputed each frame and scaled
+   up so the browser's own smoothing softens it into moving light — cheap, and
+   always a whisper behind the content. Replaces the old jellyfish + abyss.
+   Reduced motion draws one still frame; it pauses while the tab is hidden. */
+function initBrandBg(){
+  if(window.__brandBgOn) return; window.__brandBgOn=1;
+  var cv=document.getElementById('brandBg'); if(!cv||!cv.getContext) return;
   var ctx=cv.getContext('2d');
   var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2),t=0,jy=1.2;
+  var W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2);
+  var lw=0,lh=0,buf=null,off=document.createElement('canvas'),octx=off.getContext('2d');
   function resize(){
     W=window.innerWidth;H=window.innerHeight;
     cv.width=Math.round(W*DPR);cv.height=Math.round(H*DPR);
     cv.style.width=W+'px';cv.style.height=H+'px';
     ctx.setTransform(DPR,0,0,DPR,0,0);
+    lw=Math.max(24,Math.round(W/14));lh=Math.max(18,Math.round(H/14));
+    off.width=lw;off.height=lh;buf=octx.createImageData(lw,lh);
   }
   resize();window.addEventListener('resize',resize);
-  function sm(a,b,x){x=Math.max(0,Math.min(1,(x-a)/(b-a)));return x*x*(3-2*x);}
-  function dpNow(){var y=window.scrollY||0,vh=window.innerHeight||800,max=(document.documentElement.scrollHeight||0)-vh;return max>0?Math.min(Math.max(y/max,0),1):0;}
-  /* ================= DEEP-LIFE JELLYFISH (drop-in) ==================
-     Replaces jelly() + draw() inside initDeepLife(). Uses the existing
-     ctx, W, H, t, jy, sm() and the life/deep curves. `spark` and its
-     seeding in resize() become unused (snow re-seeds itself on resize). */
-  var snow=[],bub=[],snowW=0,snowH=0,J={cs:0,lastC:0};
-  var snowSpr=document.createElement('canvas');snowSpr.width=snowSpr.height=32;
-  (function(){var g=snowSpr.getContext('2d'),rg=g.createRadialGradient(16,16,0,16,16,16);
-    rg.addColorStop(0,'rgba(210,235,240,0.9)');rg.addColorStop(0.35,'rgba(170,210,225,0.38)');
-    rg.addColorStop(1,'rgba(150,200,220,0)');g.fillStyle=rg;g.fillRect(0,0,32,32);})();
-  var grain=document.createElement('canvas');grain.width=grain.height=128;
-  (function(){var gg=grain.getContext('2d'),id=gg.createImageData(128,128),d=id.data;
-    for(var i=0;i<d.length;i+=4){var n=110+Math.random()*36|0;d[i]=n;d[i+1]=n;d[i+2]=n;d[i+3]=255;}
-    gg.putImageData(id,0,0);})();
-  function seedSnow(){
-    snowW=W;snowH=H;snow=[];var m=Math.min(150,Math.round(W*H/9500));
-    for(var k=0;k<m;k++)snow.push({x:Math.random()*W,y:Math.random()*H,
-      z:0.25+Math.random()*0.75,ph:Math.random()*6.28,sd:Math.random()*6.28});
-    bub=[];var nb=Math.max(5,Math.round(W/190));
-    for(var j=0;j<nb;j++)bub.push({x:Math.random()*W,y:Math.random()*H,
-      r:1.1+Math.random()*2.4,sp:16+Math.random()*26,ph:Math.random()*6.28});
-  }
-  function moveBub(dt){
-    for(var k=0;k<bub.length;k++){var b=bub[k];
-      b.y-=b.sp*dt;b.x+=Math.sin(t*1.1+b.ph)*10*dt;
-      if(b.y<-6){b.y=H+6;b.x=Math.random()*W;}}
-  }
-  function drawBub(op){
-    if(op<=0.01)return;
-    ctx.globalCompositeOperation='lighter';
-    for(var k=0;k<bub.length;k++){var b=bub[k];
-      var a=op*(0.07+0.05*Math.abs(Math.sin(t*1.6+b.ph)));
-      ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,6.2832);
-      ctx.strokeStyle='rgba(200,240,250,'+a.toFixed(3)+')';ctx.lineWidth=1;ctx.stroke();
-      ctx.beginPath();ctx.arc(b.x-b.r*0.3,b.y-b.r*0.3,b.r*0.32,0,6.2832);
-      ctx.fillStyle='rgba(220,250,255,'+(a*0.9).toFixed(3)+')';ctx.fill();}
-    ctx.globalCompositeOperation='source-over';
-  }
-  function drawHaze(k){
-    if(k<=0.01)return;
-    var hx=W*(0.5+0.26*Math.sin(t*0.04)),hy=H*(0.45+0.12*Math.sin(t*0.031+1.4));
-    var hr=Math.max(W,H)*0.5,rg=ctx.createRadialGradient(hx,hy,0,hx,hy,hr);
-    rg.addColorStop(0,'rgba(120,200,220,'+(k*0.038).toFixed(3)+')');
-    rg.addColorStop(1,'rgba(60,140,170,0)');
-    ctx.globalCompositeOperation='lighter';ctx.fillStyle=rg;ctx.fillRect(0,0,W,H);
-    ctx.globalCompositeOperation='source-over';
-  }
-  function pulseC(tt){var s=(Math.sin(tt*1.6)+1)/2;return Math.pow(s,2.6);} // sharp squeeze, slow relax (~3.9s)
-  function jellyUpdate(dt){var c=pulseC(t);J.lastC=c;J.cs+=(c-J.cs)*2.4*dt;}
-  function wanderX(tt){return Math.sin(tt*0.10)*0.6+Math.sin(tt*0.037+2.0)*0.4;}
-  function wanderVX(tt){return Math.cos(tt*0.10)*0.06+Math.cos(tt*0.037+2.0)*0.0148;}
-  function drawWater(op,deep){
-    var lg=ctx.createLinearGradient(0,0,0,H);
-    lg.addColorStop(0,'rgba(4,14,26,'+(op*0.96).toFixed(3)+')');
-    lg.addColorStop(0.45,'rgba(2,8,18,'+(op*0.98).toFixed(3)+')');
-    lg.addColorStop(1,'rgba(1,4,10,'+op.toFixed(3)+')');
-    ctx.fillStyle=lg;ctx.fillRect(0,0,W,H);
-    var hx=W*(0.5+0.22*Math.sin(t*0.05)),hy=H*(0.62+0.08*Math.sin(t*0.037+2));
-    var hr=Math.max(W,H)*0.55,rg=ctx.createRadialGradient(hx,hy,0,hx,hy,hr);
-    var ha=op*(0.05+0.10*deep);
-    rg.addColorStop(0,'rgba(30,90,110,'+ha.toFixed(3)+')');
-    rg.addColorStop(0.5,'rgba(12,45,65,'+(ha*0.5).toFixed(3)+')');
-    rg.addColorStop(1,'rgba(0,10,20,0)');
-    ctx.globalCompositeOperation='lighter';ctx.fillStyle=rg;ctx.fillRect(0,0,W,H);
-    ctx.globalCompositeOperation='source-over';
-  }
-  function drawSnow(op,deep,front){
-    ctx.globalCompositeOperation='lighter';
-    for(var k=0;k<snow.length;k++){
-      var p=snow[k];if(front!==(p.z>0.8))continue;
-      var tw=0.55+0.45*Math.sin(t*0.9+p.ph);
-      var a=op*(0.16+0.30*deep)*tw*p.z, r=(1.3+4.5*p.z*p.z);
-      if(front){r*=1.9;a*=0.55;}
-      ctx.globalAlpha=a;ctx.drawImage(snowSpr,p.x-r,p.y-r,r*2,r*2);
-    }
-    ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
-  }
-  function moveSnow(dt){
-    for(var k=0;k<snow.length;k++){var p=snow[k];
-      p.y+=(3+9*p.z)*dt;p.x+=Math.sin(t*0.22+p.sd)*4*dt*p.z;
-      if(p.y>H+8){p.y=-8;p.x=Math.random()*W;}
-      if(p.x>W+8)p.x=-8;if(p.x<-8)p.x=W+8;}
-  }
-  function bellPath(R,sx,sy,tt){
-    ctx.beginPath();ctx.moveTo(-R*sx,0.06*R*sy);
-    ctx.bezierCurveTo(-R*sx,-0.62*R*sy,-0.58*R*sx,-1.02*R*sy,0,-1.02*R*sy);
-    ctx.bezierCurveTo(0.58*R*sx,-1.02*R*sy,R*sx,-0.62*R*sy,R*sx,0.06*R*sy);
-    for(var i=0;i<8;i++){
-      var u0=1-2*(i/8),u1=1-2*((i+1)/8),um=(u0+u1)/2;
-      var dip=(0.16+0.035*Math.sin(tt*2.1+i*1.9))*R*sy;
-      ctx.quadraticCurveTo(um*R*sx,0.06*R*sy+dip,u1*R*sx,(0.06+0.02*Math.sin(i*2.3))*R*sy);
-    }
-    ctx.closePath();
-  }
-  function domePath(R,sx,sy){
-    ctx.beginPath();ctx.moveTo(-0.97*R*sx,0.03*R*sy);
-    ctx.bezierCurveTo(-0.99*R*sx,-0.60*R*sy,-0.58*R*sx,-1.01*R*sy,0,-1.01*R*sy);
-    ctx.bezierCurveTo(0.58*R*sx,-1.01*R*sy,0.99*R*sx,-0.60*R*sy,0.97*R*sx,0.03*R*sy);
-  }
-  function ribbonPath(pts){
-    ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);
-    for(var k=1;k<pts.length-1;k++){
-      var mx=(pts[k][0]+pts[k+1][0])/2,my=(pts[k][1]+pts[k+1][1])/2;
-      ctx.quadraticCurveTo(pts[k][0],pts[k][1],mx,my);}
-    ctx.lineTo(pts[pts.length-1][0],pts[pts.length-1][1]);
-  }
-  function drawJelly(cx,cy,R,op,deep){
-    var c=J.lastC,sx=1-0.22*c,sy=1+0.16*c,vx=wanderVX(t);
-    var rot=0.09*Math.sin(t*0.21+1)+vx*2.0;
-    var G=0.20+0.80*deep,G2=G*G;
-    ctx.save();ctx.translate(cx,cy);ctx.rotate(rot);
-    ctx.globalCompositeOperation='lighter';ctx.lineCap='butt';ctx.lineJoin='round';
-    var N=10,K=15,i,k,f;
-    for(i=0;i<N;i++){
-      var u=-1+2*(i+0.5)/N,x0=u*0.86*R*sx,y0=(0.10+0.05*Math.abs(u))*R*sy;
-      var phi=i*2.39,len=R*(2.9+1.1*Math.abs(Math.sin(i*2.7)));
-      var pts=[[x0,y0]];
-      for(k=1;k<=K;k++){
-        f=k/K;var amp=R*(0.06+0.48*f);
-        var xw=Math.sin(t*1.35-f*4.6+phi)*amp*0.34+Math.sin(t*0.52-f*2.1+phi*1.7)*amp*0.30;
-        pts.push([x0*(1-0.22*f)+xw-vx*R*f*f*9,
-                  y0+len*f+Math.sin(t*0.9+phi)*R*0.02*f-c*R*0.10*(1-f)]);
+  var R=126,G=226,B=214;                       // pale fluke-teal light
+  function paint(t){
+    var d=buf.data,cx=lw*0.5,cy=lh*0.32,i=0;
+    for(var y=0;y<lh;y++){
+      for(var x=0;x<lw;x++){
+        var v=Math.sin(x*0.42+t*0.9)+Math.sin(y*0.37-t*0.7)
+             +Math.sin((x+y)*0.24+t*0.6)
+             +Math.sin(Math.sqrt((x-cx)*(x-cx)+(y-cy)*(y-cy))*0.28-t*1.05);
+        var n=(v+4)/8; n=n*n*n;                // sharpen the bright ridges into dapples
+        // brighter toward the top (the light comes from the surface)
+        var top=1-y/lh*0.45;
+        d[i]=R;d[i+1]=G;d[i+2]=B;d[i+3]=(n*52*top)|0;   // ~0.18 peak — soft dapples
+        i+=4;
       }
-      var aB=op*(0.10+0.45*G)*(0.8+0.2*Math.sin(i*1.7));
-      ribbonPath(pts);
-      ctx.strokeStyle='rgba(150,225,235,'+(aB*0.20).toFixed(3)+')';ctx.lineWidth=4.5;ctx.stroke();
-      ctx.strokeStyle='rgba(185,238,244,'+(aB*0.75).toFixed(3)+')';ctx.lineWidth=0.9;ctx.stroke();
-      ribbonPath(pts.slice(0,Math.ceil(K*0.55)));
-      ctx.strokeStyle='rgba(195,242,246,'+(aB*0.6).toFixed(3)+')';ctx.lineWidth=1.8;ctx.stroke();
-      // a bioluminescent pulse flows down EVERY strand
-      var bf=((t*0.16+i*0.37)%1),bp=pts[Math.max(1,Math.round(bf*K))];
-      ctx.globalAlpha=op*(0.22+0.6*G)*(0.55+0.45*Math.sin(t*2.4+i));
-      var br=4+4*G;
-      ctx.drawImage(snowSpr,bp[0]-br,bp[1]-br,br*2,br*2);ctx.globalAlpha=1;
     }
-    for(i=0;i<3;i++){
-      var uu=-0.30+0.30*i,phi2=i*2.1,len2=R*(1.85+0.45*Math.sin(i*3.1));
-      var KK=12,left=[],right=[];
-      for(k=0;k<=KK;k++){
-        f=k/KK;
-        var ax=uu*R*0.55*(1-0.35*f)+Math.sin(t*0.85-f*3.1+phi2)*R*0.24*f
-              +Math.sin(t*0.31+phi2*1.7)*R*0.05*f-vx*R*f*f*6;
-        var ay=0.10*R*sy+len2*f-c*R*0.08*(1-f);
-        var w2=R*(0.075*(1-f*0.85)+0.008),frl=Math.sin(f*15+t*2.4+phi2)*R*0.020*f;
-        left.push([ax-w2+frl,ay]);right.push([ax+w2-frl,ay]);
-      }
-      ctx.beginPath();ctx.moveTo(left[0][0],left[0][1]);
-      for(k=1;k<left.length;k++)ctx.lineTo(left[k][0],left[k][1]);
-      for(k=right.length-1;k>=0;k--)ctx.lineTo(right[k][0],right[k][1]);
-      ctx.closePath();
-      ctx.fillStyle='rgba(160,225,235,'+(op*(0.05+0.09*G)).toFixed(3)+')';ctx.fill();
-      var mid=[];for(k=0;k<left.length;k++)mid.push([(left[k][0]+right[k][0])/2,left[k][1]]);
-      ribbonPath(mid);
-      ctx.strokeStyle='rgba(200,245,248,'+(op*(0.08+0.26*G)).toFixed(3)+')';ctx.lineWidth=0.9;ctx.stroke();
-    }
-    ctx.globalCompositeOperation='source-over';
-    var sub=ctx.createRadialGradient(0,-0.18*R*sy,0,0,-0.18*R*sy,R*0.82);
-    sub.addColorStop(0,'rgba(2,8,16,'+(op*0.38).toFixed(3)+')');sub.addColorStop(1,'rgba(2,8,16,0)');
-    ctx.fillStyle=sub;ctx.beginPath();
-    ctx.ellipse(0,-0.14*R*sy,R*0.86*sx,R*0.42*sy,0,0,6.2832);ctx.fill();
-    bellPath(R,sx,sy,t);
-    var bg=ctx.createRadialGradient(0,-0.42*R*sy,R*0.06,0,-0.42*R*sy,R*1.28);
-    bg.addColorStop(0,'rgba(10,30,50,'+(op*0.55).toFixed(3)+')');
-    bg.addColorStop(0.52,'rgba(26,62,92,'+(op*0.40).toFixed(3)+')');
-    bg.addColorStop(0.80,'rgba(80,140,175,'+(op*0.26).toFixed(3)+')');
-    bg.addColorStop(0.94,'rgba(175,228,246,'+(op*(0.20+0.22*G)).toFixed(3)+')');
-    bg.addColorStop(1,'rgba(200,240,255,0)');
-    ctx.fillStyle=bg;ctx.fill();
-    ctx.globalCompositeOperation='lighter';
-    ctx.lineWidth=1;
-    for(i=-4;i<=4;i++){
-      var ux=i/4.6;
-      var qx0=ux*R*0.10*sx,qy0=-0.88*R*sy,qcx=ux*R*0.75*sx,qcy=-0.42*R*sy,qx1=ux*R*0.92*sx,qy1=0.07*R*sy;
-      ctx.strokeStyle='rgba(150,230,240,'+(op*(0.08+0.30*G)).toFixed(3)+')';
-      ctx.beginPath();ctx.moveTo(qx0,qy0);ctx.quadraticCurveTo(qcx,qcy,qx1,qy1);ctx.stroke();
-      // fluorescence flows down every canal of the bell
-      var qf=((t*0.32)+(i+4)*0.11)%1,qm=1-qf;
-      var px=qm*qm*qx0+2*qf*qm*qcx+qf*qf*qx1, py=qm*qm*qy0+2*qf*qm*qcy+qf*qf*qy1;
-      ctx.globalAlpha=op*(0.15+0.7*G)*(0.6+0.4*Math.sin(t*2+i));
-      var qr=2.5+3*G;
-      ctx.drawImage(snowSpr,px-qr,py-qr,qr*2,qr*2);ctx.globalAlpha=1;
-    }
-    var LOB=[[-0.30,-0.46,0.11],[-0.11,-0.52,0.14],[0.09,-0.51,0.13],[0.28,-0.45,0.10]];
-    for(i=0;i<4;i++){
-      var gx=LOB[i][0]*R*sx,gy=LOB[i][1]*R*sy,gr2=R*(LOB[i][2]+0.18+0.03*Math.sin(t*1.6+i*1.9));
-      var gg2=ctx.createRadialGradient(gx,gy,0,gx,gy,gr2),gA=op*(0.04+0.34*G2);
-      gg2.addColorStop(0,'rgba(180,250,246,'+gA.toFixed(3)+')');
-      gg2.addColorStop(0.45,'rgba(80,210,208,'+(gA*0.40).toFixed(3)+')');
-      gg2.addColorStop(1,'rgba(40,160,170,0)');
-      ctx.fillStyle=gg2;ctx.beginPath();ctx.arc(gx,gy,gr2,0,6.2832);ctx.fill();
-    }
-    var mg=ctx.createLinearGradient(0,-0.42*R*sy,0,0.22*R),mA=op*(0.03+0.16*G2);
-    mg.addColorStop(0,'rgba(170,245,242,'+mA.toFixed(3)+')');mg.addColorStop(1,'rgba(120,220,220,0)');
-    ctx.strokeStyle=mg;ctx.lineCap='round';
-    ctx.beginPath();ctx.moveTo(0,-0.42*R*sy);
-    ctx.quadraticCurveTo(Math.sin(t*0.8)*R*0.06,-0.10*R,Math.sin(t*0.8+1)*R*0.08,0.20*R);
-    ctx.lineWidth=R*0.20;ctx.globalAlpha=0.5;ctx.stroke();
-    ctx.lineWidth=R*0.07;ctx.globalAlpha=1;ctx.stroke();
-    var apA=op*(0.04+0.55*G2),apg=ctx.createRadialGradient(0,-0.92*R*sy,0,0,-0.92*R*sy,R*0.42);
-    apg.addColorStop(0,'rgba(210,255,252,'+apA.toFixed(3)+')');
-    apg.addColorStop(0.5,'rgba(110,230,225,'+(apA*0.35).toFixed(3)+')');
-    apg.addColorStop(1,'rgba(60,180,190,0)');
-    ctx.fillStyle=apg;ctx.beginPath();ctx.arc(0,-0.92*R*sy,R*0.42,0,6.2832);ctx.fill();
-    var cr=R*(0.55+0.45*deep),cg=ctx.createRadialGradient(0,-0.48*R*sy,0,0,-0.48*R*sy,cr);
-    var cA=op*(0.03+0.55*G2)*(0.85+0.15*Math.sin(t*1.6));
-    cg.addColorStop(0,'rgba(190,255,250,'+cA.toFixed(3)+')');
-    cg.addColorStop(0.45,'rgba(70,200,205,'+(cA*0.40).toFixed(3)+')');
-    cg.addColorStop(1,'rgba(20,110,130,0)');
-    ctx.fillStyle=cg;ctx.beginPath();ctx.arc(0,-0.48*R*sy,cr,0,6.2832);ctx.fill();
-    var rimg=ctx.createRadialGradient(0,-0.42*R*sy,R*0.7,0,-0.42*R*sy,R*1.05);
-    rimg.addColorStop(0,'rgba(160,240,250,0)');
-    rimg.addColorStop(1,'rgba(200,250,255,'+(op*(0.14+0.30*G+0.30*G2)).toFixed(3)+')');
-    ctx.lineCap='round';domePath(R,sx,sy);
-    ctx.strokeStyle=rimg;ctx.lineWidth=3.6;ctx.globalAlpha=0.4;ctx.stroke();
-    ctx.globalAlpha=1;ctx.lineWidth=1.1;ctx.stroke();
-    bellPath(R,sx,sy,t);
-    ctx.globalAlpha=0.30;ctx.lineWidth=0.9;ctx.stroke();ctx.globalAlpha=1;
-    var haR=R*(1.5+1.3*deep),hg=ctx.createRadialGradient(0,-0.3*R,0,0,-0.3*R,haR);
-    var hA=op*0.24*G2;
-    hg.addColorStop(0,'rgba(90,220,225,'+hA.toFixed(3)+')');hg.addColorStop(1,'rgba(20,90,110,0)');
-    ctx.fillStyle=hg;ctx.beginPath();ctx.arc(0,-0.3*R,haR,0,6.2832);ctx.fill();
-    ctx.globalCompositeOperation='source-over';ctx.restore();
-  }
-  function drawFinish(op){
-    var vg=ctx.createRadialGradient(W/2,H/2,Math.min(W,H)*0.38,W/2,H/2,Math.max(W,H)*0.75);
-    vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,2,6,'+(op*0.55).toFixed(3)+')');
-    ctx.fillStyle=vg;ctx.fillRect(0,0,W,H);
-    ctx.globalCompositeOperation='overlay';ctx.globalAlpha=op*0.07;
-    var ox=(Math.random()*128)|0,oy=(Math.random()*128)|0;
-    ctx.save();ctx.translate(-ox,-oy);
-    ctx.fillStyle=ctx.createPattern(grain,'repeat');ctx.fillRect(0,0,W+128,H+128);
-    ctx.restore();ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
-  }
-  // one soft-edged light beam, pre-rendered: cross-fade x length-fade, so the
-  // shafts have feathered film-like edges instead of hard CG triangles
-  var beamSpr=document.createElement('canvas');beamSpr.width=256;beamSpr.height=1024;
-  (function(){var g=beamSpr.getContext('2d');
-    var gx=g.createLinearGradient(0,0,256,0);
-    gx.addColorStop(0,'rgba(190,235,248,0)');gx.addColorStop(0.5,'rgba(190,235,248,1)');gx.addColorStop(1,'rgba(190,235,248,0)');
-    g.fillStyle=gx;g.fillRect(0,0,256,1024);
-    var gy=g.createLinearGradient(0,0,0,1024);
-    gy.addColorStop(0,'rgba(0,0,0,1)');gy.addColorStop(0.7,'rgba(0,0,0,0.35)');gy.addColorStop(1,'rgba(0,0,0,0)');
-    g.globalCompositeOperation='destination-in';g.fillStyle=gy;g.fillRect(0,0,256,1024);
-  })();
-  function drawRays(k){
-    // three wide parallel shafts from one sun, breathing slowly — like footage
-    ctx.globalCompositeOperation='lighter';
-    for(var i=0;i<3;i++){
-      var bx=W*(0.24+0.27*i)+Math.sin(t*0.05+i*2.1)*W*0.015;
-      var ang=-0.13+0.02*i+0.012*Math.sin(t*0.04+i);
-      var bw=W*(0.10+0.05*i);
-      var a=k*(0.055+0.03*Math.sin(t*0.09+i*1.7)+0.03);
-      ctx.save();ctx.translate(bx,-H*0.08);ctx.rotate(ang);
-      ctx.globalAlpha=Math.max(0,a);
-      ctx.drawImage(beamSpr,-bw/2,0,bw,H*1.25);
-      ctx.restore();
-    }
-    ctx.globalAlpha=1;
-    var sg=ctx.createLinearGradient(0,0,0,H*0.45);
-    sg.addColorStop(0,'rgba(170,225,240,'+(k*0.05).toFixed(3)+')');
-    sg.addColorStop(1,'rgba(170,225,240,0)');
-    ctx.fillStyle=sg;ctx.fillRect(0,0,W,H*0.45);
-    ctx.globalCompositeOperation='source-over';
-  }
-  function drawScene(dp){
+    octx.putImageData(buf,0,0);
     ctx.clearRect(0,0,W,H);
-    if(snowW!==W||snowH!==H)seedSnow();
-    jellyUpdate(0.016);moveSnow(0.016);moveBub(0.016);
-    var life=sm(0.52,0.68,dp);          // the jellyfish drifts in a section early, still dim
-    var deep=sm(0.80,1,dp);             // its glow only ignites in the final section
-    var ray=1-sm(0.06,0.55,dp);         // the light fades from the water as you descend
-    var aw=sm(0.72,0.90,dp);            // the near-black abyss water arrives on its own curve
-    if(aw>0.01)drawWater(aw,deep);
-    if(ray>0.01)drawRays(ray);
-    drawHaze(0.5+0.5*ray);                     // a slow current of light drifting at every depth
-    drawSnow(Math.max(life,0.65),deep,false);  // drifting snow says "water" at every depth
-    drawBub(0.3+0.55*ray);                     // bubbles rise while there is light above
-    if(life>0.01){
-      // it lives on the LEFT, drifting in the open water under the headings,
-      // swimming slowly: the bell's jet lifts it, then it sinks and drifts
-      var amp=0.05;
-      var R=Math.min(H*0.085,W*0.11)*(0.9+0.25*deep);
-      var cx=Math.min(Math.max(W*(0.13+wanderX(t)*amp),R*1.15),W-R*1.15);
-      var cy=H*jy - R*0.42*J.cs + Math.sin(t*0.18)*R*0.28;
-      drawJelly(cx,cy,R,life,deep);
-      drawSnow(life,deep,true);
-    }
-    drawFinish(0.35+0.65*life);   // gentle grain + vignette at every depth: reads as footage
+    ctx.imageSmoothingEnabled=true;
+    ctx.drawImage(off,0,0,lw,lh,0,0,W,H);        // upscale = free blur
   }
-  function draw(dp){drawScene(dp);}     // keep the existing frame()/rm callers working
-
-  function yFor(dp){return 0.86-sm(0.52,1,dp)*0.44;}   // emerges low in the frame, rises as you sink
-  if(rm){
-    var stat=function(){jy=yFor(dpNow());draw(dpNow());};
-    window.addEventListener('scroll',stat,{passive:true});
-    window.addEventListener('resize',stat);stat();return;
-  }
-  function frame(){
-    t+=0.016;
-    if(document.body.classList.contains('vhero-on')){
-      var dp=dpNow(), targetY=yFor(dp);
-      // while invisible, park at target so it always surfaces in position —
-      // even after a fast flick straight to the bottom
-      if(sm(0.52,0.68,dp)<=0.01) jy=targetY;
-      else jy+=(targetY-jy)*0.06;
-      draw(dp);
-    }else if(W){ctx.clearRect(0,0,W,H);}
+  if(rm){paint(0.6);return;}
+  var t=0,last=0;
+  function frame(ts){
+    if(document.hidden){requestAnimationFrame(frame);return;}
+    if(ts-last>=33){last=ts;t+=0.02;paint(t);}   // ~30fps drift
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
@@ -1870,19 +1558,16 @@ function initHeroMedia(){
       if(HERO_VIDEO.credit){vc.textContent='\u24D8';vc.title=HERO_VIDEO.credit;vc.style.cursor='help';}
     }
   }
-  // solidify the overlay header, and drive the "diving deeper" darkening:
-  // --hd darkens the hero video over the first screen; --dp darkens the page with depth
+  // turn the overlay header to glass the moment the page moves, so the tab
+  // titles never mix with the hero footage behind them
   var onDepth=function(){
-    var y=window.scrollY||0, vh=window.innerHeight||800;
+    var y=window.scrollY||0;
     var tb=document.querySelector('.topbar');
-    if(tb)tb.classList.toggle('scrolled',y>16);   // glass on immediately: content never mixes with the tab titles
-    var max=(document.documentElement.scrollHeight||0)-vh;
-    document.body.style.setProperty('--hd',Math.min(y/vh,1).toFixed(3));
-    document.body.style.setProperty('--dp',(max>0?Math.min(y/max,1):0).toFixed(3));
+    if(tb)tb.classList.toggle('scrolled',y>16);
   };
   window.addEventListener('scroll',onDepth,{passive:true});
   window.addEventListener('resize',onDepth); onDepth();
-  initDeepLife();
+  initBrandBg();
   if(rm) return;
   // auto-pause off-viewport: no background decode cost
   var hero=document.getElementById('hero');
